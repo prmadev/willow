@@ -29,7 +29,7 @@ services.gpg-agent.enableZshIntegration = true;
 
 programs.zsh.enable = true;
 programs.zsh.enableAutosuggestions = true;
-programs.zsh.enableCompletions = true;
+programs.zsh.enableCompletion = true;
 programs.zsh.enableSyntaxHighlighting = true;
 programs.zsh.enableVteIntegration = true;
 programs.zsh.autocd = true;
