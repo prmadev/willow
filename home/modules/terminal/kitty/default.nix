@@ -6,7 +6,7 @@
   programs.kitty = {
     enable = true;
     font = {
-      package = pkgs.recursive;
+      # package = pkgs.recursive;
       name = "JetBrainsMono Nerd Font";
       size = 12;
     };
