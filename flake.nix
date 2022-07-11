@@ -6,22 +6,18 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nur = {
-      url = "github:nix-community/NUR";
-    };
   };
 
   outputs = {
     self,
     nixpkgs,
     home-manager,
-    nur,
     ...
   }: let
     system = "x86_64-linux";
     user = "a";
     pkgs = import nixpkgs {
-      inherit nur system;
+      inherit system;
       config.allowUnfree = true;
     };
     lib = nixpkgs.lib;
