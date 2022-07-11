@@ -26,6 +26,7 @@
   time.timeZone = "Asia/Tehran";
 
   services.tor = {
+    # i want this as system level, because I need it for circumventing gitlab's sanctions.
     enable = true;
     client.enable = true;
   };
@@ -41,14 +42,10 @@
     #  useXkbConfig = true; # use xkbOptions in tty.
   };
 
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
-
-  # Enable the GNOME Desktop Environment.
+  # I don't want any stinky display manager :D
   services.xserver.displayManager.gdm.enable = false;
   services.xserver.displayManager.lightdm.enable = false;
   services.xserver.displayManager.sddm.enable = false;
-  services.xserver.desktopManager.gnome.enable = false;
 
   # Configure keymap in X11
   services.xserver.layout = "us";
@@ -95,7 +92,7 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    neovim
+    neovim #just in case I need it at system level
     firefox-wayland
     qutebrowser
     river
