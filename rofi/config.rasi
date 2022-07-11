@@ -1,11 +1,11 @@
-configuration {
-  modi: "drun";
-	font: "Recursive 10";
-  display-drun: "";
-  sidebar-mode:true;
-  /* sidebar-mode: false; */
-  /* show-icons:				true; */
-}
+/* configuration { */
+/*   modi: "drun"; */
+/* 	font: "Recursive 10"; */
+/*   display-drun: ""; */
+/*   sidebar-mode:true; */
+/*    sidebar-mode: false; */ 
+/*    show-icons:				true; */ 
+/* } */
 
 @theme "/dev/null"
 
