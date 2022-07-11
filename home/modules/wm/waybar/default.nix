@@ -1,10 +1,5 @@
-{
-  pkgs,
-  home-manager,
-  hm,
-  ...
-}: {
-  home-manager.nixosModules.home-manager.modules.home.programs.waybar = {
+{pkgs, ...}: {
+  home.programs.waybar = {
     enable = true;
     systemd.enable = true;
     systemd.target = "river-session.target";
