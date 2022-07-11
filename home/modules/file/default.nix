@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  programs.broot.enable = true;
+  # programs.broot.enable = true;
 
   programs.zoxide.enable = true;
 
@@ -13,5 +13,7 @@
       ratios = "2:3:1";
       shell = "bash";
     };
+    previewer.source = ./lfkittypreview;
+    previewer.keybinding = "i";
   };
 }
