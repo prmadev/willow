@@ -41,7 +41,7 @@
   programs.taskwarrior.enable = true;
   programs.rofi = {
     enable = true;
-    configPath = "./rofi/config.rasi";
+    configPath = "./dofi/rofi/config.rasi";
   };
 
   programs.waybar = {
