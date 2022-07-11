@@ -3,8 +3,8 @@
     home.packages = with pkgs; [
       htop
 	  gcc
-	  cargo
 	  rustup
+	  alejandra
 	  zig
     ];
     home.stateVersion = "22.11";
