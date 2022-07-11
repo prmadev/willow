@@ -2,12 +2,16 @@
   # imports = [
   # ];
 
+  programs.gpg.enable = true;
+
   services.gpg-agent.enable = true;
+
   fonts.fontconfig.enable = true;
   gtk.enable = true;
   # gtk.font.name = "Recursive";
   # gtk.font.package = pkgs.recursive;
   # gtk.font.size = 10;
+
   home.sessionVariables = {
     BW_CLIENTSECRET = "1YnJyztT6fzD0mmvioFlq3jXoJ23Np";
     BW_SESSION = "l4fWgy4H9vCjf9LN8pmqWjfVdXRFrthUyP/KhSuww/AgxwTtkgWDQCwF/vTWOIc2rT9efPizQoJsKZ/kdKYaGQ==";

@@ -93,14 +93,11 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     neovim #just in case I need it at system level
-    firefox-wayland
     qutebrowser
     river
     curl
     wget
     clash
-    go_1_18
-    kitty
     glib #for wayland gsettings
     slurp
     grim

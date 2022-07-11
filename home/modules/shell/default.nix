@@ -1,5 +1,19 @@
 {pkgs, ...}: {
   imports = [./zsh];
+
+  programs.info.enable = true;
+  programs.bat.enable = true;
+  programs.exa.enable = true;
+  programs.exa.enableAliases = true;
+  programs.fzf.enable = true;
+  programs.fzf.changeDirWidgetCommand = "fd --type d";
+  programs.fzf.tmux.enableShellIntegration = true;
+  programs.starship.enable = true;
+  programs.jq.enable = true;
+
+  programs.fzf.enableBashIntegration = true;
+  programs.just.enableBashIntegration = true;
+
   home.shellAliases = {
     tree = "exa --tree --icons";
     ls = "exa --icons";
