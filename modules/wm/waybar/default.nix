@@ -6,7 +6,7 @@
 }: let
   h = home-manager.nixosModules.home-manager;
 in {
-  hm.home.programs.waybar = {
+  ${h}.home.programs.waybar = {
     enable = true;
     systemd.enable = true;
     systemd.target = "river-session.target";
