@@ -16,7 +16,6 @@
 
   home.shellAliases = {
     tree = "exa --tree --icons";
-    ls = "exa --icons";
     b = "br";
     rg = "rg --sort path";
     jctl = "journalctl -p 3 -xb";
