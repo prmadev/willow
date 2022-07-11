@@ -3,6 +3,9 @@
     home.packages = with pkgs; [
       htop
 	  gcc
+	  cargo
+	  rustup
+	  zig
     ];
     home.stateVersion = "22.11";
 
