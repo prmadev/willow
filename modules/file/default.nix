@@ -1,10 +1,10 @@
 {
   pkgs,
-  home-manager,
+  home,
   ...
 }: {
-  home-manager.programs.broot.enable = true;
+  home.programs.broot.enable = true;
 
-  home-manager.programs.fzf.enable = true;
-  home-manager.zoxide.enable = true;
+  home.programs.fzf.enable = true;
+  home.zoxide.enable = true;
 }

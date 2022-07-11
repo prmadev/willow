@@ -1,6 +1,6 @@
 {
   pkgs,
-  home-manager,
+  home,
   ...
 }: {
   imports = [./zsh];

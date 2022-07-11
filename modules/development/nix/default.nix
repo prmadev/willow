@@ -1,11 +1,11 @@
 {
   pkgs,
-  home-manager,
+  home,
   ...
 }: {
-  home-manager.packages = with pkgs; [
+  home.packages = with pkgs; [
     alejandra
   ];
 
-  home-manager.programs.nix-index.enable = true;
+  home.programs.nix-index.enable = true;
 }

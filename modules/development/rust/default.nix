@@ -1,9 +1,9 @@
 {
   pkgs,
-  home-manager,
+  home,
   ...
 }: {
-  home-manager.packages = with pkgs; [
+  home.packages = with pkgs; [
     rustup
   ];
 }

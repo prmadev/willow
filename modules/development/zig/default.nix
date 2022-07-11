@@ -1,9 +1,9 @@
 {
   pkgs,
-  home-manager,
+  home,
   ...
 }: {
-  home-manager.a.home.packages = with pkgs; [
+  home.a.home.packages = with pkgs; [
     zig
   ];
 }

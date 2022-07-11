@@ -1,7 +1,7 @@
 {
   pkgs,
-  home-manager,
+  home,
   ...
 }: {
-  home-manager.programs.taskwarrior.enable = true;
+  home.programs.taskwarrior.enable = true;
 }
