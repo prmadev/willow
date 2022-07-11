@@ -21,6 +21,7 @@
       config.allowUnfree = true;
     };
     lib = nixpkgs.lib;
+    hm = home-manager.nixosModules.home-manager;
   in {
     nixosConfigurations = {
       nixer = lib.nixosSystem {
