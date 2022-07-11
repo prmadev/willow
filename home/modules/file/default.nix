@@ -1,6 +1,17 @@
 {pkgs, ...}: {
   programs.broot.enable = true;
 
-  programs.fzf.enable = true;
   programs.zoxide.enable = true;
+
+  lf = {
+    enable = true;
+    settings = {
+      color256 = true;
+      drawbox = false;
+      dirfirst = true;
+      icons = true;
+      preview = true;
+      ratios = "2:3:1";
+    };
+  };
 }
