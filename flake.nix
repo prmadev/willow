@@ -33,7 +33,7 @@
     nixosConfigurations = {
       nixer = lib.nixosSystem {
         inherit system;
-        inherit hm;
+        # inherit hm;
         modules = [
           ./configuration.nix
           ./modules/browsers
