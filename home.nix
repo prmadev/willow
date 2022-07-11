@@ -141,6 +141,17 @@
           };
         };
 
+        "tray" = {
+          "show-passive-items" = true;
+          "icon-size" = 20;
+          "spacing" = 10;
+        };
+        "custom/joljol" = {
+          "exec" = "joljol";
+          "format" = "{}";
+          "update-interval" = 100;
+        };
+
       };
     };
 
