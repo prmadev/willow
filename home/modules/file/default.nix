@@ -16,5 +16,5 @@
     previewer.source = ./lfkittypreview;
     previewer.keybinding = "i";
   };
-  home.packages = with pkgs; [pistol];
+  home.packages = with pkgs; [pistol file];
 }
