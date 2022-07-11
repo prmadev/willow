@@ -1,3 +1,3 @@
 {pkgs, ...}: {
-  home-manager.home.programs.just.enable = true;
+  home-manager.nixosModules.home-manager.home.programs.just.enable = true;
 }
