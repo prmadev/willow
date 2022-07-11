@@ -39,6 +39,10 @@
   programs.zsh.oh-my-zsh.enable = true;
 
   programs.taskwarrior.enable = true;
+  programs.rofi = {
+    enable = true;
+    configPath = "$HOME/rofi/config.rasi";
+  };
 
   programs.waybar = {
     enable = true;

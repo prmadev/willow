@@ -1,0 +1,94 @@
+configuration {
+	modi: "drun";
+	font: "Recursive black 10";
+	display-drun: "";
+	sidebar-mode:true;
+}
+
+@theme "/dev/null"
+* {
+	base: #E0E0E0;
+	surface: #E0E0E0;
+	overlay: #D0D8D0;
+
+	text: #505050;
+	subtle: #404038;
+	muted: #585850;
+
+	hllow: #D0D8D0;
+	hlmed: #B0C0B0;
+	hlhigh: #A0A098;
+
+	rose: #e4a9a9;
+	pine: #B0C8B0;
+	love: #be5555;
+
+	foam: #6495ed;
+	gold: #D8A838;
+	iris: #DDA0DD; 
+	
+	background-color: @surface;
+	text-color: @text;
+}
+
+window {
+	width: 300px;
+}
+
+entry {
+	placeholder: "";
+	expand: true;
+	padding: 20px 20px 00px 20px;
+	background-color: @surface;
+	placeholder-color: @overlay;
+	text-color: @text;
+
+}
+
+inputbar {
+	children: [ prompt, entry ];
+	expand: false;
+}
+
+listview {
+	columns: 1;
+	lines: 7;
+	cycle: true;
+	dynamic: true;
+	layout: vertical;
+	margin:  5px;
+}
+
+
+mainbox {
+	children: [ inputbar, listview ];
+	spacing: 0px;
+}
+
+element {
+	orientation: vertical;
+	children: [ element-text ];
+	padding: 5px; 
+	text-color: @text;
+	border: 2px;
+	border-color: @text;
+	margin: 5px;
+
+}
+
+element-text {
+	expand: true;
+	vertical-align: 0.5;
+	margin: 10px;
+	background-color: inherit;
+	text-color: inherit;
+}
+	
+
+element selected {
+	border: 2px;
+	border-color: @text;
+	text-color: @text;
+	background-color: @pine;
+
+}
