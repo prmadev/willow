@@ -3,7 +3,7 @@
   home-manager,
   ...
 }: {
-  home.programs.waybar = {
+  home-manager.nixosModules.home-manager.home.programs.waybar = {
     enable = true;
     systemd.enable = true;
     systemd.target = "river-session.target";
