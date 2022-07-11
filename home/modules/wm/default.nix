@@ -2,5 +2,6 @@
   imports = [
     ./river
     ./waybar
+    ./mako
   ];
 }
