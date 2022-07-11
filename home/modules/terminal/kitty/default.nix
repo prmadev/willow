@@ -8,7 +8,7 @@
     font = {
       package = pkgs.recursive;
       name = "Recursive Sans Linear";
-      size = 10;
+      size = 12;
     };
     settings = {
       scrollback_lines = 15000;

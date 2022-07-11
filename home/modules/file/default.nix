@@ -12,6 +12,7 @@
       icons = true;
       preview = true;
       ratios = "2:3:1";
+      shell = "bash";
     };
   };
 }
