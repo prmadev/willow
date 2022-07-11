@@ -26,7 +26,7 @@
     nixosConfigurations = {
       nixer = lib.nixosSystem {
         inherit system;
-        specialArgs = {inherit hm;};
+        modules.specialArgs = {inherit hm;};
         modules = [
           ./configuration.nix
           ./modules/browsers
