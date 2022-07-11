@@ -99,6 +99,15 @@
           format-full = "{capacity}";
         };
 
+        network = {
+          "format-wifi" = "";
+          "format-ethernet" = "ﯱ";
+          "format-linked" = "  (No IP)";
+          "format-disconnected" = "睊";
+          "format-alt" = "{bandwidthUpBytes} {bandwidthDownBits}";
+          "interval" = 2;
+        };
+
       };
     };
 
