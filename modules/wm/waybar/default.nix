@@ -1,9 +1,9 @@
 {
   pkgs,
-  hm,
+  home-manager,
   ...
 }: {
-  hm.programs.waybar = {
+  home-manager.programs.waybar = {
     enable = true;
     systemd.enable = true;
     systemd.target = "river-session.target";

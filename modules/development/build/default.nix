@@ -1,7 +1,7 @@
 {
   pkgs,
-  hm,
+  home-manager,
   ...
 }: {
-  hm.programs.just.enable = true;
+  home-manager.programs.just.enable = true;
 }

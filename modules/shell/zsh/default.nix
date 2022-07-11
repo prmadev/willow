@@ -1,28 +1,28 @@
 {
   pkgs,
-  hm,
+  home-manager,
   ...
 }: {
-  hm.programs.zsh.enable = true;
-  hm.programs.zsh.enableAutosuggestions = true;
-  hm.programs.zsh.enableCompletion = true;
-  hm.programs.zsh.enableSyntaxHighlighting = true;
-  hm.programs.zsh.enableVteIntegration = true;
-  hm.programs.zsh.autocd = true;
-  hm.programs.zsh.oh-my-zsh.enable = true;
+  home-manager.programs.zsh.enable = true;
+  home-manager.programs.zsh.enableAutosuggestions = true;
+  home-manager.programs.zsh.enableCompletion = true;
+  home-manager.programs.zsh.enableSyntaxHighlighting = true;
+  home-manager.programs.zsh.enableVteIntegration = true;
+  home-manager.programs.zsh.autocd = true;
+  home-manager.programs.zsh.oh-my-zsh.enable = true;
 
-  hm.programs.broot.enableZshIntegration = true;
+  home-manager.programs.broot.enableZshIntegration = true;
 
-  hm.programs.fzf.enableZshIntegration = true;
+  home-manager.programs.fzf.enableZshIntegration = true;
 
-  hm.programs.just.enableZshIntegration = true;
+  home-manager.programs.just.enableZshIntegration = true;
 
-  hm.programs.nix-index.enableZshIntegration = true;
+  home-manager.programs.nix-index.enableZshIntegration = true;
 
-  hm.programs.starship.enable = true;
-  hm.programs.starship.enableZshIntegration = true;
+  home-manager.programs.starship.enable = true;
+  home-manager.programs.starship.enableZshIntegration = true;
 
-  hm.programs.zoxide.enableZshIntegration = true;
+  home-manager.programs.zoxide.enableZshIntegration = true;
 
-  hm.services.gpg-agent.enableZshIntegration = true;
+  home-manager.services.gpg-agent.enableZshIntegration = true;
 }

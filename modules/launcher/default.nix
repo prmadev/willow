@@ -1,6 +1,6 @@
 {
   pkgs,
-  hm,
+  home-manager,
   ...
 }: {
   imports = [

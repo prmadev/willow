@@ -1,10 +1,10 @@
 {
   pkgs,
-  hm,
+  home-manager,
   ...
 }: {
   # imports = [
   # ];
 
-  hm.services.gpg-agent.enable = true;
+  home-manager.services.gpg-agent.enable = true;
 }
