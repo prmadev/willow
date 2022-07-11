@@ -42,7 +42,7 @@
   programs.rofi = {
     enable = true;
 	font = "Recursive 10"; 
-	theme = ./rofi/config.rasi;
+	theme = ./rofi/rofi-pine.rasi;
   };
 
 
