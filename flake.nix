@@ -26,6 +26,7 @@
     nixosConfigurations = {
       nixer = lib.nixosSystem {
         inherit system;
+        specialArgs = {inherit hm;};
         modules = [
           ./configuration.nix
           ./modules/browsers
@@ -46,7 +47,7 @@
           {
             home-manager.useGlobalPkgs = true; # uses the packages that comes with nix not home-manager.
             home-manager.useUserPackages = true;
-            # home-manager.extraSpeialArgs = {inherit user;};
+            home-manager.extraSpeialArgs = {inherit hm;};
             home-manager.users.a = {
               home.stateVersion = "22.11";
             };

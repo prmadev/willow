@@ -4,7 +4,6 @@
   hm,
   ...
 }: {
-  inherit hm;
   hm.home.programs.waybar = {
     enable = true;
     systemd.enable = true;
