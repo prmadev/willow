@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  a.home.packages = with pkgs; [
+  home.packages = with pkgs; [
     zig
   ];
 }
