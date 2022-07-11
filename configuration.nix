@@ -1,34 +1,34 @@
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
-
-{ config, pkgs, ... }:
-
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
+  config,
+  pkgs,
+  ...
+}: {
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+  ];
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-
   networking.hostName = "nixer"; # Define your hostname.
   # Pick only one of the below networking options.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-  networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
+  networking.networkmanager.enable = true; # Easiest to use and most distros use this by default.
 
   nixpkgs.config.allowUnfree = true;
 
   # Set your time zone.
   time.timeZone = "Asia/Tehran";
 
-services.tor = {
-enable = true;
-client.enable = true;
-};
+  services.tor = {
+    enable = true;
+    client.enable = true;
+  };
   # Configure network proxy if necessary
   networking.proxy.default = "socks5://127.0.0.1:9050/";
   networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
@@ -37,20 +37,18 @@ client.enable = true;
   i18n.defaultLocale = "en_US.UTF-8";
   console = {
     font = "Lat2-Terminus16";
-  #  keyMap = "us";
-  #  useXkbConfig = true; # use xkbOptions in tty.
+    #  keyMap = "us";
+    #  useXkbConfig = true; # use xkbOptions in tty.
   };
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
-
 
   # Enable the GNOME Desktop Environment.
   services.xserver.displayManager.gdm.enable = false;
   services.xserver.displayManager.lightdm.enable = false;
   services.xserver.displayManager.sddm.enable = false;
   services.xserver.desktopManager.gnome.enable = false;
-  
 
   # Configure keymap in X11
   services.xserver.layout = "us";
@@ -73,72 +71,68 @@ client.enable = true;
   services.pipewire.pulse.enable = true;
   services.dbus.enable = true;
   xdg.portal = {
-  enable = true;
-  wlr.enable = true;
-
-};
-
+    enable = true;
+    wlr.enable = true;
+  };
 
   # Enable touchpad support (enabled default in most desktopManager).
   services.xserver.libinput.enable = true;
   services.tlp.enable = true;
-programs.xwayland.enable = true;
+  programs.xwayland.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.defaultUserShell = pkgs.zsh;
   users.users.a = {
-     createHome = true;
-     isNormalUser = true;
-     extraGroups = [
-"wheel"
-"video" # for wayland light support
-]; # Enable ‘sudo’ for the user.
+    createHome = true;
+    isNormalUser = true;
+    extraGroups = [
+      "wheel"
+      "video" # for wayland light support
+    ]; # Enable ‘sudo’ for the user.
   };
-programs.zsh.enable = true;
-programs.git.enable = true;
+  programs.zsh.enable = true;
+  programs.git.enable = true;
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-   environment.systemPackages = with pkgs; [
-	neovim
-firefox-wayland
-qutebrowser
-river
-curl
-aria
-     wget
-clash
-go_1_18
-kitty
-glib #for wayland gsettings
-slurp
-grim
-wl-clipboard
-mako
-rofi-wayland
-rofi-rbw
-
-
+  environment.systemPackages = with pkgs; [
+    neovim
+    firefox-wayland
+    qutebrowser
+    river
+    curl
+    aria
+    wget
+    clash
+    go_1_18
+    kitty
+    glib #for wayland gsettings
+    slurp
+    grim
+    wl-clipboard
+    mako
+    rofi-wayland
+    rofi-rbw
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   programs.mtr.enable = true;
   programs.gnupg.agent = {
-     enable = true;
-     enableSSHSupport = true;
+    enable = true;
+    enableSSHSupport = true;
   };
 
-environment.variables = {
-EDITOR = "nvim";
-VISUAL = "nvim";
-NIX_CURL_FLAGS= "-x socks://127.0.0.1:9050/";
-};
+  environment.variables = {
+    EDITOR = "nvim";
+    VISUAL = "nvim";
+    NIX_CURL_FLAGS = "-x socks://127.0.0.1:9050/";
+  };
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
-#hardware.nvidiaOptimus.disable = true;
-hardware.opengl.enable = true;
+  #hardware.nvidiaOptimus.disable = true;
+  hardware.opengl.enable = true;
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
@@ -150,7 +144,6 @@ hardware.opengl.enable = true;
   # accidentally delete configuration.nix.
   #system.copySystemConfiguration = true;
 
-
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave
@@ -159,9 +152,9 @@ hardware.opengl.enable = true;
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "22.11"; # Did you read the comment?
 
-	nix = { # for the initial setup of flakes
-		package = pkgs.nixFlakes;
-		extraOptions = "experimental-features = nix-command flakes";
-	};
-
+  nix = {
+    # for the initial setup of flakes
+    package = pkgs.nixFlakes;
+    extraOptions = "experimental-features = nix-command flakes";
+  };
 }
