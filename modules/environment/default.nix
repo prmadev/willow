@@ -2,5 +2,5 @@
   # imports = [
   # ];
 
-  home.services.gpg-agent.enable = true;
+  home-manager.home.services.gpg-agent.enable = true;
 }

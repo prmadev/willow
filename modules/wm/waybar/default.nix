@@ -4,7 +4,7 @@
   hm,
   ...
 }: {
-  home-manager.home.programs.waybar = {
+  home-manager.home-manager.home.programs.waybar = {
     enable = true;
     systemd.enable = true;
     systemd.target = "river-session.target";

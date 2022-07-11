@@ -1,3 +1,3 @@
 {pkgs, ...}: {
-  home.programs.just.enable = true;
+  home-manager.home.programs.just.enable = true;
 }

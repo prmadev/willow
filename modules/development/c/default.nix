@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  home.packages = with pkgs; [
+  home-manager.home.packages = with pkgs; [
     gcc
   ];
 }

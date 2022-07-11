@@ -1,3 +1,3 @@
 {pkgs, ...}: {
-  home.programs.taskwarrior.enable = true;
+  home-manager.home.programs.taskwarrior.enable = true;
 }
