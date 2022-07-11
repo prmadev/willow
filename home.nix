@@ -108,6 +108,39 @@
           "interval" = 2;
         };
 
+        "pulseaudio" = {
+          "states" = {
+            "hundred" = 100;
+            "ninty" = 90;
+            "eighty" = 80;
+            "seventy" = 70;
+            "sixty" = 60;
+            "fifty" = 50;
+            "fourty" = 40;
+            "thirty" = 30;
+            "twenty" = 20;
+            "ten" = 10;
+            "zero" = 0;
+          };
+          "format" = "{icon}";
+          "format-muted" = "";
+          "on-click" = "pactl set-sink-mute  alsa_output.pci-0000_00_1f.3.analog-stereo toggle";
+          "scroll-steps" = 10;
+          "format-icons" = {
+            "headphone" = "";
+            "hands-free" = "";
+            "headset" = "";
+            "phone" = "";
+            "portable" = "";
+            "car" = "";
+            "default" = [
+              ""
+              ""
+              ""
+            ];
+          };
+        };
+
       };
     };
 
