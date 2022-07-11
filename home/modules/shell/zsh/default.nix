@@ -8,6 +8,8 @@
   programs.zsh.oh-my-zsh.enable = true;
 
   programs.broot.enableZshIntegration = true;
+  programs.bat.enable = true;
+  programs.command-not-found.enable = true;
 
   programs.fzf.enableZshIntegration = true;
 

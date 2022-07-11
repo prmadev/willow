@@ -7,6 +7,7 @@
     ./modules/launcher
     ./modules/network
     ./modules/shell
+    ./modules/system
     ./modules/file
     ./modules/terminal
     ./modules/video
