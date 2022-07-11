@@ -36,7 +36,7 @@
   in {
     nixosConfigurations = {
       nixer = lib.nixosSystem {
-        inherit system user hm nur;
+        inherit system user hm;
         modules = [
           ./configuration.nix
           ./modules/browsers
