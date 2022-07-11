@@ -3,7 +3,7 @@
   home-manager,
   ...
 }: {
-  home.packages = with pkgs; [
+  home-manager.packages = with pkgs; [
     zig
   ];
 }
