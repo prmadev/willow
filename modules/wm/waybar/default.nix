@@ -3,7 +3,9 @@
   home-manager,
   hm,
   ...
-}: {
+}: let
+  hm = home-manager.nixosModules.home-manager;
+in {
   hm.home.programs.waybar = {
     enable = true;
     systemd.enable = true;
