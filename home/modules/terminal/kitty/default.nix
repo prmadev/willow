@@ -7,7 +7,7 @@
     enable = true;
     font = {
       package = pkgs.recursive;
-      name = "monospace";
+      name = "JetBrainsMono Nerd Font";
       size = 12;
     };
     settings = {
