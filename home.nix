@@ -39,4 +39,13 @@ programs.zsh.oh-my-zsh.enable = true;
 
 
 programs.taskwarrior.enable = true;
+
+
+
+programs.waybar = {
+enable = true;
+systemd.enable = true;
+systemd.target = "river-session.target";
+
+};
 }
