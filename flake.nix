@@ -48,7 +48,6 @@
           {
             home-manager.useGlobalPkgs = true; # uses the packages that comes with nix not home-manager.
             home-manager.useUserPackages = true;
-            home.extraSpeialArgs = {inherit hm;};
             home-manager.users.a = {
               home.stateVersion = "22.11";
             };
