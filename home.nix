@@ -2,6 +2,7 @@
 {
     home.packages = with pkgs; [
       htop
+	  gcc
     ];
     home.stateVersion = "22.11";
 
@@ -46,6 +47,6 @@ programs.waybar = {
 enable = true;
 systemd.enable = true;
 systemd.target = "river-session.target";
-
 };
+
 }
