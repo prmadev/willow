@@ -4,6 +4,6 @@
   ...
 }: {
   imports = [
-    ./modules/launcher/rofi
+    ./rofi
   ];
 }

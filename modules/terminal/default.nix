@@ -4,6 +4,6 @@
   ...
 }: {
   imports = [
-    ./modules/terminal/kitty
+    ./kitty
   ];
 }

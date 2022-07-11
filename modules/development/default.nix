@@ -4,8 +4,12 @@
   ...
 }: {
   imports = [
-    ./modules/development/build
-    ./modules/development/go
-    ./modules/development/neovim
+    ./build
+    ./c
+    ./go
+    ./neovim
+    ./nix
+    ./rust
+    ./zig
   ];
 }

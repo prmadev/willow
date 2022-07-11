@@ -4,6 +4,6 @@
   ...
 }: {
   imports = [
-    ./modules/video/mpv
+    ./mpv
   ];
 }

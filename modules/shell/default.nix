@@ -3,5 +3,5 @@
   hm,
   ...
 }: {
-  imports = [./modules/shell/zsh];
+  imports = [./zsh];
 }

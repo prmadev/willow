@@ -4,7 +4,7 @@
   ...
 }: {
   imports = [
-    ./modules/wm/river
-    ./modules/wm/waybar
+    ./river
+    ./waybar
   ];
 }
