@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  home.programs.waybar = {
+  programs.waybar = {
     enable = true;
     systemd.enable = true;
     systemd.target = "river-session.target";
