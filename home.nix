@@ -41,7 +41,7 @@
   programs.taskwarrior.enable = true;
   programs.rofi = {
     enable = true;
-    configPath = "./dofi/rofi/config.rasi";
+	font = "Recursive 10"; 
   };
 
   programs.waybar = {
