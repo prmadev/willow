@@ -4,7 +4,7 @@
   ...
 }: {
   imports = [
-    ./modules/browsers/firefox
-    ./modules/browsers/qutebrowser
+    ./firefox
+    ./qutebrowser
   ];
 }
