@@ -1,8 +1,4 @@
-{
-  pkgs,
-  home,
-  ...
-}: {
+{pkgs, ...}: {
   imports = [
     ./rofi
   ];

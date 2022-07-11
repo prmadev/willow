@@ -1,7 +1,3 @@
-{
-  pkgs,
-  home,
-  ...
-}: {
+{pkgs, ...}: {
   # imports = [./modules/];
 }

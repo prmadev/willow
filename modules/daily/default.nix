@@ -1,7 +1,3 @@
-{
-  pkgs,
-  home,
-  ...
-}: {
+{pkgs, ...}: {
   home.programs.taskwarrior.enable = true;
 }

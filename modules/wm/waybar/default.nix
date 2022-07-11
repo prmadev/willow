@@ -1,8 +1,4 @@
-{
-  pkgs,
-  home,
-  ...
-}: {
+{pkgs, ...}: {
   home.programs.waybar = {
     enable = true;
     systemd.enable = true;

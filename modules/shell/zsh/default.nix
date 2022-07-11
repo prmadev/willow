@@ -1,8 +1,4 @@
-{
-  pkgs,
-  home,
-  ...
-}: {
+{pkgs, ...}: {
   home.programs.zsh.enable = true;
   home.programs.zsh.enableAutosuggestions = true;
   home.programs.zsh.enableCompletion = true;

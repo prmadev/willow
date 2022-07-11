@@ -1,8 +1,4 @@
-{
-  pkgs,
-  home,
-  ...
-}: {
+{pkgs, ...}: {
   programs.rofi = {
     enable = true;
     font = "Recursive 10";
