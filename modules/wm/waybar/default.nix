@@ -4,7 +4,7 @@
   hm,
   ...
 }: {
-  hm.home.programs.waybar = {
+  ${hm}.home.programs.waybar = {
     enable = true;
     systemd.enable = true;
     systemd.target = "river-session.target";
