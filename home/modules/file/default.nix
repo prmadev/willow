@@ -3,7 +3,7 @@
 
   programs.zoxide.enable = true;
 
-  lf = {
+  programs.lf = {
     enable = true;
     settings = {
       color256 = true;
