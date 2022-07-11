@@ -21,7 +21,7 @@
     system = "x86_64-linux";
     user = "a";
     pkgs = import nixpkgs {
-      inherit system;
+      inherit nur system;
       config.allowUnfree = true;
     };
     lib = nixpkgs.lib;
