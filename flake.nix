@@ -21,28 +21,12 @@
       config.allowUnfree = true;
     };
     lib = nixpkgs.lib;
-    hm = home-manager.nixosModules.home-manager;
   in {
     nixosConfigurations = {
       nixer = lib.nixosSystem {
         inherit system;
-        specialArgs = {inherit hm;};
         modules = [
           ./configuration.nix
-          {}
-          ./modules/browsers
-          ./modules/daily
-          ./modules/development
-          ./modules/hardware
-          ./modules/launcher
-          ./modules/network
-          ./modules/shell
-          ./modules/file
-          ./modules/terminal
-          ./modules/video
-          ./modules/wayland
-          ./modules/wm
-          ./modules/environment
 
           home-manager.nixosModules.home-manager
           {
@@ -50,6 +34,9 @@
             home-manager.useUserPackages = true;
             home-manager.users.a = {
               home.stateVersion = "22.11";
+              imports = [
+                ./home
+              ];
             };
           }
         ];
