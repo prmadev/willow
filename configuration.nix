@@ -97,7 +97,6 @@
     qutebrowser
     river
     curl
-    aria
     wget
     clash
     go_1_18
