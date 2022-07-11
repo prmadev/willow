@@ -4,7 +4,7 @@
   hm,
   ...
 }: let
-  hm = home-manager.nixosModules.home-manager;
+  h = home-manager.nixosModules.home-manager;
 in {
   hm.home.programs.waybar = {
     enable = true;
