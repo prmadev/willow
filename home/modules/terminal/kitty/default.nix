@@ -7,7 +7,7 @@
     enable = true;
     font = {
       package = pkgs.recursive;
-      name = "Recursive Sans Linear";
+      name = "monospace";
       size = 12;
     };
     settings = {
