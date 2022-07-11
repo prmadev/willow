@@ -41,10 +41,9 @@
   programs.taskwarrior.enable = true;
   programs.rofi = {
     enable = true;
-	font = "Recursive 10"; 
-	theme = ./rofi/rofi-pine.rasi;
+    font = "Recursive 10";
+    theme = ./rofi/rofi-pine.rasi;
   };
-
 
   programs.waybar = {
     enable = true;
