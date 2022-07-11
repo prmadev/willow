@@ -16,7 +16,7 @@
     previewer.source = ./lfkittypreview;
     previewer.keybinding = "i";
     extraConfig = ''
-      set cleaner ~/dofi/home/modules/file/lf_kitty_clean
+      set cleaner ~/dofi/home/modules/file/lfkittycleaner
     '';
   };
   home.packages = with pkgs; [pistol file];
