@@ -1,7 +1,6 @@
 {pkgs, ...}: {
   programs.git.enable = true;
   programs.git.delta.enable = true;
-  programs.git.diff-so-fancy.enable = true;
   programs.git.lfs.enable = true;
 
   programs.git.userEmail = "amirhossein.alesheikh@gmail.com";
