@@ -1,6 +1,7 @@
 {
   config,
   pkgs,
+  zk-nix,
   ...
 }: {
   imports = [
