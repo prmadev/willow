@@ -85,7 +85,17 @@
       "video" # for wayland light support
     ]; # Enable ‘sudo’ for the user.
   };
-  programs.zsh.enable = true;
+  programs.zsh = {
+    enable = true;
+    ohMyZsh = {
+      enable = true;
+    };
+    vteIntegration = true;
+    enableCompletion = true;
+    autosuggestions.enable = true;
+    syntaxHighlighting.enable = true;
+  };
+
   programs.git.enable = true;
   # List packages installed in system profile. To search, run:
   # $ nix search wget
