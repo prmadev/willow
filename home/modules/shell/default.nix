@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  imports = [./zsh];
+  # imports = [./zsh];
 
   programs.info.enable = true;
   programs.tealdeer.enable = true;
