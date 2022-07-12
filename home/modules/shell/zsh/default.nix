@@ -7,7 +7,7 @@
   programs.zsh.autocd = true;
   programs.zsh.oh-my-zsh.enable = true;
   # programs.zsh.prezto.enable = true;
-  programs.zsh.completionInit = "";
+  # programs.zsh.completionInit = "";
   programs.zsh.history.expireDuplicatesFirst = true;
   programs.zsh.history.extended = true;
 
