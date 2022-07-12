@@ -9,7 +9,7 @@
 
   # programs.broot.enableZshIntegration = true;
 
-  programs.fzf.enableZshIntegration = true;
+  # programs.fzf.enableZshIntegration = true;
 
   programs.just.enableZshIntegration = true;
 
