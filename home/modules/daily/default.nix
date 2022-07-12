@@ -35,7 +35,7 @@
       taskwarrior-tui
       taskopen
     ]
-    ++ [zk];
+    ++ [zk-nix];
 
   services.taskwarrior-sync.enable = true;
 }
