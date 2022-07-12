@@ -6,17 +6,12 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    zk-nix = {
-      url = "github:amirography/zk-nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs = {
     self,
     nixpkgs,
     home-manager,
-    zk-nix,
     ...
   }: let
     system = "x86_64-linux";
