@@ -21,4 +21,11 @@
   };
   programs.pistol.enable = true;
   home.packages = with pkgs; [file];
+
+  programs.zathura.enable = true;
+  programs.zathura.options = {
+    #TODO
+    # default-bg = "#000000";
+    # default-fg = "#FFFFFF";
+  };
 }

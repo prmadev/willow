@@ -1,5 +1,6 @@
 {pkgs, ...}: {
   imports = [
     ./kitty
+    ./tmux
   ];
 }

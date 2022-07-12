@@ -4,5 +4,6 @@
     enable = true;
     font = "Recursive 10";
     theme = ./rofi-pine.rasi;
+    package = pkgs.rofi-wayland;
   };
 }

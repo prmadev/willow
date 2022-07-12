@@ -91,9 +91,9 @@
   programs.git.enable = true;
   # List packages installed in system profile. To search, run:
   # $ nix search wget
+  environment.pathsToLink = ["/share/zsh"];
   environment.systemPackages = with pkgs; [
     neovim #just in case I need it at system level
-    qutebrowser
     river
     curl
     wget
@@ -102,8 +102,6 @@
     slurp
     grim
     wl-clipboard
-    mako
-    rofi-wayland
     rofi-rbw
   ];
 

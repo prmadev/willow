@@ -2,6 +2,7 @@
   imports = [./zsh];
 
   programs.info.enable = true;
+  programs.tealdeer.enable = true;
   programs.bat.enable = true;
   programs.exa.enable = true;
   programs.exa.enableAliases = true;
@@ -13,6 +14,7 @@
 
   programs.starship.enableBashIntegration = true;
   programs.fzf.enableBashIntegration = true;
+  programs.zoxide.enableBashIntegration = true;
   programs.just.enableBashIntegration = true;
   programs.man.generateCaches = true;
   programs.pet.enable = true; # TODO
