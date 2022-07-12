@@ -22,4 +22,6 @@
       label = "bold color08";
     };
   };
+
+  services.taskwarrior-sync.enable = true;
 }

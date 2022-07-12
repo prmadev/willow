@@ -5,6 +5,9 @@
   programs.gpg.enable = true;
 
   services.gpg-agent.enable = true;
+  services.gpg-agent.enableSshSupport = true;
+  services.gpg-agent.pinentryFlavor = "curses";
+
   programs.rbw.enable = true;
   programs.rbw.settings = {
     email = "amirhossein.alesheikh@gmail.com";
@@ -30,4 +33,11 @@
     FAVO_BOOKMARK = "$ZK_NOTEBOOK_DIR/bm.md";
   };
   home.sessionPath = ["$HOME/.local/bin" "$HOME/go/bin" "$HOME/.cargo/bin"];
+  xdg = {
+    enable = true;
+    mime.enable = true;
+    mimeApps.enable = true;
+    userDirs.enable = true;
+    userDirs.createDirectories = true;
+  };
 }
