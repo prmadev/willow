@@ -76,7 +76,7 @@
   programs.xwayland.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.defaultUserShell = pkgs.zsh;
+  # users.defaultUserShell = pkgs.zsh;
   users.users.a = {
     createHome = true;
     isNormalUser = true;
@@ -85,7 +85,7 @@
       "video" # for wayland light support
     ]; # Enable ‘sudo’ for the user.
   };
-  programs.zsh.enable = true;
+  # programs.zsh.enable = true;
   programs.git.enable = true;
   # List packages installed in system profile. To search, run:
   # $ nix search wget
