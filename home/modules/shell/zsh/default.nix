@@ -5,9 +5,9 @@
   programs.zsh.enableSyntaxHighlighting = true;
   # programs.zsh.enableVteIntegration = true;
   programs.zsh.autocd = true;
-  # programs.zsh.oh-my-zsh.enable = true;
+  programs.zsh.oh-my-zsh.enable = true;
   # programs.zsh.prezto.enable = true;
-
+  programs.zsh.completionInit = "autoload -U compinit && compinit";
   # programs.broot.enableZshIntegration = true;
 
   programs.fzf.enableZshIntegration = true;

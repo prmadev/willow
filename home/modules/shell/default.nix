@@ -1,5 +1,8 @@
 {pkgs, ...}: {
-  imports = [./zsh];
+  imports = [
+    ./zsh
+    ./bash
+  ];
 
   programs.info.enable = true;
   programs.tealdeer.enable = true;
@@ -12,10 +15,6 @@
   programs.starship.enable = true;
   programs.jq.enable = true;
 
-  programs.starship.enableBashIntegration = true;
-  programs.fzf.enableBashIntegration = true;
-  programs.zoxide.enableBashIntegration = true;
-  programs.just.enableBashIntegration = true;
   programs.man.generateCaches = true;
   programs.pet.enable = true; # TODO
 
