@@ -110,6 +110,7 @@
     gparted
     imv
     lsof
+    #
     libreoffice
     mediainfo
     imagemagick
