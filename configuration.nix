@@ -110,7 +110,7 @@
     gparted
     imv
     lsof
-    libreoffice-bin
+    libreoffice
     mediainfo
     imagemagick
     brightnessctl
