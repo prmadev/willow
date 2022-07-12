@@ -1,8 +1,4 @@
-{
-  pkgs,
-  zk-nix,
-  ...
-}: {
+{pkgs, ...}: {
   # #
   programs.taskwarrior.enable = true;
   programs.taskwarrior.colorTheme = "dark-16";
