@@ -68,11 +68,11 @@
     "web-search"
     "zoxide"
     "zsh-interactive-cd"
-    "zsh-autosuggestions"
-    "zsh-bash-completions-fallback"
+    # "zsh-autosuggestions"
+    # "zsh-bash-completions-fallback"
     # "completion"
     # "fast-syntax-highlighting"
-    "zsh-syntax-highlighting"
+    # "zsh-syntax-highlighting"
   ];
   # programs.broot.enableZshIntegration = true;
 
