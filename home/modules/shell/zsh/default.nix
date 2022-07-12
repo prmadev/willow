@@ -7,7 +7,19 @@
   programs.zsh.autocd = true;
   programs.zsh.oh-my-zsh.enable = true;
   # programs.zsh.prezto.enable = true;
-  programs.zsh.completionInit = "autoload -U compinit ";
+  programs.zsh.completionInit = "autoload -U compinit && compinit";
+  programs.zsh.history.expireDuplicatesFirst = true;
+  programs.zsh.history.extended = true;
+
+  programs.zsh.history.ignoreDups = true;
+  programs.zsh.dotDir = ".config/zsh";
+
+  programs.zsh.history.save = 30000;
+  programs.zsh.history.size = 30000;
+
+  programs.zsh.oh-my-zsh.extraConfig = ''
+    HYPHEN_INSENSITIVE="true"
+  '';
   # programs.broot.enableZshIntegration = true;
 
   programs.fzf.enableZshIntegration = true;
