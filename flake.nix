@@ -8,6 +8,7 @@
     };
     zk-nix = {
       url = "github:amirography/zk-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
