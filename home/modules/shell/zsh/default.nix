@@ -21,6 +21,13 @@
        HYPHEN_INSENSITIVE="true"
     ENABLE_CORRECTION="true"
   '';
+
+  programs.zsh.oh-my-zsh.plugins = [
+    "colored-man-pages"
+    "colorize"
+    "compleat"
+    "colors"
+  ];
   # programs.broot.enableZshIntegration = true;
 
   programs.fzf.enableZshIntegration = true;
