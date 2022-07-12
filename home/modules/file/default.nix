@@ -20,7 +20,27 @@
     '';
   };
   programs.pistol.enable = true;
-  home.packages = with pkgs; [file];
+  home.packages = with pkgs; [
+    file # for lf preview
+    lsof
+    libreoffice
+    imagemagick
+    imv
+    ffmpeg_5-full
+    ffmpegthumbnailer
+    duf
+    du-dust
+    ncdu_2
+    dutree
+    android-file-transfer
+    atool # for file extraction
+    pigz # file compression
+    sd
+    viu
+    fd
+    mediainfo
+    ripgrep-all
+  ];
 
   programs.zathura.enable = true;
   programs.zathura.options = {

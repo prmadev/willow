@@ -2,6 +2,7 @@
   imports = [
     ./build
     ./c
+    ./css
     ./go
     ./git
     ./neovim

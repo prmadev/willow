@@ -9,4 +9,10 @@
     };
   };
   programs.ssh.enable = true;
+  home.packages = with pkgs; [
+    qbittorrent-nox
+    wget2
+    yt-dlp
+    clash # for networking
+  ];
 }

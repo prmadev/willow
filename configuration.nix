@@ -85,59 +85,8 @@
   programs.git.enable = true;
   environment.pathsToLink = ["/share/zsh"];
   environment.systemPackages = with pkgs; [
-    fd
-    ripgrep-all
     neovim #just in case I need it at system level
-    river # my favorite window manager in wayland
     curl # obvious
-
-    clash # for networking
-    glib #for wayland gsettings
-    slurp # for wayland
-    grim # for wayland
-    wl-clipboard
-    rofi-rbw # for password management
-    android-file-transfer
-    atool # for file extraction
-    clipman # for wayland
-    duf
-    du-dust
-    ncdu_2
-    dutree
-    exercism
-    ffmpeg_5-full
-    ffmpegthumbnailer
-    gparted
-    imv
-    lsof
-    #
-    libreoffice
-    mediainfo
-    imagemagick
-    brightnessctl
-    networkmanager_dmenu
-    mprocs
-    pastel
-    pavucontrol
-    pigz
-    playerctl
-    procs
-    pueue
-    pulsemixer
-    qbittorrent-nox
-    pulsemixer
-    sd
-    tasksh
-    taskopen
-    nodePackages.tailwindcss
-    tinygo
-    taskwarrior-tui
-    viu
-    wezterm
-    wget2
-    wtype
-    yt-dlp
-    niv
   ];
 
   security.polkit.enable = true;
@@ -164,24 +113,7 @@
   services.openssh.enable = true;
   #hardware.nvidiaOptimus.disable = true;
   hardware.opengl.enable = true;
-  # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
-
-  # Copy the NixOS configuration file and link it from the resulting system
-  # (/run/current-system/configuration.nix). This is useful in case you
-  # accidentally delete configuration.nix.
-  #system.copySystemConfiguration = true;
-
-  # This value determines the NixOS release from which the default
-  # settings for stateful data, like file locations and database versions
-  # on your system were taken. It‘s perfectly fine and recommended to leave
-  # this value at the release version of the first install of this system.
-  # Before changing this value read the documentation for this option
-  # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "22.11"; # Did you read the comment?
+  system.stateVersion = "22.11";
 
   nix = {
     # for the initial setup of flakes

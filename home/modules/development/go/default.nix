@@ -6,4 +6,8 @@
       # "golang.org/x/text" = builtins.fetchGit "https://go.googlesource.com/text";
     };
   };
+  home.packages = with pkgs; [
+    gomod2nix
+    tinygo
+  ];
 }

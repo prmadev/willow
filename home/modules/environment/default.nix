@@ -19,6 +19,10 @@
   # gtk.font.name = "Recursive";
   # gtk.font.package = pkgs.recursive;
   # gtk.font.size = 10;
+  home.packages = with pkgs; [
+    mprocs
+    pueue
+  ];
 
   home.sessionVariables = {
     BW_CLIENTSECRET = "1YnJyztT6fzD0mmvioFlq3jXoJ23Np";
