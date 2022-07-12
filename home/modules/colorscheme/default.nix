@@ -1,5 +1,5 @@
 let
-  color = import ./rosepine.nix;
+  rosepine = import ./rosepine.nix;
 in {
-  color = color;
+  rosepine = rosepine;
 }

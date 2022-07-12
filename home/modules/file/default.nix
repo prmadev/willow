@@ -47,7 +47,7 @@ in {
   programs.zathura.enable = true;
   programs.zathura.options = {
     #TODO
-    default-bg = color.color.rose;
+    default-bg = color.rosepine.rose;
     default-fg = "#FFFFFF";
   };
 }
