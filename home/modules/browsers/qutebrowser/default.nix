@@ -30,7 +30,6 @@ in {
       content.local_content_can_access_file_urls = true;
       content.local_storage = true;
       content.mouse_lock = "ask";
-      content.notifications = false;
       content.proxy = "system";
       content.proxy_dns_requests = true;
       content.webgl = true;
