@@ -12,6 +12,6 @@
     margin = "10";
     padding = "5";
     height = 100;
-    witdth = 300;
+    width = 300;
   };
 }
