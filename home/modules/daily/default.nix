@@ -18,7 +18,6 @@
       blocking = "on color0";
       calendar.today = "bold white on bright green";
       error = "bold black on red";
-      due = "bold white";
       due.today = "bold color6";
       label = "bold color08";
     };
