@@ -101,6 +101,8 @@
   # $ nix search wget
   environment.pathsToLink = ["/share/zsh"];
   environment.systemPackages = with pkgs; [
+    fd
+    ripgrep-all
     neovim #just in case I need it at system level
     river
     curl
