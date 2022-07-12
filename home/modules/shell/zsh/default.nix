@@ -15,7 +15,7 @@
 
   programs.nix-index.enableZshIntegration = true;
 
-  # programs.starship.enableZshIntegration = true;
+  programs.starship.enableZshIntegration = true;
 
   programs.zoxide.enableZshIntegration = true;
 
