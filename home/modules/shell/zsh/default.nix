@@ -8,7 +8,6 @@
   # programs.zsh.oh-my-zsh.enable = true;
   programs.zsh.prezto.enable = true;
 
-  #
   # programs.broot.enableZshIntegration = true;
 
   programs.fzf.enableZshIntegration = true;
