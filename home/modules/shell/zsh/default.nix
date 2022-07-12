@@ -3,10 +3,10 @@
   programs.zsh.enableAutosuggestions = true;
   programs.zsh.enableCompletion = true;
   programs.zsh.enableSyntaxHighlighting = true;
-  programs.zsh.enableVteIntegration = true;
+  # programs.zsh.enableVteIntegration = true;
   programs.zsh.autocd = true;
   # programs.zsh.oh-my-zsh.enable = true;
-  programs.zsh.prezto.enable = true;
+  # programs.zsh.prezto.enable = true;
 
   # programs.broot.enableZshIntegration = true;
 
