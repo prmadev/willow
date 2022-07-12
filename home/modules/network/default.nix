@@ -8,4 +8,5 @@
       continue = true;
     };
   };
+  programs.ssh.enable = true;
 }

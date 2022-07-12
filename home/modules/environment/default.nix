@@ -5,6 +5,11 @@
   programs.gpg.enable = true;
 
   services.gpg-agent.enable = true;
+  programs.rbw.enable = true;
+  programs.rbw.settings = {
+    email = "amirhossein.alesheikh@gmail.com";
+    pinentry = "curses";
+  };
 
   fonts.fontconfig.enable = true;
   gtk.enable = true;

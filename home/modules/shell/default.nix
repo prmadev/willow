@@ -11,8 +11,11 @@
   programs.starship.enable = true;
   programs.jq.enable = true;
 
+  programs.starship.enableBashIntegration = true;
   programs.fzf.enableBashIntegration = true;
   programs.just.enableBashIntegration = true;
+  programs.man.generateCaches = true;
+  programs.pet.enable = true; # TODO
 
   home.shellAliases = {
     tree = "exa --tree --icons";

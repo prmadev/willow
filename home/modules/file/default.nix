@@ -19,5 +19,6 @@
       set cleaner ~/dofi/home/modules/file/lfkittycleaner
     '';
   };
-  home.packages = with pkgs; [pistol file];
+  programs.pistol.enable = true;
+  home.packages = with pkgs; [file];
 }
