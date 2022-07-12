@@ -27,6 +27,13 @@
     "colorize"
     "compleat"
     "colors"
+
+    "fzf"
+    "fzf-zsh-completions"
+    "fzf-marks"
+    "fzf-finder"
+    "fzf-zsh-plugin"
+    "fzf-tab"
   ];
   # programs.broot.enableZshIntegration = true;
 
