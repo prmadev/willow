@@ -29,6 +29,7 @@
     tasksh
     taskwarrior-tui
     taskopen
+    fractal
   ];
 
   services.taskwarrior-sync.enable = true;
