@@ -11,9 +11,9 @@
 
   programs.fzf.enableZshIntegration = true;
 
-  # programs.just.enableZshIntegration = true;
+  programs.just.enableZshIntegration = true;
 
-  programs.nix-index.enableZshIntegration = true;
+  # programs.nix-index.enableZshIntegration = true;
 
   programs.starship.enableZshIntegration = true;
 
