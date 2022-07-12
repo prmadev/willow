@@ -27,14 +27,15 @@
       label = "bold color08";
     };
   };
-  home.packages = with pkgs; [
-    exercism
-    pastel
-    tasksh
-    taskwarrior-tui
-    taskopen
-    zk-nix
-  ];
+  home.packages = with pkgs;
+    [
+      exercism
+      pastel
+      tasksh
+      taskwarrior-tui
+      taskopen
+    ]
+    ++ [zk-nix];
 
   services.taskwarrior-sync.enable = true;
 }
