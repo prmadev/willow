@@ -8,13 +8,13 @@
 
   programs.gh.enable = true;
   programs.gh.enableGitCredentialHelper = true;
-  services.git-sync = {
-    enable = true;
-    repositories = {
-      notes = {
-        interval = 500;
-        path = "$HOME/notes";
-      };
-    };
-  };
+  # services.git-sync = {
+  #   enable = true;
+  #   repositories = {
+  #     notes = {
+  #       interval = 500;
+  #       path = "~/notes";
+  #     };
+  # };
+  # };
 }
