@@ -13,7 +13,7 @@
     repositories = {
       notes = {
         interval = 500;
-        path = ~/path;
+        path = ${home.homeDirectory} /notes;
       };
     };
   };
