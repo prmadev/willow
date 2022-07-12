@@ -5,10 +5,11 @@
   programs.taskwarrior.config = {
     weekstart = "sunday";
     news.version = "2.6.0";
+    dataLocation = "$HOME/task";
     taskd = {
-      certificate = "/home/a/.task/f.cert.pem";
-      key = "/home/a/.task/f.key.pem";
-      ca = "/home/a/.task/f.ca.pem";
+      certificate = "/home/a/task/f.cert.pem";
+      key = "/home/a/task/f.key.pem";
+      ca = "/home/a/task/f.ca.pem";
       credentials = "FreeCinc/freecinc_499137bd/62ee954b-f363-4b26-908a-148023c2200c";
       server = "freecinc.com:53589";
     };
