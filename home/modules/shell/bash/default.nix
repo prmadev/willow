@@ -8,5 +8,5 @@
   programs.zoxide.enableBashIntegration = true;
   programs.just.enableBashIntegration = true;
   programs.nix-index.enableBashIntegration = true;
-  programs.gpg-agent.enableBashIntegration = true;
+  services.gpg-agent.enableBashIntegration = true;
 }
