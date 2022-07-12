@@ -1,5 +1,5 @@
 {pkgs, ...}: let
-  color = import ../../colorscheme;
+  color = import ../colorscheme;
 in {
   # programs.broot.enable = true;
 
