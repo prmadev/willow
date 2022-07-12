@@ -1,6 +1,3 @@
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running ‘nixos-help’).
 {
   config,
   pkgs,
@@ -11,16 +8,14 @@
     ./hardware-configuration.nix
   ];
 
-  # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "nixer"; # Define your hostname.
-  networking.networkmanager.enable = true; # Easiest to use and most distros use this by default.
+  networking.hostName = "nixer";
+  networking.networkmanager.enable = true;
 
   nixpkgs.config.allowUnfree = true;
 
-  # Set your time zone.
   time.timeZone = "Asia/Tehran";
 
   services.tor = {
@@ -28,11 +23,9 @@
     enable = true;
     client.enable = true;
   };
-  # Configure network proxy if necessary
   networking.proxy.default = "socks5://127.0.0.1:9050/";
   networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
-  # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
   console = {
     font = "Lat2-Terminus16";
@@ -45,17 +38,12 @@
   services.xserver.displayManager.lightdm.enable = false;
   services.xserver.displayManager.sddm.enable = false;
 
-  # Configure keymap in X11
   services.xserver.layout = "us";
   # services.xserver.xkbOptions = {
   #   "eurosign:e";
-  #   "caps:escape" # map caps to escape.
+  # "caps:escape" # map caps to escape.
   # };
 
-  # Enable CUPS to print documents.
-  # services.printing.enable = true;
-
-  # Enable sound.
   sound.enable = true;
   sound.mediaKeys.enable = true;
   # hardware.pulseaudio.enable = true;
@@ -70,12 +58,10 @@
     wlr.enable = true;
   };
 
-  # Enable touchpad support (enabled default in most desktopManager).
   services.xserver.libinput.enable = true;
   services.tlp.enable = true;
   programs.xwayland.enable = true;
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
   users.defaultUserShell = pkgs.zsh;
   users.users.a = {
     createHome = true;
@@ -83,7 +69,7 @@
     extraGroups = [
       "wheel"
       "video" # for wayland light support
-    ]; # Enable ‘sudo’ for the user.
+    ];
   };
   programs.zsh = {
     enable = true;
@@ -97,24 +83,67 @@
   };
 
   programs.git.enable = true;
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
   environment.pathsToLink = ["/share/zsh"];
   environment.systemPackages = with pkgs; [
     fd
     ripgrep-all
     neovim #just in case I need it at system level
-    river
-    curl
-    wget
-    clash
+    river # my favorite window manager in wayland
+    curl # obvious
+
+    clash # for networking
     glib #for wayland gsettings
-    slurp
-    grim
+    slurp # for wayland
+    grim # for wayland
     wl-clipboard
-    rofi-rbw
+    rofi-rbw # for password management
+    android-file-transfer
+    atool # for file extraction
+    clipman # for wayland
+    duf
+    du-dust
+    ncdu_2
+    dutree
+    exercism
+    ffmpeg_5-full
+    ffmpegthumbnailer
+    gparted
+    imv
+    lsof
+    libreoffice-bin
+    mediainfo
+    imagemagick
+    brightnessctl
+    networkmanager_dmenu
+    mprocs
+    pastel
+    pavucontrol
+    pigz
+    playerctl
+    procs
+    pueue
+    pulsemixer
+    qbittorrent-nox
+    pulsemixer
+    sd
+    tasksh
+    taskopen
+    nodePackages.tailwindcss
+    tinygo
+    taskwarrior-tui
+    viu
+    wezterm
+    wget2
+    wtype
+    yt-dlp
+    niv
   ];
 
+  security.polkit.enable = true;
+
+  virtualisation.docker.enable = true;
+  virtualisation.docker.rootless.enable = true;
+  services.atd.enable = true;
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   programs.mtr.enable = true;
