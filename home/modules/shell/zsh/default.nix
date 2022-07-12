@@ -4,8 +4,8 @@
   programs.zsh.enableCompletion = true;
   programs.zsh.enableSyntaxHighlighting = true;
   programs.zsh.enableVteIntegration = true;
-  # programs.zsh.autocd = true;
-  programs.zsh.oh-my-zsh.enable = true;
+  programs.zsh.autocd = true;
+  # programs.zsh.oh-my-zsh.enable = true;
 
   programs.broot.enableZshIntegration = true;
 
