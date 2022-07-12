@@ -9,9 +9,9 @@
 
   # programs.broot.enableZshIntegration = true;
 
-  # programs.fzf.enableZshIntegration = true;
+  programs.fzf.enableZshIntegration = true;
 
-  programs.just.enableZshIntegration = true;
+  # programs.just.enableZshIntegration = true;
 
   programs.nix-index.enableZshIntegration = true;
 
