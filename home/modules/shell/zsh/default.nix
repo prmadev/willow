@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   programs.zsh.enable = true;
   programs.zsh.enableAutosuggestions = true;
-  programs.zsh.enableCompletion = true;
+  # programs.zsh.enableCompletion = true;
   programs.zsh.enableSyntaxHighlighting = true;
   programs.zsh.enableVteIntegration = true;
   programs.zsh.autocd = true;
