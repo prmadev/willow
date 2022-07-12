@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  zk-nix,
+  ...
+}: {
   programs.taskwarrior.enable = true;
   programs.taskwarrior.colorTheme = "dark-16";
   programs.taskwarrior.config = {
@@ -28,6 +32,7 @@
     tasksh
     taskwarrior-tui
     taskopen
+    zk-nix
   ];
 
   services.taskwarrior-sync.enable = true;
