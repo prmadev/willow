@@ -7,7 +7,6 @@
     };
   };
   home.packages = with pkgs; [
-    gomod2nix
     tinygo
   ];
 }
