@@ -18,7 +18,8 @@
   programs.zsh.history.size = 30000;
 
   programs.zsh.oh-my-zsh.extraConfig = ''
-    HYPHEN_INSENSITIVE="true"
+       HYPHEN_INSENSITIVE="true"
+    ENABLE_CORRECTION="true"
   '';
   # programs.broot.enableZshIntegration = true;
 
