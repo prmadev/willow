@@ -1,4 +1,6 @@
-{pkgs, ...}: {
+{pkgs, ...}: let
+  color = import ../../colorscheme;
+in {
   # programs.broot.enable = true;
 
   programs.zoxide.enable = true;
@@ -45,7 +47,7 @@
   programs.zathura.enable = true;
   programs.zathura.options = {
     #TODO
-    # default-bg = "#000000";
-    # default-fg = "#FFFFFF";
+    default-bg = color.rose;
+    default-fg = "#FFFFFF";
   };
 }
