@@ -19,4 +19,20 @@
       source = ./config.yaml;
     };
   };
+
+  systemd.user.services.clash = {
+    Unit = {
+      Description = "Clash daemon, A rule-based proxy in Go.";
+      After = "network.target";
+    };
+
+    Service = {
+      Type = "simple";
+      Restart = "always";
+      ExecStart = "{pkgs.clash}/bin/clash";
+    };
+    Install = {
+      WantedBy = ["multi-user.target"];
+    };
+  };
 }
