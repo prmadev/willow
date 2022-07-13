@@ -6,6 +6,7 @@ in {
   programs.zoxide.enable = true;
 
   programs.lf = {
+    #TODO needs improvement
     enable = true;
     settings = {
       drawbox = false;

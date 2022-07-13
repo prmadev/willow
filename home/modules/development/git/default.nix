@@ -8,7 +8,7 @@
 
   programs.gh.enable = true;
   programs.gh.enableGitCredentialHelper = true;
-  # services.git-sync = {
+  # services.git-sync = {#TODO
   #   enable = true;
   #   repositories = {
   #     notes = {

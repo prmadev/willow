@@ -13,6 +13,6 @@
     qbittorrent-nox
     wget2
     yt-dlp
-    clash # for networking
+    clash # for networking #TODO
   ];
 }

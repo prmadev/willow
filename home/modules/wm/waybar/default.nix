@@ -113,6 +113,7 @@
       };
     };
 
+    #TODO use variable colors
     style = ''
       * {
       	border: none;
