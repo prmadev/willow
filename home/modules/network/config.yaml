@@ -8,7 +8,7 @@
 #
 mixed-port: 7890
 allow-lan: true
-mode: Rule
+mode: global 
 log-level: info
 proxies:
   - {"type":"ss","name":"@wbnet_🇯🇵_JP_1","server":"5.181.5.10","port":800,"cipher":"chacha20-ietf-poly1305","password":"G!yBwPWH3Vao"}
