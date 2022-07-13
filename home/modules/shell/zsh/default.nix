@@ -35,7 +35,7 @@
     #prezto.enable = true;
     #
     oh-my-zsh = {
-      enable = true;
+      # enable = true;
       extraConfig = ''
         HYPHEN_INSENSITIVE="true"
         ENABLE_CORRECTION="true"

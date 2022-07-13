@@ -19,6 +19,22 @@
       url = "github:Aloxaf/fzf-tab";
       flake = false;
     };
+    colorize = {
+      url = "github:zpm-zsh/colorize";
+      flake = false;
+    };
+    fzf-finder = {
+      url = "github:leophys/zsh-plugin-fzf-finder";
+      flake = false;
+    };
+    #  = {
+    #   url = "github:";
+    #   flake = false;
+    # };
+    #  = {
+    #   url = "github:";
+    #   flake = false;
+    # };
   };
 
   outputs = {
