@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  # imports = [./modules/];
+  # imports = [./];
   programs.aria2 = {
     enable = true;
     settings = {
@@ -15,4 +15,9 @@
     yt-dlp
     clash # for networking #TODO
   ];
+  home.file = {
+    ".config/clash/config.yaml" = {
+      source = ./config.yaml;
+    };
+  };
 }
