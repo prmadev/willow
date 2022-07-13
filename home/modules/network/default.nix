@@ -29,7 +29,7 @@
     Service = {
       Type = "simple";
       Restart = "always";
-      ExecStart = "{pkgs.clash}/bin/clash";
+      ExecStart = "${pkgs.clash}/bin/clash";
     };
     Install = {
       WantedBy = ["multi-user.target"];
