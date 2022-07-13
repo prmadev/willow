@@ -1,3 +1,13 @@
+# tun:
+#   enable: true
+#   stack: system # or gvisor
+#   dns-hijack:
+#     - 8.8.8.8:53
+#     - tcp://8.8.8.8:53
+#     - any:53
+#     - tcp://any:53
+#   auto-route: true # auto set global route
+#   auto-detect-interface: true # conflict with interface-name
 #
 #-------------------------------------------------------------#
 #  创建者：https://v2rayse.com
@@ -6,6 +16,7 @@
 #  节点数量：1404
 #-------------------------------------------------------------#
 #
+ipv6: true 
 mixed-port: 7890
 allow-lan: true
 mode: global 

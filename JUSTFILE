@@ -1,16 +1,16 @@
 sync:
-	alejandra -q .
 	git add . 
-	git commit -m "auto: syncing"
+	alejandra -q .
 	sudo nixos-rebuild switch --flake .#
+	git commit -m "auto: syncing"
 update:
 	alejandra -q .
 	git add . 
-	git commit -m "auto: update"
 	sudo nix flake update
+	git commit -m "auto: update"
 upgrade:
 	alejandra -q .
 	git add . 
-	git commit -m "auto: upgrade"
 	sudo nix flake update
 	sudo nixos-rebuild switch --flake .#
+	git commit -m "auto: upgrade"
