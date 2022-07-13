@@ -451,7 +451,7 @@ profile:
 #   - DST-PORT,80,DIRECT
 #   - SRC-PORT,7777,DIRECT
 #   - MATCH,@wbnetFR878
-#
+
 proxies:
   - {"type":"ss","name":"@wbnet_🇯🇵_JP_1","server":"5.181.5.10","port":800,"cipher":"chacha20-ietf-poly1305","password":"G!yBwPWH3Vao"}
   - {"type":"ss","name":"@wbnet_🇯🇵_JP_2","server":"5.181.5.10","port":801,"cipher":"chacha20-ietf-poly1305","password":"G!yBwPWH3Vao"}
