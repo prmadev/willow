@@ -18,7 +18,7 @@
       input_delay = 1;
       sync_to_monitor = true;
       allow_remote_control = true;
-	  shell = "nu";
+      shell = "nu";
     };
     theme = "Rosé Pine";
   };

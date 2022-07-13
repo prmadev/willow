@@ -6,6 +6,7 @@
     '';
     configFile.text = ''
       source ~/.cache/starship/init.nu
+      max_history_size: 15000
     '';
   };
 }
