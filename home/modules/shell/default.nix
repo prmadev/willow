@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   imports = [
-    ./zsh # I like to use it, but it throwing an error and takes foreveer to load.
+    # ./zsh # I like to use it, but it throwing an error and takes foreveer to load.
     ./bash
     ./nu
   ];
