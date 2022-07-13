@@ -7,7 +7,6 @@ in {
       "adblock-toggle" = "config-cycle -t content.blocking.enabled";
       "mpv" = "spawn --detach mpv {url}";
     };
-    #
     settings = {
       colors = {};
       content.cookies.accept = "all";
