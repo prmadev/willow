@@ -2,7 +2,7 @@
   programs.zsh.enable = true;
   programs.zsh.enableAutosuggestions = false;
   programs.zsh.enableCompletion = false;
-  programs.zsh.enableSyntaxHighlighting = true;
+  programs.zsh.enableSyntaxHighlighting = false;
   # programs.zsh.enableVteIntegration = true;
   programs.zsh.autocd = true;
   programs.zsh.oh-my-zsh.enable = true;
