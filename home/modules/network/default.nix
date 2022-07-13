@@ -32,7 +32,7 @@
       ExecStart = "${pkgs.clash}/bin/clash";
     };
     Install = {
-      WantedBy = ["multi-user.target"];
+      WantedBy = ["path.target"];
     };
   };
 }
