@@ -3,13 +3,10 @@
     enable = true;
     envFile.text = ''
       starship init nu | save ~/.cache/starship/init.nu
+          max_history_size: 15000
     '';
     configFile.text = ''
-      let $config = {
           source ~/.cache/starship/init.nu
-
-          max_history_size: 15000
-      }
     '';
   };
 }
