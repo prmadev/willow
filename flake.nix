@@ -10,6 +10,10 @@
       url = "github:sparsick/ansible-zsh";
       flake = false;
     };
+    forgit = {
+      url = "https://github.com/wfxr/forgit";
+      flake = false;
+    };
   };
 
   outputs = {

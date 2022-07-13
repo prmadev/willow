@@ -22,6 +22,10 @@
         name = "ansible-zsh";
         src = inputs.ansible-zsh;
       }
+      {
+        name = "forgit";
+        src = inputs.forgit;
+      }
     ];
 
     #prezto.enable = true;
