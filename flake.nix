@@ -6,6 +6,10 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    ansible-zsh = {
+      url = "github:sparsick/ansible-zsh";
+      flake = false;
+    };
   };
 
   outputs = {
@@ -13,7 +17,7 @@
     nixpkgs,
     home-manager,
     ...
-  }: let
+  } @ inputs: let
     system = "x86_64-linux";
     user = "a";
     pkgs = import nixpkgs {
@@ -21,25 +25,26 @@
       config.allowUnfree = true;
     };
     lib = nixpkgs.lib;
-  in {
-    nixosConfigurations = {
-      nixer = lib.nixosSystem {
-        inherit system;
-        modules = [
-          ./system
-          home-manager.nixosModules.home-manager
-          {
-            home-manager.useGlobalPkgs = true; # uses the packages that comes with nix not home-manager.
-            home-manager.useUserPackages = true;
-            home-manager.users.a = {
-              home.stateVersion = "22.11";
-              imports = [
-                ./home
-              ];
-            };
-          }
-        ];
+  in
+    with inputs; {
+      nixosConfigurations = {
+        nixer = lib.nixosSystem {
+          inherit system;
+          modules = [
+            ./system
+            home-manager.nixosModules.home-manager
+            {
+              home-manager.useGlobalPkgs = true; # uses the packages that comes with nix not home-manager.
+              home-manager.useUserPackages = true;
+              home-manager.users.a = {
+                home.stateVersion = "22.11";
+                imports = [
+                  ./home
+                ];
+              };
+            }
+          ];
+        };
       };
     };
-  };
 }

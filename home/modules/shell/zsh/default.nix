@@ -13,6 +13,12 @@
     history.ignoreDups = true;
     history.save = 3000000;
     history.size = 30000000;
+    plugins = [
+      # {
+      #   # name = "";
+      #   # src = pkgs.fetchFromGitHub {};
+      # }
+    ];
 
     #prezto.enable = true;
     #

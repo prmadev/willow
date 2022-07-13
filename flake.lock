@@ -1,5 +1,21 @@
 {
   "nodes": {
+    "ansible-zsh": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1539961847,
+        "narHash": "sha256-LxEBYJ7jadLyGgStbOc0y1k2Ho6/Qler3k9aFnc01Rg=",
+        "owner": "sparsick",
+        "repo": "ansible-zsh",
+        "rev": "21c52dbdc07416bf056007f3a69cb41acfd3b74a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "sparsick",
+        "repo": "ansible-zsh",
+        "type": "github"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -39,6 +55,7 @@
     },
     "root": {
       "inputs": {
+        "ansible-zsh": "ansible-zsh",
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs"
       }
