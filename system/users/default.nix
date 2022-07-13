@@ -12,5 +12,4 @@
       "video" # for wayland light support
     ];
   };
-
 }
