@@ -13,7 +13,7 @@
         "colored-man-pages"
         "colorize"
         "compleat"
-        # "colors"
+        "colors"
 
         "fzf"
         # "fzf-zsh-completions"
