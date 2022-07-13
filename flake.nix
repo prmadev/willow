@@ -6,12 +6,13 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    ## zsh plugins
     ansible-zsh = {
       url = "github:sparsick/ansible-zsh";
       flake = false;
     };
-    forgit = {
-      url = "https://github.com/wfxr/forgit";
+    cd-ls = {
+      url = "github:zshzoo/cd-ls";
       flake = false;
     };
   };

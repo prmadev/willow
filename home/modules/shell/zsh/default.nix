@@ -23,15 +23,10 @@
         src = inputs.ansible-zsh;
       }
       {
-        name = "forgit";
-        src = inputs.forgit;
+        name = "cd-ls";
+        src = inputs.cd-ls;
       }
     ];
-	initExtra = ''
-
-source <(curl -sSL git.io/forgit)
-
-	'';
 
     #prezto.enable = true;
     #
