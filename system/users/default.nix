@@ -3,7 +3,7 @@
   pkgs,
   ...
 }: {
-  # users.defaultUserShell = pkgs.zsh;
+  users.defaultUserShell = pkgs.zsh;
   users.users.a = {
     createHome = true;
     isNormalUser = true;
