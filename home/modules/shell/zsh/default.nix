@@ -11,7 +11,7 @@
     enableVteIntegration = true;
     autocd = true;
     dotDir = ".config/zsh";
-completionInit= "autoload -U compinit && compinit";
+    completionInit = "autoload -U compinit && compinit";
     history.expireDuplicatesFirst = true;
     history.extended = true;
     history.ignoreDups = true;
@@ -35,7 +35,7 @@ completionInit= "autoload -U compinit && compinit";
     #prezto.enable = true;
     #
     oh-my-zsh = {
-      enable = true;
+      # enable = true;
       extraConfig = ''
         HYPHEN_INSENSITIVE="true"
         ENABLE_CORRECTION="true"
