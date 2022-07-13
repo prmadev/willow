@@ -32,6 +32,22 @@
         "type": "github"
       }
     },
+    "deer": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1620482873,
+        "narHash": "sha256-WdQAejYoIcAMHSVAeqC+KPDRpSqlRRPNdeoGUe7HiFY=",
+        "owner": "Vifon",
+        "repo": "deer",
+        "rev": "da9b86e98d712f4feadfd96070ddb4c99bd29e29",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Vifon",
+        "repo": "deer",
+        "type": "github"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -73,6 +89,7 @@
       "inputs": {
         "ansible-zsh": "ansible-zsh",
         "cd-ls": "cd-ls",
+        "deer": "deer",
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs"
       }

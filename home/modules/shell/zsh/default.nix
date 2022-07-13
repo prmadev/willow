@@ -23,12 +23,12 @@
         src = inputs.ansible-zsh;
       }
       {
-		  src = inputs.cd-ls;
+        src = inputs.cd-ls;
         name = "cd-ls";
       }
       {
-		  src = inputs.deer;
-        name = "deer";
+        src = inputs.fzf-tab;
+        name = "fzf-tab";
       }
     ];
 

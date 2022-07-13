@@ -15,8 +15,8 @@
       url = "github:zshzoo/cd-ls";
       flake = false;
     };
-    deer = {
-      url = "github:Vifon/deer";
+    fzf-tab = {
+      url = "github:Aloxaf/fzf-tab";
       flake = false;
     };
   };
