@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  inputs,
+  ...
+}: {
   programs.zsh = {
     enable = true;
     enableAutosuggestions = true;
@@ -14,10 +18,10 @@
     history.save = 3000000;
     history.size = 30000000;
     plugins = [
-      # {
-      #   # name = "";
-      #   # src = pkgs.fetchFromGitHub {};
-      # }
+      {
+        name = "ansible-zsh";
+        src = inputs.ansible-zsh;
+      }
     ];
 
     #prezto.enable = true;
