@@ -8,7 +8,7 @@
     vteIntegration = true;
     shellInit = "eval \"$(starship init zsh)\"";
     ohMyZsh = {
-      enable = true;
+      # enable = true;
       customPkgs = with pkgs; [
         fzf-zsh
       ];
@@ -23,7 +23,7 @@
         # "fzf-marks"
         # "fzf-finder"
         # "fzf-zsh-plugin"
-        "fzf-tab"
+        # "fzf-tab"
         #
         "git-lfs"
         "gitfast"
