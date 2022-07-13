@@ -30,7 +30,7 @@ in {
       content.local_content_can_access_file_urls = true;
       content.local_storage = true;
       content.mouse_lock = "ask";
-      content.proxy = "system";
+      content.proxy = "socks5://127.0.0.1:7890/";
       content.proxy_dns_requests = true;
       content.webgl = true;
       content.webrtc_ip_handling_policy = "default-public-interface-only";
