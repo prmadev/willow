@@ -11,7 +11,7 @@
     enableVteIntegration = true;
     autocd = true;
     dotDir = ".config/zsh";
-
+completionInit= "autoload -U compinit && compinit";
     history.expireDuplicatesFirst = true;
     history.extended = true;
     history.ignoreDups = true;
