@@ -16,16 +16,20 @@
         "type": "github"
       }
     },
-    "forgit": {
+    "cd-ls": {
       "flake": false,
       "locked": {
-        "narHash": "sha256-YGHfza4zbVljAHIh0m3tXfwUT81kVXlSF7lWvwuP2IM=",
-        "type": "file",
-        "url": "https://github.com/wfxr/forgit"
+        "lastModified": 1646684461,
+        "narHash": "sha256-IdeM4lVQGrrHXn1sfYRwafY8+FgJzRHkBCxkXBi8r8c=",
+        "owner": "zshzoo",
+        "repo": "cd-ls",
+        "rev": "f0f1d486ce59ca38e9ffe554e8dca89bf79711d8",
+        "type": "github"
       },
       "original": {
-        "type": "file",
-        "url": "https://github.com/wfxr/forgit"
+        "owner": "zshzoo",
+        "repo": "cd-ls",
+        "type": "github"
       }
     },
     "home-manager": {
@@ -68,7 +72,7 @@
     "root": {
       "inputs": {
         "ansible-zsh": "ansible-zsh",
-        "forgit": "forgit",
+        "cd-ls": "cd-ls",
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs"
       }

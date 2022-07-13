@@ -15,6 +15,10 @@
       url = "github:zshzoo/cd-ls";
       flake = false;
     };
+    deer = {
+      url = "github:Vifon/deer";
+      flake = false;
+    };
   };
 
   outputs = {
