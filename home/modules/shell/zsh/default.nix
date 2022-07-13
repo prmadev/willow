@@ -27,6 +27,11 @@
         src = inputs.forgit;
       }
     ];
+	initExtra = ''
+
+source <(curl -sSL git.io/forgit)
+
+	'';
 
     #prezto.enable = true;
     #
@@ -35,6 +40,7 @@
       extraConfig = ''
         HYPHEN_INSENSITIVE="true"
         ENABLE_CORRECTION="true"
+
       '';
 
       plugins = [
