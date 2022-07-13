@@ -4,7 +4,7 @@
   ...
 }: {
   programs.zsh = {
-    enable = true;
+    enable = false;
     vteIntegration = true;
     shellInit = "eval \"$(starship init zsh)\"";
     ohMyZsh = {
