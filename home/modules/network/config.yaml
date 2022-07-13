@@ -441,7 +441,7 @@ profile:
 #       url: http://www.gstatic.com/generate_204
 #
 # - DOMAIN-KEYWORD,google,@wbnetFR878
-# rules:
+rules:
 #   - DOMAIN-SUFFIX,google.com,@wbnetFR878
 #   - DOMAIN,google.com,@wbnetFR878
 #   - DOMAIN-SUFFIX,ad.com,REJECT
@@ -450,7 +450,7 @@ profile:
 #   - IP-CIDR,127.0.0.0/8,DIRECT
 #   - DST-PORT,80,DIRECT
 #   - SRC-PORT,7777,DIRECT
-#   - MATCH,@wbnetFR878
+  # - MATCH,@wbnet_🇯🇵_JP_1,
 
 proxies:
   - {"type":"ss","name":"@wbnet_🇯🇵_JP_1","server":"5.181.5.10","port":800,"cipher":"chacha20-ietf-poly1305","password":"G!yBwPWH3Vao"}
