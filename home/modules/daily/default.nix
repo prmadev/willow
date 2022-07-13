@@ -30,6 +30,7 @@
     taskwarrior-tui
     taskopen
     fractal
+    tdesktop
   ];
 
   services.taskwarrior-sync.enable = true;
