@@ -5,9 +5,11 @@
       starship init nu | save ~/.cache/starship/init.nu
     '';
     configFile.text = ''
-      source ~/.cache/starship/init.nu;
+      let $config = {
+          source ~/.cache/starship/init.nu
 
-      max_history_size: 15000
+          max_history_size: 15000
+      }
     '';
   };
 }
