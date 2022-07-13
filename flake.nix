@@ -26,8 +26,7 @@
       nixer = lib.nixosSystem {
         inherit system;
         modules = [
-          ./configuration.nix
-
+          ./system
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true; # uses the packages that comes with nix not home-manager.
