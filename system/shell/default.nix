@@ -10,7 +10,7 @@
     ohMyZsh = {
       enable = true;
       customPkgs = with pkgs; [
-       fzf-zsh 
+        fzf-zsh
       ];
       plugins = [
         "colored-man-pages"
@@ -23,7 +23,7 @@
         # "fzf-marks"
         # "fzf-finder"
         # "fzf-zsh-plugin"
-        # "fzf-tab"
+        "fzf-tab"
         #
         "git-lfs"
         "gitfast"
