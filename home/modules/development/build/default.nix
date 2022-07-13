@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  programs.just.enable = true;
+  # programs.just.enable = true;
   home.packages = with pkgs; [
     cmake
     gnumake
