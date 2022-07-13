@@ -9,11 +9,14 @@
     shellInit = "eval \"$(starship init zsh)\"";
     ohMyZsh = {
       enable = true;
+      customPkgs = with pkgs; [
+        zsh-fzf-tab
+      ];
       plugins = [
         "colored-man-pages"
         "colorize"
         "compleat"
-        "colors"
+        # "colors"
 
         "fzf"
         # "fzf-zsh-completions"
