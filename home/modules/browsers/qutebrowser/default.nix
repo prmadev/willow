@@ -8,6 +8,7 @@ in {
       "mpv" = "spawn --detach mpv {url}";
     };
     settings = {
+      #
       colors = {};
       content.cookies.accept = "all";
       content.default_encoding = "utf-8";
