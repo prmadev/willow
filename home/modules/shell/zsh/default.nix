@@ -5,7 +5,7 @@
   programs.zsh.enableSyntaxHighlighting = false;
   # programs.zsh.enableVteIntegration = true;
   programs.zsh.autocd = false;
-  programs.zsh.oh-my-zsh.enable = true;
+  programs.zsh.oh-my-zsh.enable = false;
   # programs.zsh.prezto.enable = true;
   # programs.zsh.completionInit = "";
   programs.zsh.history.expireDuplicatesFirst = true;
