@@ -5,13 +5,66 @@
 }: {
   programs.zsh = {
     enable = true;
+    vteIntegration = true;
     ohMyZsh = {
       enable = true;
+      plugins = [
+        "colored-man-pages"
+        "colorize"
+        "compleat"
+        # "colors"
+
+        "fzf"
+        # "fzf-zsh-completions"
+        # "fzf-marks"
+        # "fzf-finder"
+        # "fzf-zsh-plugin"
+        # "fzf-tab"
+        #
+        "git-lfs"
+        "gitfast"
+        "git-extras"
+        "github"
+        "gh"
+        "gitignore"
+        "golang"
+        "gpg-agent"
+        # "globalias"
+        "history"
+        "history-substring-search"
+        "keychain"
+        "man"
+        "npm"
+        "per-directory-history"
+        "pip"
+        "python"
+        "repo"
+        "rsync"
+        "rbw"
+        "ripgrep"
+        "rust"
+        "ssh-agent"
+        "shell-proxy"
+        "systemd"
+        "taskwarrior"
+        # "thefuck"
+        "transfer"
+        "universalarchive"
+        "urltools"
+        "web-search"
+        "zoxide"
+        "zsh-interactive-cd"
+        # "zsh-autosuggestions"
+        # "zsh-bash-completions-fallback"
+        # "completion"
+        # "fast-syntax-highlighting"
+        # "zsh-syntax-highlighting"
+      ];
     };
-    vteIntegration = true;
     enableCompletion = true;
     autosuggestions.enable = true;
     syntaxHighlighting.enable = true;
+    enableBashCompletion = true;
   };
 
   environment.pathsToLink = ["/share/zsh"];
