@@ -23,7 +23,7 @@
         # "fzf-marks"
         # "fzf-finder"
         # "fzf-zsh-plugin"
-        # "fzf-tab"
+        "fzf-tab"
         #
         "git-lfs"
         "gitfast"
