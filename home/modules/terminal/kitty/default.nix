@@ -1,6 +1,5 @@
 {
   pkgs,
-  home,
   ...
 }: {
   programs.kitty = {
@@ -18,7 +17,7 @@
       input_delay = 1;
       sync_to_monitor = true;
       allow_remote_control = true;
-      shell = "zsh";
+      shell = "${pkgs.zsh}/bin/zsh";
     };
     theme = "Rosé Pine";
   };

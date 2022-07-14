@@ -3,6 +3,7 @@
   pkgs,
   ...
 }: {
+  environment.shells = [pkgs.bashInteractive pkgs.zsh];
   programs.zsh = {
     enable = false;
     vteIntegration = true;
