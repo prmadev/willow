@@ -37,23 +37,23 @@
       editor.dotExpansion = true;
       editor.keymap = "vi";
       editor.promptContext = true;
-	  pmodules = [
- 		"environment"
-		"terminal"
-		"editor"
-		"history"
-		"directory"
-		"archive"
-		"git"
-		"rsync"
-		"gpg"
-		"ssh"
-		"tmux"
-		"spectrum"
-		"utility"
-		"completion"
-		# "prompt" 
-	  ];
+      pmodules = [
+        "environment"
+        "terminal"
+        "editor"
+        "history"
+        "directory"
+        "archive"
+        "git"
+        "rsync"
+        # "gpg"
+        "ssh"
+        "tmux"
+        "spectrum"
+        "utility"
+        "completion"
+        # "prompt"
+      ];
     };
     #
     # oh-my-zsh = {
