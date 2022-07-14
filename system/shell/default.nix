@@ -71,12 +71,12 @@
     enableBashCompletion = true;
   };
 
-  environment.pathsToLink = ["/share/zsh"];
+  # environment.pathsToLink = ["/share/zsh"];
 
   environment.systemPackages = with pkgs; [
     neovim #just in case I need it at system level
     curl # obvious
-	zsh
+    # zsh
   ];
 
   services.atd.enable = true;
