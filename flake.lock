@@ -125,7 +125,8 @@
         "fzf-finder": "fzf-finder",
         "fzf-tab": "fzf-tab",
         "home-manager": "home-manager",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "zk": "zk"
       }
     },
     "utils": {
@@ -140,6 +141,22 @@
       "original": {
         "owner": "numtide",
         "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "zk": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1657716025,
+        "narHash": "sha256-30Vw6RGREg/ULS+eNExulHNOsOssMjXE+/tuRBQ17kI=",
+        "owner": "mickael-menu",
+        "repo": "zk",
+        "rev": "78c40eeecfd31f11b5990ec306e17dd249384006",
+        "type": "github"
+      },
+      "original": {
+        "owner": "mickael-menu",
+        "repo": "zk",
         "type": "github"
       }
     }

@@ -1,5 +1,4 @@
 {pkgs, ...}: {
-  # #
   programs.taskwarrior.enable = true;
   programs.taskwarrior.colorTheme = "dark-16";
   programs.taskwarrior.config = {
@@ -31,6 +30,8 @@
     taskopen
     # fractal
     tdesktop
+    
+
   ];
 
   services.taskwarrior-sync.enable = true;
