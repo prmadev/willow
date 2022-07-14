@@ -1,4 +1,5 @@
 {
+  inputs,
   pkgs ? (
     let
       sources = import ./nix/sources.nix;
@@ -10,7 +11,7 @@
       }
   ),
 }: let
-  goEnv = pkgs.mkGoEnv {pwd = ./.;};
+  goEnv = pkgs.mkGoEnv {pwd = inputs.zk;};
 in
   pkgs.mkShell {
     packages = [
