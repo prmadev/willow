@@ -34,9 +34,9 @@
 
     prezto = {
       enable = true;
-	  editor.dotExpansion = true;
-	  editor.keymap = "vi";
-	  editor.promptContext = true;
+      editor.dotExpansion = true;
+      editor.keymap = "vi";
+      editor.promptContext = true;
     };
     #
     # oh-my-zsh = {
