@@ -126,7 +126,7 @@
         "fzf-tab": "fzf-tab",
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs",
-        "zk": "zk"
+        "zkn": "zkn"
       }
     },
     "utils": {
@@ -144,19 +144,19 @@
         "type": "github"
       }
     },
-    "zk": {
+    "zkn": {
       "flake": false,
       "locked": {
-        "lastModified": 1657716025,
-        "narHash": "sha256-30Vw6RGREg/ULS+eNExulHNOsOssMjXE+/tuRBQ17kI=",
-        "owner": "mickael-menu",
-        "repo": "zk",
-        "rev": "78c40eeecfd31f11b5990ec306e17dd249384006",
+        "lastModified": 1657522017,
+        "narHash": "sha256-qWzmGUlAy6iqJuLYE8iE4SuXQT1lL94i7fQAcBkyEIM=",
+        "owner": "amirography",
+        "repo": "zkn",
+        "rev": "eefc3be9c600020fb59a39d5c01cb6ba09a6353a",
         "type": "github"
       },
       "original": {
-        "owner": "mickael-menu",
-        "repo": "zk",
+        "owner": "amirography",
+        "repo": "zkn",
         "type": "github"
       }
     }

@@ -32,7 +32,7 @@
       }
     ];
 
-    #prezto.enable = true;
+    prezto.enable = true;
     #
     # oh-my-zsh = {
     #   # enable = true;

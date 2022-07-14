@@ -6,8 +6,8 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    zk = {
-      url = "github:mickael-menu/zk";
+    zkn = {
+      url = "github:amirography/zkn";
       flake = false;
     };
     ## zsh plugins
