@@ -36,7 +36,7 @@
     ];
 
     prezto = {
-      enable = false;
+      enable = true;
       editor.dotExpansion = true;
       editor.keymap = "vi";
       editor.promptContext = true;
@@ -58,7 +58,7 @@
         "ssh"
         "tmux"
         "spectrum"
-        "utility"
+        # "utility"
         "completion"
         # "prompt"
       ];
