@@ -37,6 +37,12 @@
       editor.dotExpansion = true;
       editor.keymap = "vi";
       editor.promptContext = true;
+	  tmux = {
+	  autoStartLocal = true;
+	  
+autoStartRemote= true;
+
+  };
       pmodules = [
         "environment"
         "terminal"
