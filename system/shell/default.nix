@@ -76,6 +76,7 @@
   environment.systemPackages = with pkgs; [
     neovim #just in case I need it at system level
     curl # obvious
+	zsh
   ];
 
   services.atd.enable = true;
