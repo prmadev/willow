@@ -9,10 +9,9 @@
     enableCompletion = true;
     enableSyntaxHighlighting = true;
     enableVteIntegration = true;
-	localVariables = {
-
-DISABLE_CORRECTION="true";
-};
+    localVariables = {
+      DISABLE_CORRECTION = true;
+    };
     autocd = true;
     dotDir = ".config/zsh";
     completionInit = "autoload -U compinit && compinit";
