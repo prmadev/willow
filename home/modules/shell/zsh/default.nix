@@ -58,7 +58,7 @@
         "ssh"
         "tmux"
         "spectrum"
-        # "utility"
+        # "utility" #causes non-nixos binaries shit out
         "completion"
         # "prompt"
       ];
@@ -132,7 +132,7 @@
 
   # programs.just.enableZshIntegration = true;
 
-  # programs.nix-index.enableZshIntegration = true;
+  programs.nix-index.enableZshIntegration = true;
 
   programs.starship.enableZshIntegration = true;
 
