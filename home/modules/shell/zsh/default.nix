@@ -36,7 +36,7 @@
     ];
 
     prezto = {
-      enable = true;
+      enable = false;
       editor.dotExpansion = true;
       editor.keymap = "vi";
       editor.promptContext = true;
