@@ -15,6 +15,7 @@
       sync_to_monitor = true;
       allow_remote_control = true;
       shell = "${pkgs.zsh}/bin/zsh";
+      confirm_os_window_close = false;
     };
     theme = "Rosé Pine";
   };
