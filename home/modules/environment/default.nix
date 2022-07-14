@@ -36,7 +36,7 @@
     MOZ_ENABLE_WAYLAND = 1;
     FAVO_BOOKMARK = "$ZK_NOTEBOOK_DIR/bm.md";
   };
-  home.sessionPath = ["$HOME/.local/bin" "$HOME/go/bin" "$HOME/.cargo/bin"];
+  home.sessionPath = ["$HOME/.local/bin" "go/bin" "$HOME/.cargo/bin"];
   xdg = {
     enable = true;
     mime.enable = true;
