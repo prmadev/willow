@@ -3,7 +3,7 @@
     enable = true;
     clock24 = true;
     newSession = true;
-    # shell = "zsh";
+    shell = "\${pkgs.zsh}/bin/zsh";
     shortcut = "z";
     tmuxp.enable = true;
   };
