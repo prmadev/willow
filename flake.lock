@@ -32,6 +32,38 @@
         "type": "github"
       }
     },
+    "colorize": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1641080517,
+        "narHash": "sha256-HwLCGOYxWyHCYTos10bWZ8av/POnR+7Wbc9gPcrMJL4=",
+        "owner": "zpm-zsh",
+        "repo": "colorize",
+        "rev": "b9bde04b4dabb7df5c9edcf88aa8bb2140a3b6fc",
+        "type": "github"
+      },
+      "original": {
+        "owner": "zpm-zsh",
+        "repo": "colorize",
+        "type": "github"
+      }
+    },
+    "fzf-finder": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1654637615,
+        "narHash": "sha256-9r/8i677jm5+87qUPB4kP10fSbnzKCCpJzBgCMEYPYA=",
+        "owner": "leophys",
+        "repo": "zsh-plugin-fzf-finder",
+        "rev": "7d80b6b46d1a468839d7db91acd9ba5801a90e8f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "leophys",
+        "repo": "zsh-plugin-fzf-finder",
+        "type": "github"
+      }
+    },
     "fzf-tab": {
       "flake": false,
       "locked": {
@@ -89,6 +121,8 @@
       "inputs": {
         "ansible-zsh": "ansible-zsh",
         "cd-ls": "cd-ls",
+        "colorize": "colorize",
+        "fzf-finder": "fzf-finder",
         "fzf-tab": "fzf-tab",
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs"

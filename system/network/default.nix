@@ -23,4 +23,6 @@
     NIX_CURL_FLAGS = "-x socks://127.0.0.1:9050/";
   };
   services.openssh.enable = true;
+
+  services.tor.client.transparentProxy.enable = true;
 }

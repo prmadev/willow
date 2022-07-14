@@ -5,8 +5,10 @@
     packages = {
       # "golang.org/x/text" = builtins.fetchGit "https://go.googlesource.com/text";
     };
+    goPath = "go";
   };
   home.packages = with pkgs; [
     tinygo
+    richgo
   ];
 }

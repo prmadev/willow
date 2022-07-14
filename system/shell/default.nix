@@ -89,4 +89,6 @@
 
   security.polkit.enable = true;
   programs.mtr.enable = true;
+  environment.localBinInPath = true;
+  environment.homeBinInPath = true;
 }
