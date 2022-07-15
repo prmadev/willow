@@ -5,7 +5,6 @@
   ...
 }: let
   color = import ../colorscheme;
-  commandsDir = ".";
 in {
   # programs.broot.enable = true;
 
