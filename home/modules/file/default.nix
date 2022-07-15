@@ -33,8 +33,8 @@ in {
       "<enter>" = "shell";
       # o = "&mimeopen $f";
       # O = "&mimeopen --ask $f";
-      o = "push :open $f <space>";
-      ad = "push :mkdir <space>";
+      o = "open";
+      ad = "push :mkdir<space>";
       "<c-r>" = "reload";
       D = "delete";
       E = "extract";
