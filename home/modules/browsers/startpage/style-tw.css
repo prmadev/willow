@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	.btn-color {
+		@apply transition-all text-sm italic text-transparent   tracking-widest font-extrabold rounded-none p-1  sm:col-span-full;
+	}
+	.search-input {
+		@apply transition-all col-span-4  text-center  border-2 border-text border-dashed m-1 focus:outline-none;
+	}
+	.search-box {
+		@apply transition-all grid border-text border-dashed  grid-cols-5  items-center;
+	}
+	.search-label {
+		@apply transition-all text-center text-sm text-bg font-black label-grad;
+	}
+	.button-startg {
+		@apply transition-all duration-1000 bg-pine border-text font-black text-bg md:col-span-full;
+	}
+	.button-stopg {
+		@apply transition-all duration-1000 bg-foam border-text text-bg font-black hover:bg-foam hover:text-bg sm:col-span-full;
+	}
+	.label-grad {
+		padding: 5px;
+	}
+}

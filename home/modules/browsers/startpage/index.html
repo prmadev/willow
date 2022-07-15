@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Home</title>
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<link rel="shortcut icon" href="favicon.png" />
+	</head>
+	<!-- everything  -->
+	<body
+		class="bg-bg bg-cover max-w-xl text-text text-xl subpixel-antialiased mx-auto"
+	>
+		<!-- everything  -->
+		<div class="bg-bg align-super p-5 m-5">
+			<!-- searchboxes  -->
+			<div
+				class="mb-5 grid gap-2 border-2 border-dashed p-2 focus-within:border-text hover:border-text"
+			>
+				<!-- <div id="time" class="time"></div> -->
+				<form
+					class="search-box"
+					action="https://google.com/search?q={}"
+					method="GET"
+				>
+					<label class="search-label bg-love">
+						<a href="https://google.com">  </a>
+					</label>
+					<input name="q" id="query" class="bg-bg search-input" type="search" />
+				</form>
+				<form
+					action="https://youtube.com/results?search_query={}"
+					method="GET"
+					class="search-box"
+				>
+					<label class="search-label bg-rose">
+						<a href="https://youtube.com">  </a>
+					</label>
+					<input
+						name="q"
+						id="query"
+						class="bg-bg text-text search-input"
+						type="search"
+					/>
+				</form>
+				<form
+					action="https://pkg.go.dev/search?q={}"
+					method="GET"
+					class="search-box"
+				>
+					<label class="search-label bg-foam">
+						<a href="https://go.dev"> ﳑ </a>
+					</label>
+					<input
+						name="q"
+						id="query"
+						class="bg-bg text-text search-input"
+						type="search"
+					/>
+				</form>
+				<form
+					action="https://github.com/search?q={}"
+					class="search-box"
+					method="GET"
+				>
+					<label class="search-label bg-iris">
+						<a href="https://github.com">  </a>
+					</label>
+					<input
+						name="q"
+						id="query"
+						class="bg-bg text-text search-input"
+						type="search"
+					/>
+				</form>
+				<form
+					class="search-box"
+					action="https://aur.archlinux.org/packages?O=0&K={}"
+					method="GET"
+				>
+					<label class="search-label bg-pine">
+						<a href="https://archlinux.org">  </a>
+					</label>
+					<input
+						name="q"
+						id="query"
+						class="bg-bg text-text search-input"
+						type="search"
+					/>
+				</form>
+			</div>
+			<!-- links  -->
+			<div
+				class="transition-all mb-5 grid grid-cols-3 gap-5 focus-within:border-text font-normal"
+			>
+				<!-- link  -->
+				<div
+					class="hover:button-stopg button-startg transition-all grid text-center text-sm p-2 items-center hover:bg-pine hover:text-black"
+				>
+					<a href="https://exercism.org/tracks/go">Exercsism</a>
+				</div>
+				<!-- link  -->
+				<div
+					class="hover:button-stopg button-startg transition-all grid text-center text-sm p-2 items-center hover:bg-pine"
+				>
+					<a href="https://twitter.com">Twitter</a>
+				</div>
+
+				<!-- link  -->
+				<div
+					class="hover:button-stopg button-startg transition-all grid text-center text-sm p-2 items-center hover:bg-pine"
+				>
+					<a href="https://30nama.com">30nama</a>
+				</div>
+				<!-- link  -->
+				<div
+					class="hover:button-stopg button-startg transition-all grid text-center text-sm p-2 items-center hover:bg-pine hover:text-black"
+				>
+					<a href="https://panel.7leecher.ir/files">7L</a>
+				</div>
+				<!-- link  -->
+				<div
+					class="hover:button-stopg button-startg transition-all grid text-center text-sm p-2 items-center hover:bg-pine hover:text-black"
+				>
+					<a href="https://roadmap.sh/backend">Roadmap</a>
+				</div>
+			</div>
+			<!-- color pallete  -->
+			<div class="grid grid-cols-5 gap-5">
+				<button
+					class="btn-color hover:text-bg bg-text sm:col-span-full "
+					onclick="copyToClipboard('e0def4')"
+					id="btnText"
+				>
+					text
+				</button>
+
+				<button
+					class="btn-color hover:text-bg bg-rose sm:col-span-full"
+					onclick="copyToClipboard('ebbcba')"
+					id="btnRose"
+				>
+					rose
+				</button>
+
+				<button
+					class="btn-color hover:text-bg bg-love sm:col-span-full"
+					onclick="copyToClipboard('eb6f92')"
+					id="btnLove"
+				>
+					love
+				</button>
+
+				<button
+					class="btn-color bg-hllow hover:text-text sm:col-span-full"
+					onclick="copyToClipboard('21202e')"
+					id="btnHlLow"
+				>
+					low
+				</button>
+				<button
+					class="btn-color bg-bg hover:text-text sm:col-span-full"
+					onclick="copyToClipboard('191724')"
+					id="btnBase"
+				>
+					base
+				</button>
+
+				<button
+					class="btn-color hover:text-bg bg-subtle"
+					onclick="copyToClipboard('908caa')"
+					id="btnSubtle"
+				>
+					subtle
+				</button>
+				<button
+					class="btn-color bg-pine hover:text-text sm:col-span-full"
+					onclick="copyToClipboard('31748f')"
+					id="btnPine"
+				>
+					pine
+				</button>
+				<button
+					class="btn-color hover:text-bg bg-gold sm:col-span-full"
+					onclick="copyToClipboard('f6c177')"
+					id="btnGold"
+				>
+					gold
+				</button>
+				<button
+					class="btn-color bg-hlmed hover:text-text sm:col-span-full "
+					onclick="copyToClipboard('403d52')"
+					id="btnHlMed"
+				>
+					med
+				</button>
+				<button
+					class="btn-color bg-surface hover:text-text sm:col-span-full "
+					onclick="copyToClipboard('1f1d2e')"
+					id="btnSurface"
+				>
+					surface
+				</button>
+				<button
+					class="btn-color bg-muted hover:text-bg sm:col-span-full "
+					onclick="copyToClipboard('6e6a86')"
+					id="btnMuted"
+				>
+					muted
+				</button>
+				<button
+					class="btn-color hover:text-bg bg-iris sm:col-span-full "
+					onclick="copyToClipboard('c4a7e7')"
+					id="btnIris"
+				>
+					iris
+				</button>
+				<button
+					class="btn-color hover:text-bg bg-foam sm:col-span-full "
+					onclick="copyToClipboard('9ccfd8')"
+					id="btnFoam"
+				>
+					foam
+				</button>
+				<button
+					class="btn-color bg-hlhigh hover:text-text sm:col-span-full "
+					onclick="copyToClipboard('524f67')"
+					id="btnHlHigh"
+				>
+					high
+				</button>
+				<button
+					class="btn-color bg-overlay hover:text-text sm:col-span-full "
+					onclick="copyToClipboard('26233a')"
+					id="btnOverlay"
+				>
+					overlay
+				</button>
+			</div>
+		</div>
+		<script>
+			function copyToClipboard(color) {
+				/* Copy the text inside the text field */
+				navigator.clipboard.writeText(color);
+			}
+			updateClock();
+		</script>
+	</body>
+</html>
