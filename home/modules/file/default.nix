@@ -33,12 +33,12 @@ in {
       "<enter>" = "shell";
       # o = "&mimeopen $f";
       # O = "&mimeopen --ask $f";
-	  o = "push open $f <space>";
+      o = "push open $f <space>";
       ad = "push mkdir <space>";
       "<c-r>" = "reload";
       D = "delete";
       E = "extract";
-      V = "push !nvim<space>";
+      V = "push :!nvim<space>";
       "<c-f>" = "fzf_jump";
       "gs" = "fzf_search";
       Z = "push aj<space>";
