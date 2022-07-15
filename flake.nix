@@ -6,10 +6,6 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    zkn = {
-      url = "github:amirography/zkn";
-      flake = false;
-    };
     ## zsh plugins
     ansible-zsh = {
       url = "github:sparsick/ansible-zsh";
@@ -31,14 +27,6 @@
       url = "github:leophys/zsh-plugin-fzf-finder";
       flake = false;
     };
-    #  = {
-    #   url = "github:";
-    #   flake = false;
-    # };
-    #  = {
-    #   url = "github:";
-    #   flake = false;
-    # };
   };
 
   outputs = {

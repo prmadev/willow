@@ -12,7 +12,7 @@
   programs.exa.enableAliases = true;
   programs.fzf.enable = true;
   programs.fzf.changeDirWidgetCommand = "fd --type d";
-  programs.fzf.tmux.enableShellIntegration = true;
+  programs.fzf.tmux.enableShellIntegration = true; #TODO theme fzf
   programs.starship.enable = true;
   programs.jq.enable = true;
 
