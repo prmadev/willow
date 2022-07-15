@@ -29,21 +29,6 @@ in {
     previewer.source = ./lfkittypreview;
     previewer.keybinding = "i";
     commands = {
-      fzf_search = ''
-        $\{\{res="$(  RG_PREFIX="rg --column --line-number --no-heading --color=always --smart-case " FZF_DEFAULT_COMMAND="$RG_PREFIX \'\'" fzf --bind "change:reload:$RG_PREFIX {q} || true"  --ansi --layout=reverse --header 'Search in files' | cut -d':' -f1)"  [ ! -z "$res" ] && lf -remote "send $id select \"$res\""
-        \}\}
-      '';
-      fzf_jump = ''
-        $\{\{
-        res="$(find . -maxdepth 1 | fzf --reverse --header='Jump to location' | sed 's/\\/\\\\/g;s/"/\\"/g')"
-        if [ -d "$res" ]; then
-            cmd="z"
-        else
-            cmd="select"
-        fi
-        lf -remote "send $id $cmd \"$res\""
-        \}\}
-      '';
       zip = ''
         set -f
         mkdir $1
