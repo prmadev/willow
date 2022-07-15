@@ -1,9 +1,25 @@
-{pkgs, ...}: let
+{pkgs, inputs, ...}: let
   color = import ../colorscheme;
 in {
   # programs.broot.enable = true;
 
   programs.zoxide.enable = true;
+  programs.nnn = {
+    enable = true;
+    package = pkgs.nnn.override {withNerdIcons = true;};
+    bookmarks = {
+      d = "~/Downloads";
+      p = "~/Documents/projects";
+      g = "~/Videos/golearn/";
+    };
+    extraPackages = with pkgs; [
+      ffmpegthumbnailer
+      mediainfo
+    ];
+    plugins = {
+      src = inputs.nnn-plugins;
+    };
+  };
 
   programs.lf = {
     #TODO needs improvement
@@ -26,46 +42,6 @@ in {
     };
     previewer.source = ./lfkittypreview;
     previewer.keybinding = "i";
-    commands = {
-      zip = ''
-        {set -f \
-        mkdir $1 \
-        cp -r $fx $1 \
-        zip -r $1.zip $1 \
-        rm -rf $1 }
-      '';
-      tar = ''
-        set -f
-        mkdir $1
-        cp -r $fx $1
-        tar czf $1.tar.gz $1
-        rm -rf $1
-      '';
-      extract = ''
-        set -f
-        case $f in
-            *.tar.bz|*.tar.bz2|*.tbz|*.tbz2) tar xjvf $f;;
-            *.tar.gz|*.tgz) tar xzvf $f;;
-            *.tar.xz|*.txz) tar xJvf $f;;
-            *.zip) unzip $f;;
-            *.rar) unrar x $f;;
-            *.7z) 7z x $f;;
-        esac
-      '';
-      open = ''
-        test -L $f && f=$(readlink -f $f)
-        case $(file --mime-type $f -b) in
-            text/*) $EDITOR $fx;;
-            *) for f in $fx; do setsid $OPENER $f > /dev/null 2> /dev/null & done;;
-        esac
-      '';
-      rifle = ''
-        set -f
-        rifle -l $f
-        read -p "Select runner: " runner
-        rifle -p $runner $f
-      '';
-    };
     extraConfig = ''
       set cleaner ~/dofi/home/modules/file/lfkittycleaner
     '';

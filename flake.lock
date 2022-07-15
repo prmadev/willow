@@ -117,6 +117,22 @@
         "type": "github"
       }
     },
+    "nnn-plugins": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1657766311,
+        "narHash": "sha256-dfgOObk0Ps5ngxT2p/VIU5Qbnlrt9DGqoe4uNujk0vw=",
+        "owner": "jarun",
+        "repo": "nnn",
+        "rev": "7fde7653d533722fb810dd49252afe99533d709b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "jarun",
+        "repo": "nnn",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "ansible-zsh": "ansible-zsh",
@@ -125,7 +141,8 @@
         "fzf-finder": "fzf-finder",
         "fzf-tab": "fzf-tab",
         "home-manager": "home-manager",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "nnn-plugins": "nnn-plugins"
       }
     },
     "utils": {
