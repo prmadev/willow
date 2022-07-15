@@ -93,6 +93,7 @@ in {
     android-file-transfer
     atool # for file extraction
     zip
+    unzip
     rar
     pigz # file compression
     sd
