@@ -11,8 +11,8 @@ in {
       sub-color = color.rosepine.base;
       osd-border-color = color.rosepine.text;
       sub-border-color = color.rosepine.text;
-	  sub-font="monospace";
-	  sub-scale = "0.5";
+      sub-font = "monospace";
+      sub-scale = "0.5";
     };
   };
 }
