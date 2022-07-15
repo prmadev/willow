@@ -58,9 +58,7 @@ in {
     };
     settings = {
       drawbox = false;
-      dirfirst = true;
-      icons = true;
-      preview = true;
+      dirfirst = true; icons = true; preview = true;
       ratios = "2:3:1";
       shell = "bash";
       shellopts = "-eu";
@@ -73,6 +71,10 @@ in {
       set cleaner ~/dofi/home/modules/file/lfkittycleaner
     '';
   };
+  home.sessionVariables = {
+	  LF_ICONS = import ./icons.nix;
+
+	  };
   programs.pistol.enable = true;
   home.packages = with pkgs; [
     ranger # for its rifle
@@ -103,4 +105,5 @@ in {
     default-bg = color.rosepine.base;
     default-fg = color.rosepine.text;
   };
+
 }
