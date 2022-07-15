@@ -1,9 +1,11 @@
 {
   pkgs,
   inputs,
+  config,
   ...
 }: let
   color = import ../colorscheme;
+  commandsDir = ".";
 in {
   # programs.broot.enable = true;
 
@@ -32,6 +34,28 @@ in {
       "<enter>" = "shell";
       o = "&mimeopen $f";
       O = "&mimeopen --ask $f";
+      ad = "push :mkdir <space>";
+      "<c-r>" = "reload";
+      D = "delete";
+      E = "extract";
+      V = "push :!nvim<space>";
+      "<c-f>" = "fzf_jump";
+      "gs" = "fzf_search";
+      Z = "push aj<space>";
+      R = "bulkrename";
+    };
+    commands = {
+      mkdir = builtins.readFile ./mkdir;
+      extract = builtins.readFile ./extract;
+      open = builtins.readFile ./extract;
+      aj = builtins.readFile ./aj;
+      delete = builtins.readFile ./delete;
+      fzf_jump = builtins.readFile ./fzf_jump;
+      fzf_search = builtins.readFile ./fzf_search;
+      paste = builtins.readFile ./paste;
+      rifle = builtins.readFile ./rifle;
+      tar = builtins.readFile ./tar;
+      zip = builtins.readFile ./zip;
     };
     settings = {
       drawbox = false;

@@ -1,0 +1,6 @@
+${{
+    set -f
+    rifle -l $f
+    read -p "Select runner: " runner
+    rifle -p $runner $f
+}}

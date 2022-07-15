@@ -1,0 +1,1 @@
+%lf -remote "send $id cd '$(zoxide query $1)'"
