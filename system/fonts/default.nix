@@ -12,8 +12,8 @@
   fonts = {
     fontconfig = {
       defaultFonts = {
-        serif = ["recursive" "JetBrainsMono Nerd Font" "JetBrainsMono Nerd Font" "CascadiaCode Nerd Font" "vazir"];
-        sansSerif = ["recursive" "JetBrainsMono Nerd Font" "vazir"];
+        serif = ["recursive" "JetBrainsMono Nerd Font" "CascadiaCode Nerd Font" "vazir"];
+        sansSerif = ["recursive" "JetBrainsMono Nerd Font" "CascadiaCode Nerd Font" "vazir"];
         monospace = ["recursive" "JetBrainsMono Nerd Font" "CascadiaCode Nerd Font" "DaddyTimeMono Nerd Font" "vazir"];
       };
     };
