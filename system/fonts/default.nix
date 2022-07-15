@@ -7,7 +7,7 @@
     recursive
     vazir-fonts
 
-    (nerdfonts.override {fonts = ["JetBrainsMono"];})
+    (nerdfonts.override {fonts = ["JetBrainsMono" "Monoid"];})
   ];
   fonts = {
     fontconfig = {
