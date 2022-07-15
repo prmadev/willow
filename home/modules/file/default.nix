@@ -1,4 +1,8 @@
-{pkgs, inputs, ...}: let
+{
+  pkgs,
+  inputs,
+  ...
+}: let
   color = import ../colorscheme;
 in {
   # programs.broot.enable = true;
@@ -17,7 +21,7 @@ in {
       mediainfo
     ];
     plugins = {
-      src = inputs.nnn-plugins;
+      src = inputs.nnn-plugins + "/plugins";
     };
   };
 
