@@ -47,7 +47,7 @@ in {
     commands = {
       mkdir = builtins.readFile ./mkdir;
       extract = builtins.readFile ./extract;
-      open = builtins.readFile ./extract;
+      # open = builtins.readFile ./extract;
       aj = builtins.readFile ./aj;
       delete = builtins.readFile ./delete;
       fzf_jump = builtins.readFile ./fzf_jump;
