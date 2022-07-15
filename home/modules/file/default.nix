@@ -58,7 +58,9 @@ in {
     };
     settings = {
       drawbox = false;
-      dirfirst = true; icons = true; preview = true;
+      dirfirst = true;
+      icons = true;
+      preview = true;
       ratios = "2:3:1";
       shell = "bash";
       shellopts = "-eu";
@@ -72,9 +74,8 @@ in {
     '';
   };
   home.sessionVariables = {
-	  LF_ICONS = import ./icons.nix;
-
-	  };
+    LF_ICONS = import ./icons.nix;
+  };
   programs.pistol.enable = true;
   home.packages = with pkgs; [
     ranger # for its rifle
@@ -91,6 +92,8 @@ in {
     dutree
     android-file-transfer
     atool # for file extraction
+    zip
+    rar
     pigz # file compression
     sd
     viu
@@ -105,5 +108,4 @@ in {
     default-bg = color.rosepine.base;
     default-fg = color.rosepine.text;
   };
-
 }

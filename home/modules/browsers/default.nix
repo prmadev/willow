@@ -2,6 +2,7 @@
   imports = [
     ./firefox
     ./qutebrowser
+    # ./chromium
   ];
   home.file = {
     ".config/startpage/" = {
