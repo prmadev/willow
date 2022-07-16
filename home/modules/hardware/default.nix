@@ -6,6 +6,6 @@
     pavucontrol
     playerctl
     pulsemixer
-	ntfs3g
+    ntfs3g
   ];
 }

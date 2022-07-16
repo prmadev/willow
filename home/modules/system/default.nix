@@ -4,7 +4,8 @@
   home.packages = with pkgs; [
     procs
     gparted
-	bunnyfetch
-	onefetch
+    bunnyfetch
+    onefetch
+macchina
   ];
 }
