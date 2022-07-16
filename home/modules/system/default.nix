@@ -6,6 +6,7 @@
     gparted
     bunnyfetch
     onefetch
-macchina
+    # macchina
+	neofetch
   ];
 }
