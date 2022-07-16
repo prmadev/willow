@@ -7,6 +7,6 @@
     bunnyfetch
     onefetch
     # macchina
-	neofetch
+    neofetch
   ];
 }

@@ -27,4 +27,7 @@
   services.xserver.libinput.enable = false;
   hardware.opengl.enable = true;
   #hardware.nvidiaOptimus.disable = true;
+  environment.systemPackages = with pkgs; [
+    ntfs3g
+  ];
 }
