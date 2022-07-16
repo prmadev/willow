@@ -102,7 +102,7 @@ in {
     mediainfo
     ripgrep-all
     ripgrep
-	gimp
+    gimp
   ];
 
   programs.zathura.enable = true;

@@ -30,6 +30,7 @@
     taskopen
     # fractal
     tdesktop
+	inkscape
   ];
 
   services.taskwarrior-sync.enable = true;
