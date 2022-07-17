@@ -11,7 +11,7 @@
   programs.rbw.enable = true;
   programs.rbw.settings = {
     email = "amirhossein.alesheikh@gmail.com";
-    pinentry = "curses";
+    pinentry = "gtk2";
   };
 
   fonts.fontconfig.enable = true;
