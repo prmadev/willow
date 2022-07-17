@@ -11,7 +11,7 @@
   programs.rbw.enable = true;
   programs.rbw.settings = {
     email = "amirhossein.alesheikh@gmail.com";
-    pinentry = "gtk2";
+    pinentry = "gnome3";
   };
 
   fonts.fontconfig.enable = true;
