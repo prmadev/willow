@@ -4,5 +4,6 @@
     nodePackages.npm
 
     nodejs
+	python3
   ];
 }
