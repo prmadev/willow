@@ -72,7 +72,7 @@ in {
       tabs.tooltips = true;
       url.default_page = "file:///home/a/.config/startpage/index.html";
       url.searchengines = {
-        DEFAULT = "https://google.com/search?hl=en&q={}";
+        "DEFAULT" = "https://google.com/search?hl=en&q={}";
       };
       url.open_base_url = true;
       url.start_pages = [
