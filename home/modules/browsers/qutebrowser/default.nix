@@ -8,9 +8,9 @@ in {
       "mpv" = "spawn --detach mpv {url}";
     };
 
-      searchEngines = {
-        DEFAULT = "https://google.com/search?hl=en&q={}";
-      };
+    searchEngines = {
+      DEFAULT = "https://google.com/search?hl=en&q={}";
+    };
     settings = {
       content.cookies.accept = "all";
       content.default_encoding = "utf-8";
@@ -42,6 +42,7 @@ in {
       editor.command = ["kitty" "nvim" "{file}"];
       editor.encoding = "utf-8";
       fonts.default_family = [
+	  "JetbrainsMono Nerd Font"
         "monospace"
         "Fixed"
       ];
