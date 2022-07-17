@@ -81,8 +81,8 @@
   ];
 
   services.atd.enable = true;
-  services.dbus.enable = true;
-  services.dbus.packages = [pkgs.gcr];
+  # services.dbus.enable = true;
+  # services.dbus.packages = [pkgs.gcr];
 
   environment.variables = {
     EDITOR = "nvim";
@@ -92,7 +92,7 @@
   programs.git.enable = true;
 
   security.polkit.enable = true;
-  programs.dconf.enable = true;
+  # programs.dconf.enable = true;
   programs.mtr.enable = true;
   environment.localBinInPath = true;
   environment.homeBinInPath = true;
