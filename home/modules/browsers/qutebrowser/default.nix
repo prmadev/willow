@@ -71,8 +71,8 @@ in {
       tabs.title.format = "{audio} {current_title}";
       tabs.tooltips = true;
       url.default_page = "file:///home/a/.config/startpage/index.html";
-      url.searchengines = {
-        "default" = "https://google.com/search?hl=en&q={}";
+      url.searchEngines = {
+       DEFAULT = "https://google.com/search?hl=en&q={}";
       };
       url.open_base_url = true;
       url.start_pages = [
