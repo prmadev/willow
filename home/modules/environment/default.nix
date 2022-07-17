@@ -26,7 +26,7 @@
   home.packages = with pkgs; [
     mprocs
     pueue
-    pinentry-gnome
+    # pinentry-gnome
   ];
 
   home.sessionVariables = {
