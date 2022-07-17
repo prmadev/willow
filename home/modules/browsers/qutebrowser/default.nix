@@ -11,8 +11,8 @@ in {
       content.cookies.accept = "all";
       content.default_encoding = "utf-8";
       content.desktop_capture = "ask";
-      content.dns_prefetch = true;
-      content.frame_flattening = true;
+      # content.dns_prefetch = true;
+      # content.frame_flattening = true;
       content.geolocation = "ask";
       content.headers.accept_language = "en-US,en;q=0.9";
       content.headers.do_not_track = true;
