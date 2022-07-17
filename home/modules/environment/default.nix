@@ -6,7 +6,7 @@
 
   services.gpg-agent.enable = true;
   services.gpg-agent.enableSshSupport = true;
-  services.gpg-agent.pinentryFlavor = "curses";
+  services.gpg-agent.pinentryFlavor = "gnome3";
 
   programs.rbw.enable = true;
   programs.rbw.settings = {
