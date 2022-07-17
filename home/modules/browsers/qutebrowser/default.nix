@@ -42,7 +42,7 @@ in {
       editor.command = ["kitty" "nvim" "{file}"];
       editor.encoding = "utf-8";
       fonts.default_family = [
-	  "JetbrainsMono Nerd Font"
+        "JetBrainsMono Nerd Font"
         "monospace"
         "Fixed"
       ];
@@ -53,6 +53,7 @@ in {
       fonts.web.family.sans_serif = "monospace";
       fonts.web.family.serif = "monospace";
       fonts.web.family.standard = "monospace";
+      fonts.web.family.monospace = "JetBrainsMono Nerd Font";
       fonts.web.size.default = 15;
       fonts.web.size.default_fixed = 13;
       hints.auto_follow = "always";
