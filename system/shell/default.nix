@@ -90,6 +90,7 @@
   programs.git.enable = true;
 
   security.polkit.enable = true;
+  programs.dconf.enable = true;
   programs.mtr.enable = true;
   environment.localBinInPath = true;
   environment.homeBinInPath = true;
