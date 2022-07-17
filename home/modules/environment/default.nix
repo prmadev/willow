@@ -6,12 +6,12 @@
 
   services.gpg-agent.enable = true;
   services.gpg-agent.enableSshSupport = true;
-  services.gpg-agent.pinentryFlavor = "gtk2";
+  services.gpg-agent.pinentryFlavor = "gnome3";
 
   programs.rbw.enable = true;
   programs.rbw.settings = {
     email = "amirhossein.alesheikh@gmail.com";
-    pinentry = "gtk2";
+    pinentry = "gnome3";
   };
 
   fonts.fontconfig.enable = true;
@@ -26,7 +26,7 @@
   home.packages = with pkgs; [
     mprocs
     pueue
-    # pinentry-gnome
+    pinentry-gnome
   ];
 
   home.sessionVariables = {
