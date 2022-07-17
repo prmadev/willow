@@ -30,9 +30,9 @@ module.exports = {
 			},
 		},
 		fontFamily: {
-			sans: ['Recursive', 'sans-serif'],
-			serif: ['Recursive', 'serif'],
-			monospace: ['Recursive', 'monospace'],
+			sans: ['Recursive','JetBrainsMono Nerd Fonts', 'sans-serif'],
+			serif: ['Recursive','JetBrainsMono Nerd Fonts' , 'serif'],
+			monospace: ['Recursive','JetBrainsMono Nerd Fonts' ,'monospace'],
 		},
 	},
 
