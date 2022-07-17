@@ -72,13 +72,14 @@
 						type="search"
 					/>
 				</form>
+
 				<form
 					class="search-box"
-					action="https://aur.archlinux.org/packages?O=0&K={}"
+					action="https://search.nixos.org/packages?channel=unstable&from=0&size=50&sort=relevance&type=packages&query={}"
 					method="GET"
 				>
 					<label class="search-label bg-pine">
-						<a href="https://archlinux.org">  </a>
+						<a href="https://search.nixos.org/">  </a>
 					</label>
 					<input
 						name="q"
@@ -87,6 +88,22 @@
 						type="search"
 					/>
 				</form>
+
+				<!-- <form -->
+				<!-- 	class="search-box" -->
+				<!-- 	action="https://aur.archlinux.org/packages?O=0&K={}" -->
+				<!-- 	method="GET" -->
+				<!-- > -->
+				<!-- 	<label class="search-label bg-pine"> -->
+				<!-- 		<a href="https://archlinux.org">  </a> -->
+				<!-- 	</label> -->
+				<!-- 	<input -->
+				<!-- 		name="q" -->
+				<!-- 		id="query" -->
+				<!-- 		class="bg-bg text-text search-input" -->
+				<!-- 		type="search" -->
+				<!-- 	/> -->
+				<!-- </form> -->
 			</div>
 			<!-- links  -->
 			<div
@@ -122,6 +139,12 @@
 					class="hover:button-stopg button-startg transition-all grid text-center text-sm p-2 items-center hover:bg-pine hover:text-black"
 				>
 					<a href="https://roadmap.sh/backend">Roadmap</a>
+				</div>
+				<!-- link  -->
+				<div
+					class="hover:button-stopg button-startg transition-all grid text-center text-sm p-2 items-center hover:bg-pine hover:text-black"
+				>
+					<a href="https://nix-community.github.io/home-manager/options.html">Home-Manager</a>
 				</div>
 			</div>
 			<!-- color pallete  -->

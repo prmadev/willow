@@ -5,7 +5,7 @@
 }: {
   programs.zsh = {
     enable = true;
-	defaultKeymap = "viins";
+    defaultKeymap = "viins";
     enableAutosuggestions = false;
     enableCompletion = true;
     enableSyntaxHighlighting = true;
