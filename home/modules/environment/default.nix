@@ -6,12 +6,12 @@
 
   services.gpg-agent.enable = true;
   services.gpg-agent.enableSshSupport = true;
-  services.gpg-agent.pinentryFlavor = "gnome3";
+  services.gpg-agent.pinentryFlavor = "gtk2";
 
   programs.rbw.enable = true;
   programs.rbw.settings = {
     email = "amirhossein.alesheikh@gmail.com";
-    pinentry = "gnome3";
+    pinentry = "gtk2";
   };
 
   fonts.fontconfig.enable = true;
