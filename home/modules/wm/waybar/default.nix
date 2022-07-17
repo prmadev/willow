@@ -117,7 +117,7 @@
     style = ''
       * {
       	border: none;
-      	font-family: "Gintronic", "Recursive Sans Casual Static", "JetBrainsMono Nerd Font";
+      	font-family: "Gintronic Black", "Recursive Sans Casual Static", "JetBrainsMono Nerd Font";
       	font-size: 12px;
       	min-height: 20px;
       	border-radius: 0px;
