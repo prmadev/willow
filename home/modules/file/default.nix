@@ -78,6 +78,7 @@ in {
   };
   programs.pistol.enable = true;
   home.packages = with pkgs; [
+    p7zip
     ranger # for its rifle
     file # for lf preview
     lsof
