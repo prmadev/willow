@@ -81,6 +81,8 @@
   ];
 
   services.atd.enable = true;
+  services.dbus.enable = true;
+  services.dbus.packages = [pkgs.gcr];
 
   environment.variables = {
     EDITOR = "nvim";
