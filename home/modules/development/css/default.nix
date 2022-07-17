@@ -4,6 +4,7 @@
     nodePackages.npm
 
     nodejs
-	python3
+    python3
+    python310Packages.python-socks
   ];
 }
