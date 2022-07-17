@@ -78,10 +78,11 @@ in {
   };
   programs.pistol.enable = true;
   home.packages = with pkgs; [
-  detox # to sanitize filenames
+    detox # to sanitize filenames
     p7zip # needed for 7z files
     ranger # for its rifle
     file # for lf preview
+	vimv-rs
     lsof
     libreoffice
     imagemagick
