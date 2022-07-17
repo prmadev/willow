@@ -88,11 +88,11 @@
         "utils": "utils"
       },
       "locked": {
-        "lastModified": 1657661746,
-        "narHash": "sha256-kreOBAylgG/vCPHeikjftL7GjBvX7g/A/M7WBaHvHVw=",
+        "lastModified": 1657887110,
+        "narHash": "sha256-8VV0/kZed2z8fGtEc2zr+WLxTow+JTIlMjnSisyv0GQ=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "602f2ce59c0150755fa30a23e6921a1c7453f8c7",
+        "rev": "4c5106ed0f3168ff2df21b646aef67e86cbfc11c",
         "type": "github"
       },
       "original": {
@@ -103,11 +103,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1657533762,
-        "narHash": "sha256-/cxTFSMmpAb8tBp1yVga1fj+i8LB9aAxnMjYFpRMuVs=",
+        "lastModified": 1657802959,
+        "narHash": "sha256-9+JWARSdlL8KiH3ymnKDXltE1vM+/WEJ78F5B1kjXys=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "38860c9e91cb00f4d8cd19c7b4e36c45680c89b5",
+        "rev": "4a01ca36d6bfc133bc617e661916a81327c9bbc8",
         "type": "github"
       },
       "original": {
@@ -120,11 +120,11 @@
     "nnn-plugins": {
       "flake": false,
       "locked": {
-        "lastModified": 1657766311,
-        "narHash": "sha256-dfgOObk0Ps5ngxT2p/VIU5Qbnlrt9DGqoe4uNujk0vw=",
+        "lastModified": 1657994076,
+        "narHash": "sha256-JATZ9zkqHibjcYoSIyMlyc5YOy6qbBSvwwDBSGWhpKY=",
         "owner": "jarun",
         "repo": "nnn",
-        "rev": "7fde7653d533722fb810dd49252afe99533d709b",
+        "rev": "4dcd563ab106e9c9898d02e0771f4df4567691b2",
         "type": "github"
       },
       "original": {

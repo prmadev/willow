@@ -10,6 +10,7 @@
     (nerdfonts.override {fonts = ["JetBrainsMono" "CascadiaCode" "DaddyTimeMono"];})
   ];
   fonts = {
+    enableDefaultFonts = true; # just to see if it helps with faulty characters.
     fontconfig = {
       defaultFonts = {
         serif = ["recursive" "JetBrainsMono Nerd Font" "CascadiaCode Nerd Font" "vazir"];
