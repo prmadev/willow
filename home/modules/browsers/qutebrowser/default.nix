@@ -42,17 +42,18 @@ in {
       editor.command = ["kitty" "nvim" "{file}"];
       editor.encoding = "utf-8";
       fonts.default_family = [
+        "Gintronics"
         "JetBrainsMono Nerd Font"
         "monospace"
         "Fixed"
       ];
       fonts.default_size = "15px";
-      fonts.web.family.cursive = "JetBrainsMono Nerd Font";
-      fonts.web.family.fantasy = "JetBrainsMono Nerd Font";
-      fonts.web.family.fixed = "JetBrainsMono Nerd Font";
-      fonts.web.family.sans_serif = "JetBrainsMono Nerd Font";
-      fonts.web.family.serif = "JetBrainsMono Nerd Font";
-      fonts.web.family.standard = "JetBrainsMono Nerd Font";
+      fonts.web.family.cursive = "Gintronics, JetBrainsMono Nerd Font";
+      fonts.web.family.fantasy = "Gintronics, JetBrainsMono Nerd Font";
+      fonts.web.family.fixed = "Gintronics, JetBrainsMono Nerd Font";
+      fonts.web.family.sans_serif = "Gintronics, JetBrainsMono Nerd Font";
+      fonts.web.family.serif = "Gintronics, JetBrainsMono Nerd Font";
+      fonts.web.family.standard = "Gintronics, JetBrainsMono Nerd Font";
       # fonts.web.family.monospace = "JetBrainsMono Nerd Font";
       fonts.web.size.default = 15;
       fonts.web.size.default_fixed = 13;

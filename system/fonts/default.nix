@@ -13,9 +13,9 @@
     enableDefaultFonts = true; # just to see if it helps with faulty characters.
     fontconfig = {
       defaultFonts = {
-        serif = ["recursive" "JetBrainsMono Nerd Font" "CascadiaCode Nerd Font" "vazir"];
-        sansSerif = ["recursive" "JetBrainsMono Nerd Font" "CascadiaCode Nerd Font" "vazir"];
-        monospace = ["recursive" "JetBrainsMono Nerd Font" "CascadiaCode Nerd Font" "DaddyTimeMono Nerd Font" "vazir"];
+        serif = ["Gintronic" "recursive" "JetBrainsMono Nerd Font" "CascadiaCode Nerd Font" "vazir"];
+        sansSerif = ["Gintronic" "recursive" "JetBrainsMono Nerd Font" "CascadiaCode Nerd Font" "vazir"];
+        monospace = ["Gintronic" "recursive" "JetBrainsMono Nerd Font" "CascadiaCode Nerd Font" "DaddyTimeMono Nerd Font" "vazir"];
       };
     };
   };
