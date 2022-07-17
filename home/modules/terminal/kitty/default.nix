@@ -4,7 +4,7 @@
     font = {
       # package = pkgs.recursive;
       name = "monospace";
-      size = 12;
+      size = 13;
     };
     settings = {
       scrollback_lines = 15000;
