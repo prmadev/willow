@@ -11,7 +11,7 @@
   programs.rbw.enable = true;
   programs.rbw.settings = {
     email = "amirhossein.alesheikh@gmail.com";
-    pinentry = "gnome3";
+    pinentry = "gtk2";
   };
 
   fonts.fontconfig.enable = true;
@@ -26,7 +26,7 @@
   home.packages = with pkgs; [
     mprocs
     pueue
-	pinentry-gnome
+    pinentry-gnome
   ];
 
   home.sessionVariables = {
