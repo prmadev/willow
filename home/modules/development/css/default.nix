@@ -5,6 +5,5 @@
 
     nodejs
     python3
-    python310Packages.pysocks
   ];
 }
