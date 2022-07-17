@@ -7,6 +7,10 @@ in {
       "adblock-toggle" = "config-cycle -t content.blocking.enabled";
       "mpv" = "spawn --detach mpv {url}";
     };
+
+      searchEngines = {
+        DEFAULT = "https://google.com/search?hl=en&q={}";
+      };
     settings = {
       content.cookies.accept = "all";
       content.default_encoding = "utf-8";
@@ -71,9 +75,6 @@ in {
       tabs.title.format = "{audio} {current_title}";
       tabs.tooltips = true;
       url.default_page = "file:///home/a/.config/startpage/index.html";
-      url.searchEngines = {
-       DEFAULT = "https://google.com/search?hl=en&q={}";
-      };
       url.open_base_url = true;
       url.start_pages = [
         "file:///home/a/.config/startpage/index.html"
