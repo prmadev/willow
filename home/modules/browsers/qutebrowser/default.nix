@@ -75,7 +75,9 @@ in {
       tabs.background = true;
       tabs.show = "multiple";
       tabs.title.format = "{audio} {current_title}";
-      tabs.tooltips = true;
+      tabs.tooltips = false;
+      tabs.tabs_are_windows = true;
+
       url.default_page = "file:///home/a/.config/startpage/index.html";
       url.open_base_url = true;
       url.start_pages = [
