@@ -82,7 +82,7 @@ in {
     p7zip # needed for 7z files
     ranger # for its rifle
     file # for lf preview
-	vimv-rs
+    vimv-rs
     lsof
     libreoffice
     imagemagick
