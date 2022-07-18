@@ -27,6 +27,7 @@
     mprocs
     pueue
     pinentry-gnome
+	font-manager # to see what the problem is with Dank Mono Bold
   ];
 
   home.sessionVariables = {
