@@ -17,9 +17,9 @@
       shell = "${pkgs.zsh}/bin/zsh";
       confirm_os_window_close = 0;
       font_family = "monospace";
-      bold_font = "Dank Mono Bold";
-      italic_font = "Dank Mono Italic";
-      bold_italic_font = "Dank Mono Italic";
+      bold_font = "DankMono Nerd Font Bold";
+      italic_font = "DankMono Nerd Font Italic";
+      bold_italic_font = "DankMono Nerd Font Italic";
       font_size = 12;
     };
     theme = "Rosé Pine";
