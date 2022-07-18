@@ -33,7 +33,7 @@ in {
       content.local_content_can_access_file_urls = true;
       content.local_storage = true;
       content.mouse_lock = "ask";
-      content.proxy = "socks5://127.0.0.1:7890/";
+      # content.proxy = "socks5://127.0.0.1:7890/";
       content.proxy_dns_requests = true;
       content.webgl = true;
       content.webrtc_ip_handling_policy = "default-public-interface-only";
@@ -48,12 +48,12 @@ in {
         "Fixed"
       ];
       fonts.default_size = "15px";
-      fonts.web.family.cursive = "Gintronics, JetBrainsMono Nerd Font";
-      fonts.web.family.fantasy = "Gintronics, JetBrainsMono Nerd Font";
-      fonts.web.family.fixed = "Gintronics, JetBrainsMono Nerd Font";
-      fonts.web.family.sans_serif = "Gintronics, JetBrainsMono Nerd Font";
-      fonts.web.family.serif = "Gintronics, JetBrainsMono Nerd Font";
-      fonts.web.family.standard = "Gintronics, JetBrainsMono Nerd Font";
+      fonts.web.family.cursive = "monospace";
+      fonts.web.family.fantasy = "monospace";
+      fonts.web.family.fixed = "monospace";
+      fonts.web.family.sans_serif = "monospace";
+      fonts.web.family.serif = "monospace";
+      fonts.web.family.standard = "monospace";
       # fonts.web.family.monospace = "JetBrainsMono Nerd Font";
       fonts.web.size.default = 15;
       fonts.web.size.default_fixed = 13;
