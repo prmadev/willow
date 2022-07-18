@@ -78,6 +78,7 @@ in {
   };
   programs.pistol.enable = true;
   home.packages = with pkgs; [
+    nerd-font-patcher
     detox # to sanitize filenames
     p7zip # needed for 7z files
     ranger # for its rifle
