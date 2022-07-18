@@ -42,7 +42,7 @@ in {
       editor.command = ["kitty" "nvim" "{file}"];
       editor.encoding = "utf-8";
       fonts.default_family = [
-        "DankMono Nerd Font"
+        "DankMono Nerd Font Mono"
         "Dank Mono"
         "Gintronics"
         "JetBrainsMono Nerd Font"
@@ -50,12 +50,12 @@ in {
         "Fixed"
       ];
       fonts.default_size = "15px";
-      fonts.web.family.cursive = "DankMono Nerd Font";
-      fonts.web.family.fantasy = "DankMono Nerd Font";
-      fonts.web.family.fixed = "DankMono Nerd Font";
-      fonts.web.family.sans_serif = "DankMono Nerd Font";
-      fonts.web.family.serif = "DankMono Nerd Font";
-      fonts.web.family.standard = "DankMono Nerd Font";
+      fonts.web.family.cursive = "DankMono Nerd Font Mono";
+      fonts.web.family.fantasy = "DankMono Nerd Font Mono";
+      fonts.web.family.fixed = "DankMono Nerd Font Mono";
+      fonts.web.family.sans_serif = "DankMono Nerd Font Mono";
+      fonts.web.family.serif = "DankMono Nerd Font Mono";
+      fonts.web.family.standard = "DankMono Nerd Font Mono";
       # fonts.web.family.monospace = "JetBrainsMono Nerd Font";
       fonts.web.size.default = 15;
       fonts.web.size.default_fixed = 13;
