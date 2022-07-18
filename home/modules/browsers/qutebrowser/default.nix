@@ -42,6 +42,7 @@ in {
       editor.command = ["kitty" "nvim" "{file}"];
       editor.encoding = "utf-8";
       fonts.default_family = [
+        "Dank Mono"
         "Gintronics"
         "JetBrainsMono Nerd Font"
         "monospace"
