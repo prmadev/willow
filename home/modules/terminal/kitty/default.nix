@@ -19,7 +19,7 @@
       font_family = "monospace";
       bold_font = "Dank Mono Bold";
       italic_font = "Dank Mono Italic";
-      bold_italic_font = "auto";
+      bold_italic_font = "Dank Mono Italic";
     };
     theme = "Rosé Pine";
   };
