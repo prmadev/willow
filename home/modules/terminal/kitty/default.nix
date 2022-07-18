@@ -20,7 +20,7 @@
       bold_font = "Dank Mono Bold";
       italic_font = "Dank Mono Italic";
       bold_italic_font = "Dank Mono Italic";
-      font_size = 13;
+      font_size = 12;
     };
     theme = "Rosé Pine";
   };
