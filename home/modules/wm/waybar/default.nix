@@ -118,7 +118,7 @@
       * {
       	border: none;
       	font-family: "DankMono Nerd Font Mono Bold";
-      	font-size: 12px;
+      	font-size: 15px;
       	min-height: 20px;
       	border-radius: 0px;
       }
