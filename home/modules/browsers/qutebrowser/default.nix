@@ -48,12 +48,12 @@ in {
         "Fixed"
       ];
       fonts.default_size = "15px";
-      fonts.web.family.cursive = "JetBrainsMono Nerd Font,monospace";
-      fonts.web.family.fantasy = "JetBrainsMono Nerd Font,monospace";
-      fonts.web.family.fixed = "JetBrainsMono Nerd Font,monospace";
-      fonts.web.family.sans_serif = "JetBrainsMono Nerd Font,monospace";
-      fonts.web.family.serif = "JetBrainsMono Nerd Font,monospace";
-      fonts.web.family.standard = "JetBrainsMono Nerd Font,monospace";
+      fonts.web.family.cursive = "JetBrainsMono Nerd Font";
+      fonts.web.family.fantasy = "JetBrainsMono Nerd Font";
+      fonts.web.family.fixed = "JetBrainsMono Nerd Font";
+      fonts.web.family.sans_serif = "JetBrainsMono Nerd Font";
+      fonts.web.family.serif = "JetBrainsMono Nerd Font";
+      fonts.web.family.standard = "JetBrainsMono Nerd Font";
       # fonts.web.family.monospace = "JetBrainsMono Nerd Font";
       fonts.web.size.default = 15;
       fonts.web.size.default_fixed = 13;
