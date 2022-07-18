@@ -117,7 +117,7 @@
     style = ''
       * {
       	border: none;
-      	font-family: "DankMono Nerd Font Mono Bold";
+      	font-family: "DankMono Nerd Font Mono Regular";
       	font-size: 15px;
       	min-height: 20px;
       	border-radius: 0px;
