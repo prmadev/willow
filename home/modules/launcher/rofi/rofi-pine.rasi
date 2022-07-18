@@ -37,7 +37,7 @@ entry {
   background-color: #1f1d2e;
   placeholder-color: @bg;
   text-color: @fg;
-  font:  "Dank Mono Bold 10";
+  font:  "DankMono Nerd Font Mono Bold 10";
 }
 
 inputbar {
@@ -47,7 +47,7 @@ inputbar {
   expand: false;
   border-radius: 0px;
   padding: 5px;
-  font:  "Dank Mono Bold 10";
+  font:  "DankMono Nerd Font Mono Bold 10";
 }
 
 listview {
@@ -78,7 +78,7 @@ element-text {
   margin: 5px 5px 5px 5px;
   background-color: inherit;
   text-color: inherit;
-  font:  "Dank Mono 10";
+  font:  "DankMono Nerd Font Mono Italic 10";
 }
   
 

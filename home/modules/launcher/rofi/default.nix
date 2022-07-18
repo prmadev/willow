@@ -2,7 +2,7 @@
   programs.rofi = {
     #TODO
     enable = true;
-    font = "Gintronic 10";
+    font = "DankMono Nerd Font Mono 10";
     theme = ./rofi-pine.rasi;
     package = pkgs.rofi-wayland;
   };
