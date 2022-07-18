@@ -154,7 +154,7 @@
 
       #tags button.occupied {
       	border-radius: 0px;
-      	font-weight: 700;
+      	font-weight: bold;
       	color: #191724;
       	background: #31748f;
       }
