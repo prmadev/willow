@@ -133,6 +133,21 @@
         "type": "github"
       }
     },
+    "nur": {
+      "locked": {
+        "lastModified": 1658176224,
+        "narHash": "sha256-ObQc9Pm10j/2SHeTbzwuMRW9y5RPYIKO+U1Gz1uoq6c=",
+        "owner": "nix-community",
+        "repo": "NUR",
+        "rev": "ea077028e4373619de4509ab8cecc55e663fd2e0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "NUR",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "ansible-zsh": "ansible-zsh",
@@ -142,7 +157,8 @@
         "fzf-tab": "fzf-tab",
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs",
-        "nnn-plugins": "nnn-plugins"
+        "nnn-plugins": "nnn-plugins",
+        "nur": "nur"
       }
     },
     "utils": {
