@@ -15,6 +15,9 @@
     };
     autocd = true;
     initExtra = ''
+		if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+  			exec tmux
+		fi
       export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS"
        --color=fg:#e0def4,bg:#1f1d2e,hl:#6e6a86
        --color=fg+:#908caa,bg+:#191724,hl+:#908caa
