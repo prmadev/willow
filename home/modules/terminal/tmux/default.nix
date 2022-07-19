@@ -9,8 +9,13 @@
     tmuxp.enable = true;
     sensibleOnTop = true;
     extraConfig = ''
-      bind C-p previous-window
-      bind C-n next-window
+         bind C-p previous-window
+         bind C-n next-window
+      # quick pane cycling
+      unbind ^A
+      bind ^A select-pane -t :.+
+         unbind r
+         bind r source-file ~/.config/tmux/.tmux.conf
     '';
     plugins = with pkgs; [
       tmuxPlugins.continuum
