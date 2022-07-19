@@ -5,7 +5,7 @@
     clock24 = true;
     newSession = true;
     shell = "${pkgs.zsh}/bin/zsh";
-    shortcut = "\.";
+    shortcut = "a";
     tmuxp.enable = true;
     sensibleOnTop = true;
     extraConfig = ''
