@@ -38,7 +38,6 @@
     self,
     nixpkgs,
     home-manager,
-	nur,
     ...
   } @ inputs: let
     system = "x86_64-linux";
@@ -62,7 +61,7 @@
               home-manager.useUserPackages = true;
               home-manager.extraSpecialArgs = {
                 inherit inputs;
-              };
+              }; #TODO figure out how to add NUR to home-manager
               home-manager.users.a = {
                 home.stateVersion = "22.11";
                 imports = [

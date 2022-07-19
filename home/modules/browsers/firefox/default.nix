@@ -1,4 +1,7 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  ...
+}: {
   programs.firefox = {
     # TODO customize it!
     enable = true;
