@@ -6,6 +6,7 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nur.url = "github:nix-community/NUR";
     nnn-plugins = {
       url = "github:jarun/nnn";
       flake = false;
@@ -52,6 +53,7 @@
         nixer = lib.nixosSystem {
           inherit system;
           modules = [
+            nur.nixosModules.nur
             ./system
             home-manager.nixosModules.home-manager
             {
