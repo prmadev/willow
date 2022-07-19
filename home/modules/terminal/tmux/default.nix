@@ -15,7 +15,7 @@
       unbind ^A
       bind ^A select-pane -t :.+
          unbind r
-         bind r source-file ~/.config/tmux/.tmux.conf
+         bind r source-file ~/.config/tmux/tmux.conf
     '';
     plugins = with pkgs; [
       tmuxPlugins.continuum
@@ -29,4 +29,7 @@
       tmuxPlugins.vim-tmux-navigator
     ];
   };
+  home.packages = with pkgs; [
+    xdg-utils #for open
+  ];
 }
