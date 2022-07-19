@@ -12,5 +12,16 @@
       bind C-p previous-window
       bind C-n next-window
     '';
+    plugins = with pkgs; [
+      tmuxPlugins.continuum
+      tmuxPlugins.resurrect
+      tmuxPlugins.copycat
+      tmuxPlugins.open
+      tmuxPlugins.pain-control
+      tmuxPlugins.tmux-fzf
+      tmuxPlugins.extrakto
+      tmuxPlugins.prefix-highlight
+      tmuxPlugins.vim-tmux-navigator
+    ];
   };
 }
