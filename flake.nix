@@ -45,6 +45,10 @@
       url = "github:andreiborisov/sponge";
       flake = false;
     };
+    tmux-fish = {
+      url = "github:budimanjojo/tmux.fish";
+      flake = false;
+    };
   };
 
   outputs = {

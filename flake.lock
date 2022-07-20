@@ -193,7 +193,8 @@
         "nixpkgs": "nixpkgs",
         "nnn-plugins": "nnn-plugins",
         "nur": "nur",
-        "sponge-fish": "sponge-fish"
+        "sponge-fish": "sponge-fish",
+        "tmux-fish": "tmux-fish"
       }
     },
     "sponge-fish": {
@@ -209,6 +210,22 @@
       "original": {
         "owner": "andreiborisov",
         "repo": "sponge",
+        "type": "github"
+      }
+    },
+    "tmux-fish": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1637647340,
+        "narHash": "sha256-uLTqShRE43oK3v7Z60sYpiFyOrnwWsltuQmUaXiu5ls=",
+        "owner": "budimanjojo",
+        "repo": "tmux.fish",
+        "rev": "42c2f6ed78b846d62ff646d870c6078faf48d4a8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "budimanjojo",
+        "repo": "tmux.fish",
         "type": "github"
       }
     },
