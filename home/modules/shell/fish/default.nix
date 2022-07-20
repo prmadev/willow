@@ -35,5 +35,6 @@
   home.sessionVariables = {
     fish_tmux_config = "$HOME/.config/tmux/tmux.conf";
     fish_greeting = "";
+	fish_tmux_autoconnect = "false";
   };
 }
