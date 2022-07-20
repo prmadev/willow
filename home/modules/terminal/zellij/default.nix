@@ -21,7 +21,7 @@ with lib; {
         scrollback_editor = "${pkgs.neovim}/bin/nvim";
         themes = {
           default = {
-            fg = "[235,188,186]";
+            fg = [235 188 186];
           };
         };
       };
