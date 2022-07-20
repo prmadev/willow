@@ -22,6 +22,7 @@ with lib; {
         themes = {
           default = {
             fg = [235 188 186];
+            bg = [25 23 36];
           };
         };
       };
