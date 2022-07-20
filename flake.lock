@@ -48,6 +48,22 @@
         "type": "github"
       }
     },
+    "done-fish": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1633849654,
+        "narHash": "sha256-6oeyN9ngXWvps1c5QAUjlyPDQwRWAoxBiVTNmZ4sG8E=",
+        "owner": "franciscolourenco",
+        "repo": "done",
+        "rev": "d6abb267bb3fb7e987a9352bc43dcdb67bac9f06",
+        "type": "github"
+      },
+      "original": {
+        "owner": "franciscolourenco",
+        "repo": "done",
+        "type": "github"
+      }
+    },
     "fzf-finder": {
       "flake": false,
       "locked": {
@@ -61,6 +77,22 @@
       "original": {
         "owner": "leophys",
         "repo": "zsh-plugin-fzf-finder",
+        "type": "github"
+      }
+    },
+    "fzf-fish": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1658274658,
+        "narHash": "sha256-OLmPtgUVX+/uiZg6lMl1xF4MHGVZUpTVota68coexWw=",
+        "owner": "PatrickF1",
+        "repo": "fzf.fish",
+        "rev": "c8c7d9903e0327b0d76e51ba4378ec8d5ef6477e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "PatrickF1",
+        "repo": "fzf.fish",
         "type": "github"
       }
     },
@@ -153,12 +185,31 @@
         "ansible-zsh": "ansible-zsh",
         "cd-ls": "cd-ls",
         "colorize": "colorize",
+        "done-fish": "done-fish",
         "fzf-finder": "fzf-finder",
+        "fzf-fish": "fzf-fish",
         "fzf-tab": "fzf-tab",
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs",
         "nnn-plugins": "nnn-plugins",
-        "nur": "nur"
+        "nur": "nur",
+        "sponge-fish": "sponge-fish"
+      }
+    },
+    "sponge-fish": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1655668895,
+        "narHash": "sha256-+GGfFC/hH7A8n9Wwojt5PW96fSzvRhThnZ3pLeWEqds=",
+        "owner": "andreiborisov",
+        "repo": "sponge",
+        "rev": "dcfcc9089939f48b25b861a9254a39de8e9f33a0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "andreiborisov",
+        "repo": "sponge",
+        "type": "github"
       }
     },
     "utils": {

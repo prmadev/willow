@@ -14,7 +14,7 @@
       input_delay = 1;
       sync_to_monitor = true;
       allow_remote_control = true;
-      shell = "${pkgs.zsh}/bin/zsh";
+      shell = "${pkgs.fish}/bin/fish";
       confirm_os_window_close = 0;
       font_family = "monospace";
       bold_font = "DankMono Nerd Font Mono Bold";
