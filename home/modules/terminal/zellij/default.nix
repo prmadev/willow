@@ -19,6 +19,9 @@ with lib; {
         pane_frames = false;
         scroll_buffer_size = 20000;
         scrollback_editor = "${pkgs.neovim}/bin/nvim";
+        themes = {
+          fg = [235 188 186];
+        };
       };
     };
   };
