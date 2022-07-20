@@ -11,21 +11,21 @@ with lib; {
     ./mako
   ];
 
-  options.gui.wm = {
+  options.wm = {
     enable = mkOption {
       type = types.bool;
       default = false;
     };
   };
   config = {
-    gui.mako = mkIf config.gui.wm.enable {
+    mako = mkIf config.wm.enable {
       enable = true;
     };
-    gui.launcher = mkIf config.gui.wm.enable {
+    launcher = mkIf config.wm.enable {
       enable = true;
     };
 
-    gui.wm.river = mkIf config.gui.wm.enable {
+    wm.river = mkIf config.wm.enable {
       enable = true;
     };
   };

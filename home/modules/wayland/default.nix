@@ -6,7 +6,7 @@
 }:
 with lib; {
   options = {
-    gui.wayland = {
+    wayland = {
       enable = mkOption {
         type = types.bool;
         default = false;
@@ -16,7 +16,7 @@ with lib; {
 
   config = {
     home.packages = with pkgs;
-      mkIf config.gui.wayland.enable [
+      mkIf config.wayland.enable [
         glib #for wayland gsettings
         slurp # for wayland
         wl-clipboard
@@ -26,7 +26,7 @@ with lib; {
         wtype
       ];
 
-    programs.firefox = mkIf config.gui.wayland.enable {
+    programs.firefox = mkIf config.wayland.enable {
       package = pkgs.firefox-wayland;
     };
   };

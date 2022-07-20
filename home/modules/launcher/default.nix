@@ -8,7 +8,7 @@ with lib; {
   imports = [
     ./rofi
   ];
-  options.gui.launcher = {
+  options.launcher = {
     enable = mkOption {
       type = types.bool;
       default = false;
@@ -18,7 +18,7 @@ with lib; {
     };
   };
   config = {
-    gui.launcher.rofi = mkIf config.gui.launcher.enable {
+    launcher.rofi = mkIf config.launcher.enable {
       enable = true;
     };
   };

@@ -5,14 +5,14 @@
   ...
 }:
 with lib; {
-  options.gui.mako = {
+  options.mako = {
     enable = mkOption {
       type = types.bool;
       default = false;
     };
   };
   config = {
-    programs.mako = mkIf config.gui.mako.enable {
+    programs.mako = mkIf config.mako.enable {
       enable = true;
       anchor = "top-right";
       # textColor = "#285511FF" ;

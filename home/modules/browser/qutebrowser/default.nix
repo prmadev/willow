@@ -8,13 +8,13 @@
 in
   with lib; {
     options = {
-      gui.browser.qutebrowser.enable = mkOption {
+      browser.qutebrowser.enable = mkOption {
         type = types.bool;
         default = false;
       };
     };
     config = {
-      programs.qutebrowser = mkIf config.gui.browser.qutebrowser.enable {
+      programs.qutebrowser = mkIf config.browser.qutebrowser.enable {
         enable = true;
         aliases = {
           "adblock-toggle" = "config-cycle -t content.blocking.enabled";

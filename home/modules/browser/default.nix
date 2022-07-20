@@ -11,15 +11,15 @@ with lib; {
     # ./chromium
   ];
   options = {
-    gui.browser.enable = mkOption {
+    browser.enable = mkOption {
       type = types.bool;
       default = false;
     };
   };
   config = {
-    gui.browser.firefox.enable = mkIf config.gui.browser.enable true;
-    gui.browser.qutebrowser.enable = mkIf config.gui.browser.enable true;
-    home.file = mkIf config.gui.browser.enable {
+    browser.firefox.enable = mkIf config.browser.enable true;
+    browser.qutebrowser.enable = mkIf config.browser.enable true;
+    home.file = mkIf config.browser.enable {
       ".config/startpage/" = {
         source = ./startpage;
         recursive = true;

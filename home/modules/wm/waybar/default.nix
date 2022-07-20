@@ -5,7 +5,7 @@
   ...
 }:
 with lib; {
-  options.gui.waybar = {
+  options.waybar = {
     enable = mkOption {
       type = types.bool;
       default = false;
@@ -13,7 +13,7 @@ with lib; {
   };
 
   config = {
-    programs.waybar = mkIf config.gui.waybar.enable {
+    programs.waybar = mkIf config.waybar.enable {
       enable = true;
       systemd.enable = true;
       settings = {

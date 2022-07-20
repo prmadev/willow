@@ -5,7 +5,7 @@
   ...
 }:
 with lib; {
-  options.gui.launcher.rofi = {
+  options.launcher.rofi = {
     enable = mkOption {
       type = types.bool;
       default = false;
@@ -15,7 +15,7 @@ with lib; {
     };
   };
 
-  config = mkIf config.gui.launcher.rofi.enable {
+  config = mkIf config.launcher.rofi.enable {
     programs.rofi = {
       #TODO
       enable = true;

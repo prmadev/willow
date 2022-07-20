@@ -6,14 +6,14 @@
 }:
 with lib; {
   options = {
-    gui.browser.firefox.enable = mkOption {
+    browser.firefox.enable = mkOption {
       type = types.bool;
       default = false;
     };
   };
 
   config = {
-    programs.firefox = mkIf config.gui.browser.firefox.enable {
+    programs.firefox = mkIf config.browser.firefox.enable {
       enable = true;
     };
   };

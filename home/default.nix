@@ -15,6 +15,7 @@
     ./modules/wayland
     ./modules/wm
   ];
-  gui.wm.enable = true;
-  gui.browser.enable = true;
+  wm.enable = true;
+  browser.enable = true;
+  daily.enable = true;
 }
