@@ -16,8 +16,6 @@ with lib; {
       enable = true;
       keybindings = {
         "<enter>" = "shell";
-        # o = "&mimeopen $f";
-        # O = "&mimeopen --ask $f";
         ad = "push :mkdir<space>";
         "<c-r>" = "reload";
         D = "delete";

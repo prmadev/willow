@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   programs.tmux = {
-    enable = true;
+    enable = false;
     keyMode = "vi";
     clock24 = true;
     newSession = true;
