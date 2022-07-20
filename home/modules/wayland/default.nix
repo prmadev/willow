@@ -25,5 +25,9 @@ with lib; {
         grim # for wayland
         wtype
       ];
+
+    programs.firefox = mkIf config.gui.wayland.enable {
+      package = pkgs.firefox-wayland;
+    };
   };
 }

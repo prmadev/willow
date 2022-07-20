@@ -1,6 +1,6 @@
 {...}: {
   imports = [
-    ./modules/browsers
+    ./modules/browser
     ./modules/daily
     ./modules/development
     ./modules/environment
@@ -16,4 +16,5 @@
     ./modules/wm
   ];
   gui.wm.enable = true;
+  gui.browser.enable = true;
 }

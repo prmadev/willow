@@ -11,15 +11,10 @@ with lib; {
       default = false;
     };
   };
+
   config = {
     programs.firefox = mkIf config.gui.browser.firefox.enable {
-      # TODO customize it!
       enable = true;
-      package = mkIf gui.wayland.enable pkgs.firefox-wayland.override {
-        cfg = {
-          enableTridactylNative = true;
-        };
-      };
     };
   };
 }
