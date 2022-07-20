@@ -18,4 +18,5 @@
   wm.enable = true;
   browser.enable = true;
   daily.enable = true;
+  development.enable = true;
 }

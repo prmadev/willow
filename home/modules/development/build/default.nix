@@ -1,8 +1,20 @@
-{pkgs, ...}: {
-  # programs.just.enable = true; # cause problems with zsh!
-  home.packages = with pkgs; [
-    cmake
-    just
-    gnumake
-  ];
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}:
+with lib; {
+  options = {
+    build.enable = mkOption {
+      type = types.bool;
+      default = false;
+    };
+  };
+  config = mkIf config.build.enable {
+    home.packages = with pkgs; [
+      just
+      gnumake
+    ];
+  };
 }
