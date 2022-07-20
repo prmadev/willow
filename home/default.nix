@@ -21,6 +21,7 @@
   browser.enable = true; # web browsing
   daily.enable = true; # daily stuff
   development.enable = true; # development and languages
+  file.enable = true; # development and languages
   security.enable = true; # secerts
   monitor.enable = true; # monitoring utilities
   style.enable = true;
