@@ -55,7 +55,7 @@ with lib; {
       previewer.source = ./lfkittypreview;
       previewer.keybinding = "i";
       extraConfig = ''
-        set cleaner ~/dofi/home/modules/file/lfkittycleaner
+        set cleaner ~/dofi/home/modules/file/lf/lfkittycleaner
       '';
     };
     home.sessionVariables = {
