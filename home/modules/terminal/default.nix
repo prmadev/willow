@@ -3,5 +3,6 @@
     ./kitty
     ./tmux
     ./wezterm
+	./zellij
   ];
 }
