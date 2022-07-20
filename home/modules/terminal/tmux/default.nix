@@ -6,7 +6,7 @@
     newSession = true;
     shell = "${pkgs.fish}/bin/fish";
     shortcut = "a";
-    tmuxp.enable = true;
+    # tmuxp.enable = true;
     sensibleOnTop = true;
     extraConfig = ''
       bind C-p previous-window

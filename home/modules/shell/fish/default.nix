@@ -34,5 +34,6 @@
   services.gpg-agent.enableFishIntegration = true;
   home.sessionVariables = {
     fish_tmux_config = "$HOME/.config/tmux/tmux.conf";
+	fish_greeting = "";
   };
 }
