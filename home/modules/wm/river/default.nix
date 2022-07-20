@@ -1,25 +1,21 @@
 {
   pkgs,
-  home,
+  lib,
+  config,
   ...
-}: {
-  home.packages = with pkgs; [
-    river # my favorite window manager in wayland
-  ]; #TODO make a more integrated configuration
-
-  # systemd.user.services.river = {
-  #   Unit = {
-  #     Description = "River daemon";
-  #     After = "network.target";
-  #   };
-  #
-  #   Service = {
-  #     Type = "simple";
-  #     Restart = "always";
-  #     ExecStart = "${pkgs.river}/bin/river";
-  #   };
-  #   Install = {
-  #     WantedBy = ["multi-user.target"];
-  #   };
-  # };
+}:
+with lib; {
+  options.gui.wm.river = {
+    enable = mkOption {
+      type = types.bool;
+      default = false;
+    };
+  };
+  config = {
+    home.packages = mkIf config.gui.wm.river.enable [
+      pkgs.river
+    ];
+    gui.waybar.enable = mkIf config.gui.wm.river.enable true;
+    gui.wayland.enable = mkIf config.gui.wm.river.enable true;
+  };
 }
