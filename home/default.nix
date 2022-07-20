@@ -16,4 +16,5 @@
     ./modules/wm
   ];
   # gui.launcher.rofi.enable = true;
+	gui.launcher.enable = true;
 }
