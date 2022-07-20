@@ -18,10 +18,10 @@
         name = "sponge-fish";
         src = inputs.sponge-fish;
       }
-      {
-        name = "tmux-fish";
-        src = inputs.tmux-fish;
-      }
+      # {
+      #   name = "tmux-fish";
+      #   src = inputs.tmux-fish;
+      # }
     ];
     interactiveShellInit = ''
     '';
