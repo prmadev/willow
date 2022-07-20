@@ -11,11 +11,16 @@ with lib; {
       default = false;
     };
   };
-  config = {
-    home.packages = mkIf config.wm.river.enable [
+  config = mkIf config.wm.river.enable {
+    home.packages = [
       pkgs.river
     ];
-    waybar.enable = mkIf config.wm.river.enable true;
-    wayland.enable = mkIf config.wm.river.enable true;
+    waybar.enable = true;
+    wayland.enable = true;
+
+    home.sessionVariables = {
+      XKB_DEFAULT_LAYOUT = "us,ir";
+      XKB_DEFAULT_OPTIONS = "grp:alt_shift_toggle,caps:escape";
+    };
   };
 }

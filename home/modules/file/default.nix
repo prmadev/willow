@@ -3,10 +3,14 @@
   inputs,
   config,
   ...
-}: let
-  color = import ../colorscheme;
-in {
-  # programs.broot.enable = true;
+}: {
+  xdg = {
+    enable = true;
+    mime.enable = true;
+    mimeApps.enable = true;
+    userDirs.enable = true;
+    userDirs.createDirectories = true;
+  };
 
   programs.zoxide.enable = true;
   programs.nnn = {
@@ -106,12 +110,11 @@ in {
     mediainfo
     ripgrep-all
     ripgrep
-    gimp
   ];
 
   programs.zathura.enable = true;
   programs.zathura.options = {
-    default-bg = color.rosepine.base;
-    default-fg = color.rosepine.text;
+    default-bg = config.colors.base;
+    default-fg = config.colors.text;
   };
 }

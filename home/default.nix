@@ -3,7 +3,7 @@
     ./modules/browser
     ./modules/daily
     ./modules/development
-    ./modules/environment
+    ./modules/security
     ./modules/file
     ./modules/hardware
     ./modules/launcher
@@ -14,9 +14,14 @@
     ./modules/video
     ./modules/wayland
     ./modules/wm
+    ./modules/style
+    ./modules/monitor
   ];
-  wm.enable = true;
-  browser.enable = true;
-  daily.enable = true;
-  development.enable = true;
+  wm.enable = true; # window manager
+  browser.enable = true; # web browsing
+  daily.enable = true; # daily stuff
+  development.enable = true; # development and languages
+  security.enable = true; # secerts
+  monitor.enable = true; # monitoring utilities
+  style.enable = true;
 }

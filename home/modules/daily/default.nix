@@ -6,10 +6,12 @@
 }:
 with lib; {
   imports = [
-    ./task.nix
     ./communication.nix
     ./exercism.nix
+    ./favo.nix
     ./graphical.nix
+    ./task.nix
+    ./zk.nix
   ];
 
   options = {
@@ -22,7 +24,9 @@ with lib; {
   config = mkIf config.daily.enable {
     communication.enable = true;
     exercism.enable = true;
+    favo.enable = true;
     graphical.enable = true;
     task.enable = true;
+    zk.enable = true;
   };
 }

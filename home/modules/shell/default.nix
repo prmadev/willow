@@ -6,6 +6,11 @@
     ./fish
   ];
 
+  home.sessionVariables = {
+    PAGER = "less";
+    LESS = "-g -i -M -R -S -w -X -z-4";
+  };
+
   programs.info.enable = true;
   programs.tealdeer.enable = true;
   programs.bat.enable = true;

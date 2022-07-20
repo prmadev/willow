@@ -13,8 +13,8 @@ with lib; {
       };
     };
   };
-  config = {
-    programs.taskwarrior = mkIf config.task.enable {
+  config = mkIf config.task.enable {
+    programs.taskwarrior = {
       enable = true;
 
       colorTheme = "dark-16";
@@ -42,14 +42,13 @@ with lib; {
       };
     };
 
-    home.packages = with pkgs;
-      mkIf config.task.enable [
-        tasksh
-        taskopen
-        taskwarrior-tui
-      ];
+    home.packages = with pkgs; [
+      tasksh
+      taskopen
+      taskwarrior-tui
+    ];
 
-    services.taskwarrior-sync = mkIf config.task.enable {
+    services.taskwarrior-sync = {
       enable = true;
     };
   };

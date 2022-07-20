@@ -6,16 +6,15 @@
 }:
 with lib; {
   options = {
-    rust.enable = mkOption {
+    monitor.enable = mkOption {
       type = types.bool;
       default = false;
     };
   };
-  config = mkIf config.rust.enable {
+  config = mkIf config.monitor.enable {
     home.packages = with pkgs; [
-      rustup
+      mprocs
+      xorg.xwininfo
     ];
-
-    home.sessionPath = ["$HOME/.cargo/bin"];
   };
 }

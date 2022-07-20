@@ -14,20 +14,24 @@ with lib; {
     };
   };
 
-  config = {
-    home.packages = with pkgs;
-      mkIf config.wayland.enable [
-        glib #for wayland gsettings
-        slurp # for wayland
-        wl-clipboard
-        clipman # for wayland
-        brightnessctl
-        grim # for wayland
-        wtype
-      ];
+  config = mkIf config.wayland.enable {
+    home.packages = with pkgs; [
+      glib #for wayland gsettings
+      slurp # for wayland
+      wl-clipboard
+      clipman # for wayland
+      brightnessctl
+      grim # for wayland
+      wtype
+    ];
 
-    programs.firefox = mkIf config.wayland.enable {
+    programs.firefox = {
       package = pkgs.firefox-wayland;
+    };
+
+    home.sessionVariables = {
+      QT_QPA_PLATFORM = "wayland";
+      MOZ_ENABLE_WAYLAND = 1;
     };
   };
 }

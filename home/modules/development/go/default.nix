@@ -24,5 +24,7 @@ with lib; {
       tinygo
       richgo
     ];
+
+    home.sessionPath = ["$HOME/go/bin"];
   };
 }
