@@ -15,5 +15,5 @@
     ./modules/wayland
     ./modules/wm
   ];
-  config.gui.launcher.rofi.enable = true;
+  gui.launcher.rofi.enable = true;
 }
