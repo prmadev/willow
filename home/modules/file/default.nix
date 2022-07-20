@@ -1,120 +1,36 @@
 {
   pkgs,
-  inputs,
+  lib,
   config,
   ...
-}: {
-  xdg = {
-    enable = true;
-    mime.enable = true;
-    mimeApps.enable = true;
-    userDirs.enable = true;
-    userDirs.createDirectories = true;
-  };
-
-  programs.zoxide.enable = true;
-  programs.nnn = {
-    enable = true;
-    package = pkgs.nnn.override {withNerdIcons = true;};
-    bookmarks = {
-      d = "~/Downloads";
-      p = "~/Documents/projects";
-      g = "~/Videos/golearn/";
-    };
-    extraPackages = with pkgs; [
-      ffmpegthumbnailer
-      mediainfo
-    ];
-    plugins = {
-      src = inputs.nnn-plugins + "/plugins";
-    };
-  };
-
-  programs.lf = {
-    #TODO needs improvement
-    enable = true;
-    keybindings = {
-      "<enter>" = "shell";
-      # o = "&mimeopen $f";
-      # O = "&mimeopen --ask $f";
-      ad = "push :mkdir<space>";
-      "<c-r>" = "reload";
-      D = "delete";
-      E = "extract";
-      V = "push :!nvim<space>";
-      "<c-f>" = "fzf_jump";
-      "gs" = "fzf_search";
-      Z = "push aj<space>";
-      R = "bulkrename";
-    };
-    commands = {
-      mkdir = builtins.readFile ./mkdir;
-      extract = builtins.readFile ./extract;
-      open = builtins.readFile ./open;
-      aj = builtins.readFile ./aj;
-      delete = builtins.readFile ./delete;
-      fzf_jump = builtins.readFile ./fzf_jump;
-      fzf_search = builtins.readFile ./fzf_search;
-      paste = builtins.readFile ./paste;
-      rifle = builtins.readFile ./rifle;
-      tar = builtins.readFile ./tar;
-      zip = builtins.readFile ./zip;
-    };
-    settings = {
-      drawbox = false;
-      dirfirst = true;
-      icons = true;
-      preview = true;
-      ratios = "2:3:1";
-      shell = "bash";
-      shellopts = "-eu";
-      ifs = "\n";
-      scrolloff = 10;
-    };
-    previewer.source = ./lfkittypreview;
-    previewer.keybinding = "i";
-    extraConfig = ''
-      set cleaner ~/dofi/home/modules/file/lfkittycleaner
-    '';
-  };
-  home.sessionVariables = {
-    LF_ICONS = import ./icons.nix;
-  };
-  programs.pistol.enable = true;
-  home.packages = with pkgs; [
-    nerd-font-patcher
-    detox # to sanitize filenames
-    p7zip # needed for 7z files
-    ranger # for its rifle
-    file # for lf preview
-    vimv-rs
-    lsof
-    libreoffice
-    imagemagick
-    imv
-    ffmpeg_5-full
-    ffmpegthumbnailer
-    duf
-    du-dust
-    ncdu_2
-    dutree
-    android-file-transfer
-    atool # for file extraction
-    zip
-    unzip
-    rar
-    pigz # file compression
-    sd
-    viu
-    fd
-    mediainfo
-    ripgrep-all
-    ripgrep
+}:
+with lib; {
+  imports = [
+    ./android.nix
+    ./compression.nix
+    ./filesearch.nix
+    ./lf
+    ./nnn.nix
+    ./office.nix
+    ./pdf.nix
+    ./rename.nix
+    ./xdgconf.nix
   ];
-
-  programs.zathura.enable = true;
-  programs.zathura.options = {
-    default-bg = config.colors.base;
-    default-fg = config.colors.text;
+  options = {
+    file.enable = mkOption {
+      type = types.bool;
+      default = false;
+    };
+  };
+  config = mkIf config.file.enable {
+    android.enable = true;
+    compression.enable = true;
+    filesearch.enable = true;
+    lf.enable = true;
+    nnn.enable = true;
+    office.enable = true;
+    pdf.enable = true;
+    rename.enable = true;
+    xdgconf.enable = true;
   };
 }

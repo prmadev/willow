@@ -19,6 +19,10 @@ with lib; {
       inkscape
       gimp
       pastel
+      imagemagick
+      imv
+      viu
+      ffmpeg_5-full
     ];
   };
 }

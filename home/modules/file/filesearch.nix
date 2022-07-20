@@ -6,20 +6,18 @@
 }:
 with lib; {
   options = {
-    monitor.enable = mkOption {
+    filesearch.enable = mkOption {
       type = types.bool;
       default = false;
     };
   };
-  config = mkIf config.monitor.enable {
+  config = mkIf config.filesearch.enable {
     home.packages = with pkgs; [
-      mprocs
-      xorg.xwininfo
-      duf
-      du-dust
-      ncdu_2
-      dutree
-      lsof
+      fd
+      ripgrep-all
+      ripgrep
+      sd
     ];
+    programs.zoxide.enable = true;
   };
 }

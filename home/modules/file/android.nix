@@ -6,20 +6,14 @@
 }:
 with lib; {
   options = {
-    monitor.enable = mkOption {
+    android.enable = mkOption {
       type = types.bool;
       default = false;
     };
   };
-  config = mkIf config.monitor.enable {
+  config = mkIf config.android.enable {
     home.packages = with pkgs; [
-      mprocs
-      xorg.xwininfo
-      duf
-      du-dust
-      ncdu_2
-      dutree
-      lsof
+      android-file-transfer
     ];
   };
 }

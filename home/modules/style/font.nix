@@ -24,5 +24,8 @@ with lib; {
         size = 12;
       };
     };
+    home.packages = with pkgs; [
+      nerd-font-patcher
+    ];
   };
 }
