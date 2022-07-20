@@ -139,16 +139,10 @@
     # };
   };
   # programs.broot.enableZshIntegration = true;
-  #
-  programs.fzf.enableZshIntegration = true;
-
   # programs.just.enableZshIntegration = true;
-
+  programs.fzf.enableZshIntegration = true;
   programs.nix-index.enableZshIntegration = true;
-
   programs.starship.enableZshIntegration = true;
-
   programs.zoxide.enableZshIntegration = true;
-
   services.gpg-agent.enableZshIntegration = true;
 }

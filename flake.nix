@@ -32,6 +32,19 @@
       url = "github:leophys/zsh-plugin-fzf-finder";
       flake = false;
     };
+    ## fish plugins
+    fzf-fish = {
+      url = "github:PatrickF1/fzf.fish";
+      flake = false;
+    };
+    done-fish = {
+      url = "github:franciscolourenco/done";
+      flake = false;
+    };
+    sponge-fish = {
+      url = "github:andreiborisov/sponge";
+      flake = false;
+    };
   };
 
   outputs = {
