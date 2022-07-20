@@ -12,7 +12,7 @@ with lib; {
   };
   config = mkIf config.zellij.enable {
     programs.zellij = {
-		enable = true;
+      enable = true;
     };
   };
 }
