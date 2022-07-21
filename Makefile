@@ -17,6 +17,6 @@ upgrade:
 boot-update:
 	alejandra -q .
 	git add .
-	sudo nixos-rebuild switch --flake .# boot
+	sudo nixos-rebuild  --flake .# boot
 	git commit -m "auto: boot-update"
 
