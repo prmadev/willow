@@ -14,3 +14,9 @@ upgrade:
 	sudo nix flake update
 	sudo nixos-rebuild switch --flake .#
 	git commit -m "auto: upgrade"
+boot-update:
+	alejandra -q .
+	git add .
+	sudo nixos-rebuild switch --flake .# boot
+	git commit -m "auto: boot-update"
+
