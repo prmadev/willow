@@ -245,7 +245,7 @@ with lib; {
         colors.statusbar.command.private.bg = config.colors.base.hex;
 
         # Foreground color of the statusbar in private browsing + command mode.
-        colors.statusbar.command.private.fg = config.colors.subtle;
+        colors.statusbar.command.private.fg = config.colors.subtle.hex;
 
         # Background color of the statusbar in insert mode.
         colors.statusbar.insert.bg = config.colors.foam.hex;
@@ -269,7 +269,7 @@ with lib; {
         colors.statusbar.private.bg = config.colors.surface.hex;
 
         # Foreground color of the statusbar in private browsing mode.
-        colors.statusbar.private.fg = config.colors.subtle;
+        colors.statusbar.private.fg = config.colors.subtle.hex;
 
         # Background color of the progress bar.
         colors.statusbar.progress.bg = config.colors.base.hex;
