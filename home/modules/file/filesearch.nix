@@ -18,6 +18,7 @@ with lib; {
       ripgrep
       sd
     ];
+    programs.exa.enable = true;
     programs.zoxide.enable = true;
   };
 }

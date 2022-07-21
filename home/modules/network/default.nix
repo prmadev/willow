@@ -1,38 +1,24 @@
-{pkgs, ...}: {
-  programs.aria2 = {
-    enable = true;
-    settings = {
-      max-connection-per-server = 16;
-      max-concurrent-downloads = 16;
-      continue = true;
-    };
-  };
-  programs.ssh.enable = true;
-  home.packages = with pkgs; [
-    qbittorrent-nox
-    wget2
-    yt-dlp
-    clash # for networking #TODO
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}:
+with lib; {
+  imports = [
+    ./download.nix
+    ./proxy.nix
+    ./ssh.nix
   ];
-  home.file = {
-    ".config/clash/config.yaml" = {
-      source = ./config.yaml;
+  options = {
+    network.enable = mkOption {
+      type = types.bool;
+      default = false;
     };
   };
-
-  systemd.user.services.clash = {
-    Unit = {
-      Description = "Clash daemon, A rule-based proxy in Go.";
-      After = "network.target";
-    };
-
-    Service = {
-      Type = "simple";
-      Restart = "always";
-      ExecStart = "${pkgs.clash}/bin/clash";
-    };
-    Install = {
-      WantedBy = ["paths.target"];
-    };
+  config = mkIf config.network.enable {
+    download.enable = true;
+    proxy.enable = true;
+    ssh.enable = true;
   };
 }

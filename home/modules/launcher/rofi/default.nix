@@ -25,7 +25,6 @@ with lib; {
     };
     home.packages = with pkgs; [
       rofi-rbw # for password management
-      # networkmanager_dmenu # needs dmenu to work
     ];
   };
 }

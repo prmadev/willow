@@ -24,5 +24,10 @@ with lib; {
       BW_CLIENTSECRET = "1YnJyztT6fzD0mmvioFlq3jXoJ23Np";
       BW_SESSION = "l4fWgy4H9vCjf9LN8pmqWjfVdXRFrthUyP/KhSuww/AgxwTtkgWDQCwF/vTWOIc2rT9efPizQoJsKZ/kdKYaGQ==";
     };
+
+    home.packages = with pkgs;
+      mkIf config.launcher.rofi.enable [
+        rofi-rbw # for password management
+      ];
   };
 }

@@ -12,13 +12,10 @@ with lib; {
     enable = mkOption {
       type = types.bool;
       default = false;
-      description = ''
-        If enabled, installs the launcher.
-      '';
     };
   };
-  config = {
-    launcher.rofi = mkIf config.launcher.enable {
+  config = mkIf config.launcher.enable {
+    launcher.rofi = {
       enable = true;
     };
   };

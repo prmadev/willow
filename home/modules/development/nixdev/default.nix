@@ -17,6 +17,11 @@ with lib; {
       niv
       nix-prefetch
       nix-prefetch-git
+      nix-doc
+      nix-update
+      nix-linter
+      nix-template
+      manix
     ];
 
     programs.nix-index.enable = true;

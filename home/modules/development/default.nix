@@ -11,6 +11,7 @@ with lib; {
     ./css
     ./go
     ./git
+    ./json
     ./neovim
     ./nixdev
     ./rust
@@ -28,6 +29,7 @@ with lib; {
     css.enable = true;
     git.enable = true;
     go.enable = true;
+    json.enable = true;
     neovim.enable = true;
     nixdev.enable = true;
     rust.enable = true;
