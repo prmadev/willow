@@ -32,5 +32,8 @@ with lib; {
       };
       theme = "Rosé Pine";
     };
+    home.packages = with pkgs; [
+      pipes-rs
+    ];
   };
 }
