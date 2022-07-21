@@ -173,7 +173,7 @@ with lib; {
         hints.border = config.colors.surface.hex;
 
         # Font color for the matched part of hints.
-        colors.hints.match.fg = config.colors.subtle;
+        colors.hints.match.fg = config.colors.subtle.hex;
 
         # Background color of the keyhint widget.
         colors.keyhint.bg = config.colors.base.hex;
