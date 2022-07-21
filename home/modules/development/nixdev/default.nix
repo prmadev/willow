@@ -17,7 +17,7 @@ with lib; {
       niv
       nix-prefetch
       nix-prefetch-git
-      nix-doc
+      # nix-doc
       nix-update
       nix-linter
       nix-template

@@ -17,7 +17,6 @@ with lib; {
     home.packages = with pkgs; [
       mprocs # not a monitoring tool
       procs
-      bunnyfetch
       neofetch
       xorg.xwininfo
       duf
@@ -25,8 +24,6 @@ with lib; {
       ncdu_2
       dutree
       lsof
-      nix-du
-      nix-top
     ];
   };
 }

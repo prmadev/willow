@@ -58,7 +58,6 @@
     ...
   } @ inputs: let
     system = "x86_64-linux";
-    user = "a";
     pkgs = import nixpkgs {
       inherit system;
       config.allowUnfree = true;
