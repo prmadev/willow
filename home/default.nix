@@ -3,18 +3,17 @@
     ./modules/browser
     ./modules/daily
     ./modules/development
-    ./modules/security
     ./modules/file
     ./modules/hardware
     ./modules/launcher
+    ./modules/monitor
     ./modules/network
+    ./modules/security
     ./modules/shell
+    ./modules/style
     ./modules/terminal
-    ./modules/video
     ./modules/wayland
     ./modules/wm
-    ./modules/style
-    ./modules/monitor
   ];
   browser.enable = true; # web browsing
   daily.enable = true; # daily stuff
@@ -28,5 +27,4 @@
   style.enable = true;
   terminal.enable = true;
   wm.enable = true; # window manager
-  zellij.enable = true;
 }

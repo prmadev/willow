@@ -17,16 +17,9 @@ with lib; {
       default = false;
     };
   };
-  config = {
-    mako = mkIf config.wm.enable {
-      enable = true;
-    };
-    launcher = mkIf config.wm.enable {
-      enable = true;
-    };
-
-    wm.river = mkIf config.wm.enable {
-      enable = true;
-    };
+  config = mkIf config.wm.enable {
+    mako.enable = true;
+    launcher.enable = true;
+    wm.river.enable = true;
   };
 }

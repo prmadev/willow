@@ -10,6 +10,7 @@ with lib; {
     ./compression.nix
     ./filesearch.nix
     ./lf
+    ./mpv.nix
     ./nnn.nix
     ./office.nix
     ./pdf.nix
@@ -29,6 +30,7 @@ with lib; {
     lf.enable = true;
     nnn.enable = true;
     office.enable = true;
+    mpv.enable = true;
     pdf.enable = true;
     rename.enable = true;
     xdgconf.enable = true;
