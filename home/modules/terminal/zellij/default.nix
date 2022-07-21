@@ -21,8 +21,17 @@ with lib; {
         scrollback_editor = "${pkgs.neovim}/bin/nvim";
         themes = {
           default = {
-            fg = [235 188 186];
-            bg = [25 23 36];
+            fg = config.colors.text.rgb;
+            bg = config.colors.base.rgb;
+            black = config.colors.surface.rgb;
+            red = config.colors.love.rgb;
+            green = config.colors.pine.rgb;
+            yellow = config.colors.gold.rgb;
+            blue = config.colors.foam.rgb;
+            magenta = config.colors.iris.rgb;
+            cyan = config.colors.rose.rgb;
+            white = config.colors.subtle.rgb;
+            orange = config.colors.gold.rgb;
           };
         };
       };

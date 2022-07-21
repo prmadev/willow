@@ -14,8 +14,8 @@ with lib; {
   config = mkIf config.pdf.enable {
     programs.zathura.enable = true;
     programs.zathura.options = {
-      default-bg = config.colors.base;
-      default-fg = config.colors.text;
+      default-bg = config.colors.base.hex;
+      default-fg = config.colors.text.hex;
     };
   };
 }
