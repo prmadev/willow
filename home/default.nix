@@ -14,7 +14,6 @@
     ./modules/terminal
     ./modules/wayland
     ./modules/wm
-    ./packages
   ];
   browser.enable = true; # web browsing
   daily.enable = true; # daily stuff
