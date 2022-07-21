@@ -34,15 +34,15 @@ with lib; {
       '';
     };
 
-    programs.fzf.enableFishIntegration =  true;
+    programs.fzf.enableFishIntegration = true;
     programs.nix-index.enableFishIntegration = true;
-    programs.starship.enableFishIntegration =  true;
-    programs.zoxide.enableFishIntegration =  true;
+    programs.starship.enableFishIntegration = true;
+    programs.zoxide.enableFishIntegration = true;
     services.gpg-agent.enableFishIntegration = true;
     home.sessionVariables = {
       fish_greeting = "";
-      fish_tmux_config =  "$HOME/.config/tmux/tmux.conf";
-      fish_tmux_autoconnect =  "false";
+      fish_tmux_config = "$HOME/.config/tmux/tmux.conf";
+      fish_tmux_autoconnect = "false";
     };
   };
 }

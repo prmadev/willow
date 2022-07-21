@@ -26,6 +26,7 @@
   security.enable = true; # secerts
   shell.enable = true;
   style.enable = true;
+  terminal.enable = true;
   wm.enable = true; # window manager
   zellij.enable = true;
 }
