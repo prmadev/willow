@@ -89,7 +89,7 @@ with lib;
               bg = config.colors.gold.hex;
               modifiers = [ "reversed" ];
             };
-            "string" ={fg= config.colors.subtle.hex; modifiers = ["italic"]; };
+            "string" ={fg= config.colors.rose.hex; modifiers = ["italic"]; };
             "property" = config.colors.foam.hex;
             "constant.character.escape" = config.colors.subtle.hex;
             "function" = config.colors.rose.hex;
