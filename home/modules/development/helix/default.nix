@@ -75,7 +75,7 @@ with lib;
               modifiers = [ "bold" ];
             };
             "ui.text.info" = {
-              fg = config.colors.pine.hex;
+              fg = config.colors.text.hex;
               modifiers = [ "bold" ];
             };
             "ui.virtual.whitespace" = config.colors.highlight-med.hex;
