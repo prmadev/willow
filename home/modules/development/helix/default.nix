@@ -36,7 +36,7 @@ with lib;
             };
             "ui.menu.selected" = {
               fg = config.colors.text.hex;
-              bg = config.colors.highlight-med.hex;
+              bg = config.colors.pine.hex;
             };
             "ui.linenr" = { fg = config.colors.subtle.hex; };
             "ui.liner.selected" = config.colors.highlight-low.hex;
