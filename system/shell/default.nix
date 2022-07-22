@@ -33,8 +33,8 @@
   # services.dbus.packages = [pkgs.gcr];
 
   environment.variables = {
-    EDITOR = "nvim";
-    VISUAL = "nvim";
+    EDITOR = "hx";
+    VISUAL = "hx";
   };
 
   programs.git.enable = true;
