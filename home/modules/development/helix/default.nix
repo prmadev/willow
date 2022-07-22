@@ -31,8 +31,10 @@ with lib; {
             normal = "block";
             select = "block";
           };
+
           whitespace = {
-            tab = "->";
+            render.tab = true;
+            characters.tab = "->";
           };
         };
       };
