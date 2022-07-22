@@ -34,7 +34,7 @@ with lib; {
 
           whitespace = {
             render.tab = true;
-            characters.tab = "->";
+            characters.tab = ">";
           };
         };
       };
