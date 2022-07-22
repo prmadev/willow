@@ -32,11 +32,11 @@ with lib;
             "ui.background" = { bg = config.colors.base.hex; };
             "ui.menu" = {
               fg = config.colors.text.hex;
-              bg = config.colors.overlay.hex;
+              bg = config.colors.surface.hex;
             };
             "ui.menu.selected" = {
-              fg = config.colors.iris.hex;
-              bg = config.colors.surface.hex;
+              fg = config.colors.text.hex;
+              bg = config.colors.highlight-med.hex;
             };
             "ui.linenr" = { fg = config.colors.subtle.hex; };
             "ui.liner.selected" = config.colors.highlight-low.hex;
