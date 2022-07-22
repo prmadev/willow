@@ -43,8 +43,8 @@ with lib;
             "ui.selection" = { bg = config.colors.highlight-med.hex; };
             "comment" = { fg = config.colors.subtle.hex; modifiers = [ "italic" ]; };
             "ui.statusline" = {
-              fg = config.colors.foam.hex;
-              bg = config.colors.surface.hex;
+              fg = config.colors.text.hex;
+              bg = config.colors.pine.hex;
             };
             "ui.statusline.insert" = {
               fg = config.colors.base.hex;
