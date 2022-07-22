@@ -41,7 +41,7 @@ with lib;
             "ui.linenr" = { fg = config.colors.subtle.hex; };
             "ui.liner.selected" = config.colors.highlight-low.hex;
             "ui.selection" = { bg = config.colors.highlight-med.hex; };
-            "comment" = {fg = config.colors.subtle.hex; modifiers = ["italic"];};
+            "comment" = { fg = config.colors.subtle.hex; modifiers = [ "italic" ]; };
             "ui.statusline" = {
               fg = config.colors.foam.hex;
               bg = config.colors.surface.hex;
@@ -97,7 +97,7 @@ with lib;
             "function.method" = config.colors.foam.hex;
             "constructor" = config.colors.gold.hex;
             "special" = config.colors.gold.hex;
-            "keyword" = {fg = config.colors.pine.hex;modifiers = ["italic" "bold"];};
+            "keyword" = { fg = config.colors.pine.hex; modifiers = [ "italic" ]; };
             "label" = config.colors.iris.hex;
             "namespace" = config.colors.pine.hex;
             "ui.popup" = { bg = config.colors.surface.hex; };
