@@ -97,7 +97,7 @@ with lib;
             "function.method" = config.colors.foam.hex;
             "constructor" = config.colors.gold.hex;
             "special" = config.colors.gold.hex;
-            "keyword" = { fg = config.colors.pine.hex; modifiers = [ "italic" ]; };
+            "keyword" = { fg = config.colors.pine.hex; bg = config.colors.surface.hex; modifiers = [ "italic" ]; };
             "label" = config.colors.iris.hex;
             "namespace" = config.colors.pine.hex;
             "ui.popup" = { bg = config.colors.surface.hex; };
