@@ -66,7 +66,7 @@ with lib;
               bg = config.colors.surface.hex;
             };
             "ui.cursor" = {
-              fg = config.colors.rose.hex;
+              fg = config.colors.love.hex;
               modifiers = [ "reversed" ];
             };
             "ui.text" = { fg = config.colors.text.hex; };
