@@ -78,7 +78,7 @@ with lib;
               fg = config.colors.subtle.hex;
               modifiers = [ "bold" ];
             };
-            "ui.virtual.whitespace" = config.colors.highlight-med.hex;
+            "ui.virtual.whitespace" = config.colors.love.hex;
             "operator" = config.colors.rose.hex;
             "variable" = config.colors.text.hex;
             "constant.numeric" = config.colors.iris.hex;
