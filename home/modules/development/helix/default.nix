@@ -54,7 +54,7 @@ with lib;
             "ui.statusline.normal" = {
               fg = config.colors.base.hex;
               bg = config.colors.rose.hex;
-              modifiers = [ ];
+              modifiers = [  ];
             };
             "ui.statusline.select" = {
               fg = config.colors.base.hex;
@@ -89,7 +89,7 @@ with lib;
               bg = config.colors.gold.hex;
               modifiers = [ "reversed" ];
             };
-            "string" = { fg = config.colors.iris.hex; modifiers = [ "italic" ]; };
+            "string" ={fg= config.colors.subtle.hex; modifiers = ["italic"]; };
             "property" = config.colors.foam.hex;
             "constant.character.escape" = config.colors.subtle.hex;
             "function" = config.colors.rose.hex;
@@ -100,7 +100,7 @@ with lib;
             "keyword" = { bg = config.colors.pine.hex; fg = config.colors.surface.hex; modifiers = [ "italic" ]; };
             "label" = config.colors.iris.hex;
             "namespace" = config.colors.pine.hex;
-            "ui.popup" = { fg = config.colors.surface.hex; };
+            "ui.popup" = { bg = config.colors.surface.hex; };
             "ui.popup.info" = { bg = config.colors.surface.hex; };
             "ui.window" = { bg = config.colors.base.hex; };
             "ui.help" = {
