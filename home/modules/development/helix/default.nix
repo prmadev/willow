@@ -33,7 +33,7 @@ with lib; {
           };
 
           whitespace = {
-            render.tab = true;
+            render.tab = "all";
             characters.tab = ">";
           };
         };
