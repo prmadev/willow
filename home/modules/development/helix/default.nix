@@ -86,7 +86,7 @@ with lib;
             "attributes" = config.colors.gold.hex;
             "type" = config.colors.foam.hex;
             "ui.cursor.match" = {
-              fg = config.colors.gold.hex;
+              bg = config.colors.gold.hex;
               modifiers = [ "underlined" ];
             };
             "string" = config.colors.gold.hex;
@@ -97,7 +97,7 @@ with lib;
             "function.method" = config.colors.foam.hex;
             "constructor" = config.colors.gold.hex;
             "special" = config.colors.gold.hex;
-            "keyword" = config.colors.pine.hex;
+            "keyword" = {fg = config.colors.pine.hex;modifiers = ["italic" "bold"];};
             "label" = config.colors.iris.hex;
             "namespace" = config.colors.pine.hex;
             "ui.popup" = { bg = config.colors.surface.hex; };
