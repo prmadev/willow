@@ -31,7 +31,7 @@ with lib;
           {
             "ui.background" = { bg = config.colors.base.hex; };
             "ui.menu" = {
-              fg = config.colors.subtle.hex;
+              fg = config.colors.text.hex;
               bg = config.colors.surface.hex;
             };
             "ui.menu.selected" = {
@@ -69,13 +69,13 @@ with lib;
               fg = config.colors.love.hex;
               modifiers = [ "reversed" ];
             };
-            "ui.text" = { fg = config.colors.subtle.hex; };
+            "ui.text" = { fg = config.colors.text.hex; };
             "ui.text.focus" = {
               fg = config.colors.foam.hex;
               modifiers = [ "bold" ];
             };
             "ui.text.info" = {
-              fg = config.colors.subtle.hex;
+              fg = config.colors.text.hex;
               modifiers = [ "bold" ];
             };
             "ui.virtual.whitespace" = config.colors.highlight-med.hex;
@@ -107,7 +107,7 @@ with lib;
               bg = config.colors.surface.hex;
               fg = config.colors.foam.hex;
             };
-            "text" = config.colors.love.hex;
+            "text" = config.colors.text.hex;
             "diff.plus" = config.colors.foam.hex;
             "diff.delta" = config.colors.rose.hex;
             "diff.minus" = config.colors.love.hex;
