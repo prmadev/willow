@@ -24,6 +24,11 @@ with lib; {
           file-types = [ "html" "tmpl" ];
         }
       ];
+      themes = {
+        rose_pine = {
+          "comment" = { modifiers = [ "italic" ]; };
+        };
+      };
 
       settings = {
         theme = "rose_pine";
