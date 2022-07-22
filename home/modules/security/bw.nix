@@ -21,8 +21,8 @@ with lib; {
     };
 
     home.sessionVariables = {
-      BW_CLIENTSECRET = "1YnJyztT6fzD0mmvioFlq3jXoJ23Np";
-      BW_SESSION = "l4fWgy4H9vCjf9LN8pmqWjfVdXRFrthUyP/KhSuww/AgxwTtkgWDQCwF/vTWOIc2rT9efPizQoJsKZ/kdKYaGQ==";
+      BW_CLIENTID = /run/ragenix/bwid;
+      BW_CLIENTSECRET = /run/ragenix/bwsec;
     };
 
     home.packages = with pkgs;
