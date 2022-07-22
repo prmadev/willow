@@ -1,8 +1,7 @@
-{
-  pkgs,
-  lib,
-  config,
-  ...
+{ pkgs
+, lib
+, config
+, ...
 }:
 with lib; {
   options = {
@@ -20,6 +19,10 @@ with lib; {
           name = "nix";
           auto-format = false;
         }
+        {
+          name = "html";
+          file-types = [ "html" "tmpl" ];
+        }
       ];
 
       settings = {
@@ -35,5 +38,11 @@ with lib; {
         };
       };
     };
+    home.packages = with pkgs;[
+      nodePackages.bash-language-server
+      nodePackages.dockerfile-language-server-nodejs
+      nodePackages.vscode-langservers-extracted
+      taplo-lsp
+    ];
   };
 }

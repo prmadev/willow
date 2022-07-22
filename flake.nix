@@ -82,16 +82,16 @@
           modules = [
             nur.nixosModules.nur
             ragenix.nixosModules.age
-              {
-                age.identityPaths = ["/home/a/keys/id_ed25519"];
-                age.secrets.bwid = {
-                  file = ./secrets/bwid.age;
-                };
-                
-                age.secrets.bwsec = {
-                  file = ./secrets/bwsec.age;
-                };
-              }
+            {
+              age.identityPaths = ["/home/a/keys/id_ed25519"];
+              age.secrets.bwid = {
+                file = ./secrets/bwid.age;
+              };
+
+              age.secrets.bwsec = {
+                file = ./secrets/bwsec.age;
+              };
+            }
             ./system
             home-manager.nixosModules.home-manager
             {
