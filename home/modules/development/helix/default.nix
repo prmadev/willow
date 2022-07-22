@@ -1,7 +1,8 @@
-{ pkgs
-, lib
-, config
-, ...
+{
+  pkgs,
+  lib,
+  config,
+  ...
 }:
 with lib; {
   options = {
@@ -21,12 +22,12 @@ with lib; {
         }
         {
           name = "html";
-          file-types = [ "html" "tmpl" ];
+          file-types = ["html" "tmpl"];
         }
       ];
       themes = {
         rose_pine = {
-          "comment" = { modifiers = [ "italic" ]; };
+          "comment" = {modifiers = ["italic"];};
         };
       };
 
@@ -43,7 +44,7 @@ with lib; {
         };
       };
     };
-    home.packages = with pkgs;[
+    home.packages = with pkgs; [
       nodePackages.bash-language-server
       nodePackages.dockerfile-language-server-nodejs
       nodePackages.vscode-langservers-extracted
