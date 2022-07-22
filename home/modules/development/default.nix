@@ -13,7 +13,7 @@ with lib; {
     ./git
     ./json
     ./neovim
-	./helix
+    ./helix
     ./nixdev
     ./rust
     ./zig
