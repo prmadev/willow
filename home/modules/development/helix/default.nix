@@ -54,7 +54,7 @@ with lib;
             "ui.statusline.normal" = {
               fg = config.colors.base.hex;
               bg = config.colors.rose.hex;
-              modifiers = [ "bold" ];
+              modifiers = [  ];
             };
             "ui.statusline.select" = {
               fg = config.colors.base.hex;
