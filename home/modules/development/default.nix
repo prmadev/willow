@@ -13,6 +13,7 @@ with lib; {
     ./git
     ./json
     ./neovim
+	./helix
     ./nixdev
     ./rust
     ./zig
@@ -31,6 +32,7 @@ with lib; {
     go.enable = true;
     json.enable = true;
     neovim.enable = true;
+    helix.enable = true;
     nixdev.enable = true;
     rust.enable = true;
     zig.enable = true;
