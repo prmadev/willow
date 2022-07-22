@@ -69,13 +69,13 @@ with lib;
               fg = config.colors.love.hex;
               modifiers = [ "reversed" ];
             };
-            "ui.text" = { fg = config.colors.text.hex; };
+            "ui.text" = { fg = config.colors.subtle.hex; };
             "ui.text.focus" = {
               fg = config.colors.foam.hex;
               modifiers = [ "bold" ];
             };
             "ui.text.info" = {
-              fg = config.colors.text.hex;
+              fg = config.colors.subtle.hex;
               modifiers = [ "bold" ];
             };
             "ui.virtual.whitespace" = config.colors.highlight-med.hex;
