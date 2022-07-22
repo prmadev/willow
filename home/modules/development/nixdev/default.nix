@@ -23,6 +23,7 @@ with lib; {
       pkgs.nix-linter
       pkgs.nix-template
       pkgs.manix
+      pkgs.rnix-lsp
     ];
 
     programs.nix-index.enable = true;
