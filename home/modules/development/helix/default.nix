@@ -107,7 +107,7 @@ with lib;
               bg = config.colors.surface.hex;
               fg = config.colors.foam.hex;
             };
-            "text" = config.colors.text.hex;
+            "text" = config.colors.love.hex;
             "diff.plus" = config.colors.foam.hex;
             "diff.delta" = config.colors.rose.hex;
             "diff.minus" = config.colors.love.hex;
