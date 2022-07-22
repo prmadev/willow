@@ -15,6 +15,7 @@ with lib; {
   config = mkIf config.ragenix.enable {
     home.packages = [
       inputs.ragenix.defaultPackage.x86_64-linux
+      pkgs.age
     ];
   };
 }
