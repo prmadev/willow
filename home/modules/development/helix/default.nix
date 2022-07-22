@@ -14,12 +14,14 @@ with lib; {
   config = mkIf config.helix.enable {
     programs.helix = {
       enable = true;
+
       languages = [
         {
           name = "nix";
           auto-format = true;
         }
       ];
+
       settings = {
         theme = "rose_pine";
         editor = {
@@ -29,13 +31,10 @@ with lib; {
             normal = "block";
             select = "underline";
           };
+        };
+        keys = {
+          normal = {
           };
-          lsp = {
-            display-messages = true;
-          };
-          keys = {
-            normal = {
-            };
         };
       };
     };
