@@ -5,7 +5,7 @@
   ...
 }:
 with lib; {
-  imports = [./bw.nix ./gpg.nix];
+  imports = [./bw.nix ./gpg.nix ./agenix.nix];
   options = {
     security.enable = mkOption {
       type = types.bool;
@@ -15,5 +15,6 @@ with lib; {
   config = mkIf config.security.enable {
     bw.enable = true;
     gpg.enable = true;
+    agenix.enable = true;
   };
 }

@@ -1,5 +1,5 @@
 {
-  description = "my nix configuration ";
+  description = "my nix configuration";
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     home-manager = {
@@ -7,6 +7,12 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nur.url = "github:nix-community/NUR";
+
+    agenix = {
+      url = "github:ryantm/agenix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     nnn-plugins = {
       url = "github:jarun/nnn";
       flake = false;
@@ -75,6 +81,7 @@
           inherit system;
           modules = [
             nur.nixosModules.nur
+            agenix.nixosModule
             ./system
             home-manager.nixosModules.home-manager
             {

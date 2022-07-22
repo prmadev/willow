@@ -1,7 +1,8 @@
-{ pkgs
-, lib
-, config
-, ...
+{
+  pkgs,
+  lib,
+  config,
+  ...
 }:
 with lib; {
   options = {
@@ -30,11 +31,6 @@ with lib; {
             insert = "bar";
             normal = "block";
             select = "block";
-          };
-
-          whitespace = {
-            render.tab = "all";
-            characters.tab = ">";
           };
         };
       };
