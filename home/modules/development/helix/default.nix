@@ -29,13 +29,13 @@ with lib; {
             normal = "block";
             select = "underline";
           };
+          };
           lsp = {
             display-messages = true;
           };
           keys = {
             normal = {
             };
-          };
         };
       };
     };
