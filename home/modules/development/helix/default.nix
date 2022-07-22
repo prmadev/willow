@@ -29,14 +29,14 @@ with lib; {
             normal = "block";
             select = "underline";
           };
+          lsp = {
+            display-messages = true;
+          };
+          keys = {
+            normal = {
+            };
+          };
         };
-      lsp = {
-        display-messages = true;
-      };
-      keys = {
-        normal = {
-        };
-      };
       };
     };
   };
