@@ -31,7 +31,7 @@ with lib;
           {
             "ui.background" = { bg = config.colors.base.hex; };
             "ui.menu" = {
-              fg = config.colors.text.hex;
+              fg = config.colors.subtle.hex;
               bg = config.colors.surface.hex;
             };
             "ui.menu.selected" = {
