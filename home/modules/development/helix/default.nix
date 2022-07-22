@@ -1,8 +1,7 @@
-{
-  pkgs,
-  lib,
-  config,
-  ...
+{ pkgs
+, lib
+, config
+, ...
 }:
 with lib; {
   options = {
@@ -18,22 +17,22 @@ with lib; {
       languages = [
         {
           name = "nix";
-          auto-format = true;
+          auto-format = false;
         }
       ];
 
       settings = {
         theme = "rose_pine";
         editor = {
+          auto-format = false;
           line-number = "relative";
           cursor-shape = {
             insert = "bar";
             normal = "block";
-            select = "underline";
+            select = "block";
           };
-        };
-        keys = {
-          normal = {
+          whitespace = {
+            tab = "->";
           };
         };
       };
