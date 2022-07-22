@@ -15,6 +15,6 @@ with lib; {
   config = mkIf config.security.enable {
     bw.enable = true;
     gpg.enable = true;
-    agenix.enable = true;
+    ragenix.enable = true;
   };
 }

@@ -3,6 +3,7 @@
     "agenix": {
       "inputs": {
         "nixpkgs": [
+          "ragenix",
           "nixpkgs"
         ]
       },
@@ -81,6 +82,21 @@
       "original": {
         "owner": "franciscolourenco",
         "repo": "done",
+        "type": "github"
+      }
+    },
+    "flake-utils": {
+      "locked": {
+        "lastModified": 1653893745,
+        "narHash": "sha256-0jntwV3Z8//YwuOjzhV2sgJJPt+HY6KhU7VZUL0fKZQ=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "1ed9fb1935d260de5fe1c2f7ee0ebaae17ed2fa1",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
         "type": "github"
       }
     },
@@ -221,9 +237,31 @@
         "type": "github"
       }
     },
-    "root": {
+    "ragenix": {
       "inputs": {
         "agenix": "agenix",
+        "flake-utils": "flake-utils",
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "rust-overlay": "rust-overlay"
+      },
+      "locked": {
+        "lastModified": 1654412551,
+        "narHash": "sha256-hoIZKaMy2NWQJwrGQEiCuDp8yyGHH9LhW9FX78RsqQ8=",
+        "owner": "yaxitech",
+        "repo": "ragenix",
+        "rev": "e2bcfcf52480825ef90e7d23693f5e65388399f0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "yaxitech",
+        "repo": "ragenix",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
         "ansible-zsh": "ansible-zsh",
         "cd-ls": "cd-ls",
         "colorize": "colorize",
@@ -236,8 +274,34 @@
         "nixpkgs": "nixpkgs",
         "nnn-plugins": "nnn-plugins",
         "nur": "nur",
+        "ragenix": "ragenix",
         "sponge-fish": "sponge-fish",
         "tmux-fish": "tmux-fish"
+      }
+    },
+    "rust-overlay": {
+      "inputs": {
+        "flake-utils": [
+          "ragenix",
+          "flake-utils"
+        ],
+        "nixpkgs": [
+          "ragenix",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1654310165,
+        "narHash": "sha256-5TWkZMKnrLQVGsWrcDabJX7E502qoi0+vP1RReJp0/Y=",
+        "owner": "oxalica",
+        "repo": "rust-overlay",
+        "rev": "e64770eac18a1983232a5bc55fa443d9f15cc489",
+        "type": "github"
+      },
+      "original": {
+        "owner": "oxalica",
+        "repo": "rust-overlay",
+        "type": "github"
       }
     },
     "sponge-fish": {

@@ -1,19 +1,20 @@
-{ pkgs
-, lib
-, config
-, inputs
-, ...
+{
+  pkgs,
+  lib,
+  config,
+  inputs,
+  ...
 }:
 with lib; {
   options = {
-    agenix.enable = mkOption {
+    ragenix.enable = mkOption {
       type = types.bool;
       default = false;
     };
   };
-  config =mkIf config.agenix.enable {
+  config = mkIf config.ragenix.enable {
     home.packages = [
-      inputs.agenix.defaultPackage.x86_64-linux
+      inputs.ragenix.defaultPackage.x86_64-linux
     ];
   };
 }

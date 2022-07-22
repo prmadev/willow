@@ -8,8 +8,8 @@
     };
     nur.url = "github:nix-community/NUR";
 
-    agenix = {
-      url = "github:ryantm/agenix";
+    ragenix = {
+      url = "github:yaxitech/ragenix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -81,7 +81,7 @@
           inherit system;
           modules = [
             nur.nixosModules.nur
-            agenix.nixosModule
+            ragenix.nixosModules.age
             ./system
             home-manager.nixosModules.home-manager
             {
