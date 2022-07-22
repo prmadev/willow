@@ -104,10 +104,10 @@ with lib;
             "ui.popup.info" = { bg = config.colors.surface.hex; };
             "ui.window" = { bg = config.colors.base.hex; };
             "ui.help" = {
-              bg = config.colors.overlay.hex;
+              bg = config.colors.surface.hex;
               fg = config.colors.foam.hex;
             };
-            config.colors.text = config.colors.text.hex;
+            "text" = config.colors.text.hex;
             "diff.plus" = config.colors.foam.hex;
             "diff.delta" = config.colors.rose.hex;
             "diff.minus" = config.colors.love.hex;
