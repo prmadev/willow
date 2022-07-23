@@ -31,7 +31,7 @@ with lib;
           {
             "ui.background" = { bg = config.colors.base.hex; };
             "ui.menu" = {
-              fg = config.colors.text.hex;
+              fg = config.colors.subtle.hex;
               bg = config.colors.surface.hex;
             };
             "ui.menu.selected" = {
@@ -79,7 +79,7 @@ with lib;
               modifiers = [ "bold" ];
             };
             "ui.virtual.whitespace" = config.colors.love.hex;
-            "operator" = config.colors.rose.hex;
+            "operator" = config.colors.gold.hex;
             "variable" = config.colors.text.hex;
             "constant.numeric" = config.colors.iris.hex;
             "constant" = config.colors.gold.hex;
@@ -89,12 +89,12 @@ with lib;
               bg = config.colors.gold.hex;
               modifiers = [ "reversed" ];
             };
-            "string" ={fg= config.colors.rose.hex; modifiers = ["italic"]; };
+            "string" ={fg= config.colors.foam.hex; modifiers = ["italic"]; };
             "property" = config.colors.foam.hex;
             "constant.character.escape" = config.colors.subtle.hex;
             "function" = config.colors.rose.hex;
             "function.builtin" = config.colors.rose.hex;
-            "function.method" = config.colors.foam.hex;
+            "function.method" = config.colors.rose.hex;
             "constructor" = config.colors.gold.hex;
             "special" = config.colors.gold.hex;
             "keyword" = { fg = config.colors.love.hex;  modifiers = [ "italic" ]; };
