@@ -114,7 +114,7 @@ with lib; {
           "constructor" = config.colors.gold.hex;
           "special" = config.colors.gold.hex;
 
-          "keyword.function" = {
+          "keyword.func" = {
             fg = config.colors.love.hex;
             modifiers = [ "italic" ];
           };
