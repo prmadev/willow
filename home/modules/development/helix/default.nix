@@ -54,8 +54,8 @@ with lib; {
             fg = config.colors.text.hex;
             bg = config.colors.pine.hex;
           };
-          "ui.linenr" = { fg = config.colors.overlay.hex; };
-          "ui.liner.selected" = config.colors.highlight-low.hex;
+          "ui.linenr" = { fg = config.colors.muted.hex; };
+          "ui.liner.selected" = {bg = config.colors.rose.hex;};
           "ui.selection" = { bg = config.colors.highlight-med.hex; };
           "ui.statusline" = {
             fg = config.colors.text.hex;
