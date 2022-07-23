@@ -19,7 +19,7 @@ with lib; {
     programs.rofi = {
       #TODO
       enable = true;
-      font = "DankMono Nerd Font Mono 10";
+      font = config.global-fonts.main-family + " 10";
       theme = ./rofi-pine.rasi;
       package = pkgs.rofi-wayland;
     };
