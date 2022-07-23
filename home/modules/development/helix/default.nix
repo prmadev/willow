@@ -64,9 +64,15 @@ with lib; {
             bg = config.colors.surface.hex;
           };
           "ui.cursor" = {
+            fg = config.colors.rose.hex;
+            modifiers = [ "reversed" ];
+          };
+
+          "ui.cursor.primary" = {
             fg = config.colors.love.hex;
             modifiers = [ "reversed" ];
           };
+
           "ui.text" = { fg = config.colors.subtle.hex; };
           "ui.text.focus" = {
             fg = config.colors.foam.hex;
