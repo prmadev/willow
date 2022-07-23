@@ -24,10 +24,10 @@ with lib; {
         allow_remote_control = true;
         shell = "${pkgs.fish}/bin/fish";
         confirm_os_window_close = 0;
-        font_family = "monospace";
-        bold_font = "Gintronic Black";
-        italic_font = "Gintronic Italic";
-        bold_italic_font = "Gintronic Bold Italic ";
+        font_family = config.global-fonts.main-family;
+        bold_font = config.global-fonts.main-black;
+        italic_font = config.global-fonts.main-black;
+        bold_italic_font = config.global-fonts.main-black-italic;
         font_size = 11;
       };
       theme = "Rosé Pine";
