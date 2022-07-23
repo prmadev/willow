@@ -12,7 +12,7 @@ with lib; {
     };
     font.main = mkOption {
       type = types.str;
-      default = "DankMono Nerd Font Mono";
+      default = "Gintronic Nerd Font";
     };
   };
 

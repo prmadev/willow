@@ -80,6 +80,7 @@
         nixer = lib.nixosSystem {
           inherit system;
           modules = [
+            (import ./style)
             nur.nixosModules.nur
             ragenix.nixosModules.age
             {

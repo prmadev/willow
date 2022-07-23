@@ -13,9 +13,9 @@
     enableDefaultFonts = true; # just to see if it helps with faulty characters.
     fontconfig = {
       defaultFonts = {
-        serif = ["DankMono Nerd Font Mono" "Gintronic" "recursive" "vazir"];
-        sansSerif = ["DankMono Nerd Font Mono" "Gintronic" "recursive" "vazir"];
-        monospace = ["Gintronic" "DankMono Nerd Font Mono" "recursive" "vazir"];
+        serif = config.global-fonts.main-set;
+        sansSerif = config.global-fonts.main-set;
+        monospace = config.global-fonts.main-set;
       };
     };
   };
