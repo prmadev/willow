@@ -165,7 +165,7 @@ with lib; {
           };
           "debug" = config.colors.rose.hex;
 
-          "diagnostic" = config.colors.rose.hex;
+          "diagnostic" = {fg = config.colors.rose.hex; modifiers = ["underline"];};
 
           "markup.heading.marker" = config.colors.subtle.hex;
           "markup.heading.1" = {
