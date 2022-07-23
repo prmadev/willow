@@ -41,7 +41,7 @@ with lib;
             "ui.linenr" = { fg = config.colors.overlay.hex; };
             "ui.liner.selected" = config.colors.highlight-low.hex;
             "ui.selection" = { bg = config.colors.highlight-med.hex; };
-            "comment" = { fg = config.colors.subtle.hex; modifiers = [ "italic" ]; };
+            "comment" = { fg = config.colors.muted.hex; modifiers = [ "italic" ]; };
             "ui.statusline" = {
               fg = config.colors.text.hex;
               bg = config.colors.surface.hex;
