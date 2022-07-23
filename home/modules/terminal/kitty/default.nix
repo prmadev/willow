@@ -28,7 +28,7 @@ with lib; {
         bold_font = "Gintronic Black";
         italic_font = "Gintronic Italic";
         bold_italic_font = "Gintronic Bold Italic ";
-        font_size = 12;
+        font_size = 11;
       };
       theme = "Rosé Pine";
     };
