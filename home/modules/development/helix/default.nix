@@ -59,10 +59,10 @@ with lib; {
             bg = config.colors.pine.hex;
           };
           "ui.linenr" = {fg = config.colors.muted.hex;};
-          "ui.linenr.selected" = {bg = config.colors.rose.hex;};
+          "ui.linenr.selected" = {bg = config.colors.highlight-high.hex;};
           "ui.selection" = {bg = config.colors.highlight-med.hex;};
           "ui.statusline" = {
-            fg = config.colors.text.hex;
+            fg = config.colors.subtle.hex;
             bg = config.colors.surface.hex;
           };
           "ui.statusline.insert" = {
@@ -84,13 +84,13 @@ with lib; {
             fg = config.colors.iris.hex;
             bg = config.colors.surface.hex;
           };
-          "ui.text" = {fg = config.colors.subtle.hex;};
+          "ui.text" = {fg = config.colors.text.hex;};
           "ui.text.focus" = {
-            fg = config.colors.foam.hex;
+            fg = config.colors.text.hex;
             modifiers = [];
           };
           "ui.text.info" = {
-            fg = config.colors.subtle.hex;
+            fg = config.colors.text.hex;
             modifiers = [];
           };
 
@@ -104,7 +104,7 @@ with lib; {
           };
           "ui.help" = {
             bg = config.colors.surface.hex;
-            fg = config.colors.foam.hex;
+            fg = config.colors.subtle.hex;
           };
 
           ##### tree-sitter
