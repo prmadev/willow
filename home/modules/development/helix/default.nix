@@ -32,7 +32,7 @@ with lib; {
           "ui.menu" = {
             fg = config.colors.subtle.hex;
             bg = config.colors.surface.hex;
-            modifiers = ["dim"];
+            modifiers = [];
           };
           "ui.menu.selected" = {
             fg = config.colors.text.hex;
@@ -43,7 +43,7 @@ with lib; {
           "ui.selection" = {bg = config.colors.highlight-med.hex;};
           "comment" = {
             fg = config.colors.muted.hex;
-            modifiers = ["italic"];
+            modifiers = ["italic" "dim"];
           };
           "ui.statusline" = {
             fg = config.colors.text.hex;
