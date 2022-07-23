@@ -113,14 +113,13 @@ with lib; {
           "function.method" = config.colors.rose.hex;
           "constructor" = config.colors.gold.hex;
           "special" = config.colors.gold.hex;
-
-          "keyword.control" = {
-            fg = config.colors.gold.hex;
-            modifiers = [ ];
-          };
           "keyword" = {
             fg = config.colors.love.hex;
             modifiers = [ "bold" "italic"];
+          };
+          "keyword.control" = {
+            fg = config.colors.gold.hex;
+            modifiers = [ ];
           };
           "label" = config.colors.iris.hex;
 
