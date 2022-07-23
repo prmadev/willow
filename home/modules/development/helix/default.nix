@@ -4,7 +4,7 @@
 , ...
 }:
 with lib; {
-  imports = [./rosepine.nix];
+  imports = [ ./rosepine.nix ];
   options = {
     helix.enable = mkOption {
       type = types.bool;
@@ -23,10 +23,12 @@ with lib; {
         {
           name = "html";
           file-types = [ "html" "tmpl" ];
+
         }
       ];
 
-      
+
+
       settings = {
         theme = "rp";
         editor = {

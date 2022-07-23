@@ -17,6 +17,7 @@ with lib; {
     home.packages = with pkgs; [
       # fractal
       tdesktop
+      weechat
     ];
   };
 }
