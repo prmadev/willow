@@ -22,6 +22,8 @@ with lib; {
     programs.gh.enable = true;
     programs.gh.enableGitCredentialHelper = true;
     home.packages = with pkgs; [
+      convco
+      cocogitto
       onefetch
     ];
   };
