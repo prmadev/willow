@@ -27,6 +27,7 @@ with lib; {
 
       themes = {
         rp = {
+          ###### UI
           "ui.background" = { bg = config.colors.base.hex; };
           "ui.background.separator" = { fg = config.colors.base.hex; modifiers = [ "hidden" ]; };
           "ui.cursor" = {
@@ -39,8 +40,8 @@ with lib; {
             modifiers = [ "reversed" ];
           };
 
-          "ui.cursor.insert" = {
-            fg = config.colors.rose.hex;
+          "ui.cursor.match" = {
+            fg = config.colors.iris.hex;
             modifiers = [ "reversed" ];
           };
 
@@ -79,8 +80,6 @@ with lib; {
             fg = config.colors.iris.hex;
             bg = config.colors.surface.hex;
           };
-
-
           "ui.text" = { fg = config.colors.subtle.hex; };
           "ui.text.focus" = {
             fg = config.colors.foam.hex;
@@ -90,11 +89,7 @@ with lib; {
             fg = config.colors.subtle.hex;
             modifiers = [ ];
           };
-
-          "ui.cursor.match" = {
-            bg = config.colors.gold.hex;
-            modifiers = [ "reversed" ];
-          };
+       
           "ui.virtual.whitespace" = config.colors.love.hex;
           "ui.popup" = { bg = config.colors.surface.hex; };
           "ui.popup.info" = { bg = config.colors.surface.hex; };
@@ -107,6 +102,8 @@ with lib; {
             bg = config.colors.surface.hex;
             fg = config.colors.foam.hex;
           };
+
+          ##### tree-sitter
 
           "comment" = {
             fg = config.colors.muted.hex;
