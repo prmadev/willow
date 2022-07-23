@@ -90,7 +90,7 @@ with lib; {
           "ui.virtual.whitespace" = config.colors.love.hex;
           "ui.popup" = { bg = config.colors.surface.hex; };
           "ui.popup.info" = { bg = config.colors.surface.hex; };
-          "ui.window" = { bg = config.colors.base.hex; };
+          "ui.window" = { bg = config.colors.base.hex; modifiers = ["hidden"]; };
           "ui.help" = {
             bg = config.colors.surface.hex;
             fg = config.colors.foam.hex;
