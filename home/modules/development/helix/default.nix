@@ -29,7 +29,7 @@ with lib; {
       themes = {
         rp = {
           "ui.background" = {bg = config.colors.base.hex;};
-          "ui.background.seperator" = {bg = config.colors.base.hex;modifiers= ["hidden"];};
+          "ui.background.separator" = {fg = config.colors.base.hex;modifiers= ["hidden"];};
           "ui.menu" = {
             fg = config.colors.subtle.hex;
             bg = config.colors.surface.hex;
