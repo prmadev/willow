@@ -4,7 +4,7 @@
 
 @layer components {
 	.btn-color {
-		@apply transition-all text-sm italic text-transparent   tracking-widest font-extrabold rounded-none p-1  sm:col-span-full;
+		@apply transition-all text-sm italic text-transparent  tracking-widest font-black rounded-none p-1  sm:col-span-full;
 	}
 	.search-input {
 		@apply transition-all col-span-4  text-center  border-2 border-text border-dashed m-1 focus:outline-none;

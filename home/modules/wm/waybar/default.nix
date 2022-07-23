@@ -130,7 +130,7 @@ with lib; {
       style = ''
         * {
         	border: none;
-        	font-family: "DankMono Nerd Font Mono Regular";
+        	font-family: ${config.global-fonts.main-family};
         	font-size: 15px;
         	min-height: 20px;
         	border-radius: 0px;
