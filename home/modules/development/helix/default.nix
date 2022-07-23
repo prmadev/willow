@@ -118,7 +118,7 @@ with lib; {
             fg = config.colors.love.hex;
             modifiers = [ "italic" ];
           };
-          "keyword.control.control" = {
+          "keyword.control.conditional" = {
             fg = config.colors.gold.hex;
             modifiers = [ ];
           };
@@ -140,28 +140,28 @@ with lib; {
 
           "markup.heading.marker" = config.colors.subtle.hex;
           "markup.heading.1" = {
-            fg =
+            bg =
               config.colors.love.hex;
             modifiers = [ "bold" ];
           };
           "markup.heading.2" = {
-            fg = config.colors.gold.hex;
+            bg = config.colors.gold.hex;
             modifiers = [ "bold" ];
           };
           "markup.heading.3" = {
-            fg = config.colors.rose.hex;
+            bg = config.colors.rose.hex;
             modifiers = [ "bold" ];
           };
           "markup.heading.4" = {
-            fg = config.colors.pine.hex;
+            bg = config.colors.pine.hex;
             modifiers = [ "bold" ];
           };
           "markup.heading.5" = {
-            fg = config.colors.foam.hex;
+            bg = config.colors.foam.hex;
             modifiers = [ "bold" ];
           };
           "markup.heading.6" = {
-            fg = config.colors.iris.hex;
+            bg = config.colors.iris.hex;
             modifiers = [ "bold" ];
           };
           "markup.list" = { fg = config.colors.love.hex; };
