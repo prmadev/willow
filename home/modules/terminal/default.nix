@@ -1,8 +1,7 @@
-{
-  pkgs,
-  lib,
-  config,
-  ...
+{ pkgs
+, lib
+, config
+, ...
 }:
 with lib; {
   imports = [
@@ -19,7 +18,7 @@ with lib; {
   };
   config = mkIf config.terminal.enable {
     kitty.enable = true;
-    tmux.enable = false;
+    tmux.enable = true;
     zellij.enable = false;
     wezterm.enable = true;
   };
