@@ -1,7 +1,8 @@
-{ pkgs
-, lib
-, config
-, ...
+{
+  pkgs,
+  lib,
+  config,
+  ...
 }:
 with lib; {
   options = {
@@ -21,42 +22,45 @@ with lib; {
         }
         {
           name = "html";
-          file-types = [ "html" "tmpl" ];
+          file-types = ["html" "tmpl"];
         }
       ];
 
       themes = {
         rp = {
           ###### UI
-          "ui.background" = { bg = config.colors.base.hex; };
-          "ui.background.separator" = { fg = config.colors.base.hex; modifiers = [ "hidden" ]; };
+          "ui.background" = {bg = config.colors.base.hex;};
+          "ui.background.separator" = {
+            fg = config.colors.base.hex;
+            modifiers = ["hidden"];
+          };
           "ui.cursor" = {
             fg = config.colors.rose.hex;
-            modifiers = [ "reversed" ];
+            modifiers = ["reversed"];
           };
 
           "ui.cursor.primary" = {
             fg = config.colors.love.hex;
-            modifiers = [ "reversed" ];
+            modifiers = ["reversed"];
           };
 
           "ui.cursor.match" = {
             fg = config.colors.iris.hex;
-            modifiers = [ "reversed" ];
+            modifiers = ["reversed"];
           };
 
           "ui.menu" = {
             fg = config.colors.subtle.hex;
             bg = config.colors.surface.hex;
-            modifiers = [ ];
+            modifiers = [];
           };
           "ui.menu.selected" = {
             fg = config.colors.text.hex;
             bg = config.colors.pine.hex;
           };
-          "ui.linenr" = { fg = config.colors.muted.hex; };
-          "ui.liner.selected" = {bg = config.colors.rose.hex;};
-          "ui.selection" = { bg = config.colors.highlight-med.hex; };
+          "ui.linenr" = {fg = config.colors.muted.hex;};
+          "ui.linenr.selected" = {bg = config.colors.rose.hex;};
+          "ui.selection" = {bg = config.colors.highlight-med.hex;};
           "ui.statusline" = {
             fg = config.colors.text.hex;
             bg = config.colors.surface.hex;
@@ -64,39 +68,39 @@ with lib; {
           "ui.statusline.insert" = {
             fg = config.colors.base.hex;
             bg = config.colors.foam.hex;
-            modifiers = [ "bold" ];
+            modifiers = ["bold"];
           };
           "ui.statusline.normal" = {
             fg = config.colors.base.hex;
             bg = config.colors.rose.hex;
-            modifiers = [ ];
+            modifiers = [];
           };
           "ui.statusline.select" = {
             fg = config.colors.base.hex;
             bg = config.colors.iris.hex;
-            modifiers = [ "bold" ];
+            modifiers = ["bold"];
           };
           "ui.statusline.inactive" = {
             fg = config.colors.iris.hex;
             bg = config.colors.surface.hex;
           };
-          "ui.text" = { fg = config.colors.subtle.hex; };
+          "ui.text" = {fg = config.colors.subtle.hex;};
           "ui.text.focus" = {
             fg = config.colors.foam.hex;
-            modifiers = [ ];
+            modifiers = [];
           };
           "ui.text.info" = {
             fg = config.colors.subtle.hex;
-            modifiers = [ ];
+            modifiers = [];
           };
-       
+
           "ui.virtual.whitespace" = config.colors.love.hex;
-          "ui.popup" = { bg = config.colors.surface.hex; };
-          "ui.popup.info" = { bg = config.colors.surface.hex; };
+          "ui.popup" = {bg = config.colors.surface.hex;};
+          "ui.popup.info" = {bg = config.colors.surface.hex;};
           "ui.window" = {
             bg = config.colors.base.hex;
             fg = config.colors.base.hex;
-            modifiers = [ "hidden" ];
+            modifiers = ["hidden"];
           };
           "ui.help" = {
             bg = config.colors.surface.hex;
@@ -107,15 +111,15 @@ with lib; {
 
           "comment" = {
             fg = config.colors.muted.hex;
-            modifiers = [ "italic" "dim" ];
+            modifiers = ["italic" "dim"];
           };
           "operator" = {
             fg = config.colors.gold.hex;
-            modifiers = [ "bold" ];
+            modifiers = ["bold"];
           };
           "punctuation" = {
             fg = config.colors.gold.hex;
-            modifiers = [ "bold" ];
+            modifiers = ["bold"];
           };
           "variable" = config.colors.text.hex;
           "constant" = config.colors.gold.hex;
@@ -125,7 +129,7 @@ with lib; {
           "type" = config.colors.foam.hex;
           "string" = {
             fg = config.colors.foam.hex;
-            modifiers = [ "italic" ];
+            modifiers = ["italic"];
           };
           "property" = config.colors.foam.hex;
 
@@ -136,11 +140,11 @@ with lib; {
           "special" = config.colors.gold.hex;
           "keyword" = {
             fg = config.colors.love.hex;
-            modifiers = [ "bold" "italic" ];
+            modifiers = ["bold" "italic"];
           };
           "keyword.control" = {
             fg = config.colors.gold.hex;
-            modifiers = [ ];
+            modifiers = [];
           };
           "label" = config.colors.iris.hex;
 
@@ -165,44 +169,44 @@ with lib; {
           "markup.heading.1" = {
             bg =
               config.colors.love.hex;
-            modifiers = [ "bold" ];
+            modifiers = ["bold"];
           };
           "markup.heading.2" = {
             bg = config.colors.gold.hex;
-            modifiers = [ "bold" ];
+            modifiers = ["bold"];
           };
           "markup.heading.3" = {
             bg = config.colors.rose.hex;
-            modifiers = [ "bold" ];
+            modifiers = ["bold"];
           };
           "markup.heading.4" = {
             bg = config.colors.pine.hex;
-            modifiers = [ "bold" ];
+            modifiers = ["bold"];
           };
           "markup.heading.5" = {
             bg = config.colors.foam.hex;
-            modifiers = [ "bold" ];
+            modifiers = ["bold"];
           };
           "markup.heading.6" = {
             bg = config.colors.iris.hex;
-            modifiers = [ "bold" ];
+            modifiers = ["bold"];
           };
-          "markup.list" = { fg = config.colors.love.hex; };
+          "markup.list" = {fg = config.colors.love.hex;};
           "markup.bold" = {
             fg = config.colors.gold.hex;
-            modifiers = [ "bold" ];
+            modifiers = ["bold"];
           };
           "markup.italic" = {
             fg = config.colors.iris.hex;
-            modifiers = [ "italic" ];
+            modifiers = ["italic"];
           };
           "markup.link.url" = {
             fg = config.colors.pine.hex;
-            modifiers = [ "underlined" ];
+            modifiers = ["underlined"];
           };
-          "markup.link.text" = { fg = config.colors.foam.hex; };
-          "markup.quote" = { fg = config.colors.rose.hex; };
-          "markup.raw" = { fg = config.colors.foam.hex; };
+          "markup.link.text" = {fg = config.colors.foam.hex;};
+          "markup.quote" = {fg = config.colors.rose.hex;};
+          "markup.raw" = {fg = config.colors.foam.hex;};
         };
       };
       settings = {
