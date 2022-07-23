@@ -52,14 +52,7 @@ with lib; {
         downloads.remove_finished = 30000;
         editor.command = ["kitty" "nvim" "{file}"];
         editor.encoding = "utf-8";
-        fonts.default_family = [
-          "DankMono Nerd Font Mono"
-          "Dank Mono"
-          "Gintronics"
-          "JetBrainsMono Nerd Font"
-          "monospace"
-          "Fixed"
-        ];
+        fonts.default_family = config.global-fonts.main-set;
         fonts.default_size = "15px";
         fonts.web.family.cursive = "DankMono Nerd Font Mono";
         fonts.web.family.fantasy = "DankMono Nerd Font Mono";
