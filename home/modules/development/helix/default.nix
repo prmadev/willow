@@ -165,7 +165,10 @@ with lib; {
           };
           "debug" = config.colors.rose.hex;
 
-          "diagnostic" = {fg = config.colors.rose.hex; modifiers = ["underlined"];};
+          "diagnostic.hint" = {fg = config.colors.pine.hex; modifiers = ["underlined"];};
+          "diagnostic.info" = {fg = config.colors.foam.hex; modifiers = ["underlined"];};
+          "diagnostic.warning" = {fg = config.colors.gold.hex; modifiers = ["underlined"];};
+          "diagnostic.error" = {fg = config.colors.rose.hex; modifiers = ["underlined"];};
 
           "markup.heading.marker" = config.colors.subtle.hex;
           "markup.heading.1" = {
