@@ -86,5 +86,5 @@ element selected {
   background-color: @button;
   text-color: @bg;
   border-radius: 0px;
-  font:  "Monospace Bold 10";
+  font:  "Monospace Black 10";
 }
