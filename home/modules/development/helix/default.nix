@@ -115,12 +115,12 @@ with lib; {
           "special" = config.colors.gold.hex;
 
           "keyword.control" = {
-            fg = config.colors.love.hex;
-            modifiers = [ "italic" ];
-          };
-          "keyword.control.conditional" = {
             fg = config.colors.gold.hex;
             modifiers = [ ];
+          };
+          "keyword" = {
+            fg = config.colors.love.hex;
+            modifiers = [ "bold" "italic"];
           };
           "label" = config.colors.iris.hex;
 
