@@ -32,6 +32,7 @@ with lib; {
           "ui.menu" = {
             fg = config.colors.subtle.hex;
             bg = config.colors.surface.hex;
+            modifiers = ["dim"];
           };
           "ui.menu.selected" = {
             fg = config.colors.text.hex;
