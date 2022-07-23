@@ -1,10 +1,11 @@
-{ pkgs
-, lib
-, config
-, ...
+{
+  pkgs,
+  lib,
+  config,
+  ...
 }:
 with lib; {
-  imports = [ ./rosepine.nix ];
+  imports = [./rosepine.nix];
   options = {
     helix.enable = mkOption {
       type = types.bool;
@@ -22,12 +23,9 @@ with lib; {
         }
         {
           name = "html";
-          file-types = [ "html" "tmpl" ];
-
+          file-types = ["html" "tmpl"];
         }
       ];
-
-
 
       settings = {
         theme = "rp";
@@ -43,7 +41,7 @@ with lib; {
 
         keys = {
           normal = {
-            ret = [ "open_below" "normal_mode" ];
+            ret = ["open_below" "normal_mode"];
             space = {
               c = {
                 f = ":format";
