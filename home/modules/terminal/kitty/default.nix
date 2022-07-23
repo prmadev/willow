@@ -25,9 +25,9 @@ with lib; {
         shell = "${pkgs.fish}/bin/fish";
         confirm_os_window_close = 0;
         font_family = "monospace";
-        bold_font = "DankMono Nerd Font Mono Bold";
-        italic_font = "DankMono Nerd Font Mono Italic";
-        bold_italic_font = "DankMono Nerd Font Mono Italic";
+        bold_font = "Gintronic Black";
+        italic_font = "Gintronic Italic";
+        bold_italic_font = "Gintronic Bold Italic ";
         font_size = 12;
       };
       theme = "Rosé Pine";

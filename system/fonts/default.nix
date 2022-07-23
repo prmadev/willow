@@ -15,7 +15,7 @@
       defaultFonts = {
         serif = ["DankMono Nerd Font Mono" "Gintronic" "recursive" "vazir"];
         sansSerif = ["DankMono Nerd Font Mono" "Gintronic" "recursive" "vazir"];
-        monospace = ["DankMono Nerd Font Mono" "Gintronic" "recursive" "vazir"];
+        monospace = [ "Gintronic" "DankMono Nerd Font Mono" "recursive" "vazir"];
       };
     };
   };
