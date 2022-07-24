@@ -166,33 +166,27 @@
 
     "markup.heading.marker" = config.colors.subtle.hex;
     "markup.heading.1" = {
-      bg = config.colors.love.hex;
-      fg = config.colors.base.hex;
+      fg = config.colors.love.hex;
       modifiers = ["bold"];
     };
     "markup.heading.2" = {
-      bg = config.colors.gold.hex;
-      fg = config.colors.base.hex;
+      fg = config.colors.gold.hex;
       modifiers = ["bold"];
     };
     "markup.heading.3" = {
-      bg = config.colors.rose.hex;
-      fg = config.colors.base.hex;
+      fg = config.colors.rose.hex;
       modifiers = ["bold"];
     };
     "markup.heading.4" = {
-      bg = config.colors.pine.hex;
-      fg = config.colors.base.hex;
+      fg = config.colors.pine.hex;
       modifiers = ["bold"];
     };
     "markup.heading.5" = {
-      bg = config.colors.foam.hex;
-      fg = config.colors.base.hex;
+      fg = config.colors.foam.hex;
       modifiers = ["bold"];
     };
     "markup.heading.6" = {
-      bg = config.colors.iris.hex;
-      fg = config.colors.base.hex;
+      fg = config.colors.iris.hex;
       modifiers = ["bold"];
     };
     "markup.list" = {fg = config.colors.love.hex;};
