@@ -14,6 +14,7 @@ with lib; {
   config = mkIf config.build.enable {
     home.packages = with pkgs; [
       gnumake
+      mage
     ];
   };
 }
