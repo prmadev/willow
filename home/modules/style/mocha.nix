@@ -100,7 +100,7 @@ with lib; {
     };
     cat.mocha.base.hex = mkOption {
       type = types.str;
-      default = "#363a4f";
+      default = "#1e1e2e";
     };
     cat.mocha.mantle.hex = mkOption {
       type = types.str;
