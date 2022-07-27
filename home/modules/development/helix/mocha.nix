@@ -34,49 +34,45 @@
     "ui.linenr.selected" = {bg = config.cat.mocha.surface2.hex;};
     "ui.selection" = {bg = config.cat.mocha.surface2.hex;};
     "ui.statusline" = {
-      fg = config.cat.mocha.text.hex;
+      fg = config.cat.mocha.crust.hex;
       bg = config.cat.mocha.surface0.hex;
     };
     "ui.statusline.insert" = {
       fg = config.cat.mocha.base.hex;
-      bg = config.colors.foam.hex;
+      bg = config.cat.mocha.text.hex;
       modifiers = ["bold"];
     };
     "ui.statusline.normal" = {
       fg = config.cat.mocha.base.hex;
-      bg = config.colors.rose.hex;
+      bg = config.cat.mocha.green.hex;
       modifiers = [];
     };
     "ui.statusline.select" = {
       fg = config.cat.mocha.base.hex;
-      bg = config.colors.iris.hex;
+      bg = config.cat.mocha.peach.hex;
       modifiers = ["bold"];
     };
-    "ui.statusline.inactive" = {
-      fg = config.colors.iris.hex;
-      bg = config.colors.surface.hex;
-    };
-    "ui.text" = {fg = config.colors.text.hex;};
+    "ui.text" = {fg = config.cat.mocha.text.hex;};
     "ui.text.focus" = {
-      fg = config.colors.text.hex;
+      fg = config.cat.mocha.text.hex;
       modifiers = [];
     };
     "ui.text.info" = {
-      fg = config.colors.text.hex;
+      fg = config.cat.mocha.text.hex;
       modifiers = [];
     };
 
-    "ui.virtual.whitespace" = config.colors.love.hex;
-    "ui.popup" = {bg = config.colors.surface.hex;};
-    "ui.popup.info" = {bg = config.colors.surface.hex;};
+    "ui.virtual.whitespace" = config.cat.mocha.rosewater.hex;
+    "ui.popup" = {bg = config.cat.mocha.overlay0.hex;};
+    "ui.popup.info" = {bg = config.cat.mocha.overlay0.hex;};
     "ui.window" = {
       bg = config.cat.mocha.base.hex;
       fg = config.cat.mocha.base.hex;
       modifiers = ["hidden"];
     };
     "ui.help" = {
-      bg = config.colors.surface.hex;
-      fg = config.colors.subtle.hex;
+      bg = config.cat.mocha.overlay0.hex;
+      fg = config.cat.mocha.text.hex;
     };
 
     ##### tree-sitter
