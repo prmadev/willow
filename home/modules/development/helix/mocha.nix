@@ -97,7 +97,7 @@
     "attributes" = config.cat.mocha.yellow.hex;
     "type" = config.cat.mocha.blue.hex;
     "string" = {
-      fg = config.cat.mocha.teal.hex;
+      fg = config.cat.mocha.flamingo.hex;
       modifiers = ["italic"];
     };
     "property" = config.cat.mocha.sapphire.hex;
