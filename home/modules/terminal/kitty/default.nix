@@ -30,7 +30,7 @@ with lib; {
         bold_italic_font = config.global-fonts.main-black-italic;
         font_size = 11;
       };
-      theme = "Rosé Pine";
+      theme = "Catppuccin";
     };
   };
 }
