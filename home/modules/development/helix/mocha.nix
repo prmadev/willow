@@ -23,7 +23,7 @@
 
     "ui.menu" = {
       fg = config.cat.mocha.text.hex;
-      bg = config.cat.mocha.mantle.hex;
+      bg = config.cat.mocha.base.hex;
       modifiers = [];
     };
     "ui.menu.selected" = {
