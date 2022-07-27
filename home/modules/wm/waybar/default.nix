@@ -281,7 +281,7 @@ with lib; {
         	background: linear-gradient(to right, ${config.cat.mocha.green.hex} 3%, #eb6f92 3%);
         }
         #network {
-        	color: ${config.cat.mocha.green.hex};
+        	background: ${config.cat.mocha.green.hex};
         }
 
         #pulseaudio {
