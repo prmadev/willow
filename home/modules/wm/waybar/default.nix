@@ -260,25 +260,25 @@ with lib; {
         	background: linear-gradient(to right, ${config.cat.mocha.green.hex} 20%, ${config.cat.mocha.blue.hex} 20%);
         }
         #battery.twenty:not(.charging) {
-        	background: linear-gradient(to right, ${config.cat.mocha.green.hex} 20%, #eb6f92 20%);
+        	background: linear-gradient(to right, ${config.cat.mocha.green.hex} 20%, ${config.cat.mocha.red.hex} 20%);
         }
         #battery.ten.charging {
         	background: linear-gradient(to right, ${config.cat.mocha.green.hex} 10%, ${config.cat.mocha.blue.hex} 10%);
         }
         #battery.ten:not(.charging) {
-        	background: linear-gradient(to right, ${config.cat.mocha.green.hex} 10%, #eb6f92 10%);
+        	background: linear-gradient(to right, ${config.cat.mocha.green.hex} 10%, ${config.cat.mocha.red.hex} 10%);
         }
         #battery.five.charging {
         	background: linear-gradient(to right, ${config.cat.mocha.green.hex} 5%, ${config.cat.mocha.blue.hex} 5%);
         }
         #battery.five:not(.charging) {
-        	background: linear-gradient(to right, ${config.cat.mocha.green.hex} 5%, #eb6f92 5%);
+        	background: linear-gradient(to right, ${config.cat.mocha.green.hex} 5%, ${config.cat.mocha.red.hex} 5%);
         }
         #battery.three.charging {
         	background: linear-gradient(to right, ${config.cat.mocha.green.hex} 3%, ${config.cat.mocha.blue.hex} 3%);
         }
         #battery.three:not(.charging) {
-        	background: linear-gradient(to right, ${config.cat.mocha.green.hex} 3%, #eb6f92 3%);
+        	background: linear-gradient(to right, ${config.cat.mocha.green.hex} 3%, ${config.cat.mocha.red.hex} 3%);
         }
         #network {
         	background: ${config.cat.mocha.green.hex};
