@@ -1,8 +1,7 @@
-{
-  pkgs,
-  lib,
-  config,
-  ...
+{ pkgs
+, lib
+, config
+, ...
 }:
 with lib; {
   options.waybar = {
@@ -141,11 +140,11 @@ with lib; {
         	border-radius: 0px;
         }
         tooltip {
-        	background: #ebbcba;
+        	background: ${config.cat.mocha.surface0.hex};
         }
 
         tooltip label {
-        	color: #191724;
+        	color: ${config.cat.mocha.text.hex};
         }
         #tags {
         	background-color: transparent;
@@ -162,25 +161,25 @@ with lib; {
         	/* border-top: 3px solid #f6c177; */
         	/* border-left: 3px solid #f6c177; */
         	/* border-bottom: 2px solid #f6c177; */
-        	background: #1f1d2e;
+        	background: ${config.cat.mocha.crust.hex};
         }
 
         #tags button.occupied {
         	border-radius: 0px;
         	font-weight: bold;
-        	color: #191724;
-        	background: #31748f;
+        	color: ${config.cat.mocha.crust.hex};
+        	background: ${config.cat.mocha.lavender.hex};
         }
 
         #tags button.focused {
         	font-weight: 900;
-        	color: #191724;
-        	background: #ebbcba;
+        	color: ${config.cat.mocha.crust.hex};
+        	background: ${config.cat.mocha.rosewater.hex};
         }
 
         #tags button.urgent {
-        	color: #e0def4;
-        	background-color: #eb6f92;
+        	color: ${config.cat.mocha.crust.hex};
+        	background-color: ${config.cat.mocha.red.hex};
         	border-radius: 0px;
         }
 
@@ -190,25 +189,25 @@ with lib; {
         #pulseaudio,
         #network,
         #custom-joljol {
-        	color: #e0def4;
-        	background: #1f1d2e;
+        	color:${config.cat.mocha.green.hex};
+        	background:${config.cat.mocha.crust.hex} ;
         	padding: 2.5px 15px;
         	margin: 10px 10px 0px 0px;
         	font-weight: 900;
         }
 
         #clock {
-        	color: #ebbcba;
+        	color: ${config.cat.mocha.green.hex};
         }
 
         #custom-joljol {
-        	color: #ebbcba;
+        	color: ${config.cat.mocha.green.hex};
         	margin: 10px 10px 0px 10px;
         }
 
         #battery {
-        	background: #31748f;
-        	color: #191724;
+        	background: ${config.cat.mocha.green.hex};
+        	color: ${config.cat.mocha.crust.hex};
         }
 
         /* #battery.charging { */
@@ -216,123 +215,123 @@ with lib; {
         /* } */
 
         #battery.ninty.charging {
-        	background: linear-gradient(to right, #31748f 90%, #9ccfd8 90%);
+        	background: linear-gradient(to right, ${config.cat.mocha.green.hex} 90%, ${config.cat.mocha.blue.hex} 90%);
         }
         #battery.ninty:not(.charging) {
-        	background: linear-gradient(to right, #31748f 90%, #ebbcba 90%);
+        	background: linear-gradient(to right, ${config.cat.mocha.green.hex} 90%, ${config.cat.mocha.yellow.hex} 90%);
         }
         #battery.eighty.charging {
-        	background: linear-gradient(to right, #31748f 80%, #9ccfd8 80%);
+        	background: linear-gradient(to right, ${config.cat.mocha.green.hex} 80%, ${config.cat.mocha.blue.hex} 80%);
         }
         #battery.eighty:not(.charging) {
-        	background: linear-gradient(to right, #31748f 80%, #ebbcba 80%);
+        	background: linear-gradient(to right, ${config.cat.mocha.green.hex} 80%, ${config.cat.mocha.yellow.hex} 80%);
         }
         #battery.seventy.charging {
-        	background: linear-gradient(to right, #31748f 70%, #9ccfd8 70%);
+        	background: linear-gradient(to right, ${config.cat.mocha.green.hex} 70%, ${config.cat.mocha.blue.hex} 70%);
         }
         #battery.seventy:not(.charging) {
-        	background: linear-gradient(to right, #31748f 70%, #ebbcba 70%);
+        	background: linear-gradient(to right, ${config.cat.mocha.green.hex} 70%, ${config.cat.mocha.yellow.hex} 70%);
         }
         #battery.sixty.charging {
-        	background: linear-gradient(to right, #31748f 60%, #9ccfd8 60%);
+        	background: linear-gradient(to right, ${config.cat.mocha.green.hex} 60%, ${config.cat.mocha.blue.hex} 60%);
         }
         #battery.sixty:not(.charging) {
-        	background: linear-gradient(to right, #31748f 60%, #ebbcba 60%);
+        	background: linear-gradient(to right, ${config.cat.mocha.green.hex} 60%, ${config.cat.mocha.yellow.hex} 60%);
         }
         #battery.fifty.charging {
-        	background: linear-gradient(to right, #31748f 50%, #9ccfd8 50%);
+        	background: linear-gradient(to right, ${config.cat.mocha.green.hex} 50%, ${config.cat.mocha.blue.hex} 50%);
         }
         #battery.fifty:not(.charging) {
-        	background: linear-gradient(to right, #31748f 50%, #ebbcba 50%);
+        	background: linear-gradient(to right, ${config.cat.mocha.green.hex} 50%, ${config.cat.mocha.yellow.hex} 50%);
         }
         #battery.fourty.charging {
-        	background: linear-gradient(to right, #31748f 40%, #9ccfd8 40%);
+        	background: linear-gradient(to right, ${config.cat.mocha.green.hex} 40%, ${config.cat.mocha.blue.hex} 40%);
         }
         #battery.fourty:not(.charging) {
-        	background: linear-gradient(to right, #31748f 40%, #ebbcba 40%);
+        	background: linear-gradient(to right, ${config.cat.mocha.green.hex} 40%, ${config.cat.mocha.yellow.hex} 40%);
         }
         #battery.thirty.charging {
-        	background: linear-gradient(to right, #31748f 30%, #9ccfd8 30%);
+        	background: linear-gradient(to right, ${config.cat.mocha.green.hex} 30%, ${config.cat.mocha.blue.hex} 30%);
         }
         #battery.thirty:not(.charging) {
-        	background: linear-gradient(to right, #31748f 30%, #ebbcba 30%);
+        	background: linear-gradient(to right, ${config.cat.mocha.green.hex} 30%, ${config.cat.mocha.yellow.hex} 30%);
         }
         #battery.twenty.charging {
-        	background: linear-gradient(to right, #31748f 20%, #9ccfd8 20%);
+        	background: linear-gradient(to right, ${config.cat.mocha.green.hex} 20%, ${config.cat.mocha.blue.hex} 20%);
         }
         #battery.twenty:not(.charging) {
-        	background: linear-gradient(to right, #31748f 20%, #eb6f92 20%);
+        	background: linear-gradient(to right, ${config.cat.mocha.green.hex} 20%, #eb6f92 20%);
         }
         #battery.ten.charging {
-        	background: linear-gradient(to right, #31748f 10%, #9ccfd8 10%);
+        	background: linear-gradient(to right, ${config.cat.mocha.green.hex} 10%, ${config.cat.mocha.blue.hex} 10%);
         }
         #battery.ten:not(.charging) {
-        	background: linear-gradient(to right, #31748f 10%, #eb6f92 10%);
+        	background: linear-gradient(to right, ${config.cat.mocha.green.hex} 10%, #eb6f92 10%);
         }
         #battery.five.charging {
-        	background: linear-gradient(to right, #31748f 5%, #9ccfd8 5%);
+        	background: linear-gradient(to right, ${config.cat.mocha.green.hex} 5%, ${config.cat.mocha.blue.hex} 5%);
         }
         #battery.five:not(.charging) {
-        	background: linear-gradient(to right, #31748f 5%, #eb6f92 5%);
+        	background: linear-gradient(to right, ${config.cat.mocha.green.hex} 5%, #eb6f92 5%);
         }
         #battery.three.charging {
-        	background: linear-gradient(to right, #31748f 3%, #9ccfd8 3%);
+        	background: linear-gradient(to right, ${config.cat.mocha.green.hex} 3%, ${config.cat.mocha.blue.hex} 3%);
         }
         #battery.three:not(.charging) {
-        	background: linear-gradient(to right, #31748f 3%, #eb6f92 3%);
+        	background: linear-gradient(to right, ${config.cat.mocha.green.hex} 3%, #eb6f92 3%);
         }
         #network {
-        	color: #31748f;
+        	color: ${config.cat.mocha.green.hex};
         }
 
         #pulseaudio {
-        	background: #c4a7e7;
-        	color: #191724;
+        	background: ${config.cat.mocha.mauve.hex};
+        	color: ${config.cat.mocha.crust.hex};
         }
         #pulseaudio.ninty {
-        	background: linear-gradient(to top, #c4a7e7 90%, #908caa 90%);
+        	background: linear-gradient(to top, ${config.cat.mocha.mauve.hex} 90%, ${config.cat.mocha.crust.hex} 90%);
         }
         #pulseaudio.eighty {
-        	background: linear-gradient(to top, #c4a7e7 80%, #908caa 80%);
+        	background: linear-gradient(to top, ${config.cat.mocha.mauve.hex} 80%, ${config.cat.mocha.crust.hex} 80%);
         }
         #pulseaudio.seventy {
-        	background: linear-gradient(to top, #c4a7e7 70%, #908caa 70%);
+        	background: linear-gradient(to top, ${config.cat.mocha.mauve.hex} 70%, ${config.cat.mocha.crust.hex} 70%);
         }
         #pulseaudio.sixty {
-        	background: linear-gradient(to top, #c4a7e7 60%, #908caa 60%);
+        	background: linear-gradient(to top, ${config.cat.mocha.mauve.hex} 60%, ${config.cat.mocha.crust.hex} 60%);
         }
         #pulseaudio.fifty {
-        	background: linear-gradient(to top, #c4a7e7 50%, #908caa 50%);
+        	background: linear-gradient(to top, ${config.cat.mocha.mauve.hex} 50%, ${config.cat.mocha.crust.hex} 50%);
         }
         #pulseaudio.fourty {
-        	background: linear-gradient(to top, #c4a7e7 40%, #908caa 40%);
+        	background: linear-gradient(to top, ${config.cat.mocha.mauve.hex} 40%, ${config.cat.mocha.crust.hex} 40%);
         }
         #pulseaudio.thirty {
-        	background: linear-gradient(to top, #c4a7e7 30%, #908caa 30%);
+        	background: linear-gradient(to top, ${config.cat.mocha.mauve.hex} 30%, ${config.cat.mocha.crust.hex} 30%);
         }
         #pulseaudio.twenty {
-        	background: linear-gradient(to top, #c4a7e7 20%, #908caa 20%);
+        	background: linear-gradient(to top, ${config.cat.mocha.mauve.hex} 20%, ${config.cat.mocha.crust.hex} 20%);
         }
         #pulseaudio.ten {
-        	background: linear-gradient(to top, #c4a7e7 10%, #908caa 10%);
+        	background: linear-gradient(to top, ${config.cat.mocha.mauve.hex} 10%, ${config.cat.mocha.crust.hex} 10%);
         }
         #pulseaudio.zero {
-        	background: linear-gradient(to top, #c4a7e7 0%, #908caa 00%);
+        	background: linear-gradient(to top, ${config.cat.mocha.mauve.hex} 0%, ${config.cat.mocha.crust.hex} 00%);
         }
         #pulseaudio.muted {
         	font-weight: 900;
-        	background: #eb6f92;
+        	background:${config.cat.mocha.yellow.hex};
         }
 
         #tray {
         	/* background: #505050; */
         	/* padding: 5px 10px; */
         	margin: 10px 10px 0px 10px;
-        	color: #e0def4;
+        	color: ${config.cat.mocha.yellow.hex};
         }
 
         #tray menu {
-        	color: #e0def4;
+        	color: ${config.cat.mocha.yellow.hex};
         }
 
       '';
