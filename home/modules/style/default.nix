@@ -5,7 +5,7 @@
   ...
 }:
 with lib; {
-  imports = [./global-fonts.nix ./colors.nix ./gtkconf.nix ./font.nix];
+  imports = [./catppuccin.nix ./global-fonts.nix ./colors.nix ./gtkconf.nix ./font.nix];
 
   options = {
     style.enable = mkOption {
