@@ -14,7 +14,7 @@ with lib; {
   config = mkIf config.mongo.enable {
     services.mongodb = {
       enable = true;
-      package = pkgs.mongodb-5_0;
+      package = pkgs.mongodb-4_2;
     };
   };
 }

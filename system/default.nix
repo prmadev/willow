@@ -11,5 +11,5 @@
     ./network
     ./database
   ];
-  # config.database.enable = true;
+  config.database.enable = true;
 }
