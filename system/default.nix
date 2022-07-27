@@ -1,4 +1,4 @@
-{
+{config, ...}: {
   imports = [
     ./boot
     ./graphical
@@ -9,5 +9,7 @@
     ./shell
     ./users
     ./network
+    ./database
   ];
+  # config.database.enable = true;
 }
