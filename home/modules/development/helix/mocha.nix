@@ -7,28 +7,28 @@
       modifiers = ["hidden"];
     };
     "ui.cursor" = {
-      fg = config.colors.rose.hex;
-      modifiers = ["reversed"];
+      bg = config.cat.mocha.surface2.hex;
+      fg = config.cat.mocha.crust.hex;
     };
 
     "ui.cursor.primary" = {
-      fg = config.colors.love.hex;
-      modifiers = ["reversed"];
+      bg = config.cat.mocha.rosewater.hex;
+      fg = config.cat.mocha.crust.hex;
     };
 
     "ui.cursor.match" = {
-      fg = config.colors.iris.hex;
-      modifiers = ["reversed"];
+      bg = config.cat.mocha.surface1.hex;
+      fg = config.cat.mocha.crust.hex;
     };
 
     "ui.menu" = {
-      fg = config.colors.text.hex;
-      bg = config.colors.surface.hex;
+      fg = config.cat.mocha.text.hex;
+      bg = config.cat.mocha.mantle.hex;
       modifiers = [];
     };
     "ui.menu.selected" = {
-      fg = config.colors.text.hex;
-      bg = config.colors.pine.hex;
+      fg = config.cat.mocha.crust.hex;
+      bg = config.cat.mocha.surface2.hex;
     };
     "ui.linenr" = {fg = config.colors.muted.hex;};
     "ui.linenr.selected" = {bg = config.colors.highlight-high.hex;};
