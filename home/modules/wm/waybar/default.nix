@@ -289,34 +289,34 @@ with lib; {
         	color: ${config.cat.mocha.crust.hex};
         }
         #pulseaudio.ninty {
-        	background: linear-gradient(to top, ${config.cat.mocha.mauve.hex} 90%, ${config.cat.mocha.crust.hex} 90%);
+        	background: linear-gradient(to top, ${config.cat.mocha.mauve.hex} 90%, ${config.cat.mocha.pink.hex} 90%);
         }
         #pulseaudio.eighty {
-        	background: linear-gradient(to top, ${config.cat.mocha.mauve.hex} 80%, ${config.cat.mocha.crust.hex} 80%);
+        	background: linear-gradient(to top, ${config.cat.mocha.mauve.hex} 80%, ${config.cat.mocha.pink.hex} 80%);
         }
         #pulseaudio.seventy {
-        	background: linear-gradient(to top, ${config.cat.mocha.mauve.hex} 70%, ${config.cat.mocha.crust.hex} 70%);
+        	background: linear-gradient(to top, ${config.cat.mocha.mauve.hex} 70%, ${config.cat.mocha.pink.hex} 70%);
         }
         #pulseaudio.sixty {
-        	background: linear-gradient(to top, ${config.cat.mocha.mauve.hex} 60%, ${config.cat.mocha.crust.hex} 60%);
+        	background: linear-gradient(to top, ${config.cat.mocha.mauve.hex} 60%, ${config.cat.mocha.pink.hex} 60%);
         }
         #pulseaudio.fifty {
-        	background: linear-gradient(to top, ${config.cat.mocha.mauve.hex} 50%, ${config.cat.mocha.crust.hex} 50%);
+        	background: linear-gradient(to top, ${config.cat.mocha.mauve.hex} 50%, ${config.cat.mocha.pink.hex} 50%);
         }
         #pulseaudio.fourty {
-        	background: linear-gradient(to top, ${config.cat.mocha.mauve.hex} 40%, ${config.cat.mocha.crust.hex} 40%);
+        	background: linear-gradient(to top, ${config.cat.mocha.mauve.hex} 40%, ${config.cat.mocha.pink.hex} 40%);
         }
         #pulseaudio.thirty {
-        	background: linear-gradient(to top, ${config.cat.mocha.mauve.hex} 30%, ${config.cat.mocha.crust.hex} 30%);
+        	background: linear-gradient(to top, ${config.cat.mocha.mauve.hex} 30%, ${config.cat.mocha.pink.hex} 30%);
         }
         #pulseaudio.twenty {
-        	background: linear-gradient(to top, ${config.cat.mocha.mauve.hex} 20%, ${config.cat.mocha.crust.hex} 20%);
+        	background: linear-gradient(to top, ${config.cat.mocha.mauve.hex} 20%, ${config.cat.mocha.pink.hex} 20%);
         }
         #pulseaudio.ten {
-        	background: linear-gradient(to top, ${config.cat.mocha.mauve.hex} 10%, ${config.cat.mocha.crust.hex} 10%);
+        	background: linear-gradient(to top, ${config.cat.mocha.mauve.hex} 10%, ${config.cat.mocha.pink.hex} 10%);
         }
         #pulseaudio.zero {
-        	background: linear-gradient(to top, ${config.cat.mocha.mauve.hex} 0%, ${config.cat.mocha.crust.hex} 00%);
+        	background: linear-gradient(to top, ${config.cat.mocha.mauve.hex} 0%, ${config.cat.mocha.pink.hex} 00%);
         }
         #pulseaudio.muted {
         	font-weight: 900;
