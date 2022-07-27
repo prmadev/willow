@@ -34,7 +34,7 @@
     "ui.linenr.selected" = {bg = config.cat.mocha.surface2.hex;};
     "ui.selection" = {bg = config.cat.mocha.surface2.hex;};
     "ui.statusline" = {
-      fg = config.cat.mocha.crust.hex;
+      fg = config.cat.mocha.text.hex;
       bg = config.cat.mocha.surface0.hex;
     };
     "ui.statusline.insert" = {
@@ -72,7 +72,7 @@
     };
     "ui.help" = {
       bg = config.cat.mocha.overlay0.hex;
-      fg = config.cat.mocha.text.hex;
+      fg = config.cat.mocha.crust.hex;
     };
 
     ##### tree-sitter
