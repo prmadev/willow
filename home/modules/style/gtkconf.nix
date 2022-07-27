@@ -14,8 +14,8 @@ with lib; {
   config = mkIf config.gtkconf.enable {
     gtk.enable = true;
     gtk.theme = {
-      package = pkgs.rose-pine-gtk-theme;
-      name = "Rose Pine";
+      package = pkgs.catppuccin-gtk;
+      name = "catppuccin";
     };
   };
 }
