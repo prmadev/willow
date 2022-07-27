@@ -21,7 +21,7 @@
       fg = config.cat.mocha.crust.hex;
     };
 
-    "ui.menu" = {
+    "ui.menu" = { # pops up when running a command
       fg = config.cat.mocha.text.hex;
       bg = config.cat.mocha.base.hex;
       modifiers = [];
@@ -63,8 +63,8 @@
     };
 
     "ui.virtual.whitespace" = config.cat.mocha.rosewater.hex;
-    "ui.popup" = {bg = config.cat.mocha.overlay0.hex;};
-    "ui.popup.info" = {bg = config.cat.mocha.overlay0.hex;};
+    "ui.popup" = {bg = config.cat.mocha.base.hex;};
+    "ui.popup.info" = {bg = config.cat.mocha.base.hex;};
     "ui.window" = {
       bg = config.cat.mocha.base.hex;
       fg = config.cat.mocha.base.hex;
