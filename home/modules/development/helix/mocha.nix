@@ -30,9 +30,9 @@
       fg = config.cat.mocha.crust.hex;
       bg = config.cat.mocha.surface2.hex;
     };
-    "ui.linenr" = {fg = config.colors.muted.hex;};
-    "ui.linenr.selected" = {bg = config.colors.highlight-high.hex;};
-    "ui.selection" = {bg = config.colors.highlight-med.hex;};
+    "ui.linenr" = {fg = config.cat.mocha.overlay1.hex;};
+    "ui.linenr.selected" = {bg = config.cat.mocha.surface2.hex;};
+    "ui.selection" = {bg = config.cat.mocha.surface2.hex;};
     "ui.statusline" = {
       fg = config.colors.subtle.hex;
       bg = config.colors.surface.hex;
