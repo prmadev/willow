@@ -5,7 +5,7 @@
   ...
 }:
 with lib; {
-  imports = [./rosepine.nix];
+  imports = [./mocha.nix];
   options = {
     helix.enable = mkOption {
       type = types.bool;
