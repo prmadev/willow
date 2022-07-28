@@ -6,6 +6,7 @@
 }:
 with lib; {
   imports = [
+    ./api
     ./build
     ./c
     ./css
@@ -25,6 +26,7 @@ with lib; {
     };
   };
   config = mkIf config.development.enable {
+    api.enable = true;
     build.enable = true;
     c.enable = true;
     css.enable = true;
