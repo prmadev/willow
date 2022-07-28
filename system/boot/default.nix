@@ -16,7 +16,7 @@
       device = "nodev";
       splashMode = "normal";
       efiSupport = true;
-      backgroundColor = "#191724";
+      backgroundColor = "#1e1e2e";
       # efiInstallAsRemovable = true;
     };
   };

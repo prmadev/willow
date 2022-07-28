@@ -1,8 +1,9 @@
-{ pkgs
-, lib
-, config
-, inputs
-, ...
+{
+  pkgs,
+  lib,
+  config,
+  inputs,
+  ...
 }:
 with lib; {
   options = {
@@ -48,4 +49,3 @@ with lib; {
     };
   };
 }
-
