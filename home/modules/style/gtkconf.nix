@@ -15,7 +15,7 @@ with lib; {
     gtk.enable = true;
     gtk.theme = {
       package = pkgs.catppuccin-gtk;
-      name = "catppuccin";
+      name = "catppuccin-mocha";
     };
   };
 }
