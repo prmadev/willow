@@ -31,7 +31,6 @@ with lib; {
           };
 
           window = {
-            transparency = mkLiteral "real";
             border-radius = mkLiteral "0px";
             width = mkLiteral "20%";
             y-offset = mkLiteral "00px";
