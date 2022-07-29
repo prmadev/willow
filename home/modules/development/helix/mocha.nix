@@ -108,7 +108,7 @@
     "constructor" = config.cat.mocha.yellow.hex;
     "special" = config.cat.mocha.green.hex;
     "keyword" = {
-      fg = config.cat.mocha.maroon.hex;
+      fg = config.cat.mocha.red.hex;
       modifiers = ["bold" "italic"];
     };
     "keyword.control" = {
