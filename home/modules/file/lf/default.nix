@@ -54,7 +54,6 @@ with lib; {
       previewer.keybinding = "i";
       extraConfig = ''
         set cleaner ~/dofi/home/modules/file/lf/lfkittycleaner
-        set IFS "\n"
       '';
     };
     home.sessionVariables = {
