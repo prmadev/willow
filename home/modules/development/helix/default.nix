@@ -31,6 +31,7 @@ with lib; {
         theme = "rp";
         editor = {
           auto-format = false;
+          completion-trigger-len = 1;
           line-number = "relative";
           cursor-shape = {
             insert = "bar";
