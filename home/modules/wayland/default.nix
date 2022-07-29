@@ -23,6 +23,7 @@ with lib; {
       brightnessctl
       grim # for wayland
       wtype
+      swaybg
     ];
 
     programs.firefox = {
