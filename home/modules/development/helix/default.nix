@@ -46,6 +46,12 @@ with lib; {
             space = {
               c = {
                 f = ":format";
+                i = ":pipe goimports";
+                t = ":run-shell-command go mod tidy";
+                g = ":run-shell-command go get -u";
+
+                w = ":w!";
+                q = ":q";
               };
             };
           };
