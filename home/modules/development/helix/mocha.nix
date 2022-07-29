@@ -24,7 +24,7 @@
     "ui.menu" = {
       # pops up when running a command
       fg = config.cat.mocha.text.hex;
-      bg = config.cat.mocha.base.hex;
+      bg = config.cat.mocha.surface0.hex;
       modifiers = [];
     };
     "ui.menu.selected" = {
@@ -65,7 +65,7 @@
 
     "ui.virtual.whitespace" = config.cat.mocha.rosewater.hex;
     "ui.popup" = {bg = config.cat.mocha.base.hex;};
-    "ui.popup.info" = {bg = config.cat.mocha.base.hex;};
+    "ui.popup.info" = {bg = config.cat.mocha.surface0.hex;};
     "ui.window" = {
       bg = config.cat.mocha.base.hex;
       fg = config.cat.mocha.base.hex;
