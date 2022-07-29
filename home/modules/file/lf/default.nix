@@ -45,8 +45,8 @@ with lib; {
         icons = true;
         preview = true;
         ratios = "2:3:1";
-        shell = "bash";
-        shellopts = "-eu";
+        shell = "${pkgs.fish}/bin/fish";
+        shellopts = "";
         ifs = "\n";
         scrolloff = 10;
       };
