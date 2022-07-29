@@ -46,7 +46,7 @@ with lib; {
         preview = true;
         ratios = "2:3:1";
         shell = "${pkgs.fish}/bin/fish";
-        shellopts = "-eu";
+        # shellopts = "";
         ifs = "\n";
         scrolloff = 10;
       };
