@@ -47,13 +47,14 @@ with lib; {
         ratios = "2:3:1";
         shell = "${pkgs.fish}/bin/fish";
         shellopts = "-i";
-        ifs = "\n";
+        # ifs = "\n";
         scrolloff = 10;
       };
       previewer.source = ./lfkittypreview;
       previewer.keybinding = "i";
       extraConfig = ''
         set cleaner ~/dofi/home/modules/file/lf/lfkittycleaner
+        set IFS "\n"
       '';
     };
     home.sessionVariables = {
