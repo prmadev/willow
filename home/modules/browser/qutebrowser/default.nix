@@ -20,7 +20,7 @@ with lib; {
       };
 
       searchEngines = {
-        DEFAULT = "https://google.com/search?hl=en&q={}";
+        DEFAULT = "https://you.com/search?q={}";
       };
       settings = {
         content.cookies.accept = "all";
