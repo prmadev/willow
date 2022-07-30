@@ -1,12 +1,11 @@
-{
-  pkgs,
-  lib,
-  config,
-  inputs,
-  ...
+{ pkgs
+, lib
+, config
+, inputs
+, ...
 }:
 with lib; {
-  imports = [./mocha.nix];
+  imports = [ ./mocha.nix ];
   options = {
     helix.enable = mkOption {
       type = types.bool;
@@ -24,12 +23,12 @@ with lib; {
         }
         {
           name = "html";
-          file-types = ["html" "tmpl"];
+          file-types = [ "html" "tmpl" ];
         }
 
         {
           name = "toml";
-          language-server = {command = "${pkgs.taplo-lsp}/bin/taplo-lsp";};
+          language-server = { command = "${pkgs.taplo-lsp}/bin/taplo-lsp"; };
         }
       ];
 
@@ -49,13 +48,13 @@ with lib; {
       settings = {
         theme = "catppuccin-mocha";
 
+        indent-guides.render = true;
         editor = {
           auto-format = false;
           completion-trigger-len = 1;
           line-number = "relative";
 
           indent-style = "t";
-          indent-guides.render = true;
           cursor-shape = {
             insert = "bar";
             normal = "block";
@@ -65,7 +64,7 @@ with lib; {
 
         keys = {
           normal = {
-            ret = ["open_below" "normal_mode"];
+            ret = [ "open_below" "normal_mode" ];
             space = {
               c = {
                 f = ":format";
@@ -74,14 +73,14 @@ with lib; {
                 b = ":bc";
               };
               g = {
-                i = ["select_all" ":pipe goimport"];
-                f = ["select_all" ":pipe gofumpt" ":pipe goimport"];
+                i = [ "select_all" ":pipe goimport" ];
+                f = [ "select_all" ":pipe gofumpt" ":pipe goimport" ];
 
                 t = ":run-shell-command go mod tidy";
                 g = ":run-shell-command go get -u";
               };
               n = {
-                f = ["select_all" ":pipe alejandra"];
+                f = [ "select_all" ":pipe alejandra" ];
               };
             };
           };
