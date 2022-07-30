@@ -32,8 +32,8 @@ with lib; {
         }
       ];
 
-      # themes = let
-      #   catppuccin_helix = inputs.helix-catppuccin;
+      themes = let
+        catppuccin_helix = inputs.helix-catppuccin;
       # catppuccin_helix = pkgs.fetchFromGitHub {
       #   owner = "catppuccin";
       #   repo = "helix";
@@ -41,12 +41,12 @@ with lib; {
       #   sha256 = "sha256-JfTS1Kgcdd/Gu05QXWwztHlr9zrIy73YXLvx7iaYAqM=";
       # };
 
-      #   variants = ["catppuccin_latte" "catppuccin_frappe" "catppuccin_macchiato" "catppuccin_mocha"];
-      # in
-      #   lib.genAttrs variants (n: builtins.fromTOML (builtins.readFile "${catppuccin_helix}/italics/${n}.toml"));
+        variants = ["catppuccin_latte" "catppuccin_frappe" "catppuccin_macchiato" "catppuccin_mocha"];
+      in
+        lib.genAttrs variants (n: builtins.fromTOML (builtins.readFile "${catppuccin_helix}/italics/${n}.toml"));
 
       settings = {
-        theme = "catppuccin-mocha";
+        theme = "catppuccin_mocha";
 
         indent-guides.render = true;
         editor = {
@@ -54,7 +54,7 @@ with lib; {
           completion-trigger-len = 1;
           line-number = "relative";
 
-          indent-style = "t";
+          # indent-style = "t";
           cursor-shape = {
             insert = "bar";
             normal = "block";
