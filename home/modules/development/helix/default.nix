@@ -2,6 +2,7 @@
   pkgs,
   lib,
   config,
+  inputs,
   ...
 }:
 with lib; {
@@ -25,14 +26,36 @@ with lib; {
           name = "html";
           file-types = ["html" "tmpl"];
         }
+
+        {
+          name = "toml";
+          language-server = {command = "${pkgs.taplo-lsp}/bin/taplo-lsp";};
+        }
       ];
 
+      # themes = let
+      #   catppuccin_helix = inputs.helix-catppuccin;
+      # catppuccin_helix = pkgs.fetchFromGitHub {
+      #   owner = "catppuccin";
+      #   repo = "helix";
+      #   rev = "dc1d236f610fa9573fa59194c79dd3a5a9c8a639";
+      #   sha256 = "sha256-JfTS1Kgcdd/Gu05QXWwztHlr9zrIy73YXLvx7iaYAqM=";
+      # };
+
+      #   variants = ["catppuccin_latte" "catppuccin_frappe" "catppuccin_macchiato" "catppuccin_mocha"];
+      # in
+      #   lib.genAttrs variants (n: builtins.fromTOML (builtins.readFile "${catppuccin_helix}/italics/${n}.toml"));
+
       settings = {
-        theme = "rp";
+        theme = "catppuccin-mocha";
+
         editor = {
           auto-format = false;
           completion-trigger-len = 1;
           line-number = "relative";
+
+          indent-style = "t";
+          indent-guides.render = true;
           cursor-shape = {
             insert = "bar";
             normal = "block";
@@ -46,12 +69,19 @@ with lib; {
             space = {
               c = {
                 f = ":format";
-                i = ":pipe goimports";
-                t = ":run-shell-command go mod tidy";
-                g = ":run-shell-command go get -u";
-
                 w = ":w!";
                 q = ":q";
+                b = ":bc";
+              };
+              g = {
+                i = ["select_all" ":pipe goimport"];
+                f = ["select_all" ":pipe gofumpt" ":pipe goimport"];
+
+                t = ":run-shell-command go mod tidy";
+                g = ":run-shell-command go get -u";
+              };
+              n = {
+                f = ["select_all" ":pipe alejandra"];
               };
             };
           };

@@ -60,6 +60,12 @@
       url = "github:tweag/gomod2nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # helix
+    helix-catppuccin = {
+      url = "github:catppuccin/helix";
+      flake = false;
+    };
   };
 
   outputs = {

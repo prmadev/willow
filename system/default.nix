@@ -2,6 +2,7 @@
   imports = [
     ./boot
     ./graphical
+    ./docker
     ./fonts
     ./hardware
     ./locale

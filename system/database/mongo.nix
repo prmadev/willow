@@ -13,8 +13,11 @@ with lib; {
   };
   config = mkIf config.mongo.enable {
     services.mongodb = {
-      enable = true;
-      package = pkgs.mongodb-4_2;
+      enable = false;
+      # package = pkgs.mongodb-4_2;
     };
+    environment.systemPackages = with pkgs; [
+      mongodb-compass
+    ];
   };
 }

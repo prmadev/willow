@@ -1,5 +1,5 @@
 {config, ...}: {
-  programs.helix.themes.rp = {
+  programs.helix.themes.catppuccin-mocha = {
     ###### UI
     "ui.background" = {bg = config.cat.mocha.base.hex;};
     "ui.background.separator" = {
