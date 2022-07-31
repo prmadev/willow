@@ -64,7 +64,7 @@
     };
 
     "ui.virtual.whitespace" = config.cat.mocha.rosewater.hex;
-    "ui.popup" = {bg = config.cat.mocha.base.hex;};
+    "ui.popup" = {bg = config.cat.mocha.surface0.hex;};
     "ui.popup.info" = {bg = config.cat.mocha.surface0.hex;};
     "ui.window" = {
       bg = config.cat.mocha.base.hex;
