@@ -45,7 +45,7 @@ with lib; {
         content.local_storage = true;
         content.mouse_lock = "ask";
         content.proxy = "socks://127.0.0.1:9050/";
-        content.proxy_dns_requests = true;
+        # content.proxy_dns_requests = true;
         content.webgl = true;
         content.webrtc_ip_handling_policy = "default-public-interface-only";
         downloads.position = "bottom";
