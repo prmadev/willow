@@ -19,8 +19,6 @@ with lib; {
     environment.systemPackages = with pkgs; [
       mongodb-compass
       # mongosh
-      # (callPackage ./mongosh {})
-      node2nix
     ];
   };
 }

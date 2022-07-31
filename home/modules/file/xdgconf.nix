@@ -17,7 +17,7 @@ with lib; {
       mime.enable = true;
       mimeApps.enable = true;
       userDirs.enable = true;
-      userDirs.createDirectories = true;
+      # userDirs.createDirectories = true;
     };
   };
 }
