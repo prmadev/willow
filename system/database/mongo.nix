@@ -18,6 +18,7 @@ with lib; {
     };
     environment.systemPackages = with pkgs; [
       mongodb-compass
+      mongosh
     ];
   };
 }
