@@ -31,7 +31,7 @@ module.exports = {
 
 				// // Catppucin mocha
 
-				'rosewater: '#f5e0dc',
+				'rosewater': '#f5e0dc',
 				'flamingo': '#f2cdcd',
 				'pink': '#f5c2e7',
 				'mauve': '#cba6f7',

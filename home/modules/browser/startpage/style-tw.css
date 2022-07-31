@@ -13,13 +13,13 @@
 		@apply transition-all grid border-text border-dashed  grid-cols-5  items-center;
 	}
 	.search-label {
-		@apply transition-all text-center text-sm text-bg font-black label-grad;
+		@apply transition-all text-center text-sm text-base font-black label-grad;
 	}
 	.button-startg {
-		@apply transition-all duration-1000 bg-pine border-text font-black text-bg md:col-span-full;
+		@apply transition-all duration-1000 bg-green border-text font-black text-base md:col-span-full;
 	}
 	.button-stopg {
-		@apply transition-all duration-1000 bg-foam border-text text-bg font-black hover:bg-foam hover:text-bg sm:col-span-full;
+		@apply transition-all duration-1000 bg-blue border-text text-base font-black hover:bg-blue hover:text-base sm:col-span-full;
 	}
 	.label-grad {
 		padding: 5px;
