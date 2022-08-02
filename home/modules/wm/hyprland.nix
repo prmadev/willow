@@ -39,9 +39,14 @@
       }
       binds {
         bind=SUPER,RETURN,exec,kitty
-        bind=SUPER,Q,killactive
-        bind=SUPER,F,fullscreen,0
+        bind=SUPER,q,killactive
+        bind=SUPER,f,fullscreen,0
         bind=SUPER,e,fullscreen,1
+
+        bind=SUPER,h,movefocus,l
+        bind=SUPER,j,movefocus,d
+        bind=SUPER,k,movefocus,u
+        bind=SUPER,l,movefocus,r
 
       }
     '';
