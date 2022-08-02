@@ -23,7 +23,7 @@
             layout=master
           }
       decoration {
-        rounding=2
+        rounding=1
         multisample_edges=true
       }
       animations {
