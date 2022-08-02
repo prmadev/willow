@@ -31,8 +31,8 @@
 
       input {
         follow_mouse=1
-        repeat_rate=50
-        repeat_delay=150
+        repeat_rate=25
+        repeat_delay=200
       }
       misc {
         disable_hyprland_logo=true
