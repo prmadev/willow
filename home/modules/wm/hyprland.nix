@@ -25,6 +25,9 @@
         rounding=5
         multisample_edges=true
       }
+      animations {
+        enabled=true
+      }
 
       input {
         follow_mouse=1
