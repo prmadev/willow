@@ -40,7 +40,15 @@ with lib; {
           "river/tags" = {
             num-tags = 9;
             tag-labels = [
-              "main"
+              "ﳑ" #1
+              "" #2
+              "" #3
+              "" #4
+              "5"
+              "6"
+              "7"
+              "" #8
+              "" #9
             ];
           };
           "river/mode" = {
