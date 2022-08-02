@@ -34,6 +34,7 @@ with lib; {
         {
           debugger = {
             name = "go";
+            transport = "tcp";
             port-arg = "-l 127.0.0.1:19999";
           };
         }
