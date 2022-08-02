@@ -8,6 +8,7 @@ with lib; {
   imports = [
     ./android.nix
     ./compression.nix
+    ./clifm.nix
     ./filesearch.nix
     ./lf
     ./mpv.nix
@@ -26,6 +27,7 @@ with lib; {
   config = mkIf config.file.enable {
     android.enable = true;
     compression.enable = true;
+    clifm.enable = true;
     filesearch.enable = true;
     lf.enable = true;
     nnn.enable = true;
