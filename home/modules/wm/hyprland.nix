@@ -31,7 +31,7 @@
 
       input {
         follow_mouse=1
-        repeat_rate=25
+        repeat_rate=35
         repeat_delay=200
       }
       misc {
@@ -59,6 +59,10 @@
         bind=SUPERSHIFT,k,movewindow,u
         bind=SUPERSHIFT,l,movewindow,r
 
+        bind=SUPERALT,h,resizeactive,l
+        bind=SUPERALT,j,resizeactive,d
+        bind=SUPERALT,k,resizeactive,u
+        bind=SUPERALT,l,resizeactive,r
       }
     '';
   };
