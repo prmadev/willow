@@ -39,6 +39,7 @@
       }
       binds {
         bind=SUPER,RETURN,exec,kitty
+        bind=SUPER,Q,killactive
       }
     '';
   };
