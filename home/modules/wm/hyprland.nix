@@ -43,20 +43,20 @@
         bind=SUPER,d,exec,rofi -show
 
 
-
-
+      
+      
         bind=SUPER,q,killactive
 
 
         bind=SUPER,f,fullscreen,0
         bind=SUPER,e,fullscreen,1
-
+      
         bind=SUPER,h,movefocus,l
         bind=SUPER,j,movefocus,d
         bind=SUPER,k,movefocus,u
         bind=SUPER,l,movefocus,r
 
-
+      
         bind=SUPERSHIFT,h,movewindow,l
         bind=SUPERSHIFT,j,movewindow,d
         bind=SUPERSHIFT,k,movewindow,u
@@ -66,8 +66,8 @@
         bind=SUPERALT,j,resizeactive,0 -10
         bind=SUPERALT,k,resizeactive,10 0
         bind=SUPERALT,l,resizeactive,0 10
-
-
+      
+      
         bind=SUPER,1,workspace,1
         bind=SUPER,2,workspace,2
         bind=SUPER,3,workspace,3
@@ -77,18 +77,18 @@
         bind=SUPER,7,workspace,7
         bind=SUPER,8,workspace,8
         bind=SUPER,9,workspace,9
+        
 
-
-        bind=SUPERSHIFT,1,movetoworkspace,1
-        bind=SUPERSHIFT,2,movetoworkspace,2
-        bind=SUPERSHIFT,3,movetoworkspace,3
-        bind=SUPERSHIFT,4,movetoworkspace,4
-        bind=SUPERSHIFT,5,movetoworkspace,5
-        bind=SUPERSHIFT,6,movetoworkspace,6
-        bind=SUPERSHIFT,7,movetoworkspace,7
-        bind=SUPERSHIFT,8,movetoworkspace,8
-        bind=SUPERSHIFT,9,movetoworkspace,9
-
+        bind=SUPERSHIFT,exclam,movetoworkspace,1
+        bind=SUPERSHIFT,at,movetoworkspace,2
+        bind=SUPERSHIFT,numbersign,movetoworkspace,3
+        bind=SUPERSHIFT,dollar,movetoworkspace,4
+        bind=SUPERSHIFT,percent,movetoworkspace,5
+        bind=SUPERSHIFT,asciicircum,movetoworkspace,6
+        bind=SUPERSHIFT,ampersand,movetoworkspace,7
+        bind=SUPERSHIFT,parenleft,movetoworkspace,8
+        bind=SUPERSHIFT,parenright,movetoworkspace,9
+        
       }
     '';
   };
