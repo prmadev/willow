@@ -39,6 +39,9 @@ with lib; {
 
           "river/tags" = {
             num-tags = 9;
+            tag-labels = [
+              "main"
+            ];
           };
           "river/mode" = {
             format = "Mode: {}";
