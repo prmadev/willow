@@ -7,6 +7,7 @@
   services.xserver.displayManager.gdm.enable = false;
   services.xserver.displayManager.lightdm.enable = false;
   services.xserver.displayManager.sddm.enable = false;
+  # programs.hyprland.enable = true;
 
   xdg.portal = {
     enable = true;

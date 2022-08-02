@@ -2,6 +2,7 @@
   pkgs,
   lib,
   config,
+  inputs,
   ...
 }:
 with lib; {
@@ -9,6 +10,7 @@ with lib; {
     ./river
     ./waybar
     ./mako
+    ./hyprland.nix
   ];
 
   options.wm = {

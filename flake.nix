@@ -12,6 +12,15 @@
       url = "github:yaxitech/ragenix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    hyprland = {
+      url = "github:hyprwm/hyprland";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    hyprland-contrib = {
+      url = "github:hyprwm/contrib";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     nnn-plugins = {
       url = "github:jarun/nnn";
@@ -100,17 +109,24 @@
               };
             }
             ./system
+
+            inputs.hyprland.nixosModules.default
             home-manager.nixosModules.home-manager
             {
+              # home-manager = {
+              # inherit (inputs.self.lib) extraSpecialArgs;
+              # };
               home-manager.useGlobalPkgs = true; # uses the packages that comes with nix not home-manager.
               home-manager.useUserPackages = true;
               home-manager.extraSpecialArgs = {
                 inherit inputs;
+                # inherit (inputs.self.lib) extraSpecialArgs;
               }; #TODO figure out how to add NUR to home-manager
               home-manager.users.a = {
                 home.stateVersion = "22.11";
                 imports = [
                   ./home
+                  inputs.hyprland.homeManagerModules.default
                 ];
               };
             }
