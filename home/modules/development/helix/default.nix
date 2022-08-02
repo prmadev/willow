@@ -1,11 +1,12 @@
-{ pkgs
-, lib
-, config
-, inputs
-, ...
+{
+  pkgs,
+  lib,
+  config,
+  inputs,
+  ...
 }:
 with lib; {
-  imports = [ ./mocha.nix ];
+  imports = [./mocha.nix];
   options = {
     helix.enable = mkOption {
       type = types.bool;
@@ -23,29 +24,27 @@ with lib; {
         }
         {
           name = "html";
-          file-types = [ "html" "tmpl" ];
+          file-types = ["html" "tmpl"];
         }
 
         {
           name = "toml";
-          language-server = { command = "${pkgs.taplo-lsp}/bin/taplo-lsp"; };
+          language-server = {command = "${pkgs.taplo-lsp}/bin/taplo-lsp";};
         }
         {
           debugger = {
             name = "go";
             transport = "tcp";
             port-arg = "-l 127.0.0.1:19999";
-            
-            command = "dlv";
-            args =["dap"];
 
+            command = "dlv";
+            args = ["dap"];
 
             templates = {
               name = "source";
               request = "launch";
               completion = [
                 {
-
                   name = "entrypoint";
                   completion = "filename";
                   default = ".";
@@ -55,10 +54,8 @@ with lib; {
                 mode = "debug";
                 program = "{0}";
               };
-
             };
           };
-
         }
       ];
 
@@ -94,7 +91,7 @@ with lib; {
 
         keys = {
           normal = {
-            ret = [ "open_below" "normal_mode" ];
+            ret = ["open_below" "normal_mode"];
             space = {
               c = {
                 f = ":format";
@@ -103,14 +100,14 @@ with lib; {
                 b = ":bc";
               };
               g = {
-                i = [ "select_all" ":pipe goimport" ];
-                f = [ "select_all" ":pipe gofumpt" ":pipe goimport" ];
+                i = ["select_all" ":pipe goimport"];
+                f = ["select_all" ":pipe gofumpt" ":pipe goimport"];
 
                 t = ":run-shell-command go mod tidy";
                 g = ":run-shell-command go get -u";
               };
               n = {
-                f = [ "select_all" ":pipe alejandra" ];
+                f = ["select_all" ":pipe alejandra"];
               };
             };
           };
