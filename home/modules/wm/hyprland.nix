@@ -21,9 +21,7 @@
             border_size=5
             damage_tracking=full
           }
-      animations {
-        enable=true
-      }
+
       input {
         follow_mouse=1
       }
