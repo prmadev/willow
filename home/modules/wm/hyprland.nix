@@ -63,6 +63,12 @@
         bind=SUPERALT,j,resizeactive,0 -10
         bind=SUPERALT,k,resizeactive,10 0
         bind=SUPERALT,l,resizeactive,0 10
+
+
+        bind=SUPER,1,workspace,1
+        bind=SUPER,2,workspace,2
+
+
       }
     '';
   };
