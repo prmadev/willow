@@ -40,6 +40,8 @@
       binds {
         bind=SUPER,RETURN,exec,kitty
         bind=SUPER,Q,killactive
+        bind=SUPER,F,fullscreen,0
+
       }
     '';
   };
