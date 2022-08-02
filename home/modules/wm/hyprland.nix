@@ -41,6 +41,7 @@
         bind=SUPER,RETURN,exec,kitty
         bind=SUPER,Q,killactive
         bind=SUPER,F,fullscreen,0
+        bind=SUPER,e,fullscreen,1
 
       }
     '';
