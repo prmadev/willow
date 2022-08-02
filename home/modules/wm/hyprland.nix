@@ -21,6 +21,10 @@
             border_size=3
             damage_tracking=full
           }
+      decoration {
+        rounding=5
+        multisample_edges=true
+      }
 
       input {
         follow_mouse=1
