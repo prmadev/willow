@@ -31,6 +31,12 @@ with lib; {
           name = "toml";
           language-server = {command = "${pkgs.taplo-lsp}/bin/taplo-lsp";};
         }
+        {
+          debugger = {
+            name = "go";
+            port-arg = "-l 127.0.0.1:19999";
+          };
+        }
       ];
 
       # themes = let

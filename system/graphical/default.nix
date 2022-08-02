@@ -14,7 +14,4 @@
   };
 
   programs.xwayland.enable = true;
-  environment.systemPackages = with pkgs; [
-    ristate
-  ];
 }
