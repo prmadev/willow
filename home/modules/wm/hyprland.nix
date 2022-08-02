@@ -40,7 +40,7 @@
       }
       binds {
         bind=SUPER,RETURN,exec,kitty
-        bind=SUPER,d,exec,rofi,-show
+        bind=SUPER,d,exec,rofi -show
 
 
 
