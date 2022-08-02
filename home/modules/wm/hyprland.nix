@@ -32,6 +32,7 @@
       input {
         follow_mouse=1
         repeat_rate=100
+        repeat_delay=100
       }
       misc {
         disable_hyprland_logo=true
@@ -42,6 +43,8 @@
 
 
       bind=SUPER,q,killactive
+
+
         bind=SUPER,f,fullscreen,0
         bind=SUPER,e,fullscreen,1
 
