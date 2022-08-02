@@ -48,6 +48,11 @@
         bind=SUPER,k,movefocus,u
         bind=SUPER,l,movefocus,r
 
+
+        bind=SUPERSHIFT,h,movewindow,l
+        bind=SUPERSHIFT,j,movewindow,d
+        bind=SUPERSHIFT,k,movewindow,u
+        bind=SUPERSHIFT,l,movewindow,r
       }
     '';
   };
