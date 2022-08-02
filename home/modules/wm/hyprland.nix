@@ -40,9 +40,12 @@
       }
       binds {
         bind=SUPER,RETURN,exec,kitty
+        bind=SUPER,RETURN,exec,rofi,-show
 
 
-      bind=SUPER,q,killactive
+
+
+        bind=SUPER,q,killactive
 
 
         bind=SUPER,f,fullscreen,0
