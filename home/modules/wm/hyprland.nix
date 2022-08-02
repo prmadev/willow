@@ -31,8 +31,7 @@
 
       input {
         follow_mouse=1
-        repeat_rate=050
-        repeat_delay=10
+        repeat_rate=100
       }
       misc {
         disable_hyprland_logo=true
@@ -40,9 +39,9 @@
       }
       binds {
         bind=SUPER,RETURN,exec,kitty
-        bind=SUPER
 
-        bind=SUPER,q,killactive
+
+      bind=SUPER,q,killactive
         bind=SUPER,f,fullscreen,0
         bind=SUPER,e,fullscreen,1
 
