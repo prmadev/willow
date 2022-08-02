@@ -153,7 +153,7 @@
       modifiers = ["underlined"];
     };
     "diagnostic.warning" = {
-      fg = config.cat.mocha.yellow.hex;
+      # fg = config.cat.mocha.yellow.hex;
       modifiers = ["underlined"];
     };
     "diagnostic.error" = {
