@@ -59,10 +59,10 @@
         bind=SUPERSHIFT,k,movewindow,u
         bind=SUPERSHIFT,l,movewindow,r
 
-        bind=SUPERALT_L,h,resizeactive,-10,0
-        bind=SUPERALT_L,j,resizeactive,0,-10
-        bind=SUPERALT_L,k,resizeactive,10,0
-        bind=SUPERALT_L,l,resizeactive,0,10
+        bind=SUPERALT,h,resizeactive,-10 0
+        bind=SUPERALT,j,resizeactive,0 -10
+        bind=SUPERALT,k,resizeactive,10 0
+        bind=SUPERALT,l,resizeactive,0 10
       }
     '';
   };
