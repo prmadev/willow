@@ -14,6 +14,7 @@ with lib; {
   config = mkIf config.wm.river.enable {
     home.packages = [
       pkgs.river
+      pkgs.ristate
     ];
     waybar.enable = true;
     wayland.enable = true;
