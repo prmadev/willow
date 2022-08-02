@@ -16,9 +16,9 @@
       general {
             sensitivity=0.6
             main_mod=SUPER
-            gaps_in=10
-            gaps_out=10
-            border_size=5
+            gaps_in=5
+            gaps_out=5
+            border_size=3
             damage_tracking=full
           }
 
@@ -30,8 +30,11 @@
         disable_splash_rendering=true
       }
       binds {
-        bind=SUPER,T,exec,kitty
+        bind=SUPER,RETURN,exec,kitty
       }
     '';
   };
+  home.packages = with pkgs; [
+    wev
+  ];
 }
