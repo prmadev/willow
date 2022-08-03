@@ -47,7 +47,8 @@ with lib; {
       #   lib.genAttrs variants (n: builtins.fromTOML (builtins.readFile "${catppuccin_helix}/italics/${n}.toml"));
 
       settings = {
-        theme = "catppuccin-mocha";
+        # theme = "catppuccin-mocha";
+        theme = "rp";
 
         # indent-guides.render = true;
         editor = {
