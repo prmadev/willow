@@ -14,14 +14,7 @@ with lib; {
 
   config = {
     home.packages = with pkgs; [
-      ninja
-      meson
-      pkgconfig
-
-      wayland-utils
-      wayland-protocols
-      wayland
-      llvmPackages.bintools-unwrapped
+      rootbar
     ];
     programs.waybar = mkIf config.waybar.enable {
       enable = true;
