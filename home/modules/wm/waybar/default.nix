@@ -13,6 +13,10 @@ with lib; {
   };
 
   config = {
+    home.packages = with pkgs; [
+      ninja
+      meson
+    ];
     programs.waybar = mkIf config.waybar.enable {
       enable = true;
       systemd.enable = true;
