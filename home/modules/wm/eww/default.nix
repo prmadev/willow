@@ -21,8 +21,8 @@ with lib; {
     home.file.".config/eww/eww.scss".source = ./eww.scss;
     home.file.".config/eww/eww.yuck".source = ./eww.yuck;
 
-    home.file.".config/eww/scripts/workspaces.sh" = {
-      source = ./scripts/workspaces.sh;
+    home.file.".config/eww/scripts/workspace" = {
+      source = ./scripts/workspace;
       executable = true;
     };
 

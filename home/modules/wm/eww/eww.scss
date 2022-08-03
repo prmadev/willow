@@ -1,291 +1,230 @@
-$base: #44465c;
-$blue: #3fc6de;
-$surface0: #44465c;
-$surface1: #44465c;
-$text: #d9e0ee;
-$overlay0: #6e738d;
-$red: #ec6a88;
-$peach: #efb993;
-$yellow: #efb993;
-$mauve: #b072d1;
-$green: #3fdaa4;
-$mantle: #292a37;
-$crust: #2e303e;
-$light-gray: #9699b7;
-
 * {
     all: unset; //Unsets everything so you can style everything from scratch
-    font-family: "monospace";
-}
-
-.icon {
-    font-family: monospace;
-    font-size: 1.4rem;
-}
-
-
-button {
-    transition: background-color 200ms, color 200ms;
-}
-
-.active {
-    color: $green;
-    font-size: 1.4rem;
-}
-
-.inactive {
-    color: $base;
-    font-size: 1.4rem;
-}
-
-.inactive:hover {
-    color: $light-gray;
-}
-
-.bar {
-    background-color: $mantle;
-    border-left: 4px dotted $red;
-}
-
-.dashboard {
-    background-color: $mantle;
-    padding: 1rem;
-    margin-bottom: 1rem;
-}
-
-.cal-box {
-    padding: 1rem 1rem .2rem;
-}
-
-.cal {
-    padding: 0;
-    border-radius: 8px;
-}
-
-.calendar_box {
-    padding: 1rem;
-    calendar:selected {
-        color: $blue;
-    }
-
-    calendar.header {
-        color: $blue;
-        font-weight: bold;
-    }
-
-    calendar.button {
-        color: $blue;
-    }
-
-    calendar.highlight {
-        color: $green;
-        font-weight: bold;
-    }
-
-    calendar:indeterminate {
-        color: rgba(205, 219, 249, 0.3);
-    }
-}
-
-.sysinfo_box {
-    padding: 1rem;
-    .iconmem {
-        font-size: 3rem;
-        color: $yellow;
-    }
-    .iconcpu {
-        font-size: 3rem;
-        color: $blue;
-    }
-    .icondisk {
-        font-size: 3rem;
-        color: $green;
-    }
-    .cpubar, .membar, .diskbar {
-        background-color: $crust;
-    }
-}
-.slider_box {
-    padding: 0 1rem;
-    scale {
-        background-color: $crust;
-        border-radius: 100px;
-        margin: 0.5rem 0;
-    }
-
-    scale trough {
-        border-radius: 100px;
-    }
-
-    scale highlight {
-        padding: 8px;
-        margin: 8px;
-        border-radius: 100px;
-    }
-    
-    .brightness_slider highlight {
-        background-color: $yellow;
-    }
-
-    .volume_slider highlight {
-        background-color: $blue;
-    }
-
-    .micvolume_slider highlight {
-        background-color: $green;
-    }
-    
-    .slider_icon {
-        font-size: 2rem;
-        padding-right: 0.75rem;
-    }
-}
-
-.notification_box {
-}
-
-.wifi {
-  font-size: 2rem;
-  color: $blue;
-}
-
-.clock {
-  font-weight: bold;
-  background-color: $base;
-  color: $text;
-  border-radius: 10px;
-  padding: 0.2rem;
-  margin: 0.5rem;
-}
-
-.cpubar {
-  color: $blue;
-  background-color: $surface1;
-  margin: 4px 0;
-}
-
-.diskbar {
-  color: $green;
-  background-color: $surface1;
-  margin: 4px 0;
-}
-
-.membar {
-    color: $yellow;
-    background-color: $surface1;
-  margin: 4px 0;
-}
-
-.iconmem, .iconcpu, .icondisk {
-    color: $base;
-    font-size: 2.5rem;
-}
-
-.date {
-  font-size: 1.5rem;
-}
-
-.reg-btn { 
-    font-size: 2rem;
-    margin: 2px 8px;
-    border-radius: 10px;
-}
-
-.dashbutton {
-    color: $mauve;
-}
-
-.dashbutton:hover {
-    background-color: $base;
-}
-
-.dashbutton:active {
-    background-color: $mauve;
-    color: $mantle;
-}
-
-.powerbutton { 
-    color: $red; 
-}
-
-.powerbutton:hover {
-    background-color: $base;
-}
-
-.powerbutton:active {
-    background-color: $red;
-    color: $mantle;
-}
-
-.launchbutton { 
-    background-color: $blue; 
-    color: $mantle;
-    margin-top: 6px;
-}
-
-.launchbutton:hover {
-    background-color: $mauve;
-}
-
-.launchbutton:active {
-    color: $mauve;
-    background-color: $mantle;
-}
-
-.battery {
-    font-size: 1.5rem;
-    color: $blue;
-}
-
-// Credits AlphaTechnolog
-.powermenu-box {
-    padding: 0 2px;
-    margin: 7px 7px 7px 0px;
-    background: inherit;
-    .dispatcher {
-        border-radius: 15px;
-        background: $base;
-        color: $red;
-        font-size: 14px;
-        padding: 0 14px 0 10px;
-        &:hover { background-color: $surface0; }
-        &:active { background-color: $surface1; }
-    }
-}
-
-// powermenu
-.powermenu-container {
-  background: $crust;
-  color: $text;
-  padding: 10px;
-  font-size: 55px;
-
-  transition: all 200ms cubic-bezier(.1,-0.00,.0,1.49);
-
-  .btn { margin: 1rem;}
-  // shutdown
-  .shutdown-btn-box .btn {
-    color: $red;
-    border-radius: 15px;
-    background-color: $mantle;
-    &:hover { background-color: $base; }
-    &:active { background-color: $surface1; }
+      font-family: monospace;
+      //font-family: Inter Nerd Font;
+    //   font-family:Space Mono;
+      
   }
-  // reboot
-  .reboot-btn-box .btn {
-    color: $mauve;
-    border-radius: 15px;
-    background-color: $mantle;
-    &:hover { background-color: $base; }
-    &:active { background-color: $surface1; }
+  
+  .dockbox {
+      background-color: rgba(0,0,0,0);
+      border-radius: 12px;
   }
-  // exit
-  .exit-btn-box .btn {
-    color: $yellow;
-    border-radius: 15px;
-    background-color: $mantle;
-    &:hover { background-color: $base; }
-    &:active { background-color: $surface1; }
+  
+  //Global Styles
+  .bar {
+    background-color: #181818;
+    color: #dbdee9;
   }
-}
-
+  
+  .time {
+      color: #d08770;
+  }
+  
+  // Styles on classes (see eww.yuck for more information)
+  .music {
+      font-family: SpaceMono Nerd Font;
+      font-size: 11px;
+  }
+  
+  .album_art {
+      background-repeat: no-repeat;
+      background-size: 300px;
+      min-height: 300px;
+      min-width: 300px;
+      border-radius: 8px;
+      margin: 0px 0px  0px 0px;
+  }
+  
+  
+  .musicbox {
+      margin : 0px 0px 0px 0px;
+  }
+  
+  .song {
+      font-size : 14px;
+      font-weight : bold;
+  }
+  
+  .artist {
+      font-size : 12px;
+      font-weight : bold;
+  }
+  
+  .musicbuttons {
+      margin : -200px 0px 0px 0px;
+  }
+  
+  .playbutton {
+      background-repeat: no-repeat;
+      background-size: 24px;
+      min-height: 24px;
+      min-width: 24px;
+      margin: 0px 0px  0px 0px;
+  }
+  
+  
+  .trackbutton {
+      background-repeat: no-repeat;
+      background-size: 18px;
+      min-height: 18px;
+      min-width: 18px;
+      margin: 0px 0px  0px 0px;
+  }
+  
+  .sidestuff {
+      font-size: 14px;
+  }
+  
+  .sidestuff slider {
+    all: unset;
+    color: #c04639;
+      margin: 10px 0px 7px 0px;
+  }
+  
+  
+  .battery_metric {
+      font-size: 14px;
+      margin-left:0px;
+  }
+  
+  .battery_metric slider {
+    all: unset;
+    color: #c04639;
+      margin: 10px 0px 7px 0px;
+      min-width: 120px;
+  }
+  
+  
+  .audiostuff {
+      font-size: 14px;
+  }
+  
+  .audiostuff slider {
+    all: unset;
+    color: #c04639;
+      margin: 10px 0px 7px 0px;
+      min-width: 90px;
+  }
+  
+  
+  .works {
+      font-size: 16px;
+      padding: 0px;
+      background-color: rgba(00,00,00,00);
+      margin: 6px 0px 6px 0px;
+  }
+  
+  
+  .0 , .01, .02, .03, .04, .05, .06,
+  .011, .022, .033, .044, .055, .066{
+    margin: 0px 0px 0px 0px;
+  }
+  
+  /* Unoccupied */
+  .0 {
+  color: #606060;
+  }
+  
+  /* Occupied */
+  .01, .02, .03, .04, .05, .06, .07, .08, .09 {
+      background-color:#242424;
+      color:#656565;
+  }
+  
+  
+  /* Focused */
+  .011, .022, .033, .044, .055, .066, .077, .088, .099{
+    color: #181818;
+      background-color: #e5d0b3;
+  }
+  
+  
+  .works button:hover {
+    color: #000000;
+    background-color: #c04639;
+  }
+  
+  .module {
+      margin: 0px 0px 0px 0px;
+      border-radius: 10px 10px 0px 10px;
+  }
+  
+  .metric scale trough highlight {
+    all: unset;
+    //background-color: #D35D6E;
+    background-color: #e5d0b3;
+    color: #000000;
+    border-radius: 4px;
+  }
+  .metric scale trough {
+    all: unset;
+    //background-color: #323232;
+    background-color: #e5d0b3;
+    border-radius: 50px;
+    min-height: 3px;
+    min-width: 30px;
+    margin-left: 8px;
+    margin-right: 30px;
+  }
+  .metric scale trough highlight {
+    all: unset;
+    //background-color: #D35D6E;
+      background-color: #e5d0b3;
+    color: #000000;
+    border-radius: 4px;
+  }
+  .metric scale trough {
+    all: unset;
+    //background-color: #4e4e4e;
+    background-color: #4e4e4e;
+    border-radius: 3px;
+    min-height: 3px;
+    min-width: 50px;
+    margin-left: 2px;
+    margin-right: 18px;
+  }
+  .label-ram {
+    font-size: 12px;
+    margin-left: 2px;
+    margin-right: 18px;
+  }
+  
+  .label-Audio {
+    font-size: 20px;
+  }
+  
+  .mails {
+      color: #FFC8C8;
+      border: 0px solid #161616;
+      border-radius: 16px;
+      font-size : 14px;
+      padding: 0px 5px 0px 5px;
+      margin: 10px 0px 10px 0px;
+      font-weight : bold;
+  }
+  
+  .trayicon {
+      background-repeat: no-repeat;
+      background-size: 24px;
+      min-height: 24px;
+      min-width: 24px;
+      margin: 8px 0px 0px 0px;
+  }
+  
+  .infotext {
+      color: #DCD7CD;
+      border: 0px solid #161616;
+      border-radius: 16px;
+      font-size : 14px;
+      padding: 0px 5px 0px 5px;
+      margin: 10px 0px 10px 0px;
+  }
+  
+  .face {
+      background-size: 24px;
+      min-height: 24px;
+      min-width: 24px;
+      margin: 8px 0px 8px 0px;
+      border-radius: 100%;
+  }
