@@ -22,8 +22,10 @@
                   damage_tracking=full
                   layout=master
 
-      col.active_border=0xa6e3a1
-          }
+      col.active_border=0xffa6e3a1
+
+      col.inactive_border=
+         }
 
             decoration {
               rounding=1
