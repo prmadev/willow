@@ -11,7 +11,7 @@
 
 
 (defwidget bar []
-  (centerbox :orientation "h"
+  (box :orientation "h"
     (left)
  
 		))
