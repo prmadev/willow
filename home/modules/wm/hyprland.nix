@@ -22,23 +22,31 @@
             damage_tracking=full
             layout=master
           }
+
       decoration {
         rounding=1
         multisample_edges=true
       }
+
       animations {
         enabled=true
       }
 
+      monitors {
+        monitor=eDP-1,1366x768@60,0x0,1
+        monitor=DP-1,1600x900@60,0x0,1
+      }
       input {
         follow_mouse=1
         repeat_rate=35
         repeat_delay=200
       }
+
       misc {
         disable_hyprland_logo=true
         disable_splash_rendering=true
       }
+
       binds {
         bind=SUPER,RETURN,exec,kitty
         bind=SUPER,d,exec,rofi -show
