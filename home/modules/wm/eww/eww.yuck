@@ -1,4 +1,4 @@
-(defwidget bar [] (centerbox :orientation "h" :hexpand false (box :halign "start" :vexpand false :hexpand true :orientation "h" :space-evenly false (workspaces :halign "center" :hexpand true :vexpand false :orientation "h") ) ) )    
+(defwidget bar [] (box :orientation "h" :hexpand false (box :halign "start" :vexpand false :hexpand true :orientation "h" :space-evenly false (workspaces :halign "center" :hexpand true :vexpand false :orientation "h") ) ) )    
 
 
 
