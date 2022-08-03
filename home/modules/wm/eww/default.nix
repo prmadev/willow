@@ -13,7 +13,7 @@ with lib; {
   };
   config = mkIf config.eww.enable {
     home.packages = with pkgs; [
-      luajit
+      socat
       eww-wayland
     ];
 
