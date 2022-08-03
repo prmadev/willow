@@ -23,6 +23,7 @@ with lib; {
           height = 0;
           modules-left = [
             "wlr/workspaces"
+            "wlr/taskbar"
             "river/mode"
             "river/tags"
           ];

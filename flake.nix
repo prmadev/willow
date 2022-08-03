@@ -22,6 +22,15 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    helix = {
+      url = "github:helix-editor/helix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    # naersk = {
+    #   url = "github:nmattia/naersk";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
     nnn-plugins = {
       url = "github:jarun/nnn";
       flake = false;
