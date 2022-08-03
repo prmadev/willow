@@ -16,6 +16,7 @@ with lib; {
     home.packages = with pkgs; [
       ninja
       meson
+      pkgconfig
       llvmPackages.bintools-unwrapped
     ];
     programs.waybar = mkIf config.waybar.enable {
