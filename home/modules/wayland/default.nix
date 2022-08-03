@@ -1,8 +1,7 @@
-{
-  pkgs,
-  config,
-  lib,
-  ...
+{ pkgs
+, config
+, lib
+, ...
 }:
 with lib; {
   options = {
@@ -33,6 +32,8 @@ with lib; {
     home.sessionVariables = {
       QT_QPA_PLATFORM = "wayland";
       MOZ_ENABLE_WAYLAND = 1;
+      SDL_VIDEODRIVER = "wayland";
+      QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
     };
   };
 }

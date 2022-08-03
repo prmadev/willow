@@ -22,6 +22,7 @@ with lib; {
           position = "top";
           height = 0;
           modules-left = [
+            "wlr/workspaces"
             "river/mode"
             "river/tags"
           ];
