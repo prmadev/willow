@@ -34,7 +34,9 @@
 
       monitors {
         monitor=eDP-1,1366x768@60,0x0,1
+        workspace=eDP-1,1
         monitor=DP-1,1600x900@60,1366x0,1
+        workspace=DP-1,5
       }
       input {
         follow_mouse=1
