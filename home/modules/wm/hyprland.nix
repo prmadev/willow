@@ -57,7 +57,8 @@
            bind=SUPER,d,exec,rofi -show
 
 
-
+           bind=SUPER,space,exec,hyprctl keyword input:kb_layout "US-en"
+           bind=SUPERALT,space,exec,hyprctl keyword input:kb_layout "IR-fa"
 
            bind=SUPER,q,killactive
 
