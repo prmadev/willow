@@ -25,9 +25,7 @@
 
 (defwidget left []
 	(box :orientation "h" 
-		 :space-evenly false  
-       :halign "start"
-			 :valign "center"
+
 		 :class "left_modules"
 (workspaces)
 ))
