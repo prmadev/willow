@@ -37,7 +37,7 @@ with lib; {
         italic_font = config.global-fonts.main-black;
         bold_italic_font = config.global-fonts.main-black-italic;
       };
-      theme = "Catppuccin"; # the default one is mocha colored, nice choice kitty!
+      theme = "Rosé Pine"; # the default one is mocha colored, nice choice kitty!
     };
   };
 }

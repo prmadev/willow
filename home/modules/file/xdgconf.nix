@@ -15,7 +15,7 @@ with lib; {
     xdg = {
       enable = true;
       mime.enable = true;
-      mimeApps.enable = true;
+      # mimeApps.enable = true;
       userDirs.enable = true;
       # userDirs.createDirectories = true;
     };
