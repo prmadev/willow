@@ -31,34 +31,6 @@ with lib; {
           name = "toml";
           language-server = {command = "${pkgs.taplo-lsp}/bin/taplo-lsp";};
         }
-        {
-          debugger = {
-            name = "go";
-            transport = "tcp";
-            port-arg = "-l 127.0.0.1:19999";
-
-            command = "dlv";
-            args = ["dap"];
-
-            templates = [
-              {
-                name = "source";
-                request = "launch";
-                completion = [
-                  {
-                    name = "entrypoint";
-                    completion = "filename";
-                    default = ".";
-                  }
-                ];
-                args = {
-                  mode = "debug";
-                  program = "{0}";
-                };
-              }
-            ];
-          };
-        }
       ];
 
       # themes = let
