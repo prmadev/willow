@@ -11,6 +11,7 @@ with lib; {
     ./waybar
     ./mako
     ./hyprland.nix
+    ./eww
   ];
 
   options.wm = {
@@ -23,5 +24,6 @@ with lib; {
     mako.enable = true;
     launcher.enable = true;
     wm.river.enable = true;
+    eww.enable = true;
   };
 }

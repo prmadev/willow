@@ -1,10 +1,10 @@
 {
   pkgs,
   config,
-  libs,
+  lib,
   ...
 }:
-with libs; {
+with lib; {
   options = {
     eww.enable = mkOption {
       type = types.bool;
