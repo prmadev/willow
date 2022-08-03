@@ -1,21 +1,7 @@
-;; ** Variables ***********************************************************************
-;; all the deffpolls
-
-
-;;defwidgets******************************************************************
-
-
-
-
-
-
-
 (defwidget bar []
   (box :orientation "h"
     (left)
- 
 		))
-
 
 
 (deflisten workspace "scripts/workspace")
@@ -25,9 +11,8 @@
 
 (defwidget left []
 	(box :orientation "h" 
-
-		 :class "left_modules"
-(workspaces)
+	:class "left_modules"
+  (workspaces)
 ))
 
 ;; windows ****************************************
