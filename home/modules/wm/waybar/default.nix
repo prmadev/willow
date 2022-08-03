@@ -18,6 +18,7 @@ with lib; {
       meson
       pkgconfig
 
+      wayland-utils
       wayland-protocols
       wayland
       llvmPackages.bintools-unwrapped
