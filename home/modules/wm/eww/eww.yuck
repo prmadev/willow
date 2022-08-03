@@ -1,18 +1,19 @@
 (defwidget bar []
   (box :orientation "h"
     (left)
-		))
+		)
+  )
 
 
 (deflisten workspace "scripts/workspace")
-(defwidget workspaces []
+(defwidget workspace []
 (literal :content workspace))
 
 
 (defwidget left []
 	(box :orientation "h" 
 	:class "left_modules"
-  (workspaces)
+  (workspace)
 ))
 
 ;; windows ****************************************
@@ -29,5 +30,6 @@
                       :height "30px"
                       :anchor "top center")
   :reserve (struts :side "top" :distance "4%")
-  (bar))
+  (bar)
+  )
 
