@@ -17,6 +17,7 @@ with lib; {
     ./helix
     ./nixdev
     ./rust
+    ./vscode
     ./zig
   ];
   options = {
@@ -37,6 +38,7 @@ with lib; {
     helix.enable = true;
     nixdev.enable = true;
     rust.enable = true;
+    vscode.enable = true;
     zig.enable = true;
   };
 }

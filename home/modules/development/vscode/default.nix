@@ -14,7 +14,7 @@ with lib; {
   config = mkIf config.vscode.enable {
     programs.vscode = {
       enable = true;
-      package = pkgs.vscode-with-extensions;
+      # package = pkgs.vscode-with-extensions;
       extensions = with pkgs.vscode-extensions; [
         golang.go
         mvllow.rose-pine
