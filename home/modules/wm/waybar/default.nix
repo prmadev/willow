@@ -17,6 +17,9 @@ with lib; {
       ninja
       meson
       pkgconfig
+
+      wayland-protocols
+      wayland
       llvmPackages.bintools-unwrapped
     ];
     programs.waybar = mkIf config.waybar.enable {
