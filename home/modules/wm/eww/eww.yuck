@@ -1,16 +1,50 @@
-(defwidget bar [] (box :orientation "h" :hexpand false (box :halign "start" :vexpand false :hexpand true :orientation "h" :space-evenly false (workspaces :halign "center" :hexpand true :vexpand false :orientation "h") ) ) )    
+;; ** Variables ***********************************************************************
+;; all the deffpolls
+
+
+;;defwidgets******************************************************************
 
 
 
-(deflisten workspaces_listen "./scripts/workspaces.sh")
+
+
+
+
+(defwidget bar []
+  (centerbox :orientation "h"
+    (left)
+ 
+		))
+
+
+
+(deflisten workspace "scripts/workspace")
 (defwidget workspaces []
-  (literal :content workspaces_listen))
+(literal :content workspace))
+
+
+(defwidget left []
+	(box :orientation "h" 
+		 :space-evenly false  
+       :halign "start"
+			 :valign "center"
+		 :class "left_modules"
+(workspaces)
+))
+
+;; windows ****************************************
 
 (defwindow bar
+  :exclusive true
   :monitor 0
-  :exclusive false 
-  :geometry (geometry :height "500px" :x "-4px" :y "0px"
-  :hight "52px"
-  :anchor "top left")
-  :stacking "fg"
+  :windowtype "dock"
+  :stacking "bg"
+	:focusable false
+  :geometry (geometry :x "0%"
+                      :y "0%"
+                      :width "100%"
+                      :height "30px"
+                      :anchor "top center")
+  :reserve (struts :side "top" :distance "4%")
   (bar))
+
