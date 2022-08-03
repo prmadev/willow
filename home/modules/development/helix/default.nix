@@ -40,21 +40,23 @@ with lib; {
             command = "dlv";
             args = ["dap"];
 
-            templates = {
-              name = "source";
-              request = "launch";
-              completion = [
-                {
-                  name = "entrypoint";
-                  completion = "filename";
-                  default = ".";
-                }
-              ];
-              args = {
-                mode = "debug";
-                program = "{0}";
-              };
-            };
+            templates = [
+              {
+                name = "source";
+                request = "launch";
+                completion = [
+                  {
+                    name = "entrypoint";
+                    completion = "filename";
+                    default = ".";
+                  }
+                ];
+                args = {
+                  mode = "debug";
+                  program = "{0}";
+                };
+              }
+            ];
           };
         }
       ];
