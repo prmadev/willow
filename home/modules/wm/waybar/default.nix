@@ -16,6 +16,8 @@ with lib; {
     home.packages = with pkgs; [
       ninja
       meson
+
+      libgccjit
     ];
     programs.waybar = mkIf config.waybar.enable {
       enable = true;
