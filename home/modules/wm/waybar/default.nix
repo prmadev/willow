@@ -43,7 +43,7 @@ with lib; {
           ];
           "custom/hyprmon" = {
             interval = 1;
-            exec = "hyprgo -a|jq --unbuffered --compact-output";
+            exec = "hyprgo -a";
             return-type = "json";
             format = "{}";
             text = "   ";
@@ -223,7 +223,7 @@ with lib; {
         #clock {
         	background: ${config.cat.mocha.green.hex};
         }
-        #custom-hyprmon{
+        #custom-hyprmon.first{
           background: ${config.colors.love.hex};
           margin: 10px 10px 0px 10px;
         }
