@@ -44,6 +44,7 @@ with lib; {
           "custom/hyprmon" = {
             interval = 1;
             exec = "hyprgo -a";
+            return-type = "json";
           };
 
           "river/tags" = {
@@ -220,10 +221,11 @@ with lib; {
         #clock {
         	background: ${config.cat.mocha.green.hex};
         }
-        #custom-hyprmon{
+        #custom-hyprmon#first{
           background: ${config.colors.love.hex};
           margin: 10px 10px 0px 10px;
         }
+
         #custom-joljol {
         	background: ${config.cat.mocha.green.hex};
         	margin: 10px 10px 0px 10px;
