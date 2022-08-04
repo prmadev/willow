@@ -1,0 +1,100 @@
+Script started on 2022-08-04 10:03:05+04:30 [TERM="xterm-kitty" TTY="/dev/pts/6" COLUMNS="78" LINES="9"]
+[?2004h
+[1;36mmodules/wm/eww[0m on [1;35m [0m[1;35mmain[0m [1;31m[[0m[1;31m?[0m[1;31m⇡[0m[1;31m][0m 
+[1;32m❯[0m Hyprland /
+[?2004lHyprland usage: Hyprland [arg [...]].
+
+Arguments:
+--help         -h | Show this help message
+--config       -c | Specify config file to use
+[?2004h
+[1;36mmodules/wm/eww[0m on [1;35m [0m[1;35mmain[0m [1;31m[[0m[1;31m?[0m[1;31m⇡[0m[1;31m][0m 
+[1;31m❯[0m z scripts/
+[?2004l[?2004h
+[1;36mwm/eww/scripts[0m on [1;35m [0m[1;35mmain[0m [1;31m[[0m[1;31m?[0m[1;31m⇡[0m[1;31m][0m via [1;34m🌙 [0m[1;34mv2.1.0-beta3[0m[1;34m [0m
+[1;32m❯[0m ls
+[?2004l[1;32mbattery.sh[0m  [1;32mbrightness.sh[0m  [1;32mvolume.sh[0m  [1;32mwifi.sh[0m  [1;32mworkspaces.lua[0m  [1;32mworkspaces.sh[0m
+[?2004h
+[1;36mwm/eww/scripts[0m on [1;35m [0m[1;35mmain[0m [1;31m[[0m[1;31m?[0m[1;31m⇡[0m[1;31m][0m via [1;34m🌙 [0m[1;34mv2.1.0-beta3[0m[1;34m [0m
+[1;32m❯[0m go run [K[K[K[K[K[K[Klua workspaces.lua 
+[?2004l(box :orientation "v" :spacing 1 :space-evenly "true" (button :class "inactive" )(button :class "active" )(button :class "inactive" )(button :class "active" )(button :class "inactive" )(button :class "active" )(button :class "inactive" )(button :class "active" )(button :class "inactive" )(button :class "active" )(button :class "inactive" )(button :class "active" )(button :class "inactive" )(button :class "active" ))
+[?2004h
+[1;36mwm/eww/scripts[0m on [1;35m [0m[1;35mmain[0m [1;31m[[0m[1;31m?[0m[1;31m⇡[0m[1;31m][0m via [1;34m🌙 [0m[1;34mv2.1.0-beta3[0m[1;34m [0m
+[1;32m❯[0m [K[1;32m❯[0m lua workspaces.lua [K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kbash [C[C[3Pls[K[Ksh [K[K[K./
+[01;32mbattery.sh[0m[K      [01;32mbrightness.sh[0m[K   [01;32mvolume.sh[0m[K       [01;32mwifi.sh[0m[K         [01;32mworkspaces.lua[0m[K  [01;32mworkspaces.sh[0m[K   
+
+[1;36mwm/eww/scripts[0m on [1;35m [0m[1;35mmain[0m [1;31m[[0m[1;31m?[0m[1;31m⇡[0m[1;31m][0m via [1;34m🌙 [0m[1;34mv2.1.0-beta3[0m[1;34m [0m
+[1;32m❯[0m ./
+[01;32mbattery.sh[0m[K      [01;32mbrightness.sh[0m[K   [01;32mvolume.sh[0m[K       [01;32mwifi.sh[0m[K         [01;32mworkspaces.lua[0m[K  [01;32mworkspaces.sh[0m[K   
+
+[1;36mwm/eww/scripts[0m on [1;35m [0m[1;35mmain[0m [1;31m[[0m[1;31m?[0m[1;31m⇡[0m[1;31m][0m via [1;34m🌙 [0m[1;34mv2.1.0-beta3[0m[1;34m [0m
+[1;32m❯[0m ./workspaces.sh
+[?2004l./workspaces.sh: line 3: ./scripts/workspaces.lua: No such file or directory
+^C
+[?2004h
+[1;36mwm/eww/scripts[0m on [1;35m [0m[1;35mmain[0m [1;31m[[0m[1;31m?[0m[1;31m⇡[0m[1;31m][0m via [1;34m🌙 [0m[1;34mv2.1.0-beta3[0m[1;34m [0mtook [1;33m3s[0m 
+[1;31m❯[0m hx s[Kworkspaces.
+[01;32mworkspaces.lua[0m[K  [01;32mworkspaces.sh[0m[K   
+
+[1;36mwm/eww/scripts[0m on [1;35m [0m[1;35mmain[0m [1;31m[[0m[1;31m?[0m[1;31m⇡[0m[1;31m][0m via [1;34m🌙 [0m[1;34mv2.1.0-beta3[0m[1;34m [0mtook [1;33m3s[0m 
+[1;31m❯[0m hx workspaces.^C[?2004l[?2004h[?2004l
+[?2004h
+[1;36mwm/eww/scripts[0m on [1;35m [0m[1;35mmain[0m [1;31m[[0m[1;31m![0m[1;31m?[0m[1;31m⇡[0m[1;31m][0m via [1;34m🌙 [0m[1;34mv2.1.0-beta3[0m[1;34m [0m
+[1;31m❯[0m make[K[K[K[K./
+[01;32mbattery.sh[0m[K      [01;32mbrightness.sh[0m[K   [01;32mvolume.sh[0m[K       [01;32mwifi.sh[0m[K         [01;32mworkspaces.lua[0m[K  [01;32mworkspaces.sh[0m[K   
+
+[1;36mwm/eww/scripts[0m on [1;35m [0m[1;35mmain[0m [1;31m[[0m[1;31m![0m[1;31m?[0m[1;31m⇡[0m[1;31m][0m via [1;34m🌙 [0m[1;34mv2.1.0-beta3[0m[1;34m [0m
+[1;31m❯[0m ./
+[01;32mbattery.sh[0m[K      [01;32mbrightness.sh[0m[K   [01;32mvolume.sh[0m[K       [01;32mwifi.sh[0m[K         [[1;31m?[0m[1;31m⇡[0m[1;31m][0m 
+[1;31m❯[0m  [K [7m [27m[Kls
+[?2004ldefault.nix  eww.scss  eww.yuck  [1;34mscripts[0m  typescript
+[?2004h
+[1;36mmodules/wm/eww[0m on [1;35m [0m[1;35mmain[0m [1;31m[[0m[1;31m?[0m[1;31m⇡[0m[1;31m][0m 
+[1;32m❯[0m hx eww.[K[K[K[K[K[K[Knvim d[Keww.[K[K[K[K[K[K[K[K[Ksc
+[01;36mscalc[0m[K         [01;36mscreendump[0m[K    [01;36mscriptlive[0m[K    
+[01;36mscp[0m[K           [01;36mscript[0m[K        [01;36mscriptreplay[0m[K  
+
+[1;36mmodules/wm/eww[0m on [1;35m [0m[1;35mmain[0m [1;31m[[0m[1;31m?[0m[1;31m⇡[0m[1;31m][0m 
+[1;32m❯[0m script
+[?2004lScript started, output log file is 'typescript'.
+[?2004h
+[1;36mmodules/wm/eww[0m on [1;35m [0m[1;35mmain[0m [1;31m[[0m[1;31m?[0m[1;31m⇡[0m[1;31m][0m 
+[1;32m❯[0m Hyprland /
+[?2004lHyprland usage: Hyprland [arg [...]].
+
+Arguments:
+--help         -h | Show this help message
+--config       -c | Specify config file to use
+[?2004h
+[1;36mmodules/wm/eww[0m on [1;35m [0m[1;35mmain[0m [1;31m[[0m[1;31m?[0m[1;31m⇡[0m[1;31m][0m 
+[1;31m❯[0m z scripts/
+[?2004l[?2004h
+[1;36mwm/eww/scripts[0m on [1;35m [0m[1;35mmain[0m [1;31m[[0m[1;31m?[0m[1;31m⇡[0m[1;31m][0m via [1;34m🌙 [0m[1;34mv2.1.0-beta3[0m[1;34m [0m
+[1;32m❯[0m ls
+[?2004l[1;32mbattery.sh[0m  [1;32mbrightness.sh[0m  [1;32mvolume.sh[0m  [1;32mwifi.sh[0m  [1;32mworkspaces.lua[0m  [1;32mworkspaces.sh[0m
+[?2004h
+[1;36mwm/eww/scripts[0m on [1;35m [0m[1;35mmain[0m [1;31m[[0m[1;31m?[0m[1;31m⇡[0m[1;31m][0m via [1;34m🌙 [0m[1;34mv2.1.0-beta3[0m[1;34m [0m
+[1;32m❯[0m go run [K[K[K[K[K[K[Klua workspaces.lua 
+[?2004l(box :orientation "v" :spacing 1 :space-evenly "true" (button :class "inactive" )(button :class "active" )(button :class "inactive" )(button :class "active" )(button :class "inactive" )(button :class "active" )(button :class "inactive" )(button :class "active" )(button :class "inactive" )(button :class "active" )(button :class "inactive" )(button :class "active" )(button :class "inactive" )(button :class "active" ))
+[?2004h
+[1;36mwm/eww/scripts[0m on [1;35m [0m[1;35mmain[0m [1;31m[[0m[1;31m?[0m[1;31m⇡[0m[1;31m][0m via [1;34m🌙 [0m[1;34mv2.1.0-beta3[0m[1;34m [0m
+[1;32m❯[0m [K[1;32m❯[0m lua workspaces.lua [K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kbash [C[C[3Pls[K[Ksh [K[K[K./
+[01;32mbattery.sh[0m[K      [01;32mbrightness.sh[0m[K   [01;32mvolume.sh[0m[K       [01;32mwifi.sh[0m[K         [01;32mworkspaces.lua[0m[K  [01;32mworkspaces.sh[0m[K   
+
+[1;36mwm/eww/scripts[0m on [1;35m [0m[1;35mmain[0m [1;31m[[0m[1;31m?[0m[1;31m⇡[0m[1;31m][0m via [1;34m🌙 [0m[1;34mv2.1.0-beta3[0m[1;34m [0m
+[1;32m❯[0m ./
+[01;32mbattery.sh[0m[K      [01;32mbrightness.sh[0m[K   [01;32mvolume.sh[0m[K       [01;32mwifi.sh[0m[K         [01;32mworkspaces.lua[0m[K  [01;32mworkspaces.sh[0m[K   
+
+[1;36mwm/eww/scripts[0m on [1;35m [0m[1;35mmain[0m [1;31m[[0m[1;31m?[0m[1;31m⇡[0m[1;31m][0m via [1;34m🌙 [0m[1;34mv2.1.0-beta3[0m[1;34m [0m
+[1;32m❯[0m ./workspaces.sh
+[?2004l./workspaces.sh: line 3: ./scripts/workspaces.lua: No such file or directory
+^C
+[?2004h
+[1;36mwm/eww/scripts[0m on [1;35m [0m[1;35mmain[0m [1;31m[[0m[1;31m?[0m[1;31m⇡[0m[1;31m][0m via [1;34m🌙 [0m[1;34mv2.1.0-beta3[0m[1;34m [0mtook [1;33m3s[0m 
+[1;31m❯[0m hx s[Kworkspaces.
+[01;32mworkspaces.lua[0m[K  [01;32mworkspaces.sh[0m[K   
+
+[1;36mwm/eww/scripts[0m on [1;35m [0m[1;35mmain[0m [1;31m[[0m[1;31m?[0m[1;31m⇡[0m[1;31m][0m via [1;34m🌙 [0m[1;34mv2.1.0-beta3[0m[1;34m [0mtook [1;33m3s[0m 
+[1;31m❯[0m hx workspaces.^C[?2004l[?2004h[?2004l
+[?2004h
+[1;36mwm/eww/scripts[0m on [1;35m [0m[1;35mmain[0m [1;31m[[0m[1;31m![0
