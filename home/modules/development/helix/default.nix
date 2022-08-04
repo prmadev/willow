@@ -16,7 +16,7 @@ with lib; {
   config = mkIf config.helix.enable {
     programs.helix = {
       enable = true;
-
+      package = inputs.helix.packages.${pkgs.system}.default;
       languages = [
         {
           name = "nix";
