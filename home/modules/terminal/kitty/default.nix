@@ -32,7 +32,7 @@ with lib; {
 
         # Font settings
         font_size = 11;
-        adjust_line_height = 12;
+        # adjust_line_height = 12;
         font_family = config.global-fonts.main-family;
         bold_font = config.global-fonts.main-black;
         italic_font = config.global-fonts.main-black;

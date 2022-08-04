@@ -4,7 +4,7 @@
   config,
   inputs,
   ...
-}:
+} @ args:
 with lib; {
   imports = [./rosepine.nix];
   options = {

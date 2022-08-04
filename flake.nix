@@ -7,9 +7,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nur.url = "github:nix-community/NUR";
-    newm = {
-      url = "github:jbuchermn/newm";
-    };
+
     ragenix = {
       url = "github:yaxitech/ragenix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -98,6 +96,8 @@
     pkgs = import nixpkgs {
       inherit system;
       config.allowUnfree = true;
+      overlays = [
+      ];
     };
     lib = nixpkgs.lib;
   in
