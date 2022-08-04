@@ -11,9 +11,7 @@
     (box :valign "end" :hexpand false :vexpand true :orientation "v" :space-evenly false
       (battery)
       (wifi)
-      (mem :thickness 4 :icon "")
-      (cpu :thickness 4 :icon "")
-      (disk :thickness 4 :icon "")
+
       (time)
     )
   )
