@@ -27,7 +27,7 @@ with lib; {
       libdbusmenu-gtk3
       libevdev
       scdoc
-      binutils-unwrapped-all-targets
+      gcc12
     ];
     programs.waybar = mkIf config.waybar.enable {
       enable = true;
