@@ -17,6 +17,15 @@ with lib; {
       meson
       ninja
       wayland-protocols
+      gtkmm3
+      jsoncpp
+      libsigcxx30
+      fmt_8
+      wayland
+      libnl
+      libappindicator-gtk3
+      libdbusmenu-gtk3
+      libevdev
     ];
     programs.waybar = mkIf config.waybar.enable {
       enable = true;
