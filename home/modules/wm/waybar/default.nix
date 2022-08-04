@@ -24,10 +24,11 @@ with lib; {
           position = "top";
           height = 0;
           modules-left = [
-            "wlr/workspaces"
-            "wlr/taskbar"
-            "river/mode"
+            # "wlr/workspaces"
+            # "wlr/taskbar"
+            # "river/mode"
             "river/tags"
+            "custom/hyprworkspace"
           ];
           modules-center = [
             "clock"
@@ -40,6 +41,10 @@ with lib; {
             "pulseaudio"
             "battery"
           ];
+          "custom/hyprworkspace" = {
+            interval = "1";
+            exec = "hyprgo -a";
+          };
 
           "river/tags" = {
             num-tags = 9;

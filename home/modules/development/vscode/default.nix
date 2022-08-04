@@ -29,6 +29,7 @@ with lib; {
         oderwat.indent-rainbow
         redhat.vscode-yaml
         timonwong.shellcheck
+        bbenoist.nix
       ];
     };
   };
