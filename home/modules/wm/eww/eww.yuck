@@ -1,10 +1,5 @@
 (defwidget bar []
-  (centerbox :orientation "v" :hexpand false
-    (box :valign "start" :hexpand false :vexpand true :orientation "v" :space-evenly false
-      (launch)
-      (dashbutton)
-      (powerbutton)
-    )
+  
 
     (workspaces :halign "center" :vexpand true :hexpand false :orientation "v")
 
@@ -15,7 +10,7 @@
       (time)
     )
   )
-)
+
 
 (defpoll brightness :interval "999h" :initial 0 `brightnessctl -m | awk -F, '{print substr($4, 0, length($4)-1)}'`)
 (defpoll volume :interval "999h" :initial 0 `pamixer --get-volume`)
