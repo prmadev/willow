@@ -272,7 +272,7 @@
 (defwindow dashboard
   :monitor 0
   :geometry (geometry 
-  :height "1080px" 
+  :height "700px" 
   :width "350px"
   :x "48px"
   :y "0px"
@@ -284,7 +284,7 @@
 (defwindow bar
   :monitor 0
   :exclusive false 
-  :geometry (geometry :height "900px" :x "-4px" :y "0px"
+  :geometry (geometry :height "700px" :x "-4px" :y "0px"
   :width "52px"
   :anchor "top left")
   :stacking "fg"
