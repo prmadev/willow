@@ -14,7 +14,9 @@ with lib; {
 
   config = {
     home.packages = with pkgs; [
-      rootbar
+      meson
+      ninja
+      wayland-protocols
     ];
     programs.waybar = mkIf config.waybar.enable {
       enable = true;
