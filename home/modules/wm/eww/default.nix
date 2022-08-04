@@ -17,6 +17,7 @@ in {
     # eww package
     home.packages = with pkgs; [
       eww-wayland
+      luajit
       pamixer
       brightnessctl
       (nerdfonts.override {fonts = ["JetBrainsMono"];})
