@@ -221,7 +221,7 @@ with lib; {
         	background: ${config.cat.mocha.green.hex};
         }
         #custom-hyprmon{
-          background: ${config.colors.love.hex}
+          background: ${config.colors.love.hex};
           margin: 10px 10px 0px 10px;
         }
         #custom-joljol {
