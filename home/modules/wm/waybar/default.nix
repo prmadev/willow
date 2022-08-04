@@ -42,7 +42,7 @@ with lib; {
             "battery"
           ];
           "custom/hyprworkspace" = {
-            interval = "1";
+            interval = 1;
             exec = "hyprgo -a";
           };
 
