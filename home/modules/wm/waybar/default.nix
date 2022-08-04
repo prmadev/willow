@@ -43,7 +43,7 @@ with lib; {
           ];
           "custom/hyprmon" = {
             interval = 1;
-            exec = "hyprgo -a";
+            exec = "hyprgo -a|jq --unbuffered --compact-output";
             return-type = "json";
             format = "{}";
           };
