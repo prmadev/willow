@@ -28,6 +28,7 @@ with lib; {
       libevdev
       scdoc
       gcc12
+      bintools
     ];
     programs.waybar = mkIf config.waybar.enable {
       enable = true;
