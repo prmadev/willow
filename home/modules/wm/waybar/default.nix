@@ -46,6 +46,7 @@ with lib; {
             exec = "hyprgo -a|jq --unbuffered --compact-output";
             return-type = "json";
             format = "{}";
+            text = "   ";
           };
 
           "river/tags" = {
