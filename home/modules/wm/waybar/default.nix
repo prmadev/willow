@@ -26,6 +26,8 @@ with lib; {
       libappindicator-gtk3
       libdbusmenu-gtk3
       libevdev
+      scdoc
+      binutils-unwrapped-all-targets
     ];
     programs.waybar = mkIf config.waybar.enable {
       enable = true;
