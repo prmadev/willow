@@ -14,21 +14,6 @@ with lib; {
 
   config = {
     home.packages = with pkgs; [
-      meson
-      ninja
-      wayland-protocols
-      gtkmm3
-      jsoncpp
-      libsigcxx30
-      fmt_8
-      wayland
-      libnl
-      libappindicator-gtk3
-      libdbusmenu-gtk3
-      libevdev
-      scdoc
-      gcc12
-      bintools
     ];
     programs.waybar = mkIf config.waybar.enable {
       enable = true;
