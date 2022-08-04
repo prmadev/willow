@@ -45,7 +45,6 @@ with lib; {
             interval = 1;
             exec = "hyprgo -a";
             return-type = "json";
-            text = "";
           };
 
           "river/tags" = {
