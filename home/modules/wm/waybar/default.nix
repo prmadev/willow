@@ -500,7 +500,8 @@ with lib; {
           padding: 0px 5px;
         	margin-right: 5px;
         	margin-left: 5px;
-                    margin-top: 5px;
+          margin-top: 5px;
+          border-radius: 2px;
 
         }
 
@@ -513,8 +514,8 @@ with lib; {
           margin-top: 5px;
         }
         #custom-hyprgows1.occupied {
-          color: ${config.colors.text.hex};
-          background: ${config.colors.rose.hex};
+          color: ${config.colors.base.hex};
+          background: ${config.colors.foam.hex};
         }
       '';
     };
