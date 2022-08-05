@@ -425,6 +425,7 @@ with lib; {
         #tray menu {
         	color: ${config.cat.mocha.yellow.hex};
         }
+
         #custom-hyprgows1 {
           color: ${config.colors.text.hex};
           background: ${config.colors.base.hex};
@@ -432,7 +433,8 @@ with lib; {
         	margin-right: 5px;
         	margin-left: 5px;
         }
-                #custom-hyprgows1 {
+
+        #custom-hyprgows2 {
           color: ${config.colors.text.hex};
           background: ${config.colors.base.hex};
           padding: 0px 5px;
@@ -440,7 +442,60 @@ with lib; {
         	margin-left: 5px;
         }
 
+        #custom-hyprgows3 {
+          color: ${config.colors.text.hex};
+          background: ${config.colors.base.hex};
+          padding: 0px 5px;
+        	margin-right: 5px;
+        	margin-left: 5px;
+        }
 
+        #custom-hyprgows4 {
+          color: ${config.colors.text.hex};
+          background: ${config.colors.base.hex};
+          padding: 0px 5px;
+        	margin-right: 5px;
+        	margin-left: 5px;
+        }
+        #custom-hyprgows5 {
+          color: ${config.colors.text.hex};
+          background: ${config.colors.base.hex};
+          padding: 0px 5px;
+        	margin-right: 5px;
+        	margin-left: 5px;
+        }
+
+        #custom-hyprgows6 {
+          color: ${config.colors.text.hex};
+          background: ${config.colors.base.hex};
+          padding: 0px 5px;
+        	margin-right: 5px;
+        	margin-left: 5px;
+        }
+
+          #custom-hyprgows7 {
+          color: ${config.colors.text.hex};
+          background: ${config.colors.base.hex};
+          padding: 0px 5px;
+        	margin-right: 5px;
+        	margin-left: 5px;
+        }
+
+        #custom-hyprgows8 {
+          color: ${config.colors.text.hex};
+          background: ${config.colors.base.hex};
+          padding: 0px 5px;
+        	margin-right: 5px;
+        	margin-left: 5px;
+        }
+
+        #custom-hyprgows9 {
+          color: ${config.colors.text.hex};
+          background: ${config.colors.base.hex};
+          padding: 0px 5px;
+        	margin-right: 5px;
+        	margin-left: 5px;
+        }
       '';
     };
   };
