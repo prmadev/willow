@@ -505,8 +505,7 @@ with lib; {
         }
 
         #custom-hyprgows9 {
-          display:none;
-          color: ${config.colors.text.hex};
+          color: ${config.colors.base.hex};
           background: ${config.colors.base.hex};
           padding: 0px 5px;
         	margin-right: 5px;
