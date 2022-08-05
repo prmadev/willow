@@ -501,7 +501,7 @@ with lib; {
         	margin-right: 5px;
         	margin-left: 5px;
           margin-top: 5px;
-          border-radius: 2px;
+          border-radius: 7px;
 
         }
 
