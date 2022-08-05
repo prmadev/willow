@@ -220,12 +220,12 @@ with lib; {
         	font-family: ${config.global-fonts.main-family};
         	font-size: 15px;
         	min-height: 20px;
-        	border-radius: 0px;
+        	border-radius: 5px;
         }
 
         window#waybar {
         	background: transparent;
-        	border-radius: 0px;
+        	border-radius: 5px;
         }
         tooltip {
         	background: ${config.cat.mocha.surface0.hex};
@@ -379,6 +379,8 @@ with lib; {
         #pulseaudio {
         	background: ${config.cat.mocha.mauve.hex};
         	color: ${config.cat.mocha.crust.hex};
+                    border-radius: 5px;
+
         }
         #pulseaudio.ninty {
         	background: linear-gradient(to top, ${config.cat.mocha.mauve.hex} 90%, ${config.cat.mocha.pink.hex} 90%);
@@ -420,10 +422,14 @@ with lib; {
         	/* padding: 5px 10px; */
         	margin: 10px 10px 0px 10px;
         	color: ${config.cat.mocha.yellow.hex};
+                    border-radius: 5px;
+
         }
 
         #tray menu {
         	color: ${config.cat.mocha.yellow.hex};
+                    border-radius: 5px;
+
         }
 
         #custom-hyprgows1 {
@@ -433,6 +439,8 @@ with lib; {
         	margin-right: 5px;
           margin-top: 5px;
         	margin-left: 5px;
+                    border-radius: 5px;
+
         }
 
         #custom-hyprgows2 {
@@ -441,6 +449,7 @@ with lib; {
           padding: 0px 5px;
         	margin-right: 5px;
                     margin-top: 5px;
+          border-radius: 5px;
 
         	margin-left: 5px;
         }
@@ -452,6 +461,7 @@ with lib; {
         	margin-right: 5px;
         	margin-left: 5px;
                     margin-top: 5px;
+          border-radius: 5px;
 
         }
 
@@ -462,6 +472,7 @@ with lib; {
         	margin-right: 5px;
         	margin-left: 5px;
                     margin-top: 5px;
+          border-radius: 5px;
 
         }
         #custom-hyprgows5 {
@@ -471,6 +482,7 @@ with lib; {
         	margin-right: 5px;
         	margin-left: 5px;
                     margin-top: 5px;
+          border-radius: 5px;
 
         }
 
@@ -481,6 +493,8 @@ with lib; {
         	margin-right: 5px;
         	margin-left: 5px;
                     margin-top: 5px;
+                              border-radius: 5px;
+
 
         }
 
@@ -491,6 +505,8 @@ with lib; {
         	margin-right: 5px;
         	margin-left: 5px;
                     margin-top: 5px;
+                              border-radius: 5px;
+
 
         }
 
@@ -501,7 +517,7 @@ with lib; {
         	margin-right: 5px;
         	margin-left: 5px;
           margin-top: 5px;
-          border-radius: 7px;
+          border-radius: 5px;
 
         }
 
@@ -512,6 +528,8 @@ with lib; {
         	margin-right: 5px;
         	margin-left: 5px;
           margin-top: 5px;
+                    border-radius: 5px;
+
         }
         #custom-hyprgows1.occupied {
           color: ${config.colors.base.hex};
