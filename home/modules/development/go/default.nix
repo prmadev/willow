@@ -14,7 +14,7 @@ with lib; {
   config = mkIf config.go.enable {
     programs.go = {
       enable = true;
-      package = pkgs.go_1_18;
+      package = pkgs.go_1_19;
       packages = {
         # "golang.org/x/text" = builtins.fetchGit "https://go.googlesource.com/text";
       };
