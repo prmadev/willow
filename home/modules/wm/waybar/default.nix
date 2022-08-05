@@ -433,7 +433,7 @@ with lib; {
         }
 
         #custom-hyprgows1 {
-          color: ${config.colors.text.hex};
+          color: ${config.colors.base.hex};
           background: ${config.colors.base.hex};
           padding: 0px 5px;
         	margin-right: 5px;
@@ -444,7 +444,7 @@ with lib; {
         }
 
         #custom-hyprgows2 {
-          color: ${config.colors.text.hex};
+          color: ${config.colors.base.hex};
           background: ${config.colors.base.hex};
           padding: 0px 5px;
         	margin-right: 5px;
@@ -455,7 +455,7 @@ with lib; {
         }
 
         #custom-hyprgows3 {
-          color: ${config.colors.text.hex};
+          color: ${config.colors.base.hex};
           background: ${config.colors.base.hex};
           padding: 0px 5px;
         	margin-right: 5px;
@@ -466,7 +466,7 @@ with lib; {
         }
 
         #custom-hyprgows4 {
-          color: ${config.colors.text.hex};
+          color: ${config.colors.base.hex};
           background: ${config.colors.base.hex};
           padding: 0px 5px;
         	margin-right: 5px;
@@ -476,7 +476,7 @@ with lib; {
 
         }
         #custom-hyprgows5 {
-          color: ${config.colors.text.hex};
+          color: ${config.colors.base.hex};
           background: ${config.colors.base.hex};
           padding: 0px 5px;
         	margin-right: 5px;
@@ -487,7 +487,7 @@ with lib; {
         }
 
         #custom-hyprgows6 {
-          color: ${config.colors.text.hex};
+          color: ${config.colors.base.hex};
           background: ${config.colors.base.hex};
           padding: 0px 5px;
         	margin-right: 5px;
@@ -499,7 +499,7 @@ with lib; {
         }
 
           #custom-hyprgows7 {
-          color: ${config.colors.text.hex};
+          color: ${config.colors.base.hex};
           background: ${config.colors.base.hex};
           padding: 0px 5px;
         	margin-right: 5px;
@@ -511,7 +511,7 @@ with lib; {
         }
 
         #custom-hyprgows8 {
-          color: ${config.colors.text.hex};
+          color: ${config.colors.base.hex};
           background: ${config.colors.base.hex};
           padding: 0px 5px;
         	margin-right: 5px;
@@ -535,6 +535,39 @@ with lib; {
           color: ${config.colors.base.hex};
           background: ${config.colors.foam.hex};
         }
+         #custom-hyprgows2.occupied {
+          color: ${config.colors.base.hex};
+          background: ${config.colors.foam.hex};
+        }
+                 #custom-hyprgows3.occupied {
+          color: ${config.colors.base.hex};
+          background: ${config.colors.foam.hex};
+        }
+         #custom-hyprgows4.occupied {
+          color: ${config.colors.base.hex};
+          background: ${config.colors.foam.hex};
+        }
+         #custom-hyprgows5.occupied {
+          color: ${config.colors.base.hex};
+          background: ${config.colors.foam.hex};
+        }
+         #custom-hyprgows6.occupied {
+          color: ${config.colors.base.hex};
+          background: ${config.colors.foam.hex};
+        }
+         #custom-hyprgows7.occupied {
+          color: ${config.colors.base.hex};
+          background: ${config.colors.foam.hex};
+        }
+         #custom-hyprgows8.occupied {
+          color: ${config.colors.base.hex};
+          background: ${config.colors.foam.hex};
+        }
+         #custom-hyprgows9.occupied {
+          color: ${config.colors.base.hex};
+          background: ${config.colors.foam.hex};
+        }
+
       '';
     };
   };
