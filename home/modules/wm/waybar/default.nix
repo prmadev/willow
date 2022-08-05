@@ -28,11 +28,20 @@ with lib; {
             # "wlr/taskbar"
             # "river/mode"
             "river/tags"
-            "custom/hyprmon"
+            "custom/hyprgows1"
+            "custom/hyprgows2"
+            "custom/hyprgows3"
+            "custom/hyprgows4"
+            "custom/hyprgows5"
+            "custom/hyprgows6"
+            "custom/hyprgows7"
+            "custom/hyprgows8"
+            "custom/hyprgows9"
           ];
           modules-center = [
             "clock"
             "custom/joljol"
+            "custom/hyprgomon"
           ];
 
           modules-right = [
@@ -41,12 +50,67 @@ with lib; {
             "pulseaudio"
             "battery"
           ];
-          "custom/hyprmon" = {
+          "custom/hyprgomon" = {
             interval = 1;
             exec = "hyprgo -a";
             return-type = "json";
             format = "{}";
-            text = "   ";
+          };
+
+          "custom/hyprgows1" = {
+            interval = 1;
+            exec = "hyprgo -w 1";
+            return-type = "json";
+            format = "1:{}";
+          };
+          "custom/hyprgows2" = {
+            interval = 1;
+            exec = "hyprgo -w 2";
+            return-type = "json";
+            format = "2:{}";
+          };
+          "custom/hyprgows3" = {
+            interval = 1;
+            exec = "hyprgo -w 3";
+            return-type = "json";
+            format = "3:{}";
+          };
+          "custom/hyprgows4" = {
+            interval = 1;
+            exec = "hyprgo -w 4";
+            return-type = "json";
+            format = "4:{}";
+          };
+          "custom/hyprgows5" = {
+            interval = 1;
+            exec = "hyprgo -w 5";
+            return-type = "json";
+            format = "5:{}";
+          };
+
+          "custom/hyprgows6" = {
+            interval = 1;
+            exec = "hyprgo -w 6";
+            return-type = "json";
+            format = "6:{}";
+          };
+          "custom/hyprgows7" = {
+            interval = 1;
+            exec = "hyprgo -w 7";
+            return-type = "json";
+            format = "7:{}";
+          };
+          "custom/hyprgows8" = {
+            interval = 1;
+            exec = "hyprgo -w 8";
+            return-type = "json";
+            format = "8:{}";
+          };
+          "custom/hyprgows9" = {
+            interval = 1;
+            exec = "hyprgo -w 9";
+            return-type = "json";
+            format = "9:{}";
           };
 
           "river/tags" = {
@@ -223,7 +287,7 @@ with lib; {
         #clock {
         	background: ${config.cat.mocha.green.hex};
         }
-        #custom-hyprmon.first{
+        #custom-hyprmon.firstmon{
           background: ${config.colors.love.hex};
           margin: 10px 10px 0px 10px;
         }
