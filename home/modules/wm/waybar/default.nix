@@ -58,7 +58,7 @@ with lib; {
           };
 
           "custom/hyprgows1" = {
-            interval = 1;
+            interval = 0.1;
             exec = "hyprgo -w 1";
             return-type = "json";
             format = " {} ";
