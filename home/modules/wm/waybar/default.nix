@@ -505,13 +505,17 @@ with lib; {
         }
 
         #custom-hyprgows9 {
+          display:none;
           color: ${config.colors.text.hex};
           background: ${config.colors.base.hex};
           padding: 0px 5px;
         	margin-right: 5px;
         	margin-left: 5px;
           margin-top: 5px;
-
+        }
+        #custom-hyprgows1.occupied {
+          color: ${config.colors.text.hex};
+          background: ${config.colors.rose.hex};
         }
       '';
     };
