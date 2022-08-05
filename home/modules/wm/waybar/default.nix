@@ -54,63 +54,63 @@ with lib; {
             interval = 1;
             exec = "hyprgo -a";
             return-type = "json";
-            format = "{}";
+            format = " {} ";
           };
 
           "custom/hyprgows1" = {
             interval = 1;
             exec = "hyprgo -w 1";
             return-type = "json";
-            format = "{}";
+            format = " {} ";
           };
           "custom/hyprgows2" = {
             interval = 1;
             exec = "hyprgo -w 2";
             return-type = "json";
-            format = "{}";
+            format = " {} ";
           };
           "custom/hyprgows3" = {
             interval = 1;
             exec = "hyprgo -w 3";
             return-type = "json";
-            format = "{}";
+            format = " {} ";
           };
           "custom/hyprgows4" = {
             interval = 1;
             exec = "hyprgo -w 4";
             return-type = "json";
-            format = "{}";
+            format = " {} ";
           };
           "custom/hyprgows5" = {
             interval = 1;
             exec = "hyprgo -w 5";
             return-type = "json";
-            format = "{}";
+            format = " {} ";
           };
 
           "custom/hyprgows6" = {
             interval = 1;
             exec = "hyprgo -w 6";
             return-type = "json";
-            format = "{}";
+            format = " {} ";
           };
           "custom/hyprgows7" = {
             interval = 1;
             exec = "hyprgo -w 7";
             return-type = "json";
-            format = "{}";
+            format = " {} ";
           };
           "custom/hyprgows8" = {
             interval = 1;
             exec = "hyprgo -w 8";
             return-type = "json";
-            format = "{}";
+            format = " {} ";
           };
           "custom/hyprgows9" = {
             interval = 1;
             exec = "hyprgo -w 9";
             return-type = "json";
-            format = "{}";
+            format = " {} ";
           };
 
           "river/tags" = {
@@ -570,39 +570,39 @@ with lib; {
 
                 #custom-hyprgows1.active {
           color: ${config.colors.base.hex};
-          background: ${config.colors.foam.hex};
+          background: ${config.colors.love.hex};
         }
          #custom-hyprgows2.active {
           color: ${config.colors.base.hex};
-          background: ${config.colors.foam.hex};
+          background: ${config.colors.love.hex};
         }
                  #custom-hyprgows3.active {
           color: ${config.colors.base.hex};
-          background: ${config.colors.foam.hex};
+          background: ${config.colors.love.hex};
         }
          #custom-hyprgows4.active {
           color: ${config.colors.base.hex};
-          background: ${config.colors.foam.hex};
+          background: ${config.colors.love.hex};
         }
          #custom-hyprgows5.active {
           color: ${config.colors.base.hex};
-          background: ${config.colors.foam.hex};
+          background: ${config.colors.love.hex};
         }
          #custom-hyprgows6.active {
           color: ${config.colors.base.hex};
-          background: ${config.colors.foam.hex};
+          background: ${config.colors.love.hex};
         }
          #custom-hyprgows7.active {
           color: ${config.colors.base.hex};
-          background: ${config.colors.foam.hex};
+          background: ${config.colors.love.hex};
         }
          #custom-hyprgows8.active {
           color: ${config.colors.base.hex};
-          background: ${config.colors.foam.hex};
+          background: ${config.colors.love.hex};
         }
          #custom-hyprgows9.active {
           color: ${config.colors.base.hex};
-          background: ${config.colors.foam.hex};
+          background: ${config.colors.love.hex};
         }
 
       '';
