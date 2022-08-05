@@ -568,6 +568,43 @@ with lib; {
           background: ${config.colors.foam.hex};
         }
 
+                #custom-hyprgows1.active {
+          color: ${config.colors.base.hex};
+          background: ${config.colors.foam.hex};
+        }
+         #custom-hyprgows2.active {
+          color: ${config.colors.base.hex};
+          background: ${config.colors.foam.hex};
+        }
+                 #custom-hyprgows3.active {
+          color: ${config.colors.base.hex};
+          background: ${config.colors.foam.hex};
+        }
+         #custom-hyprgows4.active {
+          color: ${config.colors.base.hex};
+          background: ${config.colors.foam.hex};
+        }
+         #custom-hyprgows5.active {
+          color: ${config.colors.base.hex};
+          background: ${config.colors.foam.hex};
+        }
+         #custom-hyprgows6.active {
+          color: ${config.colors.base.hex};
+          background: ${config.colors.foam.hex};
+        }
+         #custom-hyprgows7.active {
+          color: ${config.colors.base.hex};
+          background: ${config.colors.foam.hex};
+        }
+         #custom-hyprgows8.active {
+          color: ${config.colors.base.hex};
+          background: ${config.colors.foam.hex};
+        }
+         #custom-hyprgows9.active {
+          color: ${config.colors.base.hex};
+          background: ${config.colors.foam.hex};
+        }
+
       '';
     };
   };
