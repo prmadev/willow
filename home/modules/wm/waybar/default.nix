@@ -64,50 +64,50 @@ with lib; {
             format = " {} ";
           };
           "custom/hyprgows2" = {
-            interval = 1;
+            interval = 0.1;
             exec = "hyprgo -w 2";
             return-type = "json";
             format = " {} ";
           };
           "custom/hyprgows3" = {
-            interval = 1;
+            interval = 0.1;
             exec = "hyprgo -w 3";
             return-type = "json";
             format = " {} ";
           };
           "custom/hyprgows4" = {
-            interval = 1;
+            interval = 0.1;
             exec = "hyprgo -w 4";
             return-type = "json";
             format = " {} ";
           };
           "custom/hyprgows5" = {
-            interval = 1;
+            interval = 0.1;
             exec = "hyprgo -w 5";
             return-type = "json";
             format = " {} ";
           };
 
           "custom/hyprgows6" = {
-            interval = 1;
+            interval = 0.1;
             exec = "hyprgo -w 6";
             return-type = "json";
             format = " {} ";
           };
           "custom/hyprgows7" = {
-            interval = 1;
+            interval = 0.1;
             exec = "hyprgo -w 7";
             return-type = "json";
             format = " {} ";
           };
           "custom/hyprgows8" = {
-            interval = 1;
+            interval = 0.1;
             exec = "hyprgo -w 8";
             return-type = "json";
             format = " {} ";
           };
           "custom/hyprgows9" = {
-            interval = 1;
+            interval = 0.1;
             exec = "hyprgo -w 9";
             return-type = "json";
             format = " {} ";
