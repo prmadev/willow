@@ -431,6 +431,7 @@ with lib; {
           background: ${config.colors.base.hex};
           padding: 0px 5px;
         	margin-right: 5px;
+          margin-top: 5px;
         	margin-left: 5px;
         }
 
@@ -439,6 +440,8 @@ with lib; {
           background: ${config.colors.base.hex};
           padding: 0px 5px;
         	margin-right: 5px;
+                    margin-top: 5px;
+
         	margin-left: 5px;
         }
 
@@ -448,6 +451,8 @@ with lib; {
           padding: 0px 5px;
         	margin-right: 5px;
         	margin-left: 5px;
+                    margin-top: 5px;
+
         }
 
         #custom-hyprgows4 {
@@ -456,6 +461,8 @@ with lib; {
           padding: 0px 5px;
         	margin-right: 5px;
         	margin-left: 5px;
+                    margin-top: 5px;
+
         }
         #custom-hyprgows5 {
           color: ${config.colors.text.hex};
@@ -463,6 +470,8 @@ with lib; {
           padding: 0px 5px;
         	margin-right: 5px;
         	margin-left: 5px;
+                    margin-top: 5px;
+
         }
 
         #custom-hyprgows6 {
@@ -471,6 +480,8 @@ with lib; {
           padding: 0px 5px;
         	margin-right: 5px;
         	margin-left: 5px;
+                    margin-top: 5px;
+
         }
 
           #custom-hyprgows7 {
@@ -479,6 +490,8 @@ with lib; {
           padding: 0px 5px;
         	margin-right: 5px;
         	margin-left: 5px;
+                    margin-top: 5px;
+
         }
 
         #custom-hyprgows8 {
@@ -487,6 +500,8 @@ with lib; {
           padding: 0px 5px;
         	margin-right: 5px;
         	margin-left: 5px;
+                    margin-top: 5px;
+
         }
 
         #custom-hyprgows9 {
@@ -495,6 +510,8 @@ with lib; {
           padding: 0px 5px;
         	margin-right: 5px;
         	margin-left: 5px;
+          margin-top: 5px;
+
         }
       '';
     };
