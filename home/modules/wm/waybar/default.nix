@@ -432,6 +432,13 @@ with lib; {
         	margin-right: 5px;
         	margin-left: 5px;
         }
+                #custom-hyprgows1 {
+          color: ${config.colors.text.hex};
+          background: ${config.colors.base.hex};
+          padding: 0px 5px;
+        	margin-right: 5px;
+        	margin-left: 5px;
+        }
 
 
       '';
