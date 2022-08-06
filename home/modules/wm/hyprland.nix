@@ -21,7 +21,7 @@
                gaps_out=5
                border_size=3
                damage_tracking=full
-               layout=master
+               #layout=master
 
                col.active_border=0xff31748f
                col.inactive_border=0xff191724
