@@ -11,14 +11,14 @@
            :reserve (struts :distance "40px" :side "top")
            :windowtype "dock"
            :wm-ignore false
-  (greeter :text "Say hello!" :name "Amir"))
+  (greeter :text "Seay hello!" :name "Amir"))
 
 
 (defwidget greeter [?text name]
     (box :orientation "horizontal"
         :halign "center"
         text
-        (botton :onclick "notify-send 'hello' 'hello,${name}'" "Greet")
+        (button :onclick "notify-send 'hello' 'hello,${name}'" "Greet")
     )
 )
 
