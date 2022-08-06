@@ -1,21 +1,17 @@
-$base: #44465c;
-$blue: #3fc6de;
-$surface0: #44465c;
-$surface1: #44465c;
+$base: #191724;
+$pine: #31748f;
+$surface: #1f1d2e;
 $text: #d9e0ee;
-$overlay0: #6e738d;
-$red: #ec6a88;
-$peach: #efb993;
-$yellow: #efb993;
-$mauve: #b072d1;
-$green: #3fdaa4;
-$mantle: #292a37;
-$crust: #2e303e;
-$light-gray: #9699b7;
+$overlay: #26233a;
+$love: #eb6f92;
+$gold: #f6c177;
+$iris: #c4a7e7;
+$foam: #8ccfd8;
+$subtle: #908caa;
 
 * {
     all: unset; //Unsets everything so you can style everything from scratch
-    font-family: "JetBrainsMono"
+    font-family: monosapce;
 }
 
 .icon {
@@ -29,7 +25,7 @@ button {
 }
 
 .active {
-    color: $green;
+    color: $foam;
     font-size: 1.4rem;
 }
 
@@ -39,16 +35,16 @@ button {
 }
 
 .inactive:hover {
-    color: $light-gray;
+    color: $subtle;
 }
 
 .bar {
-    background-color: $mantle;
-    border-left: 4px dotted $red;
+    background-color: $base;
+    border-left: 4px dotted $love;
 }
 
 .dashboard {
-    background-color: $mantle;
+    background-color: $base;
     padding: 1rem;
     margin-bottom: 1rem;
 }
@@ -65,20 +61,20 @@ button {
 .calendar_box {
     padding: 1rem;
     calendar:selected {
-        color: $blue;
+        color: $pine;
     }
 
     calendar.header {
-        color: $blue;
+        color: $pine;
         font-weight: bold;
     }
 
     calendar.button {
-        color: $blue;
+        color: $pine;
     }
 
     calendar.highlight {
-        color: $green;
+        color: $foam;
         font-weight: bold;
     }
 
@@ -91,24 +87,24 @@ button {
     padding: 1rem;
     .iconmem {
         font-size: 3rem;
-        color: $yellow;
+        color: $gold;
     }
     .iconcpu {
         font-size: 3rem;
-        color: $blue;
+        color: $pine;
     }
     .icondisk {
         font-size: 3rem;
-        color: $green;
+        color: $foam;
     }
     .cpubar, .membar, .diskbar {
-        background-color: $crust;
+        background-color: $base;
     }
 }
 .slider_box {
     padding: 0 1rem;
     scale {
-        background-color: $crust;
+        background-color: $base;
         border-radius: 100px;
         margin: 0.5rem 0;
     }
@@ -124,15 +120,15 @@ button {
     }
     
     .brightness_slider highlight {
-        background-color: $yellow;
+        background-color: $gold;
     }
 
     .volume_slider highlight {
-        background-color: $blue;
+        background-color: $pine;
     }
 
     .micvolume_slider highlight {
-        background-color: $green;
+        background-color: $foam;
     }
     
     .slider_icon {
@@ -146,7 +142,7 @@ button {
 
 .wifi {
   font-size: 2rem;
-  color: $blue;
+  color: $pine;
 }
 
 .clock {
@@ -159,20 +155,20 @@ button {
 }
 
 .cpubar {
-  color: $blue;
-  background-color: $surface1;
+  color: $pine;
+  background-color: $surface;
   margin: 4px 0;
 }
 
 .diskbar {
-  color: $green;
-  background-color: $surface1;
+  color: $foam;
+  background-color: $surface;
   margin: 4px 0;
 }
 
 .membar {
-    color: $yellow;
-    background-color: $surface1;
+    color: $gold;
+    background-color: $surface;
   margin: 4px 0;
 }
 
@@ -192,7 +188,7 @@ button {
 }
 
 .dashbutton {
-    color: $mauve;
+    color: $iris;
 }
 
 .dashbutton:hover {
@@ -200,12 +196,12 @@ button {
 }
 
 .dashbutton:active {
-    background-color: $mauve;
-    color: $mantle;
+    background-color: $iris;
+    color: $base;
 }
 
 .powerbutton { 
-    color: $red; 
+    color: $love; 
 }
 
 .powerbutton:hover {
@@ -213,28 +209,28 @@ button {
 }
 
 .powerbutton:active {
-    background-color: $red;
-    color: $mantle;
+    background-color: $love;
+    color: $base;
 }
 
 .launchbutton { 
-    background-color: $blue; 
-    color: $mantle;
+    background-color: $pine; 
+    color: $base;
     margin-top: 6px;
 }
 
 .launchbutton:hover {
-    background-color: $mauve;
+    background-color: $iris;
 }
 
 .launchbutton:active {
-    color: $mauve;
-    background-color: $mantle;
+    color: $iris;
+    background-color: $base;
 }
 
 .battery {
     font-size: 1.5rem;
-    color: $blue;
+    color: $pine;
 }
 
 // Credits AlphaTechnolog
@@ -245,17 +241,17 @@ button {
     .dispatcher {
         border-radius: 15px;
         background: $base;
-        color: $red;
+        color: $love;
         font-size: 14px;
         padding: 0 14px 0 10px;
-        &:hover { background-color: $surface0; }
-        &:active { background-color: $surface1; }
+        &:hover { background-color: $surface; }
+        &:active { background-color: $surface; }
     }
 }
 
 // powermenu
 .powermenu-container {
-  background: $crust;
+  background: $base;
   color: $text;
   padding: 10px;
   font-size: 55px;
@@ -265,27 +261,27 @@ button {
   .btn { margin: 1rem;}
   // shutdown
   .shutdown-btn-box .btn {
-    color: $red;
+    color: $love;
     border-radius: 15px;
-    background-color: $mantle;
+    background-color: $base;
     &:hover { background-color: $base; }
-    &:active { background-color: $surface1; }
+    &:active { background-color: $surface; }
   }
   // reboot
   .reboot-btn-box .btn {
-    color: $mauve;
+    color: $iris;
     border-radius: 15px;
-    background-color: $mantle;
+    background-color: $base;
     &:hover { background-color: $base; }
-    &:active { background-color: $surface1; }
+    &:active { background-color: $surface; }
   }
   // exit
   .exit-btn-box .btn {
-    color: $yellow;
+    color: $gold;
     border-radius: 15px;
-    background-color: $mantle;
+    background-color: $base;
     &:hover { background-color: $base; }
-    &:active { background-color: $surface1; }
+    &:active { background-color: $surface; }
   }
 }
 
