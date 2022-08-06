@@ -24,7 +24,7 @@
 ;;;;;;
 
 
-(defwidget workspace
+(defwidget workspace []
 	(box :class "workspace")
 	ws
 )
