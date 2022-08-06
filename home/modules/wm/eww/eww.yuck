@@ -1,3 +1,4 @@
+; the bar section
 (defwindow topbar
            :monitor 0
            :geometry (geometry :x "0%"
@@ -15,6 +16,7 @@
                 (button :onclick "notify-send hey ho"
                     "click me"
                 )
+                (greeter :name "amir")
             )
 
 )
@@ -22,7 +24,9 @@
 (defwidget labeled-container [name]
     (box :class "container"
      name
-(children)
+        (box :class "first" (children :nth 0))
+        (box :class "second" (children :nth 1))
+
     )
 )
 
