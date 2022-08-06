@@ -1,4 +1,4 @@
-(defwindow window
+(defwindow topbar
            :monitor 0
            :geometry (geometry :x "0%"
                                :y "20px"
@@ -11,8 +11,21 @@
            :reserve (struts :distance "40px" :side "top")
            :windowtype "dock"
            :wm-ignore false
-  (greeter :text "Say hello!" :name "Amir"))
+            (labeled-container :name "foo"
+                (button :onclick "notify-send hey ho"
+                    "click me"
+                )
+            )
 
+)
+
+(defwidget labeled-container [name]
+    (box :class "container"
+     name
+     (greeter :text "Say hello!" :name "Amir")
+
+    )
+)
 
 (defwidget greeter [?text name]
     (box :orientation "horizontal"
