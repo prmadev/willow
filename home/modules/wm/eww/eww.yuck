@@ -22,8 +22,7 @@
 (defwidget labeled-container [name]
     (box :class "container"
      name
-     (greeter :text "Say hello!" :name "Amir")
-
+(children)
     )
 )
 
