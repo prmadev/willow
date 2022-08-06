@@ -218,11 +218,11 @@ with lib; {
         	border-radius: 5px;
         }
         tooltip {
-        	background: ${config.cat.mocha.surface0.hex};
+        	background: ${config.colors.surface.hex};
         }
 
         tooltip label {
-        	color: ${config.cat.mocha.text.hex};
+        	color: ${config.colors.text.hex};
         }
         #tags {
         	background-color: transparent;
@@ -239,25 +239,25 @@ with lib; {
         	/* border-top: 3px solid #f6c177; */
         	/* border-left: 3px solid #f6c177; */
         	/* border-bottom: 2px solid #f6c177; */
-        	background: ${config.cat.mocha.crust.hex};
+        	background: ${config.colors.surface.hex};
         }
 
         #tags button.occupied {
         	border-radius: 0px;
         	font-weight: bold;
-        	color: ${config.cat.mocha.crust.hex};
-        	background: ${config.cat.mocha.lavender.hex};
+        	color: ${config.colors.base.hex};
+        	background: ${config.colors.foam.hex};
         }
 
         #tags button.focused {
         	font-weight: 900;
-        	color: ${config.cat.mocha.crust.hex};
-        	background: ${config.cat.mocha.flamingo.hex};
+        	color: ${config.colors.base.hex};
+        	background: ${config.colors.rose.hex};
         }
 
         #tags button.urgent {
-        	color: ${config.cat.mocha.crust.hex};
-        	background-color: ${config.cat.mocha.red.hex};
+        	color: ${config.colors.base.hex};
+        	background-color: ${config.colors.love.hex};
         	border-radius: 0px;
         }
 
@@ -267,15 +267,15 @@ with lib; {
         #pulseaudio,
         #network,
         #custom-joljol {
-        	background:${config.cat.mocha.blue.hex};
-        	color:${config.cat.mocha.crust.hex} ;
+        	background:${config.colors.pine.hex};
+        	color:${config.colors.base.hex} ;
         	padding: 2.5px 15px;
         	margin: 10px 10px 0px 0px;
         	font-weight: 900;
         }
 
         #clock {
-        	background: ${config.cat.mocha.green.hex};
+        	background: ${config.colors.pine.hex};
         }
         #custom-hyprmon.firstmon{
           background: ${config.colors.love.hex};
@@ -283,13 +283,13 @@ with lib; {
         }
 
         #custom-joljol {
-        	background: ${config.cat.mocha.green.hex};
+        	background: ${config.colors.pine.hex};
         	margin: 10px 10px 0px 10px;
         }
 
         #battery {
-        	background: ${config.cat.mocha.green.hex};
-        	color: ${config.cat.mocha.crust.hex};
+        	color: ${config.colors.base.hex};
+        	background: ${config.colors.foam.hex};
         }
 
         /* #battery.charging { */
@@ -297,127 +297,127 @@ with lib; {
         /* } */
 
         #battery.ninty.charging {
-        	background: linear-gradient(to right, ${config.cat.mocha.green.hex} 90%, ${config.cat.mocha.blue.hex} 90%);
+        	background: linear-gradient(to right, ${config.colors.pine.hex} 90%, ${config.colors.foam.hex} 90%);
         }
         #battery.ninty:not(.charging) {
-        	background: linear-gradient(to right, ${config.cat.mocha.green.hex} 90%, ${config.cat.mocha.flamingo.hex} 90%);
+        	background: linear-gradient(to right, ${config.colors.pine.hex} 90%, ${config.colors.rose.hex} 90%);
         }
         #battery.eighty.charging {
-        	background: linear-gradient(to right, ${config.cat.mocha.green.hex} 80%, ${config.cat.mocha.blue.hex} 80%);
+        	background: linear-gradient(to right, ${config.colors.pine.hex} 80%, ${config.colors.foam.hex} 80%);
         }
         #battery.eighty:not(.charging) {
-        	background: linear-gradient(to right, ${config.cat.mocha.green.hex} 80%, ${config.cat.mocha.flamingo.hex} 80%);
+        	background: linear-gradient(to right, ${config.colors.pine.hex} 80%, ${config.colors.rose.hex} 80%);
         }
         #battery.seventy.charging {
-        	background: linear-gradient(to right, ${config.cat.mocha.green.hex} 70%, ${config.cat.mocha.blue.hex} 70%);
+        	background: linear-gradient(to right, ${config.colors.pine.hex} 70%, ${config.colors.foam.hex} 70%);
         }
         #battery.seventy:not(.charging) {
-        	background: linear-gradient(to right, ${config.cat.mocha.green.hex} 70%, ${config.cat.mocha.flamingo.hex} 70%);
+        	background: linear-gradient(to right, ${config.colors.pine.hex} 70%, ${config.colors.rose.hex} 70%);
         }
         #battery.sixty.charging {
-        	background: linear-gradient(to right, ${config.cat.mocha.green.hex} 60%, ${config.cat.mocha.blue.hex} 60%);
+        	background: linear-gradient(to right, ${config.colors.pine.hex} 60%, ${config.colors.foam.hex} 60%);
         }
         #battery.sixty:not(.charging) {
-        	background: linear-gradient(to right, ${config.cat.mocha.green.hex} 60%, ${config.cat.mocha.flamingo.hex} 60%);
+        	background: linear-gradient(to right, ${config.colors.pine.hex} 60%, ${config.colors.rose.hex} 60%);
         }
         #battery.fifty.charging {
-        	background: linear-gradient(to right, ${config.cat.mocha.green.hex} 50%, ${config.cat.mocha.blue.hex} 50%);
+        	background: linear-gradient(to right, ${config.colors.pine.hex} 50%, ${config.colors.foam.hex} 50%);
         }
         #battery.fifty:not(.charging) {
-        	background: linear-gradient(to right, ${config.cat.mocha.green.hex} 50%, ${config.cat.mocha.flamingo.hex} 50%);
+        	background: linear-gradient(to right, ${config.colors.pine.hex} 50%, ${config.colors.rose.hex} 50%);
         }
         #battery.fourty.charging {
-        	background: linear-gradient(to right, ${config.cat.mocha.green.hex} 40%, ${config.cat.mocha.blue.hex} 40%);
+        	background: linear-gradient(to right, ${config.colors.pine.hex} 40%, ${config.colors.foam.hex} 40%);
         }
         #battery.fourty:not(.charging) {
-        	background: linear-gradient(to right, ${config.cat.mocha.green.hex} 40%, ${config.cat.mocha.flamingo.hex} 40%);
+        	background: linear-gradient(to right, ${config.colors.pine.hex} 40%, ${config.colors.rose.hex} 40%);
         }
         #battery.thirty.charging {
-        	background: linear-gradient(to right, ${config.cat.mocha.green.hex} 30%, ${config.cat.mocha.blue.hex} 30%);
+        	background: linear-gradient(to right, ${config.colors.pine.hex} 30%, ${config.colors.foam.hex} 30%);
         }
         #battery.thirty:not(.charging) {
-        	background: linear-gradient(to right, ${config.cat.mocha.green.hex} 30%, ${config.cat.mocha.flamingo.hex} 30%);
+        	background: linear-gradient(to right, ${config.colors.pine.hex} 30%, ${config.colors.rose.hex} 30%);
         }
         #battery.twenty.charging {
-        	background: linear-gradient(to right, ${config.cat.mocha.green.hex} 20%, ${config.cat.mocha.blue.hex} 20%);
+        	background: linear-gradient(to right, ${config.colors.pine.hex} 20%, ${config.colors.foam.hex} 20%);
         }
         #battery.twenty:not(.charging) {
-        	background: linear-gradient(to right, ${config.cat.mocha.green.hex} 20%, ${config.cat.mocha.red.hex} 20%);
+        	background: linear-gradient(to right, ${config.colors.pine.hex} 20%, ${config.colors.love.hex} 20%);
         }
         #battery.ten.charging {
-        	background: linear-gradient(to right, ${config.cat.mocha.green.hex} 10%, ${config.cat.mocha.blue.hex} 10%);
+        	background: linear-gradient(to right, ${config.colors.pine.hex} 10%, ${config.colors.foam.hex} 10%);
         }
         #battery.ten:not(.charging) {
-        	background: linear-gradient(to right, ${config.cat.mocha.green.hex} 10%, ${config.cat.mocha.red.hex} 10%);
+        	background: linear-gradient(to right, ${config.colors.pine.hex} 10%, ${config.colors.love.hex} 10%);
         }
         #battery.five.charging {
-        	background: linear-gradient(to right, ${config.cat.mocha.green.hex} 5%, ${config.cat.mocha.blue.hex} 5%);
+        	background: linear-gradient(to right, ${config.colors.pine.hex} 5%, ${config.colors.foam.hex} 5%);
         }
         #battery.five:not(.charging) {
-        	background: linear-gradient(to right, ${config.cat.mocha.green.hex} 5%, ${config.cat.mocha.red.hex} 5%);
+        	background: linear-gradient(to right, ${config.colors.pine.hex} 5%, ${config.colors.love.hex} 5%);
         }
         #battery.three.charging {
-        	background: linear-gradient(to right, ${config.cat.mocha.green.hex} 3%, ${config.cat.mocha.blue.hex} 3%);
+        	background: linear-gradient(to right, ${config.colors.pine.hex} 3%, ${config.colors.foam.hex} 3%);
         }
         #battery.three:not(.charging) {
-        	background: linear-gradient(to right, ${config.cat.mocha.green.hex} 3%, ${config.cat.mocha.red.hex} 3%);
+        	background: linear-gradient(to right, ${config.colors.pine.hex} 3%, ${config.colors.love.hex} 3%);
         }
         #network {
-        	background: ${config.cat.mocha.green.hex};
+        	background: ${config.colors.pine.hex};
         }
 
         #pulseaudio {
-        	background: ${config.cat.mocha.mauve.hex};
-        	color: ${config.cat.mocha.crust.hex};
+        	background: ${config.colors.iris.hex};
+        	color: ${config.colors.base.hex};
                     border-radius: 5px;
 
         }
         #pulseaudio.ninty {
-        	background: linear-gradient(to top, ${config.cat.mocha.mauve.hex} 90%, ${config.cat.mocha.pink.hex} 90%);
+        	background: linear-gradient(to top, ${config.colors.iris.hex} 90%, ${config.colors.rose.hex} 90%);
         }
         #pulseaudio.eighty {
-        	background: linear-gradient(to top, ${config.cat.mocha.mauve.hex} 80%, ${config.cat.mocha.pink.hex} 80%);
+        	background: linear-gradient(to top, ${config.colors.iris.hex} 80%, ${config.colors.rose.hex} 80%);
         }
         #pulseaudio.seventy {
-        	background: linear-gradient(to top, ${config.cat.mocha.mauve.hex} 70%, ${config.cat.mocha.pink.hex} 70%);
+        	background: linear-gradient(to top, ${config.colors.iris.hex} 70%, ${config.colors.rose.hex} 70%);
         }
         #pulseaudio.sixty {
-        	background: linear-gradient(to top, ${config.cat.mocha.mauve.hex} 60%, ${config.cat.mocha.pink.hex} 60%);
+        	background: linear-gradient(to top, ${config.colors.iris.hex} 60%, ${config.colors.rose.hex} 60%);
         }
         #pulseaudio.fifty {
-        	background: linear-gradient(to top, ${config.cat.mocha.mauve.hex} 50%, ${config.cat.mocha.pink.hex} 50%);
+        	background: linear-gradient(to top, ${config.colors.iris.hex} 50%, ${config.colors.rose.hex} 50%);
         }
         #pulseaudio.fourty {
-        	background: linear-gradient(to top, ${config.cat.mocha.mauve.hex} 40%, ${config.cat.mocha.pink.hex} 40%);
+        	background: linear-gradient(to top, ${config.colors.iris.hex} 40%, ${config.colors.rose.hex} 40%);
         }
         #pulseaudio.thirty {
-        	background: linear-gradient(to top, ${config.cat.mocha.mauve.hex} 30%, ${config.cat.mocha.pink.hex} 30%);
+        	background: linear-gradient(to top, ${config.colors.iris.hex} 30%, ${config.colors.rose.hex} 30%);
         }
         #pulseaudio.twenty {
-        	background: linear-gradient(to top, ${config.cat.mocha.mauve.hex} 20%, ${config.cat.mocha.pink.hex} 20%);
+        	background: linear-gradient(to top, ${config.colors.iris.hex} 20%, ${config.colors.rose.hex} 20%);
         }
         #pulseaudio.ten {
-        	background: linear-gradient(to top, ${config.cat.mocha.mauve.hex} 10%, ${config.cat.mocha.pink.hex} 10%);
+        	background: linear-gradient(to top, ${config.colors.iris.hex} 10%, ${config.colors.rose.hex} 10%);
         }
         #pulseaudio.zero {
-        	background: linear-gradient(to top, ${config.cat.mocha.mauve.hex} 0%, ${config.cat.mocha.pink.hex} 00%);
+        	background: linear-gradient(to top, ${config.colors.iris.hex} 0%, ${config.colors.rose.hex} 00%);
         }
         #pulseaudio.muted {
         	font-weight: 900;
-        	background:${config.cat.mocha.yellow.hex};
+        	background:${config.colors.gold.hex};
         }
 
         #tray {
         	/* background: #505050; */
         	/* padding: 5px 10px; */
         	margin: 10px 10px 0px 10px;
-        	color: ${config.cat.mocha.yellow.hex};
+        	color: ${config.colors.gold.hex};
                     border-radius: 5px;
 
         }
 
         #tray menu {
-        	color: ${config.cat.mocha.yellow.hex};
+        	color: ${config.colors.gold.hex};
                     border-radius: 5px;
 
         }

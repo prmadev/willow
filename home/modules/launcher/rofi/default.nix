@@ -24,11 +24,11 @@ with lib; {
         inherit (config.lib.formats.rasi) mkLiteral;
       in {
         "*" = {
-          bg = mkLiteral config.cat.mocha.surface0.hex;
-          fg = mkLiteral config.cat.mocha.text.hex;
-          button = mkLiteral config.cat.mocha.green.hex;
-          background-color = mkLiteral config.cat.mocha.surface0.hex;
-          text-color = mkLiteral config.cat.mocha.text.hex;
+          bg = mkLiteral config.colors.surface.hex;
+          fg = mkLiteral config.colors.text.hex;
+          button = mkLiteral config.colors.pine.hex;
+          background-color = mkLiteral config.colors.surface.hex;
+          text-color = mkLiteral config.colors.text.hex;
         };
 
         window = {
@@ -47,16 +47,16 @@ with lib; {
           placeholder = "";
           expand = true;
           padding = mkLiteral "5px 5px 5px 5px";
-          background-color = mkLiteral config.cat.mocha.surface0.hex;
-          placeholder-color = mkLiteral config.cat.mocha.surface0.hex;
-          text-color = mkLiteral config.cat.mocha.text.hex;
+          background-color = mkLiteral config.colors.surface.hex;
+          placeholder-color = mkLiteral config.colors.surface.hex;
+          text-color = mkLiteral config.colors.text.hex;
           font = "monospace black 10";
         };
 
         inputbar = {
           children = map mkLiteral ["prompt" "entry"];
-          background-color = mkLiteral config.cat.mocha.surface0.hex;
-          text-color = mkLiteral config.cat.mocha.text.hex;
+          background-color = mkLiteral config.colors.surface.hex;
+          text-color = mkLiteral config.colors.text.hex;
           expand = false;
           border-radius = mkLiteral "0px";
           padding = mkLiteral "5px";
@@ -81,7 +81,7 @@ with lib; {
           orientation = mkLiteral "vertical";
           border-radius = mkLiteral "0px";
           padding = mkLiteral "5px 5px 5px 5px";
-          text-color = mkLiteral config.cat.mocha.subtext0.hex;
+          text-color = mkLiteral config.colors.subtle.hex;
         };
 
         element-text = {
@@ -94,8 +94,8 @@ with lib; {
         };
 
         "element selected" = {
-          background-color = mkLiteral config.cat.mocha.green.hex;
-          text-color = mkLiteral config.cat.mocha.surface0.hex;
+          background-color = mkLiteral config.colors.pine.hex;
+          text-color = mkLiteral config.colors.surface.hex;
           border-radius = mkLiteral "0px";
           font = "monospace Black 10";
         };
