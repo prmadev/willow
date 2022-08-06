@@ -22,8 +22,8 @@
                damage_tracking=full
                layout=master
 
-               col.active_border=0xffa6e3a1
-               col.inactive_border=0xff1e1e2e
+               col.active_border=0xff31748f
+               col.inactive_border=0xff191724
       }
 
          decoration {
@@ -39,7 +39,7 @@
            monitor=eDP-1,1366x768@60,0x0,1
            workspace=eDP-1,1
            monitor=DP-1,1600x900@60,1366x0,1
-           workspace=DP-1,5
+           workspace=DP-1,9
          }
          input {
            follow_mouse=1
