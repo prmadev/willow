@@ -24,5 +24,6 @@ with lib; {
     mako.enable = true;
     launcher.enable = true;
     wm.river.enable = true;
+    eww.enable = true;
   };
 }
