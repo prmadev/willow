@@ -16,10 +16,7 @@
 	:reserve (struts :distance "40px" :side "top")
 	:windowtype "dock"
 	:wm-ignore false
-	(labeled-container :name "foo"
-		(button :onclick "notify-send hey ho" "click me")
-		(greeter :name "amir")
-	)
+	ws
 )
 
 ;;;;;;
@@ -27,13 +24,16 @@
 ;;;;;;
 
 
-(defwidget timer)
+(defwidget workspace
+	(box :class "workspace")
+	ws
+)
 
 ;;;;;;
 ;;;;;; variables
 ;;;;;;
 
-(deflisten workspace 
+(deflisten ws
 	:initial "_________"
 	`hyprgo -w`
 )
