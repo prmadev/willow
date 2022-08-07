@@ -17,7 +17,8 @@ $subtle: #908caa;
 .battery{
     .batterycontainer{
         .batterycharge{
-background-color: $base;
+            color: $pine;
+            border-radius: 10px;
         }
     }
 
