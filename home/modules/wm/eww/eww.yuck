@@ -6,9 +6,9 @@
 	:geometry (geometry
 		:x "0px"
 		:y "0px"
-		:width "300px"
-		:height "300px"
-		:anchor "top center"
+		:width "100px"
+		:height "100px"
+		:anchor "middle center"
 	)
 	:stacking "bg"
 	:exclusive false
