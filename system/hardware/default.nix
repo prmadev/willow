@@ -23,11 +23,16 @@
   # Power management
   services.tlp.enable = true;
 
+  # boot.kernelPackages = pkgs.linuxKernel.kernels.linux_5_19;
+  # services.xserver.videoDrivers = ["nvidia"];
+  # hardware.nvidia.modesetting.enable = true;
   # trackpad and mouse
   services.xserver.libinput.enable = false;
   hardware.opengl.enable = true;
+  # hardware.nvidia.enable = true;
   #hardware.nvidiaOptimus.disable = true;
   environment.systemPackages = with pkgs; [
     ntfs3g
+    pciutils
   ];
 }
