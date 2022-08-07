@@ -41,7 +41,7 @@
 (defwidget bat []
 	(box 
 		:class "batterycontainer"
-		(progress :class "batterycharge" :value EWW_BATTERY.bat0.capacity	)
+		(progress :class "batterycharge" :value EWW_BATTERY.capacity	)
 	)
 
 )
