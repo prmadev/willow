@@ -13,6 +13,7 @@
       # exec-once=swaybg -i ~/.config/wallpaper.jpg
       # exec-once=xprop -root -f _XWAYLAND_GLOBAL_OUTPUT_SCALE 32c -set _XWAYLAND_GLOBAL_OUTPUT_SCALE 2
       exec-once=swaybg -c "#191724"
+      exec-once=eww open-all
 
       general {
          sensitivity=0.6
