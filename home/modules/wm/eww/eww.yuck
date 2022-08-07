@@ -1,7 +1,7 @@
 ;;;;;;
 ;;;;;; windows
 ;;;;;;
-(defwindow battery
+(defwindow info
 	:monitor 0 
 	:geometry (geometry
 		:x "10px"
@@ -41,9 +41,9 @@
 (defwidget bat []
 	
 	(box :orientation "v"
-		:class "batterycontainer"
+		:class "battery-container"
 		(circular-progress
-			:class "batterycharge"
+			:class "battery-charge"
 			:value {EWW_BATTERY.BAT0.capacity}	
 			:start-at 180
 			:thickness 10
@@ -51,12 +51,12 @@
 		)
 
 		(label
-			:class "batterylabel"
+			:class "battery-percent"
 			:text "${EWW_BATTERY.BAT0.capacity}%"
 		)
 		(label
-			:class "batterylabel"
-			:text "${EWW_BATTERY.BAT0.capacity}%"
+			:class "battery-title"
+			:text "BATTERY"
 		)
 	)
 
