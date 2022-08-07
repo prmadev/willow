@@ -10,8 +10,8 @@
     extraConfig = ''
       exec-once=dbus-update-activation-environment --systemd WAYLAND_DISPLAY DISPLAY HYPRLAND_INSTANCE_SIGNATURE
       exec-once=systemctl --user start hyprland-session.target
-      exec-once=swaybg -i "~/Pictures/wallpaper/wall1.jpg"
       exec-once=eww open topbar
+      exec-once=hyprpaper
 
       general {
           sensitivity=0.6
