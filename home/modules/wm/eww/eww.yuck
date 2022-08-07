@@ -50,7 +50,7 @@
 			:clockwise false
 		)
 
-		(label :class "batterylabel" :text {EWW_BATTERY.BAT0.capacity})
+		(label :class "batterylabel" :text "{EWW_BATTERY.BAT0.capacity}%")
 	)
 
 
