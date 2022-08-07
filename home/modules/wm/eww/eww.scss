@@ -18,12 +18,13 @@ $subtle: #908caa;
 .topbar {
     .ws {
         .tag {
+            margin: 2px;
+
             .active {
                 color: $base;
                 background: $love;
                 font-weight: 900;
                 padding: 5px;
-                margin: 2px;
                 border-radius: 5px;
             }
             .name {
@@ -31,7 +32,7 @@ $subtle: #908caa;
                 background: $base;
                 font-weight:900;
                 padding: 5px;
-                margin: 2px;
+                margin: 0px;
                 border-radius: 5px;
             }
 
