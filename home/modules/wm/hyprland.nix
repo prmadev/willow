@@ -113,6 +113,7 @@
     '';
   };
   home.packages = with pkgs; [
+    hyprpaper
     wev
   ];
 }
