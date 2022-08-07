@@ -18,11 +18,11 @@ $muted: #6e6a86;
     // font-size: 10px;
 }
 
-.info{
+.info {
     background:$surface;
     border-radius: 10px;
     padding: 5px;
-    .battery-container{
+    .battery-container {
         border-radius: 5px;
         background:$surface;
         padding: 10px;
@@ -40,6 +40,27 @@ $muted: #6e6a86;
             font-weight: 900;
             color: $foam;
             background: $base;
+            border-radius:10px;
+            font-size: 15px;
+            padding: 5px;
+        }
+    }
+    .network-container {
+        border-radius: 5px;
+        background:$surface;
+        padding: 10px;
+        .network-speed {
+            .network-up {
+                color:#31748f;
+            }
+            .network-down {
+                color: $iris;
+            }
+        }
+        .network-title {
+            font-weight: 900;
+            color: $foam;
+            background:$base;
             border-radius:10px;
             font-size: 15px;
             padding: 5px;

@@ -16,6 +16,7 @@
 	:windowtype "dock"
 	:wm-ignore true
 	(bat)
+	(net)
 )
 (defwindow topbar
 	:monitor 0
@@ -58,8 +59,28 @@
 			:text "BATTERY"
 		)
 	)
+)
+(defwidget net []
+	(box :orientation "v"
+		:class "network-container"
+		(box 
+			:orientation "h" 
+			:class "network-speeds"
 
-
+			(label
+				:class "network-up"
+				:text {EWW_net.wlp2s0.up}	
+			)
+			(label
+				:class "network-down"
+				:text {EWW_net.wlp2s0.down}	
+			)
+		)
+		(label
+			:class "network-title"
+			:text "NETWORK"
+		)
+	)
 )
 
 ; (defwidget workspace []
