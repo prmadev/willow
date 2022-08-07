@@ -25,10 +25,11 @@ $subtle: #908caa;
                 color: $text;
                 background: $base;
                 font-weight:900;
-                padding: 5px;
+                // padding-right: 5px;
                 margin: 0px;
                 border-top-right-radius: 5px;
                 border-bottom-right-radius: 5px;
+                font-size: 10px;
             }
 
             .active {
