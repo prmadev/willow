@@ -15,7 +15,10 @@ $subtle: #908caa;
     // font-size: 10px;
 }
 .battery{
+    background:$surface;
+
     .batterycontainer{
+        background:$surface;
         .batterycharge{
             color: $pine;
             border-radius: 10px;
