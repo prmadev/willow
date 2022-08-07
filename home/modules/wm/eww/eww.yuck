@@ -39,7 +39,8 @@
 ;;;;;; widgets
 ;;;;;;
 (defwidget bat []
-	(box 
+	(box)
+	(box :orientation "v"
 		:class "batterycontainer"
 		(circular-progress
 			:class "batterycharge"
@@ -47,7 +48,10 @@
 			:start-at 180
 			:thickness 10
 		)
+
+		(label :class "batterylabel" :text {EWW_BATTERY.BAT0.capacity})
 	)
+
 
 )
 
