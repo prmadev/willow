@@ -47,6 +47,7 @@
 			:value {EWW_BATTERY.BAT0.capacity}	
 			:start-at 180
 			:thickness 10
+			:clockwise false
 		)
 
 		(label :class "batterylabel" :text {EWW_BATTERY.BAT0.capacity})
