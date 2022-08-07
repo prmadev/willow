@@ -25,11 +25,20 @@
 ;;;;;;
 
 
+; (defwidget workspace []
+; 	(box 
+; 		:class "workspace"
+; 		ws
+; 	)
+
+; )
+
 (defwidget workspace []
 	(box 
 		:class "workspace"
 		ws
 	)
+	(literal :content ws)
 
 )
 
