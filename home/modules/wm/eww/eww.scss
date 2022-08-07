@@ -33,7 +33,9 @@ $subtle: #908caa;
                 font-weight:900;
                 padding: 5px;
                 margin: 0px;
-                border-radius: 5px;
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+
             }
 
             .occupied {
@@ -41,7 +43,7 @@ $subtle: #908caa;
                 background: $pine;
                 font-weight: 900;
                 padding: 5px;
-                margin: 2px;
+                
                 border-radius: 5px;
             }
 
@@ -50,7 +52,6 @@ $subtle: #908caa;
                 background: $surface;
                 font-weight: 900;
                 padding: 5px;
-                margin: 2px;
                 border-radius: 5px;
             }
         }
