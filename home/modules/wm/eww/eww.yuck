@@ -4,8 +4,8 @@
 (defwindow battery
 	:monitor 0 
 	:geometry (geometry
-		:x "0px"
-		:y "0px"
+		:x "100px"
+		:y "100px"
 		:width "100px"
 		:height "100px"
 		:anchor "bottom left"
