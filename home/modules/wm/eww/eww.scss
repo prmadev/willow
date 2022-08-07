@@ -22,6 +22,7 @@ $subtle: #908caa;
     background: $love;
     font-weight: 900;
     padding: 5px;
+    margin: 2px;
 }
 
 .occupied {
@@ -29,19 +30,15 @@ $subtle: #908caa;
     background: $pine;
     font-weight: 900;
     padding: 5px;
-
-
+    margin: 2px;
 }
 .empty {
     color: $text;
     background: $base;
     font-weight: 900;
     padding: 5px;
-
-
+    margin: 2px;
 }
 .ws {
-    padding: 5px;
-
 
 }
