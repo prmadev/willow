@@ -16,17 +16,15 @@ $subtle: #908caa;
 }
 .battery{
     background:$surface;
-
+    border-radius: 5px;
     .batterycontainer{
+        border-radius: 5px;
         background:$surface;
         .batterycharge{
             color: $pine;
             border-radius: 10px;
-            border-radius: 5px;
-
         }
     }
-
 }
 .topbar {
     .ws {
