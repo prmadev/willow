@@ -20,14 +20,7 @@ $subtle: #908caa;
         .tag {
             margin: 2px;
             background-color: $base;
-
-            .active {
-                color: $base;
-                background: $love;
-                font-weight: 900;
-                padding: 5px;
-                border-radius: 5px;
-            }
+            border-radius: 5px;
             .name {
                 color: $text;
                 background: $base;
@@ -36,8 +29,16 @@ $subtle: #908caa;
                 margin: 0px;
                 border-top-right-radius: 5px;
                 border-bottom-right-radius: 5px;
-
             }
+
+            .active {
+                color: $base;
+                background: $love;
+                font-weight: 900;
+                padding: 5px;
+                border-radius: 5px;
+            }
+            
 
             .occupied {
                 color: $base;
