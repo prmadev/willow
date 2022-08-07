@@ -38,8 +38,8 @@
 
       monitors {
         monitor=HDMI-A-1,3840x2160@60,0x0,1
-        monitor=eDP-1,1366x768@60,0x0,1
-        workspace=eDP-1,1
+        # monitor=eDP-1,1366x768@60,0x0,1
+        # workspace=eDP-1,1
         monitor=DP-1,1600x900@60,1366x0,1
         workspace=DP-1,9
       }
