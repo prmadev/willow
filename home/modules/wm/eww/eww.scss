@@ -18,21 +18,25 @@ $subtle: #908caa;
 .topbar {
     background-color:$base;
 }
-.active{
+.active {
     color: $base;
     background: $love;
     font-weight: 900;
+    padding: 5px;
 }
 
-.occupied{
+.occupied {
     color: $base;
     background: $pine;
     font-weight: 900;
 
 }
-.empty{
+.empty {
     color: $text;
     background: $base;
     font-weight: 900;
+
+}
+.ws {
 
 }
