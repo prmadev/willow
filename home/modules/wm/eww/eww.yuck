@@ -42,6 +42,5 @@
 ;;;;;;
 
 (deflisten ws
-	:initial "___ ___ ___"
 	`hyprgo -w`
 )
