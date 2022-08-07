@@ -10,8 +10,6 @@
     extraConfig = ''
       exec-once=dbus-update-activation-environment --systemd WAYLAND_DISPLAY DISPLAY HYPRLAND_INSTANCE_SIGNATURE
       exec-once=systemctl --user start hyprland-session.target
-      # exec-once=swaybg -i ~/.config/wallpaper.jpg
-      # exec-once=xprop -root -f _XWAYLAND_GLOBAL_OUTPUT_SCALE 32c -set _XWAYLAND_GLOBAL_OUTPUT_SCALE 2
       exec=swaybg -c "#191724"
       exec-once=eww open-all
 
