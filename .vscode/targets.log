@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sun Aug  7 09:25:47 2022
+# Make data base, printed on Sun Aug  7 13:10:41 2022
 
 # Variables
 
@@ -25,7 +25,7 @@ NIXPKGS_CONFIG = /etc/nix/nixpkgs-config.nix
 # environment
 XDG_DESKTOP_PORTAL_DIR = /nix/store/mvg4n0l19xz4mzsp9k7hpg3clp67cpvp-xdg-portals/share/xdg-desktop-portal/portals
 # environment
-STARSHIP_SESSION_KEY = 2034259811202131
+STARSHIP_SESSION_KEY = 7690238801778129
 # environment
 FZF_TMUX = 1
 # environment
@@ -77,7 +77,7 @@ MAKEFLAGS = pqrR
 # environment
 LIBEXEC_PATH = /home/a/.nix-profile/lib/libexec:/etc/profiles/per-user/a/lib/libexec:/nix/var/nix/profiles/default/lib/libexec:/run/current-system/sw/lib/libexec
 # environment
-HYPRLAND_INSTANCE_SIGNATURE = _1659844100
+HYPRLAND_INSTANCE_SIGNATURE = _1659861421
 # makefile
 CURDIR := /home/a/dofi
 # environment
@@ -115,7 +115,7 @@ LOCALE_ARCHIVE_2_27 = /nix/store/s3bf05my50y37v88mm6krs1x4s7399rn-glibc-locales-
 # environment
 FZF_ALT_C_COMMAND = fd --type d
 # environment
-VSCODE_PID = 107371
+VSCODE_PID = 6011
 # environment
 MOZ_ENABLE_WAYLAND = 1
 # environment
@@ -269,32 +269,54 @@ TERMINFO_DIRS = /home/a/.nix-profile/share/terminfo:/etc/profiles/per-user/a/sha
 # environment
  
 XDG_TEMPLATES_DIR = /home/a/Templates
+ 
 # environment
+ 
 XDG_SESSION_CLASS = user
+ 
 # environment
+ 
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+ 
 # environment
+ 
 GTK2_RC_FILES = /home/a/.gtkrc-2.0
+ 
 # environment
+ 
 HOME = /home/a
+ 
 # environment
+ 
 ELECTRON_RUN_AS_NODE = 1
+ 
 # environment
+ 
 VSCODE_IPC_HOOK = /run/user/1000/vscode-1bc9c623-1.69.2-main.sock
+ 
 # environment
+ 
 TERM = linux
+ 
 # environment
+ 
 XDG_SESSION_ID = 1
+ 
 # environment
+ 
 TZDIR = /etc/zoneinfo
+ 
 # default
+ 
 .RECIPEPREFIX := 
 # automatic
 <F = $(notdir $<)
 # environment
+ 
 NIX_PATH = nixpkgs=/nix/var/nix/profiles/per-user/root/channels/nixos:nixos-config=/etc/nixos/configuration.nix:/nix/var/nix/profiles/per-user/root/channels
 # environment
 XDG_STATE_HOME = /home/a/.local/state
+ 
 # default
 SUFFIXES := 
 # environment
@@ -387,6 +409,7 @@ all:
 #  File does not exist.
 #  File has not been updated.
 
+ 
 sync:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
@@ -413,6 +436,6 @@ sync:
 # strcache performance: lookups = 28 / hit rate = 25%
 # hash-table stats:
 # Load=21/8192=0%, Rehash=0, Collisions=0/28=0%
-# Finished Make data base on Sun Aug  7 09:25:47 2022
+# Finished Make data base on Sun Aug  7 13:10:41 2022
 
  
