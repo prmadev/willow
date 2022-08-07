@@ -17,3 +17,16 @@ $subtle: #908caa;
 .topbar {
     background-color:$base;
 }
+.active{
+    color: $base;
+    background: $love;
+}
+
+.occupied{
+    color: $base;
+    background: $pine;
+}
+.empty{
+    color: $text;
+    background: $base;
+}
