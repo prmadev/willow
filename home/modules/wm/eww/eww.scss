@@ -17,31 +17,41 @@ $subtle: #908caa;
 
 .topbar {
     .ws {
-        .active {
-            color: $base;
-            background: $love;
-            font-weight: 900;
-            padding: 5px;
-            margin: 2px;
-            border-radius: 5px;
-        }
+        .tag {
+            .active {
+                color: $base;
+                background: $love;
+                font-weight: 900;
+                padding: 5px;
+                margin: 2px;
+                border-radius: 5px;
+            }
+            .name {
+                color: $text;
+                background: $base;
+                font-weight:900;
+                padding: 5px;
+                margin: 2px;
+                border-radius: 5px;
+            }
 
-        .occupied {
-            color: $base;
-            background: $pine;
-            font-weight: 900;
-            padding: 5px;
-            margin: 2px;
-            border-radius: 5px;
-        }
-        
-        .empty {
-            color: $text;
-            background: $surface;
-            font-weight: 900;
-            padding: 5px;
-            margin: 2px;
-            border-radius: 5px;
+            .occupied {
+                color: $base;
+                background: $pine;
+                font-weight: 900;
+                padding: 5px;
+                margin: 2px;
+                border-radius: 5px;
+            }
+
+            .empty {
+                color: $text;
+                background: $surface;
+                font-weight: 900;
+                padding: 5px;
+                margin: 2px;
+                border-radius: 5px;
+            }
         }
     }
 }
