@@ -34,12 +34,7 @@
 ; )
 
 (defwidget workspace []
-	(box 
-		:class "workspace"
-		ws
-	)
 	(literal :content ws)
-
 )
 
 ;;;;;;
