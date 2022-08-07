@@ -10,13 +10,14 @@ $foam: #8ccfd8;
 $subtle: #908caa;
 $rose: #ebbcba;
 $subtle: #908caa;
-$muted: #6e6a86
+$muted: #6e6a86;
 
 * {
     all: unset; //Unsets everything so you can style everything from scratch
     font-family: monosapce;
     // font-size: 10px;
 }
+
 .info{
     background:$surface;
     border-radius: 10px;
