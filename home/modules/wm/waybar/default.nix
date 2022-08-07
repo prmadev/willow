@@ -16,7 +16,7 @@ with lib; {
     home.packages = with pkgs; [
     ];
     programs.waybar = mkIf config.waybar.enable {
-      enable = true;
+      enable = false;
       systemd.enable = true;
       settings = {
         mainBar = {
