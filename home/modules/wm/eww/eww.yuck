@@ -39,7 +39,6 @@
 ;;;;;; widgets
 ;;;;;;
 (defwidget bat []
-	
 	(box :orientation "v"
 		:class "battery-container"
 		(circular-progress
