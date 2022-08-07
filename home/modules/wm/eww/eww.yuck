@@ -78,11 +78,11 @@
 
 			(label
 				:class "network-up"
-				:text {EWW_net.wlp2s0.up}	
+				:text {EWW_NET.wlp2s0.up}	
 			)
 			(label
 				:class "network-down"
-				:text {EWW_net.wlp2s0.down}	
+				:text {EWW_NET.wlp2s0.down}	
 			)
 		)
 		(label
