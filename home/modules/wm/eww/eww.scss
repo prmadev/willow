@@ -19,7 +19,6 @@ $muted: #6e6a86;
 }
 
 .info {
-    background:$surface;
     border-radius: 10px;
     padding: 5px;
     .battery-container {
@@ -50,7 +49,7 @@ $muted: #6e6a86;
         background:$surface;
         padding: 10px;
         .network-speed {
-            
+
             .network-up {
                 color:#31748f;
             }
