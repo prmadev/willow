@@ -8,7 +8,7 @@
 		:y "0px"
 		:width "100px"
 		:height "100px"
-		:anchor "center center"
+		:anchor "bottom left"
 	)
 	:stacking "bg"
 	:exclusive false

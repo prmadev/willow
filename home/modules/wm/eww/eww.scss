@@ -17,12 +17,16 @@ $subtle: #908caa;
 .battery{
     background:$surface;
     border-radius: 5px;
+    padding: 10px
+
     .batterycontainer{
         border-radius: 5px;
         background:$surface;
+        padding: 10px
         .batterycharge{
             color: $pine;
             border-radius: 10px;
+            padding: 10px;
         }
     }
 }
