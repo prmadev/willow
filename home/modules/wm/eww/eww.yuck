@@ -4,7 +4,8 @@
 
 (defwindow topbar
 	:monitor 0
-	:geometry (geometry :x "0%"
+	:geometry (geometry
+		:x "0%"
 		:y "20px"
 		:width "90%"
 		:height "20px"
@@ -25,10 +26,11 @@
 
 
 (defwidget workspace []
-	(box :class "workspace"
-	ws
-)
-	
+	(box 
+		:class "workspace"
+		ws
+	)
+
 )
 
 ;;;;;;

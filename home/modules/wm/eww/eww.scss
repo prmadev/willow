@@ -14,29 +14,6 @@ $subtle: #908caa;
     font-family: monosapce;
 }
 
-.icon {
-    font-family: monospace;
-    font-size: 1rem;
-}
-
-
-
-
-.active {
-    color: $foam;
-    font-size: 1.4rem;
-}
-
-.inactive {
-    color: $base;
-    font-size: 1.4rem;
-}
-
-.inactive:hover {
-    color: $subtle;
-}
-
 .topbar {
-    background-color: $base;
-    border-left: 4px dotted $love;
+    background-color:$base;
 }
