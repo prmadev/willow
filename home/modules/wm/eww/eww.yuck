@@ -4,8 +4,8 @@
 (defwindow battery
 	:monitor 0 
 	:geometry (geometry
-		:x "100px"
-		:y "100px"
+		:x "10px"
+		:y "10px"
 		:width "100px"
 		:height "100px"
 		:anchor "bottom left"
@@ -50,6 +50,10 @@
 			:clockwise false
 		)
 
+		(label
+			:class "batterylabel"
+			:text "${EWW_BATTERY.BAT0.capacity}%"
+		)
 		(label
 			:class "batterylabel"
 			:text "${EWW_BATTERY.BAT0.capacity}%"
