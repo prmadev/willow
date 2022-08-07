@@ -1,7 +1,21 @@
 ;;;;;;
 ;;;;;; windows
 ;;;;;;
-
+(defwindow battery
+	:monitor 0 
+	:geometry (
+		:x "10%"
+		:y "10%"
+		:width "300px"
+		:height "300px"
+		:anchor "top center"
+	)
+	:stacking "bg"
+	:exclusive false
+	:focusable false
+	:windowtype "dock"
+	:wm-ignore true
+)
 (defwindow topbar
 	:monitor 0
 	:geometry (geometry
@@ -23,7 +37,13 @@
 ;;;;;;
 ;;;;;; widgets
 ;;;;;;
+(defwidget battery []
+	(box 
+		:class "batterycontainer"
+		(progress :class "batterycharge" :value EWW_BATTER.bat0.capacity	)
+	)
 
+)
 
 ; (defwidget workspace []
 ; 	(box 

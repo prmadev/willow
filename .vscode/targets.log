@@ -2,40 +2,61 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 make: *** No rule to make target 'all'.  Stop.
 
 # GNU Make 4.3
+ 
 # Built for x86_64-pc-linux-gnu
+ 
 # Copyright (C) 1988-2020 Free Software Foundation, Inc.
+ 
 # License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+ 
 # This is free software: you are free to change and redistribute it.
+ 
 # There is NO WARRANTY, to the extent permitted by law.
+ 
 
-# Make data base, printed on Sun Aug  7 14:14:23 2022
+ 
+# Make data base, printed on Sun Aug  7 17:12:36 2022
+ 
 
 # Variables
+ 
 
+ 
 # environment
-FZF_DEFAULT_OPTS = --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc --color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8
-# environment
+ 
 GDK_BACKEND = x11
+ 
 # environment
+ 
 LC_ALL = C
+ 
 # environment
+ 
 NO_AT_BRIDGE = 1
+ 
 # environment
+ 
 NIX_USER_PROFILE_DIR = /nix/var/nix/profiles/per-user/a
+ 
 # environment
+ 
 NIXPKGS_CONFIG = /etc/nix/nixpkgs-config.nix
+ 
 # environment
+ 
 XDG_DESKTOP_PORTAL_DIR = /nix/store/mvg4n0l19xz4mzsp9k7hpg3clp67cpvp-xdg-portals/share/xdg-desktop-portal/portals
+ 
 # environment
-STARSHIP_SESSION_KEY = 1271918393363078
+ 
+STARSHIP_SESSION_KEY = 3080010313576012
 # environment
 FZF_TMUX = 1
 # environment
 QT_PLUGIN_PATH = /home/a/.nix-profile/lib/qt4/plugins:/home/a/.nix-profile/lib/kde4/plugins:/etc/profiles/per-user/a/lib/qt4/plugins:/etc/profiles/per-user/a/lib/kde4/plugins:/nix/var/nix/profiles/default/lib/qt4/plugins:/nix/var/nix/profiles/default/lib/kde4/plugins:/run/current-system/sw/lib/qt4/plugins:/run/current-system/sw/lib/kde4/plugins
 # environment
-VSCODE_CWD = /home/a/dofi
+VSCODE_CWD = /home/a
 # environment
-GPG_TTY = /dev/pts/2
+GPG_TTY = /dev/tty1
 # environment
 ZK_NOTEBOOK_DIR = /home/a/notes
 # environment
@@ -57,7 +78,7 @@ PWD = /home/a/dofi
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # environment
-XDG_DATA_DIRS = /nix/store/m0sirl1p9hisdw9nzc2mian25ad4mpmi-vscode-1.69.2/share:/nix/store/gwcin68bsqs5m2gqzl6x9ckbg05kgr1y-gtk+3-3.24.34/share/gsettings-schemas/gtk+3-3.24.34:/nix/store/1pfmj0i8714gyxg2nshwfjfpsd3lg1qn-gsettings-desktop-schemas-42.0/share/gsettings-schemas/gsettings-desktop-schemas-42.0:/nix/store/35pfq4aiyvrakdsplwv07has55wvl07b-desktops/share:/home/a/.nix-profile/share:/etc/profiles/per-user/a/share:/nix/var/nix/profiles/default/share:/run/current-system/sw/share
+XDG_DATA_DIRS = /nix/store/m0sirl1p9hisdw9nzc2mian25ad4mpmi-vscode-1.69.2/share:/nix/store/gwcin68bsqs5m2gqzl6x9ckbg05kgr1y-gtk+3-3.24.34/share/gsettings-schemas/gtk+3-3.24.34:/nix/store/1pfmj0i8714gyxg2nshwfjfpsd3lg1qn-gsettings-desktop-schemas-42.0/share/gsettings-schemas/gsettings-desktop-schemas-42.0:/nix/store/zf4kh9zbpjvihan3x5bj9zdfanh436ai-hicolor-icon-theme-0.17/share:/nix/store/k2izyvjzlk9basmzlaq2j5wl4biwj1sp-rofi-1.7.3+wayland1/share:/nix/store/35pfq4aiyvrakdsplwv07has55wvl07b-desktops/share:/home/a/.nix-profile/share:/etc/profiles/per-user/a/share:/nix/var/nix/profiles/default/share:/run/current-system/sw/share
 # environment
 http_proxy = socks5://127.0.0.1:9050/
 # automatic
@@ -79,7 +100,7 @@ MAKEFLAGS = pqrR
 # environment
 LIBEXEC_PATH = /home/a/.nix-profile/lib/libexec:/etc/profiles/per-user/a/lib/libexec:/nix/var/nix/profiles/default/lib/libexec:/run/current-system/sw/lib/libexec
 # environment
-HYPRLAND_INSTANCE_SIGNATURE = _1659861421
+HYPRLAND_INSTANCE_SIGNATURE = _1659875230
 # makefile
 CURDIR := /home/a/dofi
 # environment
@@ -117,7 +138,7 @@ LOCALE_ARCHIVE_2_27 = /nix/store/s3bf05my50y37v88mm6krs1x4s7399rn-glibc-locales-
 # environment
 FZF_ALT_C_COMMAND = fd --type d
 # environment
-VSCODE_PID = 91948
+VSCODE_PID = 21963
 # environment
 MOZ_ENABLE_WAYLAND = 1
 # environment
@@ -169,18 +190,15 @@ QT_QPA_PLATFORM = wayland
 # environment
 SDL_VIDEODRIVER = wayland
 # environment
- 
-SHLVL = 3
+SHLVL = 2
 # environment
 __NIXOS_SET_ENVIRONMENT_DONE = 1
-# environment
-TERMINFO = /nix/store/vm0qlnainx69gxvrqxn3qlib3zcqy3bb-kitty-0.25.2/lib/kitty/terminfo
 # environment
 MAKELEVEL := 0
 # default
 MAKE = $(MAKE_COMMAND)
 # environment
-PATH = /nix/store/l1r2spxz21r6mhiffcjd8ynqnxd3sk1y-glib-2.72.3-bin/bin:/nix/store/vm0qlnainx69gxvrqxn3qlib3zcqy3bb-kitty-0.25.2/bin:/nix/store/g3iywb3b579hl1sjr41awl3ddm7hkc74-imagemagick-7.1.0-45/bin:/nix/store/5zf9aja0j9qbdhqy7f13zi9h08drzdi4-ncurses-6.3-p20220507-dev/bin:/home/a/.local/bin:/home/a/bin:/run/wrappers/bin:/home/a/.nix-profile/bin:/etc/profiles/per-user/a/bin:/nix/var/nix/profiles/default/bin:/run/current-system/sw/bin:/home/a/.cargo/bin:/home/a/go/bin
+PATH = /nix/store/l1r2spxz21r6mhiffcjd8ynqnxd3sk1y-glib-2.72.3-bin/bin:/home/a/.local/bin:/home/a/bin:/run/wrappers/bin:/home/a/.nix-profile/bin:/etc/profiles/per-user/a/bin:/nix/var/nix/profiles/default/bin:/run/current-system/sw/bin:/home/a/.cargo/bin:/home/a/go/bin
 # environment
 XCURSOR_PATH = /home/a/.icons:/home/a/.local/share/icons:/home/a/.nix-profile/share/icons:/home/a/.nix-profile/share/pixmaps:/etc/profiles/per-user/a/share/icons:/etc/profiles/per-user/a/share/pixmaps:/nix/var/nix/profiles/default/share/icons:/nix/var/nix/profiles/default/share/pixmaps:/run/current-system/sw/share/icons:/run/current-system/sw/share/pixmaps
 # default
@@ -218,7 +236,7 @@ ORIGINAL_XDG_CURRENT_DESKTOP = Hyprland
 # 'override' directive
 GNUMAKEFLAGS := 
 # environment
-GIO_EXTRA_MODULES = /nix/store/scilmailcmbvm61igj66cmmdw7pm6gfd-dconf-0.40.0-lib/lib/gio/modules
+GIO_EXTRA_MODULES = /nix/store/scilmailcmbvm61igj66cmmdw7pm6gfd-dconf-0.40.0-lib/lib/gio/modules:/nix/store/scilmailcmbvm61igj66cmmdw7pm6gfd-dconf-0.40.0-lib/lib/gio/modules:/nix/store/scilmailcmbvm61igj66cmmdw7pm6gfd-dconf-0.40.0-lib/lib/gio/modules
 # environment
 XDG_VIDEOS_DIR = /home/a/Videos
 # environment
@@ -231,8 +249,6 @@ fish_tmux_autoconnect = false
 XDG_VTNR = 1
 # makefile
 .DEFAULT_GOAL := sync
-# environment
-KITTY_WINDOW_ID = 1
 # environment
 EDITOR = hx
 # environment
@@ -252,9 +268,7 @@ JQ_COLORS = 1;30:0;37:0;37:0;37:0;32:1;37:1;37
 # environment
 no_proxy = 127.0.0.1,localhost,internal.domain
 # environment
-KITTY_PID = 7066
-# environment
-STARSHIP_SHELL = fish
+STARSHIP_SHELL = bash
 # environment
 XKB_DEFAULT_LAYOUT = us,ir
 # environment
@@ -270,8 +284,6 @@ XDG_RUNTIME_DIR = /run/user/1000
 # environment
 BW_CLIENTSECRET = /run/ragenix/bwsec
 # environment
-COLORTERM = truecolor
-# environment
 GDK_PIXBUF_MODULE_FILE = /nix/store/pw9cig2hc7lpp8hxk8bvrkgrd67h2l85-librsvg-2.54.4/lib/gdk-pixbuf-2.0/2.10.0/loaders.cache
 # environment
 VISUAL = hx
@@ -284,8 +296,6 @@ XDG_SESSION_CLASS = user
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
-KITTY_SHELL_INTEGRATION = enabled no-rc
-# environment
 GTK2_RC_FILES = /home/a/.gtkrc-2.0
 # environment
 HOME = /home/a
@@ -294,7 +304,7 @@ ELECTRON_RUN_AS_NODE = 1
 # environment
 VSCODE_IPC_HOOK = /run/user/1000/vscode-1bc9c623-1.69.2-main.sock
 # environment
-TERM = xterm-kitty
+TERM = linux
 # environment
 XDG_SESSION_ID = 1
 # environment
@@ -303,8 +313,11 @@ TZDIR = /etc/zoneinfo
 .RECIPEPREFIX := 
 # automatic
 <F = $(notdir $<)
+ 
 # environment
+ 
 NIX_PATH = nixpkgs=/nix/var/nix/profiles/per-user/root/channels/nixos:nixos-config=/etc/nixos/configuration.nix:/nix/var/nix/profiles/per-user/root/channels
+ 
 # environment
 XDG_STATE_HOME = /home/a/.local/state
 # default
@@ -320,13 +333,11 @@ ELECTRON_NO_ATTACH_CONSOLE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync check-symlink load
 # environment
-KITTY_INSTALLATION_DIR = /nix/store/vm0qlnainx69gxvrqxn3qlib3zcqy3bb-kitty-0.25.2/lib/kitty
-# environment
 __HM_SESS_VARS_SOURCED = 1
 # environment
 https_proxy = socks5://127.0.0.1:9050/
 # variable set hash-table stats:
-# Load=156/1024=15%, Rehash=0, Collisions=11/182=6%
+# Load=149/1024=15%, Rehash=0, Collisions=10/175=6%
 
 # Pattern-specific Variable Values
 
@@ -427,6 +438,6 @@ sync:
 # strcache performance: lookups = 28 / hit rate = 25%
 # hash-table stats:
 # Load=21/8192=0%, Rehash=0, Collisions=0/28=0%
-# Finished Make data base on Sun Aug  7 14:14:23 2022
+# Finished Make data base on Sun Aug  7 17:12:36 2022
 
  
