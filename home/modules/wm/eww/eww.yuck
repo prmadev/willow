@@ -5,9 +5,9 @@
 (defwindow topbar
 	:monitor 0
 	:geometry (geometry
-		:x "5px"
+		:x "0px"
 		:y "5px"
-		:width "100%"
+		:width "99%"
 		:height "20px"
 		:anchor "top center"
 	)
