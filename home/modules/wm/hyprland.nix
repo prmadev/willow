@@ -11,7 +11,7 @@
       exec-once=dbus-update-activation-environment --systemd WAYLAND_DISPLAY DISPLAY HYPRLAND_INSTANCE_SIGNATURE
       exec-once=systemctl --user start hyprland-session.target
       exec=swaybg -c "\#191724"
-      exec-once=eww open-all
+      exec-once=eww open-many
 
       general {
          sensitivity=0.6
