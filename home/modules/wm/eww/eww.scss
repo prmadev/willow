@@ -16,7 +16,6 @@ $subtle: #908caa;
 }
 
 .topbar {
-    background-color:$base;
 }
 .active {
     color: $base;
@@ -29,14 +28,20 @@ $subtle: #908caa;
     color: $base;
     background: $pine;
     font-weight: 900;
+    padding: 5px;
+
 
 }
 .empty {
     color: $text;
     background: $base;
     font-weight: 900;
+    padding: 5px;
+
 
 }
 .ws {
+    padding: 5px;
+
 
 }
