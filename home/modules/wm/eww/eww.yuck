@@ -41,7 +41,12 @@
 (defwidget bat []
 	(box 
 		:class "batterycontainer"
-		(progress :class "batterycharge" :value {EWW_BATTERY.BAT0.capacity}	)
+		(circular-progress
+			:class "batterycharge"
+			:value {EWW_BATTERY.BAT0.capacity}	
+			:start-at 0
+			:thickness 10
+		)
 	)
 
 )
