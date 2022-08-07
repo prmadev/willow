@@ -1,17 +1,10 @@
 make --dry-run --always-make --keep-going --print-directory
 make: Entering directory '/home/a/dofi'
- 
 git add . 
- 
 alejandra -q .
- 
 sudo nixos-rebuild switch --flake .#
- 
 git add .
- 
 git commit -m "auto: syncing"
- 
 hyprctl reload
- 
 make: Leaving directory '/home/a/dofi'
  

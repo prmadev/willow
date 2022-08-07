@@ -16,34 +16,32 @@ $subtle: #908caa;
 }
 
 .topbar {
-}
-.active {
-    color: $base;
-    background: $love;
-    font-weight: 900;
-    padding: 5px;
-    margin: 2px;
-    border-radius: 5px;
-}
+    .ws {
+        .active {
+            color: $base;
+            background: $love;
+            font-weight: 900;
+            padding: 5px;
+            margin: 2px;
+            border-radius: 5px;
+        }
 
-.occupied {
-    color: $base;
-    background: $pine;
-    font-weight: 900;
-    padding: 5px;
-    margin: 2px;
-    border-radius: 5px;
-
-}
-.empty {
-    color: $text;
-    background: $surface;
-    font-weight: 900;
-    padding: 5px;
-    margin: 2px;
-    border-radius: 5px;
-
-}
-.ws {
-
+        .occupied {
+            color: $base;
+            background: $pine;
+            font-weight: 900;
+            padding: 5px;
+            margin: 2px;
+            border-radius: 5px;
+        }
+        
+        .empty {
+            color: $text;
+            background: $surface;
+            font-weight: 900;
+            padding: 5px;
+            margin: 2px;
+            border-radius: 5px;
+        }
+    }
 }
