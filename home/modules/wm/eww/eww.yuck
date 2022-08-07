@@ -15,7 +15,7 @@
 	:focusable false
 	:windowtype "dock"
 	:wm-ignore true
-	(battery)
+	(bat)
 )
 (defwindow topbar
 	:monitor 0
