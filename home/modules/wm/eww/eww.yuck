@@ -44,7 +44,7 @@
 		(circular-progress
 			:class "batterycharge"
 			:value {EWW_BATTERY.BAT0.capacity}	
-			:start-at 0
+			:start-at 180
 			:thickness 10
 		)
 	)

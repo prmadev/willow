@@ -14,7 +14,14 @@ $subtle: #908caa;
     font-family: monosapce;
     // font-size: 10px;
 }
+.battery{
+    .batterycontainer{
+        .batterycharge{
+background-color: $base;
+        }
+    }
 
+}
 .topbar {
     .ws {
         .tag {
