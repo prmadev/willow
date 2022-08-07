@@ -20,13 +20,18 @@ $subtle: #908caa;
 .active{
     color: $base;
     background: $love;
+    font-weight: 900;
 }
 
 .occupied{
     color: $base;
     background: $pine;
+    font-weight: 900;
+
 }
 .empty{
     color: $text;
     background: $base;
+    font-weight: 900;
+
 }
