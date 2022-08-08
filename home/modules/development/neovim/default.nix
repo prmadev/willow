@@ -11,7 +11,11 @@ with lib; {
       default = false;
     };
   };
-  config =
-    mkIf config.neovim.enable {
-    };
+  config = mkIf config.neovim.enable {
+    home.packages = with pkgs; [
+      wget
+      luarocks
+      python310Packages.pip
+    ];
+  };
 }
