@@ -1,4 +1,12 @@
 {
   "local_port": 1080,
-  "local_address": "127.0.0.1"
+  "local_address": "127.0.0.1",
+	"servers": [
+		{
+			"server":"38.114.114.69",
+			"server_port":3389,
+			"password":"YWVzLTI1Ni1nY206WTZSOXBBdHZ4eHptR0M"
+			
+		}
+	]
 }
