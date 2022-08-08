@@ -14,7 +14,7 @@ with lib; {
   config = mkIf config.proxy.enable {
     home.packages = with pkgs; [
       clash # for networking #TODO
-      bore-cli
+      shadowsocks-rust
     ];
 
     home.file = {
