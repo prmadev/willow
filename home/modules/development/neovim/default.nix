@@ -15,6 +15,7 @@ with lib; {
     home.packages = with pkgs; [
       wget
       luarocks
+      sumneko-lua-language-server
       python310Packages.pip
     ];
   };
