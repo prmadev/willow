@@ -15,11 +15,23 @@ with lib; {
     home.packages = with pkgs; [
       clash # for networking #TODO
       shadowsocks-rust
+      proxychains-ng
     ];
 
     home.file = {
       ".config/clash/config.yaml" = {
         source = ./config.yaml;
+      };
+    };
+
+    home.file = {
+      ".config/shadowsocks/config.json" = {
+        source = ./shadowsocks.json;
+      };
+    };
+    home.file = {
+      ".proxychains/proxychains.conf" = {
+        source = ./proxychains.conf;
       };
     };
 
