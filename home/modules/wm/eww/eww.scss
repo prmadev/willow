@@ -22,6 +22,7 @@ $muted: #6e6a86;
     border-radius: 10px;
     padding: 5px;
     .battery-container {
+        margin : 2px;
         border-radius: 5px;
         background:$surface;
         padding: 10px;
@@ -44,7 +45,9 @@ $muted: #6e6a86;
             padding: 5px;
         }
     }
+
     .network-container {
+        margin : 2px;
         border-radius: 5px;
         background:$surface;
         padding: 10px;
