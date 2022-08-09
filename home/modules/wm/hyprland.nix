@@ -19,7 +19,7 @@
           main_mod=SUPER
           gaps_in=5
           gaps_out=5
-          border_size=3
+          border_size=5
           damage_tracking=full
           #layout=master
 

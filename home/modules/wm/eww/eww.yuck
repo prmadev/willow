@@ -36,6 +36,23 @@
 	(workspace)
 )
 
+(defwindow topbar-monitor-two
+	:monitor 1
+	:geometry (geometry
+		:x "0px"
+		:y "5px"
+		:width "99%"
+		:height "20px"
+		:anchor "top center"
+	)
+	:stacking "fg"
+	:exclusive true
+	:focusable false
+	:reserve (struts :distance "40px" :side "top")
+	:windowtype "dock"
+	:wm-ignore false
+	(workspace)
+)
 ;;;;;;
 ;;;;;; widgets
 ;;;;;;
