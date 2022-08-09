@@ -96,9 +96,17 @@ $muted: #6e6a86;
 
 			}
 
-            .active {
+            .active-monitor-one {
                 color: $base;
                 background: $love;
+                font-weight: 900;
+                padding: 5px;
+                border-radius: 5px;
+                font-size:15px;
+            }
+			.active-monitor-two {
+                color: $base;
+                background: $pine;
                 font-weight: 900;
                 padding: 5px;
                 border-radius: 5px;
@@ -108,7 +116,7 @@ $muted: #6e6a86;
 
             .occupied {
                 color: $base;
-                background: $pine;
+                background: $foam;
                 font-weight: 900;
                 padding: 5px;
                 border-radius: 5px;
