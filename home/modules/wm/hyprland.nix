@@ -11,7 +11,7 @@
       exec-once=dbus-update-activation-environment --systemd WAYLAND_DISPLAY DISPLAY HYPRLAND_INSTANCE_SIGNATURE
       exec-once=systemctl --user start hyprland-session.target
       exec-once=hyprpaper
-      exec=eww open topbar
+      exec=eww open-many topbar topbar-monitor-two
       exec=eww reload
 
       general {
