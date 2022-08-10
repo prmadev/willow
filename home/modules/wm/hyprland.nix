@@ -115,8 +115,8 @@
 
           bind=SUPER,comma,focusmonitor,l
           bind=SUPER,period,focusmonitor,r
-          bind=SUPERSHIFT,less,movecurrentworkspacetomonitor,l
-          bind=SUPERSHIFT,greater,movecurrentworkspacetomonitor,r
+          bind=SUPERSHIFT,less,movecurrentworkspacetomonitor,1
+          bind=SUPERSHIFT,greater,movecurrentworkspacetomonitor,0
         }
     '';
   };
