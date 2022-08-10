@@ -11,14 +11,15 @@
       exec-once=dbus-update-activation-environment --systemd WAYLAND_DISPLAY DISPLAY HYPRLAND_INSTANCE_SIGNATURE
       exec-once=systemctl --user start hyprland-session.target
       exec-once=hyprpaper
-      exec=eww open-many topbar topbar-monitor-two
+      exec-once=eww open-many topbar topbar-monitor-two
       exec=eww reload
 
+      blurls=paper
       general {
           sensitivity=0.6
           main_mod=SUPER
           gaps_in=5
-          gaps_out=5
+          gaps_out=7
           border_size=5
           damage_tracking=full
           #layout=master
@@ -37,8 +38,6 @@
       }
 
       monitors {
-        # monitor=HDMI-A-1,3840x2160@60,0x0,1
-        # workspace=HDMI-A-1,1
         monitor=eDP-1,1366x768@60,0x0,1
         workspace=eDP-1,1
         monitor=DP-1,1600x900@60,1366x0,1
