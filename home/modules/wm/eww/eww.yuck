@@ -18,6 +18,22 @@
 (info)
 
 )
+(defwindow time
+:monitor 0 
+	:geometry (geometry
+		:x "00px"
+		:y "00px"
+		:width "400px"
+		:height "400px"
+		:anchor "center center"
+	)
+	:stacking "bg"
+	:exclusive false
+	:focusable false
+	:windowtype "dock"
+	:wm-ignore true
+  (clocktime)
+ )
 (defwindow topbar
 	:monitor 0
 	:geometry (geometry
@@ -121,6 +137,10 @@
 	(literal :content ws)
 )
 
+(defwidget clocktime []
+  (label :class 'clocktime' :text time)
+)
+
 ;;;;;;
 ;;;;;; variables
 ;;;;;;
@@ -128,3 +148,7 @@
 (deflisten ws
 	`hyprgo -w`
 )
+(defpoll time :interval "1s"
+              :initial "initial-value"  ; optional, defaults to poll at startup
+              :run-while time-visible   ; optional, defaults to 'true'
+  `date +%H:%M:%S`)
