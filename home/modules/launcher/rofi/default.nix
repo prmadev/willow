@@ -81,6 +81,7 @@ with lib; {
           border-radius = mkLiteral "5px";
           padding = mkLiteral "5px 5px 5px 5px";
           text-color = mkLiteral config.colors.subtle.hex;
+          margin = mkLiteral "5px";
         };
 
         element-text = {
