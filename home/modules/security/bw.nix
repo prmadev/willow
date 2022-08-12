@@ -28,7 +28,7 @@ with lib; {
     home.packages = with pkgs;
       mkIf config.launcher.rofi.enable [
         rofi-rbw # for password management
-		wl-clipboard
+        wl-clipboard
       ];
   };
 }

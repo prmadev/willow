@@ -100,13 +100,6 @@ with lib; {
           margin = mkLiteral "5px";
           font = "monospace black 10";
         };
-        "element-text selected" = {
-          background-color = mkLiteral config.colors.pine.hex;
-          text-color = mkLiteral config.colors.surface.hex;
-          border-radius = mkLiteral "5px";
-          margin = mkLiteral "5px";
-          font = "monospace black 10";
-        };
       };
       package = pkgs.rofi-wayland;
     };
