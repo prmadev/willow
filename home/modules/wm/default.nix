@@ -25,5 +25,6 @@ with lib; {
     launcher.enable = true;
     wm.river.enable = true;
     eww.enable = true;
+	hyprland.enable = true;
   };
 }
