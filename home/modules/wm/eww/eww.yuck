@@ -22,7 +22,7 @@
     :monitor 0 
 	:geometry (geometry
 		:x "000px"
-		:y "200px"
+		:y "10%"
 		:width "400px"
 		:height "400px"
 		:anchor "center center"
