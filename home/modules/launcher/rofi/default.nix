@@ -17,7 +17,6 @@ with lib; {
 
   config = mkIf config.launcher.rofi.enable {
     programs.rofi = {
-      #TODO
       enable = true;
       font = config.global-fonts.main-family + " 10";
       theme = let
@@ -97,6 +96,7 @@ with lib; {
           background-color = mkLiteral config.colors.pine.hex;
           text-color = mkLiteral config.colors.surface.hex;
           border-radius = mkLiteral "5px";
+          margin = mkLiteral "5px";
           font = "monospace Black 10";
         };
       };
