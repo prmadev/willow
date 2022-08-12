@@ -21,8 +21,8 @@
 (defwindow time
     :monitor 0 
 	:geometry (geometry
-		:x "000px"
-		:y "10%"
+		:x "0px"
+		:y "100%"
 		:width "400px"
 		:height "400px"
 		:anchor "center center"
