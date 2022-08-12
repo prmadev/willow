@@ -33,7 +33,7 @@ with lib; {
               #layout=master
 
               col.active_border=0xff31748f
-              col.inactive_border=0xff191724
+              col.inactive_border=0xfff6c177
           }
 
           decoration {
