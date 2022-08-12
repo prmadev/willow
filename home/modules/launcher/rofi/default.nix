@@ -32,7 +32,7 @@ with lib; {
         };
 
         window = {
-          border-radius = mkLiteral "0px";
+          border-radius = mkLiteral "5px";
           width = mkLiteral "20%";
           y-offset = mkLiteral "00px";
           padding = mkLiteral "0px 00px 0px 0px";
@@ -58,7 +58,7 @@ with lib; {
           background-color = mkLiteral config.colors.surface.hex;
           text-color = mkLiteral config.colors.text.hex;
           expand = false;
-          border-radius = mkLiteral "0px";
+          border-radius = mkLiteral "5px";
           padding = mkLiteral "5px";
           font = "monospace black 10";
         };
@@ -79,7 +79,7 @@ with lib; {
 
         element = {
           orientation = mkLiteral "vertical";
-          border-radius = mkLiteral "0px";
+          border-radius = mkLiteral "5px";
           padding = mkLiteral "5px 5px 5px 5px";
           text-color = mkLiteral config.colors.subtle.hex;
         };
@@ -96,7 +96,7 @@ with lib; {
         "element selected" = {
           background-color = mkLiteral config.colors.pine.hex;
           text-color = mkLiteral config.colors.surface.hex;
-          border-radius = mkLiteral "0px";
+          border-radius = mkLiteral "5px";
           font = "monospace Black 10";
         };
       };
