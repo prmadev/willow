@@ -17,19 +17,19 @@ $muted: #6e6a86;
     font-family: monosapce;
     // font-size: 10px;
 }
-.timedate {
-	.clock {
-		font-size: 100px;
-		font-weight: 900;
-		color: $text;
+.time {
+	.time-date {
+		.clock {
+			font-size: 100px;
+			font-weight: 900;
+			color: $text;
+		}
+		.date {
+			font-size: 90px;
+			font-weight: 400;
+			color: $text;
 
-	}
-
-	.clock {
-		font-size: 90px;
-		font-weight: 400;
-		color: $text;
-
+		}  
 	}
 }
 
