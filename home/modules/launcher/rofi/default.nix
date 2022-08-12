@@ -93,7 +93,7 @@ with lib; {
           font = "monospace 10";
         };
 
-        "element selected" = {
+        "selected" = {
           background-color = mkLiteral config.colors.pine.hex;
           text-color = mkLiteral config.colors.surface.hex;
           border-radius = mkLiteral "5px";
