@@ -125,20 +125,17 @@
 	)
 )
 
-; (defwidget workspace []
-; 	(box 
-; 		:class "workspace"
-; 		ws
-; 	)
-
-; )
 
 (defwidget workspace []
 	(literal :content ws)
 )
 
-(defwidget clocktime []
-  (label :class "clocktime" :text time)
+(defwidget timedate []
+  (box :class "time-date"
+    :orientation "v"
+    (label :class "clock" :text time)
+    (label :class "date" :text date)
+  )
 )
 
 ;;;;;;
@@ -152,3 +149,8 @@
               :initial "initial-value"  ; optional, defaults to poll at startup
               :run-while time-visible   ; optional, defaults to 'true'
   `date +%H:%M:%S`)
+
+(defpoll date :interval "600s"
+              :initial "initial-value"  ; optional, defaults to poll at startup
+              :run-while time-visible   ; optional, defaults to 'true'
+  `date +%Y-%m-%d`)
