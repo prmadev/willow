@@ -19,7 +19,7 @@
 
 )
 (defwindow time
-:monitor 0 
+    :monitor 0 
 	:geometry (geometry
 		:x "00px"
 		:y "00px"
@@ -138,7 +138,7 @@
 )
 
 (defwidget clocktime []
-  (label :class 'clocktime' :text time)
+  (label :class "clocktime" :text time)
 )
 
 ;;;;;;
