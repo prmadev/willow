@@ -98,7 +98,7 @@ with lib; {
           text-color = mkLiteral config.colors.surface.hex;
           border-radius = mkLiteral "5px";
           margin = mkLiteral "5px";
-          font = "monospace Black 10";
+          font = "monospace black 10";
         };
       };
       package = pkgs.rofi-wayland;
