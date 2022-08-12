@@ -24,7 +24,7 @@
 		:x "0px"
 		:y "0%"
 		:width "400px"
-		:height "200px"
+		:height "150px"
 		:anchor "bottom center"
 	)
 	:stacking "bg"
