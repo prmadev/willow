@@ -45,7 +45,7 @@ inputbar {
   background-color: #1f1d2e;
   text-color: @bg;
   expand: false;
-  border-radius: 0px;
+  border-radius: 5px;
   padding: 5px;
   font:  "monospace black 10";
 }
@@ -67,7 +67,7 @@ mainbox {
 
 element {
   orientation: vertical;
-  border-radius: 0px;
+  border-radius: 5px;
   padding: 5px 5px 5px 5px; 
   text-color: #908caa;
 }
@@ -85,6 +85,6 @@ element-text {
 element selected {
   background-color: @button;
   text-color: @bg;
-  border-radius: 0px;
+  border-radius: 5px;
   font:  "monospace Black 10";
 }
