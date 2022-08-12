@@ -32,8 +32,8 @@ with lib; {
               damage_tracking=full
               #layout=master
 
-              col.active_border=0xff31748f
-              col.inactive_border=0xfff6c177
+              col.active_border=0xff6c177f
+              col.inactive_border=0xff191724
           }
 
           decoration {
