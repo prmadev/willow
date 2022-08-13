@@ -72,36 +72,6 @@
 ;;;;;;
 ;;;;;; widgets
 ;;;;;;
-; (defwidget info[]
-; 	(box
-; 		:orientation "v"
-; 		:class "inf"
-; 		(bat)
-; 		(net)
-; 		
-; 	)
-; )
-(defwidget bat []
-	(box :orientation "v"
-		:class "battery-container"
-		(circular-progress
-			:class "battery-charge"
-			:value {EWW_BATTERY.BAT0.capacity}	
-			:start-at 0
-			:thickness 10
-			:clockwise false
-		)
-
-		(label
-			:class "battery-percent"
-			:text "${EWW_BATTERY.BAT0.capacity}%"
-		)
-		(label
-			:class "battery-title"
-			:text "BATTERY"
-		)
-	)
-)
 
 
 (defwidget workspace []

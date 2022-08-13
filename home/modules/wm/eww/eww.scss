@@ -39,22 +39,21 @@ $muted: #6e6a86;
     border-radius: 10px;
     padding: 5px;
     	.battery {
-
 			margin : 2px;
 			border-radius: 5px;
 			background:$surface;
 			padding: 10px;
 				.battery-name{
-					color:#31748f;
+					color:$pine;
 					font-weight:900;
 					padding: 10px;
 				}
+
 				.battery-number{
 					color: $surface;
 					background-color: $pine;
 					padding: 10px;
 					font-weight:900;
-
 				}
    			 }
         .network {
@@ -63,81 +62,83 @@ $muted: #6e6a86;
 			background:$surface;
 			padding: 10px;
 				.network-name{
-					color:#31748f;
+					color:$pine;
 					font-weight:900;
 					padding: 10px;
 				}
+
 				.network-str{
 					color: $surface;
 					background-color: $pine;
 					padding: 10px;
 					font-weight:900;
-
 				}
 			}
-    }
-    .ws {
-        .tag {
-            margin: 3px;
-            background-color: $base;
-            border-radius: 10px;
-            .name {
-                color: $muted;
-                background: $base;
-                font-weight:400;
-                padding-right: 5px;
-                margin: 5px;
-                border-top-right-radius: 5px;
-                border-bottom-right-radius: 5px;
-                font-size: 15px;
-            }
-			.monitor {
-				color: $rose;
-                background: $overlay;
-                font-weight: 400;
-                padding: 5px;
-                border-radius: 5px;
-                font-size:15px;
-
-			}
-
-            .active-monitor-one {
-                color: $base;
-                background: $love;
-                font-weight: 900;
-                padding: 5px;
-                border-radius: 5px;
-                font-size:18px;
-            }
-
-			.active-monitor-two {
-                color: $base;
-                background: $pine;
-                font-weight: 900;
-                padding: 5px;
-                border-radius: 5px;
-                font-size:18px;
-            }
-            
-
-            .occupied {
-                color: $base;
-                background: $iris;
-                font-weight: 900;
-                padding: 5px;
-                border-radius: 5px;
-                font-size:18px;
-            }
-
-            .empty {
-                color: $muted;
-                background: $base;
-                font-weight: 900;
-                padding: 5px;
-                border-radius: 5px;
-                font-size:18px;
-
-            }
-        }
-    }
+	}
 }
+
+.ws {
+	.tag {
+		margin: 3px;
+		background-color: $base;
+		border-radius: 10px;
+		.name {
+			color: $muted;
+			background: $base;
+			font-weight:400;
+			padding-right: 5px;
+			margin: 5px;
+			border-top-right-radius: 5px;
+			border-bottom-right-radius: 5px;
+			font-size: 15px;
+		}
+
+		.monitor {
+			color: $rose;
+			background: $overlay;
+			font-weight: 400;
+			padding: 5px;
+			border-radius: 5px;
+			font-size:15px;
+
+		}
+
+		.active-monitor-one {
+			color: $base;
+			background: $love;
+			font-weight: 900;
+			padding: 5px;
+			border-radius: 5px;
+			font-size:18px;
+		}
+
+		.active-monitor-two {
+			color: $base;
+			background: $pine;
+			font-weight: 900;
+			padding: 5px;
+			border-radius: 5px;
+			font-size:18px;
+		}
+		
+		.occupied {
+			color: $base;
+			background: $iris;
+			font-weight: 900;
+			padding: 5px;
+			border-radius: 5px;
+			font-size:18px;
+		}
+
+		.empty {
+			color: $muted;
+			background: $base;
+			font-weight: 900;
+			padding: 5px;
+			border-radius: 5px;
+			font-size:18px;
+
+		}
+	}
+}
+
