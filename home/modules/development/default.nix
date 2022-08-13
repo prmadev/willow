@@ -40,5 +40,10 @@ with lib; {
     rust.enable = true;
     vscode.enable = true;
     zig.enable = true;
+
+    home.packages = with pkgs; [
+      flutter
+      dart
+    ];
   };
 }
