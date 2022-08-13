@@ -110,7 +110,7 @@
 			:class "network"
 	    (circular-progress
 			:class "network-strength"
-			:value 	{round(netstrenght, 2)}
+			:value 	{round(netstrength, 2)}
 			:start-at 1
 			:thickness 10
 			:clockwise false
