@@ -162,6 +162,4 @@
   `nmcli device show wlp2s0 | awk '/GENERAL.CONNECTION/ {print $2}'`)
 
 (defpoll netstrenght :interval "3s"
-              :initial "initial-value"  ; optional, defaults to poll at startup
-              :run-while time-visible   ; optional, defaults to 'true'
-  `nmcli device show wlp2s0 | awk '/GENERAL.STATE/ {print $2+.0}'`)
+  `echo (nmcli device show wlp2s0 | awk '/GENERAL.STATE/ {print $2}').0`)
