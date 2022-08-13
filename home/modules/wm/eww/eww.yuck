@@ -107,7 +107,7 @@
 		:class "network-container"
 		(box 
 			:orientation "v" 
-			:class "network-name"
+			:class "network"
 
 			(label
 				:class "network-name"

@@ -25,7 +25,7 @@ $muted: #6e6a86;
 			color: $text;
 		}
 		.date {
-			font-size: 50px;
+			font-size: 90px;
 			font-weight: 400;
 			color: $text;
 
@@ -66,13 +66,9 @@ $muted: #6e6a86;
         border-radius: 5px;
         background:$surface;
         padding: 10px;
-        .network-speed {
-
-            .network-up {
+        .network {
+			.network-name{
                 color:#31748f;
-            }
-            .network-down {
-                color: $iris;
             }
         }
         .network-title {
