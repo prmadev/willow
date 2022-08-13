@@ -61,23 +61,21 @@ $muted: #6e6a86;
         }
     }
 
-    .network-container {
+        .network {
         margin : 2px;
         border-radius: 5px;
         background:$surface;
         padding: 10px;
-        .network {
 			.network-name{
                 color:#31748f;
 				font-weight:900;
             }
-			.network-strength{
+			.network-str{
 				color: $pine;
 				padding: 10px;
 			}
         }
     }
-}
     .ws {
         .tag {
             margin: 3px;
