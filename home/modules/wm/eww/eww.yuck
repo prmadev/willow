@@ -109,9 +109,9 @@
 			:orientation "v" 
 			:class "network"
 	    (circular-progress
-			:class "net"
+			:class "network-strength"
 			:value 	netstrenght
-			:start-at 0
+			:start-at 1
 			:thickness 10
 			:clockwise false
 		)
