@@ -72,15 +72,15 @@
 ;;;;;;
 ;;;;;; widgets
 ;;;;;;
-(defwidget info[]
-	(box
-		:orientation "v"
-		:class "inf"
-		(bat)
-		(net)
-		
-	)
-)
+; (defwidget info[]
+; 	(box
+; 		:orientation "v"
+; 		:class "inf"
+; 		(bat)
+; 		(net)
+; 		
+; 	)
+; )
 (defwidget bat []
 	(box :orientation "v"
 		:class "battery-container"
@@ -102,32 +102,13 @@
 		)
 	)
 )
-(defwidget net []
-	(box :orientation "v"
-		:class "network-container"
-		(box 
-			:orientation "v" 
-			:class "network"
-	    (circular-progress
-			:class "network-strength"
-			:value 	{round(netstrength, 2)}
-			:start-at 1
-			:thickness 10
-			:clockwise false
-		)
-        (label
-            :class "network-name"
-            :text netif	
-        )
-
-      )
-		
-	)
-)
 
 
 (defwidget workspace []
 	(literal :content ws)
+)
+(defwidget info []
+	(literal :content ewwinfo)
 )
 
 (defwidget timedate []
@@ -144,6 +125,9 @@
 
 (deflisten ws
 	`hyprgo -w`
+)
+(deflisten ewwinfo 
+	`ewwinfo`
 )
 (defpoll time :interval "1s"
               :initial "initial-value"  ; optional, defaults to poll at startup
