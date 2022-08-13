@@ -110,7 +110,7 @@
 			:class "network"
 	    (circular-progress
 			:class "network-strength"
-			:value 	netstrenght/100*100
+			:value 	netstrenght
 			:start-at 1
 			:thickness 10
 			:clockwise false
@@ -162,4 +162,5 @@
   `nmcli device show wlp2s0 | awk '/GENERAL.CONNECTION/ {print $2}'`)
 
 (defpoll netstrength :interval "3s"
-  `echo $(nmcli device show wlp2s0 | awk '/GENERAL.STATE/ {print $2}').0`)
+  `echo $(nmcli device show wlp2s0 | awk '/GENERAL.STATE/ {print $2}').0` * 100 / 100
+  )
