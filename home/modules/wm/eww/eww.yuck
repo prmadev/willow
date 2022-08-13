@@ -162,5 +162,5 @@
   `nmcli device show wlp2s0 | awk '/GENERAL.CONNECTION/ {print $2}'`)
 
 (defpoll netstrength :interval "3s"
-  `echo $(nmcli device show wlp2s0 | awk '/GENERAL.STATE/ {print $2}').0` * 100 / 100
+  round(`echo $(nmcli device show wlp2s0 | awk '/GENERAL.STATE/ {print $2}').0`) 
   )
