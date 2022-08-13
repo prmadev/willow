@@ -15,9 +15,9 @@
 	:focusable false
 	:windowtype "dock"
 	:wm-ignore true
-(info)
-
+  (info)
 )
+
 (defwindow time
     :monitor 0 
 	:geometry (geometry
@@ -106,22 +106,15 @@
 	(box :orientation "v"
 		:class "network-container"
 		(box 
-			:orientation "h" 
-			:class "network-speeds"
+			:orientation "v" 
+			:class "network-name"
 
 			(label
-				:class "network-up"
-				:text "${EWW_NET.wlp2s0.up}"	
-			)
-			(label
-				:class "network-down"
-				:text "${EWW_NET.wlp2s0.down}"	
+				:class "network-name"
+				:text netif	
 			)
 		)
-		(label
-			:class "network-title"
-			:text "NETWORK"
-		)
+		
 	)
 )
 
@@ -154,3 +147,9 @@
               :initial "initial-value"  ; optional, defaults to poll at startup
               :run-while time-visible   ; optional, defaults to 'true'
   `date +%Y-%m-%d`)
+
+
+(defpoll netif :interval "3s"
+              :initial "initial-value"  ; optional, defaults to poll at startup
+              :run-while time-visible   ; optional, defaults to 'true'
+  `nmcli device show wlp2s0 | awk '/GENERAL.CONNECTION/ {print $2}'`)
