@@ -17,6 +17,7 @@ $muted: #6e6a86;
     font-family: monosapce;
     // font-size: 10px;
 }
+
 .time {
 	.time-date {
 		.clock {
@@ -34,51 +35,46 @@ $muted: #6e6a86;
 }
 
 .info {
+	.main { 
     border-radius: 10px;
     padding: 5px;
-    .battery-container {
-        margin : 2px;
-        border-radius: 5px;
-        background:$surface;
-        padding: 10px;
-        .battery-charge{
-            color: $pine;
-            border-radius: 10px;
-            padding: 10px;
-        }
-        .battery-percent {
-            font-weight: 400;
-            color: $muted;
-            font-size: 12px;
-        }
-        .battery-title {
-            font-weight: 900;
-            color: $foam;
-            background: $base;
-            border-radius:10px;
-            font-size: 15px;
-            padding: 5px;
-        }
-    }
+    	.battery {
 
+			margin : 2px;
+			border-radius: 5px;
+			background:$surface;
+			padding: 10px;
+				.battery-name{
+					color:#31748f;
+					font-weight:900;
+					padding: 10px;
+				}
+				.battery-number{
+					color: $surface;
+					background-color: $pine;
+					padding: 10px;
+					font-weight:900;
+
+				}
+   			 }
         .network {
-        margin : 2px;
-        border-radius: 5px;
-        background:$surface;
-        padding: 10px;
-			.network-name{
-                color:#31748f;
-				font-weight:900;
-				padding: 10px;
-            }
-			.network-str{
-				color: $surface;
-				background-color: $pine;
-				padding: 10px;
-				font-weight:900;
+			margin : 2px;
+			border-radius: 5px;
+			background:$surface;
+			padding: 10px;
+				.network-name{
+					color:#31748f;
+					font-weight:900;
+					padding: 10px;
+				}
+				.network-str{
+					color: $surface;
+					background-color: $pine;
+					padding: 10px;
+					font-weight:900;
 
+				}
 			}
-        }
     }
     .ws {
         .tag {
@@ -144,3 +140,4 @@ $muted: #6e6a86;
             }
         }
     }
+}
