@@ -19,7 +19,7 @@ with lib; {
           exec-once=dbus-update-activation-environment --systemd WAYLAND_DISPLAY DISPLAY HYPRLAND_INSTANCE_SIGNATURE
           exec-once=systemctl --user start hyprland-session.target
           exec-once=hyprpaper
-          exec-once=eww open-many topbar topbar-monitor-two info
+          exec-once=eww open-many topbar topbar-monitor-two info time
           exec=eww reload
 
 
@@ -74,8 +74,9 @@ with lib; {
             bind=SUPER,d,exec,rofi -show
 
 
-            bind=SUPER,space,exec,hyprctl keyword input:kb_layout "US-en"
-            bind=SUPERALT,space,exec,hyprctl keyword input:kb_layout "IR-fa"
+            bind=SUPER,i,exec,hyprctl keyword input:kb_layout "US-en"
+            bind=SUPERSHIFT,I,exec,hyprctl keyword input:kb_layout "IR-fa"
+            bind=SUPER,r,exec,hyprctl reload
 
             bind=SUPER,q,killactive
 
@@ -95,20 +96,20 @@ with lib; {
             bind=SUPERSHIFT,l,movewindow,r
 
             bind=SUPERALT,h,resizeactive,-10 0
-            bind=SUPERALT,j,resizeactive,0 -10
-            bind=SUPERALT,k,resizeactive,10 0
-            bind=SUPERALT,l,resizeactive,0 10
+            bind=SUPERALT,j,resizeactive,0 10
+            bind=SUPERALT,k,resizeactive,0 -10
+            bind=SUPERALT,l,resizeactive,10 0
 
 
-            bind=SUPER,1,workspace,1
-            bind=SUPER,2,workspace,2
-            bind=SUPER,3,workspace,3
-            bind=SUPER,4,workspace,4
-            bind=SUPER,5,workspace,5
-            bind=SUPER,6,workspace,6
-            bind=SUPER,7,workspace,7
-            bind=SUPER,8,workspace,8
-            bind=SUPER,9,workspace,9
+            bind=SUPER,1,workspace,eDP-1+1
+            bind=SUPER,2,workspace,eDP-1+2
+            bind=SUPER,3,workspace,eDP-1+3
+            bind=SUPER,4,workspace,eDP-1+4
+            bind=SUPER,5,workspace,eDP-1+5
+            bind=SUPER,6,workspace,eDP-1+6
+            bind=SUPER,7,workspace,DP-1+1
+            bind=SUPER,8,workspace,DP-1+2
+            bind=SUPER,9,workspace,DP-1+3
 
 
             bind=SUPERSHIFT,exclam,movetoworkspace,1
