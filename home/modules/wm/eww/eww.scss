@@ -49,14 +49,14 @@ $muted: #6e6a86;
 					padding: 10px;
 				}
 
-				.brightness-number progress trough highlight{
+				.brightness-number progressbar trough highlight{
 					color: $surface;
 					background-color: $rose;
 					padding: 10px;
 					font-weight:900;
 				}
 
-				.brightness-number  through {
+				.brightness-number progressbar through {
 					color: $surface;
 					background-color: $pine;
 					padding: 10px;
