@@ -103,10 +103,10 @@ with lib; {
                 bind=SUPERSHIFT,k,movewindow,u
                 bind=SUPERSHIFT,l,movewindow,r
 
-                bind=SUPERALT,h,resizeactive,-10 0
-                bind=SUPERALT,j,resizeactive,0 10
-                bind=SUPERALT,k,resizeactive,0 -10
-                bind=SUPERALT,l,resizeactive,10 0
+                bind=SUPERCTRL,h,resizeactive,-10 0
+                # bind=SUPERALT,j,resizeactive,0 10
+                # bind=SUPERALT,k,resizeactive,0 -10
+                bind=SUPERCTRL,l,resizeactive,10 0
 
                 bind=SUPER,h,focusmonitor,0
                 bind=SUPER,l,focusmonitor,1
