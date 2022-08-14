@@ -76,7 +76,7 @@ with lib; {
               };
               g = {
                 i = ["select_all" ":pipe goimport"];
-                f = ["select_all" ":pipe gofumpt" ":pipe goimport"];
+                f = ["select_all" ":pipe gofumports"];
 
                 t = ":run-shell-command go mod tidy";
                 g = ":run-shell-command go get -u";
