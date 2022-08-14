@@ -38,6 +38,24 @@ $muted: #6e6a86;
 	.main { 
     border-radius: 10px;
     padding: 5px;
+.brightness {
+			margin : 2px;
+			border-radius: 5px;
+			background:$surface;
+			padding: 10px;
+				.brighness-name{
+					color:$pine;
+					font-weight:900;
+					padding: 10px;
+				}
+
+				.brightness-number{
+					color: $surface;
+					background-color: $rose;
+					padding: 5px;
+					font-weight:900;
+				}
+   			 }
     	.battery {
 			margin : 2px;
 			border-radius: 5px;
