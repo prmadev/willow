@@ -44,6 +44,12 @@ with lib; {
     home.packages = with pkgs; [
       flutter
       dart
+      gtk3
+      cairo
+      pango
+      atk
+      glib
+      libepoxy
     ];
   };
 }
