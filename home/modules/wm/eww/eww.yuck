@@ -35,7 +35,7 @@
   (timedate)
  )
 (defwindow topbar
-	:monitor 0
+	; :monitor 0
 	:geometry (geometry
 		:x "0px"
 		:y "5px"
