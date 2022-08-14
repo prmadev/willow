@@ -78,8 +78,8 @@ with lib; {
                 bind=SUPER,g,togglegroup
 
           bind=SUPER,SPACE,layoutmsg,swapwithmaster
-          bind=SUPER,j,layoutmsg,cyclenext
-          bind=SUPER,k,layoutmsg,cycleprev
+          # bind=SUPER,j,layoutmsg,cyclenext
+          # bind=SUPER,k,layoutmsg,cycleprev
 
 
                 bind=SUPER,i,exec,hyprctl keyword input:kb_layout "US-en"
@@ -92,10 +92,10 @@ with lib; {
                 bind=SUPER,e,fullscreen,0
                 bind=SUPER,f,fullscreen,1
 
-                #bind=SUPER,h,movefocus,l
-                # bind=SUPER,j,movefocus,d
-                # bind=SUPER,k,movefocus,u
-                #bind=SUPER,l,movefocus,r
+                bind=SUPER,h,movefocus,l
+                 bind=SUPER,j,movefocus,d
+                 bind=SUPER,k,movefocus,u
+                bind=SUPER,l,movefocus,r
 
 
                 bind=SUPERSHIFT,h,movewindow,l
@@ -108,8 +108,8 @@ with lib; {
                 # bind=SUPERALT,k,resizeactive,0 -10
                 bind=SUPERCTRL,l,resizeactive,10 0
 
-                bind=SUPER,h,focusmonitor,0
-                bind=SUPER,l,focusmonitor,1
+                # bind=SUPER,h,focusmonitor,0
+                # bind=SUPER,l,focusmonitor,1
 
                 bind=SUPER,1,workspace,1
                 bind=SUPER,2,workspace,2
