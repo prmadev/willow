@@ -38,7 +38,7 @@ $muted: #6e6a86;
 	.main { 
     border-radius: 10px;
     padding: 5px;
-.brightness {
+		.brightness {
 			margin : 2px;
 			border-radius: 5px;
 			background:$surface;
@@ -52,10 +52,11 @@ $muted: #6e6a86;
 				.brightness-number{
 					color: $surface;
 					background-color: $rose;
-					padding: 5px;
+					padding: 10px;
 					font-weight:900;
 				}
    			 }
+	
     	.battery {
 			margin : 2px;
 			border-radius: 5px;
