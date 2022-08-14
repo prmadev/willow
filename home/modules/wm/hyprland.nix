@@ -101,15 +101,15 @@ with lib; {
             bind=SUPERALT,l,resizeactive,10 0
 
 
-            bind=SUPER,1,workspace,eDP-1+1
-            bind=SUPER,2,workspace,eDP-1+2
-            bind=SUPER,3,workspace,eDP-1+3
-            bind=SUPER,4,workspace,eDP-1+4
-            bind=SUPER,5,workspace,eDP-1+5
-            bind=SUPER,6,workspace,eDP-1+6
-            bind=SUPER,7,workspace,DP-1+1
-            bind=SUPER,8,workspace,DP-1+2
-            bind=SUPER,9,workspace,DP-1+3
+            bind=SUPER,1,workspace,m+1
+            bind=SUPER,2,workspace,m+2
+            bind=SUPER,3,workspace,m+3
+            bind=SUPER,4,workspace,m+4
+            bind=SUPER,5,workspace,m+5
+            bind=SUPER,6,workspace,m+6
+            bind=SUPER,7,workspace,m+7
+            bind=SUPER,8,workspace,m+8
+            bind=SUPER,9,workspace,m+9
 
 
             bind=SUPERSHIFT,exclam,movetoworkspace,1
