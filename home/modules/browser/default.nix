@@ -8,7 +8,7 @@ with lib; {
   imports = [
     ./firefox
     ./qutebrowser
-    # ./chromium
+    ./chromium
   ];
   options = {
     browser.enable = mkOption {
