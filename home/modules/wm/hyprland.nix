@@ -40,7 +40,6 @@ with lib; {
           			 }
         layoutmsg {
         	 new_is_master=false
-             new_on_top=false
          }
 
                     decoration {
@@ -80,7 +79,7 @@ with lib; {
                       bind=SUPER,RETURN,exec,kitty
                       bind=SUPER,d,exec,rofi -show
                       bind=SUPER,g,togglegroup
-          bind=SUPER,SPACE,layoutmsg,swapwithmaster
+         			  bind=SUPER,SPACE,layoutmsg,swapwithmaster
 
 
                       bind=SUPER,i,exec,hyprctl keyword input:kb_layout "US-en"
