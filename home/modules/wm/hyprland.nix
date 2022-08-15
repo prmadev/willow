@@ -81,8 +81,8 @@ with lib; {
               # bind=SUPER,k,layoutmsg,cycleprev
 
 
-                    bind=SUPER,SPACE,exec,hyprctl keyword input:kb_layout us
-                    bind=SUPERALT,SPACE,exec,hyprctl keyword input:kb_layout fa
+                    bind=SUPER,SPACE,exec,hyprctl keyword input:kb_layout "US-en"
+                    bind=SUPERALT,SPACE,exec,hyprctl keyword input:kb_layout "IR-fa"
                     bind=SUPER,r,exec,hyprctl reload
 
                     bind=SUPER,q,killactive
