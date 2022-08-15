@@ -54,7 +54,7 @@ $muted: #6e6a86;
 					background-color: $rose;
 					padding: 10px;
 					font-weight:900;
-				border-radius: 10px;
+					border-radius: 10px;
 				}
 
 				.brightness-number progressbar through {
@@ -62,7 +62,7 @@ $muted: #6e6a86;
 					background-color: $pine;
 					padding: 10px;
 					font-weight:900;
-				border-radius: 10px;
+					border-radius: 10px;
 				}
    			 }
 	
@@ -82,14 +82,14 @@ $muted: #6e6a86;
 					background-color: $foam;
 					padding: 10px;
 					font-weight:900;
-				border-radius: 10px;
+					border-radius: 10px;
 				}
-				.battery-number scale trough highlight{
+				.battery-number slider trough highlight{
 					color: $iris;
 					background-color: $rose;
 					padding: 10px;
 					font-weight:900;
-				border-radius: 10px;
+					border-radius: 10px;
 				}
 
    			 }
@@ -102,7 +102,7 @@ $muted: #6e6a86;
 					color:$pine;
 					font-weight:900;
 					padding: 10px;
-				border-radius: 10px;
+					border-radius: 10px;
 				}
 
 				.network-str{
@@ -110,12 +110,20 @@ $muted: #6e6a86;
 					background-color: $pine;
 					padding: 10px;
 					font-weight:900;
-				border-radius: 10px;
+					border-radius: 10px;
 				}
 			}
 	}
 }
 
+.bottom {
+				color: $iris;
+					background-color: $rose;
+					padding: 10px;
+					font-weight:900;
+					border-radius: 10px;
+		
+}
 .ws {
 	.tag {
 		margin: 3px;
