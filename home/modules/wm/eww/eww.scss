@@ -49,13 +49,13 @@ $muted: #6e6a86;
 					padding: 10px;
 				}
 
-				.brightness-number  trough progress highlight{
+				.brightness-number  trough slider highlight{
 					color: $surface;
 					background-color: $iris;
 					padding: 00px;
 					border-radius: 10px;
 				}
-				.brightness-number  trough progress{
+				.brightness-number  trough slider{
 					color: $surface;
 					background-color: $rose;
 					padding: 10px;
@@ -95,7 +95,14 @@ $muted: #6e6a86;
 					font-weight:900;
 					border-radius: 10px;
 				}
-				.battery-number slider trough highlight{
+				.battery-number  trough slider highlight{
+					color: $iris;
+					background-color: $rose;
+					padding: 10px;
+					font-weight:900;
+					border-radius: 10px;
+				}
+				.battery-number  trough slider {
 					color: $iris;
 					background-color: $rose;
 					padding: 10px;
@@ -103,6 +110,13 @@ $muted: #6e6a86;
 					border-radius: 10px;
 				}
 
+				.battery-number  trough  {
+					color: $iris;
+					background-color: $rose;
+					padding: 10px;
+					font-weight:900;
+					border-radius: 10px;
+				}
    			 }
         .network {
 			margin : 2px;
@@ -117,6 +131,27 @@ $muted: #6e6a86;
 				}
 
 				.network-str{
+					color: $surface;
+					background-color: $pine;
+					padding: 10px;
+					font-weight:900;
+					border-radius: 10px;
+				}
+				.network-str trough{
+					color: $surface;
+					background-color: $pine;
+					padding: 10px;
+					font-weight:900;
+					border-radius: 10px;
+				}
+				.network-str trough slider{
+					color: $surface;
+					background-color: $pine;
+					padding: 10px;
+					font-weight:900;
+					border-radius: 10px;
+				}
+				.network-str trough slider highlight{
 					color: $surface;
 					background-color: $pine;
 					padding: 10px;
