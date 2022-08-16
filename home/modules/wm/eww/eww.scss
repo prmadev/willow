@@ -38,7 +38,7 @@ $muted: #6e6a86;
 	.main { 
     border-radius: 10px;
     padding: 5px;
-		.brightness {
+	.brightness {
 			margin : 2px;
 			border-radius: 5px;
 			background:$surface;
@@ -47,36 +47,38 @@ $muted: #6e6a86;
 					color:$pine;
 					font-weight:900;
 					padding: 10px;
-				}
-
-				.brightness-number  trough slider highlight{
-					color: $surface;
-					background-color: $iris;
-					padding: 00px;
 					border-radius: 10px;
 				}
-				.brightness-number  trough slider{
+
+				.brightness-number{
 					color: $surface;
-					background-color: $rose;
+					background-color: $pine;
 					padding: 10px;
+					font-weight:900;
 					border-radius: 10px;
 				}
-
-				.brightness-number  trough {
+				.brightness-number trough{
 					color: $surface;
-					background-color: $base;
-					padding: 00px;
+					background-color: $pine;
+					padding: 10px;
+					font-weight:900;
 					border-radius: 10px;
 				}
-
-				.brightness-number {
+				.brightness-number trough slider{
 					color: $surface;
-					background-color: $base;
-					padding: 00px;
+					background-color: $pine;
+					padding: 10px;
+					font-weight:900;
 					border-radius: 10px;
 				}
-   			 }
-	
+				.brightness-number trough slider highlight{
+					color: $pine;
+					background-color: $pine;
+					padding: 10px;
+					font-weight:900;
+					border-radius: 10px;
+				}
+			}
     	.battery {
 			margin : 2px;
 			border-radius: 5px;
