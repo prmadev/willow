@@ -37,6 +37,7 @@ progressbar {
 	min-width: 15px;
 }
 .info {
+	font-size: 8px;
 	.main { 
     border-radius: 10px;
     padding: 5px;
@@ -54,7 +55,7 @@ progressbar {
 				}
 
 				.brightness-number{
-					color: $surface;
+				    background-color: $base;
 					border-radius: 10px;
 					padding: 10px;
 				}
