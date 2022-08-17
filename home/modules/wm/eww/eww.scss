@@ -59,21 +59,21 @@ $muted: #6e6a86;
 				}
 				.brightness-number trough{
 					color: $surface;
-					background-color: $pine;
+					background-color: $iris;
 					padding: 10px;
 					font-weight:900;
 					border-radius: 10px;
 				}
-				.brightness-number trough slider{
+				.brightness-number trough progress{
 					color: $surface;
-					background-color: $pine;
+					background-color: $rose;
 					padding: 10px;
 					font-weight:900;
 					border-radius: 10px;
 				}
-				.brightness-number trough slider highlight{
-					color: $pine;
-					background-color: $pine;
+				.brightness-number trough progress highlight{
+					color: $foam;
+					background-color: $love;
 					padding: 10px;
 					font-weight:900;
 					border-radius: 10px;
