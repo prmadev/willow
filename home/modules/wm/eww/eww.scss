@@ -53,27 +53,19 @@ $muted: #6e6a86;
 				.brightness-number{
 					color: $surface;
 					background-color: $pine;
-					padding: 10px;
+					padding: 00px;
 					font-weight:900;
 					border-radius: 10px;
 				}
 				.brightness-number trough{
 					color: $surface;
-					background-color: $iris;
-					padding: 10px;
+					background-color: $base;
 					font-weight:900;
 					border-radius: 10px;
 				}
 				.brightness-number trough progress{
 					color: $surface;
-					background-color: $rose;
-					padding: 10px;
-					font-weight:900;
-					border-radius: 10px;
-				}
-				.brightness-number trough progress highlight{
-					color: $foam;
-					background-color: $love;
+					background-color: $pine;
 					padding: 10px;
 					font-weight:900;
 					border-radius: 10px;
