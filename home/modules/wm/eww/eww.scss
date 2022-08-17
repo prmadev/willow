@@ -61,10 +61,12 @@ progressbar {
 				}
 				.brightness-number trough{
 					background-color: $iris;
+					padding: 10px;
 					border-radius: 10px;
 				}
 				.brightness-number trough progress{
 					background-color: $love; /* the main thing */
+					padding: 10px;
 					border-radius: 10px;
 				}
 			}
