@@ -52,18 +52,18 @@ $muted: #6e6a86;
 
 				.brightness-number{
 					color: $surface;
-					background-color: $base;
+					/* background-color: $base; */
 					font-weight:900;
 					border-radius: 10px;
 				}
 				.brightness-number trough{
-					color: $surface;
+					/* color: $surface; */
 					background-color: $iris;
 					font-weight:900;
 					border-radius: 10px;
 				}
 				.brightness-number trough progress{
-					color: $surface;
+					/* color: $surface; */
 					background-color: $love; /* the main thing */
 					font-weight:900;
 					border-radius: 10px;
