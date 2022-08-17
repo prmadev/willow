@@ -50,6 +50,10 @@ with lib; {
       atk
       glib
       libepoxy
+      redis
+      # redis-desktop-manager
+      iredis
+      redli
     ];
   };
 }
