@@ -42,14 +42,14 @@ with lib; {
     zig.enable = true;
 
     home.packages = with pkgs; [
-      flutter
-      dart
-      gtk3
-      cairo
-      pango
-      atk
-      glib
-      libepoxy
+      # flutter
+      # dart
+      # gtk3
+      # cairo
+      # pango
+      # atk
+      # glib
+      # libepoxy
       redis
       # redis-desktop-manager
       iredis
