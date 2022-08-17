@@ -33,7 +33,10 @@ $muted: #6e6a86;
 		}  
 	}
 }
+progressbar > trough {
 
+min-width: 10px;
+}
 .info {
 	.main { 
     border-radius: 10px;
@@ -42,28 +45,23 @@ $muted: #6e6a86;
 			margin : 2px;
 			border-radius: 5px;
 			background:$surface;
-			padding: 10px;
 				.brightness-name{
 					color:$pine;
 					font-weight:900;
-					padding: 10px;
 					border-radius: 10px;
 				}
 
 				.brightness-number{
 					color: $surface;
-					/* background-color: $base; */
 					font-weight:900;
 					border-radius: 10px;
 				}
 				.brightness-number trough{
-					/* color: $surface; */
 					background-color: $iris;
 					font-weight:900;
 					border-radius: 10px;
 				}
 				.brightness-number trough progress{
-					/* color: $surface; */
 					background-color: $love; /* the main thing */
 					font-weight:900;
 					border-radius: 10px;
