@@ -53,7 +53,6 @@ with lib; {
       redis
       # redis-desktop-manager
       iredis
-      redli
     ];
   };
 }
