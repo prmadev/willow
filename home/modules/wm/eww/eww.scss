@@ -47,8 +47,11 @@ progressbar {
 			background:$surface;
 				.brightness-name{
 					color:$pine;
+					margin: 2px;
+				    background-color: $base;
 					font-weight:900;
 					border-radius: 10px;
+
 				}
 
 				.brightness-number{
