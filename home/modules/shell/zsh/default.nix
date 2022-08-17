@@ -48,10 +48,6 @@ with lib; {
       history.size = 30000000;
       plugins = [
         {
-          name = "ansible-zsh";
-          src = inputs.ansible-zsh;
-        }
-        {
           src = inputs.cd-ls;
           name = "cd-ls";
         }
