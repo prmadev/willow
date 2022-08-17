@@ -34,7 +34,7 @@ $muted: #6e6a86;
 	}
 }
 progressbar {
-	min-width: 1px;
+	min-width: 15px;
 }
 .info {
 	.main { 
@@ -53,17 +53,15 @@ progressbar {
 
 				.brightness-number{
 					color: $surface;
-					font-weight:900;
 					border-radius: 10px;
+					padding: 10px;
 				}
 				.brightness-number trough{
 					background-color: $iris;
-					font-weight:900;
 					border-radius: 10px;
 				}
 				.brightness-number trough progress{
 					background-color: $love; /* the main thing */
-					font-weight:900;
 					border-radius: 10px;
 				}
 			}
