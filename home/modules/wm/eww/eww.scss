@@ -65,15 +65,7 @@ $muted: #6e6a86;
 				}
 				.brightness-number trough progress{
 					color: $surface;
-					background-color: $love;
-					padding: 10px;
-					font-weight:900;
-					border-radius: 10px;
-				}
-				.brightness-number trough progress highlight{
-					color: $foam;
-					background-color: $love;
-					padding: 10px;
+					background-color: $love; /* the main thing */
 					font-weight:900;
 					border-radius: 10px;
 				}
