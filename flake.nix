@@ -69,21 +69,12 @@
       url = "github:andreiborisov/sponge";
       flake = false;
     };
-    tmux-fish = {
-      url = "github:budimanjojo/tmux.fish";
-      flake = false;
-    };
     ## for go
     gomod2nix = {
       url = "github:tweag/gomod2nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # helix
-    helix-catppuccin = {
-      url = "github:catppuccin/helix";
-      flake = false;
-    };
   };
 
   outputs = {
