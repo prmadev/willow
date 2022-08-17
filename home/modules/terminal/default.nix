@@ -19,7 +19,7 @@ with lib; {
   };
   config = mkIf config.terminal.enable {
     kitty.enable = true;
-    tmux.enable = true;
+    tmux.enable = false;
     zellij.enable = false;
     wezterm.enable = true;
   };

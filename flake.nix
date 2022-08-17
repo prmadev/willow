@@ -74,7 +74,6 @@
       url = "github:tweag/gomod2nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
   };
 
   outputs = {

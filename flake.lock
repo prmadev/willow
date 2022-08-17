@@ -301,22 +301,6 @@
         "type": "github"
       }
     },
-    "helix-catppuccin": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1660452073,
-        "narHash": "sha256-JXnoUDP/d/sBxFZVt0IRKDjpsIRVLGNKNf0xsXhPC3s=",
-        "owner": "catppuccin",
-        "repo": "helix",
-        "rev": "21693387599cbd101e8ab2cebee813fcc4593cd0",
-        "type": "github"
-      },
-      "original": {
-        "owner": "catppuccin",
-        "repo": "helix",
-        "type": "github"
-      }
-    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -487,7 +471,6 @@
         "fzf-tab": "fzf-tab",
         "gomod2nix": "gomod2nix",
         "helix": "helix",
-        "helix-catppuccin": "helix-catppuccin",
         "home-manager": "home-manager",
         "hyprland": "hyprland",
         "hyprland-contrib": "hyprland-contrib",
@@ -495,8 +478,7 @@
         "nnn-plugins": "nnn-plugins",
         "nur": "nur",
         "ragenix": "ragenix",
-        "sponge-fish": "sponge-fish",
-        "tmux-fish": "tmux-fish"
+        "sponge-fish": "sponge-fish"
       }
     },
     "rust-overlay": {
@@ -559,22 +541,6 @@
       "original": {
         "owner": "andreiborisov",
         "repo": "sponge",
-        "type": "github"
-      }
-    },
-    "tmux-fish": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1637647340,
-        "narHash": "sha256-uLTqShRE43oK3v7Z60sYpiFyOrnwWsltuQmUaXiu5ls=",
-        "owner": "budimanjojo",
-        "repo": "tmux.fish",
-        "rev": "42c2f6ed78b846d62ff646d870c6078faf48d4a8",
-        "type": "github"
-      },
-      "original": {
-        "owner": "budimanjojo",
-        "repo": "tmux.fish",
         "type": "github"
       }
     },
