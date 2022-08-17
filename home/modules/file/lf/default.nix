@@ -45,7 +45,7 @@ with lib; {
         icons = true;
         preview = true;
         ratios = "2:3:1";
-        shell = "${pkgs.fish}/bin/fish";
+        shell = "${pkgs.zsh}/bin/zsh";
         shellopts = "-i";
         # ifs = "\n";
         scrolloff = 10;
