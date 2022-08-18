@@ -37,6 +37,8 @@ $muted: #6e6a86;
 .info {
 	.stat {
 		background-color: $surface;
+		padding: 10;
+    border-radius: 5px;
 	}
 
   .label {
@@ -45,7 +47,7 @@ $muted: #6e6a86;
     margin: 2px;
     font-weight: 900;
     border-radius: 5px;
-		min-width: 50px;
+		min-width: 20px;
   }
 
   .graph {
@@ -61,7 +63,7 @@ $muted: #6e6a86;
   }
 
   .graph trough progress {
-    background-color: $love; /* the main thing */
+    background-color: $pine; /* the main thing */
     padding: 10px;
     border-radius: 5px;
   }
@@ -103,7 +105,7 @@ $muted: #6e6a86;
 
     .active-monitor-two {
       color: $base;
-      background: $pine;
+      background: $foam;
       font-weight: 900;
       padding: 5px;
       border-radius: 5px;
@@ -111,8 +113,8 @@ $muted: #6e6a86;
     }
 
     .occupied {
-      color: $base;
-      background: $foam;
+      color: $text;
+      background: $overlay;
       font-weight: 900;
       padding: 5px;
       border-radius: 5px;
@@ -125,7 +127,6 @@ $muted: #6e6a86;
       font-weight: 900;
       padding: 5px;
       border-radius: 5px;
-      font-size: 18px;
-    }
+      font-size: 18px; }
   }
 }
