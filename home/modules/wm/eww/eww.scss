@@ -120,7 +120,7 @@ $rose: #ebbcba;
 	border: 3px  solid $overlay;
     border-radius: 5px;
     .name {
-      color: $muted;
+      color: $overlay;
       /* background: $base; */
       font-weight: 400;
       padding-right: 5px;
@@ -135,7 +135,7 @@ $rose: #ebbcba;
       background: $overlay;
       font-weight: 400;
       padding: 5px;
-      border-radius: 5px;
+      /* border-radius: 5px; */
       font-size: 15px;
     }
 
@@ -144,7 +144,7 @@ $rose: #ebbcba;
       background: $pine;
       font-weight: 900;
       padding: 5px;
-      border-radius: 5px;
+      /* border-radius: 5px; */
       font-size: 18px;
     }
 
@@ -153,7 +153,7 @@ $rose: #ebbcba;
       background: $foam;
       font-weight: 900;
       padding: 5px;
-      border-radius: 5px;
+      /* border-radius: 5px; */
       font-size: 18px;
     }
 
@@ -162,7 +162,7 @@ $rose: #ebbcba;
       background: $overlay;
       font-weight: 900;
       padding: 5px;
-      border-radius: 5px;
+      /* border-radius: 5px; */
       font-size: 18px;
     }
 
@@ -171,7 +171,7 @@ $rose: #ebbcba;
       background: $base;
       font-weight: 900;
       padding: 5px;
-      border-radius: 5px;
+      /* border-radius: 5px; */
       font-size: 18px; }
   }
 }
