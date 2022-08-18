@@ -40,13 +40,19 @@ $muted: #6e6a86;
 		font-size: 30px;
 		color:$love;
      	font-weight: 900;
-
 	}
+
 	.date {
 		font-size: 15px;
 		color:$rose;
       	font-weight: 900;
 	}
+	.timer {
+		padding: 10px;
+		border: 3px , solid, $rose;
+		border-radius: 5px;
+	}
+
 	.battery progress {
 		background: $iris;
 	}
