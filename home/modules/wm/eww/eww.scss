@@ -38,11 +38,13 @@ progressbar {
 }
 
 .info {
+	.stat {
+		color: $surface;
+	}
   .label {
-    background-color: $pine;
+    color: $text;
     padding: 5px;
     margin: 2px;
-    color: $base;
     font-weight: 900;
     border-radius: 5px;
   }
