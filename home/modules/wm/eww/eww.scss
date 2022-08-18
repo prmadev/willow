@@ -45,12 +45,12 @@ $rose: #ebbcba;
 
 	.date {
 		font-size: 15px;
-		color:$surface;
+		color:$subtle;
       	font-weight: 900;
 	}
 	.timer {
 		padding: 10px;
-		border: 3px  solid $base;
+		border: 3px  solid $subtle;
 		border-radius: 5px;
 	}
 
@@ -101,7 +101,7 @@ $rose: #ebbcba;
     /* background-color: $base; */
 	border-width: 3px;
 	border-style:solid;
-	border-color: $base;  
+	border-color: $subtle;  
     border-radius: 5px;
     padding-top: 10px;
     padding-bottom: 10px;
