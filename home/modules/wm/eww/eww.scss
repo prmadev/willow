@@ -39,7 +39,7 @@ $muted: #6e6a86;
 	.battery progress {
 		background: $iris;
 	}
-	.battery.label {
+	.battery .label {
 		color: $iris;
 	}
 
@@ -47,7 +47,7 @@ $muted: #6e6a86;
 		background: $pine;
 	}
 
-	.brightness.label {
+	.brightness .label {
 		color: $pine;
 	}
 
@@ -55,7 +55,7 @@ $muted: #6e6a86;
 		background: $foam;
 	}
 
-	.network.label {
+	.network .label {
 		color: $foam;
 	}
 
