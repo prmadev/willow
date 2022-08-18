@@ -54,26 +54,26 @@ $muted: #6e6a86;
 	}
 
 	.battery progress {
-		background: $iris;
+		background: $love;
 	}
 	.battery .label {
-		color: $iris;
+		color: $love;
 	}
 
 	.brightness progress {
-		background: $pine;
-	}
-
-	.brightness .label {
-		color: $pine;
-	}
-
-	.network progress {
 		background: $foam;
 	}
 
-	.network .label {
+	.brightness .label {
 		color: $foam;
+	}
+
+	.network progress {
+		background: $pine;
+	}
+
+	.network .label {
+		color: $pine;
 	}
 
 	.stat {
