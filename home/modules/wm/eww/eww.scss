@@ -38,18 +38,18 @@ $muted: #6e6a86;
 .info {
 	.clock {
 		font-size: 30px;
-		color:$love;
+		color:$base;
      	font-weight: 900;
 	}
 
 	.date {
 		font-size: 15px;
-		color:$rose;
+		color:$surface;
       	font-weight: 900;
 	}
 	.timer {
 		padding: 10px;
-		border: 3px  solid $rose;
+		border: 3px  solid $overlay;
 		border-radius: 5px;
 	}
 
