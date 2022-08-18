@@ -119,8 +119,9 @@ $rose: #ebbcba;
     background-color: $base;
     border-radius: 10px;
     .name {
-      color: $muted;
-      background: $base;
+      color: $overlay;
+	  border: 3px  solid $overlay;
+      /* background: $base; */
       font-weight: 400;
       padding-right: 5px;
       margin: 5px;
