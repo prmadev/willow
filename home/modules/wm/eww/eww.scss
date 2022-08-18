@@ -56,25 +56,27 @@ $muted: #6e6a86;
 	.battery progress {
 		background: $love;
 	}
-	/* .battery .label { */
-		/* color: $love; */
-	/* } */
+	
+	.battery .label {
+		color: $love;
+		
+	}
 
 	.brightness progress {
 		background: $foam;
 	}
 
-	/* .brightness .label { */
-		/* color: $foam; */
-	/* } */
+	.brightness .label {
+		color: $foam;
+	}
 
 	.network progress {
 		background: $iris;
 	}
 
-	/* .network .label { */
-		/* color: $iris; */
-	/* } */
+	.network .label {
+		color: $iris;
+	}
 
 	.stat {
 		/* background-color: $surface; */
@@ -83,7 +85,7 @@ $muted: #6e6a86;
 	}
 
   .label {
-    color: $base;
+    background-color: $surface;
     font-weight: 900;
     border-radius: 5px;
 	min-width: 30px;
