@@ -117,10 +117,10 @@ $rose: #ebbcba;
   .tag {
     margin: 3px;
     background-color: $base;
-    border-radius: 10px;
+	border: 3px  solid $overlay;
+    border-radius: 5px;
     .name {
-      color: $overlay;
-	  border: 3px  solid $overlay;
+      color: $muted;
       /* background: $base; */
       font-weight: 400;
       padding-right: 5px;
