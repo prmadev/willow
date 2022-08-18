@@ -36,8 +36,9 @@ $muted: #6e6a86;
 
 .info {
 	.stat {
-		color: $surface;
+		background-color: $surface;
 	}
+
   .label {
     color: $text;
     padding: 5px;
@@ -46,13 +47,14 @@ $muted: #6e6a86;
     border-radius: 5px;
 		min-width: 50px;
   }
+
   .graph {
     border-radius: 5px;
     padding: 0px;
   }
 
   .graph trough {
-    background-color: $iris;
+    background-color: $base;
     border-radius: 5px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -92,7 +94,7 @@ $muted: #6e6a86;
 
     .active-monitor-one {
       color: $base;
-      background: $love;
+      background: $pine;
       font-weight: 900;
       padding: 5px;
       border-radius: 5px;
@@ -110,7 +112,7 @@ $muted: #6e6a86;
 
     .occupied {
       color: $base;
-      background: $iris;
+      background: $foam;
       font-weight: 900;
       padding: 5px;
       border-radius: 5px;
