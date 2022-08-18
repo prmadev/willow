@@ -51,7 +51,6 @@ progressbar {
 				    background-color: $base;
 					font-weight:900;
 					border-radius: 10px;
-
 				}
 
 				.brightness-number{
@@ -59,11 +58,14 @@ progressbar {
 					border-radius: 10px;
 					padding: 10px;
 				}
+
 				.brightness-number trough{
 					background-color: $iris;
 					border-radius: 10px;
 					padding-top: 10px;
+					padding-bottom: 10px;
 				}
+
 				.brightness-number trough progress{
 					background-color: $love; /* the main thing */
 					padding: 10px;
