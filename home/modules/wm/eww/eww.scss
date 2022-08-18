@@ -37,7 +37,7 @@ $muted: #6e6a86;
 
 .info {
 	.battery progress {
-		background: $iris;
+		background: linear-gradient($iris, $pine);
 	}
 	.battery .label {
 		color: $iris;
