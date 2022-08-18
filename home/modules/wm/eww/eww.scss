@@ -37,7 +37,7 @@ progressbar {
 	min-width: 15px;
 }
 .info {
-	font-size: 10px;
+	font-size: 20px;
 	.main { 
     border-radius: 10px;
     padding: 5px;
@@ -45,31 +45,31 @@ progressbar {
 			margin : 2px;
 			border-radius: 5px;
 				.brightness-name{
-					color:$pine;
+					background-color:$pine;
 					padding: 5px;
 					margin: 2px;
-				    background-color: $base;
+				    color: $base;
 					font-weight:900;
-					border-radius: 10px;
+					border-radius: 5px;
 				}
 
 				.brightness-number{
 				    background-color: $base;
-					border-radius: 10px;
-					padding: 10px;
+					border-radius: 5px;
+					padding: 5px;
 				}
 
 				.brightness-number trough{
 					background-color: $iris;
-					border-radius: 10px;
-					padding-top: 10px;
-					padding-bottom: 10px;
+					border-radius: 5px;
+					padding-top: 5px;
+					padding-bottom: 5px;
 				}
 
 				.brightness-number trough progress{
 					background-color: $love; /* the main thing */
-					padding: 10px;
-					border-radius: 10px;
+					padding: 5px;
+					border-radius: 5px;
 				}
 			}
     	.battery {
