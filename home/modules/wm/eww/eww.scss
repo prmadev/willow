@@ -34,7 +34,18 @@ $muted: #6e6a86;
 }
 
 
+
 .info {
+	.battery progress {
+		background: $iris;
+	}
+	.brightness progress {
+		background: $pine;
+	}
+
+	.network progress {
+		background: $foam;
+	}
 	.stat {
 		background-color: $surface;
 		padding: 10px;
@@ -61,7 +72,6 @@ $muted: #6e6a86;
   }
 
   .graph trough progress {
-    background-color: $pine; /* the main thing */
     padding: 10px;
     border-radius: 5px;
   }
