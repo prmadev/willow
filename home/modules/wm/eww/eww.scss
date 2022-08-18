@@ -95,7 +95,8 @@ $muted: #6e6a86;
   }
 
   .graph trough {
-    background-color: $base;
+    /* background-color: $base; */
+	border: 3px solid $base;  
     border-radius: 5px;
     padding-top: 10px;
     padding-bottom: 10px;
