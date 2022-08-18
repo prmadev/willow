@@ -36,8 +36,21 @@ $muted: #6e6a86;
 
 
 .info {
+	.clock {
+		font-size: 20px;
+		color:$love;
+     	font-weight: 900;
+		text-align: center; 
+
+	}
+	.date {
+		font-size: 20px;
+		color:$rose;
+      	font-weight: 900;
+		text-align: center; 
+	}
 	.battery progress {
-		background: linear-gradient($iris, $pine);
+		background: $iris;
 	}
 	.battery .label {
 		color: $iris;
