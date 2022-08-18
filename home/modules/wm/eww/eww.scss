@@ -1,16 +1,17 @@
 $base: #191724;
-$pine: #31748f;
 $surface: #1f1d2e;
-$text: #d9e0ee;
 $overlay: #26233a;
+
+$text: #d9e0ee;
+$subtle: #908caa;
+$muted: #6e6a86;
+
+$pine: #31748f;
 $love: #eb6f92;
 $gold: #f6c177;
 $iris: #c4a7e7;
 $foam: #8ccfd8;
-$subtle: #908caa;
 $rose: #ebbcba;
-$subtle: #908caa;
-$muted: #6e6a86;
 
 * {
   all: unset; //Unsets everything so you can style everything from scratch
@@ -98,7 +99,9 @@ $muted: #6e6a86;
 
   .graph trough {
     /* background-color: $base; */
-	border: 3px solid $base;  
+	border-width: 3px;
+	border-style:solid;
+	border-color: $base;  
     border-radius: 5px;
     padding-top: 10px;
     padding-bottom: 10px;
