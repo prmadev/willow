@@ -59,6 +59,11 @@ with lib; {
           src = inputs.zsh-windows-title;
           name = "zsh-windows-title";
         }
+
+        {
+          src = inputs.zsh-terminal-title;
+          name = "zsh-terminal-title";
+        }
       ];
     };
 

@@ -44,6 +44,10 @@
       url = "github:mdarocha/zsh-windows-title";
       flake = false;
     };
+    zsh-terminal-title = {
+      url = "github:AnimiVulpis/zsh-terminal-title";
+      flake = false;
+    };
     cd-ls = {
       url = "github:zshzoo/cd-ls";
       flake = false;

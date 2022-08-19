@@ -479,6 +479,7 @@
         "nur": "nur",
         "ragenix": "ragenix",
         "sponge-fish": "sponge-fish",
+        "zsh-terminal-title": "zsh-terminal-title",
         "zsh-windows-title": "zsh-windows-title"
       }
     },
@@ -591,6 +592,22 @@
         "owner": "wlroots",
         "repo": "wlroots",
         "type": "gitlab"
+      }
+    },
+    "zsh-terminal-title": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1626759735,
+        "narHash": "sha256-CXBfGcXQfa6DMuqxhL8hfRB90qjC/fhLdSFXAm1cbuc=",
+        "owner": "AnimiVulpis",
+        "repo": "zsh-terminal-title",
+        "rev": "6e5d156e155f0e17a9e10074d27a383c19794266",
+        "type": "github"
+      },
+      "original": {
+        "owner": "AnimiVulpis",
+        "repo": "zsh-terminal-title",
+        "type": "github"
       }
     },
     "zsh-windows-title": {
