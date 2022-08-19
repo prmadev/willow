@@ -64,6 +64,10 @@ with lib; {
           src = inputs.zsh-terminal-title;
           name = "zsh-terminal-title";
         }
+        {
+          src = inputs.zsh-tab-title;
+          name = "zsh-tab-title";
+        }
       ];
     };
 

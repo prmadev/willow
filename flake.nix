@@ -48,6 +48,10 @@
       url = "github:AnimiVulpis/zsh-terminal-title";
       flake = false;
     };
+    zsh-tab-title = {
+      url = "github:trystan2k/zsh-tab-title";
+      flake = false;
+    };
     cd-ls = {
       url = "github:zshzoo/cd-ls";
       flake = false;
