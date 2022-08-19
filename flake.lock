@@ -478,7 +478,8 @@
         "nnn-plugins": "nnn-plugins",
         "nur": "nur",
         "ragenix": "ragenix",
-        "sponge-fish": "sponge-fish"
+        "sponge-fish": "sponge-fish",
+        "zsh-windows-title": "zsh-windows-title"
       }
     },
     "rust-overlay": {
@@ -590,6 +591,22 @@
         "owner": "wlroots",
         "repo": "wlroots",
         "type": "gitlab"
+      }
+    },
+    "zsh-windows-title": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1648318754,
+        "narHash": "sha256-k1RcIaxS7NcYgZv0VcmVN2ZYAmlaaIsbkurloRawgzw=",
+        "owner": "mdarocha",
+        "repo": "zsh-windows-title",
+        "rev": "dfd98a0a32d90c3e5a9dd818465ab46f27e8ccaf",
+        "type": "github"
+      },
+      "original": {
+        "owner": "mdarocha",
+        "repo": "zsh-windows-title",
+        "type": "github"
       }
     }
   },

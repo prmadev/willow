@@ -40,6 +40,10 @@
       url = "github:sparsick/ansible-zsh";
       flake = false;
     };
+    zsh-windows-title = {
+      url = "github:mdarocha/zsh-windows-title";
+      flake = false;
+    };
     cd-ls = {
       url = "github:zshzoo/cd-ls";
       flake = false;

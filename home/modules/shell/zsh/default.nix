@@ -55,6 +55,10 @@ with lib; {
           src = inputs.fzf-tab;
           name = "fzf-tab";
         }
+        {
+          src = inputs.zsh-windows-title;
+          name = "zsh-windows-title";
+        }
       ];
     };
 
