@@ -12,7 +12,7 @@ with lib; {
     };
   };
   config = mkIf config.pdf.enable {
-    programs.zathura.enable = true;
+    programs.zathura.enable = false;
     programs.zathura.options = {
       default-bg = config.colors.base.hex;
       default-fg = config.colors.text.hex;

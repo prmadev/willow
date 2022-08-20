@@ -21,7 +21,7 @@ with lib; {
       goPath = "go";
     };
     home.packages = with pkgs; [
-      tinygo
+      # tinygo
       richgo
     ];
 
