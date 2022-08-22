@@ -9,7 +9,7 @@ with lib; {
     global-fonts = {
       main-family = mkOption {
         type = types.str;
-        default = "Operator Mono SSm Nerd Font";
+        default = "Operator Mono SSm Nerd Lig";
       };
 
       main-black = mkOption {
