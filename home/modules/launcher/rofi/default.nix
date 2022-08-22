@@ -49,7 +49,7 @@ with lib; {
           background-color = mkLiteral config.colors.surface.hex;
           placeholder-color = mkLiteral config.colors.surface.hex;
           text-color = mkLiteral config.colors.text.hex;
-          font = "monospace black 10";
+          font = "monospace Bold 10";
         };
 
         inputbar = {
@@ -59,7 +59,7 @@ with lib; {
           expand = false;
           border-radius = mkLiteral "5px";
           padding = mkLiteral "5px";
-          font = "monospace black 10";
+          font = "monospace Bold 10";
         };
 
         listview = {
@@ -98,7 +98,7 @@ with lib; {
           text-color = mkLiteral config.colors.surface.hex;
           border-radius = mkLiteral "5px";
           margin = mkLiteral "5px";
-          font = "monospace black 10";
+          font = "monospace Bold 10";
         };
       };
       package = pkgs.rofi-wayland;
