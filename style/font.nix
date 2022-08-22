@@ -9,12 +9,12 @@ with lib; {
     global-fonts = {
       main-family = mkOption {
         type = types.str;
-        default = "Operator Mono SSm Nerd Lig";
+        default = "Operator Mono SSm Nerd Lig Book";
       };
 
       main-black = mkOption {
         type = types.str;
-        default = "Operator Mono SSm Bold Nerd";
+        default = "Operator Mono SSm Nerd Lig Bold";
       };
       main-black-italic = mkOption {
         type = types.str;
@@ -63,7 +63,7 @@ with lib; {
       };
       main-set = mkOption {
         type = types.listOf types.str;
-        default = ["Operator Mono SSm Nerd Lig" "Operator Mono Book Nerd Font Complete Mono" "Gintronic" "Vazirmatn"];
+        default = ["Operator Mono SSm Nerd Lig Book" "Operator Mono Book Nerd Font Complete Mono" "Gintronic" "Vazirmatn"];
       };
     };
   };
