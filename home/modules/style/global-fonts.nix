@@ -38,7 +38,7 @@ with lib; {
       };
       main-regular = mkOption {
         type = types.str;
-        default = "Operator Mono SSm Book Nerd Font";
+        default = "Operator Mono SSm Nerd Lig Light";
       };
       main-italic = mkOption {
         type = types.str;
@@ -63,7 +63,7 @@ with lib; {
       };
       main-set = mkOption {
         type = types.listOf types.str;
-        default = ["Operator Mono SSm Nerd Lig Light" "Operator Mono Book Nerd Font Complete Mono" "Gintronic" "Vazirmatn"];
+        default = ["Operator Mono SSm Nerd Lig" "Operator Mono Book Nerd Font Complete Mono" "Gintronic" "Vazirmatn"];
       };
     };
   };
