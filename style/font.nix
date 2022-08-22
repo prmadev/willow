@@ -63,7 +63,7 @@ with lib; {
       };
       main-set = mkOption {
         type = types.listOf types.str;
-        default = ["Operator Mono SSm Nerd Lig" "Operator Mono Book Nerd Font Complete Mono" "Gintronic" "Vazirmatn"];
+        default = ["Operator Mono SSm Nerd Lig Book" "Operator Mono Book Nerd Font Complete Mono" "Gintronic" "Vazirmatn"];
       };
     };
   };
