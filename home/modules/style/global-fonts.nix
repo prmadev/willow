@@ -38,7 +38,7 @@ with lib; {
       };
       main-regular = mkOption {
         type = types.str;
-        default = "Operator Mono SSm Nerd Lig Light";
+        default = "Operator Mono SSm Book Nerd Font";
       };
       main-italic = mkOption {
         type = types.str;
