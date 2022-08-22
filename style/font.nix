@@ -9,7 +9,7 @@ with lib; {
     global-fonts = {
       main-family = mkOption {
         type = types.str;
-        default = "Operator Mono Book";
+        default = "Operator Mono Light";
       };
 
       main-black = mkOption {
