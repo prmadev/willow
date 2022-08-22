@@ -14,56 +14,56 @@ with lib; {
 
       main-black = mkOption {
         type = types.str;
-        default = "Operator Mono Bold Nerd Font Complete Mono";
+        default = "Operator Mono SSm Bold Nerd Font";
       };
       main-black-italic = mkOption {
         type = types.str;
-        default = "Operator Mono Bold Italic Nerd Font Complete Mono";
+        default = "Operator Mono SSm Bold Italic Nerd Font";
       };
       main-bold = mkOption {
         type = types.str;
-        default = "Operator Mono Bold Nerd Font Complete Mono";
+        default = "Operator Mono SSm Bold Nerd Font";
       };
       main-bold-italic = mkOption {
         type = types.str;
-        default = "Operator Mono Bold Italic Nerd Font Complete Mono";
+        default = "Operator Mono SSm Bold Italic Nerd Font";
       };
       main-medium = mkOption {
         type = types.str;
-        default = "Operator Mono Medium Nerd Font Complete Mono";
+        default = "Operator Mono SSm Medium Nerd Font";
       };
       main-medium-italic = mkOption {
         type = types.str;
-        default = "Operator Mono Medium Italic Nerd Font Complete Mono";
+        default = "Operator Mono SSm Medium Italic Nerd Font";
       };
       main-regular = mkOption {
         type = types.str;
-        default = "Operator Mono Book Nerd Font Complete Mono";
+        default = "Operator Mono SSm Book Nerd Font";
       };
       main-italic = mkOption {
         type = types.str;
-        default = "Operator Mono Book Italic Nerd Font Complete Mono";
+        default = "Operator Mono SSm Book Italic Nerd Font";
       };
 
       main-light = mkOption {
         type = types.str;
-        default = "Operator Mono Light Nerd Font Complete Mono";
+        default = "Operator Mono SSm Light Nerd Font";
       };
       main-light-italic = mkOption {
         type = types.str;
-        default = "Operator Mono Light Italic Nerd Font Complete Mono";
+        default = "Operator Mono SSm Light Italic Nerd Font";
       };
       main-thin = mkOption {
         type = types.str;
-        default = "Operator Mono Light Nerd Font Complete Mono";
+        default = "Operator Mono SSm Light Nerd Font";
       };
       main-thin-italic = mkOption {
         type = types.str;
-        default = "Operator Mono Light Italic Nerd Font Complete Mono";
+        default = "Operator Mono SSm Light Italic Nerd Font";
       };
       main-set = mkOption {
         type = types.listOf types.str;
-        default = ["Operator Mono Book Nerd Font Complete Mono" "Gintronic" "Vazirmatn"];
+        default = ["Operator Mono SSm Book Nerd Font" "Operator Mono Book Nerd Font Complete Mono" "Gintronic" "Vazirmatn"];
       };
     };
   };
