@@ -14,7 +14,7 @@ with lib; {
 
       main-black = mkOption {
         type = types.str;
-        default = "Operator Mono SSm Nerd Lig Bold";
+        default = "Operator Mono SSm Bold Nerd Font";
       };
       main-black-italic = mkOption {
         type = types.str;
