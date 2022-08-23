@@ -132,6 +132,7 @@ with lib; {
              bind=SUPERSHIFT,7,movetoworkspace,7
              bind=SUPERSHIFT,8,movetoworkspace,8
              bind=SUPERSHIFT,9,movetoworkspace,9
+             bind=SUPERSHIFT,GRAVE,movetoworkspace,special
 
              bind=SUPER,comma,focusmonitor,0
              bind=SUPER,period,focusmonitor,1
