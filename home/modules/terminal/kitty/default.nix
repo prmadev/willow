@@ -34,8 +34,8 @@ with lib; {
         font_size = 11;
         # adjust_line_height = 12;
         font_family = config.global-fonts.main-regular;
-        bold_font = config.global-fonts.main-italic;
-        italic_font = config.global-fonts.main-black;
+        bold_font = config.global-fonts.main-black;
+        italic_font = config.global-fonts.main-italic;
         bold_italic_font = config.global-fonts.main-black-italic;
       };
       theme = "Rosé Pine"; # the default one is mocha colored, nice choice kitty!
