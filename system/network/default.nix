@@ -25,4 +25,8 @@
   services.openssh.enable = true;
 
   services.tor.client.transparentProxy.enable = true;
+  networking.wireguard = {
+    enable = true;
+  };
+  networking.firewall.checkReversePath = false;
 }
