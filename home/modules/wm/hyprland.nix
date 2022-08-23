@@ -71,7 +71,8 @@ with lib; {
               disable_hyprland_logo=true
               disable_splash_rendering=true
             }
-        windowrule = animation popin,^(kitty)$
+        windowrule = animation popin,^(rofi)$
+
 
             binds {
               bind=SUPER,RETURN,exec,kitty
