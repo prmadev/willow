@@ -72,7 +72,7 @@ with lib; {
              disable_splash_rendering=true
            }
 
-        windowrule=animation popin,rofi
+        	windowrule=animation popin,rofi
 
 
            binds {
