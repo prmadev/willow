@@ -120,6 +120,7 @@ with lib; {
              bind=SUPER,7,workspace,7
              bind=SUPER,8,workspace,8
              bind=SUPER,9,workspace,9
+             bind=SUPER,GRAVE,workspace,special
 
 
              bind=SUPERSHIFT,1,movetoworkspace,1
