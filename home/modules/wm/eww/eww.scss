@@ -35,83 +35,83 @@ $rose: #ebbcba;
 }
 
 
-
-.info {
-	.clock {
-		font-size: 30px;
-		color:$base;
-     	font-weight: 900;
-	}
-
-	.date {
-		font-size: 15px;
-		color:$overlay;
-      	font-weight: 900;
-	}
-	.timer {
-		padding: 10px;
-		border: 3px  solid $overlay;
-		border-radius: 5px;
-	}
-
-	.battery progress {
-		background: $love;
-	}
-	
-	.battery .label {
-		color: $love;
-		
-	}
-
-	.brightness progress {
-		background: $foam;
-	}
-
-	.brightness .label {
-		color: $foam;
-	}
-
-	.network progress {
-		background: $iris;
-	}
-
-	.network .label {
-		color: $iris;
-	}
-
-	.stat {
-		/* background-color: $surface; */
-		padding: 10px;
-   		border-radius: 5px;
-	}
-
-  .label {
-    background-color: $base;
-    font-weight: 900;
-    border-radius: 5px;
-	min-width: 30px;
-  }
-
-  .graph {
-    border-radius: 5px;
-    padding: 0px;
-  }
-
-  .graph trough {
-    /* background-color: $base; */
-	border-width: 3px;
-	border-style:solid;
-	border-color: $overlay;  
-    border-radius: 5px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-
-  .graph trough progress {
-    padding: 10px;
-    border-radius: 5px;
-  }
-}
+/**/
+/* .info { */
+/* 	.clock { */
+/* 		font-size: 30px; */
+/* 		color:$base; */
+/*      	font-weight: 900; */
+/* 	} */
+/**/
+/* 	.date { */
+/* 		font-size: 15px; */
+/* 		color:$overlay; */
+/*       	font-weight: 900; */
+/* 	} */
+/* 	.timer { */
+/* 		padding: 10px; */
+/* 		border: 3px  solid $overlay; */
+/* 		border-radius: 5px; */
+/* 	} */
+/**/
+/* 	.battery progress { */
+/* 		background: $love; */
+/* 	} */
+/* 	 */
+/* 	.battery .label { */
+/* 		color: $love; */
+/* 		 */
+/* 	} */
+/**/
+/* 	.brightness progress { */
+/* 		background: $foam; */
+/* 	} */
+/**/
+/* 	.brightness .label { */
+/* 		color: $foam; */
+/* 	} */
+/**/
+/* 	.network progress { */
+/* 		background: $iris; */
+/* 	} */
+/**/
+/* 	.network .label { */
+/* 		color: $iris; */
+/* 	} */
+/**/
+/* 	.stat { */
+/* 		/* background-color: $surface; */ */
+/* 		padding: 10px; */
+/*    		border-radius: 5px; */
+/* 	} */
+/**/
+/*   .label { */
+/*     background-color: $base; */
+/*     font-weight: 900; */
+/*     border-radius: 5px; */
+/* 	min-width: 30px; */
+/*   } */
+/**/
+/*   .graph { */
+/*     border-radius: 5px; */
+/*     padding: 0px; */
+/*   } */
+/**/
+/*   .graph trough { */
+/*     /* background-color: $base; */ */
+/* 	border-width: 3px; */
+/* 	border-style:solid; */
+/* 	border-color: $overlay;   */
+/*     border-radius: 5px; */
+/*     padding-top: 10px; */
+/*     padding-bottom: 10px; */
+/*   } */
+/**/
+/*   .graph trough progress { */
+/*     padding: 10px; */
+/*     border-radius: 5px; */
+/*   } */
+/* } */
 
 .ws {
   .tag {
