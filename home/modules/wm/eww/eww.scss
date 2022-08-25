@@ -58,27 +58,27 @@ $rose: #ebbcba;
 		background: $love;
 	}
 	
-	.battery .label {
-		color: $love;
-		
-	}
+	/* .battery .label { */
+	/* 	color: $love; */
+	/* 	 */
+	/* } */
 
-	.brightness progress {
+	.brightness slider {
 		background: $foam;
 	}
 
-	.brightness .label {
-		color: $foam;
-	}
+	/* .brightness .label { */
+	/* 	color: $foam; */
+	/* } */
 
 	.network progress {
 		background: $iris;
 	}
 
-	.network .label {
-		color: $iris;
-	}
-
+	/* .network .label { */
+	/* 	color: $iris; */
+	/* } */
+ /**/
 	.stat {
 		/* background-color: $surface; */
 		padding: 10px;
