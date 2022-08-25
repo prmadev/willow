@@ -68,14 +68,9 @@ $rose: #ebbcba;
 		/* color: $foam; */
 	}
 	.brightness contents {
-
 		background: $base;
 	}
 	
-	scale  {
-
-		background: $base;
-	}
 
 	/* .brightness .label { */
 	/* 	color: $foam; */
@@ -125,7 +120,7 @@ $rose: #ebbcba;
   .graph trough slider {
     padding: 10px;
     border-radius: 5px;
-		min-width: 100px;
+		/* min-width: 100px; */
   }
 }
 
