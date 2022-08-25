@@ -70,8 +70,8 @@ $rose: #ebbcba;
 
 	.brightness highlight {
 		background: $pine;
-		padding-top: 20px;
-		padding-bottom: 20px,
+		padding-top: 15px;
+		padding-bottom: 15px,
 		/* color: $foam; */
 	}
 
@@ -81,10 +81,6 @@ $rose: #ebbcba;
 		/* color: $foam; */
 	}
 
-	.brightness contents {
-		background: $base;
-	}
-	
 
 	/* .brightness .label { */
 	/* 	color: $foam; */
@@ -127,12 +123,23 @@ $rose: #ebbcba;
 		min-width: 200px;
   }
 
+
+  .gra trough {
+    /* background-color: $base; */
+	border-width: 3px;
+	border-style:solid;
+	border-color: $overlay;  
+    border-radius: 5px;
+    /* padding-top: 10px; */
+    /* padding-bottom: 10px; */
+		min-width: 200px;
+  }
   .graph trough progress {
     padding: 10px;
     border-radius: 5px;
   }
 
-  .graph trough slider {
+  .gra trough slider {
     padding-top: 10px;
     padding-bottom: 10px;
     border-radius: 5px;
