@@ -70,13 +70,14 @@ $rose: #ebbcba;
 
 	.brightness highlight {
 		background: $pine;
+		border-radius: 10px;
 		padding-top: 15px;
 		padding-bottom: 15px,
 		/* color: $foam; */
 	}
 
 	.brightness contents {
-		background: $foam;
+		/* background: $base; */
 		min-width: 200px;
 		/* color: $foam; */
 	}
