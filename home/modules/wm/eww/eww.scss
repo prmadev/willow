@@ -65,7 +65,11 @@ $rose: #ebbcba;
 
 	.brightness slider {
 		background: $foam;
-		color: $foam;
+		/* color: $foam; */
+	}
+	.brightness contents {
+
+		background: $base;
 	}
 
 	/* .brightness .label { */
