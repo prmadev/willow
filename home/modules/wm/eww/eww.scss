@@ -54,32 +54,27 @@ $rose: #ebbcba;
 		border-radius: 5px;
 	}
 
-	.battery progress {
-		background: $love;
-	}
-	
-	/* .battery .label { */
-	/* 	color: $love; */
-	/* 	 */
+	/* .battery progress { */
+	/* 	background: $love; */
 	/* } */
-
-	/* .brightness slider { */
-	/* 	background: $foam; */
-		/* color: $foam; */
-	/* } */
+	/*  */
 
 	.brightness highlight {
 		background: $foam;
+	}
+highlight {
 		border-radius: 5px;
 		padding-top: 15px;
 		padding-bottom: 15px,
-		/* color: $foam; */
 	}
 
-	.brightness contents {
-		/* background: $base; */
+
+	.battery highlight {
+		background: $LOVE;
+	}
+
+	 contents {
 		min-width: 200px;
-		/* color: $foam; */
 	}
 
 
