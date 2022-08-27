@@ -14,7 +14,7 @@
 	:exclusive false
 	:focusable true 
 	:windowtype "dock"
-	:wm-ignore true
+	:wm-ignore   false 
   (info)
 )
 
