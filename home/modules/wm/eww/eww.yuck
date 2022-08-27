@@ -12,9 +12,9 @@
 	)
 	:stacking "bg"
 	:exclusive false
-	:focusable false
+	:focusable true 
 	:windowtype "dock"
-	:wm-ignore false 
+	:wm-ignore true
   (info)
 )
 
