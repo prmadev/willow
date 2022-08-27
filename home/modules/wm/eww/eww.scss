@@ -54,44 +54,34 @@ $rose: #ebbcba;
 		border-radius: 5px;
 	}
 
-	/* .battery progress { */
-	/* 	background: $love; */
-	/* } */
-	/*  */
 
-	.brightness highlight {
-		background: $foam;
-	}
-highlight {
+	
+	highlight {
 		border-radius: 5px;
 		padding-top: 15px;
 		padding-bottom: 15px,
 	}
 
+	contents {
+		min-width: 200px;
+	}
+
+	.brightness highlight {
+		background: $foam;
+	}
 
 	.battery highlight {
 		background: $LOVE;
 	}
 
-	 contents {
-		min-width: 200px;
-	}
 
 
-	/* .brightness .label { */
-	/* 	color: $foam; */
-	/* } */
 
 	.network progress {
 		background: $iris;
 	}
 
-	/* .network .label { */
-	/* 	color: $iris; */
-	/* } */
- /**/
 	.stat {
-		/* background-color: $surface; */
 		padding: 10px;
    		border-radius: 5px;
 	}
@@ -121,19 +111,18 @@ highlight {
 
 
   .gra trough {
-    /* background-color: $base; */
 	border-width: 3px;
 	border-style:solid;
 	border-color: $overlay;  
     border-radius: 5px;
-    /* padding-top: 10px; */
-    /* padding-bottom: 10px; */
 		min-width: 200px;
   }
+
   .graph trough progress {
     padding: 10px;
     border-radius: 5px;
   }
+
 
   .gra trough slider {
     padding-top: 10px;
