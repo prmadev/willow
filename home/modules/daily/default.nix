@@ -10,6 +10,7 @@ with lib; {
     ./exercism.nix
     ./favo.nix
     ./graphical.nix
+    ./hoard.nix
     ./task.nix
     ./zk.nix
   ];
@@ -27,6 +28,7 @@ with lib; {
     favo.enable = true;
     graphical.enable = true;
     task.enable = true;
+    hoard.enable = true;
     zk.enable = true;
   };
 }
