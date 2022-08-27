@@ -18,23 +18,7 @@
   (info)
 )
 
-; (defwindow testbox 
-; 	:monitor 0 
-; 	:geometry (geometry
-; 		:x "10px"
-; 		:y "10px"
-; 		:width "100px"
-; 		:height "30px"
-; 		:anchor "bottom right"
-; 	)
-; 	:stacking "bg"
-; 	:exclusive false
-; 	:focusable false
-; 	:windowtype "dock"
-; 	:wm-ignore true
-;   (testbox)
-; )
-;
+
 (defwindow time
     :monitor 0 
 	:geometry (geometry
