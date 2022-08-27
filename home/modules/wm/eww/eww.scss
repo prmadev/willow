@@ -75,11 +75,11 @@ $rose: #ebbcba;
 	}
 
 
-
-
-	.network progress {
+	.network highlight {
 		background: $iris;
 	}
+
+
 
 	.stat {
 		padding: 10px;
@@ -93,21 +93,6 @@ $rose: #ebbcba;
 	min-width: 30px;
   }
 
-  .graph {
-    border-radius: 5px;
-    padding: 0px;
-  }
-
-  .graph trough {
-    /* background-color: $base; */
-	border-width: 3px;
-	border-style:solid;
-	border-color: $overlay;  
-    border-radius: 5px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-		min-width: 200px;
-  }
 
 
   .gra trough {
@@ -116,11 +101,6 @@ $rose: #ebbcba;
 	border-color: $overlay;  
     border-radius: 5px;
 		min-width: 200px;
-  }
-
-  .graph trough progress {
-    padding: 10px;
-    border-radius: 5px;
   }
 
 
