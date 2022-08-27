@@ -92,7 +92,7 @@
 
 
 (defwidget testbox []
-  (progress :value 50 :style " .progress{ background: #ffffff;}")
+  (progress :value 50 :style " .progress{ background: #ffffff;};")
 )
 
 (defwidget workspace []
