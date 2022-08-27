@@ -32,7 +32,7 @@
 	:focusable false
 	:windowtype "dock"
 	:wm-ignore true
-  (textbox)
+  (testbox)
 )
 
 (defwindow time
