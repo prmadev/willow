@@ -1,6 +1,51 @@
 ;;;;;;
 ;;;;;; windows
 ;;;;;;
+
+(defwindow topbar
+	:monitor 0
+	:geometry (geometry
+		:x "0px"
+		:y "5px"
+		:width "99%"
+		:height "20px"
+		:anchor "top center"
+	)
+
+	:stacking "fg" ; fg, bg, overlay, bottom
+
+    :wm-ignore true
+	; :reserve (struts :distance "40px" :side "top")
+	; :windowtype "dock" ; normal, dock, toolbar,dialog,desktop
+
+
+	:exclusive true
+	:focusable false
+
+	(workspace)
+)
+
+(defwindow topbar-monitor-two
+	:monitor 1
+	:geometry (geometry
+		:x "0px"
+		:y "5px"
+		:width "99%"
+		:height "20px"
+		:anchor "top center"
+	)
+	:stacking "fg" ; fg, bg, overlay, bottom
+
+    :wm-ignore true
+	; :reserve (struts :distance "40px" :side "top")
+	; :windowtype "dock" ; normal, dock, toolbar,dialog,desktop
+
+
+	:exclusive true
+	:focusable false
+	(workspace)
+)
+
 (defwindow info
 	:monitor 0 
 	:geometry (geometry
@@ -35,41 +80,6 @@
 	:wm-ignore true
   (timedate)
  )
-(defwindow topbar
-	:monitor 0
-	:geometry (geometry
-		:x "0px"
-		:y "5px"
-		:width "99%"
-		:height "20px"
-		:anchor "top center"
-	)
-	:stacking "fg"
-	:exclusive true
-	:focusable false
-	:reserve (struts :distance "40px" :side "top")
-	:windowtype "dock"
-	:wm-ignore false
-	(workspace)
-)
-
-(defwindow topbar-monitor-two
-	:monitor 1
-	:geometry (geometry
-		:x "0px"
-		:y "5px"
-		:width "99%"
-		:height "20px"
-		:anchor "top center"
-	)
-	:stacking "fg"
-	:exclusive true
-	:focusable false
-	:reserve (struts :distance "40px" :side "top")
-	:windowtype "dock"
-	:wm-ignore false
-	(workspace)
-)
 ;;;;;;
 ;;;;;; widgets
 ;;;;;;
