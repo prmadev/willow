@@ -31,6 +31,16 @@ with lib; {
           name = "toml";
           language-server = {command = "${pkgs.taplo-lsp}/bin/taplo-lsp";};
         }
+        {
+          name = "go";
+
+          indent = {
+            tab-width = 4;
+            unit = "  ";
+          };
+
+          formatter = {command = "gofumports";};
+        }
       ];
 
       # themes = let

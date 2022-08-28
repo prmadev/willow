@@ -14,11 +14,12 @@ with lib; {
     programs.zellij = {
       enable = true;
       settings = {
-        default_shell = "fish";
+        default_shell = "zsh";
         simplified_ui = true;
         pane_frames = false;
         scroll_buffer_size = 20000;
-        scrollback_editor = "${pkgs.neovim}/bin/nvim";
+        scrollback_editor = "${pkgs.helix}/bin/hx";
+        copy_command = "wl-copy";
         themes = {
           default = {
             fg = config.colors.text.rgb;
