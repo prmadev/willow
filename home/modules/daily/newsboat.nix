@@ -18,10 +18,15 @@ with lib; {
       autoReload = true;
       # browser  ="qutebrowser" ;
       urls = [
+        # {
+        #   title = "go";
+        #   tags = ["go"];
+        #   url = "https://go.dev/blog/";
+        # }
         {
-          title = "go";
-          tags = ["go"];
-          url = "https://go.dev/blog/";
+          title = "Rob Pike";
+          tags = ["blog"];
+          url = "https://commandcenter.blogspot.com/feeds/posts/default";
         }
       ];
     };

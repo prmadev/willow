@@ -31,7 +31,7 @@ with lib; {
     fzf.enable = true;
     nu.enable = true;
     pager.enable = true;
-    prompt.enable = false;
+    prompt.enable = true;
     snippet.enable = true;
     zsh.enable = true;
   };
