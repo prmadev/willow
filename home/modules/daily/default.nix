@@ -12,6 +12,7 @@ with lib; {
     ./graphical.nix
     ./hoard.nix
     ./task.nix
+    ./newsboat.nix
     ./zk.nix
   ];
 
@@ -30,5 +31,6 @@ with lib; {
     task.enable = true;
     hoard.enable = true;
     zk.enable = true;
+    newsboat.enable = true;
   };
 }
