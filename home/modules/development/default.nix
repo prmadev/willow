@@ -17,6 +17,7 @@ with lib; {
     ./helix
     ./nixdev
     ./rust
+    ./efm
     ./vscode
     ./zig
   ];
@@ -40,6 +41,7 @@ with lib; {
     rust.enable = true;
     vscode.enable = true;
     zig.enable = true;
+    efm.enable = true;
 
     home.packages = with pkgs; [
       # flutter

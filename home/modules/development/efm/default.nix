@@ -16,5 +16,11 @@ with lib; {
     home.packages = with pkgs; [
       efm-langserver
     ];
+
+    home.file = {
+      ".config/efm-langserver/config.yaml" = {
+        source = ./config.yaml;
+      };
+    };
   };
 }
