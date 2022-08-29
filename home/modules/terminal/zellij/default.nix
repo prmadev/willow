@@ -15,7 +15,7 @@ with lib; {
       enable = true;
       settings = {
         default_shell = "zsh";
-        simplified_ui = true;
+        simplified_ui = false;
         pane_frames = false;
         scroll_buffer_size = 20000;
         scrollback_editor = "${pkgs.helix}/bin/hx";
