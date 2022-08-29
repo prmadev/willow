@@ -21,6 +21,10 @@ with lib; {
       go = mkIf config.go.enable "richgo";
       sudo = "sudo -E";
       fzf = mkIf config.fzf.enable "fzf --preview='pistol {}'";
+      j = "jobs";
+      f = "fg";
+      h = "hx";
+      b = "bg";
     };
   };
 }
