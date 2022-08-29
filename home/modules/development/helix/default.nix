@@ -21,6 +21,7 @@ with lib; {
         {
           name = "nix";
           auto-format = false;
+          formatter = {command = "alejandra";};
         }
         {
           name = "html";
@@ -37,9 +38,9 @@ with lib; {
           indent = {
             tab-width = 4;
             unit = "  ";
-          };
 
-          formatter = {command = "gofumports";};
+            formatter = {command = "gofumports";};
+          };
         }
       ];
 
