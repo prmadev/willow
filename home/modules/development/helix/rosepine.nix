@@ -160,7 +160,7 @@
       modifiers = ["underlined"];
     };
     "diagnostic.error" = {
-      fg = config.colors.rose.hex;
+      bg = config.colors.highlight-low.hex;
       modifiers = ["underlined"];
     };
 
