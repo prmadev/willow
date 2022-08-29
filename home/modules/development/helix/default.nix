@@ -43,6 +43,8 @@ with lib; {
             tab-width = 4;
             unit = "  ";
           };
+
+          language-server = {command = "efm";};
         }
       ];
 
