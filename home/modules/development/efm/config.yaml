@@ -26,7 +26,3 @@ languages:
   go:
     - <<: *gopls
     - <<: *golangci-lint
-
-
-  =:
-    - <<: *any-excitetranslate
