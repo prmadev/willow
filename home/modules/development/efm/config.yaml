@@ -22,21 +22,11 @@ tools:
     format-stdin: true
     format-command: gofumports
 
-  markdown-markdownlint: &markdown-markdownlint
-    lint-command: 'markdownlint -s -c %USERPROFILE%\.markdownlintrc'
-    lint-stdin: true
-    lint-formats:
-      - '%f:%l %m'
-      - '%f:%l:%c %m'
-      - '%f: %l: %m'
 languages:
   go:
     - <<: *gopls
     - <<: *golangci-lint
 
 
-  markdown:
-    - <<: *markdown-markdownlint
-    - <<: *markdown-pandoc
   =:
     - <<: *any-excitetranslate
