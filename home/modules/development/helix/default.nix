@@ -21,7 +21,10 @@ with lib; {
         {
           name = "nix";
           auto-format = false;
-          formatter = {command = "alejandra";};
+          formatter = {
+            command = "alejandra";
+            args = ["--quiet"];
+          };
         }
         {
           name = "html";
