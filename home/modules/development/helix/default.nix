@@ -39,12 +39,11 @@ with lib; {
           name = "go";
           auto-format = true;
           formatter = {command = "gofumports";};
+
           indent = {
             tab-width = 4;
             unit = "  ";
           };
-
-          language-server = {command = "efm";};
         }
       ];
 
@@ -67,11 +66,10 @@ with lib; {
 
         # indent-guides.render = true;
         editor = {
-          auto-format = false;
+          auto-format = true;
           completion-trigger-len = 1;
           line-number = "relative";
-
-          # indent-style = "t";
+          color-modes = true;
           cursor-shape = {
             insert = "bar";
             normal = "block";
