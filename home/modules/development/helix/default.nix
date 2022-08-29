@@ -20,7 +20,7 @@ with lib; {
       languages = [
         {
           name = "nix";
-          auto-format = false;
+          auto-format = true;
           formatter = {
             command = "alejandra";
             args = ["--quiet"];
@@ -37,12 +37,11 @@ with lib; {
         }
         {
           name = "go";
-
+          auto-format = true;
+          formatter = {command = "gofumports";};
           indent = {
             tab-width = 4;
             unit = "  ";
-
-            formatter = {command = "gofumports";};
           };
         }
       ];
