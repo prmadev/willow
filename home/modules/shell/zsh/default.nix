@@ -27,7 +27,7 @@ with lib; {
 
       autocd = true;
       initExtra = ''
-        if command -v zellij &> /dev/null && [-n "$PS1"] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM =~ zellij]] && [[ ! "$TERM =~ tmux"]] && [-z "$ZELLIJ"]; then
+        if command -v zellij &> /dev/null && [-n "$PS1"] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ zellij]] && [[ ! "$TERM" =~ tmux]] && [-z "$ZELLIJ"]; then
          eval "$(zellij setup --generate-auto-start zsh)"
         fi
 
