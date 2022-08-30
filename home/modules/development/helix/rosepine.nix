@@ -67,7 +67,7 @@
       modifiers = [];
     };
 
-    "ui.virtual.whitespace" = {bg = config.colors.love.hex;};
+    # "ui.virtual.whitespace" = {bg = config.colors.love.hex;};
     "ui.virtual.indent-guide" = {bg = config.colors.muted.hex;};
     "ui.popup" = {bg = config.colors.surface.hex;};
     "ui.popup.info" = {bg = config.colors.surface.hex;};
