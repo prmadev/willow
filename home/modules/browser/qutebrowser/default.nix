@@ -91,7 +91,7 @@ with lib; {
           "file:///home/a/.config/startpage/index.html"
         ];
         window.hide_decoration = true;
-        window.title_format = "qutebrowser";
+        window.title_format = "{current_title} qb";
 
         colors.completion.category.bg = config.colors.base.hex;
 
