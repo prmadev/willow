@@ -60,6 +60,8 @@ with lib; {
              workspace=eDP-1,1
              monitor=DP-1,1600x900@60,1366x0,1
              workspace=DP-1,9
+             monitor=HDMI-A-1,1920x1080@60,1366x0,1
+             workspace=DP-1,9
            }
 
            input {
