@@ -67,6 +67,7 @@
     };
 
     "ui.virtual.whitespace" = config.colors.love.hex;
+    "ui.virtual.indent-guide" = config.colors.surface.hex;
     "ui.popup" = {bg = config.colors.surface.hex;};
     "ui.popup.info" = {bg = config.colors.surface.hex;};
     "ui.window" = {
