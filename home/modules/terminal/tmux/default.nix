@@ -14,18 +14,16 @@ with lib; {
   config = mkIf config.tmux.enable {
     programs.tmux = {
       enable = true;
-      keyMode = "vi";
+      # keyMode = "vi";
       clock24 = true;
       newSession = true;
-      shell = "${pkgs.fish}/bin/fish";
-      shortcut = "a";
+      shell = "${pkgs.zsh}/bin/zsh";
+      # shortcut = "a";
       sensibleOnTop = true;
       extraConfig = ''
         bind C-p previous-window
         bind C-n next-window
         # quick pane cycling
-        unbind ^A
-        bind ^A select-pane -t :.+
         unbind r
         bind r source-file ~/.config/tmux/tmux.conf
       '';
