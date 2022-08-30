@@ -7,7 +7,7 @@
       modifiers = ["hidden"];
     };
     "ui.cursor" = {
-      fg = config.colors.rose.hex;
+      # fg = config.colors.rose.hex;
       modifiers = ["reversed"];
     };
 
