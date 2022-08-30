@@ -36,16 +36,17 @@
     "ui.statusline" = {
       fg = config.colors.subtle.hex;
       bg = config.colors.surface.hex;
+      modifiers = ["bold"];
     };
     "ui.statusline.insert" = {
       fg = config.colors.base.hex;
-      bg = config.colors.foam.hex;
+      bg = config.colors.love.hex;
       modifiers = ["bold"];
     };
     "ui.statusline.normal" = {
       fg = config.colors.base.hex;
       bg = config.colors.rose.hex;
-      modifiers = [];
+      modifiers = ["bold"];
     };
     "ui.statusline.select" = {
       fg = config.colors.base.hex;
@@ -66,8 +67,8 @@
       modifiers = [];
     };
 
-    "ui.virtual.whitespace" = config.colors.love.hex;
-    "ui.virtual.indent-guide" = config.colors.surface.hex;
+    "ui.virtual.whitespace" = {bg = config.colors.love.hex;};
+    "ui.virtual.indent-guide" = {bg = config.colors.muted.hex;};
     "ui.popup" = {bg = config.colors.surface.hex;};
     "ui.popup.info" = {bg = config.colors.surface.hex;};
     "ui.window" = {
@@ -162,7 +163,6 @@
     };
     "diagnostic.error" = {
       bg = config.colors.highlight-low.hex;
-      modifiers = ["underlined"];
     };
 
     "markup.heading.marker" = config.colors.subtle.hex;
