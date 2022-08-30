@@ -12,12 +12,12 @@
     };
 
     "ui.cursor.primary" = {
-      fg = config.colors.love.hex;
+      # fg = config.colors.love.hex;
       modifiers = ["reversed"];
     };
 
     "ui.cursor.match" = {
-      fg = config.colors.iris.hex;
+      # fg = config.colors.iris.hex;
       modifiers = ["reversed"];
     };
 
