@@ -25,6 +25,7 @@ with lib; {
       f = "fg";
       h = "hx";
       b = "bg";
+      zl = "zellij a -c $(basename $(pwd))";
     };
   };
 }

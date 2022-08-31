@@ -43,6 +43,9 @@ with lib; {
       # TODO check the old config for extra parameteres
       # TODO move  to fish
       dotDir = ".config/zsh";
+      initExtraBeforeCompInit = ''
+        eval "$(zellij setup --generate-completion=zsh)"
+      '';
       completionInit = "autoload -U compinit && compinit";
       history.expireDuplicatesFirst = true;
       history.extended = true;
