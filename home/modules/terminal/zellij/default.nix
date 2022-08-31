@@ -2,6 +2,7 @@
   pkgs,
   config,
   lib,
+  inputs,
   ...
 }:
 with lib; {
@@ -13,6 +14,7 @@ with lib; {
   config = mkIf config.zellij.enable {
     programs.zellij = {
       enable = true;
+      # package = inputs.zellij;
       settings = {
         default_shell = "zsh";
         simplified_ui = true;
