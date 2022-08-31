@@ -25,13 +25,13 @@ with lib; {
             fg = config.colors.subtle.rgb;
             bg = config.colors.base.rgb;
             black = config.colors.surface.rgb;
-            red = config.colors.love.rgb;
+            red = config.colors.pine.rgb;
             green = config.colors.pine.rgb;
             yellow = config.colors.gold.rgb;
             blue = config.colors.foam.rgb;
             magenta = config.colors.iris.rgb;
             cyan = config.colors.rose.rgb;
-            white = config.colors.text.rgb;
+            white = config.colors.subtle.rgb;
             orange = config.colors.gold.rgb;
           };
         };
