@@ -26,17 +26,18 @@ with lib; {
         # quick pane cycling
         unbind r
         bind r source-file ~/.config/tmux/tmux.conf
+
       '';
       plugins = with pkgs; [
-        tmuxPlugins.continuum
-        tmuxPlugins.resurrect
-        tmuxPlugins.copycat
-        tmuxPlugins.open
-        tmuxPlugins.pain-control
-        tmuxPlugins.tmux-fzf
-        tmuxPlugins.extrakto
-        tmuxPlugins.prefix-highlight
-        tmuxPlugins.vim-tmux-navigator
+        # tmuxPlugins.continuum
+        # tmuxPlugins.resurrect
+        # tmuxPlugins.copycat
+        # tmuxPlugins.open
+        # tmuxPlugins.pain-control
+        # tmuxPlugins.tmux-fzf
+        # tmuxPlugins.extrakto
+        # tmuxPlugins.prefix-highlight
+        # tmuxPlugins.vim-tmux-navigator
       ];
     };
     home.packages = with pkgs; [
