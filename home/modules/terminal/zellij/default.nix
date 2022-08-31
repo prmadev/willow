@@ -22,7 +22,7 @@ with lib; {
         copy_command = "wl-copy";
         themes = {
           default = {
-            fg = config.colors.text.rgb;
+            fg = config.colors.subtle.rgb;
             bg = config.colors.base.rgb;
             black = config.colors.surface.rgb;
             red = config.colors.love.rgb;
@@ -31,7 +31,7 @@ with lib; {
             blue = config.colors.foam.rgb;
             magenta = config.colors.iris.rgb;
             cyan = config.colors.rose.rgb;
-            white = config.colors.love.rgb;
+            white = config.colors.subtle.rgb;
             orange = config.colors.gold.rgb;
           };
         };
