@@ -80,6 +80,7 @@ with lib; {
         keys = {
           normal = {
             # ret = ["open_below" "normal_mode"];
+            X = ["extend_line_above"];
             space = {
               c = ":bc";
             };
