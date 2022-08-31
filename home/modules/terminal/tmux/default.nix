@@ -14,7 +14,7 @@ with lib; {
   config = mkIf config.tmux.enable {
     programs.tmux = {
       enable = true;
-      # keyMode = "vi";
+      keyMode = "vi";
       clock24 = true;
       newSession = true;
       shell = "${pkgs.zsh}/bin/zsh";
