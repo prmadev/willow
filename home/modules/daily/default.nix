@@ -6,6 +6,7 @@
 }:
 with lib; {
   imports = [
+    ./syncthing
     ./communication.nix
     ./exercism.nix
     ./favo.nix
@@ -32,5 +33,6 @@ with lib; {
     hoard.enable = true;
     zk.enable = true;
     newsboat.enable = true;
+    syncthing.enable = true;
   };
 }
