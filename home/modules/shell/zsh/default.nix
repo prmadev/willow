@@ -39,13 +39,7 @@ with lib; {
              --color=info:#9ccfd8,prompt:#f6c177,pointer:#c4a7e7
              --color=marker:#ebbcba,spinner:#eb6f92,header:#ebbcba"
       '';
-      # TODO use the module
-      # TODO check the old config for extra parameteres
-      # TODO move  to fish
       dotDir = ".config/zsh";
-      initExtraBeforeCompInit = ''
-        source "$(zellij setup --generate-completion=zsh)"
-      '';
       completionInit = "autoload -U compinit && compinit";
       history.expireDuplicatesFirst = true;
       history.extended = true;
