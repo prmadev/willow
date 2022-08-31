@@ -31,7 +31,7 @@ with lib; {
             blue = config.colors.foam.rgb;
             magenta = config.colors.iris.rgb;
             cyan = config.colors.rose.rgb;
-            white = config.colors.subtle.rgb;
+            white = config.colors.text.rgb;
             orange = config.colors.gold.rgb;
           };
         };
