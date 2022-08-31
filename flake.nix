@@ -25,6 +25,7 @@
 
     zellij = {
       url = "github:zellij-org/zellij";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     helix = {
