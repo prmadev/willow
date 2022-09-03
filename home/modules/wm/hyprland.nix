@@ -91,7 +91,7 @@ with lib; {
 
 
             bind=SUPER,SPACE,exec,hyprctl keyword input:kb_layout us
-            bind=SUPER,SPACE,exec,hyprctl keyword input:kb_layout ir
+            bind=SUPERALT,SPACE,exec,hyprctl keyword input:kb_layout ir
             bind=SUPER,r,exec,hyprctl reload
 
              bind=SUPER,q,killactive
