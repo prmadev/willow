@@ -1,6 +1,4 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
-make: *** No rule to make target 'all'.  Stop.
-
 # GNU Make 4.3
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2020 Free Software Foundation, Inc.
@@ -8,12 +6,20 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon Aug  8 00:33:52 2022
+# Make data base, printed on Sat Sep  3 14:05:23 2022
 
 # Variables
 
 # environment
-GDK_BACKEND = x11
+define FZF_DEFAULT_OPTS
+
+     --color=fg:#e0def4,bg:#1f1d2e,hl:#6e6a86
+     --color=fg+:#908caa,bg+:#191724,hl+:#908caa
+     --color=info:#9ccfd8,prompt:#f6c177,pointer:#c4a7e7
+     --color=marker:#ebbcba,spinner:#eb6f92,header:#ebbcba
+endef
+# environment
+GDK_BACKEND = wayland
 # environment
 LC_ALL = C
 # environment
@@ -23,21 +29,17 @@ NIX_USER_PROFILE_DIR = /nix/var/nix/profiles/per-user/a
 # environment
 NIXPKGS_CONFIG = /etc/nix/nixpkgs-config.nix
 # environment
-XDG_DESKTOP_PORTAL_DIR = /nix/store/mvg4n0l19xz4mzsp9k7hpg3clp67cpvp-xdg-portals/share/xdg-desktop-portal/portals
+XDG_DESKTOP_PORTAL_DIR = /nix/store/bd0sfv6sbz6zkp3vv6x92mvbp9psq72s-xdg-portals/share/xdg-desktop-portal/portals
 # environment
-STARSHIP_SESSION_KEY = 1834511911105811
-# environment
-FZF_TMUX = 1
+STARSHIP_SESSION_KEY = 2209518128248892
 # environment
 QT_PLUGIN_PATH = /home/a/.nix-profile/lib/qt4/plugins:/home/a/.nix-profile/lib/kde4/plugins:/etc/profiles/per-user/a/lib/qt4/plugins:/etc/profiles/per-user/a/lib/kde4/plugins:/nix/var/nix/profiles/default/lib/qt4/plugins:/nix/var/nix/profiles/default/lib/kde4/plugins:/run/current-system/sw/lib/qt4/plugins:/run/current-system/sw/lib/kde4/plugins
 # environment
-VSCODE_CWD = /home/a
+VSCODE_CWD = /home/a/dofi
 # environment
-GPG_TTY = /dev/tty1
+GPG_TTY = /dev/pts/0
 # environment
 ZK_NOTEBOOK_DIR = /home/a/notes
-# environment
-all_proxy = socks5://127.0.0.1:9050/
 # default
 MAKE_COMMAND := make
 # environment
@@ -55,15 +57,15 @@ PWD = /home/a/dofi
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # environment
-XDG_DATA_DIRS = /nix/store/m0sirl1p9hisdw9nzc2mian25ad4mpmi-vscode-1.69.2/share:/nix/store/gwcin68bsqs5m2gqzl6x9ckbg05kgr1y-gtk+3-3.24.34/share/gsettings-schemas/gtk+3-3.24.34:/nix/store/1pfmj0i8714gyxg2nshwfjfpsd3lg1qn-gsettings-desktop-schemas-42.0/share/gsettings-schemas/gsettings-desktop-schemas-42.0:/nix/store/zf4kh9zbpjvihan3x5bj9zdfanh436ai-hicolor-icon-theme-0.17/share:/nix/store/k2izyvjzlk9basmzlaq2j5wl4biwj1sp-rofi-1.7.3+wayland1/share:/nix/store/35pfq4aiyvrakdsplwv07has55wvl07b-desktops/share:/home/a/.nix-profile/share:/etc/profiles/per-user/a/share:/nix/var/nix/profiles/default/share:/run/current-system/sw/share
+XDG_DATA_DIRS = /nix/store/s0bpa5b1d7cd36a2i65wsas2kji92mkm-vscode-1.70.2/share:/nix/store/2bs64xwzj41afvk5h7hzma6dp0sx83sx-gtk+3-3.24.34/share/gsettings-schemas/gtk+3-3.24.34:/nix/store/yvvrab08cy1a21r7jylawvh9v9nxmqvs-gsettings-desktop-schemas-42.0/share/gsettings-schemas/gsettings-desktop-schemas-42.0:/nix/store/d15f3pm4baa0mpbyyzyjs2582lq3mm8p-desktops/share:/home/a/.nix-profile/share:/etc/profiles/per-user/a/share:/nix/var/nix/profiles/default/share:/run/current-system/sw/share
 # environment
-http_proxy = socks5://127.0.0.1:9050/
+OLDPWD = /home/a
 # automatic
 ^D = $(patsubst %/,%,$(dir $^))
 # automatic
 %F = $(notdir $%)
 # environment
-VSCODE_CODE_CACHE_PATH = /home/a/.config/Code/CachedData/3b889b090b5ad5793f524b5d1d39fda662b96a2a
+VSCODE_CODE_CACHE_PATH = /home/a/.config/Code/CachedData/e4503b30fc78200f846c62cf8091b76ff5547662
 # environment
 SSH_ASKPASS = 
 # environment
@@ -71,19 +73,21 @@ LANG = C
 # default
 .LOADED := 
 # default
-.INCLUDE_DIRS = /nix/store/xwg1p2s1mcl3qj193yw1c3sv0cpqlz5s-gnumake-4.3/include
+.INCLUDE_DIRS = /nix/store/n1yg7cl4w00b3s571852psiizqx0ad9l-gnumake-4.3/include
+# environment
+__HM_ZSH_SESS_VARS_SOURCED = 1
 # makefile
 MAKEFLAGS = pqrR
 # environment
 LIBEXEC_PATH = /home/a/.nix-profile/lib/libexec:/etc/profiles/per-user/a/lib/libexec:/nix/var/nix/profiles/default/lib/libexec:/run/current-system/sw/lib/libexec
 # environment
-HYPRLAND_INSTANCE_SIGNATURE = _1659902417
+HYPRLAND_INSTANCE_SIGNATURE = _1662197683
 # makefile
 CURDIR := /home/a/dofi
 # environment
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # environment
-LESSOPEN = |/nix/store/cn9ml1sf0s3c5n92as0vvcpi16vg76qm-lesspipe-2.05/bin/lesspipe.sh %s
+LESSOPEN = |/nix/store/4l7x4cbdw0pag887cprds0ikavym24yp-lesspipe-2.06/bin/lesspipe.sh %s
 # environment
 XDG_PICTURES_DIR = /home/a/Pictures
 # automatic
@@ -111,11 +115,11 @@ GNUPGHOME = /home/a/.gnupg
 # automatic
 @F = $(notdir $@)
 # environment
-LOCALE_ARCHIVE_2_27 = /nix/store/s3bf05my50y37v88mm6krs1x4s7399rn-glibc-locales-2.35-163/lib/locale/locale-archive
+LOCALE_ARCHIVE_2_27 = /nix/store/2lgjklgdydblg0hifhdx2gp9dd8fsh6k-glibc-locales-2.35-163/lib/locale/locale-archive
 # environment
 FZF_ALT_C_COMMAND = fd --type d
 # environment
-VSCODE_PID = 6276
+VSCODE_PID = 253669
 # environment
 MOZ_ENABLE_WAYLAND = 1
 # environment
@@ -133,15 +137,13 @@ LF_ICONS = di=:fi=:ow=:ln=:or=❌:ex=🎯:*.png=:*.webp=:*.ico
 # environment
 XDG_PUBLICSHARE_DIR = /home/a/Public
 # environment
-LESSKEYIN_SYSTEM = /nix/store/wcr64mxvykk67jbf1fs3jl356c3k6lnf-lessconfig
+LESSKEYIN_SYSTEM = /nix/store/xdsngn6dmbf8bf69pbflbplzfd3qh2ak-lessconfig
 # environment
 CHROME_DESKTOP = code-url-handler.desktop
 # environment
 DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
 # automatic
 <D = $(patsubst %/,%,$(dir $<))
-# environment
-ftp_proxy = socks5://127.0.0.1:9050/
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # environment
@@ -153,29 +155,29 @@ MAKE_HOST := x86_64-pc-linux-gnu
 # environment
 GTK_PATH = /home/a/.nix-profile/lib/gtk-2.0:/home/a/.nix-profile/lib/gtk-3.0:/home/a/.nix-profile/lib/gtk-4.0:/etc/profiles/per-user/a/lib/gtk-2.0:/etc/profiles/per-user/a/lib/gtk-3.0:/etc/profiles/per-user/a/lib/gtk-4.0:/nix/var/nix/profiles/default/lib/gtk-2.0:/nix/var/nix/profiles/default/lib/gtk-3.0:/nix/var/nix/profiles/default/lib/gtk-4.0:/run/current-system/sw/lib/gtk-2.0:/run/current-system/sw/lib/gtk-3.0:/run/current-system/sw/lib/gtk-4.0
 # environment
-TMUX_TMPDIR = /run/user/1000
-# environment
 INFOPATH = /home/a/.nix-profile/info:/home/a/.nix-profile/share/info:/etc/profiles/per-user/a/info:/etc/profiles/per-user/a/share/info:/nix/var/nix/profiles/default/info:/nix/var/nix/profiles/default/share/info:/run/current-system/sw/info:/run/current-system/sw/share/info
 # makefile
 SHELL = sh
 # default
 MAKECMDGOALS := all
 # environment
-LD_LIBRARY_PATH = /nix/store/4kg9p597vyqyp22cylqbpq1y06bxz1iy-pipewire-0.3.56-jack/lib
+LD_LIBRARY_PATH = /nix/store/rj83c2s4d9h0g3pcsys4f287m150wibc-pipewire-0.3.56-jack/lib
 # environment
 QT_QPA_PLATFORM = wayland
 # environment
 SDL_VIDEODRIVER = wayland
 # environment
-SHLVL = 2
+SHLVL = 3
 # environment
 __NIXOS_SET_ENVIRONMENT_DONE = 1
+# environment
+TERMINFO = /nix/store/h34r03j55hl6hfgjfwvr17kp6p5yh9bd-kitty-0.25.2/lib/kitty/terminfo
 # environment
 MAKELEVEL := 0
 # default
 MAKE = $(MAKE_COMMAND)
 # environment
-PATH = /nix/store/l1r2spxz21r6mhiffcjd8ynqnxd3sk1y-glib-2.72.3-bin/bin:/home/a/.local/bin:/home/a/bin:/run/wrappers/bin:/home/a/.nix-profile/bin:/etc/profiles/per-user/a/bin:/nix/var/nix/profiles/default/bin:/run/current-system/sw/bin:/home/a/.cargo/bin:/home/a/go/bin
+PATH = /nix/store/ibpvzzd6xhaf0bdspv8yhp1m151rjjch-glib-2.72.3-bin/bin:/nix/store/h34r03j55hl6hfgjfwvr17kp6p5yh9bd-kitty-0.25.2/bin:/nix/store/hx76gckpydhs77whirh9wjf4lscq1m3w-imagemagick-7.1.0-47/bin:/nix/store/kn8gbpi8bfxkzg6slyskz4y0d2pkl0xk-ncurses-6.3-p20220507-dev/bin:/home/a/.local/bin:/home/a/bin:/run/wrappers/bin:/home/a/.nix-profile/bin:/etc/profiles/per-user/a/bin:/nix/var/nix/profiles/default/bin:/run/current-system/sw/bin:/home/a/.cargo/bin:/home/a/go/bin:/home/a/.config/zsh/plugins/cd-ls:/home/a/.config/zsh/plugins/fzf-tab:/home/a/.config/zsh/plugins/zsh-windows-title:/home/a/.config/zsh/plugins/zsh-terminal-title:/home/a/.config/zsh/plugins/zsh-tab-title
 # environment
 XCURSOR_PATH = /home/a/.icons:/home/a/.local/share/icons:/home/a/.nix-profile/share/icons:/home/a/.nix-profile/share/pixmaps:/etc/profiles/per-user/a/share/icons:/etc/profiles/per-user/a/share/pixmaps:/nix/var/nix/profiles/default/share/icons:/nix/var/nix/profiles/default/share/pixmaps:/run/current-system/sw/share/icons:/run/current-system/sw/share/pixmaps
 # default
@@ -188,8 +190,6 @@ NIX_CURL_FLAGS = -x socks://127.0.0.1:9050/
 XDG_CONFIG_HOME = /home/a/.config
 # environment
 fish_tmux_config = /home/a/.config/tmux/tmux.conf
-# environment
-rsync_proxy = socks5://127.0.0.1:9050/
 # automatic
 ?F = $(notdir $?)
 # environment
@@ -213,7 +213,7 @@ ORIGINAL_XDG_CURRENT_DESKTOP = Hyprland
 # 'override' directive
 GNUMAKEFLAGS := 
 # environment
-GIO_EXTRA_MODULES = /nix/store/scilmailcmbvm61igj66cmmdw7pm6gfd-dconf-0.40.0-lib/lib/gio/modules:/nix/store/scilmailcmbvm61igj66cmmdw7pm6gfd-dconf-0.40.0-lib/lib/gio/modules:/nix/store/scilmailcmbvm61igj66cmmdw7pm6gfd-dconf-0.40.0-lib/lib/gio/modules
+GIO_EXTRA_MODULES = /nix/store/2710lcf2rixpmn329hcl0jrlibrlmkxd-dconf-0.40.0-lib/lib/gio/modules
 # environment
 XDG_VIDEOS_DIR = /home/a/Videos
 # environment
@@ -226,6 +226,8 @@ fish_tmux_autoconnect = false
 XDG_VTNR = 1
 # makefile
 .DEFAULT_GOAL := sync
+# environment
+KITTY_WINDOW_ID = 1
 # environment
 EDITOR = hx
 # environment
@@ -243,9 +245,9 @@ XDG_DESKTOP_DIR = /home/a/Desktop
 # environment
 JQ_COLORS = 1;30:0;37:0;37:0;37:0;32:1;37:1;37
 # environment
-no_proxy = 127.0.0.1,localhost,internal.domain
+STARSHIP_SHELL = zsh
 # environment
-STARSHIP_SHELL = bash
+KITTY_PID = 252978
 # environment
 XKB_DEFAULT_LAYOUT = us,ir
 # environment
@@ -253,7 +255,6 @@ PAGER = less
 # environment
 _ = /etc/profiles/per-user/a/bin/make
 # environment
- 
 MOZ_PLUGIN_PATH = /home/a/.nix-profile/lib/mozilla/plugins:/etc/profiles/per-user/a/lib/mozilla/plugins:/nix/var/nix/profiles/default/lib/mozilla/plugins:/run/current-system/sw/lib/mozilla/plugins
 # environment
 QT_WAYLAND_DISABLE_WINDOWDECORATION = 1
@@ -262,7 +263,9 @@ XDG_RUNTIME_DIR = /run/user/1000
 # environment
 BW_CLIENTSECRET = /run/ragenix/bwsec
 # environment
-GDK_PIXBUF_MODULE_FILE = /nix/store/pw9cig2hc7lpp8hxk8bvrkgrd67h2l85-librsvg-2.54.4/lib/gdk-pixbuf-2.0/2.10.0/loaders.cache
+COLORTERM = truecolor
+# environment
+GDK_PIXBUF_MODULE_FILE = /nix/store/w5lgbm6jf65skfrkvpczsmwhlbcxi87c-librsvg-2.54.4/lib/gdk-pixbuf-2.0/2.10.0/loaders.cache
 # environment
 VISUAL = hx
 # environment
@@ -274,15 +277,20 @@ XDG_SESSION_CLASS = user
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
+ 
+make: *** No rule to make target 'all'.  Stop.
+
+KITTY_SHELL_INTEGRATION = enabled no-rc
+# environment
 GTK2_RC_FILES = /home/a/.gtkrc-2.0
 # environment
 HOME = /home/a
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-VSCODE_IPC_HOOK = /run/user/1000/vscode-1bc9c623-1.69.2-main.sock
+VSCODE_IPC_HOOK = /run/user/1000/vscode-1bc9c623-1.70.2-main.sock
 # environment
-TERM = linux
+TERM = xterm-kitty
 # environment
 XDG_SESSION_ID = 1
 # environment
@@ -308,11 +316,11 @@ ELECTRON_NO_ATTACH_CONSOLE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync check-symlink load
 # environment
-__HM_SESS_VARS_SOURCED = 1
+KITTY_INSTALLATION_DIR = /nix/store/h34r03j55hl6hfgjfwvr17kp6p5yh9bd-kitty-0.25.2/lib/kitty
 # environment
-https_proxy = socks5://127.0.0.1:9050/
+__HM_SESS_VARS_SOURCED = 1
 # variable set hash-table stats:
-# Load=149/1024=15%, Rehash=0, Collisions=10/175=6%
+# Load=150/1024=15%, Rehash=0, Collisions=9/176=5%
 
 # Pattern-specific Variable Values
 
@@ -412,8 +420,7 @@ sync:
 
 # strcache performance: lookups = 28 / hit rate = 25%
 # hash-table stats:
- 
 # Load=21/8192=0%, Rehash=0, Collisions=0/28=0%
-# Finished Make data base on Mon Aug  8 00:33:52 2022
+# Finished Make data base on Sat Sep  3 14:05:23 2022
 
  

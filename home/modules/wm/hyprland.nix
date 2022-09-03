@@ -65,8 +65,11 @@ with lib; {
            }
 
            input {
-             follow_mouse=1 repeat_rate=35
-             repeat_delay=200
+            follow_mouse=1
+            repeat_rate=35
+            repeat_delay=300
+            kb_layout=us,ir
+            kb_options=caps:escape
            }
 
            misc {
@@ -87,8 +90,8 @@ with lib; {
              # bind=SUPER,k,layoutmsg,cycleprev
 
 
-             bind=SUPER,SPACE,exec,hyprctl keyword input:kb_layout "US-en"
-             bind=SUPERALT,SPACE,exec,hyprctl keyword input:kb_layout "IR-fa"
+            bind=SUPER,SPACE,exec,hyprctl keyword input:kb_layout us
+            bind=SUPERALT,SPACE,exec,hyprctl keyword input:kb_layout ir
              bind=SUPER,r,exec,hyprctl reload
 
              bind=SUPER,q,killactive
