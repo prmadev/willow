@@ -44,8 +44,8 @@ with lib; {
                rounding=1
                multisample_edges=true
            	  blurls=paper
-             blur=true
-         	  drop_shadow=true
+               blur=true
+             	  drop_shadow=true
                shadow_range=5
                shadow_render_power=2
                col.shadow=0xff191724
@@ -91,8 +91,8 @@ with lib; {
 
 
             bind=SUPER,SPACE,exec,hyprctl keyword input:kb_layout us
-            bind=SUPERALT,SPACE,exec,hyprctl keyword input:kb_layout ir
-             bind=SUPER,r,exec,hyprctl reload
+            bind=SUPER,SPACE,exec,hyprctl keyword input:kb_layout ir
+            bind=SUPER,r,exec,hyprctl reload
 
              bind=SUPER,q,killactive
 
