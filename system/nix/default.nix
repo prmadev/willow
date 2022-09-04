@@ -1,6 +1,7 @@
 {
   config,
   pkgs,
+  inputs,
   ...
 }: {
   nixpkgs.config.allowUnfree = true;
@@ -18,9 +19,9 @@
     ];
   };
 
-  environment.defaultPackages = with pkgs; [
-    rsync
-    strace
-    neovim
+  environment.defaultPackages = [
+    pkgs.rsync
+    pkgs.strace
+    pkgs.neovim
   ];
 }
