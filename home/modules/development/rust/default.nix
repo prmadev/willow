@@ -13,7 +13,9 @@ with lib; {
   };
   config = mkIf config.rust.enable {
     home.packages = with pkgs; [
-      rustup
+      # rustup
+      cargo
+      rust-analyzer
     ];
 
     home.sessionPath = ["$HOME/.cargo/bin"];
