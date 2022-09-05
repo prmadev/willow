@@ -13,6 +13,7 @@ with lib; {
   };
   config = mkIf config.rust.enable {
     home.packages = with pkgs; [
+      lldb
       # rustup
       cargo
       rust-analyzer
