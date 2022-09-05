@@ -18,6 +18,7 @@ with lib; {
       cargo
       rust-analyzer
       rustc
+      rustfmt
     ];
 
     home.sessionPath = ["$HOME/.cargo/bin"];
