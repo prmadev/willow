@@ -17,6 +17,7 @@ with lib; {
       # rustup
       cargo
       rust-analyzer
+      rustc
     ];
 
     home.sessionPath = ["$HOME/.cargo/bin"];
