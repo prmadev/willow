@@ -19,6 +19,7 @@ with lib; {
       rust-analyzer
       rustc
       rustfmt
+      clippy
     ];
 
     home.sessionPath = ["$HOME/.cargo/bin"];
