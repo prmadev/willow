@@ -27,5 +27,6 @@ with lib; {
     eww.enable = true;
     hyprland.enable = true;
     home.packages = with pkgs; [wayfire];
+    xsession.windowManager.awesome.enable = true;
   };
 }
