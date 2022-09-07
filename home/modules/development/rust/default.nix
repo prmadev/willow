@@ -19,7 +19,8 @@ with lib; {
       rust-analyzer
       rustc
       rustfmt
-      binutils
+      # binutils
+      coreutils-full
       clippy
     ];
 
