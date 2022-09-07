@@ -56,6 +56,7 @@ with lib; {
       # redis-desktop-manager
       iredis
       dfeet
+      hyperfine
     ];
   };
 }
