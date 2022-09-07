@@ -26,5 +26,6 @@ with lib; {
     wm.river.enable = true;
     eww.enable = true;
     hyprland.enable = true;
+    home.packages = with pkgs; [wayfire];
   };
 }

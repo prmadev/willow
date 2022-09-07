@@ -1,4 +1,6 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+make: *** No rule to make target 'all'.  Stop.
+
 # GNU Make 4.3
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2020 Free Software Foundation, Inc.
@@ -6,20 +8,12 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sat Sep  3 14:05:23 2022
+# Make data base, printed on Wed Sep  7 18:25:49 2022
 
 # Variables
 
 # environment
-define FZF_DEFAULT_OPTS
-
-     --color=fg:#e0def4,bg:#1f1d2e,hl:#6e6a86
-     --color=fg+:#908caa,bg+:#191724,hl+:#908caa
-     --color=info:#9ccfd8,prompt:#f6c177,pointer:#c4a7e7
-     --color=marker:#ebbcba,spinner:#eb6f92,header:#ebbcba
-endef
-# environment
-GDK_BACKEND = wayland
+GDK_BACKEND = x11
 # environment
 LC_ALL = C
 # environment
@@ -31,13 +25,13 @@ NIXPKGS_CONFIG = /etc/nix/nixpkgs-config.nix
 # environment
 XDG_DESKTOP_PORTAL_DIR = /nix/store/bd0sfv6sbz6zkp3vv6x92mvbp9psq72s-xdg-portals/share/xdg-desktop-portal/portals
 # environment
-STARSHIP_SESSION_KEY = 2209518128248892
+STARSHIP_SESSION_KEY = 1125625169327511
 # environment
 QT_PLUGIN_PATH = /home/a/.nix-profile/lib/qt4/plugins:/home/a/.nix-profile/lib/kde4/plugins:/etc/profiles/per-user/a/lib/qt4/plugins:/etc/profiles/per-user/a/lib/kde4/plugins:/nix/var/nix/profiles/default/lib/qt4/plugins:/nix/var/nix/profiles/default/lib/kde4/plugins:/run/current-system/sw/lib/qt4/plugins:/run/current-system/sw/lib/kde4/plugins
 # environment
-VSCODE_CWD = /home/a/dofi
+VSCODE_CWD = /home/a
 # environment
-GPG_TTY = /dev/pts/0
+GPG_TTY = /dev/tty1
 # environment
 ZK_NOTEBOOK_DIR = /home/a/notes
 # default
@@ -57,9 +51,7 @@ PWD = /home/a/dofi
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # environment
-XDG_DATA_DIRS = /nix/store/s0bpa5b1d7cd36a2i65wsas2kji92mkm-vscode-1.70.2/share:/nix/store/2bs64xwzj41afvk5h7hzma6dp0sx83sx-gtk+3-3.24.34/share/gsettings-schemas/gtk+3-3.24.34:/nix/store/yvvrab08cy1a21r7jylawvh9v9nxmqvs-gsettings-desktop-schemas-42.0/share/gsettings-schemas/gsettings-desktop-schemas-42.0:/nix/store/d15f3pm4baa0mpbyyzyjs2582lq3mm8p-desktops/share:/home/a/.nix-profile/share:/etc/profiles/per-user/a/share:/nix/var/nix/profiles/default/share:/run/current-system/sw/share
-# environment
-OLDPWD = /home/a
+XDG_DATA_DIRS = /nix/store/nrdmbm43k7xyc9nvg741zcqpi7i72rvn-vscode-1.70.2/share:/nix/store/2bs64xwzj41afvk5h7hzma6dp0sx83sx-gtk+3-3.24.34/share/gsettings-schemas/gtk+3-3.24.34:/nix/store/yvvrab08cy1a21r7jylawvh9v9nxmqvs-gsettings-desktop-schemas-42.0/share/gsettings-schemas/gsettings-desktop-schemas-42.0:/nix/store/bz7xcl70zi1na0xg3v6d61g7dsavwjw4-hicolor-icon-theme-0.17/share:/nix/store/m66hawy506lv8zpr9j6l9s46kgicvva9-rofi-1.7.5+wayland1/share:/nix/store/d15f3pm4baa0mpbyyzyjs2582lq3mm8p-desktops/share:/home/a/.nix-profile/share:/etc/profiles/per-user/a/share:/nix/var/nix/profiles/default/share:/run/current-system/sw/share
 # automatic
 ^D = $(patsubst %/,%,$(dir $^))
 # automatic
@@ -74,14 +66,12 @@ LANG = C
 .LOADED := 
 # default
 .INCLUDE_DIRS = /nix/store/n1yg7cl4w00b3s571852psiizqx0ad9l-gnumake-4.3/include
-# environment
-__HM_ZSH_SESS_VARS_SOURCED = 1
 # makefile
 MAKEFLAGS = pqrR
 # environment
 LIBEXEC_PATH = /home/a/.nix-profile/lib/libexec:/etc/profiles/per-user/a/lib/libexec:/nix/var/nix/profiles/default/lib/libexec:/run/current-system/sw/lib/libexec
 # environment
-HYPRLAND_INSTANCE_SIGNATURE = _1662197683
+HYPRLAND_INSTANCE_SIGNATURE = _1662558504
 # makefile
 CURDIR := /home/a/dofi
 # environment
@@ -119,7 +109,7 @@ LOCALE_ARCHIVE_2_27 = /nix/store/2lgjklgdydblg0hifhdx2gp9dd8fsh6k-glibc-locales-
 # environment
 FZF_ALT_C_COMMAND = fd --type d
 # environment
-VSCODE_PID = 253669
+VSCODE_PID = 3881
 # environment
 MOZ_ENABLE_WAYLAND = 1
 # environment
@@ -167,17 +157,15 @@ QT_QPA_PLATFORM = wayland
 # environment
 SDL_VIDEODRIVER = wayland
 # environment
-SHLVL = 3
+SHLVL = 2
 # environment
 __NIXOS_SET_ENVIRONMENT_DONE = 1
-# environment
-TERMINFO = /nix/store/h34r03j55hl6hfgjfwvr17kp6p5yh9bd-kitty-0.25.2/lib/kitty/terminfo
 # environment
 MAKELEVEL := 0
 # default
 MAKE = $(MAKE_COMMAND)
 # environment
-PATH = /nix/store/ibpvzzd6xhaf0bdspv8yhp1m151rjjch-glib-2.72.3-bin/bin:/nix/store/h34r03j55hl6hfgjfwvr17kp6p5yh9bd-kitty-0.25.2/bin:/nix/store/hx76gckpydhs77whirh9wjf4lscq1m3w-imagemagick-7.1.0-47/bin:/nix/store/kn8gbpi8bfxkzg6slyskz4y0d2pkl0xk-ncurses-6.3-p20220507-dev/bin:/home/a/.local/bin:/home/a/bin:/run/wrappers/bin:/home/a/.nix-profile/bin:/etc/profiles/per-user/a/bin:/nix/var/nix/profiles/default/bin:/run/current-system/sw/bin:/home/a/.cargo/bin:/home/a/go/bin:/home/a/.config/zsh/plugins/cd-ls:/home/a/.config/zsh/plugins/fzf-tab:/home/a/.config/zsh/plugins/zsh-windows-title:/home/a/.config/zsh/plugins/zsh-terminal-title:/home/a/.config/zsh/plugins/zsh-tab-title
+PATH = /nix/store/ibpvzzd6xhaf0bdspv8yhp1m151rjjch-glib-2.72.3-bin/bin:/home/a/.local/bin:/home/a/bin:/run/wrappers/bin:/home/a/.nix-profile/bin:/etc/profiles/per-user/a/bin:/nix/var/nix/profiles/default/bin:/run/current-system/sw/bin:/home/a/.cargo/bin://home/a/a/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin:/home/a/go/bin
 # environment
 XCURSOR_PATH = /home/a/.icons:/home/a/.local/share/icons:/home/a/.nix-profile/share/icons:/home/a/.nix-profile/share/pixmaps:/etc/profiles/per-user/a/share/icons:/etc/profiles/per-user/a/share/pixmaps:/nix/var/nix/profiles/default/share/icons:/nix/var/nix/profiles/default/share/pixmaps:/run/current-system/sw/share/icons:/run/current-system/sw/share/pixmaps
 # default
@@ -213,7 +201,7 @@ ORIGINAL_XDG_CURRENT_DESKTOP = Hyprland
 # 'override' directive
 GNUMAKEFLAGS := 
 # environment
-GIO_EXTRA_MODULES = /nix/store/2710lcf2rixpmn329hcl0jrlibrlmkxd-dconf-0.40.0-lib/lib/gio/modules
+GIO_EXTRA_MODULES = /nix/store/2710lcf2rixpmn329hcl0jrlibrlmkxd-dconf-0.40.0-lib/lib/gio/modules:/nix/store/2710lcf2rixpmn329hcl0jrlibrlmkxd-dconf-0.40.0-lib/lib/gio/modules:/nix/store/2710lcf2rixpmn329hcl0jrlibrlmkxd-dconf-0.40.0-lib/lib/gio/modules
 # environment
 XDG_VIDEOS_DIR = /home/a/Videos
 # environment
@@ -226,8 +214,6 @@ fish_tmux_autoconnect = false
 XDG_VTNR = 1
 # makefile
 .DEFAULT_GOAL := sync
-# environment
-KITTY_WINDOW_ID = 1
 # environment
 EDITOR = hx
 # environment
@@ -245,9 +231,7 @@ XDG_DESKTOP_DIR = /home/a/Desktop
 # environment
 JQ_COLORS = 1;30:0;37:0;37:0;37:0;32:1;37:1;37
 # environment
-STARSHIP_SHELL = zsh
-# environment
-KITTY_PID = 252978
+STARSHIP_SHELL = bash
 # environment
 XKB_DEFAULT_LAYOUT = us,ir
 # environment
@@ -263,8 +247,6 @@ XDG_RUNTIME_DIR = /run/user/1000
 # environment
 BW_CLIENTSECRET = /run/ragenix/bwsec
 # environment
-COLORTERM = truecolor
-# environment
 GDK_PIXBUF_MODULE_FILE = /nix/store/w5lgbm6jf65skfrkvpczsmwhlbcxi87c-librsvg-2.54.4/lib/gdk-pixbuf-2.0/2.10.0/loaders.cache
 # environment
 VISUAL = hx
@@ -277,20 +259,16 @@ XDG_SESSION_CLASS = user
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
- 
-make: *** No rule to make target 'all'.  Stop.
-
-KITTY_SHELL_INTEGRATION = enabled no-rc
-# environment
 GTK2_RC_FILES = /home/a/.gtkrc-2.0
 # environment
 HOME = /home/a
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
+ 
 VSCODE_IPC_HOOK = /run/user/1000/vscode-1bc9c623-1.70.2-main.sock
 # environment
-TERM = xterm-kitty
+TERM = linux
 # environment
 XDG_SESSION_ID = 1
 # environment
@@ -316,11 +294,9 @@ ELECTRON_NO_ATTACH_CONSOLE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync check-symlink load
 # environment
-KITTY_INSTALLATION_DIR = /nix/store/h34r03j55hl6hfgjfwvr17kp6p5yh9bd-kitty-0.25.2/lib/kitty
-# environment
 __HM_SESS_VARS_SOURCED = 1
 # variable set hash-table stats:
-# Load=150/1024=15%, Rehash=0, Collisions=9/176=5%
+# Load=141/1024=14%, Rehash=0, Collisions=9/167=5%
 
 # Pattern-specific Variable Values
 
@@ -349,19 +325,28 @@ update:
 	git add .
 	git commit -m "auto: update"
 	hyprctl reload
+ 
 
+ 
 # Not a target:
+ 
 Makefile:
+ 
 #  Implicit rule search has been done.
+ 
 #  Last modified 2022-08-06 10:26:08.759502813
+ 
 #  File has been updated.
+ 
 #  Successfully updated.
+ 
 
 boot-update:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 27):
+ 
 	alejandra -q .
 	git add .
 	sudo nixos-rebuild boot --flake .# 
@@ -420,7 +405,9 @@ sync:
 
 # strcache performance: lookups = 28 / hit rate = 25%
 # hash-table stats:
+ 
 # Load=21/8192=0%, Rehash=0, Collisions=0/28=0%
-# Finished Make data base on Sat Sep  3 14:05:23 2022
+ 
+# Finished Make data base on Wed Sep  7 18:25:49 2022
 
  
