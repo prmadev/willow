@@ -13,15 +13,16 @@ with lib; {
   };
   config = mkIf config.rust.enable {
     home.packages = with pkgs; [
-      lldb
-      # rustup
-      cargo
-      rust-analyzer
-      rustc
-      rustfmt
-      # binutils
-      coreutils-full
-      clippy
+      #   lldb
+      #   # rustup
+      #   cargo
+      #   rust-analyzer
+      #   rustc
+      #   rustfmt
+      #   # binutils
+      #   coreutils-full
+      #   clippy
+      rustup
     ];
 
     home.sessionPath = ["$HOME/.cargo/bin"];
