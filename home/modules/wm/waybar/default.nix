@@ -16,7 +16,7 @@ with lib; {
     home.packages = with pkgs; [
     ];
     programs.waybar = mkIf config.waybar.enable {
-      enable = false;
+      enable = true;
       systemd.enable = true;
       settings = {
         mainBar = {
@@ -28,20 +28,9 @@ with lib; {
             # "wlr/taskbar"
             # "river/mode"
             "river/tags"
-            "custom/hyprgows1"
-            "custom/hyprgows2"
-            "custom/hyprgows3"
-            "custom/hyprgows4"
-            "custom/hyprgows5"
-            "custom/hyprgows6"
-            "custom/hyprgows7"
-            "custom/hyprgows8"
-            "custom/hyprgows9"
           ];
           modules-center = [
             "clock"
-            "custom/joljol"
-            "custom/hyprgomon"
           ];
 
           modules-right = [
@@ -50,72 +39,9 @@ with lib; {
             "pulseaudio"
             "battery"
           ];
-          "custom/hyprgomon" = {
-            exec = "hyprgo -a";
-            return-type = "json";
-            format = " {} ";
-          };
-
-          "custom/hyprgows1" = {
-            exec = "hyprgo -w 1";
-            return-type = "json";
-            format = " {} ";
-          };
-          "custom/hyprgows2" = {
-            exec = "hyprgo -w 2";
-            return-type = "json";
-            format = " {} ";
-          };
-          "custom/hyprgows3" = {
-            exec = "hyprgo -w 3";
-            return-type = "json";
-            format = " {} ";
-          };
-          "custom/hyprgows4" = {
-            exec = "hyprgo -w 4";
-            return-type = "json";
-            format = " {} ";
-          };
-          "custom/hyprgows5" = {
-            exec = "hyprgo -w 5";
-            return-type = "json";
-            format = " {} ";
-          };
-
-          "custom/hyprgows6" = {
-            exec = "hyprgo -w 6";
-            return-type = "json";
-            format = " {} ";
-          };
-          "custom/hyprgows7" = {
-            exec = "hyprgo -w 7";
-            return-type = "json";
-            format = " {} ";
-          };
-          "custom/hyprgows8" = {
-            exec = "hyprgo -w 8";
-            return-type = "json";
-            format = " {} ";
-          };
-          "custom/hyprgows9" = {
-            exec = "hyprgo -w 9";
-            return-type = "json";
-            format = " {} ";
-          };
 
           "river/tags" = {
             num-tags = 9;
-            tag-labels = [
-              "ﳑ" #1
-              "" #2
-              "" #3
-              "" #4
-              "5"
-              "6"
-              "7"
-              "" #8
-              "" #9
-            ];
           };
           "river/mode" = {
             format = "Mode: {}";

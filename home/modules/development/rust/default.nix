@@ -27,6 +27,12 @@ with lib; {
       # rustup
       # gcc
       # clang
+      # llvmPackages_latest.bintools
+      llvmPackages_latest.llvm
+      llvmPackages_latest.lld
+      # libvmi
+      zlib.out
+      xorriso
     ];
 
     home.sessionPath = ["$HOME/.cargo/bin" "/$HOME/a/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin"];
