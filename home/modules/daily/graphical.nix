@@ -17,6 +17,7 @@ with lib; {
   config = mkIf config.graphical.enable {
     home.packages = with pkgs; [
       inkscape
+      krita
       gimp
       pastel
       imagemagick
