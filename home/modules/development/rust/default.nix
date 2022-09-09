@@ -14,17 +14,17 @@ with lib; {
   config = mkIf config.rust.enable {
     home.packages = with pkgs; [
       lldb
-      cargo
+      # cargo
       rust-analyzer
-      rustc
-      rustfmt
+      # rustc
+      # rustfmt
       cargo-binutils
-      clippy
-      rls
+      # clippy
+      # rls
       rust-code-analysis
       cargo-geiger
       # binutils
-      # rustup
+      rustup
       # gcc
       # clang
       # llvmPackages_latest.bintools
