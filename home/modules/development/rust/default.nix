@@ -24,6 +24,7 @@ with lib; {
       rust-code-analysis
       cargo-geiger
       # binutils
+      glib
       rustup
       # gcc
       # clang
