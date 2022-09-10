@@ -31,14 +31,14 @@ with lib; {
           focused = {
             background = config.colors.love.hex;
             border = config.colors.love.hex;
-            childBorder = config.colors.rose.hex;
+            childBorder = config.colors.base.hex;
             indicator = config.colors.gold.hex;
             text = config.colors.base.hex;
           };
           focusedInactive = {
             background = config.colors.rose.hex;
             border = config.colors.rose.hex;
-            childBorder = config.colors.rose.hex;
+            childBorder = config.colors.base.hex;
             indicator = config.colors.gold.hex;
             text = config.colors.base.hex;
           };
