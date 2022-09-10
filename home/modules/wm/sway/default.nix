@@ -104,8 +104,8 @@ with lib; {
             "${modifier}+r" = "reload";
             "${modifier}+Mod1+h" = "resize grow width -10";
             "${modifier}+Mod1+l" = "resize grow width +10";
-            "${modifier}+Mod3+j" = "resize grow heigth +10";
-            "${modifier}+Mod3+k" = "resize grow height -10";
+            "${modifier}+Mod2+j" = "resize grow heigth +10";
+            "${modifier}+Mod2+k" = "resize grow heigth -10";
             "${modifier}+space" = "splitt";
           };
         menu = "rofi -show";
