@@ -88,7 +88,7 @@ with lib; {
         in
           lib.mkOptionDefault {
             "${modifier}+Return" = "exec ${pkgs.kitty}/bin/kitty";
-            "${modifier}+D" = "exec ${pkgs.rofi}/bin/rofi -show";
+            # "${modifier}+D" = "exec ${pkgs.rofi}/bin/rofi -show";
             "${modifier}+Shift+q" = "kill";
           };
         menu = "rofi -show";
