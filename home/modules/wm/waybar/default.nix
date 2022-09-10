@@ -153,6 +153,8 @@ with lib; {
           border-radius: 5px;
           background: ${config.colors.base.hex};
           padding: 5px;
+        	margin: 10px 10px 0px 0px;
+        	font-weight: bold;
         }
 
         #workspaces button.visible {
