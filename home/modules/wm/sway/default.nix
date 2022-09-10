@@ -96,7 +96,17 @@ with lib; {
           lib.mkOptionDefault {
             "${modifier}+Return" = "exec ${pkgs.kitty}/bin/kitty";
             # "${modifier}+D" = "exec ${pkgs.rofi}/bin/rofi -show";
+
             "${modifier}+q" = "kill";
+            "${modifier}+tab" = "layout toggle default tabbed splitv splith";
+            "${modifier}+asciitilde" = "move window scratchpad";
+            "${modifier}+grave" = "show scratchpad";
+            "${modifier}+r" = "reload";
+            "${modifier}+Mod1+h" = "resize grow width -10";
+            "${modifier}+Mod1+l" = "resize grow width +10";
+            "${modifier}+Mod3+j" = "resize grow heigth +10";
+            "${modifier}+Mod3+k" = "resize grow height -10";
+            "${modifier}+space" = "splitt";
           };
         menu = "rofi -show";
         modifier = "Mod4";
