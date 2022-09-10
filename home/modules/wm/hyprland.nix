@@ -44,8 +44,8 @@ with lib; {
                rounding=1
                multisample_edges=true
            	  blurls=paper
-               blur=true
-             	  drop_shadow=true
+               blur=false
+             	  drop_shadow=false
                shadow_range=5
                shadow_render_power=2
                col.shadow=0xff191724

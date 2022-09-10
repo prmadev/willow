@@ -9,6 +9,11 @@
     isNormalUser = true;
     extraGroups = [
       "wheel"
+      "audio"
+      "input"
+      "systemd-journal"
+      "lp"
+      "networkmanager"
       "video" # for wayland light support
     ];
   };

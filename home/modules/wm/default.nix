@@ -11,6 +11,7 @@ with lib; {
     ./waybar
     ./mako
     ./hyprland.nix
+    ./sway
     ./eww
   ];
 
@@ -28,5 +29,6 @@ with lib; {
     hyprland.enable = true;
     home.packages = with pkgs; [wayfire];
     xsession.windowManager.awesome.enable = true;
+    sway.enable = true;
   };
 }

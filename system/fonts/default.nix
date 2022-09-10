@@ -6,7 +6,7 @@
   fonts.fonts = with pkgs; [
     recursive
     vazir-fonts
-
+    material-design-icons
     (nerdfonts.override {fonts = ["JetBrainsMono" "CascadiaCode" "DaddyTimeMono"];})
   ];
   fonts = {

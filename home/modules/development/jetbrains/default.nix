@@ -15,5 +15,9 @@ with lib; {
     home.packages = with pkgs; [
       jetbrains.goland
     ];
+
+    home.sessionVariables = {
+      _JAVA_AWT_WM_NONREPARENTING = 1;
+    };
   };
 }

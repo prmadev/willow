@@ -4,7 +4,10 @@
   ...
 }: {
   networking.hostName = "nixer";
-  networking.networkmanager.enable = true;
+  networking.networkmanager = {
+    enable = true;
+    unmanaged = ["docker0" "rndis0"];
+  };
 
   services.tor = {
     # i want this as system level, because I need it for circumventing gitlab's sanctions.

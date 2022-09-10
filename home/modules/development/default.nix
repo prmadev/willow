@@ -15,6 +15,7 @@ with lib; {
     ./json
     ./neovim
     ./helix
+    ./jetbrains
     ./nixdev
     ./rust
     ./efm
@@ -38,6 +39,7 @@ with lib; {
     neovim.enable = true;
     helix.enable = true;
     nixdev.enable = true;
+    goland.enable = true;
     rust.enable = true;
     vscode.enable = true;
     zig.enable = true;

@@ -22,7 +22,7 @@
 
   # Power management
   services.tlp.enable = true;
-
+  services.fstrim.enable = true;
   # boot.kernelPackages = pkgs.linuxKernel.kernels.linux_5_19;
   # services.xserver.videoDrivers = ["nvidia"];
   # hardware.nvidia.modesetting.enable = true;
