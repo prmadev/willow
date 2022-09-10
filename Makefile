@@ -15,6 +15,7 @@ update:
 	hyprctl reload
 
 upgrade:
+	git commit --amend -m "commit before upgrade"
 	alejandra -q .
 	git add . 
 	sudo nix flake update
