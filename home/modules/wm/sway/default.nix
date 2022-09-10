@@ -101,9 +101,9 @@ with lib; {
         menu = "rofi -show";
         modifier = "Mod4";
         output = {
-          eDP-1 = {bg = "fill ~/.config/wallpaper";};
-          DP-1 = {bg = "fill ~/.config/wallpaper";};
-          HDMI-A-1 = {bg = "fill ~/.config/wallpaper";};
+          eDP-1 = {bg = " ~/.config/wallpaper fill";};
+          DP-1 = {bg = " ~/.config/wallpaper fill";};
+          HDMI-A-1 = {bg = " ~/.config/wallpaper fill";};
         };
         startup = [
           {
