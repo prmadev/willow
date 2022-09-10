@@ -84,7 +84,7 @@ with lib; {
           "*" = {
             xkb_layout = "us,ir";
             repeat_delay = "300";
-            repeat_rate = "10";
+            repeat_rate = "50";
             xkb_numlock = "enabled";
             drag = "enabled";
             tap = "enabled";
@@ -101,9 +101,9 @@ with lib; {
         menu = "rofi -show";
         modifier = "Mod4";
         output = {
-          eDP-1 = {bg = "~/.config/wallpaper";};
-          DP-1 = {bg = "~/.config/wallpaper";};
-          HDMI-A-1 = {bg = "~/.config/wallpaper";};
+          eDP-1 = {bg = "fill ~/.config/wallpaper";};
+          DP-1 = {bg = "fill ~/.config/wallpaper";};
+          HDMI-A-1 = {bg = "fill ~/.config/wallpaper";};
         };
         startup = [
           {
