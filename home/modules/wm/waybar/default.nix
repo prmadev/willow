@@ -160,7 +160,6 @@ with lib; {
         }
 
         #workspaces button.focused {
-        font-style:bold;
 
         }
 
