@@ -77,7 +77,7 @@ with lib; {
           size = 15.0;
         };
         gaps = {
-          inner = 10;
+          inner = 5;
           outer = 0;
         };
         input = {

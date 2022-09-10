@@ -32,7 +32,6 @@ with lib; {
             "river/tags"
           ];
           modules-center = [
-            "clock"
           ];
 
           modules-right = [
@@ -41,6 +40,7 @@ with lib; {
             "pulseaudio"
             "battery"
             "sway/language"
+            "clock"
           ];
 
           "sway/workspaces" = {
@@ -162,6 +162,8 @@ with lib; {
         }
 
         #workspaces button.focused {
+
+          color: ${config.colors.rose.hex};
 
         }
 
