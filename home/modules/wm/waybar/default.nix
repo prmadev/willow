@@ -45,7 +45,7 @@ with lib; {
 
           "sway/workspaces" = {
             all-outputs = false;
-            format = "{index} {value}";
+            format = "{value}";
           };
           "river/tags" = {
             num-tags = 9;
@@ -153,7 +153,7 @@ with lib; {
           border-radius: 5px;
           background: ${config.colors.base.hex};
           padding: 5px;
-        	margin: 10px 10px 0px 0px;
+        	margin: 10px 10px 10px 0px;
         	font-weight: bold;
         }
 
