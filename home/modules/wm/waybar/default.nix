@@ -149,6 +149,29 @@ with lib; {
         	min-height: 20px;
         	border-radius: 5px;
         }
+        #workspaces button {
+          border-radius: 5px;
+          background: ${config.colors.base.hex};
+          padding: 5px;
+        }
+
+        #workspaces button.visible {
+
+        }
+
+        #workspaces button.focused {
+        font-weigth: 900;
+
+        }
+
+        #workspaces button.urgent {
+
+        }
+
+        #workspaces button.current_output {
+
+
+        }
 
         window#waybar {
         	background: transparent;
