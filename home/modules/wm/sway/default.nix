@@ -81,7 +81,14 @@ with lib; {
           outer = 10;
         };
         input = {
-          "*" = {xkb_layout = "us, ir";};
+          "*" = {
+            xkb_layout = "us,ir";
+            repeat_delay = "300";
+            repeat_rate = "10";
+            xkb_numlock = "enabled";
+            drag = "enabled";
+            tap = "enabled";
+          };
         };
         keybindings = let
           modifier = "Mod4";
