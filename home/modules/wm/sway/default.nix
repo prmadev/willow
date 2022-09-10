@@ -96,7 +96,7 @@ with lib; {
           lib.mkOptionDefault {
             "${modifier}+Return" = "exec ${pkgs.kitty}/bin/kitty";
             # "${modifier}+D" = "exec ${pkgs.rofi}/bin/rofi -show";
-            "${modifier}+Shift+q" = "kill";
+            "${modifier}+q" = "kill";
           };
         menu = "rofi -show";
         modifier = "Mod4";

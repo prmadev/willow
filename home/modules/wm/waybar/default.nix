@@ -24,6 +24,8 @@ with lib; {
           position = "top";
           height = 0;
           modules-left = [
+            "sway/mode"
+            "sway/workspaces"
             # "wlr/workspaces"
             # "wlr/taskbar"
             # "river/mode"
@@ -38,8 +40,13 @@ with lib; {
             "network"
             "pulseaudio"
             "battery"
+            "sway/language"
           ];
 
+          "sway/workspaces" = {
+            all-outputs = false;
+            format = "{index} {value}";
+          };
           "river/tags" = {
             num-tags = 9;
           };
@@ -51,6 +58,10 @@ with lib; {
             format-alt = "{:%Y-%m-%d}";
           };
 
+          "sway/language" = {
+            format = "{}";
+            on-click = "swaymsg input type:keyboard xkb_switch_layout next";
+          };
           "battery" = {
             interval = 60;
             states = {
