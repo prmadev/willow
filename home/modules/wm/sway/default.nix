@@ -77,8 +77,7 @@ with lib; {
           size = 10.0;
         };
         gaps = {
-          horizontal = 5;
-          outer = 0;
+          inner = 5;
         };
         input = {
           "*" = {
