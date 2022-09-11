@@ -244,11 +244,7 @@ with lib; {
         }
 
         #clock {
-        	background: ${config.colors.pine.hex};
-        }
-        #custom-hyprmon.firstmon{
-          background: ${config.colors.love.hex};
-          margin: 10px 10px 0px 10px;
+        	background: ${config.colors.base.hex};
         }
 
         #custom-joljol {
@@ -261,9 +257,6 @@ with lib; {
         	background: ${config.colors.foam.hex};
         }
 
-        /* #battery.charging { */
-        /* 	color: #9ccfd8; */
-        /* } */
 
         #battery.ninty.charging {
         	background: linear-gradient(to right, ${config.colors.pine.hex} 90%, ${config.colors.foam.hex} 90%);
@@ -332,7 +325,7 @@ with lib; {
         	background: linear-gradient(to right, ${config.colors.pine.hex} 3%, ${config.colors.love.hex} 3%);
         }
         #network {
-        	background: ${config.colors.pine.hex};
+        	color: ${config.colors.text.hex};
         }
 
         #pulseaudio {
