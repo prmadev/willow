@@ -105,6 +105,10 @@ with lib; {
             "${modifier}+Mod1+l" = "resize grow width +10";
             "${modifier}+Mod2+j" = "resize grow heigth +10";
             "${modifier}+Mod2+k" = "resize grow heigth -10";
+            "${modifier}+period" = "focus output right";
+            "${modifier}+comma" = "focus output left";
+            "${modifier}+greater" = "move window to output left";
+            "${modifier}+less" = "move window to output right";
             # "${modifier}+r mode" = "$mode_resize";
             "${modifier}+space" = "splitt";
           };
@@ -118,6 +122,10 @@ with lib; {
         startup = [
           {
             command = "systemctl --user restart waybar";
+            always = true;
+          }
+          {
+            command = "workstyle";
             always = true;
           }
           {
@@ -186,7 +194,7 @@ with lib; {
     };
 
     home.file = {
-      ".config/workstyle.config.toml" = {
+      ".config/workstyle/config.toml" = {
         source = ./workstyle.toml;
       };
     };
