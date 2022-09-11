@@ -18,6 +18,7 @@ with lib; {
     programs.waybar = mkIf config.waybar.enable {
       enable = true;
       systemd.enable = true;
+      systemd.target = mkIf config.sway.enable "sway-session.target";
       settings = {
         mainBar = {
           gtk-layer-shell = true;

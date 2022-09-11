@@ -1,0 +1,55 @@
+# Config for workstyle
+#
+# Format:
+# "pattern" = "icon"
+#
+# The pattern will be used to match against the application name.
+# The icon will be used to represent that application.
+#
+# Note if multiple patterns are present in the same application name,
+# precedence is given in order of apparition in this file.
+
+"github" = ""
+"rust" = ""
+"tpa" = ""
+"hc" = ""
+"compass" = ""
+"postman" = ""
+"insomnia" = "零"
+"google" = ""
+"you.com" = ""
+"firefox" = ""
+"chrome" = ""
+"file manager" = ""
+"nnn" = ""
+"lf" = ""
+"code" = ""
+"telegram" = ""
+"qute" = ""
+"download"=""
+"aria2c"=""
+"curl"=""
+"dofi" = ""
+"nix" = ""
+"libreoffice calc" = ""
+"libreoffice writer" = ""
+"libreoffice" = ""
+"nvim" = ""
+"vim" = ""
+"helix"=""
+"hx"=""
+"goland" = "ﳑ"
+"gthumb" = ""
+"menu" = ""
+"calculator" = ""
+"transmission" = ""
+"videostream" = ""
+"mpv" = ""
+"music" = ""
+"disk usage" = ""
+".pdf" = ""
+"alacritty" = ""
+"kitty" = ""
+"wezterm" = ""
+[other]
+"fallback_icon" = ""

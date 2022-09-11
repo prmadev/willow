@@ -100,12 +100,13 @@ with lib; {
             "${modifier}+q" = "kill";
             "${modifier}+tab" = "layout toggle default tabbed splitv splith";
             "${modifier}+asciitilde" = "move window scratchpad";
-            "${modifier}+grave" = "show scratchpad";
-            "${modifier}+r" = "reload";
+            "${modifier}+minus" = "show scratchpad";
+            "${modifier}+Shift+r" = "reload";
             "${modifier}+Mod1+h" = "resize grow width -10";
             "${modifier}+Mod1+l" = "resize grow width +10";
             "${modifier}+Mod2+j" = "resize grow heigth +10";
             "${modifier}+Mod2+k" = "resize grow heigth -10";
+            # "${modifier}+r mode" = "$mode_resize";
             "${modifier}+space" = "splitt";
           };
         menu = "rofi -show";
