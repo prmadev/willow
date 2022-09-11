@@ -149,6 +149,14 @@ with lib; {
         	min-height: 20px;
         	border-radius: 5px;
         }
+        #language {
+
+          border-radius: 5px;
+          background: ${config.colors.base.hex};
+          padding: 5px;
+        	margin: 10px 10px 0px 10px;
+        	font-weight: bold;
+        }
         #workspaces button {
           border-radius: 5px;
           background: ${config.colors.base.hex};
