@@ -111,6 +111,8 @@ with lib; {
             "${modifier}+less" = "move window to output right";
             # "${modifier}+r mode" = "$mode_resize";
             "${modifier}+space" = "splitt";
+            "${modifier}+Ctrl+period" = "move workspace to output right";
+            "${modifier}+Ctrl+comma" = "move workspace to output left";
           };
         menu = "rofi -show";
         modifier = "Mod4";
