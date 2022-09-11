@@ -185,6 +185,11 @@ with lib; {
       xwayland = true;
     };
 
+    home.file = {
+      ".config/workstyle.config.toml" = {
+        source = ./workstyle.toml;
+      };
+    };
     home.sessionVariables = {
       SDL_VIDEODRIVER = "wayland";
       QT_QPA_PLATFORM = "wayland";
