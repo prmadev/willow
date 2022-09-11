@@ -51,6 +51,7 @@
 "alacritty" = ""
 "kitty" = ""
 "wezterm" = ""
+"~/" = ""
 
 [other]
 "fallback_icon" = ""
