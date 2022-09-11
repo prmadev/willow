@@ -152,6 +152,7 @@ with lib; {
         #language {
 
           border-radius: 5px;
+          color: ${config.colors.pine.hex};;
           background: ${config.colors.base.hex};
           padding: 5px;
         	margin: 10px 10px 0px 10px;
@@ -159,6 +160,7 @@ with lib; {
         }
         #workspaces button {
           border-radius: 5px;
+          color: ${config.colors.text.hex};;
           background: ${config.colors.base.hex};
           padding: 5px;
         	margin: 10px 10px 0px 10px;
@@ -169,8 +171,7 @@ with lib; {
         }
 
         #workspaces button.focused {
-          color: ${config.colors.rose.hex};
-
+          color: ${config.colors.love.hex};
         }
 
         #workspaces button.urgent {
@@ -235,8 +236,8 @@ with lib; {
         #pulseaudio,
         #network,
         #custom-joljol {
-        	background:${config.colors.pine.hex};
-        	color:${config.colors.base.hex} ;
+        	color:${config.colors.pine.hex};
+        	background:${config.colors.base.hex} ;
         	padding: 2.5px 15px;
         	margin: 10px 10px 0px 0px;
         	font-weight: 900;
