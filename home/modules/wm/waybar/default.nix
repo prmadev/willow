@@ -145,14 +145,14 @@ with lib; {
         * {
         	border: none;
         	font-family: ${config.global-fonts.main-family};
-        	font-size: 15px;
+        	font-size: 10px;
         	min-height: 20px;
         	border-radius: 5px;
         }
         #workspaces button {
           border-radius: 5px;
           background: ${config.colors.base.hex};
-          padding: 10px;
+          padding: 5px;
         	margin: 10px 10px 0px 10px;
         	font-weight: bold;
         }
@@ -171,8 +171,6 @@ with lib; {
 
         #workspaces button.current_output {
           background: ${config.colors.surface.hex};
-
-
         }
 
         window#waybar {
