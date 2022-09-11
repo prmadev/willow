@@ -74,10 +74,10 @@ with lib; {
         fonts = {
           names = ["monospace"];
           style = "Bold";
-          size = 15.0;
+          size = 10.0;
         };
         gaps = {
-          inner = 5;
+          horizontal = 5;
           outer = 0;
         };
         input = {

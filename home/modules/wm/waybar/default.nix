@@ -145,7 +145,7 @@ with lib; {
         * {
         	border: none;
         	font-family: ${config.global-fonts.main-family};
-        	font-size: 10px;
+        	font-size: 15px;
         	min-height: 20px;
         	border-radius: 5px;
         }
