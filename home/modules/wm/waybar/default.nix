@@ -152,17 +152,15 @@ with lib; {
         #workspaces button {
           border-radius: 5px;
           background: ${config.colors.base.hex};
-          padding: 5px;
+          padding: 10px;
         	margin: 10px 10px 0px 10px;
         	font-weight: bold;
         }
 
         #workspaces button.visible {
-
         }
 
         #workspaces button.focused {
-
           color: ${config.colors.rose.hex};
 
         }
@@ -172,6 +170,7 @@ with lib; {
         }
 
         #workspaces button.current_output {
+          background: ${config.colors.surface.hex};
 
 
         }
