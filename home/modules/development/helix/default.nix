@@ -71,8 +71,8 @@ with lib; {
           };
 
           statusline = {
-            left = ["file-name"];
-            center = ["mode"];
+            left = ["mode"];
+            center = ["file-name"];
             right = ["selections" "diagnostics" "spinner" "position-percentage"];
           };
         };
