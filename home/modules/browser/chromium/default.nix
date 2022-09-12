@@ -3,9 +3,13 @@
     enable = true;
     extensions = [
       "cjpalhdlnbpafiamejdnhcphjbkeiagm" # uBlock Origin
-      "ihlenndgcmojhcghmfjfneahoeklbjjh" # cVim
       "dhdgffkkebhmkfjojejmpbldmpobfkfo" # Tampermonkey
-      "icpgjfneehieebagbmdbhnlpiopdcmna" # New Tab Redirect
+      "cojpndognjdcakkimaloeealehpkljna" # caretTab
+      "gjnmgffpgcigkfipakdijeonkoelhcdh" # rose pine
+      "eimadpbcbfnmbkopoojfekhnkhdbieeh" # dark reader
+      "nngceckbapebfimnlniiiahkandclblb" # bitwarden
+      "padekgcemlokbadohgkifijomclgjgif" # SwitchyOmega
+      "ennpfpdlaclocpomkiablnmbppdnlhoh" # rust search engine
     ];
   };
 }
