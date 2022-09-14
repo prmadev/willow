@@ -16,6 +16,7 @@ with lib; {
     ./fish
     ./nu
     ./zsh
+    ./skim.nix
   ];
   options = {
     shell.enable = mkOption {

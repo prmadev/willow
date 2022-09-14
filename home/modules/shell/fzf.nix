@@ -17,6 +17,6 @@ with lib; {
       fzf.changeDirWidgetCommand = "fd --type d";
       fzf.tmux.enableShellIntegration = mkIf config.tmux.enable true;
     };
-    home.packages = with pkgs; [fd];
+    home.packages = with pkgs; [fzf skim];
   };
 }
