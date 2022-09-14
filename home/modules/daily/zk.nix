@@ -17,5 +17,8 @@ with lib; {
     home.sessionVariables = {
       ZK_NOTEBOOK_DIR = "$HOME/notes";
     };
+    home.packages = with pkgs; [
+      zk
+    ];
   };
 }
