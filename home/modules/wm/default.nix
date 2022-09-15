@@ -13,6 +13,7 @@ with lib; {
     ./hyprland.nix
     ./sway
     ./eww
+    ./picom.nix
   ];
 
   options.wm = {
@@ -27,8 +28,9 @@ with lib; {
     wm.river.enable = true;
     eww.enable = true;
     hyprland.enable = true;
-    home.packages = with pkgs; [wayfire];
-    xsession.windowManager.awesome.enable = true;
     sway.enable = true;
+
+    xsession.windowManager.awesome.enable = true;
+    picom.enable = true;
   };
 }
