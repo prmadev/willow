@@ -33,7 +33,7 @@ with lib; {
 
         {
           name = "toml";
-          language-server = {command = "${pkgs.taplo-lsp}/bin/taplo-lsp";};
+          language-server = {command = "${pkgs.taplo-lsp}/bin/taplo";};
         }
         {
           name = "go";
@@ -100,6 +100,7 @@ with lib; {
       nodePackages.dockerfile-language-server-nodejs
       nodePackages.vscode-langservers-extracted
       taplo-lsp
+      yaml-language-server
     ];
   };
 }
