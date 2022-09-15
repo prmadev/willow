@@ -85,6 +85,13 @@ with lib; {
               c = ":bc";
             };
           };
+
+          insert = {
+            up = "move_line_up";
+            down = "move_line_down";
+            left = "move_char_left";
+            right = "move_char_right";
+          };
         };
       };
     };
