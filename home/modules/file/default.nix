@@ -17,6 +17,7 @@ with lib; {
     ./pdf.nix
     ./rename.nix
     ./xdgconf.nix
+    ./broot.nix
   ];
   options = {
     file.enable = mkOption {
@@ -36,5 +37,6 @@ with lib; {
     pdf.enable = true;
     rename.enable = true;
     xdgconf.enable = true;
+    brootFile.enable = true;
   };
 }
