@@ -14,5 +14,8 @@ with lib; {
   };
   config = mkIf config.database.enable {
     mongo.enable = true;
+    environment.systemPackages = with pkgs; [
+      gobang
+    ];
   };
 }

@@ -25,6 +25,7 @@ with lib; {
       convco
       cocogitto
       onefetch
+      gitui
     ];
   };
 }

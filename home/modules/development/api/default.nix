@@ -16,6 +16,7 @@ with lib; {
       postman
       insomnia
       appimage-run # for navicat
+      xh
     ];
   };
 }
