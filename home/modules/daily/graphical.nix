@@ -24,6 +24,7 @@ with lib; {
       imv
       viu
       ffmpeg_5-full
+      rx
     ];
   };
 }
