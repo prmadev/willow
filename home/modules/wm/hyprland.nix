@@ -151,8 +151,6 @@ with lib; {
     };
     home.packages = with pkgs; [
       hyprpaper
-      wev
-      socat
     ];
     home.file = {
       ".config/hypr/hyprpaper.conf" = {

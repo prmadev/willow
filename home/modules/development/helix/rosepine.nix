@@ -30,7 +30,10 @@
       fg = config.colors.text.hex;
       bg = config.colors.pine.hex;
     };
-    "ui.linenr" = {fg = config.colors.muted.hex;};
+    "ui.linenr" = {
+      fg = config.colors.muted.hex;
+      bg = config.colors.surface;
+    };
     "ui.linenr.selected" = {bg = config.colors.highlight-high.hex;};
     "ui.selection" = {bg = config.colors.highlight-med.hex;};
     "ui.statusline" = {
