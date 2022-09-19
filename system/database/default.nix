@@ -22,7 +22,25 @@ with lib; {
     ];
 
     # services.pgadmin.enable = true;
-    services.postgresql.enable = true;
+    services.postgresql = {
+      enable = true;
+      port = 5432;
+      ensureUsers = [
+        {
+          name = "superuser";
+          ensurePermissions = {
+            "ALL TABLES IN SCHEMA public" = "ALL PRIVILEGES";
+          };
+        }
+        {
+          name = "a";
+          ensurePermissions = {
+            "ALL TABLES IN SCHEMA public" = "ALL PRIVILEGES";
+          };
+        }
+      ];
+    };
+
     services.pgadmin.initialEmail = "amirhossein.alesheikh@gmail.com";
 
     services.pgadmin.initialPasswordFile = ./enter;
