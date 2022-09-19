@@ -17,6 +17,7 @@ with lib; {
     environment.systemPackages = with pkgs; [
       pgcli
       python310Packages.keyring
+      pgweb
       gobang
     ];
 
