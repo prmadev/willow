@@ -59,6 +59,7 @@ with lib; {
       iredis
       dfeet
       hyperfine
+      # pgadmin
     ];
   };
 }

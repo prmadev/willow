@@ -15,7 +15,14 @@ with lib; {
   config = mkIf config.database.enable {
     mongo.enable = true;
     environment.systemPackages = with pkgs; [
+      pgcli
       gobang
     ];
+
+    # services.pgadmin.enable = true;
+    # services.pgadmin.initialEmail = "amirhossein.alesheikh@gmail.com";
+
+    # services.pgadmin.initialPasswordFile = ./enter;
+    # services.pgadmin.
   };
 }
