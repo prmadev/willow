@@ -30,6 +30,7 @@
 "aria2c"=""
 "curl"=""
 "dofi" = ""
+"nix" = ""
 "libreoffice calc" = ""
 "libreoffice writer" = ""
 "libreoffice" = ""
