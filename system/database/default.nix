@@ -22,9 +22,10 @@ with lib; {
     ];
 
     # services.pgadmin.enable = true;
-    # services.pgadmin.initialEmail = "amirhossein.alesheikh@gmail.com";
+    services.postgresql.enable = true;
+    services.pgadmin.initialEmail = "amirhossein.alesheikh@gmail.com";
 
-    # services.pgadmin.initialPasswordFile = ./enter;
+    services.pgadmin.initialPasswordFile = ./enter;
     # services.pgadmin.
   };
 }
