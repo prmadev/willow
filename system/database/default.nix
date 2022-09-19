@@ -16,6 +16,7 @@ with lib; {
     mongo.enable = true;
     environment.systemPackages = with pkgs; [
       pgcli
+      python310Packages.keyring
       gobang
     ];
 
