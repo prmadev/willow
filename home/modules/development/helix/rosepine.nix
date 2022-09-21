@@ -13,7 +13,7 @@
 
     "ui.cursor.primary" = {
       # fg = config.colors.love.hex;
-      modifiers = ["reversed"];
+      modifiers = ["reversed" "bold"];
     };
 
     "ui.cursor.match" = {
