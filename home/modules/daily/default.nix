@@ -34,5 +34,8 @@ with lib; {
     zk.enable = true;
     newsboat.enable = true;
     syncthing.enable = true;
+    home.packages = with pkgs; [
+      calibre
+    ];
   };
 }

@@ -1,7 +1,7 @@
 sync:
 	git add . 
 	alejandra -q .
-	sudo nixos-rebuild switch --flake .#
+	export NIX_CURL_FLAGS="-x socks://127.0.0.1:9050" &&sudo nixos-rebuild switch --flake .#
 	git add .
 	git commit -m "auto: syncing"
 	hyprctl reload
@@ -9,7 +9,7 @@ sync:
 update:
 	alejandra -q .
 	git add . 
-	sudo nix flake update
+	export NIX_CURL_FLAGS="-x socks://127.0.0.1:9050" && sudo nix flake update
 	git add .
 	git commit -m "auto: update"
 	hyprctl reload
@@ -18,8 +18,8 @@ upgrade:
 	git commit --amend -m "commit before upgrade"
 	alejandra -q .
 	git add . 
-	sudo nix flake update
-	sudo nixos-rebuild switch --flake .#
+	export NIX_CURL_FLAGS="-x socks://127.0.0.1:9050" &&sudo nix flake update
+	export NIX_CURL_FLAGS="-x socks://127.0.0.1:9050" &&sudo nixos-rebuild switch --flake .#
 	git add .
 	git commit -m "auto: upgrade"
 	hyprctl reload
