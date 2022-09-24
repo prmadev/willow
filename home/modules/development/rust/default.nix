@@ -34,6 +34,7 @@ with lib; {
       # libvmi
       zlib.out
       xorriso
+      mdbook
       cargo-cross
     ];
 

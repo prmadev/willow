@@ -17,6 +17,9 @@
   services.pipewire.alsa.enable = true;
   services.pipewire.pulse.enable = true;
 
+  services.printing.enable = true;
+  services.printing.drivers = with pkgs; [hplipWithPlugin];
+
   # System management
   services.dbus.enable = true;
 
