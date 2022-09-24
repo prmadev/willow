@@ -69,6 +69,15 @@
       fg = config.colors.text.hex;
       modifiers = [];
     };
+    "ui.bufferline" = {
+      fg = config.colors.muted.hex;
+      bg = config.colors.base.hex;
+    };
+    "ui.bufferline.active" = {
+      fg = config.colors.base.hex;
+      bg = config.colors.pine.hex;
+      modifiers = ["bold"];
+    };
 
     # "ui.virtual.whitespace" = {bg = config.colors.love.hex;};
     "ui.virtual.indent-guide" = {fg = config.colors.foam.hex;};

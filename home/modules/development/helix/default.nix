@@ -56,6 +56,7 @@ with lib; {
           cursorline = true;
           idle-timeout = 0;
           auto-pairs = true;
+          bufferline = "always";
 
           lsp.display-messages = true;
           file-picker.hidden = false;
