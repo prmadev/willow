@@ -36,6 +36,7 @@ with lib; {
     syncthing.enable = true;
     home.packages = with pkgs; [
       calibre
+      zola
     ];
   };
 }

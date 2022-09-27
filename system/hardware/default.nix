@@ -37,5 +37,6 @@
   environment.systemPackages = with pkgs; [
     ntfs3g
     pciutils
+    system-config-printer
   ];
 }
