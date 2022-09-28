@@ -9,7 +9,7 @@
   system.stateVersion = "22.11";
   nix = {
     # for the initial setup of flakes
-    package = pkgs.nixFlakes;
+    package = pkgs.nixVersions.stable;
     extraOptions = "experimental-features = nix-command flakes";
     optimise.automatic = true;
     settings.auto-optimise-store = true;
