@@ -38,5 +38,6 @@ with lib; {
     rename.enable = true;
     xdgconf.enable = true;
     brootFile.enable = true;
+    home.packages = with pkgs; [xplr];
   };
 }
