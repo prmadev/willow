@@ -61,7 +61,7 @@
     };
 
     zsh-skim = {
-      url = "github:hackerchai/skim-zsh";
+      url = "github:casonadams/skim.zsh";
       flake = false;
     };
 

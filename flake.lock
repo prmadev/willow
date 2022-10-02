@@ -703,16 +703,16 @@
     "zsh-skim": {
       "flake": false,
       "locked": {
-        "lastModified": 1621846313,
-        "narHash": "sha256-sQZMj6EwLfFOn1siDHkJDySl6sSnB6VTYmkp6wlXG2E=",
-        "owner": "hackerchai",
-        "repo": "skim-zsh",
-        "rev": "74a2021f9936781ab1f6d7633d67135dcdc132f8",
+        "lastModified": 1662446384,
+        "narHash": "sha256-wFKD7nqt6mSSUP3OtnAQZz8SUZPtKQKR8xKlfyUJVFM=",
+        "owner": "casonadams",
+        "repo": "skim.zsh",
+        "rev": "12b8b3fbf809afab96407cd96508518f7203825e",
         "type": "github"
       },
       "original": {
-        "owner": "hackerchai",
-        "repo": "skim-zsh",
+        "owner": "casonadams",
+        "repo": "skim.zsh",
         "type": "github"
       }
     },
