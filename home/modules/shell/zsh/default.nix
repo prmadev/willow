@@ -51,10 +51,10 @@ with lib; {
           src = inputs.cd-ls;
           name = "cd-ls";
         }
-        {
-          src = inputs.fzf-tab;
-          name = "fzf-tab";
-        }
+        # {
+        #   src = inputs.fzf-tab;
+        #   name = "fzf-tab";
+        # }
         {
           src = inputs.zsh-windows-title;
           name = "zsh-windows-title";

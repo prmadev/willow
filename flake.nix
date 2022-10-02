@@ -32,6 +32,7 @@
       url = "github:helix-editor/helix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
     nil = {
       url = "github:oxalica/nil";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -46,10 +47,10 @@
       flake = false;
     };
     ## zsh plugins
-    ansible-zsh = {
-      url = "github:sparsick/ansible-zsh";
-      flake = false;
-    };
+    # ansible-zsh = {
+    #   url = "github:sparsick/ansible-zsh";
+    #   flake = false;
+    # };
     zsh-windows-title = {
       url = "github:mdarocha/zsh-windows-title";
       flake = false;
@@ -63,6 +64,7 @@
       url = "github:hackerchai/skim-zsh";
       flake = false;
     };
+
     zsh-tab-title = {
       url = "github:trystan2k/zsh-tab-title";
       flake = false;
@@ -71,18 +73,18 @@
       url = "github:zshzoo/cd-ls";
       flake = false;
     };
-    fzf-tab = {
-      url = "github:Aloxaf/fzf-tab";
-      flake = false;
-    };
+    # fzf-tab = {
+    #   url = "github:Aloxaf/fzf-tab";
+    #   flake = false;
+    # };
     colorize = {
       url = "github:zpm-zsh/colorize";
       flake = false;
     };
-    fzf-finder = {
-      url = "github:leophys/zsh-plugin-fzf-finder";
-      flake = false;
-    };
+    # fzf-finder = {
+    #   url = "github:leophys/zsh-plugin-fzf-finder";
+    #   flake = false;
+    # };
     ## fish plugins
     fzf-fish = {
       url = "github:PatrickF1/fzf.fish";

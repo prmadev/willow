@@ -21,22 +21,6 @@
         "type": "github"
       }
     },
-    "ansible-zsh": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1539961847,
-        "narHash": "sha256-LxEBYJ7jadLyGgStbOc0y1k2Ho6/Qler3k9aFnc01Rg=",
-        "owner": "sparsick",
-        "repo": "ansible-zsh",
-        "rev": "21c52dbdc07416bf056007f3a69cb41acfd3b74a",
-        "type": "github"
-      },
-      "original": {
-        "owner": "sparsick",
-        "repo": "ansible-zsh",
-        "type": "github"
-      }
-    },
     "cd-ls": {
       "flake": false,
       "locked": {
@@ -267,22 +251,6 @@
         "type": "github"
       }
     },
-    "fzf-finder": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1654637615,
-        "narHash": "sha256-9r/8i677jm5+87qUPB4kP10fSbnzKCCpJzBgCMEYPYA=",
-        "owner": "leophys",
-        "repo": "zsh-plugin-fzf-finder",
-        "rev": "7d80b6b46d1a468839d7db91acd9ba5801a90e8f",
-        "type": "github"
-      },
-      "original": {
-        "owner": "leophys",
-        "repo": "zsh-plugin-fzf-finder",
-        "type": "github"
-      }
-    },
     "fzf-fish": {
       "flake": false,
       "locked": {
@@ -296,22 +264,6 @@
       "original": {
         "owner": "PatrickF1",
         "repo": "fzf.fish",
-        "type": "github"
-      }
-    },
-    "fzf-tab": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1660535318,
-        "narHash": "sha256-xP0IoCeyZyYU+iKUkIoIAMn75r6R3TJYhAKoQgC1dWg=",
-        "owner": "Aloxaf",
-        "repo": "fzf-tab",
-        "rev": "938eef72e93ddb0609205a663bf0783f4e1b5fae",
-        "type": "github"
-      },
-      "original": {
-        "owner": "Aloxaf",
-        "repo": "fzf-tab",
         "type": "github"
       }
     },
@@ -541,13 +493,10 @@
     },
     "root": {
       "inputs": {
-        "ansible-zsh": "ansible-zsh",
         "cd-ls": "cd-ls",
         "colorize": "colorize",
         "done-fish": "done-fish",
-        "fzf-finder": "fzf-finder",
         "fzf-fish": "fzf-fish",
-        "fzf-tab": "fzf-tab",
         "gomod2nix": "gomod2nix",
         "helix": "helix",
         "home-manager": "home-manager",

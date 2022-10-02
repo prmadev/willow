@@ -16,10 +16,10 @@ with lib; {
     programs.fish = {
       enable = true;
       plugins = [
-        {
-          name = "fzf-fish";
-          src = inputs.fzf-fish;
-        }
+        # {
+        #   name = "fzf-fish";
+        #   src = inputs.fzf-fish;
+        # }
         {
           name = "done-fish";
           src = inputs.done-fish;
@@ -37,7 +37,7 @@ with lib; {
       '';
     };
 
-    programs.fzf.enableFishIntegration = true;
+    programs.fzf.enableFishIntegration = mkIf config.fzf.enable true;
     programs.nix-index.enableFishIntegration = true;
     programs.starship.enableFishIntegration = true;
     programs.zoxide.enableFishIntegration = true;
