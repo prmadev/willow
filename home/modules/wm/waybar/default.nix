@@ -27,7 +27,7 @@ with lib; {
           modules-left = [
             "sway/mode"
             "sway/workspaces"
-            # "wlr/workspaces"
+            "wlr/workspaces"
             # "wlr/taskbar"
             # "river/mode"
             "river/tags"

@@ -5,6 +5,7 @@ alejandra -q .
 sudo nixos-rebuild switch --flake .#
 git add .
 git commit -m "auto: syncing"
+ 
 hyprctl reload
 make: Leaving directory '/home/a/dofi'
  

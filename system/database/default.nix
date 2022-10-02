@@ -13,7 +13,7 @@ with lib; {
     };
   };
   config = mkIf config.database.enable {
-    mongo.enable = true;
+    mongo.enable = false;
     environment.systemPackages = with pkgs; [
       pgcli
       python310Packages.keyring

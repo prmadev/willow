@@ -17,8 +17,7 @@
   services.pipewire.alsa.enable = true;
   services.pipewire.pulse.enable = true;
 
-  services.printing.enable = true;
-  services.printing.drivers = with pkgs; [hplipWithPlugin];
+  services.printing.enable = false;
 
   # System management
   services.dbus.enable = true;
@@ -30,13 +29,12 @@
   # services.xserver.videoDrivers = ["nvidia"];
   # hardware.nvidia.modesetting.enable = true;
   # trackpad and mouse
-  services.xserver.libinput.enable = false;
+  # services.xserver.libinput.enable = true;
   hardware.opengl.enable = true;
   # hardware.nvidia.enable = true;
   #hardware.nvidiaOptimus.disable = true;
   environment.systemPackages = with pkgs; [
     ntfs3g
     pciutils
-    system-config-printer
   ];
 }
