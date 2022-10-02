@@ -15,6 +15,6 @@ with lib; {
     home.packages = with pkgs; [
       clifm
     ];
-    fzf.enable = true;
+    fzf.enable = false;
   };
 }

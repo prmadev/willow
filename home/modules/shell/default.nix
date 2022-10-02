@@ -29,7 +29,7 @@ with lib; {
     bash.enable = true;
     doc.enable = true;
     fish.enable = true;
-    fzf.enable = true;
+    fzf.enable = false;
     nu.enable = true;
     pager.enable = true;
     prompt.enable = true;
