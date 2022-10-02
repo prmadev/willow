@@ -560,6 +560,7 @@
         "ragenix": "ragenix",
         "sponge-fish": "sponge-fish",
         "zellij": "zellij",
+        "zsh-skim": "zsh-skim",
         "zsh-tab-title": "zsh-tab-title",
         "zsh-terminal-title": "zsh-terminal-title",
         "zsh-windows-title": "zsh-windows-title"
@@ -747,6 +748,22 @@
       "original": {
         "owner": "zellij-org",
         "repo": "zellij",
+        "type": "github"
+      }
+    },
+    "zsh-skim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1621846313,
+        "narHash": "sha256-sQZMj6EwLfFOn1siDHkJDySl6sSnB6VTYmkp6wlXG2E=",
+        "owner": "hackerchai",
+        "repo": "skim-zsh",
+        "rev": "74a2021f9936781ab1f6d7633d67135dcdc132f8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hackerchai",
+        "repo": "skim-zsh",
         "type": "github"
       }
     },

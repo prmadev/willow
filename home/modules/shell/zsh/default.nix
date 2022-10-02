@@ -68,6 +68,10 @@ with lib; {
           src = inputs.zsh-tab-title;
           name = "zsh-tab-title";
         }
+        {
+          src = inputs.zsh-skim;
+          name = "zsh-skim";
+        }
       ];
     };
 

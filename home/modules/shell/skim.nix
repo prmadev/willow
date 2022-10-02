@@ -11,6 +11,6 @@ with lib; {
   };
   config = mkIf config.skim.enable {
     programs.skim.enable = true;
-    home.packages = with pkgs; [fd fzf];
+    home.packages = with pkgs; [fd];
   };
 }

@@ -18,7 +18,7 @@ with lib; {
       fzf.tmux.enableShellIntegration = mkIf config.tmux.enable true;
     };
     home.packages = with pkgs; [
-      fzf
+      # fzf
       skim
     ];
   };

@@ -58,6 +58,11 @@
       url = "github:AnimiVulpis/zsh-terminal-title";
       flake = false;
     };
+
+    zsh-skim = {
+      url = "github:hackerchai/skim-zsh";
+      flake = false;
+    };
     zsh-tab-title = {
       url = "github:trystan2k/zsh-tab-title";
       flake = false;
