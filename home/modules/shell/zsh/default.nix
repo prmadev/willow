@@ -23,6 +23,7 @@ with lib; {
       enableVteIntegration = true;
       localVariables = {
         DISABLE_CORRECTION = true;
+        SKIM_BASE = "${pkgs.skim}/bin/sk";
       };
 
       autocd = true;
