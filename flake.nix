@@ -73,18 +73,18 @@
       url = "github:zshzoo/cd-ls";
       flake = false;
     };
-    # fzf-tab = {
-    #   url = "github:Aloxaf/fzf-tab";
-    #   flake = false;
-    # };
+    fzf-tab = {
+      url = "github:Aloxaf/fzf-tab";
+      flake = false;
+    };
     colorize = {
       url = "github:zpm-zsh/colorize";
       flake = false;
     };
-    # fzf-finder = {
-    #   url = "github:leophys/zsh-plugin-fzf-finder";
-    #   flake = false;
-    # };
+    fzf-finder = {
+      url = "github:leophys/zsh-plugin-fzf-finder";
+      flake = false;
+    };
     ## fish plugins
     fzf-fish = {
       url = "github:PatrickF1/fzf.fish";

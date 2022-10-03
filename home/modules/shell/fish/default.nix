@@ -16,10 +16,10 @@ with lib; {
     programs.fish = {
       enable = true;
       plugins = [
-        # {
-        #   name = "fzf-fish";
-        #   src = inputs.fzf-fish;
-        # }
+        {
+          name = "fzf-fish";
+          src = inputs.fzf-fish;
+        }
         {
           name = "done-fish";
           src = inputs.done-fish;

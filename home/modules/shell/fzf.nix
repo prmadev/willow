@@ -13,12 +13,12 @@ with lib; {
   };
   config = mkIf config.fzf.enable {
     programs = {
-      fzf.enable = false;
+      fzf.enable = true;
       fzf.changeDirWidgetCommand = "fd --type d";
       fzf.tmux.enableShellIntegration = mkIf config.tmux.enable true;
     };
     home.packages = with pkgs; [
-      # fzf
+      fzf
       skim
     ];
   };
