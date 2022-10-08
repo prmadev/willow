@@ -16,6 +16,7 @@ with lib; {
       clash # for networking #TODO
       shadowsocks-rust
       proxychains-ng
+      chisel
       protonvpn-cli
     ];
 
