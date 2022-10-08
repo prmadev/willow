@@ -39,7 +39,7 @@ with lib; {
     neovim.enable = true;
     helix.enable = true;
     nixdev.enable = true;
-    goland.enable = true;
+    goland.enable = false;
     rust.enable = true;
     vscode.enable = true;
     zig.enable = true;
