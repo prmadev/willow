@@ -329,11 +329,11 @@
         "rust-overlay": "rust-overlay"
       },
       "locked": {
-        "lastModified": 1665071585,
-        "narHash": "sha256-bI46Y3/9f79Bhe+RMyQlxYeUcyOrM038LRTDW9I2Qlo=",
+        "lastModified": 1665166955,
+        "narHash": "sha256-frmk3iQaz2glrLxRg0z6vVH2czKeFa9XYMcwBgpZxrM=",
         "owner": "helix-editor",
         "repo": "helix",
-        "rev": "4d4be0e880efd136100439cc34e8c526d299ec34",
+        "rev": "18cfe864f44e9d97f11335b7db14e28c804ea794",
         "type": "github"
       },
       "original": {
@@ -350,11 +350,11 @@
         "utils": "utils_2"
       },
       "locked": {
-        "lastModified": 1665098471,
-        "narHash": "sha256-sNy1nfNg/p/q7JqsJtEOWbV3m5i5M89FzAJwbIn6W2Y=",
+        "lastModified": 1665119273,
+        "narHash": "sha256-neL/ZRrwk47Ke1nfjk8ltlIm+NRZyA3MBcNbqEGSBeE=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "be2cade373d96b469e5f4bb22c40cac87cf5a6f0",
+        "rev": "9fcae11ff29ca5f959b05c206f3724486c28ff07",
         "type": "github"
       },
       "original": {
@@ -371,11 +371,11 @@
         "wlroots": "wlroots"
       },
       "locked": {
-        "lastModified": 1665090550,
-        "narHash": "sha256-f5K1N8Fwi+FlU7Kt/p0J+eQILwL/fT3bLOlrj9N4CwQ=",
+        "lastModified": 1665177900,
+        "narHash": "sha256-KP+RgRkxnhZVRbSLitM8POjwU5/j05/kmqxhm73jBZM=",
         "owner": "hyprwm",
         "repo": "hyprland",
-        "rev": "28a6e0ce3178527e54070fb3ee19d90239110bf7",
+        "rev": "1964bcb13f770b8344510549aa9924fe908bac60",
         "type": "github"
       },
       "original": {
@@ -487,11 +487,11 @@
     },
     "nur": {
       "locked": {
-        "lastModified": 1665117953,
-        "narHash": "sha256-MXriPf4RzgzK2YD8rPBcdPFvA590vc/blc+MyR0WScU=",
+        "lastModified": 1665203337,
+        "narHash": "sha256-qXrddhuI8M3gCQFLMfADbDwmxHf7tJVj434+Ncxjx/o=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "8a65f2abdd17428b989ad04a4ad0ef8ef5822e0a",
+        "rev": "91bc5dcf2f2fedab1d3f5e975fed493e12e352db",
         "type": "github"
       },
       "original": {
@@ -721,11 +721,11 @@
         "rust-overlay": "rust-overlay_4"
       },
       "locked": {
-        "lastModified": 1665039287,
-        "narHash": "sha256-O1NkG2q2Q3NPZ8QfGt+Lj9ZIKGUZ/bEm+cgEvM/2Pts=",
+        "lastModified": 1665136808,
+        "narHash": "sha256-OMTBx6YvYB/o0OrmFITXeb8WCtXInn3xERa64xQzKrE=",
         "owner": "zellij-org",
         "repo": "zellij",
-        "rev": "bc04983f060132bdc107ea2326411d329ee7dc6b",
+        "rev": "cb926119bc5e180c78f2f754bc61532645c3b5b4",
         "type": "github"
       },
       "original": {
