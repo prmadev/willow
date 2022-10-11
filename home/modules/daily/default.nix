@@ -37,7 +37,8 @@ with lib; {
     home.packages = with pkgs; [
       calibre
       zola
-      jira-cli-go
+      appimage-run
+      tailscale
     ];
   };
 }

@@ -32,5 +32,8 @@ with lib; {
 
     xsession.windowManager.awesome.enable = true;
     picom.enable = true;
+    home.packages = with pkgs; [
+      # xorg.xorgserver
+    ];
   };
 }
