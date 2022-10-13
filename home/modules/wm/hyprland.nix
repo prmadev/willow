@@ -150,7 +150,22 @@ with lib; {
       '';
     };
     home.packages = with pkgs; [
+      meson
       hyprpaper
+      ninja
+      scdoc
+      pkg-config
+      wrapGAppsHook
+      wayland
+      wlroots
+      gtkmm3
+      libsigcxx
+      jsoncpp
+      spdlog
+      gtk-layer-shell
+      howard-hinnant-date
+      libxkbcommon
+      gobject-introspection
     ];
     home.file = {
       ".config/hypr/hyprpaper.conf" = {
