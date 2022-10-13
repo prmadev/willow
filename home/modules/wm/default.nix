@@ -27,7 +27,7 @@ with lib; {
     launcher.enable = true;
     wm.river.enable = true;
     eww.enable = false;
-    hyprland.enable = true;
+    hyprland.enable = false;
     sway.enable = true;
 
     xsession.windowManager.awesome.enable = true;
