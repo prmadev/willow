@@ -1,8 +1,4 @@
-{
-  config,
-  pkgs,
-  ...
-}: {
+{...}: {
   # I don't want any stinky display manager :D
   # services.xserver.desktopManager.gnome.enable = true;
   services.xserver.displayManager.gdm.enable = false;

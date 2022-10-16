@@ -1,9 +1,4 @@
-{
-  pkgs,
-  lib,
-  config,
-  ...
-}:
+{lib, ...}:
 with lib; {
   options = {
     cat.mocha.rosewater.hex = mkOption {

@@ -1,9 +1,4 @@
-{
-  pkgs,
-  lib,
-  config,
-  ...
-}:
+{lib, ...}:
 with lib; {
   options = {
     colors.rose.hex = mkOption {

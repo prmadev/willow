@@ -2,7 +2,6 @@
   pkgs,
   lib,
   config,
-  inputs,
   ...
 }:
 with lib; {
@@ -24,6 +23,7 @@ with lib; {
       pkgs.nix-template
       pkgs.manix
       pkgs.rnix-lsp
+      pkgs.deadnix
     ];
 
     programs.nix-index.enable = true;

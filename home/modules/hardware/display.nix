@@ -1,5 +1,4 @@
 {
-  pkgs,
   lib,
   config,
   ...
@@ -12,6 +11,5 @@ with lib; {
     };
   };
   config =
-    mkIf config.display.enable {
-    };
+    mkIf config.display.enable {};
 }

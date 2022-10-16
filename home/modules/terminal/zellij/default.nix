@@ -2,14 +2,12 @@
   pkgs,
   config,
   lib,
-  inputs,
   ...
 }:
 with lib; {
   options = {
     zellij.enable =
-      mkOption {
-      };
+      mkOption {};
   };
   config = mkIf config.zellij.enable {
     programs.zellij = {

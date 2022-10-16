@@ -2,9 +2,8 @@
   pkgs,
   lib,
   config,
-  inputs,
   ...
-} @ args:
+}:
 with lib; {
   options = {
     efm.enable = mkOption {

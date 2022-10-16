@@ -106,18 +106,17 @@
   };
 
   outputs = {
-    self,
     nixpkgs,
     home-manager,
     ...
   } @ inputs: let
     system = "x86_64-linux";
-    pkgs = import nixpkgs {
-      inherit system;
-      config.allowUnfree = true;
-      overlays = [
-      ];
-    };
+    # pkgs = import nixpkgs {
+    #   inherit system;
+    #   config.allowUnfree = true;
+    #   overlays = [
+    #   ];
+    # };
     lib = nixpkgs.lib;
   in
     with inputs; {
