@@ -35,7 +35,7 @@ with lib; {
     newsboat.enable = true;
     syncthing.enable = true;
     home.packages = with pkgs; [
-      calibre
+      # calibre
       zola
       appimage-run
       tailscale
