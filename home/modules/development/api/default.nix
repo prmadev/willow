@@ -13,7 +13,7 @@ with lib; {
   };
   config = mkIf config.api.enable {
     home.packages = with pkgs; [
-      postman
+      # postman
       # insomnia
       # appimage-run # for navicat
       xh

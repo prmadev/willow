@@ -1,13 +1,12 @@
-{
-  lib,
-  config,
-  ...
+{ lib
+, config
+, ...
 }:
 with lib; {
   imports = [
     ./firefox
-    ./qutebrowser
-    ./chromium
+    # ./qutebrowser
+    # ./chromium
   ];
   options = {
     browser.enable = mkOption {
@@ -15,10 +14,10 @@ with lib; {
       default = false;
     };
   };
-  config = {
-    browser.firefox.enable = mkIf config.browser.enable true;
-    browser.qutebrowser.enable = mkIf config.browser.enable true;
-    home.file = mkIf config.browser.enable {
+  config = mkIf config.browser.enable {
+    browser.firefox.enable = false;
+    # browser.qutebrowser.enable = false;
+    home.file = {
       ".config/startpage/" = {
         source = ./startpage;
         recursive = true;

@@ -10,6 +10,7 @@ sync:
 update:
 	alejandra -q .
 	git add . 
+	export NIX_CURL_FLAGS=""
 	sudo nix flake update
 	git add .
 	git commit -m "auto: update"
@@ -19,6 +20,7 @@ upgrade:
 	git commit --amend -m "commit before upgrade"
 	alejandra -q .
 	git add . 
+	export NIX_CURL_FLAGS=""
 	sudo nix flake update
 	sudo nixos-rebuild switch --flake .#
 	git add .
@@ -28,6 +30,7 @@ upgrade:
 boot-update:
 	alejandra -q .
 	git add .
+	export NIX_CURL_FLAGS=""
 	sudo nixos-rebuild boot --flake .# 
 	git add .
 	git commit -m "auto: boot-update"
