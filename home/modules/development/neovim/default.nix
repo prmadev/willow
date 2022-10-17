@@ -18,6 +18,7 @@ with lib; {
       sumneko-lua-language-server
       python310Packages.pip
       neovide
+      plocate
     ];
   };
 }
