@@ -25,6 +25,9 @@ with lib; {
       h = "hx";
       b = "bg";
       zl = "zellij a -c $(basename $(pwd))";
+      nv = "neovide";
+      n = "neovide";
+      np = "proxychains4 neovide";
     };
   };
 }
