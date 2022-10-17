@@ -18,6 +18,10 @@ with lib; {
       proxychains-ng
       chisel
       protonvpn-cli
+      v2ray
+      v2ray-geoip
+      qv2ray
+      shadowsocks-v2ray-plugin
     ];
 
     home.file = {

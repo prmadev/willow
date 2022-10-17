@@ -19,7 +19,7 @@
   };
 
   environment.variables = {
-    NIX_CURL_FLAGS = "-x socks://127.0.0.1:9050/";
+    NIX_CURL_FLAGS = "";
   };
   services.openssh.enable = true;
 

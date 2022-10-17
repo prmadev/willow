@@ -1,7 +1,7 @@
 sync:
 	git add . 
 	alejandra -q .
-	export NIX_CURL_FLAGS=""
+	export NIX_CURL_FLAGS="-x 127.0.0.1:1080"
 	sudo nixos-rebuild switch --flake .#
 	git add .
 	git commit -m "auto: syncing"
