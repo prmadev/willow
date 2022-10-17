@@ -17,6 +17,7 @@ with lib; {
       luarocks
       sumneko-lua-language-server
       python310Packages.pip
+      neovide
     ];
   };
 }
