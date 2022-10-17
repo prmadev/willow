@@ -1,6 +1,7 @@
 {
   lib,
   config,
+  pkgs,
   ...
 }:
 with lib; {
@@ -19,5 +20,8 @@ with lib; {
     download.enable = true;
     proxy.enable = true;
     ssh.enable = true;
+    home.packages = with pkgs; [
+      dig.dnsutils
+    ];
   };
 }
