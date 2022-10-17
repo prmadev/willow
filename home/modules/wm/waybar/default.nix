@@ -212,7 +212,7 @@ with lib; {
         	border-radius: 5px;
         	font-weight: bold;
         	color: ${config.colors.base.hex};
-        	background: ${config.colors.foam.hex};
+        	background: ${config.colors.rose.hex};
         }
 
         #tags button.focused {
