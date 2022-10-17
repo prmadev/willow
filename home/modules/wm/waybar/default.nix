@@ -205,15 +205,11 @@ with lib; {
         	margin-right: 5px;
         	margin-left: 5px;
         	color: transparent;
-        	/* border: 0px solid transparent; */
-        	/* border-top: 3px solid #f6c177; */
-        	/* border-left: 3px solid #f6c177; */
-        	/* border-bottom: 2px solid #f6c177; */
         	background: ${config.colors.surface.hex};
         }
 
         #tags button.occupied {
-        	border-radius: 0px;
+        	border-radius: 5px;
         	font-weight: bold;
         	color: ${config.colors.base.hex};
         	background: ${config.colors.foam.hex};
@@ -222,12 +218,12 @@ with lib; {
         #tags button.focused {
         	font-weight: 900;
         	color: ${config.colors.base.hex};
-        	background: ${config.colors.rose.hex};
+        	background: ${config.colors.love.hex};
         }
 
         #tags button.urgent {
         	color: ${config.colors.base.hex};
-        	background-color: ${config.colors.love.hex};
+        	background-color: ${config.colors.gold.hex};
         	border-radius: 0px;
         }
 
@@ -383,179 +379,6 @@ with lib; {
         	color: ${config.colors.gold.hex};
                     border-radius: 5px;
 
-        }
-
-        #custom-hyprgows1 {
-          color: ${config.colors.base.hex};
-          background: ${config.colors.base.hex};
-          padding: 0px 5px;
-        	margin-right: 5px;
-          margin-top: 5px;
-        	margin-left: 5px;
-                    border-radius: 5px;
-
-        }
-
-        #custom-hyprgows2 {
-          color: ${config.colors.base.hex};
-          background: ${config.colors.base.hex};
-          padding: 0px 5px;
-        	margin-right: 5px;
-                    margin-top: 5px;
-          border-radius: 5px;
-
-        	margin-left: 5px;
-        }
-
-        #custom-hyprgows3 {
-          color: ${config.colors.base.hex};
-          background: ${config.colors.base.hex};
-          padding: 0px 5px;
-        	margin-right: 5px;
-        	margin-left: 5px;
-                    margin-top: 5px;
-          border-radius: 5px;
-
-        }
-
-        #custom-hyprgows4 {
-          color: ${config.colors.base.hex};
-          background: ${config.colors.base.hex};
-          padding: 0px 5px;
-        	margin-right: 5px;
-        	margin-left: 5px;
-                    margin-top: 5px;
-          border-radius: 5px;
-
-        }
-        #custom-hyprgows5 {
-          color: ${config.colors.base.hex};
-          background: ${config.colors.base.hex};
-          padding: 0px 5px;
-        	margin-right: 5px;
-        	margin-left: 5px;
-                    margin-top: 5px;
-          border-radius: 5px;
-
-        }
-
-        #custom-hyprgows6 {
-          color: ${config.colors.base.hex};
-          background: ${config.colors.base.hex};
-          padding: 0px 5px;
-        	margin-right: 5px;
-        	margin-left: 5px;
-                    margin-top: 5px;
-                              border-radius: 5px;
-
-
-        }
-
-          #custom-hyprgows7 {
-          color: ${config.colors.base.hex};
-          background: ${config.colors.base.hex};
-          padding: 0px 5px;
-        	margin-right: 5px;
-        	margin-left: 5px;
-                    margin-top: 5px;
-                              border-radius: 5px;
-
-
-        }
-
-        #custom-hyprgows8 {
-          color: ${config.colors.base.hex};
-          background: ${config.colors.base.hex};
-          padding: 0px 5px;
-        	margin-right: 5px;
-        	margin-left: 5px;
-          margin-top: 5px;
-          border-radius: 5px;
-
-        }
-
-        #custom-hyprgows9 {
-          color: ${config.colors.base.hex};
-          background: ${config.colors.base.hex};
-          padding: 0px 5px;
-        	margin-right: 5px;
-        	margin-left: 5px;
-          margin-top: 5px;
-                    border-radius: 5px;
-
-        }
-        #custom-hyprgows1.occupied {
-          color: ${config.colors.base.hex};
-          background: ${config.colors.foam.hex};
-        }
-         #custom-hyprgows2.occupied {
-          color: ${config.colors.base.hex};
-          background: ${config.colors.foam.hex};
-        }
-                 #custom-hyprgows3.occupied {
-          color: ${config.colors.base.hex};
-          background: ${config.colors.foam.hex};
-        }
-         #custom-hyprgows4.occupied {
-          color: ${config.colors.base.hex};
-          background: ${config.colors.foam.hex};
-        }
-         #custom-hyprgows5.occupied {
-          color: ${config.colors.base.hex};
-          background: ${config.colors.foam.hex};
-        }
-         #custom-hyprgows6.occupied {
-          color: ${config.colors.base.hex};
-          background: ${config.colors.foam.hex};
-        }
-         #custom-hyprgows7.occupied {
-          color: ${config.colors.base.hex};
-          background: ${config.colors.foam.hex};
-        }
-         #custom-hyprgows8.occupied {
-          color: ${config.colors.base.hex};
-          background: ${config.colors.foam.hex};
-        }
-         #custom-hyprgows9.occupied {
-          color: ${config.colors.base.hex};
-          background: ${config.colors.foam.hex};
-        }
-
-                #custom-hyprgows1.active {
-          color: ${config.colors.base.hex};
-          background: ${config.colors.love.hex};
-        }
-         #custom-hyprgows2.active {
-          color: ${config.colors.base.hex};
-          background: ${config.colors.love.hex};
-        }
-                 #custom-hyprgows3.active {
-          color: ${config.colors.base.hex};
-          background: ${config.colors.love.hex};
-        }
-         #custom-hyprgows4.active {
-          color: ${config.colors.base.hex};
-          background: ${config.colors.love.hex};
-        }
-         #custom-hyprgows5.active {
-          color: ${config.colors.base.hex};
-          background: ${config.colors.love.hex};
-        }
-         #custom-hyprgows6.active {
-          color: ${config.colors.base.hex};
-          background: ${config.colors.love.hex};
-        }
-         #custom-hyprgows7.active {
-          color: ${config.colors.base.hex};
-          background: ${config.colors.love.hex};
-        }
-         #custom-hyprgows8.active {
-          color: ${config.colors.base.hex};
-          background: ${config.colors.love.hex};
-        }
-         #custom-hyprgows9.active {
-          color: ${config.colors.base.hex};
-          background: ${config.colors.love.hex};
         }
 
       '';
