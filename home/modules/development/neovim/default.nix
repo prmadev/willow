@@ -20,5 +20,8 @@ with lib; {
       neovide
       plocate
     ];
+    home.sessionVariables = {
+      NEOVIDE_MULTIGRID = true;
+    };
   };
 }
