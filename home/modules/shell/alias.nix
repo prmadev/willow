@@ -27,7 +27,8 @@ with lib; {
       zl = "zellij a -c $(basename $(pwd))";
       nv = "neovide";
       n = "neovide";
-      np = "proxychains4 neovide";
+      np = "proxychains4 -q neovide";
+      pc = "proxychains4 -q";
     };
   };
 }
