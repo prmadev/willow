@@ -41,7 +41,7 @@ with lib; {
     nixdev.enable = true;
     goland.enable = false;
     rust.enable = true;
-    vscode.enable = false;
+    vscode.enable = true;
     zig.enable = true;
     efm.enable = true;
 

@@ -24,6 +24,7 @@ with lib; {
       pkgs.manix
       pkgs.rnix-lsp
       pkgs.deadnix
+      pkgs.patchelf
     ];
 
     programs.nix-index.enable = true;
