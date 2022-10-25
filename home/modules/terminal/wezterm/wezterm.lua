@@ -31,8 +31,7 @@ return {
 		{
 			intensity = 'Bold',
 			font = Font_with_fallback(
-				'Operator Mono SSm Nerd Lig Bold',
-				{ foreground = 'tomato' }
+				'Operator Mono SSm Nerd Lig Bold'
 			),
 		},
 
