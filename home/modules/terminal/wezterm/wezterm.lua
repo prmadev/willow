@@ -34,8 +34,7 @@ return {
 			italic = true,
 			intensity = 'Bold',
 			{
-				family = 'Operator Mono SSm Nerd Lig',
-				weight = 'Regular',
+				family = 'Operator Mono SSm Nerd Lig Bold ',
 				style = 'Italic',
 			},
 		},
@@ -45,7 +44,6 @@ return {
 			intensity = 'Bold',
 			{
 				family = 'Operator Mono SSm Nerd Lig',
-				weight = 325,
 				style = "Normal",
 			},
 		},
@@ -55,7 +53,6 @@ return {
 			intensity = 'Half',
 			{
 				family = 'Operator Mono SSm Nerd Lig',
-				weight = 325,
 				style = "Normal",
 			},
 		},
