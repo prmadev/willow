@@ -1,6 +1,7 @@
 {
   lib,
   config,
+  pkgs,
   ...
 }:
 with lib; {
@@ -24,5 +25,9 @@ with lib; {
         recursive = true;
       };
     };
+    home.packages = with pkgs; [
+      lynx
+      w3m
+    ];
   };
 }

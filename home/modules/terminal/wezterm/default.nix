@@ -12,9 +12,13 @@ with lib; {
     };
   };
   config = mkIf config.wezterm.enable {
-    home.packages = with pkgs; [
-      wezterm
-    ];
-    #TODO configure it.
+    programs.wezterm = {
+      enable = true;
+      extraConfig = ''
+        return {
+        color_scheme = "Rosé Pine (base16)",
+         }
+      '';
+    };
   };
 }
