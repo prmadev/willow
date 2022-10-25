@@ -33,4 +33,12 @@ return {
 		WSLENV = 'TERMINFO_DIRS',
 	},
 	term = "wezterm",
+	window_background_gradient = {
+		orientation = "vertical",
+		colors = {
+			"#191724",
+			"#1f1d2e"
+		}
+
+	},
 }
