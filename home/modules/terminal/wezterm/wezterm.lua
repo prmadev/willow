@@ -21,9 +21,9 @@ return {
 			italic = true,
 			font = wezterm.font_with_fallback {
 				{
-					family = 'Operator Mono SSm Nerd Lig Book',
+					family = 'Operator Mono SSm Nerd Lig',
 					weight = 325,
-					style = "Normal",
+					style = "Italic",
 				},
 
 			},
@@ -36,7 +36,7 @@ return {
 			font = wezterm.font_with_fallback {
 				{
 					family = 'Operator Mono SSm Nerd Lig',
-					weight = 325,
+					weight = "Regular",
 					style = "Italic",
 				},
 			},
@@ -48,7 +48,7 @@ return {
 			font = wezterm.font_with_fallback {
 				{
 					family = 'Operator Mono SSm Nerd Lig',
-					weight = 325,
+					weight = "Regular",
 					style = "Normal",
 				},
 			},
@@ -60,7 +60,7 @@ return {
 			font = wezterm.font_with_fallback {
 				{
 					family = 'Operator Mono SSm Nerd Lig',
-					weight = 325,
+					weight = "Light",
 					style = "Normal",
 				},
 			},
