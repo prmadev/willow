@@ -10,7 +10,7 @@ return {
 	},
 	font_rules = {
 		intensity = "Bold",
-		font = wezterm.font("monospace", { weight = "Normal", },)
+		font = wezterm.font("monospace", { weight = "Normal", }),
 
 	}
 
