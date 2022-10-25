@@ -34,7 +34,7 @@ return {
 	},
 	term = "wezterm",
 	window_background_gradient = {
-		orientation = "Vertical",
+		orientation = { Linear = { angle = 45.0 } },
 		colors = {
 			"#191724",
 			"#1f1d2e"
