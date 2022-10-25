@@ -22,6 +22,7 @@ return {
 		}
 
 	},
+	default_cursor_style = 'BlinkingBlock',
 	cursor_blink_rate = 800,
 	cursor_blink_ease_in = "Ease"
 }
