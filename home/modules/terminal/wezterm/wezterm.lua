@@ -19,28 +19,45 @@ return {
 		-- Select a fancy italic font for italic text
 		{
 			italic = true,
-			font = wezterm.font_with_fallback { 'Operator Mono SSm Nerd Lig Medium Italic' },
+			font = wezterm.font_with_fallback {
+				{
+					family = 'Operator Mono SSm Nerd Lig Book',
+					weight = 325,
+					style = "Normal",
+				},
+
+			},
 		},
 
 		-- Similarly, a fancy bold+italic font
 		{
 			italic = true,
 			intensity = 'Bold',
-			font = wezterm.font_with_fallback { 'Operator Mono SSm Nerd Lig Book Italic' },
+			{
+				family = 'Operator Mono SSm Nerd Lig',
+				weight = "regular",
+				style = "Italic",
+			},
 		},
 
 		-- Make regular bold text a different color to make it stand out even more
 		{
 			intensity = 'Bold',
-			font = wezterm.font_with_fallback {
-				'Operator Mono SSm Nerd Lig Bold'
+			{
+				family = 'Operator Mono SSm Nerd Lig',
+				weight = 325,
+				style = "Normal",
 			},
 		},
 
 		-- For half-intensity text, use a lighter weight font
 		{
 			intensity = 'Half',
-			font = wezterm.font_with_fallback { 'Operator Mono SSm Nerd Lig Light' },
+			{
+				family = 'Operator Mono SSm Nerd Lig',
+				weight = 325,
+				style = "Normal",
+			},
 		},
 	},
 
