@@ -7,7 +7,14 @@ return {
 	hide_tab_bar_if_only_one_tab = true,
 	default_prog = { "zsh", },
 
-	font = wezterm.font_with_fallback { 'Operator Mono SSm Nerd Lig Book' },
+	font = wezterm.font_with_fallback {
+		'Operator Mono SSm Nerd Lig Book',
+		{
+			weight = 325,
+			style = "Normal"
+		}
+
+	},
 	font_rules = {
 		-- Select a fancy italic font for italic text
 		{
