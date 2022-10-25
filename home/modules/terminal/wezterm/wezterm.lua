@@ -17,21 +17,21 @@ return {
 		-- Select a fancy italic font for italic text
 		{
 			italic = true,
-			font = Font_with_fallback 'Operator Mono SSm Lig Medium Italic',
+			font = Font_with_fallback 'Operator Mono SSm Nerd Lig Medium Italic',
 		},
 
 		-- Similarly, a fancy bold+italic font
 		{
 			italic = true,
 			intensity = 'Bold',
-			font = Font_with_fallback 'Operator Mono SSm Lig Book Italic',
+			font = Font_with_fallback 'Operator Mono SSm Nerd Lig Book Italic',
 		},
 
 		-- Make regular bold text a different color to make it stand out even more
 		{
 			intensity = 'Bold',
 			font = Font_with_fallback(
-				'Operator Mono SSm Lig Bold',
+				'Operator Mono SSm Nerd Lig Bold',
 				{ foreground = 'tomato' }
 			),
 		},
@@ -39,7 +39,7 @@ return {
 		-- For half-intensity text, use a lighter weight font
 		{
 			intensity = 'Half',
-			font = Font_with_fallback 'Operator Mono SSm Lig Light',
+			font = Font_with_fallback 'Operator Mono SSm Nerd Lig Light',
 		},
 	},
 
