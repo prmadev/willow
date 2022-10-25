@@ -36,7 +36,7 @@ return {
 			font = wezterm.font_with_fallback {
 				{
 					family = 'Operator Mono SSm Nerd Lig',
-					weight = "Regular",
+					weight = "DemiLight",
 					style = "Italic",
 				},
 			},
@@ -48,7 +48,7 @@ return {
 			font = wezterm.font_with_fallback {
 				{
 					family = 'Operator Mono SSm Nerd Lig',
-					weight = "Regular",
+					weight = "DemiLight",
 					style = "Normal",
 				},
 			},
