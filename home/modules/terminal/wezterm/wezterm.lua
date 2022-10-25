@@ -29,7 +29,7 @@ return {
 
 	exit_behavior = 'CloseOnCleanExit',
 	set_environment_variables = {
-		TERMINFO_DIRS = '/home/user/.nix-profile/share/terminfo',
+		TERMINFO_DIRS = '~/terminfo',
 		WSLENV = 'TERMINFO_DIRS',
 	},
 	term = "wezterm",
