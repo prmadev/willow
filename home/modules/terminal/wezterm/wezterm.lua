@@ -8,10 +8,10 @@ return {
 	default_prog = { "zsh", },
 
 	font = wezterm.font_with_fallback {
-		'Operator Mono SSm Nerd Lig Book',
 		{
+			family = 'Operator Mono SSm Nerd Lig Book',
 			weight = 325,
-			style = "Normal"
+			style = "Normal",
 		}
 
 	},
