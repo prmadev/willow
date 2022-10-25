@@ -35,8 +35,8 @@ return {
 			intensity = 'Bold',
 			{
 				family = 'Operator Mono SSm Nerd Lig',
-				weight = "regular",
-				style = "Italic",
+				weight = 'Regular',
+				style = 'Italic',
 			},
 		},
 
