@@ -8,6 +8,11 @@ return {
 		'monospace',
 		'JetBrainsMono Nerd Font Mono'
 	},
+	font_rules = {
+		intensity = "Bold",
+		font = wezterm.font("monospace", { weight = "Normal", },)
+
+	}
 
 
 }
