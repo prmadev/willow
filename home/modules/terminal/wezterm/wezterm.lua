@@ -28,4 +28,9 @@ return {
 	animation_fps = 60,
 
 	exit_behavior = 'CloseOnCleanExit',
+	set_environment_variables = {
+		TERMINFO_DIRS = '/home/user/.nix-profile/share/terminfo',
+		WSLENV = 'TERMINFO_DIRS',
+	},
+	term = "wezterm",
 }
