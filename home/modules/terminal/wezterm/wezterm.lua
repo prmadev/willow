@@ -4,7 +4,7 @@ return {
 	hide_tab_bar_if_only_one_tab = true,
 	default_prog = { "zsh", },
 
-	font = wezterm.font_with_falbask {
+	font = wezterm.font_with_fallback {
 		'monospace',
 		'JetBrainsMono Nerd Font Mono'
 	},
