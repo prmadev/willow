@@ -12,7 +12,7 @@ return {
 	hide_tab_bar_if_only_one_tab = true,
 	default_prog = { "zsh", },
 
-	font = Font_with_fallback 'Operator Mono SSm Nerd Lig Book',
+	font = Font_with_fallback { 'Operator Mono SSm Nerd Lig Book' },
 	font_rules = {
 		-- Select a fancy italic font for italic text
 		{
