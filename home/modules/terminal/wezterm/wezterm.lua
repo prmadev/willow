@@ -28,31 +28,40 @@ return {
 
 			},
 		},
+	},
 
-		-- Similarly, a fancy bold+italic font
-		{
-			italic = true,
-			intensity = 'Bold',
-			{
-				family = 'Operator Mono SSm Nerd Lig Bold ',
-				style = 'Italic',
-			},
-		},
-
-		-- Make regular bold text a different color to make it stand out even more
-		{
-			intensity = 'Bold',
+	-- Similarly, a fancy bold+italic font
+	{
+		italic = true,
+		intensity = 'Bold',
+		font = wezterm.font_with_fallback {
 			{
 				family = 'Operator Mono SSm Nerd Lig',
+				weight = 325,
+				style = "Italic",
+			},
+		},
+	},
+
+	-- Make regular bold text a different color to make it stand out even more
+	{
+		intensity = 'Bold',
+		font = wezterm.font_with_fallback {
+			{
+				family = 'Operator Mono SSm Nerd Lig',
+				weight = 325,
 				style = "Normal",
 			},
 		},
+	},
 
-		-- For half-intensity text, use a lighter weight font
-		{
-			intensity = 'Half',
+	-- For half-intensity text, use a lighter weight font
+	{
+		intensity = 'Half',
+		font = wezterm.font_with_fallback {
 			{
 				family = 'Operator Mono SSm Nerd Lig',
+				weight = 325,
 				style = "Normal",
 			},
 		},
