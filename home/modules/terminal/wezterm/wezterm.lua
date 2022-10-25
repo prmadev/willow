@@ -9,58 +9,60 @@ return {
 
 	font = wezterm.font_with_fallback {
 		{
-			family = 'Operator Mono SSm Nerd Lig Book',
-			weight = 325,
-			style = "Normal",
+			family = 'Gintronic Nerd Font',
+		},
+
+		{
+			family = 'Gintronic',
 		}
 
 	},
-	font_rules = {
-		-- Select a fancy italic font for italic text
-		{
-			italic = true,
-			font = wezterm.font_with_fallback {
-				{
-					family = 'Operator Mono SSm Nerd Lig Italic',
-					style = "Italic",
-				},
-
-			},
-		},
-
-		-- Similarly, a fancy bold+italic font
-		{
-			italic = true,
-			intensity = 'Bold',
-			font = wezterm.font_with_fallback {
-				{
-					family = 'Operator Mono SSm Nerd Lig Medium',
-					style = "Italic",
-				},
-			},
-		},
-
-		-- Make regular bold text a different color to make it stand out even more
-		{
-			intensity = 'Bold',
-			font = wezterm.font_with_fallback {
-				{
-					family = 'Operator Mono SSm Nerd Lig Medium',
-					style = "Normal",
-				},
-			},
-		},
-
-		-- For half-intensity text, use a lighter weight font
-		{
-			intensity = 'Half',
-			font = wezterm.font_with_fallback {
-				{
-					family = 'Operator Mono SSm Nerd Lig',
-					weight = "Light",
-					style = "Normal",
-				},
-			},
-		},
-	}
+	--[[ font_rules = { ]]
+	--[[ 	-- Select a fancy italic font for italic text ]]
+	--[[ 	{ ]]
+	--[[ 		italic = true, ]]
+	--[[ 		font = wezterm.font_with_fallback { ]]
+	--[[ 			{ ]]
+	--[[ 				family = 'Operator Mono SSm Nerd Lig Italic', ]]
+	--[[ 				style = "Italic", ]]
+	--[[ 			}, ]]
+	--[[]]
+	--[[ 		}, ]]
+	--[[ 	}, ]]
+	--[[]]
+	--[[ 	-- Similarly, a fancy bold+italic font ]]
+	--[[ 	{ ]]
+	--[[ 		italic = true, ]]
+	--[[ 		intensity = 'Bold', ]]
+	--[[ 		font = wezterm.font_with_fallback { ]]
+	--[[ 			{ ]]
+	--[[ 				family = 'Operator Mono SSm Nerd Lig Medium', ]]
+	--[[ 				style = "Italic", ]]
+	--[[ 			}, ]]
+	--[[ 		}, ]]
+	--[[ 	}, ]]
+	--[[]]
+	--[[ 	-- Make regular bold text a different color to make it stand out even more ]]
+	--[[ 	{ ]]
+	--[[ 		intensity = 'Bold', ]]
+	--[[ 		font = wezterm.font_with_fallback { ]]
+	--[[ 			{ ]]
+	--[[ 				family = 'Operator Mono SSm Nerd Lig Medium', ]]
+	--[[ 				style = "Normal", ]]
+	--[[ 			}, ]]
+	--[[ 		}, ]]
+	--[[ 	}, ]]
+	--[[]]
+	--[[ 	-- For half-intensity text, use a lighter weight font ]]
+	--[[ 	{ ]]
+	--[[ 		intensity = 'Half', ]]
+	--[[ 		font = wezterm.font_with_fallback { ]]
+	--[[ 			{ ]]
+	--[[ 				family = 'Operator Mono SSm Nerd Lig', ]]
+	--[[ 				weight = "Light", ]]
+	--[[ 				style = "Normal", ]]
+	--[[ 			}, ]]
+	--[[ 		}, ]]
+	--[[ 	}, ]]
+	--[[ } ]]
 }
