@@ -8,6 +8,11 @@ return {
 	default_prog = { "zsh" },
 
 	font = wezterm.font_with_fallback {
+
+		{
+			family = 'JetbrainsMono Nerd Font',
+		},
+
 		{
 			family = 'Gintronic Nerd Font',
 		},
