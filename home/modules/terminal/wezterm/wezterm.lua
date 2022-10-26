@@ -8,10 +8,10 @@ return {
 	default_prog = { "zsh" },
 
 	font = wezterm.font_with_fallback {
-		{
-			family = 'Comic Code',
-		},
-
+		--[[ { ]]
+		--[[ 	family = 'Comic Code', ]]
+		--[[ }, ]]
+		--[[]]
 		{
 			family = 'JetbrainsMono Nerd Font',
 		},
@@ -24,6 +24,19 @@ return {
 			family = 'Gintronic',
 		}
 
+	},
+	font_rules = {
+		{
+			italic = true,
+			-- intensity = "Normal",
+			font = wezterm.font('Comic Code', { italic = false }),
+		},
+
+		{
+			italic = true,
+			intensity = "Bold",
+			font = wezterm.font('Comic Code', { italic = false, bold = true, }),
+		},
 	},
 	default_cursor_style = 'BlinkingBlock',
 	cursor_blink_rate = 800,
