@@ -9,11 +9,11 @@ return {
 
 	font = wezterm.font_with_fallback {
 		{
-			family = 'ComicCodeLigature Nerd Font',
+			family = 'ComicCodeLigatures Nerd Font',
 		},
 
 		{
-			family = 'Comic Code Ligature',
+			family = 'Comic Code Ligatures',
 		},
 		{
 			family = 'JetbrainsMono Nerd Font',
@@ -29,6 +29,16 @@ return {
 
 	},
 	font_rules = {
+{
+      italic = true,
+      intensity = 'Bold',
+      font =   wezterm.font_with_fallback {
+		{
+			family = 'ComicCodeLigatures Nerd Font',
+			weigth= "Bold",
+			style = "Italic",
+		},
+    },
 	},
 	default_cursor_style = 'BlinkingBlock',
 	cursor_blink_rate = 800,
