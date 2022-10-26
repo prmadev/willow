@@ -29,16 +29,18 @@ return {
 
 	},
 	font_rules = {
-{
-      italic = true,
-      intensity = 'Bold',
-      font =   wezterm.font_with_fallback {
 		{
-			family = 'ComicCodeLigatures Nerd Font',
-			weigth= "Bold",
-			style = "Italic",
+			italic = true,
+			intensity = 'Bold',
+			font = wezterm.font_with_fallback {
+				{
+					family = 'ComicCodeLigatures Nerd Font',
+					weigth = "Bold",
+					style = "Italic",
+				},
+			},
 		},
-    },
+
 	},
 	default_cursor_style = 'BlinkingBlock',
 	cursor_blink_rate = 800,
