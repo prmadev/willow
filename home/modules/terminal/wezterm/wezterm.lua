@@ -9,11 +9,11 @@ return {
 
 	font = wezterm.font_with_fallback {
 		{
-			family = 'ComicCode Nerd Font',
+			family = 'ComicCodeLigature Nerd Font',
 		},
 
 		{
-			family = 'Comic Code',
+			family = 'Comic Code Ligature',
 		},
 		{
 			family = 'JetbrainsMono Nerd Font',
