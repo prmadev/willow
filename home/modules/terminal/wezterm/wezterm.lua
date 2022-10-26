@@ -8,10 +8,13 @@ return {
 	default_prog = { "zsh" },
 
 	font = wezterm.font_with_fallback {
-		--[[ { ]]
-		--[[ 	family = 'Comic Code', ]]
-		--[[ }, ]]
-		--[[]]
+		{
+			family = 'ComicCode Nerd Font',
+		},
+
+		{
+			family = 'Comic Code',
+		},
 		{
 			family = 'JetbrainsMono Nerd Font',
 		},
