@@ -37,6 +37,12 @@ return {
 			intensity = "Bold",
 			font = wezterm.font('Comic Code', { italic = false, bold = true, }),
 		},
+
+		{
+			italic = true,
+			intensity = "Half",
+			font = wezterm.font('Comic Code', { italic = false, bold = false, }),
+		},
 	},
 	default_cursor_style = 'BlinkingBlock',
 	cursor_blink_rate = 800,
