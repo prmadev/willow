@@ -41,6 +41,18 @@ return {
 			},
 		},
 
+		{
+			italic = false,
+			intensity = 'Bold',
+			font = wezterm.font_with_fallback {
+				{
+					family = 'ComicCodeLigatures Nerd Font',
+					weigth = "Bold",
+				},
+			},
+		},
+
+
 	},
 	default_cursor_style = 'BlinkingBlock',
 	cursor_blink_rate = 800,
