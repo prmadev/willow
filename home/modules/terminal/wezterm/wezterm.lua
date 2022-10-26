@@ -35,7 +35,7 @@ return {
 			font = wezterm.font_with_fallback {
 				{
 					family = 'ComicCodeLigatures Nerd Font',
-					weigth = "Bold",
+					weight = "Bold",
 					style = "Italic",
 				},
 			},
