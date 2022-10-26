@@ -12,7 +12,7 @@ with lib; {
     };
     font.main = mkOption {
       type = types.str;
-      default = "Operator Mono SSm Book Nerd Font";
+      default = "ComicCodeLigatures Nerd Font";
     };
   };
 
