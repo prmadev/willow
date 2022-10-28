@@ -15,6 +15,7 @@ with lib; {
     home.packages = with pkgs; [
       gcc
       cmake
+      pkg-config
     ];
   };
 }
