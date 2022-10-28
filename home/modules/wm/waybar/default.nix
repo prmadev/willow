@@ -175,6 +175,10 @@ with lib; {
           color: ${config.colors.love.hex};
         }
 
+        #workspaces button.active {
+          color: ${config.colors.love.hex};
+        }
+
         #workspaces button.urgent {
 
         }
