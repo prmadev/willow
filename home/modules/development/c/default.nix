@@ -16,7 +16,7 @@ with lib; {
       gcc
       cmake
       pkg-config
-      openssl
+      openssl_3
     ];
   };
 }
