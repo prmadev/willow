@@ -23,7 +23,7 @@ with lib; {
       imagemagick
       imv
       viu
-      ffmpeg_5-full
+      # ffmpeg_5-full
       rx
     ];
   };

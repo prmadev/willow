@@ -17,6 +17,7 @@ with lib; {
       cmake
       pkg-config
       openssl_3
+      musl
     ];
   };
 }
