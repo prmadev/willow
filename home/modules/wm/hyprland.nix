@@ -17,9 +17,11 @@ with lib; {
       extraConfig = ''
            exec-once=dbus-update-activation-environment --systemd WAYLAND_DISPLAY DISPLAY HYPRLAND_INSTANCE_SIGNATURE
            exec-once=systemctl --user start hyprland-session.target
+        exec=pkill wh
+        exec=wh
            exec-once=hyprpaper
-           exec-once=eww open-many topbar topbar-monitor-two info
-           exec=eww reload
+           # exec-once=eww open-many topbar topbar-monitor-two info
+           # exec=eww reload
 
 
            general {
