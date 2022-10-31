@@ -4,7 +4,6 @@
 {
   config,
   lib,
-  pkgs,
   modulesPath,
   ...
 }: {
@@ -12,62 +11,45 @@
     (modulesPath + "/installer/scan/not-detected.nix")
   ];
 
-  boot.initrd.availableKernelModules = ["xhci_pci" "nvme" "usb_storage" "sd_mod" "rtsx_pci_sdmmc"];
+  boot.initrd.availableKernelModules = ["xhci_pci" "ahci" "usb_storage" "sd_mod" "sr_mod" "rtsx_usb_sdmmc"];
   boot.initrd.kernelModules = [];
   boot.kernelModules = ["kvm-intel"];
   boot.extraModulePackages = [];
 
   fileSystems."/" = {
-    device = "none";
-    fsType = "tmpfs";
-  };
-
-  fileSystems."/boot" = {
-    device = "/dev/disk/by-uuid/58F3-8F4B";
-    fsType = "vfat";
-  };
-
-  fileSystems."/nix" = {
-    device = "/dev/nvme0n1p3";
+    device = "/dev/disk/by-uuid/4cf67f52-3f51-4044-a5fe-8c0ea3dd2afa";
     fsType = "btrfs";
-    options = ["subvol=nix"];
-  };
-
-  fileSystems."/etc" = {
-    device = "/dev/nvme0n1p3";
-    fsType = "btrfs";
-    options = ["subvol=etc"];
-  };
-
-  fileSystems."/var/log" = {
-    device = "/dev/nvme0n1p3";
-    fsType = "btrfs";
-    options = ["subvol=log"];
-  };
-
-  fileSystems."/root" = {
-    device = "/dev/nvme0n1p3";
-    fsType = "btrfs";
-    options = ["subvol=root"];
+    options = ["subvol=root" "compress=zstd"];
   };
 
   fileSystems."/home" = {
-    device = "/dev/nvme0n1p3";
+    device = "/dev/disk/by-uuid/4cf67f52-3f51-4044-a5fe-8c0ea3dd2afa";
     fsType = "btrfs";
-    options = ["subvol=home"];
+    options = ["subvol=home" "compress=zstd"];
   };
 
-  swapDevices = [
-    {device = "/dev/disk/by-uuid/fdf60f9d-3e89-44f9-94d5-e00d492a12bb";}
-  ];
-  services.fstrim.enable = true;
+  fileSystems."/nix" = {
+    device = "/dev/disk/by-uuid/4cf67f52-3f51-4044-a5fe-8c0ea3dd2afa";
+    fsType = "btrfs";
+    options = ["subvol=nix" "compress=zstd" "noatime"];
+  };
+
+  fileSystems."/boot" = {
+    device = "/dev/disk/by-uuid/1E92-76EF";
+    fsType = "vfat";
+  };
+
+  swapDevices = [{device = "/dev/sda3";}];
+
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
   # (the default) this is the recommended approach. When using systemd-networkd it's
   # still possible to use this option, but it's recommended to use it in conjunction
   # with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
   networking.useDHCP = lib.mkDefault true;
+  # networking.interfaces.enp1s0.useDHCP = lib.mkDefault true;
   # networking.interfaces.wlp2s0.useDHCP = lib.mkDefault true;
 
+  nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   powerManagement.cpuFreqGovernor = lib.mkDefault "powersave";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }
