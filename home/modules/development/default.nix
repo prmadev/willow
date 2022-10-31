@@ -60,6 +60,7 @@ with lib; {
       dfeet
       hyperfine
       # pgadmin
+      ventoy-bin-full
     ];
   };
 }

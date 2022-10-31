@@ -22,37 +22,37 @@ with lib; {
            # exec=eww reload
 
 
-           general {
-               sensitivity=0.6
-               main_mod=SUPER
-               gaps_in=5
-               gaps_out=7
-               border_size=5
-               damage_tracking=full
-               layout=master
-
-               col.active_border=0xfff6c177
-               col.inactive_border=0xff191724
-           }
+           # general {
+           #     sensitivity=0.6
+           #     main_mod=SUPER
+           #     gaps_in=5
+           #     gaps_out=7
+           #     border_size=5
+           #     damage_tracking=full
+           #     layout=master
+           #
+           #     col.active_border=0xfff6c177
+           #     col.inactive_border=0xff191724
+           # }
 
            dwindle {
           force_split=2
         }
 
-           decoration {
-               rounding=1
-               multisample_edges=true
-           	  blurls=paper
-               blur=false
-             	  drop_shadow=false
-               shadow_range=5
-               shadow_render_power=2
-               col.shadow=0xff191724
-           }
+           # decoration {
+           #     rounding=1
+           #     multisample_edges=true
+           # 	  blurls=paper
+           #     blur=false
+           #   	  drop_shadow=false
+           #     shadow_range=5
+           #     shadow_render_power=2
+           #     col.shadow=0xff191724
+           # }
 
-           animations {
-             enabled=true
-           }
+           # animations {
+           #   enabled=true
+           # }
 
            monitors {
              monitor=eDP-1,1366x768@60,0x0,1
@@ -63,18 +63,18 @@ with lib; {
              workspace=DP-1,9
            }
 
-           input {
-            follow_mouse=1
-            repeat_rate=35
-            repeat_delay=300
-            kb_layout=us,ir
-            kb_options=caps:escape
-           }
+           # input {
+           #  follow_mouse=1
+           #  repeat_rate=35
+           #  repeat_delay=300
+           #  kb_layout=us,ir
+           #  kb_options=caps:escape
+           # }
 
-           misc {
-             disable_hyprland_logo=true
-             disable_splash_rendering=true
-           }
+           # misc {
+           #   disable_hyprland_logo=true
+           #   disable_splash_rendering=true
+           # }
 
         	windowrule=animation popin,rofi
 
