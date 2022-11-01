@@ -12,7 +12,7 @@
         "local_port" = 1080;
         "local_address" = "127.0.0.1";
       };
-      destination = "/ss/config.json";
+      destination = "";
     };
 in
   with lib; {
