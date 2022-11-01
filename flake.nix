@@ -38,6 +38,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    nixago = {
+      url = "github:nix-community/nixago";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     # naersk = {
     #   url = "github:nmattia/naersk";
     #   inputs.nixpkgs.follows = "nixpkgs";
