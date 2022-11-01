@@ -20,6 +20,7 @@ with lib; {
       neovide
       plocate
       neovim
+      stylua
     ];
     home.sessionVariables = {
       NEOVIDE_MULTIGRID = true;
