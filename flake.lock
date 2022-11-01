@@ -498,6 +498,21 @@
         "type": "github"
       }
     },
+    "nix-std": {
+      "locked": {
+        "lastModified": 1666216771,
+        "narHash": "sha256-WQ7+nqnkEPhEkCYwbGxnwXc0Bj/Wy+ndqlLCut2pNrg=",
+        "owner": "chessai",
+        "repo": "nix-std",
+        "rev": "b5d44b75771af26d372cad74a542fb15d7f5c7d8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "chessai",
+        "repo": "nix-std",
+        "type": "github"
+      }
+    },
     "nixago": {
       "inputs": {
         "flake-utils": "flake-utils_3",
@@ -635,6 +650,7 @@
         "hyprland": "hyprland",
         "hyprland-contrib": "hyprland-contrib",
         "nil": "nil",
+        "nix-std": "nix-std",
         "nixago": "nixago",
         "nixpkgs": "nixpkgs",
         "nnn-plugins": "nnn-plugins",
