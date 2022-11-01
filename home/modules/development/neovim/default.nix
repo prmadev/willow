@@ -21,6 +21,7 @@ with lib; {
       plocate
       neovim
       stylua
+      selene
     ];
     home.sessionVariables = {
       NEOVIDE_MULTIGRID = true;
