@@ -30,6 +30,7 @@ with lib; {
       nix-top
       nix-tree
       nix-diff
+      comma
     ];
 
     programs.nix-index.enable = true;
