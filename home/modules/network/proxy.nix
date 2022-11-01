@@ -23,9 +23,9 @@ with lib; {
     ];
 
     home.file = {
-      ".config/shadowsocks/config.json" = {
-        source = ./shadowsocks.json;
-      };
+      # ".config/shadowsocks/config.json" = {
+      #   source = ./shadowsocks.json;
+      # };
     };
     home.file = {
       ".proxychains/proxychains.conf" = {
