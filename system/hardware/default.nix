@@ -2,8 +2,7 @@
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
-  ];
-  # Audio
+  ]; # Audio
   sound.enable = true;
   sound.mediaKeys.enable = true;
   # hardware.pulseaudio.enable = true;
@@ -33,7 +32,13 @@
     ntfs3g
     pciutils
   ];
+
   services.fwupd = {
+    # bios updating tool
+    enable = true;
+  };
+  services.udisks2 = {
+    # needed by fwupd
     enable = true;
   };
 }
