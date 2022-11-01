@@ -21,7 +21,6 @@ with lib; {
       v2ray-geoip
       shadowsocks-v2ray-plugin
     ];
-
     # home.file = {
     #   # ".config/shadowsocks/config.json" = {
     #   #   source = ./shadowsocks.json;
