@@ -20,7 +20,7 @@
   # Power management
   services.tlp.enable = true;
   services.fstrim.enable = true;
-  # boot.kernelPackages = pkgs.linuxKernel.kernels.linux_5_19;
+  boot.kernelPackages = pkgs.linuxKernel.packages.linux_6_0;
   # services.xserver.videoDrivers = ["nvidia"];
   # hardware.nvidia.modesetting.enable = true;
   # trackpad and mouse
