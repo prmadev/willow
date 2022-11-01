@@ -19,6 +19,7 @@ with lib; {
       python310Packages.pip
       neovide
       plocate
+      neovim
     ];
     home.sessionVariables = {
       NEOVIDE_MULTIGRID = true;

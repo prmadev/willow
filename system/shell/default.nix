@@ -2,7 +2,7 @@
   environment.pathsToLink = ["/share/zsh"];
 
   environment.systemPackages = with pkgs; [
-    neovim #just in case I need it at system level
+    vim #just in case I need it at system level
     curl # obvious
     systeroid
   ];
