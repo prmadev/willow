@@ -7,12 +7,12 @@
   configData =
     pkgs.writeTextFile
     {
-      name = "config-1.json";
+      name = "config.json";
       text = builtins.toJSON {
         "local_port" = 1080;
         "local_address" = "127.0.0.1";
       };
-      destination = "/generate/config";
+      destination = "/ss/config.json";
     };
 in
   with lib; {
@@ -40,7 +40,7 @@ in
       # };
 
       home.file = {
-        ".config/shadowsocks/config-1.json" = {
+        ".config/shadowsocks/config.json" = {
           source = configData;
         };
       };
