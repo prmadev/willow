@@ -1,4 +1,4 @@
-{...}: {
+{inputs, ...}: {
   imports = [
     ./modules/browser
     ./modules/daily
@@ -27,4 +27,8 @@
   style.enable = true;
   terminal.enable = true;
   wm.enable = true; # window manager
+
+  nixpkgs.overlays = [
+    inputs.neovim-nightly-overlay.overlay
+  ];
 }
