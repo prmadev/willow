@@ -5,7 +5,6 @@
   ...
 }:
 with lib; {
-  imports = [./mongo.nix];
   options = {
     database.enable = mkOption {
       type = types.bool;
@@ -13,12 +12,11 @@ with lib; {
     };
   };
   config = mkIf config.database.enable {
-    mongo.enable = false;
     environment.systemPackages = with pkgs; [
       pgcli
       python310Packages.keyring
       pgweb
-      gobang
+      # gobang
     ];
 
     # services.pgadmin.enable = true;

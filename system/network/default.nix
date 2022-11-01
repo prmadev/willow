@@ -1,4 +1,4 @@
-{...}: {
+_: {
   networking.hostName = "nixer";
   networking.networkmanager = {
     enable = true;

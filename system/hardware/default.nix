@@ -21,13 +21,8 @@
   services.tlp.enable = true;
   services.fstrim.enable = true;
   boot.kernelPackages = pkgs.linuxKernel.packages.linux_6_0;
-  # services.xserver.videoDrivers = ["nvidia"];
-  # hardware.nvidia.modesetting.enable = true;
-  # trackpad and mouse
   # services.xserver.libinput.enable = true;
   hardware.opengl.enable = true;
-  # hardware.nvidia.enable = true;
-  #hardware.nvidiaOptimus.disable = true;
   environment.systemPackages = with pkgs; [
     ntfs3g
     pciutils

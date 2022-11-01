@@ -12,11 +12,6 @@
     extraOptions = "experimental-features = nix-command flakes";
     optimise.automatic = true;
     settings.auto-optimise-store = true;
-    # settings.substituters = [
-    #   "https://nix-community.cachix.org"
-    #   "https://cache.nixos.org"
-    # ];
-    # # settings.trusted-public-keys = ["nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="];
 
     settings = {
       substituters = [
@@ -31,9 +26,9 @@
     };
   };
 
-  environment.defaultPackages = [
-    pkgs.rsync
-    pkgs.strace
-    pkgs.neovim
+  environment.defaultPackages = with pkgs; [
+    rsync
+    strace
+    neovim
   ];
 }

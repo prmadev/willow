@@ -26,6 +26,10 @@ with lib; {
       deadnix
       patchelf
       nil
+      nix-ld
+      nix-top
+      nix-tree
+      nix-diff
     ];
 
     programs.nix-index.enable = true;

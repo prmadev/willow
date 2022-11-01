@@ -1,4 +1,4 @@
-{...}: {
+_: {
   # users.defaultUserShell = pkgs.zsh;
   users.users.a = {
     createHome = true;
