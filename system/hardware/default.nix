@@ -32,5 +32,6 @@
   environment.systemPackages = with pkgs; [
     ntfs3g
     pciutils
+    fwupd
   ];
 }
