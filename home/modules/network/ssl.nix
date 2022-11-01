@@ -1,3 +1,9 @@
 {
-  files.json."~/generated/hello.json".hello = "world";
+  pkgs,
+  libs,
+  ...
+}: {
+  config = {
+    files.json."~/generated/hello.json".hello = "world";
+  };
 }
