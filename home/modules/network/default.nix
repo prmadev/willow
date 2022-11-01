@@ -7,6 +7,7 @@
 with lib; {
   imports = [
     ./download.nix
+    # ./shadowsocks.nix
     ./proxy.nix
     ./ssh.nix
   ];

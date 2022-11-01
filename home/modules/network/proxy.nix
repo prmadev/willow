@@ -22,11 +22,11 @@ with lib; {
       shadowsocks-v2ray-plugin
     ];
 
-    home.file = {
-      # ".config/shadowsocks/config.json" = {
-      #   source = ./shadowsocks.json;
-      # };
-    };
+    # home.file = {
+    #   # ".config/shadowsocks/config.json" = {
+    #   #   source = ./shadowsocks.json;
+    #   # };
+    # };
     home.file = {
       ".proxychains/proxychains.conf" = {
         source = ./proxychains.conf;
