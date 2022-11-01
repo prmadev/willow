@@ -4,7 +4,7 @@
   ...
 }:
 with lib; {
-  imports = [./catppuccin.nix ./global-fonts.nix ./colors.nix ./gtkconf.nix ./font.nix];
+  imports = [./global-fonts.nix ./colors.nix ./font.nix];
 
   options = {
     style.enable = mkOption {
@@ -14,6 +14,5 @@ with lib; {
   };
   config = mkIf config.style.enable {
     font.enable = true;
-    gtkconf.enable = true;
   };
 }

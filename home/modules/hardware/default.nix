@@ -4,7 +4,7 @@
   ...
 }:
 with lib; {
-  imports = [./audio.nix ./display.nix ./keyboard.nix ./storage.nix];
+  imports = [./audio.nix ./storage.nix];
   options = {
     hardware.enable = mkOption {
       type = types.bool;
@@ -13,8 +13,6 @@ with lib; {
   };
   config = mkIf config.hardware.enable {
     audio.enable = true;
-    display.enable = true;
-    keyboard.enable = true;
     storage.enable = true;
   };
 }

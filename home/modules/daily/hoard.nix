@@ -13,7 +13,7 @@ with lib; {
   };
   config = mkIf config.hoard.enable {
     home.packages = with pkgs; [
-      hoard
+      # hoard
     ];
   };
 }

@@ -29,7 +29,7 @@
 
     zellij = {
       url = "github:zellij-org/zellij";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs. nixpkgs.follows = "nixpkgs";
     };
 
     helix = {
@@ -121,7 +121,7 @@
     #   overlays = [
     #   ];
     # };
-    lib = nixpkgs.lib;
+    inherit (nixpkgs) lib;
   in
     with inputs; {
       nixosConfigurations = {

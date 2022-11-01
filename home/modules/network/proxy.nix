@@ -17,18 +17,10 @@ with lib; {
       shadowsocks-rust
       proxychains-ng
       chisel
-      protonvpn-cli
       v2ray
       v2ray-geoip
-      qv2ray
       shadowsocks-v2ray-plugin
     ];
-
-    home.file = {
-      ".config/clash/config.yaml" = {
-        source = ./config.yaml;
-      };
-    };
 
     home.file = {
       ".config/shadowsocks/config.json" = {
@@ -40,21 +32,5 @@ with lib; {
         source = ./proxychains.conf;
       };
     };
-
-    # systemd.user.services.clash = {
-    #   Unit = {
-    #     Description = "Clash daemon, A rule-based proxy in Go.";
-    #     After = "network.target";
-    #   };
-    #
-    #   Service = {
-    #     Type = "simple";
-    #     Restart = "always";
-    #     ExecStart = "${pkgs.clash}/bin/clash";
-    #   };
-    #   Install = {
-    #     WantedBy = ["paths.target"];
-    #   };
-    # };
   };
 }

@@ -6,19 +6,14 @@
 }:
 with lib; {
   imports = [
-    ./api
     ./build
     ./c
-    ./css
     ./go
     ./git
-    ./json
     ./neovim
     ./helix
-    ./jetbrains
     ./nixdev
     ./rust
-    ./efm
     ./vscode
     ./zig
   ];
@@ -29,21 +24,16 @@ with lib; {
     };
   };
   config = mkIf config.development.enable {
-    api.enable = true;
     build.enable = true;
-    c.enable = true;
-    css.enable = true;
+    c.enable = false;
     git.enable = true;
     go.enable = true;
-    json.enable = true;
     neovim.enable = true;
     helix.enable = true;
     nixdev.enable = true;
-    goland.enable = false;
     rust.enable = true;
     vscode.enable = true;
     zig.enable = true;
-    efm.enable = true;
 
     home.packages = with pkgs; [
       # flutter

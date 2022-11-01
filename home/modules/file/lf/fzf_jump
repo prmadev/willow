@@ -1,9 +1,0 @@
-${{
-    res="$(find . -maxdepth 1 | fzf --reverse --header='Jump to location' | sed 's/\\/\\\\/g;s/"/\\"/g')"
-    if [ -d "$res" ]; then
-        cmd="z"
-    else 
-        cmd="select"                                                       
-    fi
-    lf -remote "send $id $cmd \"$res\""
-}}

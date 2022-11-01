@@ -27,18 +27,17 @@ with lib; {
   config = mkIf config.daily.enable {
     communication.enable = true;
     exercism.enable = true;
-    favo.enable = true;
+    favo.enable = false;
     graphical.enable = true;
-    task.enable = true;
-    hoard.enable = true;
-    zk.enable = true;
-    newsboat.enable = true;
+    task.enable = false;
+    hoard.enable = false;
+    zk.enable = false;
+    newsboat.enable = false;
     syncthing.enable = true;
     home.packages = with pkgs; [
       # calibre
+      mprocs # not a monitoring tool
       zola
-      appimage-run
-      tailscale
     ];
   };
 }

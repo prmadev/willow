@@ -1,6 +1,0 @@
-${{
-    vimv --git -- $(basename -a -- $fx)
-
-    lf -remote "send $id load"
-    lf -remote "send $id unselect"
-}}

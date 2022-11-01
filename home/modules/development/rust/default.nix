@@ -36,7 +36,6 @@ with lib; {
       xorriso
       mdbook
       cargo-cross
-      upx # to reduce binary size
     ];
 
     home.sessionPath = ["$HOME/.cargo/bin" "/$HOME/a/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin"];

@@ -15,7 +15,6 @@ with lib; {
     programs.bottom.enable = true;
     programs.htop.enable = true;
     home.packages = with pkgs; [
-      mprocs # not a monitoring tool
       procs
       neofetch
       xorg.xwininfo

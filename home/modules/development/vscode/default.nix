@@ -14,9 +14,7 @@ with lib; {
   config = mkIf config.vscode.enable {
     programs.vscode = {
       enable = true;
-      # package = pkgs.vscode-with-extensions;
       extensions = with pkgs.vscode-extensions; [
-        bradlc.vscode-tailwindcss
         christian-kohler.path-intellisense
         eamodio.gitlens
         esbenp.prettier-vscode

@@ -15,9 +15,7 @@ with lib; {
   };
   config = mkIf config.communication.enable {
     home.packages = with pkgs; [
-      fractal
       tdesktop
-      # weechat
     ];
   };
 }
