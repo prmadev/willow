@@ -22,6 +22,7 @@ with lib; {
       neovim
       stylua
       selene
+      statix
     ];
     home.sessionVariables = {
       NEOVIDE_MULTIGRID = true;
