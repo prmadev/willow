@@ -32,6 +32,8 @@
   environment.systemPackages = with pkgs; [
     ntfs3g
     pciutils
-    fwupd
   ];
+  services.fwupd = {
+    enable = true;
+  };
 }
