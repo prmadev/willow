@@ -12,6 +12,7 @@ _: {
   };
   networking.proxy.default = "socks5://127.0.0.1:1080/";
   networking.networkmanager.dns = "none";
+  networking.useDHCP = false;
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   programs.gnupg.agent = {
