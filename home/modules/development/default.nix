@@ -8,6 +8,7 @@ with lib; {
   imports = [
     ./build
     ./c
+    ./env
     ./go
     ./git
     ./neovim
@@ -26,6 +27,7 @@ with lib; {
   config = mkIf config.development.enable {
     build.enable = true;
     c.enable = false;
+    env.enable = true;
     git.enable = true;
     go.enable = true;
     neovim.enable = true;
