@@ -2,7 +2,11 @@
   description = "my nix configuration";
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+
     nix-std.url = "github:chessai/nix-std";
+
+    nix-alien.url = "github:thiagokokada/nix-alien";
+    # nix-ld.url = "github:Mic92/nix-ld/main";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -144,6 +148,7 @@
                 home.stateVersion = "22.11";
                 imports = [
                   ./home
+                  # inputs.nix-ld.nixosModules.nix-ld
                   inputs.hyprland.homeManagerModules.default
                 ];
               };

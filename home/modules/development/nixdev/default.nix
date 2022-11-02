@@ -2,6 +2,7 @@
   pkgs,
   lib,
   config,
+  inputs,
   ...
 }:
 with lib; {
@@ -32,6 +33,8 @@ with lib; {
       nix-diff
       comma
       nixpkgs-lint
+      inputs.nix-alien.packages.${system}.nix-alien
+      # nix-index-update
     ];
 
     programs.nix-index.enable = true;
