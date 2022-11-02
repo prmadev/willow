@@ -29,6 +29,7 @@ in
         proxychains-ng
         chisel
         v2ray
+        tun2socks
         v2ray-geoip
         shadowsocks-v2ray-plugin
       ];
