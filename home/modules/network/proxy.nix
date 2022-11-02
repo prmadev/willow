@@ -32,6 +32,7 @@ in
         tun2socks
         v2ray-geoip
         shadowsocks-v2ray-plugin
+        tunctl
       ];
 
       # home.file = {
