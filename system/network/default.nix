@@ -10,7 +10,7 @@ _: {
     enable = true;
     client.enable = true;
   };
-  networking.proxy.default = "socks5://127.0.0.1:1080/";
+  networking.proxy.default = "127.0.0.1:1080";
   networking.useDHCP = false;
   networking.enableIPv6 = false;
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";

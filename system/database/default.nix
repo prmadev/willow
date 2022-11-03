@@ -37,6 +37,9 @@ with lib; {
           };
         }
       ];
+      ensureDatabases = [
+        "work"
+      ];
     };
 
     services.pgadmin.initialEmail = "amirhossein.alesheikh@gmail.com";

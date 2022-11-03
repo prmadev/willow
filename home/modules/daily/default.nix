@@ -15,6 +15,7 @@ with lib; {
     ./task.nix
     ./newsboat.nix
     ./zk.nix
+    ./music.nix
   ];
 
   options = {
@@ -34,6 +35,7 @@ with lib; {
     zk.enable = false;
     newsboat.enable = false;
     syncthing.enable = true;
+    music.enable = true;
     home.packages = with pkgs; [
       # calibre
       mprocs # not a monitoring tool
