@@ -22,7 +22,7 @@ upgrade:
 	alejandra -q .
 	git add . 
 	export NIX_CURL_FLAGS="-x 127.0.0.1:1080"
-	NIX_CURL_FLAGS="-x 127.0.0.1:1080" sudo proxychains4 -f /home/a/.proxychains/proxychains.conf nix flake update
+	NIX_CURL_FLAGS="-x 127.0.0.1:1080" sudo NIX_CURL_FLAGS="-x socks5://127.0.0.1:1080" proxychains4 -f /home/a/.proxychains/proxychains.conf nix flake update
 	NIX_CURL_FLAGS="-x 127.0.0.1:1080" sudo proxychains4 -f /home/a/.proxychains/proxychains.conf  nixos-rebuild switch --flake .#
 	git add .
 	git commit -m "auto: upgrade"
