@@ -7,12 +7,12 @@ _: {
 
   services.tor = {
     # i want this as system level, because I need it for circumventing gitlab's sanctions.
-    enable = true;
+    # enable = true;
     client.enable = true;
   };
-  networking.proxy.default = "127.0.0.1:1080";
-  networking.useDHCP = false;
-  networking.enableIPv6 = false;
+  #  networking.proxy.default = "127.0.0.1:1080";
+  # networking.useDHCP = false;
+  # networking.enableIPv6 = false;
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   programs.gnupg.agent = {
@@ -27,7 +27,7 @@ _: {
 
   services.tor.client.transparentProxy.enable = true;
   networking.wireguard = {
-    enable = true;
+    # enable = true;
   };
   networking.firewall.checkReversePath = false;
 }
