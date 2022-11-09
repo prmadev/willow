@@ -1,6 +1,7 @@
 {
   lib,
   config,
+  pkgs,
   ...
 }:
 with lib; {
@@ -27,11 +28,14 @@ with lib; {
     compression.enable = true;
     filesearch.enable = true;
     nnn.enable = true;
-    office.enable = true;
+    office.enable = false;
     mpv.enable = true;
     pdf.enable = true;
     rename.enable = true;
     xdgconf.enable = true;
     brootFile.enable = true;
+    home.packages = with pkgs; [
+      trashy
+    ];
   };
 }

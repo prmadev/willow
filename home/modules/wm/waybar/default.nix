@@ -87,7 +87,7 @@ with lib; {
           };
 
           network = {
-            "format-wifi" = "";
+            "format-wifi" = " ";
             "format-ethernet" = "ﯱ";
             "format-linked" = "  (No IP)";
             "format-disconnected" = "睊";
@@ -96,25 +96,12 @@ with lib; {
           };
 
           "pulseaudio" = {
-            "states" = {
-              "hundred" = 100;
-              "ninty" = 90;
-              "eighty" = 80;
-              "seventy" = 70;
-              "sixty" = 60;
-              "fifty" = 50;
-              "fourty" = 40;
-              "thirty" = 30;
-              "twenty" = 20;
-              "ten" = 10;
-              "zero" = 0;
-            };
             "format" = "{icon}";
             "format-muted" = "";
             "on-click" = "pactl set-sink-mute  alsa_output.pci-0000_00_1f.3.analog-stereo toggle";
             "scroll-steps" = 10;
             "format-icons" = {
-              "headphone" = "";
+              "headphone" = " ";
               "hands-free" = "";
               "headset" = "";
               "phone" = "";
@@ -133,259 +120,141 @@ with lib; {
             "icon-size" = 20;
             "spacing" = 10;
           };
-          "custom/joljol" = {
-            "exec" = "joljol";
-            "format" = "{}";
-            "update-interval" = 100;
-          };
         };
       };
 
       #TODO use variable colors
-      style = ''
-        * {
-        	border: none;
-        	font-family: ${config.global-fonts.main-family};
-        	font-size: 15px;
-        	min-height: 20px;
-        	border-radius: 5px;
-        }
-        #language {
+      style = let
+        bordersize-main = "5px";
+        bordersize-support = "1px";
 
-          border-radius: 5px;
-          color: ${config.colors.pine.hex};;
-          background: ${config.colors.base.hex};
-          padding: 5px;
-        	margin: 10px 10px 0px 10px;
-        	font-weight: bold;
-        }
-        #workspaces button {
-          border-radius: 5px;
-          color: ${config.colors.text.hex};;
-          background: ${config.colors.base.hex};
-          padding: 5px;
-        	margin: 10px 10px 0px 10px;
-        	font-weight: bold;
-        }
+        bg-base = "background: ${config.colors.base.hex};";
+        bg-surface = "background: ${config.colors.surface.hex};";
+        bg-overlay = "background: ${config.colors.overlay.hex};";
+        bg-muted = "background: ${config.colors.muted.hex};";
+        bg-subtle = "background: ${config.colors.subtle.hex};";
+        bg-text = "background: ${config.colors.text.hex};";
+        bg-love = "background: ${config.colors.love.hex};";
+        bg-gold = "background: ${config.colors.gold.hex};";
+        bg-rose = "background: ${config.colors.rose.hex};";
+        bg-pine = "background: ${config.colors.pine.hex};";
+        bg-foam = "background: ${config.colors.foam.hex};";
+        bg-iris = "background: ${config.colors.iris.hex};";
+        bg-hl-low = "background: ${config.colors.highlight-low.hex};";
+        bg-hl-med = "background: ${config.colors.highlight-med.hex};";
+        bg-hl-high = "background: ${config.colors.highlight-high.hex};";
+        bg-transparent = "background: transparent;";
 
-        #workspaces button.visible {
-        }
+        border-base = let color = config.colors.base.hex; in "border-top: ${bordersize-main} solid ${color}; border-left:${bordersize-main} solid ${color};border-right:${bordersize-support} solid ${color};border-bottom:${bordersize-support} solid ${color}; ";
+        border-surface = let color = config.colors.surface.hex; in "border-top: ${bordersize-main} solid ${color}; border-left:${bordersize-main} solid ${color};border-right:${bordersize-support} solid ${color};border-bottom:${bordersize-support} solid ${color}; ";
+        border-overlay = let color = config.colors.overlay.hex; in "border-top: ${bordersize-main} solid ${color}; border-left:${bordersize-main} solid ${color};border-right:${bordersize-support} solid ${color};border-bottom:${bordersize-support} solid ${color}; ";
+        border-muted = let color = config.colors.muted.hex; in "border-top: ${bordersize-main} solid ${color}; border-left:${bordersize-main} solid ${color};border-right:${bordersize-support} solid ${color};border-bottom:${bordersize-support} solid ${color}; ";
+        border-subtle = let color = config.colors.subtle.hex; in "border-top: ${bordersize-main} solid ${color}; border-left:${bordersize-main} solid ${color};border-right:${bordersize-support} solid ${color};border-bottom:${bordersize-support} solid ${color}; ";
+        border-text = let color = config.colors.text.hex; in "border-top: ${bordersize-main} solid ${color}; border-left:${bordersize-main} solid ${color};border-right:${bordersize-support} solid ${color};border-bottom:${bordersize-support} solid ${color}; ";
+        border-love = let color = config.colors.love.hex; in "border-top: ${bordersize-main} solid ${color}; border-left:${bordersize-main} solid ${color};border-right:${bordersize-support} solid ${color};border-bottom:${bordersize-support} solid ${color}; ";
+        border-gold = let color = config.colors.gold.hex; in "border-top: ${bordersize-main} solid ${color}; border-left:${bordersize-main} solid ${color};border-right:${bordersize-support} solid ${color};border-bottom:${bordersize-support} solid ${color}; ";
+        border-rose = let color = config.colors.rose.hex; in "border-top: ${bordersize-main} solid ${color}; border-left:${bordersize-main} solid ${color};border-right:${bordersize-support} solid ${color};border-bottom:${bordersize-support} solid ${color}; ";
+        border-pine = let color = config.colors.pine.hex; in "border-top: ${bordersize-main} solid ${color}; border-left:${bordersize-main} solid ${color};border-right:${bordersize-support} solid ${color};border-bottom:${bordersize-support} solid ${color}; ";
+        border-foam = let color = config.colors.foam.hex; in "border-top: ${bordersize-main} solid ${color}; border-left:${bordersize-main} solid ${color};border-right:${bordersize-support} solid ${color};border-bottom:${bordersize-support} solid ${color}; ";
+        border-iris = let color = config.colors.iris.hex; in "border-top: ${bordersize-main} solid ${color}; border-left:${bordersize-main} solid ${color};border-right:${bordersize-support} solid ${color};border-bottom:${bordersize-support} solid ${color}; ";
+        border-hl-low = let color = config.colors.highlight-low.hex; in "border-top: ${bordersize-main} solid ${color}; border-left:${bordersize-main} solid ${color};border-right:${bordersize-support} solid ${color};border-bottom:${bordersize-support} solid ${color}; ";
+        border-hl-med = let color = config.colors.highlight-med.hex; in "border-top: ${bordersize-main} solid ${color}; border-left:${bordersize-main} solid ${color};border-right:${bordersize-support} solid ${color};border-bottom:${bordersize-support} solid ${color}; ";
+        border-hl-high = let color = config.colors.highlight-high.hex; in "border-top: ${bordersize-main} solid ${color}; border-left:${bordersize-main} solid ${color};border-right:${bordersize-support} solid ${color};border-bottom:${bordersize-support} solid ${color}; ";
+        border-transparent = let color = "transparent"; in "border-top: ${bordersize-main} solid ${color}; border-left:${bordersize-main} solid ${color};border-right:${bordersize-support} solid ${color};border-bottom:${bordersize-support} solid ${color}; ";
 
-        #workspaces button.focused {
-          color: ${config.colors.love.hex};
-        }
+        fg-base = "color: ${config.colors.base.hex};";
+        fg-surface = "color: ${config.colors.surface.hex};";
+        fg-overlay = "color: ${config.colors.overlay.hex};";
+        fg-muted = "color: ${config.colors.muted.hex};";
+        fg-subtle = "color: ${config.colors.subtle.hex};";
+        fg-text = "color: ${config.colors.text.hex};";
+        fg-love = "color: ${config.colors.love.hex};";
+        fg-gold = "color: ${config.colors.gold.hex};";
+        fg-rose = "color: ${config.colors.rose.hex};";
+        fg-pine = "color: ${config.colors.pine.hex};";
+        fg-foam = "color: ${config.colors.foam.hex};";
+        fg-iris = "color: ${config.colors.iris.hex};";
+        fg-hl-low = "color: ${config.colors.highlight-low.hex};";
+        fg-hl-med = "color: ${config.colors.highlight-med.hex};";
+        fg-hl-high = "color: ${config.colors.highlight-high.hex};";
+        fg-transparent = "color: transparent;";
 
-        #workspaces button.active {
-          color: ${config.colors.love.hex};
-        }
+        radi0 = "border-radius: 0;";
+        radi5 = "border-radius: 5;";
 
-        #workspaces button.urgent {
-
-        }
-
-        #workspaces button.current_output {
-          background: ${config.colors.surface.hex};
-        }
-
-        window#waybar {
-        	background: transparent;
-        	border-radius: 5px;
-        }
-        tooltip {
-        	background: ${config.colors.surface.hex};
-        }
-
-        tooltip label {
-        	color: ${config.colors.text.hex};
-        }
-        #tags {
-        	background-color: transparent;
-        	border-radius: 0px;
-        	padding: 5px 5px 0px 5px;
-        }
-
-        #tags button {
-        	padding: 0px 5px;
-        	margin-right: 5px;
-        	margin-left: 5px;
-        	color: transparent;
-        	background: ${config.colors.surface.hex};
-        }
-
-        #tags button.occupied {
-        	border-radius: 5px;
-        	font-weight: bold;
-        	color: ${config.colors.base.hex};
-        	background: ${config.colors.rose.hex};
-        }
-
-        #tags button.focused {
-        	font-weight: 900;
-        	color: ${config.colors.base.hex};
-        	background: ${config.colors.love.hex};
-        }
-
-        #tags button.urgent {
-        	color: ${config.colors.base.hex};
-        	background-color: ${config.colors.gold.hex};
-        	border-radius: 0px;
-        }
-
-        #custom-date,
-        #clock,
-        #battery,
-        #pulseaudio,
-        #network,
-        #custom-joljol {
-        	color:${config.colors.pine.hex};
-        	background:${config.colors.base.hex} ;
-        	padding: 2.5px 15px;
-        	margin: 10px 10px 0px 0px;
-        	font-weight: 900;
-        }
-
-        #clock {
-        	background: ${config.colors.base.hex};
-        }
-
-        #custom-joljol {
-        	background: ${config.colors.pine.hex};
-        	margin: 10px 10px 0px 10px;
-        }
-
-        #battery {
-        	color: ${config.colors.base.hex};
-        	background: ${config.colors.foam.hex};
-        }
-
-
-        #battery.ninty.charging {
-        	background: linear-gradient(to right, ${config.colors.pine.hex} 90%, ${config.colors.foam.hex} 90%);
-        }
-        #battery.ninty:not(.charging) {
-        	background: linear-gradient(to right, ${config.colors.pine.hex} 90%, ${config.colors.rose.hex} 90%);
-        }
-        #battery.eighty.charging {
-        	background: linear-gradient(to right, ${config.colors.pine.hex} 80%, ${config.colors.foam.hex} 80%);
-        }
-        #battery.eighty:not(.charging) {
-        	background: linear-gradient(to right, ${config.colors.pine.hex} 80%, ${config.colors.rose.hex} 80%);
-        }
-        #battery.seventy.charging {
-        	background: linear-gradient(to right, ${config.colors.pine.hex} 70%, ${config.colors.foam.hex} 70%);
-        }
-        #battery.seventy:not(.charging) {
-        	background: linear-gradient(to right, ${config.colors.pine.hex} 70%, ${config.colors.rose.hex} 70%);
-        }
-        #battery.sixty.charging {
-        	background: linear-gradient(to right, ${config.colors.pine.hex} 60%, ${config.colors.foam.hex} 60%);
-        }
-        #battery.sixty:not(.charging) {
-        	background: linear-gradient(to right, ${config.colors.pine.hex} 60%, ${config.colors.rose.hex} 60%);
-        }
-        #battery.fifty.charging {
-        	background: linear-gradient(to right, ${config.colors.pine.hex} 50%, ${config.colors.foam.hex} 50%);
-        }
-        #battery.fifty:not(.charging) {
-        	background: linear-gradient(to right, ${config.colors.pine.hex} 50%, ${config.colors.rose.hex} 50%);
-        }
-        #battery.fourty.charging {
-        	background: linear-gradient(to right, ${config.colors.pine.hex} 40%, ${config.colors.foam.hex} 40%);
-        }
-        #battery.fourty:not(.charging) {
-        	background: linear-gradient(to right, ${config.colors.pine.hex} 40%, ${config.colors.rose.hex} 40%);
-        }
-        #battery.thirty.charging {
-        	background: linear-gradient(to right, ${config.colors.pine.hex} 30%, ${config.colors.foam.hex} 30%);
-        }
-        #battery.thirty:not(.charging) {
-        	background: linear-gradient(to right, ${config.colors.pine.hex} 30%, ${config.colors.rose.hex} 30%);
-        }
-        #battery.twenty.charging {
-        	background: linear-gradient(to right, ${config.colors.pine.hex} 20%, ${config.colors.foam.hex} 20%);
-        }
-        #battery.twenty:not(.charging) {
-        	background: linear-gradient(to right, ${config.colors.pine.hex} 20%, ${config.colors.love.hex} 20%);
-        }
-        #battery.ten.charging {
-        	background: linear-gradient(to right, ${config.colors.pine.hex} 10%, ${config.colors.foam.hex} 10%);
-        }
-        #battery.ten:not(.charging) {
-        	background: linear-gradient(to right, ${config.colors.pine.hex} 10%, ${config.colors.love.hex} 10%);
-        }
-        #battery.five.charging {
-        	background: linear-gradient(to right, ${config.colors.pine.hex} 5%, ${config.colors.foam.hex} 5%);
-        }
-        #battery.five:not(.charging) {
-        	background: linear-gradient(to right, ${config.colors.pine.hex} 5%, ${config.colors.love.hex} 5%);
-        }
-        #battery.three.charging {
-        	background: linear-gradient(to right, ${config.colors.pine.hex} 3%, ${config.colors.foam.hex} 3%);
-        }
-        #battery.three:not(.charging) {
-        	background: linear-gradient(to right, ${config.colors.pine.hex} 3%, ${config.colors.love.hex} 3%);
-        }
-        #network {
-        	color: ${config.colors.text.hex};
-        }
-
-        #pulseaudio {
-        	background: ${config.colors.iris.hex};
-        	color: ${config.colors.base.hex};
-                    border-radius: 5px;
-
-        }
-        #pulseaudio.ninty {
-        	background: linear-gradient(to top, ${config.colors.iris.hex} 90%, ${config.colors.rose.hex} 90%);
-        }
-        #pulseaudio.eighty {
-        	background: linear-gradient(to top, ${config.colors.iris.hex} 80%, ${config.colors.rose.hex} 80%);
-        }
-        #pulseaudio.seventy {
-        	background: linear-gradient(to top, ${config.colors.iris.hex} 70%, ${config.colors.rose.hex} 70%);
-        }
-        #pulseaudio.sixty {
-        	background: linear-gradient(to top, ${config.colors.iris.hex} 60%, ${config.colors.rose.hex} 60%);
-        }
-        #pulseaudio.fifty {
-        	background: linear-gradient(to top, ${config.colors.iris.hex} 50%, ${config.colors.rose.hex} 50%);
-        }
-        #pulseaudio.fourty {
-        	background: linear-gradient(to top, ${config.colors.iris.hex} 40%, ${config.colors.rose.hex} 40%);
-        }
-        #pulseaudio.thirty {
-        	background: linear-gradient(to top, ${config.colors.iris.hex} 30%, ${config.colors.rose.hex} 30%);
-        }
-        #pulseaudio.twenty {
-        	background: linear-gradient(to top, ${config.colors.iris.hex} 20%, ${config.colors.rose.hex} 20%);
-        }
-        #pulseaudio.ten {
-        	background: linear-gradient(to top, ${config.colors.iris.hex} 10%, ${config.colors.rose.hex} 10%);
-        }
-        #pulseaudio.zero {
-        	background: linear-gradient(to top, ${config.colors.iris.hex} 0%, ${config.colors.rose.hex} 00%);
-        }
-        #pulseaudio.muted {
-        	font-weight: 900;
-        	background:${config.colors.gold.hex};
-        }
-
-        #tray {
-        	/* background: #505050; */
-        	/* padding: 5px 10px; */
-        	margin: 10px 10px 0px 10px;
-        	color: ${config.colors.gold.hex};
-                    border-radius: 5px;
-
-        }
-
-        #tray menu {
-        	color: ${config.colors.gold.hex};
-                    border-radius: 5px;
-
-        }
-
-      '';
+        bold = "font-weight: 900;";
+      in let
+        prelude = ''
+                 *{
+                 		border:none;
+                         font-family: ${config.global-fonts.main-family};
+                         font-size: 15px;
+                         min-height: 20px;
+          ${radi0}
+                 	}
+        '';
+        language = ''
+          #language {
+            ${bg-base}
+            ${radi0}
+            ${fg-pine}
+            padding: 5px;
+            margin: 10px 10px 0px 10px;
+          }
+        '';
+        workspace-button = ''#workspaces button{ ${border-iris} ${fg-iris} ${bg-base} ${bold} padding: 5px; margin:5px 5px 0px 5px;}'';
+        workspace-button-active = ''#workspaces button.active {${border-gold} ${fg-gold}}'';
+        workspace-button-focused = ''#workspaces button.focused {${border-gold} ${fg-gold}}'';
+        workspace-button-occupied = ''#workspaces button.occupied {${border-foam}}'';
+        workspace-button-visible = ''#workspaces button.visible {${border-foam}}'';
+        window-waybar = ''window#waybar{ ${bg-transparent} ${radi0}}'';
+        tooltip = ''tooltip { ${bg-surface} }'';
+        tooltip-label = ''tooltip label{ ${fg-text} }'';
+        tags = ''#tags{ ${bg-transparent} ${radi0} padding:5px 5px 0px 5px;}'';
+        tags-button = ''#tags button{ ${bg-base}  ${fg-transparent} padding: 0px 5px; margin-right:5px; margin-left:5px;}'';
+        tags-button-occupied = "#tags button.occupied {${radi0} ${bg-base} ${bold} ${fg-iris}}";
+        tags-button-focused = "#tags button.focused {${radi0} ${bg-base} ${bold} ${fg-love}}";
+        tags-button-urgent = "#tags button.urgent {${radi0} ${bg-base} ${bold} ${fg-gold}}";
+        other-widgets = "#custom-date, #clock, #battery, #pulseaudio,#network,#custom-joljol {${fg-text} ${bg-base} ${bold} padding: 2.5px 15px; margin: 5px 5px 0px 0px;}";
+        clock = "#clock { ${fg-gold} ${border-gold}}";
+        network = "#network { ${fg-foam} ${border-foam}}";
+        bat = "#battery { ${fg-pine} ${border-pine}}";
+        batcharging = "#battery.charging{ ${fg-foam} ${border-foam}}";
+        bathundnotcharging = "#battery.hundred:not(.charging){ ${fg-pine} ${border-pine}}";
+        batnotcharging = "#battery:not(.charging){ ${fg-rose} ${border-rose}}";
+        bat30notcharging = "#battery.thirty:not(.charging){ ${fg-love} ${border-love}}";
+        pulse = "#pulseaudio {${radi0} ${border-iris} ${fg-iris}}";
+        pulsemuted = "#pulseaudio.muted {${radi0} ${border-love} ${fg-love}}";
+        tray = "#tray {${radi0} ${border-foam} margin: 10px 10px 0px 10px;}";
+        traymenu = "#traymenu {${radi0} }";
+      in
+        prelude
+        + language
+        + workspace-button
+        + workspace-button-focused
+        + workspace-button-active
+        + workspace-button-occupied
+        + workspace-button-visible
+        + window-waybar
+        + tooltip
+        + tooltip-label
+        + tags
+        + tags-button
+        + tags-button-occupied
+        + tags-button-focused
+        + tags-button-urgent
+        + other-widgets
+        + clock
+        + network
+        + bat
+        + batcharging
+        + bathundnotcharging
+        + batnotcharging
+        + bat30notcharging
+        + pulse
+        + pulsemuted
+        + tray
+        + traymenu;
     };
   };
 }

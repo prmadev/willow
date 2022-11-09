@@ -16,6 +16,7 @@ _: {
     #   # efiInstallAsRemovable = true;
     # };
   };
+  boot.extraModprobeConfig = "options btusb";
   boot.blacklistedKernelModules = [
     # Obscure network protocols
     "ax25"

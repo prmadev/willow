@@ -25,6 +25,7 @@ with lib; {
         # changing default behaviors
         confirm_os_window_close = 0;
         enable_audio_bell = false;
+        dynamic_background_opacity = false;
         allow_remote_control = true;
 
         # Default shell

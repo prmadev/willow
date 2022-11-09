@@ -49,6 +49,7 @@ with lib; {
       settings = {
         theme = "rp";
         editor = {
+          shell = ["zsh" "-c"];
           auto-format = true;
           completion-trigger-len = 1;
           line-number = "relative";
@@ -59,7 +60,7 @@ with lib; {
           bufferline = "always";
 
           lsp.display-messages = true;
-          file-picker.hidden = false;
+          file-picker.hidden = true;
           indent-guides = {
             render = true;
             character = "│";

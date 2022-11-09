@@ -16,7 +16,7 @@ with lib; {
   config = mkIf config.zsh.enable {
     programs.zsh = {
       enable = true;
-      # defaultKeymap = "viins";
+      defaultKeymap = "emacs";
       enableAutosuggestions = true;
       enableCompletion = true;
       enableSyntaxHighlighting = true;

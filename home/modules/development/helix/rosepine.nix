@@ -166,15 +166,16 @@
       modifiers = ["underlined"];
     };
     "diagnostic.info" = {
-      fg = config.colors.foam.hex;
-      modifiers = ["underlined"];
+      # modifiers = ["underlined"];
+      bg = config.colors.highlight-high.hex;
     };
     "diagnostic.warning" = {
-      fg = config.colors.gold.hex;
-      modifiers = ["underlined"];
+      #fg = config.colors.gold.hex;
+      # modifiers = ["underlined"];
+      bg = config.colors.highlight-high.hex;
     };
     "diagnostic.error" = {
-      bg = config.colors.highlight-low.hex;
+      bg = config.colors.highlight-high.hex;
     };
 
     "markup.heading.marker" = config.colors.subtle.hex;

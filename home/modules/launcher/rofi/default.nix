@@ -25,16 +25,16 @@ with lib; {
         "*" = {
           bg = mkLiteral config.colors.surface.hex;
           fg = mkLiteral config.colors.text.hex;
-          button = mkLiteral config.colors.pine.hex;
+          button = mkLiteral config.colors.surface.hex;
           background-color = mkLiteral config.colors.surface.hex;
           text-color = mkLiteral config.colors.text.hex;
         };
 
         window = {
-          border-radius = mkLiteral "5px";
+          border-radius = mkLiteral "0px";
           width = mkLiteral "20%";
           y-offset = mkLiteral "00px";
-          padding = mkLiteral "0px 00px 0px 0px";
+          padding = mkLiteral "0px 0px 0px 0px";
           location = 0;
         };
 
@@ -55,9 +55,11 @@ with lib; {
         inputbar = {
           children = map mkLiteral ["prompt" "entry"];
           background-color = mkLiteral config.colors.surface.hex;
-          text-color = mkLiteral config.colors.text.hex;
+          text-color = mkLiteral config.colors.gold.hex;
           expand = false;
-          border-radius = mkLiteral "5px";
+          border-radius = mkLiteral "0px";
+          border = mkLiteral "5px 1px 1px 5px solid";
+          border-color = mkLiteral config.colors.gold.hex;
           padding = mkLiteral "5px";
           font = "monospace Bold 10";
         };
@@ -78,7 +80,7 @@ with lib; {
 
         element = {
           orientation = mkLiteral "vertical";
-          border-radius = mkLiteral "5px";
+          border-radius = mkLiteral "0px";
           padding = mkLiteral "5px 5px 5px 5px";
           text-color = mkLiteral config.colors.subtle.hex;
           margin = mkLiteral "5px";
@@ -94,10 +96,12 @@ with lib; {
         };
 
         "element selected" = {
-          background-color = mkLiteral config.colors.pine.hex;
-          text-color = mkLiteral config.colors.surface.hex;
-          border-radius = mkLiteral "5px";
-          margin = mkLiteral "5px";
+          border = mkLiteral "5px 1px 1px 5px solid";
+          border-color = mkLiteral config.colors.pine.hex;
+          background-color = mkLiteral config.colors.surface.hex;
+          text-color = mkLiteral config.colors.pine.hex;
+          border-radius = mkLiteral "0px";
+          margin = mkLiteral "0px";
           font = "monospace Bold 10";
         };
       };

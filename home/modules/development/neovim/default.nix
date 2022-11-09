@@ -23,7 +23,15 @@ with lib; {
       stylua
       selene
       statix
+      gitlint
+      luajit
     ];
+    home.file = {
+      ".config/astronvim/lua/user" = {
+        source = ./user;
+        recursive = true;
+      };
+    };
     home.sessionVariables = {
       NEOVIDE_MULTIGRID = true;
     };
