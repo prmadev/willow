@@ -37,7 +37,7 @@ with lib; {
     syncthing.enable = true;
     music.enable = true;
     home.packages = with pkgs; [
-      # calibre
+      calibre
       mprocs # not a monitoring tool
       zola
     ];

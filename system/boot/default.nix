@@ -16,7 +16,7 @@ _: {
     #   # efiInstallAsRemovable = true;
     # };
   };
-  boot.extraModprobeConfig = "options btusb";
+  # boot.extraModprobeConfig = "options btusb";
   boot.blacklistedKernelModules = [
     # Obscure network protocols
     "ax25"
@@ -48,7 +48,6 @@ _: {
     "squashfs"
     "udf"
     "bluetooth"
-    "btusb"
     "uvcvideo" # webcam
     "hpfs"
     "jfs"
