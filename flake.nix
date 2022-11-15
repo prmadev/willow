@@ -11,6 +11,10 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixme = {
+      url = "github:amirography/nixme";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     ragenix = {
       url = "github:yaxitech/ragenix";
