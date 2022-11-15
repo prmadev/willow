@@ -1,7 +1,6 @@
-{
-  lib,
-  config,
-  ...
+{ lib
+, config
+, ...
 }:
 with lib; {
   imports = [
@@ -27,7 +26,7 @@ with lib; {
     alias.enable = true;
     bash.enable = true;
     doc.enable = true;
-    fish.enable = true;
+    fish.enable = false;
     fzf.enable = true;
     nu.enable = true;
     pager.enable = true;
