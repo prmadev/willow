@@ -34,7 +34,7 @@ with lib; {
       nixpkgs-lint
       inputs.nix-alien.packages.${system}.nix-alien
       # nix-index-update
-      inputs.nixme
+      inputs.nixme.out
     ];
 
     programs.nix-index.enable = true;
