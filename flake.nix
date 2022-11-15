@@ -114,15 +114,14 @@
     };
   };
 
-  outputs =
-    { nixpkgs
-    , home-manager
-    , ...
-    } @ inputs:
-    let
-      system = "x86_64-linux";
-      inherit (nixpkgs) lib;
-    in
+  outputs = {
+    nixpkgs,
+    home-manager,
+    ...
+  } @ inputs: let
+    system = "x86_64-linux";
+    inherit (nixpkgs) lib;
+  in
     with inputs; {
       nixosConfigurations = {
         nixer = lib.nixosSystem {
@@ -131,7 +130,7 @@
             (import ./style)
             ragenix.nixosModules.age
             {
-              age.identityPaths = [ "/home/a/keys/id_ed25519" ];
+              age.identityPaths = ["/home/a/keys/id_ed25519"];
               age.secrets.bwid = {
                 file = ./secrets/bwid.age;
               };

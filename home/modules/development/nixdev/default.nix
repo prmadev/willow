@@ -1,8 +1,9 @@
-{ pkgs
-, lib
-, config
-, inputs
-, ...
+{
+  pkgs,
+  lib,
+  config,
+  inputs,
+  ...
 }:
 with lib; {
   options = {
@@ -34,7 +35,7 @@ with lib; {
       nixpkgs-lint
       inputs.nix-alien.packages.${system}.nix-alien
       # nix-index-update
-      inputs.nixme.packages.${system}.default
+      inputs.nixme.packages.${system}.nixme
     ];
 
     programs.nix-index.enable = true;

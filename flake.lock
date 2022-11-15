@@ -729,11 +729,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1668512419,
-        "narHash": "sha256-aAzntsuy51oa1eejDLCW/QqZHCoiiG1nF2Hcxw400Lc=",
+        "lastModified": 1668519231,
+        "narHash": "sha256-a40VVJwJsa26Z/qxs0uMs4fMo1hH4WYDhnTlJT0x83E=",
         "owner": "amirography",
         "repo": "nixme",
-        "rev": "8ef1d1d4a8278ddbe780ab9d464ecfdb3116526b",
+        "rev": "7f6b198015a6f9582c7b84ebdbd5d66b87b728a7",
         "type": "github"
       },
       "original": {
