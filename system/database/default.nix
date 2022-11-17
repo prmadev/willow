@@ -19,10 +19,11 @@ with lib; {
       # gobang
     ];
     services.postgresql = {
-      enable = true;
+      enable = false;
 
       enableTCPIP = true;
       port = 5432;
+      package = pkgs.postgresql_15;
 
       authentication = "host all all 10.233.0.0/16 trust";
       ensureUsers = [
@@ -37,7 +38,6 @@ with lib; {
           name = "a";
           ensurePermissions = {
             "ALL TABLES IN SCHEMA public" = "ALL PRIVILEGES";
-
             "DATABASE work" = "ALL PRIVILEGES";
           };
         }
