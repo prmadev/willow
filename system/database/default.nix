@@ -23,7 +23,7 @@ with lib; {
 
       enableTCPIP = true;
       port = 5432;
-      package = pkgs.postgresql_15;
+      # package = pkgs.postgresql_15;
 
       authentication = "host all all 10.233.0.0/16 trust";
       ensureUsers = [
