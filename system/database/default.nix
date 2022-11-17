@@ -37,7 +37,7 @@ with lib; {
         {
           name = "a";
           ensurePermissions = {
-            "ALL TABLES IN SCHEMA public" = "ALL PRIVILEGES";
+            # "ALL TABLES IN SCHEMA public" = "ALL PRIVILEGES";
             "DATABASE work" = "ALL PRIVILEGES";
           };
         }
