@@ -1,8 +1,7 @@
-{
-  config,
-  pkgs,
-  lib,
-  ...
+{ config
+, pkgs
+, lib
+, ...
 }:
 with lib; {
   options = {
@@ -21,7 +20,7 @@ with lib; {
 
     # services.pgadmin.enable = true;
     services.postgresql = {
-      enable = true;
+      enable = false;
       port = 5432;
       ensureUsers = [
         {
