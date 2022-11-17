@@ -19,7 +19,7 @@ with lib; {
       # gobang
     ];
     services.postgresql = {
-      enable = false;
+      enable = true;
 
       enableTCPIP = true;
       port = 5432;
