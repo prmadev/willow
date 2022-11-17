@@ -1,7 +1,8 @@
-{ config
-, pkgs
-, lib
-, ...
+{
+  config,
+  pkgs,
+  lib,
+  ...
 }:
 with lib; {
   options = {
@@ -19,31 +20,39 @@ with lib; {
     ];
 
     # services.pgadmin.enable = true;
-    services.postgresql = {
-      enable = false;
-      port = 5432;
-      ensureUsers = [
-        {
-          name = "superuser";
-          ensurePermissions = {
-            "ALL TABLES IN SCHEMA public" = "ALL PRIVILEGES";
-          };
-        }
-        {
-          name = "a";
-          ensurePermissions = {
-            "ALL TABLES IN SCHEMA public" = "ALL PRIVILEGES";
-          };
-        }
-      ];
-      # ensureDatabases = [
-      #   "work"
-      # ];
+    containers.database = {
+      config = {
+        config,
+        pkgs,
+        ...
+      }: {
+        services.postgresql = {
+          enable = true;
+          port = 5432;
+          ensureUsers = [
+            {
+              name = "superuser";
+              ensurePermissions = {
+                "ALL TABLES IN SCHEMA public" = "ALL PRIVILEGES";
+              };
+            }
+            {
+              name = "a";
+              ensurePermissions = {
+                "ALL TABLES IN SCHEMA public" = "ALL PRIVILEGES";
+              };
+            }
+          ];
+          ensureDatabases = [
+            "work"
+          ];
+        };
+
+        services.pgadmin.initialEmail = "amirhossein.alesheikh@gmail.com";
+
+        services.pgadmin.initialPasswordFile = ./enter;
+      };
     };
-
-    services.pgadmin.initialEmail = "amirhossein.alesheikh@gmail.com";
-
-    services.pgadmin.initialPasswordFile = ./enter;
     # services.pgadmin.
   };
 }
