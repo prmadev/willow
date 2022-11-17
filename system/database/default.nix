@@ -26,20 +26,29 @@ with lib; {
         pkgs,
         ...
       }: {
+        networking.firewall.allowedTCPPorts = [5432];
         services.postgresql = {
           enable = true;
+
+          enableTCPIP = true;
           port = 5432;
+
+          authentication = "host all all 10.233.0.0/16 trust";
           ensureUsers = [
             {
               name = "superuser";
               ensurePermissions = {
                 "ALL TABLES IN SCHEMA public" = "ALL PRIVILEGES";
+                "DATABASE work" = "ALL PRIVILEGES";
               };
             }
             {
               name = "a";
               ensurePermissions = {
                 "ALL TABLES IN SCHEMA public" = "ALL PRIVILEGES";
+
+                "DATABASE a" = "ALL PRIVILEGES";
+                "DATABASE work" = "ALL PRIVILEGES";
               };
             }
           ];
