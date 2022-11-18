@@ -80,7 +80,7 @@
     };
 
     # "ui.virtual.whitespace" = {bg = config.colors.love.hex;};
-    "ui.virtual.indent-guide" = {fg = config.colors.foam.hex;};
+    "ui.virtual.indent-guide" = {fg = config.colors.subtle.hex;};
     "ui.popup" = {bg = config.colors.surface.hex;};
     "ui.popup.info" = {bg = config.colors.surface.hex;};
     "ui.window" = {
