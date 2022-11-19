@@ -14,7 +14,6 @@ with lib; {
       enable = true;
       package = pkgs.picom-next;
       backend = "xr_glx_hybrid";
-      experimentalBackends = true;
       vSync = true;
     };
   };
