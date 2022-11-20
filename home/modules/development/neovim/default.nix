@@ -40,6 +40,11 @@ with lib; {
           enable = true;
         };
 
+        # notification
+        notify = {
+          enable = true;
+        };
+
         floaterm = {
           enable = true;
           autoInsert = true;
@@ -51,6 +56,7 @@ with lib; {
         };
 
         # --- cmp
+        nvim-cmp.enable = true;
         cmp-nvim-lsp.enable = true;
         cmp-dap.enable = true;
         cmp-nvim-lsp-document-symbol.enable = true;
@@ -62,6 +68,7 @@ with lib; {
 
         # --- editing
         comment-nvim.enable = true;
+        nvim-autopairs.enable = true;
 
         # lsp
         lsp = {
@@ -76,9 +83,20 @@ with lib; {
           };
         };
 
+        # formatting
+        null-ls = {
+          enable = true;
+          sources.formatting = {
+            alejandra.enable = true;
+            prettier.enable = true;
+          };
+        };
+
         # --- language speciifc
         # rust
         crates-nvim.enable = true;
+        # nix
+        nix.enable = true;
       };
     };
 
