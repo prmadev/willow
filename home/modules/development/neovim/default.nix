@@ -15,6 +15,11 @@ with lib; {
   config = mkIf config.neovim.enable {
     programs.nixvim = {
       enable = true;
+      # colorscheme = "rose-pine";
+      colorschemes = {
+        gruvbox.enable = true;
+        gruvbox.bold = true;
+      };
     };
 
     home.packages = with pkgs; [
@@ -24,19 +29,12 @@ with lib; {
       python310Packages.pip
       neovide
       plocate
-      neovim
       stylua
       selene
       statix
       gitlint
       luajit
     ];
-    home.file = {
-      ".config/astronvim/lua/user" = {
-        source = ./user;
-        recursive = true;
-      };
-    };
     home.sessionVariables = {
       NEOVIDE_MULTIGRID = true;
     };
