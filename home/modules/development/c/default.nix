@@ -14,6 +14,7 @@ with lib; {
   config = mkIf config.c.enable {
     home.packages = with pkgs; [
       gcc
+      # clang
       cmake
       pkg-config
       openssl_3

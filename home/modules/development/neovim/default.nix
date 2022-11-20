@@ -11,7 +11,12 @@ with lib; {
       default = false;
     };
   };
+
   config = mkIf config.neovim.enable {
+    programs.nixvim = {
+      enable = true;
+    };
+
     home.packages = with pkgs; [
       wget
       luarocks

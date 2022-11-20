@@ -22,15 +22,18 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    nixvim.url = "github:pta2002/nixvim";
+    nixvim.inputs.nixpkgs.follows = "nixpkgs";
+
     hyprland = {
       url = "github:hyprwm/hyprland";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    hyprland-contrib = {
-      url = "github:hyprwm/contrib";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # hyprland-contrib = {
+    #   url = "github:hyprwm/contrib";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
 
     zellij = {
       url = "github:zellij-org/zellij";
@@ -127,21 +130,31 @@
         nixer = lib.nixosSystem {
           inherit system;
           modules = [
+            # importing style defnitions
             (import ./style)
+
+            # ragenix module to provide encryption and secret keeping inside the flake
             ragenix.nixosModules.age
             {
               age.identityPaths = ["/home/a/keys/id_ed25519"];
               age.secrets.bwid = {
                 file = ./secrets/bwid.age;
               };
-
               age.secrets.bwsec = {
                 file = ./secrets/bwsec.age;
               };
             }
+
+            # importing system configurations
             ./system
 
+            # importing nixvim modules
+            # inputs.nixvim.nixosModules.nixvim
+
+            # importing hyprland module
             inputs.hyprland.nixosModules.default
+
+            #importing home-manager module
             home-manager.nixosModules.home-manager
             {
               home-manager.useGlobalPkgs = true; # uses the packages that comes with nix not home-manager.
@@ -154,6 +167,7 @@
                 imports = [
                   ./home
                   # inputs.nix-ld.nixosModules.nix-ld
+                  inputs.nixvim.homeManagerModules.nixvim
                   inputs.hyprland.homeManagerModules.default
                 ];
               };
