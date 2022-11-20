@@ -45,18 +45,42 @@ with lib; {
           enable = true;
         };
 
+        # telescope
+        telescope = {
+          enable = true;
+        };
+
+        # file-tree
+        nvim-tree = {
+          enable = true;
+          diagnostics.enable = true;
+          git.enable = true;
+          hijackNetrw = true;
+          updateCwd = true;
+          updateFocusedFile.enable = true;
+          updateToBufDir.enable = true;
+        };
+        # terminal
         floaterm = {
           enable = true;
           autoInsert = true;
           shell = "${pkgs.zsh}/bin/zsh";
         };
 
+        # gutter
         gitgutter = {
           enable = true;
         };
 
         # --- cmp
-        nvim-cmp.enable = true;
+        nvim-cmp = {
+          enable = true;
+          snippet.expand = ''
+            function(args)
+               require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
+            end
+          '';
+        };
         cmp-nvim-lsp.enable = true;
         cmp-dap.enable = true;
         cmp-nvim-lsp-document-symbol.enable = true;
@@ -69,6 +93,12 @@ with lib; {
         # --- editing
         comment-nvim.enable = true;
         nvim-autopairs.enable = true;
+        undotree.enable = true;
+
+        treesitter = {
+          enable = true;
+          nixGrammars = true;
+        };
 
         # lsp
         lsp = {
