@@ -13,13 +13,18 @@ with lib; {
   };
 
   config = mkIf config.neovim.enable {
+    # NixVim
     programs.nixvim = {
+      # enabling the whole thing
       enable = true;
-      # colorscheme = "rose-pine";
-      colorschemes = {
-        gruvbox.enable = true;
-        gruvbox.bold = true;
-      };
+
+      # color settings
+      colorscheme = "rose-pine";
+
+      # plugins to have
+      extraPlugins = with pkgs.vimPlugins; [
+        rose-pine
+      ];
     };
 
     home.packages = with pkgs; [
