@@ -24,6 +24,7 @@ with lib; {
       # --- plugins to have --- #
       extraPlugins = with pkgs.vimPlugins; [
         rose-pine
+        rust-tools-nvim
       ];
 
       # --- plugins --- #
