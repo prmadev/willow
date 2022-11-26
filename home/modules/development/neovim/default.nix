@@ -16,7 +16,7 @@ with lib; {
     # NixVim
     programs.nixvim = {
       # --- enabling the whole thing --- #
-      enable = true;
+      enable = false;
 
       # --- color settings ---#
       colorscheme = "rose-pine";
@@ -140,6 +140,7 @@ with lib; {
       plocate
       stylua
       selene
+      neovim
       statix
       gitlint
       luajit

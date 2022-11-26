@@ -23,9 +23,9 @@ with lib; {
       imagemagick
       imv
       viu
-      vhs
+      # vhs
       # ffmpeg_5-full
-      rx
+      # rx
     ];
   };
 }

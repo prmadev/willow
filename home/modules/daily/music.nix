@@ -14,7 +14,7 @@ with lib; {
 
   config = mkIf config.music.enable {
     services.mpd = {
-      enable = true;
+      enable = false;
       musicDirectory = /home/a/Music;
       # network.startWhenNeeded = true;
       network.port = 6601;
