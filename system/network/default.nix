@@ -28,6 +28,7 @@ _: {
   environment.variables = {
     NIX_CURL_FLAGS = "";
   };
+
   services.openssh.enable = true;
 
   networking.wireguard = {
