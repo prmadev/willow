@@ -33,6 +33,9 @@ in
         v2ray-geoip
         shadowsocks-v2ray-plugin
         tunctl
+        tor
+        torsocks
+        qv2ray
       ];
 
       # home.file = {
