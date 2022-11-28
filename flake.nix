@@ -16,6 +16,10 @@
       url = "github:amirography/nixme";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nur = {
+      url = "github:nix-community/NUR";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     ragenix = {
       url = "github:yaxitech/ragenix";
@@ -130,6 +134,7 @@
         nixer = lib.nixosSystem {
           inherit system;
           modules = [
+            nur.nixosModules.nur
             # importing style defnitions
             (import ./style)
 
