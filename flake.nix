@@ -134,6 +134,11 @@
         nixer = lib.nixosSystem {
           inherit system;
           modules = [
+            {
+              nixpkgs.overlays = [
+                nur.overlay
+              ];
+            }
             nur.nixosModules.nur
             # importing style defnitions
             (import ./style)

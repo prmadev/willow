@@ -36,6 +36,7 @@ in
         tor
         torsocks
         qv2ray
+        sshuttle
       ];
 
       # home.file = {

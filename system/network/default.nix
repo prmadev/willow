@@ -5,10 +5,15 @@ _: {
     unmanaged = ["docker0" "rndis0"];
   };
 
+  services.https-dns-proxy = {
+    enable = true;
+  };
   services.tor = {
     # i want this as system level, because I need it for circumventing gitlab's sanctions.
     # enable = true;
     client.enable = true;
+    client.transparentProxy.enable = true;
+    client.dns.enable = true;
   };
   #  networking.proxy.default = "127.0.0.1:1080";
   # networking.useDHCP = false;
@@ -25,7 +30,6 @@ _: {
   };
   services.openssh.enable = true;
 
-  services.tor.client.transparentProxy.enable = true;
   networking.wireguard = {
     # enable = true;
   };
