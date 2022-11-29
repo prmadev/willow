@@ -113,7 +113,7 @@ with lib; {
                --uc-show-tab-separators: none;
                --uc-tab-separators-color: none;
                --uc-tab-separators-width: none;
-               --uc-tab-fg-color: #9BCED7;
+               --uc-tab-fg-color: ${config.colors.base.hex};
                --autocomplete-popup-background: var(--mff-bg) !important;
                --default-arrowpanel-background: var(--mff-bg) !important;
                --default-arrowpanel-color: #fefefa !important;
@@ -133,7 +133,7 @@ with lib; {
                --mff-tab-font-weight: 400;
                --mff-tab-height: 32px;
                --mff-tab-pinned-bg: #9BCED7;
-               --mff-tab-selected-bg: #403C58;
+               --mff-tab-selected-bg: ${config.colors.pine.hex};
                --mff-tab-soundplaying-bg: #9c89b8;
                --mff-urlbar-color: #98c1d9;
                --mff-urlbar-focused-color: #403C58;
@@ -147,6 +147,9 @@ with lib; {
                --mff-urlbar-results-url-color: #98c1d9;
              }
 
+            .tab-background {
+              border-radius: 0px;
+            }
              #back-button > .toolbarbutton-icon{
                --backbutton-background: transparent !important;
                border: none !important;
