@@ -135,7 +135,7 @@ with lib; {
                --mff-tab-pinned-bg: #9BCED7;
                --mff-tab-selected-bg: ${config.colors.pine.hex};
                --mff-tab-soundplaying-bg: #9c89b8;
-               --mff-urlbar-color: #98c1d9;
+               --mff-urlbar-color: ${config.colors.base.hex}!important;
                --mff-urlbar-focused-color: #403C58;
                --mff-urlbar-font-family: "ComicCodeLigatures Nerd Font";
                --mff-urlbar-font-size: 11pt;
