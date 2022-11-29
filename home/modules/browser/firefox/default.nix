@@ -69,7 +69,7 @@ with lib; {
           '';
           isDefault = true;
           settings = {
-            "browser.startup.homepage" = "https://nixos.org";
+            "browser.startup.homepage" = "https://fosstodon.org";
 
             # --- UI
             "browser.search.separatePrivateDefault.urlbarResult.enabled" = false;
@@ -107,12 +107,12 @@ with lib; {
           userChrome = ''
               #fullscr-toggler { background-color: rgba(0, 0, 0, 0) !important; }
              :root {
-               --uc-bg-color: #1F1D29;
+               --uc-bg-color: ${config.colors.base.hex};
                --uc-show-new-tab-button: none;
                --uc-show-tab-separators: none;
                --uc-tab-separators-color: none;
                --uc-tab-separators-width: none;
-               --uc-tab-fg-color: #9BCED7;
+               --uc-tab-fg-color: ${config.colors.text.hex};
                --autocomplete-popup-background: var(--mff-bg) !important;
                --default-arrowpanel-background: var(--mff-bg) !important;
                --default-arrowpanel-color: #fefefa !important;
@@ -322,7 +322,7 @@ with lib; {
             .wordmark {fill: #201841 !important;}
             .SnippetBaseContainer {background-color: var(--light_color2) !important;
               color: var(--other_color3) !important;}
-            .ASRouterButton {border-radius: 3px !important;}
+            .ASRouterButton {border-radius: 0px !important;}
             /*Dark*/
             html:not(#ublock0-epicker)[lwt-newtab-brighttext],
             html:not(#ublock0-epicker) body[lwt-newtab-brighttext],
@@ -332,7 +332,7 @@ with lib; {
             [lwt-newtab-brighttext] .wordmark {fill: #fefafe !important;}
             [lwt-newtab-brighttext] .SnippetBaseContainer {background-color: var(--dark_color2) !important;
               color: var(--word_color3) !important;}
-            [lwt-newtab-brighttext] .ASRouterButton {border-radius: 3px !important;}
+            [lwt-newtab-brighttext] .ASRouterButton {border-radius: 0px !important;}
             }
 
             /*================== SEARCH BAR ==================*/
@@ -397,7 +397,7 @@ with lib; {
                 background: var(--base_color1);
               }
               toolbar > reader-toolbar {
-                border-radius: 3px !important;
+                border-radius: 0px !important;
               }
 
             /*Dark*/
