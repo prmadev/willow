@@ -149,11 +149,11 @@ with lib; {
              }
 
             #TabsToolbar #firefox-view-button[open] > .toolbarbutton-icon, .tab-background:is([selected], [multiselected]) {
-              background-color: ${config.colors.pine.hex};
+              background-color: ${config.colors.pine.hex}!important;
             }
 
             .tab-background {
-              border-radius: 0px;
+              border-radius: 0px!important;
             }
              #back-button > .toolbarbutton-icon{
                --backbutton-background: transparent !important;
