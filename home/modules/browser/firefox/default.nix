@@ -147,6 +147,10 @@ with lib; {
                --mff-urlbar-results-url-color: #98c1d9;
              }
 
+            #TabsToolbar #firefox-view-button[open] > .toolbarbutton-icon, .tab-background:is([selected], [multiselected]) {
+              background-color: ${config.colors.pine.hex};
+            }
+
             .tab-background {
               border-radius: 0px;
             }
