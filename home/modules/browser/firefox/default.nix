@@ -74,6 +74,10 @@ with lib; {
             # --- UI
             "browser.search.separatePrivateDefault.urlbarResult.enabled" = false;
 
+            # --- pocket
+            "browser.newtabpage.activity-stream.section.highlights.includePocket" = false;
+            "extensions.pocket.enabled" = false;
+
             # --- newtab
             "browser.newtabpage.activity-stream.feeds.topsites" = false;
             "browser.newtabpage.activity-stream.showSearch" = false;
@@ -88,6 +92,7 @@ with lib; {
             "browser.newtabpage.activity-stream.telemetry" = false;
             "browser.ping-centre.telemetry" = false;
             "network.trr.confirmation_telemetry_enabled" = false;
+
             # --- to avoid location personalization which I hate
             "browser.search.region" = "US";
             "browser.search.isUS" = true;
