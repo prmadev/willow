@@ -148,6 +148,10 @@ with lib; {
                --tab-border-radius: 0px;
              }
 
+            #urlbar-input, #urlbar-scheme, .searchbar-textbox{
+              color: ${config.colors.text.hex};
+
+            }
             #TabsToolbar #firefox-view-button[open] > .toolbarbutton-icon, .tab-background:is([selected], [multiselected]) {
               background-color: ${config.colors.pine.hex}!important;
             }
