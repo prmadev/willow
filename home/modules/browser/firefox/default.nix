@@ -74,6 +74,7 @@ with lib; {
             # --- UI
             "browser.search.separatePrivateDefault.urlbarResult.enabled" = false;
             "devtools.theme" = "dark";
+            "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
 
             # --- pocket
             "browser.newtabpage.activity-stream.section.highlights.includePocket" = false;
