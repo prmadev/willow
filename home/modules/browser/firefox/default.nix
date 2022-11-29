@@ -145,6 +145,7 @@ with lib; {
                --mff-urlbar-results-font-size: 11pt;
                --mff-urlbar-results-font-weight: 700;
                --mff-urlbar-results-url-color: #98c1d9;
+               --tab-border-radius: 0px;
              }
 
             #TabsToolbar #firefox-view-button[open] > .toolbarbutton-icon, .tab-background:is([selected], [multiselected]) {
