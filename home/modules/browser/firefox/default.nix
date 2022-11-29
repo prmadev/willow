@@ -107,7 +107,7 @@ with lib; {
           userChrome = ''
               #fullscr-toggler { background-color: rgba(0, 0, 0, 0) !important; }
              :root {
-               --uc-bg-color: #1F1D29;
+               --uc-bg-color: ${config.colors.gold.hex};
                --uc-show-new-tab-button: none;
                --uc-show-tab-separators: none;
                --uc-tab-separators-color: none;
