@@ -107,12 +107,12 @@ with lib; {
           userChrome = ''
               #fullscr-toggler { background-color: rgba(0, 0, 0, 0) !important; }
              :root {
-               --uc-bg-color: ${config.colors.base.hex};
+               --uc-bg-color: #${config.colors.base.hex}!important;
                --uc-show-new-tab-button: none;
                --uc-show-tab-separators: none;
                --uc-tab-separators-color: none;
                --uc-tab-separators-width: none;
-               --uc-tab-fg-color: ${config.colors.text.hex};
+               --uc-tab-fg-color: #${config.colors.text.hex}!important;
                --autocomplete-popup-background: var(--mff-bg) !important;
                --default-arrowpanel-background: var(--mff-bg) !important;
                --default-arrowpanel-color: #fefefa !important;
