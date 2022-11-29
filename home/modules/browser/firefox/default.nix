@@ -153,7 +153,7 @@ with lib; {
               height: 1.5em;
             }
             #urlbar-input, #urlbar-scheme, .searchbar-textbox{
-              color: ${config.colors.text.hex};
+              color: ${config.colors.text.hex}!important;
             }
             #TabsToolbar #firefox-view-button[open] > .toolbarbutton-icon, .tab-background:is([selected], [multiselected]) {
               background-color: ${config.colors.pine.hex}!important;
