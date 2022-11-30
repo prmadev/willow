@@ -45,8 +45,10 @@ with lib; {
           	  blurls=paper
               blur= false
            	  drop_shadow=true
-              shadow_range=15
-              shadow_render_power=1
+              shadow_range=10
+              shadow_offset=10 10
+              shadow_scale=1.0
+              shadow_render_power=0
               col.shadow=0xffeb6f92
            }
         '';
