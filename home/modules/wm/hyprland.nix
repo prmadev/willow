@@ -23,7 +23,7 @@ with lib; {
           general {
               main_mod=SUPER
               gaps_in=5
-              gaps_out=5
+              gaps_out=10
               border_size=1
               layout=master
               col.active_border=0xfff6c177
