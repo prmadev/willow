@@ -47,7 +47,7 @@ with lib; {
            	  drop_shadow=true
               shadow_range=15
               shadow_render_power=1
-              col.shadow=rgb(235,111,146)
+              col.shadow=0xffeb6f92
            }
         '';
         animation = ''
