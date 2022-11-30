@@ -44,10 +44,10 @@ with lib; {
               multisample_edges= false
           	  blurls=paper
               blur= false
-           	  drop_shadow=false
-              shadow_range=5
-              shadow_render_power=2
-              col.shadow=0xff191724
+           	  drop_shadow=true
+              shadow_range=15
+              shadow_render_power=1
+              col.shadow=rgb(235,111,146)
            }
         '';
         animation = ''
