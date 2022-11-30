@@ -28,7 +28,7 @@ with lib; {
     compression.enable = true;
     filesearch.enable = true;
     nnn.enable = true;
-    office.enable = false;
+    office.enable = true;
     mpv.enable = true;
     pdf.enable = true;
     rename.enable = true;

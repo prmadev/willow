@@ -28,7 +28,6 @@ with lib; {
   config = mkIf config.daily.enable {
     communication.enable = true;
     exercism.enable = true;
-    favo.enable = false;
     graphical.enable = true;
     task.enable = false;
     hoard.enable = false;
