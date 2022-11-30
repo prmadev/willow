@@ -46,10 +46,11 @@ with lib; {
               blur= false
            	  drop_shadow=true
               shadow_range=10
-              shadow_offset=10 10
+              shadow_offset=10 -10
               shadow_scale=1.0
-              shadow_render_power=0
+              shadow_render_power=4
               col.shadow=0xffeb6f92
+              col.shadow_inactive=0x00000000
            }
         '';
         animation = ''
