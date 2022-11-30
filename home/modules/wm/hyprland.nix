@@ -24,7 +24,7 @@ with lib; {
               main_mod=SUPER
               gaps_in=5
               gaps_out=5
-              border_size=5
+              border_size=1
               layout=master
               col.active_border=0xfff6c177
               col.inactive_border=0xff191724
@@ -46,10 +46,10 @@ with lib; {
               blur= false
            	  drop_shadow=true
               shadow_range=10
-              shadow_offset=10 -10
+              shadow_offset=-10 -10
               shadow_scale=1.0
               shadow_render_power=4
-              col.shadow=0xffeb6f92
+              col.shadow=0xfff6c177
               col.shadow_inactive=0x00000000
            }
         '';
