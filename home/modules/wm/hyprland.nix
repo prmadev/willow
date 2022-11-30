@@ -45,8 +45,8 @@ with lib; {
           	  blurls=paper
               blur= false
            	  drop_shadow=true
-              shadow_range=10
-              shadow_offset=-10 -10
+              shadow_range=05
+              shadow_offset=-5 -5
               shadow_scale=1.0
               shadow_render_power=4
               col.shadow=0xfff6c177
