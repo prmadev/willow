@@ -140,7 +140,7 @@ with lib; {
                --mff-urlbar-font-family: "ComicCodeLigatures Nerd Font";
                --mff-urlbar-font-size: 11pt;
                --mff-urlbar-font-weight: 700;
-               --mff-urlbar-results-color: #F1CA93;
+               --mff-urlbar-results-color: ${config.colors.text.hex};
                --mff-urlbar-results-font-family: "ComicCodeLigatures Nerd Font";
                --mff-urlbar-results-font-size: 11pt;
                --mff-urlbar-results-font-weight: 700;
