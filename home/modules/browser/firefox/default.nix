@@ -151,6 +151,13 @@ with lib; {
               border-radius: 0px!important;
             }
 
+            menupopup,
+            menupopup menuitem,
+            menupopup menu,
+            menupopup menuseparator {
+              background-color: ${config.colors.overlay.hex}!important;
+            }
+
             .tab-text.tab-label {
               color: ${config.colors.muted.hex}!important;
             }
