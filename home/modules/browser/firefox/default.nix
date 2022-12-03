@@ -151,6 +151,9 @@ with lib; {
               border-radius: 0px!important;
             }
 
+            menu,
+            menuitem,
+            menucaption
             menupopup,
             menupopup menuitem,
             menupopup menu,
