@@ -105,7 +105,7 @@ with lib; {
           };
 
           userChrome = ''
-              #fullscr-toggler { background-color: rgba(0, 0, 0, 0) !important; }
+             #fullscr-toggler { background-color: rgba(0, 0, 0, 0) !important; }
              :root {
                --toolbarbutton-border-radius: 0px;
                --uc-bg-color: ${config.colors.base.hex};
@@ -147,7 +147,13 @@ with lib; {
                --mff-urlbar-results-url-color: #98c1d9;
                --tab-border-radius: 0px;
              }
+            * {
+              border-radius: 0px!important;
+            }
 
+            .tab-text.tab-label {
+              color: ${config.colors.muted.hex}!important;
+            }
 
             #tabbrowser-tabs:not([secondarytext-unsupported]) .tab-label-container{
               height: 1.5em;
