@@ -153,7 +153,7 @@ with lib; {
 
             menu,
             menuitem,
-            menucaption
+            menucaption,
             menupopup,
             menupopup menuitem,
             menupopup menu,
