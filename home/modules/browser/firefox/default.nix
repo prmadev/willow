@@ -163,7 +163,7 @@ with lib; {
             }
             #TabsToolbar #firefox-view-button[open] > .toolbarbutton-icon, .tab-background:is([selected], [multiselected]) {
               border: 2px solid  ${config.colors.pine.hex}!important;
-              background-color:   ${config.colors.overlay.hex}!important;
+              background-color:   ${config.colors.base.hex}!important;
               filter: drop-shadow(-5px -5px 0px ${config.colors.pine.hex});
             }
 
