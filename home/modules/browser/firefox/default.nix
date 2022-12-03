@@ -240,9 +240,6 @@ with lib; {
              #urlbar-container {
                margin-left: 3vw !important;
              }
-             .tab-text.tab-label {
-               color: var(--uc-tab-fg-color) !important;
-             }
              #navigator-toolbox {
                border-bottom: 0px solid #ea6f91 !important;
                background: var(--uc-bg-color) !important;
