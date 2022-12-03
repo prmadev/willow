@@ -144,7 +144,7 @@ with lib; {
                --mff-urlbar-results-font-family: "ComicCodeLigatures Nerd Font";
                --mff-urlbar-results-font-size: 11pt;
                --mff-urlbar-results-font-weight: 700;
-               --mff-urlbar-results-url-color: #98c1d9;
+               --mff-urlbar-results-url-color: ${config.colors.text.hex};
                --tab-border-radius: 0px;
              }
             * {
