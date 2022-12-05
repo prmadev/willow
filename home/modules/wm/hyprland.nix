@@ -30,13 +30,15 @@ with lib; {
               col.inactive_border=0xff191724
           }
         '';
+
         exec = ''
           exec-once=dbus-update-activation-environment --systemd WAYLAND_DISPLAY DISPLAY HYPRLAND_INSTANCE_SIGNATURE
           exec-once=systemctl --user start hyprland-session.target
-          #exec= swaybg -i "/home/a/.config/wallpaper"
-          exec=hyprpaper
+          # exec= swaybg -i "/home/a/.config/wallpaper"
+          exec= swww init && swww img ~/Downloads/sky.gif
+          # exec=hyprpaper
           exec-once= wh
-          exec-once=  cat ~/vmess.json | v2ray run
+          # exec-once=  cat ~/vmess.json | v2ray run
         '';
         decoration = ''
           decoration {
@@ -95,8 +97,8 @@ with lib; {
           running = ''
             bind=SUPER,RETURN,exec,kitty
             bind=SUPER,d,exec,rofi -show
-            bind=SUPER,SPACE,exec,hyprctl keyword input:kb_layout us
-            bind=SUPERALT,SPACE,exec,hyprctl keyword input:kb_layout ir
+            bind=SUPER,ظ,exec,hyprctl keyword input:kb_layout us
+            bind=SUPER,z,exec,hyprctl keyword input:kb_layout ir
             bind=,XF86MonBrightnessDown, exec, brightnessctl s 10%-
             bind=,XF86MonBrightnessUp, exec, brightnessctl s 10%+
             binde=,XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
