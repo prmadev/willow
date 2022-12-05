@@ -97,8 +97,8 @@ with lib; {
           running = ''
             bind=SUPER,RETURN,exec,kitty
             bind=SUPER,d,exec,rofi -show
-            bind=SUPER,ظ,exec,hyprctl keyword input:kb_layout us
-            bind=SUPER,z,exec,hyprctl keyword input:kb_layout ir
+            bind=SUPERSHIFT,SPACE,XF86MonBrightnessDown,exec,hyprctl keyword input:kb_layout us
+            bind=SUPERS,SPACE,exec,hyprctl keyword input:kb_layout ir
             bind=,XF86MonBrightnessDown, exec, brightnessctl s 10%-
             bind=,XF86MonBrightnessUp, exec, brightnessctl s 10%+
             binde=,XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
