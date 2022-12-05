@@ -35,6 +35,7 @@ with lib; {
     xdgconf.enable = true;
     brootFile.enable = true;
     home.packages = with pkgs; [
+      jql
       trashy
     ];
   };
