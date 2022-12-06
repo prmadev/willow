@@ -23,6 +23,7 @@ with lib; {
         cargo-temp
         cargo-sort
         cargo-sweep
+        cargo-audit
         cargo-auditable
         cargo-tarpaulin
         cargo-semver-checks
