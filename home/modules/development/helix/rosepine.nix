@@ -18,6 +18,12 @@
       modifiers = ["reversed" "dim"];
     };
 
+    "ui.cursorline.primary" = {
+      bg = config.colors.overlay.hex;
+    };
+    "ui.cursorcolumn.primary" = {
+      bg = config.colors.overlay.hex;
+    };
     "ui.menu" = {
       fg = config.colors.text.hex;
       bg = config.colors.surface.hex;

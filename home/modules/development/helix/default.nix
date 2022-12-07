@@ -55,6 +55,7 @@ with lib; {
           line-number = "relative";
           color-modes = true;
           cursorline = true;
+          cursorcolumn = true;
           idle-timeout = 0;
           auto-pairs = true;
           bufferline = "always";
