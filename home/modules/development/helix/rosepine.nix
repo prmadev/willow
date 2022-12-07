@@ -115,27 +115,30 @@
     "attributes" = config.colors.gold.hex;
     "type" = config.colors.rose.hex;
     "string" = {
-      bg = config.colors.gold.hex;
+      fg = config.colors.gold.hex;
       modifiers = ["italic"];
     };
     "property" = config.colors.foam.hex;
 
-    "function" = config.colors.rose.hex;
+    "function" = config.colors.text.hex;
     "function.builtin" = config.colors.rose.hex;
-    "function.method" = config.colors.rose.hex;
+    "function.method" = config.colors.text.hex;
     "constructor" = config.colors.gold.hex;
     "special" = config.colors.gold.hex;
     "keyword" = {
-      fg = config.colors.love.hex;
+      bg = config.colors.love.hex;
+      fg = config.colors.base.hex;
       modifiers = ["bold" "italic"];
     };
+
     "keyword.control" = {
       fg = config.colors.gold.hex;
       modifiers = [];
     };
+
     "label" = config.colors.iris.hex;
 
-    "namespace" = config.colors.pine.hex;
+    "namespace" = config.colors.muted.hex;
     "tag" = config.colors.foam.hex;
     "text" = config.colors.text.hex;
 
