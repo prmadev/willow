@@ -97,7 +97,8 @@
     ##### tree-sitter
 
     "comment" = {
-      fg = config.colors.subtle.hex;
+      bg = config.colors.muted.hex;
+      fg = config.colors.base.hex;
       modifiers = ["italic" "dim"];
     };
     "operator" = {
@@ -113,7 +114,7 @@
     "constant.numeric" = config.colors.iris.hex;
     "constant.character.escape" = config.colors.subtle.hex;
     "attributes" = config.colors.gold.hex;
-    "type" = config.colors.rose.hex;
+    "type" = config.colors.foam.hex;
     "string" = {
       fg = config.colors.gold.hex;
       modifiers = ["italic"];
@@ -126,8 +127,7 @@
     "constructor" = config.colors.gold.hex;
     "special" = config.colors.gold.hex;
     "keyword" = {
-      bg = config.colors.love.hex;
-      fg = config.colors.base.hex;
+      fg = config.colors.love.hex;
       modifiers = ["bold" "italic"];
     };
 
