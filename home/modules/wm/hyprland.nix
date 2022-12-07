@@ -95,7 +95,7 @@ with lib; {
         '';
         binds = let
           running = ''
-            bind=SUPER,RETURN,exec,kitty
+            bind=SUPER,RETURN,exec,wezterm
             bind=SUPER,d,exec,rofi -show
             bind=SUPERSHIFT,SPACE,exec,hyprctl keyword input:kb_layout us
             bind=SUPERALT,SPACE,exec,hyprctl keyword input:kb_layout ir
