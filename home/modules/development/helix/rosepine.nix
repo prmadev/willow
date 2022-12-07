@@ -11,7 +11,7 @@
     };
 
     "ui.cursor.primary" = {
-      modifiers = ["reversed" "bold"];
+      modifiers = ["reversed" "slow_blink" "bold"];
     };
 
     "ui.cursor.match" = {
