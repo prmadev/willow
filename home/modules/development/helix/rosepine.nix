@@ -109,6 +109,11 @@
       fg = config.colors.subtle.hex;
       modifiers = ["bold"];
     };
+
+    "punctuation.bracket" = {
+      fg = config.colors.gold.hex;
+      modifiers = ["bold"];
+    };
     "variable" = config.colors.text.hex;
     "constant" = config.colors.gold.hex;
     "constant.numeric" = config.colors.iris.hex;
@@ -121,7 +126,10 @@
     };
     "property" = config.colors.foam.hex;
 
-    "function" = config.colors.text.hex;
+    "function" = {
+      fg = config.colors.text.hex;
+      modifiers = ["bold"];
+    };
     "function.builtin" = config.colors.rose.hex;
     "function.method" = config.colors.text.hex;
     "constructor" = config.colors.gold.hex;
