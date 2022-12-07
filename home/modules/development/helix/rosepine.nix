@@ -72,6 +72,7 @@
     "ui.bufferline" = {
       fg = config.colors.muted.hex;
       bg = config.colors.base.hex;
+      modifiers = ["bold"];
     };
     "ui.bufferline.active" = {
       fg = config.colors.base.hex;
@@ -80,7 +81,7 @@
     };
 
     # "ui.virtual.whitespace" = {bg = config.colors.love.hex;};
-    "ui.virtual.indent-guide" = {fg = config.colors.muted.hex;};
+    "ui.virtual.indent-guide" = {fg = config.colors.highlight-high.hex;};
     "ui.popup" = {bg = config.colors.surface.hex;};
     "ui.popup.info" = {bg = config.colors.surface.hex;};
     "ui.window" = {
@@ -96,15 +97,15 @@
     ##### tree-sitter
 
     "comment" = {
-      fg = config.colors.muted.hex;
+      fg = config.colors.subtle.hex;
       modifiers = ["italic" "dim"];
     };
     "operator" = {
-      fg = config.colors.gold.hex;
+      fg = config.colors.text.hex;
       modifiers = ["bold"];
     };
     "punctuation" = {
-      fg = config.colors.gold.hex;
+      fg = config.colors.text.hex;
       modifiers = ["bold"];
     };
     "variable" = config.colors.text.hex;
