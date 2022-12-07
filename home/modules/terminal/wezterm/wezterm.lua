@@ -54,16 +54,16 @@ return {
 
 
 	},
-	default_cursor_style = 'BlinkingBlock',
-	cursor_blink_rate = 800,
-	cursor_blink_ease_in = "Ease",
+	-- default_cursor_style = 'BlinkingBlock',
+	-- cursor_blink_rate = 800,
+	-- cursor_blink_ease_in = "Ease",
 	animation_fps = 60,
 	force_reverse_video_cursor = true,
 	exit_behavior = 'CloseOnCleanExit',
-	set_environment_variables = {
-		TERMINFO_DIRS = '~/terminfo',
-		WSLENV = 'TERMINFO_DIRS',
-	},
+	-- set_environment_variables = {
+		-- TERMINFO_DIRS = '~/terminfo',
+		-- WSLENV = 'TERMINFO_DIRS',
+	-- },
 	term = "wezterm",
 	window_frame = {
 		inactive_titlebar_bg = '#353535',
