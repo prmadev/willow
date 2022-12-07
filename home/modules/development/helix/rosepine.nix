@@ -144,8 +144,14 @@
     };
 
     "keyword.function" = {
-      fg = config.colors.base.hex;
+      bg = config.colors.surface.hex;
+      fg = config.colors.love.hex;
+      modifiers = ["bold" "italic"];
+    };
+
+    "keyword.storage.modifier" = {
       bg = config.colors.love.hex;
+      fg = config.colors.base.hex;
       modifiers = ["bold" "italic"];
     };
 
