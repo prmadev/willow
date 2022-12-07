@@ -148,7 +148,7 @@
       modifiers = ["bold" "italic"];
     };
 
-    "keyword.storage.type" = {
+    "keyword.directive" = {
       bg = config.colors.love.hex;
       fg = config.colors.base.hex;
       modifiers = ["bold" "italic"];
