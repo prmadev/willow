@@ -105,7 +105,7 @@
       modifiers = ["bold"];
     };
     "punctuation" = {
-      fg = config.colors.text.hex;
+      fg = config.colors.subtle.hex;
       modifiers = ["bold"];
     };
     "variable" = config.colors.text.hex;
