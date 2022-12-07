@@ -19,10 +19,10 @@
     };
 
     "ui.cursorline.primary" = {
-      bg = config.colors.overlay.hex;
+      bg = config.colors.surface.hex;
     };
     "ui.cursorcolumn.primary" = {
-      bg = config.colors.overlay.hex;
+      bg = config.colors.surface.hex;
     };
     "ui.menu" = {
       fg = config.colors.text.hex;
@@ -32,14 +32,15 @@
     "ui.menu.selected" = {
       fg = config.colors.text.hex;
       bg = config.colors.pine.hex;
+      modifiers = ["bold"];
     };
     "ui.linenr" = {
       fg = config.colors.muted.hex;
-      bg = config.colors.surface.hex;
+      bg = config.colors.overlay.hex;
     };
 
     "ui.gutter" = {
-      bg = config.colors.surface.hex;
+      bg = config.colors.overlay.hex;
     };
     "ui.gutter.selected" = {
       fg = config.colors.base.hex;
