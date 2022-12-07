@@ -7,11 +7,11 @@
       modifiers = ["hidden"];
     };
     "ui.cursor" = {
-      modifiers = ["reversed"];
+      modifiers = ["reversed" "slow_blink"];
     };
 
     "ui.cursor.primary" = {
-      modifiers = ["reversed" "slow_blink" "bold"];
+      modifiers = ["reversed" "bold"];
     };
 
     "ui.cursor.match" = {
@@ -95,8 +95,8 @@
 
     "comment" = {
       fg = config.colors.text.hex;
-      bg = config.colors.highlight-high.hex;
-      modifiers = ["italic" "dim"];
+      bg = config.colors.highlight-low.hex;
+      modifiers = ["italic"];
     };
     "operator" = {
       fg = config.colors.text.hex;
@@ -133,20 +133,21 @@
     "special" = config.colors.gold.hex;
     "keyword" = {
       fg = config.colors.pine.hex;
+      modifiers = ["bold"];
     };
 
     "keyword.control" = {
-      fg = config.colors.love.hex;
+      fg = config.colors.pine.hex;
       modifiers = ["bold"];
     };
 
     "keyword.function" = {
-      fg = config.colors.love.hex;
+      fg = config.colors.pine.hex;
       modifiers = ["bold" "italic"];
     };
 
     "keyword.storage" = {
-      fg = config.colors.love.hex;
+      fg = config.colors.pine.hex;
       modifiers = ["bold" "italic"];
     };
 
