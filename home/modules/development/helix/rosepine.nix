@@ -114,7 +114,7 @@
     ##### tree-sitter
 
     "comment" = {
-      fg = config.colors.iris.hex;
+      fg = config.colors.text.hex;
       bg = config.colors.highlight-high.hex;
       modifiers = ["italic"];
     };
