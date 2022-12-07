@@ -94,8 +94,8 @@
     ##### tree-sitter
 
     "comment" = {
-      fg = config.colors.text.hex;
-      bg = config.colors.highlight-low.hex;
+      fg = config.colors.iris.hex;
+      bg = config.colors.highlight-high.hex;
       modifiers = ["italic"];
     };
     "operator" = {
