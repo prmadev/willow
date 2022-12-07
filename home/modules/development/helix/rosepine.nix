@@ -35,7 +35,16 @@
     "ui.gutter" = {
       bg = config.colors.surface.hex;
     };
-    "ui.linenr.selected" = {bg = config.colors.highlight-high.hex;};
+    "ui.gutter.selected" = {
+      fg = config.colors.base.hex;
+      bg = config.colors.foam.hex;
+      modifiers = ["bold"];
+    };
+    "ui.linenr.selected" = {
+      fg = config.colors.base.hex;
+      bg = config.colors.foam.hex;
+      modifiers = ["bold"];
+    };
     "ui.selection" = {bg = config.colors.highlight-med.hex;};
     "ui.statusline" = {
       fg = config.colors.subtle.hex;
