@@ -113,9 +113,9 @@
     "constant.numeric" = config.colors.iris.hex;
     "constant.character.escape" = config.colors.subtle.hex;
     "attributes" = config.colors.gold.hex;
-    "type" = config.colors.foam.hex;
+    "type" = config.colors.rose.hex;
     "string" = {
-      fg = config.colors.foam.hex;
+      bg = config.colors.gold.hex;
       modifiers = ["italic"];
     };
     "property" = config.colors.foam.hex;
