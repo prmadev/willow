@@ -44,12 +44,12 @@
     };
     "ui.gutter.selected" = {
       fg = config.colors.base.hex;
-      bg = config.colors.foam.hex;
+      bg = config.colors.pine.hex;
       modifiers = ["bold"];
     };
     "ui.linenr.selected" = {
       fg = config.colors.base.hex;
-      bg = config.colors.foam.hex;
+      bg = config.colors.pine.hex;
       modifiers = ["bold"];
     };
     "ui.selection" = {bg = config.colors.highlight-med.hex;};
