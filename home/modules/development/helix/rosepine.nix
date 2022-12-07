@@ -7,18 +7,15 @@
       modifiers = ["hidden"];
     };
     "ui.cursor" = {
-      # fg = config.colors.rose.hex;
       modifiers = ["reversed"];
     };
 
     "ui.cursor.primary" = {
-      # fg = config.colors.love.hex;
       modifiers = ["reversed" "bold"];
     };
 
     "ui.cursor.match" = {
-      # fg = config.colors.iris.hex;
-      modifiers = ["reversed"];
+      modifiers = ["reversed" "dim"];
     };
 
     "ui.menu" = {
@@ -139,7 +136,7 @@
     };
 
     "keyword.control" = {
-      fg = config.colors.pine.hex;
+      fg = config.colors.love.hex;
       modifiers = ["bold"];
     };
 
@@ -149,8 +146,7 @@
     };
 
     "keyword.storage" = {
-      bg = config.colors.love.hex;
-      fg = config.colors.base.hex;
+      fg = config.colors.love.hex;
       modifiers = ["bold" "italic"];
     };
 
