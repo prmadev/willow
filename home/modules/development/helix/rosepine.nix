@@ -111,7 +111,7 @@
     };
 
     "punctuation.bracket" = {
-      fg = config.colors.gold.hex;
+      fg = config.colors.pine.hex;
       modifiers = ["bold"];
     };
     "variable" = config.colors.text.hex;
@@ -135,13 +135,18 @@
     "constructor" = config.colors.gold.hex;
     "special" = config.colors.gold.hex;
     "keyword" = {
-      fg = config.colors.love.hex;
-      modifiers = ["bold" "italic"];
+      fg = config.colors.pine.hex;
     };
 
     "keyword.control" = {
-      fg = config.colors.gold.hex;
-      modifiers = [];
+      fg = config.colors.pine.hex;
+      modifiers = ["bold"];
+    };
+
+    "keyword.function" = {
+      fg = config.colors.base.hex;
+      bg = config.colors.love.hex;
+      modifiers = ["bold" "italic"];
     };
 
     "label" = config.colors.iris.hex;
