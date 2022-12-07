@@ -144,12 +144,11 @@
     };
 
     "keyword.function" = {
-      bg = config.colors.surface.hex;
       fg = config.colors.love.hex;
       modifiers = ["bold" "italic"];
     };
 
-    "keyword.storage.modifier" = {
+    "keyword.storage.type" = {
       bg = config.colors.love.hex;
       fg = config.colors.base.hex;
       modifiers = ["bold" "italic"];
