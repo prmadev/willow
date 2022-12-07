@@ -29,7 +29,11 @@
     };
     "ui.linenr" = {
       fg = config.colors.muted.hex;
-      bg = config.colors.surface;
+      bg = config.colors.surface.hex;
+    };
+
+    "ui.gutter" = {
+      bg = config.colors.surface.hex;
     };
     "ui.linenr.selected" = {bg = config.colors.highlight-high.hex;};
     "ui.selection" = {bg = config.colors.highlight-med.hex;};
