@@ -3,6 +3,7 @@
     ./boot
     ./graphical
     ./docker
+    ./podman
     ./fonts
     ./hardware
     ./locale

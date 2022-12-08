@@ -11,6 +11,7 @@ _: {
       "lp"
       "networkmanager"
       "video" # for wayland light support
+      "podman"
     ];
   };
   security.sudo = {
