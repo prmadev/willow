@@ -50,7 +50,7 @@ with lib; {
               shadow_range = 05
               shadow_offset = -5 -5
               shadow_scale = 1.0
-              shadow_render_power = 4
+              shadow_render_power = 1
               col.shadow = 0xfff6c177
               col.shadow_inactive = 0x00000000
               dim_inactive = false
