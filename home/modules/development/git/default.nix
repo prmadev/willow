@@ -1,6 +1,7 @@
-{ lib
-, config
-, ...
+{
+  lib,
+  config,
+  ...
 }:
 with lib; {
   options = {
@@ -10,26 +11,23 @@ with lib; {
     };
   };
   config = mkIf config.git.enable {
-    programs.git =
-      {
-        enable = true;
-        userEmail = "amirhossein.alesheikh@gmail.com";
-        userName = "amirography";
-        ignores = [
-          ".env"
-          ".vscode"
-        ];
-        extraConfig = {
-          init = {
-            defaultBranch = "main";
-
-          };
+    programs.git = {
+      enable = true;
+      userEmail = "amirhossein.alesheikh@gmail.com";
+      userName = "amirography";
+      ignores = [
+        ".env"
+        ".vscode"
+      ];
+      extraConfig = {
+        init = {
+          defaultBranch = "main";
         };
-
-        delta.enable = true;
-        lfs.enable = true;
-
       };
+
+      delta.enable = true;
+      lfs.enable = true;
+    };
 
     programs.gh = {
       enable = true;
