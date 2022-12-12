@@ -22,9 +22,9 @@ with lib; {
         general = ''
           general {
               main_mod = SUPER
-              gaps_in = 5
-              gaps_out = 10
-              border_size = 1
+              gaps_in = 10
+              gaps_out = 15
+              border_size = 2
               layout = master
               col.active_border = 0xfff6c177
               col.inactive_border = 0xff191724
@@ -49,8 +49,8 @@ with lib; {
            	  drop_shadow = true
               shadow_range = 05
               shadow_offset = -5 -5
-              shadow_scale = 1.0
-              shadow_render_power = 1
+              shadow_scale = 1
+              shadow_render_power = 4
               col.shadow = 0xfff6c177
               col.shadow_inactive = 0x00000000
               dim_inactive = false
@@ -82,8 +82,6 @@ with lib; {
            disable_hyprland_logo = true
            disable_splash_rendering = true
            disable_autoreload = true
-           enable_swallow = true
-          swallow_regex  = "kitty"
           }
         '';
         gestures = ''
