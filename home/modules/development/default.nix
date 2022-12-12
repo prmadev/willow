@@ -7,6 +7,7 @@
 with lib; {
   imports = [
     ./build
+    ./emacs
     ./c
     ./env
     ./go
@@ -31,6 +32,7 @@ with lib; {
     git.enable = true;
     go.enable = true;
     neovim.enable = true;
+    emacs.enable = true;
     helix.enable = true;
     nixdev.enable = true;
     rust.enable = true;

@@ -29,6 +29,7 @@
     nixvim.url = "github:pta2002/nixvim";
     nixvim.inputs.nixpkgs.follows = "nixpkgs";
 
+    nix-doom-emacs.url = "github:nix-community/nix-doom-emacs";
     hyprland = {
       url = "github:hyprwm/hyprland";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -176,6 +177,7 @@
                 home.stateVersion = "22.11";
                 imports = [
                   ./home
+                  inputs.nix-doom-emacs.hmModule
                   # inputs.nix-ld.nixosModules.nix-ld
                   inputs.nixvim.homeManagerModules.nixvim
                   inputs.hyprland.homeManagerModules.default
