@@ -32,7 +32,7 @@ with lib; {
     git.enable = true;
     go.enable = true;
     neovim.enable = true;
-    emacs.enable = true;
+    emacs.enable = false;
     helix.enable = true;
     nixdev.enable = true;
     rust.enable = true;
