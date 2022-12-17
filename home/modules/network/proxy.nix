@@ -37,6 +37,7 @@ in
         torsocks
         qv2ray
         sshuttle
+        go-graft
       ];
 
       # home.file = {
