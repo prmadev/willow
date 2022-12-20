@@ -55,6 +55,7 @@ with lib; {
       hyperfine
       # pgadmin
       ventoy-bin-full
+      hurl
     ];
   };
 }
