@@ -39,7 +39,8 @@ with lib; {
       calibre
       mprocs # not a monitoring tool
       zola
-      libresprite
+      # libresprite
+      aseprite-unfree
       d2
     ];
   };
