@@ -3,7 +3,7 @@
     enable = true;
     dockerSocket.enable = true;
     dockerCompat = true;
-    defaultNetwork.dnsname.enable = true; # for arion
+    # defaultNetwork.dnsname.enable = true; # for arion
   };
   environment.systemPackages = [
     # pkgs.arion # for arion
