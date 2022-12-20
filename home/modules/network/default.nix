@@ -22,6 +22,7 @@ with lib; {
     ssh.enable = true;
     home.packages = with pkgs; [
       dig.dnsutils
+      sniffnet
     ];
   };
 }
