@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   virtualisation.podman = {
-    enable = false;
+    enable = true;
     dockerSocket.enable = true;
     dockerCompat = true;
     defaultNetwork.dnsname.enable = true; # for arion
