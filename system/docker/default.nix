@@ -1,12 +1,12 @@
 {pkgs, ...}
 : {
   virtualisation.docker = {
-    enable = false;
+    enable = true;
     rootless = {
       enable = true;
       setSocketVariable = true;
     };
-    storageDriver = "btrfs";
+    # storageDriver = "btrfs";
   };
   environment.systemPackages = with pkgs; [
     docker-compose
