@@ -37,7 +37,8 @@ with lib; {
           # exec =  swaybg -i "/home/a/.config/wallpaper"
           exec =  swww init && swww img ~/Downloads/sky.gif
           # exec = hyprpaper
-          exec-once =  wh
+          # exec-once =  wh
+          exec-once = eww -c ~/dofi/home/modules/wm/eww/ewwConfig daemon &&  eww -c ~/dofi/home/modules/wm/eww/ewwConfig open topbar
           # exec-once =   cat ~/vmess.json | v2ray run
         '';
         decoration = ''

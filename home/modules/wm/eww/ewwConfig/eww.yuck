@@ -1,1 +1,94 @@
+;;;;;;
+;;;;;; windows
+;;;;;;
 
+(defwindow topbar
+	:monitor 0
+	:geometry (geometry
+		:x "0px"
+		:y "5px"
+		:width "99%"
+		:height "20px"
+		:anchor "top center"
+	)
+
+	:stacking "fg" ; fg, bg, overlay, bottom
+
+    :wm-ignore true
+	; :reserve (struts :distance "40px" :side "top")
+	; :windowtype "dock" ; normal, dock, toolbar,dialog,desktop
+
+
+	:exclusive true
+	:focusable false
+
+	(bar)
+)
+
+;;;;;;
+;;;;;; widgets
+;;;;;;
+
+;;(defwidget workspace []
+;;	(literal :content ws)
+;; )
+
+(defwidget bar []
+	(box :class "bar" 
+		(box :class "top-left"
+			  (box :class "time-date"
+			    :orientation "v"
+				(workspaces)
+			  )
+		)
+
+		(box :class "top-middle"
+			  (box :class "time-date"
+			    :orientation "v"
+			    (label :class "clock" :text time)
+			    (label :class "date" :text date)
+			  )
+		)
+
+		(box :class "top-right"
+			  (box :class "time-date"
+			    :orientation "v"
+				(battery)
+			  )
+		)
+	)
+)
+
+(defwidget battery []
+	(box :class "bat" 
+			    (label :class "bat-text" :text {EWW_BATTERY.BAT0.capacity})
+	)
+)
+
+(defwidget workspaces []
+	(box :class "workspaces"
+		(literal :class "workspaces" 
+			:content {hypr-workspaces}
+		)
+	)
+)
+
+
+;;;;;;
+;;;;;; variables
+;;;;;;
+
+(defpoll time :interval "1s"
+              :initial "initial-value"  ; optional, defaults to poll at startup
+              :run-while time-visible   ; optional, defaults to 'true'
+  `date +%H:%M:%S`)
+
+(defpoll date :interval "600s"
+              :initial "initial-value"  ; optional, defaults to poll at startup
+              :run-while time-visible   ; optional, defaults to 'true'
+  `date +%Y-%m-%d`)
+
+(defpoll  bat-stat :interval "600s"
+  `EWW_BATTERY{BAT0}`)
+
+(deflisten hypr-workspaces  "eww_hypr_config workspaces")

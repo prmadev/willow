@@ -26,6 +26,7 @@ $rose: #ebbcba;
       font-weight: 900;
       color: $text;
     }
+
     .date {
       font-size: 90px;
       font-weight: 400;
@@ -37,75 +38,77 @@ $rose: #ebbcba;
 
 
 .info {
-	arrow {
-		font-size:  30px;
-		background-color:  $love;
-		color:  $foam;
-	}
-	.clock {
-		font-size: 30px;
-		color:$base;
-     	font-weight: 900;
-	}
+  arrow {
+    font-size: 30px;
+    background-color: $love;
+    color: $foam;
+  }
 
-	.date {
-		font-size: 15px;
-		color:$overlay;
-      	font-weight: 900;
-	}
-	.timer {
-		padding: 10px;
-		border: 3px  solid $overlay;
-		border-radius: 5px;
-	}
+  .clock {
+    font-size: 30px;
+    color: $base;
+    font-weight: 900;
+  }
 
+  .date {
+    font-size: 15px;
+    color: $overlay;
+    font-weight: 900;
+  }
 
-	
-	highlight {
-		border-radius: 5px;
-		padding-top: 15px;
-		padding-bottom: 15px,
-	}
-
-	contents {
-		min-width: 200px;
-	}
-
-	.brightness highlight {
-		background: $foam;
-	}
-
-	.battery highlight {
-		background: $love;
-	}
-
-
-	.network highlight {
-		background: $iris;
-	}
+  .timer {
+    padding: 10px;
+    border: 3px solid $overlay;
+    border-radius: 5px;
+  }
 
 
 
-	.stat {
-		padding: 10px;
-   		border-radius: 5px;
-	}
+  highlight {
+    border-radius: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px,
+  }
+
+  contents {
+    min-width: 200px;
+  }
+
+  .brightness highlight {
+    background: $foam;
+  }
+
+  .battery highlight {
+    background: $love;
+  }
+
+
+  .network highlight {
+    background: $iris;
+  }
+
+
+
+  .stat {
+    padding: 10px;
+    border-radius: 5px;
+  }
 
   .label {
     background-color: $base;
     font-weight: 900;
     border-radius: 5px;
-	min-width: 30px;
+    min-width: 30px;
   }
 
 
 
   .gra trough {
-	border-width: 3px;
-	border-style:solid;
-	border-color: $overlay;  
+    border-width: 3px;
+    border-style: solid;
+    border-color: $overlay;
     border-radius: 5px;
-		min-width: 200px;
+    min-width: 200px;
   }
 
 
@@ -113,7 +116,7 @@ $rose: #ebbcba;
     padding-top: 10px;
     padding-bottom: 10px;
     border-radius: 5px;
-	min-width: 10px;
+    min-width: 10px;
   }
 }
 
@@ -121,8 +124,9 @@ $rose: #ebbcba;
   .tag {
     margin: 3px;
     /* background-color: $base; */
-	border: 3px  solid $overlay;
+    border: 3px solid $overlay;
     border-radius: 5px;
+
     .name {
       color: $overlay;
       /* background: $base; */
@@ -176,6 +180,7 @@ $rose: #ebbcba;
       font-weight: 900;
       padding: 5px;
       /* border-radius: 5px; */
-      font-size: 18px; }
+      font-size: 18px;
+    }
   }
 }

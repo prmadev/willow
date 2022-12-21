@@ -1,0 +1,82 @@
+$base: #191724;
+$surface: #1f1d2e;
+$overlay: #26233a;
+
+$text: #d9e0ee;
+$subtle: #908caa;
+$muted: #6e6a86;
+
+$pine: #31748f;
+$love: #eb6f92;
+$gold: #f6c177;
+$iris: #c4a7e7;
+$foam: #8ccfd8;
+$rose: #ebbcba;
+
+
+* {
+  all: unset; //Unsets everything so you can style everything from scratch
+  font-family: monosapce;
+  // font-size: 10px;
+}
+
+.bar {}
+
+// giving some margin to the bar sections
+.top-right,
+.top-middle,
+.top-left {
+  margin: 5px;
+  padding: 5px
+}
+
+.top-right {
+  background-color: $gold;
+  color: $base;
+}
+
+.top-middle {
+  background-color: $rose;
+  color: $base;
+}
+
+.top-left {
+  background-color: $pine;
+  color: $base;
+}
+
+.time-date {
+  border: 3px solid $base;
+
+  .clock {
+    font-size: 15px;
+    font-weight: 900;
+  }
+
+  .date {
+    font-size: 15px;
+    font-weight: 900;
+  }
+}
+
+.active-workspace,
+.inactive-workspace {
+  background-color: $base;
+  padding: 5px;
+  font-size: 20px;
+  border: 1px solid;
+  margin: 0px 10px 0px 0px;
+}
+
+.active-workspace {
+  border-color: $gold;
+  color: $gold;
+  font-weight: 900;
+  box-shadow: -5px -5px 0px 1px $gold;
+
+}
+
+.inactive-workspace {
+  border-color: $text;
+  color: $text;
+}
