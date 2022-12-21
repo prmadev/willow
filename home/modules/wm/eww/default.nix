@@ -17,9 +17,14 @@ in {
     home.packages = with pkgs; [
       eww-wayland
     ];
+    programs.eww = {
+      enable = true;
+      package = pkgs.eww-wayland;
+      configDir = ./ewwConfig;
+    };
 
     # configuration
-    home.file.".config/eww/eww.scss".source = ./eww.scss;
-    home.file.".config/eww/eww.yuck".source = ./eww.yuck;
+    # home.file.".config/eww/eww.scss".source = ./eww.scss;
+    # home.file.".config/eww/eww.yuck".source = ./eww.yuck;
   };
 }

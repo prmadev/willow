@@ -25,7 +25,7 @@ with lib; {
     mako.enable = true;
     launcher.enable = true;
     wm.river.enable = true;
-    eww.enable = false;
+    eww.enable = true;
     hyprland.enable = true;
     sway.enable = true;
 
