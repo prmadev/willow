@@ -35,7 +35,7 @@ $rose: #ebbcba;
 }
 
 
-scale trough {
+.battery scale trough {
   background-color: #4e4e4e;
   min-height: 13px;
   min-width: 500px;
@@ -83,26 +83,30 @@ scale trough {
   font-weight: 900;
 }
 
-
+// the scale's space
 .battery trough {
-  border-width: 3px;
-  border-style: solid;
-  border-color: $overlay;
-  min-width: 300px;
+  border: 3px solid $overlay;
   background-color: $base;
+  min-width: 300px;
   min-height: 13px;
   min-width: 500px;
   margin-left: 10px;
   margin-right: 20px;
 }
 
+// the thing that fills the space, the progress
 .battery highlight {
-  background: $love;
+  background: $pine;
 }
 
 .active-workspace,
 .occupied-workspace {
-  background-color: $base;
+  background-color: $surface;
+}
+
+.active-workspace,
+.occupied-workspace,
+.inactive-workspace {
   padding: 5px;
   font-size: 20px;
   border: 1px solid;
