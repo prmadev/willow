@@ -34,36 +34,45 @@
 ;; )
 
 (defwidget bar []
-	(box :class "bar" 
+	(centerbox  :class "bar"  
 		(box :class "top-left"
-			  (box :class "time-date"
+			  (box :class "workspaces"
 			    :orientation "v"
 				(workspaces)
 			  )
 		)
 
 		(box :class "top-middle"
-			  (box :class "time-date"
-			    :orientation "v"
-			    (label :class "clock" :text time)
-			    (label :class "date" :text date)
-			  )
 		)
 
 		(box :class "top-right"
 			  (box :class "time-date"
-			    :orientation "v"
+				:space-evenly false
+				:halign "end"
+			    :orientation "h"
 				(battery)
+				(box :class "time-date" 
+				  :orientation "h"
+				  (label :class "clock" :text time)
+				  (label :class "date" :text date)
+				)
 			  )
 		)
 	)
 )
 
 (defwidget battery []
-	(box :class "bat" 
-			    (label :class "bat-text" :text {EWW_BATTERY.BAT0.capacity})
+	(box :class "battery" 
+			    ;;(label :class "bat-text" :text "${EWW_BATTERY.BAT0.capacity}%")
+			    ;; (progress :class "bat-text" :value {EWW_BATTERY.BAT0.capacity/100})
+				(scale :min 0
+					:class "bat-text"
+					:max 101
+					:value {EWW_BATTERY.BAT0.capacity} 
+					)
 	)
 )
+
 
 (defwidget workspaces []
 	(box :class "workspaces"

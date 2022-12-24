@@ -27,12 +27,20 @@ $rose: #ebbcba;
 .top-middle,
 .top-left {
   margin: 5px;
-  padding: 5px
 }
 
 .top-right {
-  background-color: $gold;
-  color: $base;
+  // background-color: $gold;
+  // color: $base;
+}
+
+
+scale trough {
+  background-color: #4e4e4e;
+  min-height: 13px;
+  min-width: 500px;
+  margin-left: 10px;
+  margin-right: 20px;
 }
 
 .top-middle {
@@ -40,27 +48,60 @@ $rose: #ebbcba;
   color: $base;
 }
 
-.top-left {
-  background-color: $pine;
-  color: $base;
-}
+.top-left {}
 
 .time-date {
-  border: 3px solid $base;
 
   .clock {
     font-size: 15px;
+    background-color: $gold;
+    color: $base;
+    border: 3px solid $base;
+    margin: 5px;
+    padding: 5px;
     font-weight: 900;
   }
 
   .date {
     font-size: 15px;
+    background-color: $gold;
+    color: $base;
+    border: 3px solid $base;
+    margin: 5px;
+    padding: 5px;
     font-weight: 900;
   }
 }
 
+.battery {
+  font-size: 15px;
+  background-color: $gold;
+  color: $base;
+  border: 3px solid $base;
+  margin: 5px;
+  padding: 5px;
+  font-weight: 900;
+}
+
+
+.battery trough {
+  border-width: 3px;
+  border-style: solid;
+  border-color: $overlay;
+  min-width: 300px;
+  background-color: $base;
+  min-height: 13px;
+  min-width: 500px;
+  margin-left: 10px;
+  margin-right: 20px;
+}
+
+.battery highlight {
+  background: $love;
+}
+
 .active-workspace,
-.inactive-workspace {
+.occupied-workspace {
   background-color: $base;
   padding: 5px;
   font-size: 20px;
@@ -76,7 +117,9 @@ $rose: #ebbcba;
 
 }
 
-.inactive-workspace {
+.occupied-workspace {
   border-color: $text;
   color: $text;
 }
+
+.inactive-workspace {}
