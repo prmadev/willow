@@ -56,6 +56,7 @@ with lib; {
       # pgadmin
       ventoy-bin-full
       hurl
+      jq
     ];
   };
 }
