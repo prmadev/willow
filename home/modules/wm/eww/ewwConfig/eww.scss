@@ -50,55 +50,64 @@ $rose: #ebbcba;
 
 .top-left {}
 
+
+/*
+time and date
+*/
 .time-date {
+  background-color: $surface;
+  border: 3px solid $love;
+  margin: 5px;
+  padding: 5px;
+  box-shadow: -5px -5px 0px 0px $love;
 
   .clock {
+
     font-size: 15px;
-    background-color: $gold;
-    color: $base;
-    border: 3px solid $base;
-    margin: 5px;
-    padding: 5px;
     font-weight: 900;
+    color: $love;
   }
 
-  .date {
-    font-size: 15px;
-    background-color: $gold;
-    color: $base;
-    border: 3px solid $base;
-    margin: 5px;
-    padding: 5px;
-    font-weight: 900;
-  }
 }
 
+/*
+battery
+*/
+
+// the container that holds the scale
 .battery {
   font-size: 15px;
-  background-color: $gold;
-  color: $base;
-  border: 3px solid $base;
+  background-color: $surface;
+  border: 3px solid $foam;
   margin: 5px;
   padding: 5px;
   font-weight: 900;
+  box-shadow: -5px -5px 0px 0px $foam;
+
 }
 
 // the scale's space
-.battery trough {
-  border: 3px solid $overlay;
-  background-color: $base;
-  min-width: 300px;
-  min-height: 13px;
-  min-width: 500px;
-  margin-left: 10px;
-  margin-right: 20px;
+.battery progressbar trough {
+  background-color: $pine;
+  color: $text;
+  min-width: 100px;
+  min-height: 25px;
 }
 
 // the thing that fills the space, the progress
-.battery highlight {
-  background: $pine;
+.bat-ok progress {
+  background-color: $foam;
+  min-height: 25px;
 }
 
+.bat-discharging progress {
+  background-color: $love;
+  min-height: 25px;
+}
+
+/*
+workspaces
+*/
 .active-workspace,
 .occupied-workspace {
   background-color: $surface;
@@ -127,3 +136,19 @@ $rose: #ebbcba;
 }
 
 .inactive-workspace {}
+
+/* 
+tooltip
+*/
+tooltip.background {}
+
+tooltip label {
+  font-size: 15;
+  font-weight: 900;
+  background-color: $overlay;
+  padding: 5px;
+  color: $pine;
+  border: 3px solid $pine;
+  margin: 5px;
+  box-shadow: -5px -5px 0px 0px $pine;
+}

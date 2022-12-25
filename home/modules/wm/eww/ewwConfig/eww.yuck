@@ -46,15 +46,14 @@
 		)
 
 		(box :class "top-right"
-			  (box :class "time-date"
+			  (box :class "info"
 				:space-evenly false
 				:halign "end"
 			    :orientation "h"
 				(battery)
 				(box :class "time-date" 
-				  :orientation "h"
-				  (label :class "clock" :text time)
-				  (label :class "date" :text date)
+				  :orientation "v"
+				  (label :class "clock" :text time :tooltip date)
 				)
 			  )
 		)
@@ -63,13 +62,21 @@
 
 (defwidget battery []
 	(box :class "battery" 
-			    ;;(label :class "bat-text" :text "${EWW_BATTERY.BAT0.capacity}%")
-			    ;; (progress :class "bat-text" :value {EWW_BATTERY.BAT0.capacity/100})
-				(scale :min 0
-					:class "bat-text"
-					:max 101
+				:space-evenly false
+		;;(scale
+		;;	:class {"${EWW_BATTERY.BAT0.status}"=="Discharging" ? "bat-discharging" : "bat" }
+		;;	:min 0
+		;;	:max 101
+		;;	:value {EWW_BATTERY.BAT0.capacity} 
+		;;	:tooltip " ${ EWW_BATTERY.BAT0.status } @ ${ EWW_BATTERY.BAT0.capacity }"
+		;;)
+				(progress
+					:class {"${EWW_BATTERY.BAT0.status}"=="Discharging" ? "bat-discharging" : "bat-ok" }
 					:value {EWW_BATTERY.BAT0.capacity} 
-					)
+					:tooltip " ${ EWW_BATTERY.BAT0.status } @ ${ EWW_BATTERY.BAT0.capacity }"
+					:width 100
+				)
+
 	)
 )
 
