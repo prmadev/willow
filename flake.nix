@@ -26,13 +26,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nixvim.url = "github:pta2002/nixvim";
-    nixvim.inputs.nixpkgs.follows = "nixpkgs";
-
-    nix-doom-emacs.url = "github:nix-community/nix-doom-emacs";
     hyprland = {
       url = "github:hyprwm/hyprland";
-      inputs.nixpkgs.follows = "nixpkgs";
+      # inputs.nixpkgs.follows = "nixpkgs";
     };
 
     # hyprland-contrib = {
@@ -40,10 +36,10 @@
     #   inputs.nixpkgs.follows = "nixpkgs";
     # };
 
-    zellij = {
-      url = "github:zellij-org/zellij";
-      inputs. nixpkgs.follows = "nixpkgs";
-    };
+    # zellij = {
+    #   url = "github:zellij-org/zellij";
+    #   inputs. nixpkgs.follows = "nixpkgs";
+    # };
 
     helix = {
       url = "github:helix-editor/helix";
@@ -177,9 +173,6 @@
                 home.stateVersion = "22.11";
                 imports = [
                   ./home
-                  inputs.nix-doom-emacs.hmModule
-                  # inputs.nix-ld.nixosModules.nix-ld
-                  inputs.nixvim.homeManagerModules.nixvim
                   inputs.hyprland.homeManagerModules.default
                 ];
               };

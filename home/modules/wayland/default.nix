@@ -24,6 +24,7 @@ with lib; {
       grim # for wayland
       wtype
       swaybg
+      evdevremapkeys
       wev
     ];
 
