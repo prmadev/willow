@@ -27,7 +27,7 @@ with lib; {
               border_size = 2
               layout = master
               col.active_border = 0xfff6c177
-              col.inactive_border = 0xff191724
+              col.inactive_border = 0xff232136
           }
         '';
 

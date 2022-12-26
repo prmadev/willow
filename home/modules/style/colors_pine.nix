@@ -3,12 +3,12 @@ with lib; {
   options = {
     colors.rose.hex = mkOption {
       type = types.str;
-      default = "#ea9a97";
+      default = "#ebbcba";
     };
 
     colors.pine.hex = mkOption {
       type = types.str;
-      default = "#3e8fb0";
+      default = "#31748f";
     };
 
     colors.love.hex = mkOption {
@@ -33,16 +33,16 @@ with lib; {
 
     colors.base.hex = mkOption {
       type = types.str;
-      default = "#232136";
+      default = "#191724";
     };
 
     colors.surface.hex = mkOption {
       type = types.str;
-      default = "#2a273f";
+      default = "#1f1d2e";
     };
     colors.overlay.hex = mkOption {
       type = types.str;
-      default = "#393552";
+      default = "#26233a";
     };
     colors.text.hex = mkOption {
       type = types.str;
@@ -58,27 +58,27 @@ with lib; {
     };
     colors.highlight-low.hex = mkOption {
       type = types.str;
-      default = "#2a283e";
+      default = "#21202e";
     };
     colors.highlight-med.hex = mkOption {
       type = types.str;
-      default = "#44415a";
+      default = "#403d52";
     };
     colors.highlight-high.hex = mkOption {
       type = types.str;
-      default = "#56526e";
+      default = "#524f67";
     };
 
     # RGB
 
     colors.rose.rgb = mkOption {
       type = types.listOf types.int;
-      default = [234 154 151];
+      default = [235 188 186];
     };
 
     colors.pine.rgb = mkOption {
       type = types.listOf types.int;
-      default = [62 143 176];
+      default = [49 116 143];
     };
 
     colors.love.rgb = mkOption {
@@ -103,16 +103,16 @@ with lib; {
 
     colors.base.rgb = mkOption {
       type = types.listOf types.int;
-      default = [35 33 54];
+      default = [25 23 36];
     };
 
     colors.surface.rgb = mkOption {
       type = types.listOf types.int;
-      default = [42 39 63];
+      default = [31 29 46];
     };
     colors.overlay.rgb = mkOption {
       type = types.listOf types.int;
-      default = [57 53 82];
+      default = [38 35 58];
     };
     colors.text.rgb = mkOption {
       type = types.listOf types.int;
@@ -128,15 +128,15 @@ with lib; {
     };
     colors.highlight-low.rgb = mkOption {
       type = types.listOf types.int;
-      default = [42 40 62];
+      default = [33 32 46];
     };
     colors.highlight-med.rgb = mkOption {
       type = types.listOf types.int;
-      default = [68 65 90];
+      default = [64 61 82];
     };
     colors.highlight-high.rgb = mkOption {
       type = types.listOf types.int;
-      default = [86 82 110];
+      default = [82 79 103];
     };
   };
 }
