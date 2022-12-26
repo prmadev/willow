@@ -24,7 +24,7 @@ with lib; {
       grim # for wayland
       wtype
       swaybg
-      evdevremapkeys
+      # evdevremapkeys
       wev
     ];
 
@@ -37,6 +37,21 @@ with lib; {
       MOZ_ENABLE_WAYLAND = 1;
       SDL_VIDEODRIVER = "wayland";
       QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
+    };
+    systemd.user.services = {
+      evdev = {
+        Unit = {
+          Description = "evremap remaps keys for a better experience";
+        };
+        Service = {
+          WorkingDirectory = "/";
+          ExecStart = "bash -c evremap remap /home/a/evre.toml";
+          Restart = "always";
+        };
+        Install = {
+          WantedBy = ["hyprland-session.target"];
+        };
+      };
     };
   };
 }
