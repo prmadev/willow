@@ -201,20 +201,37 @@
     "debug" = config.colors.rose.hex;
 
     "diagnostic.hint" = {
-      fg = config.colors.pine.hex;
+      # fg = config.colors.pine.hex;
       modifiers = ["underlined"];
+      underline = {
+        style = "curl";
+        color = config.colors.pine.hex;
+      };
     };
     "diagnostic.info" = {
-      # modifiers = ["underlined"];
-      bg = config.colors.highlight-high.hex;
+      # bg = config.colors.highlight-high.hex;
+      modifiers = ["underlined"];
+      underline = {
+        style = "curl";
+        color = config.colors.pine.hex;
+      };
     };
     "diagnostic.warning" = {
       #fg = config.colors.gold.hex;
-      # modifiers = ["underlined"];
-      bg = config.colors.highlight-high.hex;
+      # bg = config.colors.highlight-high.hex;
+      modifiers = ["underlined"];
+      underline = {
+        style = "curl";
+        color = config.colors.gold.hex;
+      };
     };
     "diagnostic.error" = {
-      bg = config.colors.highlight-high.hex;
+      # bg = config.colors.highlight-high.hex;
+      modifiers = ["underlined"];
+      underline = {
+        style = "curl";
+        color = config.colors.love.hex;
+      };
     };
 
     "markup.heading.marker" = config.colors.subtle.hex;
