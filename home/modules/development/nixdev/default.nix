@@ -20,7 +20,6 @@ with lib; {
       nix-prefetch-git
       nix-doc
       nix-update
-      nix-linter
       nix-template
       manix
       rnix-lsp
