@@ -26,7 +26,7 @@ with lib; {
               gaps_out = 15
               border_size = 2
               layout = master
-              col.active_border = 0xfff6c177
+              col.active_border = 0xffea9a97
               col.inactive_border = 0xff232136
           }
         '';

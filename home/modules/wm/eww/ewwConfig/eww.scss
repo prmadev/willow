@@ -51,7 +51,7 @@ $iris: #c4a7e7;
 
 
 .battery scale trough {
-  background-color: #4e4e4e;
+  background-color: $rose;
   min-height: 13px;
   min-width: 500px;
   margin-left: 10px;
@@ -71,16 +71,16 @@ time and date
 */
 .time-date {
   background-color: $surface;
-  border: 3px solid $love;
+  border: 3px solid $gold;
   margin: 5px;
   padding: 5px;
-  box-shadow: -5px -5px 0px 0px $love;
+  box-shadow: -5px -5px 0px 0px $gold;
 
   .clock {
 
     font-size: 15px;
     font-weight: 900;
-    color: $love;
+    color: $gold;
   }
 
 }
@@ -138,10 +138,10 @@ workspaces
 }
 
 .active-workspace {
-  border-color: $gold;
-  color: $gold;
+  border-color: $rose;
+  color: $rose;
   font-weight: 900;
-  box-shadow: -5px -5px 0px 1px $gold;
+  box-shadow: -5px -5px 0px 1px $rose;
 
 }
 

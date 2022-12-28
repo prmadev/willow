@@ -132,7 +132,7 @@
       modifiers = ["bold"];
     };
     "variable" = config.colors.text.hex;
-    "constant" = config.colors.gold.hex;
+    "constant" = config.colors.iris.hex;
     "constant.numeric" = config.colors.iris.hex;
     "constant.character.escape" = config.colors.subtle.hex;
     "attributes" = config.colors.gold.hex;
@@ -152,22 +152,22 @@
     "constructor" = config.colors.gold.hex;
     "special" = config.colors.gold.hex;
     "keyword" = {
-      fg = config.colors.pine.hex;
+      fg = config.colors.rose.hex;
       modifiers = ["bold"];
     };
 
     "keyword.control" = {
-      fg = config.colors.pine.hex;
+      fg = config.colors.rose.hex;
       modifiers = ["bold"];
     };
 
     "keyword.function" = {
-      fg = config.colors.pine.hex;
+      fg = config.colors.rose.hex;
       modifiers = ["bold" "italic"];
     };
 
     "keyword.storage" = {
-      fg = config.colors.pine.hex;
+      fg = config.colors.rose.hex;
       modifiers = ["bold" "italic"];
     };
 
