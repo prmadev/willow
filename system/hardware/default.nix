@@ -2,7 +2,10 @@
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
-  ]; # Audio
+  ];
+  # kernel
+  boot.kernelPackages = pkgs.linuxKernel.packages.linux_6_1;
+  # Audio
   sound.enable = true;
   sound.mediaKeys.enable = true;
   # hardware.pulseaudio.enable = true;
@@ -23,9 +26,10 @@
 
   # Power management
   services.tlp.enable = true;
+  services.acpid.enable = true;
+
   # SSD management
   services.fstrim.enable = true;
-  boot.kernelPackages = pkgs.linuxKernel.packages.linux_6_0;
   # services.xserver.libinput.enable = true;
   hardware.opengl.enable = true;
   environment.systemPackages = with pkgs; [

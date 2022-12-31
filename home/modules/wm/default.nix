@@ -24,15 +24,15 @@ with lib; {
   config = mkIf config.wm.enable {
     mako.enable = true;
     launcher.enable = true;
-    wm.river.enable = true;
+    wm.river.enable = false;
     eww.enable = true;
     hyprland.enable = true;
-    sway.enable = true;
+    sway.enable = false;
 
-    xsession.windowManager.awesome.enable = true;
-    picom.enable = true;
-    home.packages = with pkgs; [
-      # xorg.xorgserver
-    ];
+    # xsession.windowManager.awesome.enable = true;
+    picom.enable = false;
+    # home.packages = with pkgs; [
+    # xorg.xorgserver
+    # ];
   };
 }
