@@ -47,7 +47,7 @@
 
   ## intel specific
   boot.kernelParams = [
-    "mem_sleep_default=deep"
+    "mem_sleep_default=freeze"
     "i915.enable_fbc=1"
     "i915.enable_psr=2"
   ];
