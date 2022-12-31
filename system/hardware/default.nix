@@ -23,6 +23,7 @@
 
   # Power management
   services.tlp.enable = true;
+  # SSD management
   services.fstrim.enable = true;
   boot.kernelPackages = pkgs.linuxKernel.packages.linux_6_0;
   # services.xserver.libinput.enable = true;
@@ -62,5 +63,5 @@
     libvdpau-va-gl
     intel-media-driver
   ];
-  systemd.sleep.extraConfig = "SuspendState=freeze";
+  systemd.sleep.extraConfig = "SuspendState=deep";
 }
