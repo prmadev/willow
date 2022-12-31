@@ -63,5 +63,8 @@
     libvdpau-va-gl
     intel-media-driver
   ];
-  systemd.sleep.extraConfig = "SuspendState=deep";
+  systemd.sleep.extraConfig = ''
+    SuspendState=deep
+    AllowSuspend=yes
+  '';
 }
