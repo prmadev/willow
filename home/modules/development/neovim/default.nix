@@ -146,7 +146,7 @@ with lib; {
       luajit
     ];
     home.sessionVariables = {
-      NEOVIDE_MULTIGRID = true;
+      # NEOVIDE_MULTIGRID = true;
     };
   };
 }
