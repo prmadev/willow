@@ -21,7 +21,6 @@ with lib; {
       extraConfig = let
         general = ''
           general {
-              main_mod = SUPER
               gaps_in = 10
               gaps_out = 15
               border_size = 2
