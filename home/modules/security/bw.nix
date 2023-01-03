@@ -33,6 +33,8 @@ with lib; {
         prs
         ripasso-cursive
         gopass
+        pass
+        tessen
       ];
   };
 }

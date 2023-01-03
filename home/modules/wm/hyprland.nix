@@ -103,6 +103,7 @@ with lib; {
             binde = ,XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
             binde = ,XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
             bind = SUPERSHIFT,R,exec,hyprctl reload
+            bind = SUPER,P,exec,tessen -d rofi
           '';
           resizing = ''
             # will switch to a submap called resize
