@@ -57,6 +57,8 @@ with lib; {
       ventoy-bin-full
       hurl
       jq
+      nodePackages.npm
+      nodejs
     ];
   };
 }
