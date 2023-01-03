@@ -7,7 +7,7 @@
 with lib; {
   imports = [
     ./firefox
-    # ./qutebrowser
+    ./qutebrowser
     ./chromium
   ];
   options = {
@@ -18,7 +18,7 @@ with lib; {
   };
   config = mkIf config.browser.enable {
     browser.firefox.enable = true;
-    # browser.qutebrowser.enable = false;
+    browser.qutebrowser.enable = true;
     home.file = {
       ".config/startpage/" = {
         source = ./startpage;

@@ -1,6 +1,7 @@
 {
   lib,
   config,
+  pkgs,
   ...
 }:
 with lib; {
@@ -10,16 +11,17 @@ with lib; {
       default = false;
     };
   };
-  config = {
-    programs.qutebrowser = mkIf config.browser.qutebrowser.enable {
+  config = mkIf config.browser.qutebrowser.enable {
+    programs.qutebrowser = {
       enable = true;
+      package = pkgs.qutebrowser-qt6;
       aliases = {
         "adblock-toggle" = "config-cycle -t content.blocking.enabled";
         "mpv" = "spawn --detach mpv {url}";
       };
 
       searchEngines = {
-        DEFAULT = "https://you.com/search?q={}";
+        DEFAULT = "https://google.com/search?q={}";
       };
       settings = {
         content.cookies.accept = "all";
@@ -49,7 +51,7 @@ with lib; {
         content.webrtc_ip_handling_policy = "default-public-interface-only";
         downloads.position = "bottom";
         downloads.remove_finished = 30000;
-        editor.command = ["kitty" "nvim" "{file}"];
+        editor.command = ["wezterm" "hx" "{file}"];
         editor.encoding = "utf-8";
         fonts.default_family = config.global-fonts.main-set;
         fonts.default_size = "15px";
