@@ -30,6 +30,7 @@ with lib; {
         rofi-rbw # for password management
         wtype
         wl-clipboard
+        prs
       ];
   };
 }
