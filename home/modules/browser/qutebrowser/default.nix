@@ -18,6 +18,10 @@ with lib; {
       aliases = {
         "adblock-toggle" = "config-cycle -t content.blocking.enabled";
         "mpv" = "spawn --detach mpv {url}";
+        "p1080" = "set content.proxy socks5://127.0.0.1:1080";
+        "p9050" = "set content.proxy socks5://127.0.0.1:9050";
+        "p9150" = "set content.proxy socks5://127.0.0.1:9150";
+        "ps" = "set content.proxy system";
       };
 
       searchEngines = {
