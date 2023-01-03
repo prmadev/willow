@@ -31,6 +31,7 @@ with lib; {
         wtype
         wl-clipboard
         prs
+        ripasso-cursive
       ];
   };
 }
