@@ -32,6 +32,7 @@ with lib; {
         wl-clipboard
         prs
         ripasso-cursive
+        gopass
       ];
   };
 }
