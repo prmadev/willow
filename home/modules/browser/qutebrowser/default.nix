@@ -39,7 +39,6 @@ with lib; {
           "https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts"
         ];
         content.images = true;
-        content.javascript.can_access_clipboard = true;
         content.javascript.enabled = true;
         content.javascript.prompt = true;
         content.local_content_can_access_file_urls = true;
