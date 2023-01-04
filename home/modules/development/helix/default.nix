@@ -91,6 +91,7 @@ with lib; {
             y = [":clipboard-yank-join"];
             p = [":clipboard-paste-after"];
             P = [":clipboard-paste-before"];
+            d = [":clipboard-yank-join" ":delete_selection"];
           };
 
           insert = {
