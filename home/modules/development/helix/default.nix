@@ -99,7 +99,7 @@ with lib; {
             left = "move_char_left";
             right = "move_char_right";
             pageup = "no_op";
-            page = "no_op";
+            pagedown = "no_op";
           };
         };
       };
