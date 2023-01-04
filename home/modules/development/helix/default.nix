@@ -93,6 +93,9 @@ with lib; {
             P = [":clipboard-paste-before"];
             d = [":clipboard-yank-join" "delete_selection"];
           };
+          select = {
+            y = [":clipboard-yank-join"];
+          };
 
           insert = {
             up = "move_line_up";

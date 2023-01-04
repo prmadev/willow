@@ -147,7 +147,7 @@ with lib; {
             bind = SUPERSHIFT,l,movewindow,r
           '';
           workspace_focusing = ''
-            bind = SUPER,1,workspace,1
+            bind = SUPER,1,workspace,name:w
             bind = SUPER,2,workspace,2
             bind = SUPER,3,workspace,3
             bind = SUPER,4,workspace,4
