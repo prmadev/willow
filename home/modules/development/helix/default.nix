@@ -86,7 +86,11 @@ with lib; {
             X = ["extend_line_above"];
             space = {
               c = ":bc";
+              R = [":clipboard-replace"];
             };
+            y = [":clipboard-yank-join"];
+            p = [":clipboard-paste-after"];
+            P = [":clipboard-paste-before"];
           };
 
           insert = {
