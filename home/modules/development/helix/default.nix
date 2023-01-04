@@ -86,7 +86,7 @@ with lib; {
             X = ["extend_line_above"];
             space = {
               c = ":bc";
-              R = [":clipboard-replace"];
+              R = [":clipboard-paste-replace"];
             };
             y = [":clipboard-yank-join"];
             p = [":clipboard-paste-after"];
@@ -98,6 +98,8 @@ with lib; {
             down = "move_line_down";
             left = "move_char_left";
             right = "move_char_right";
+            pageup = "no_op";
+            page = "no_op";
           };
         };
       };
