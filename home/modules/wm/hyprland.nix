@@ -33,6 +33,7 @@ with lib; {
         exec = ''
           exec-once = dbus-update-activation-environment --systemd WAYLAND_DISPLAY DISPLAY HYPRLAND_INSTANCE_SIGNATURE
           exec-once = systemctl --user start hyprland-session.target
+          exec-once = v2ray run -c ~/vmess-new.json
           # exec =  swaybg -i "/home/a/.config/wallpaper"
           exec =  swww init && swww img ~/Downloads/sky.gif
           # exec = hyprpaper
