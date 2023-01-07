@@ -136,6 +136,7 @@ with lib; {
       luarocks
       sumneko-lua-language-server
       python310Packages.pip
+      python310Packages.demjson3
       neovide
       plocate
       stylua
@@ -144,6 +145,9 @@ with lib; {
       statix
       gitlint
       luajit
+      luaformatter
+      nodePackages_latest.prettier
+      luajitPackages.luacheck
     ];
     home.sessionVariables = {
       # NEOVIDE_MULTIGRID = true;
