@@ -103,5 +103,58 @@ with lib; {
     #         source = "${v}";
     #       })
     #     plugins);
+
+    home.packages = with pkgs; [
+      pyright
+      ccls
+      gopls
+      nodePackages.bash-language-server
+      nodePackages.graphql-language-service-cli
+      nodePackages.vscode-langservers-extracted
+
+      # lsps
+      sumneko-lua-language-server
+      nil
+      rust-analyzer
+      actionlint
+      luaformatter
+
+      # null-ls sources
+      selene
+      alejandra
+      black
+      deadnix
+      editorconfig-checker
+      gofumpt
+      gotools
+      gotests
+      iferr
+      delve
+      gotestsum
+      impl
+      revive
+      reftools
+      gomodifytags
+      go-swag
+      gitlint
+      mypy
+      nodePackages.alex
+      nodePackages.prettier
+      nodePackages.markdownlint-cli
+      python3Packages.flake8
+      shellcheck
+      shellharden
+      shfmt
+      statix
+      revive
+      stylua
+      vim-vint
+
+      # DAP servers
+      delve
+
+      # Other stuff
+      bc
+    ];
   };
 }
