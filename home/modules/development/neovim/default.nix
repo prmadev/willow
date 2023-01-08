@@ -111,6 +111,7 @@ with lib; {
       nodePackages.bash-language-server
       nodePackages.graphql-language-service-cli
       nodePackages.vscode-langservers-extracted
+      wget
 
       # lsps
       sumneko-lua-language-server
@@ -142,7 +143,9 @@ with lib; {
       nodePackages.prettier
       nodePackages.markdownlint-cli
       python3Packages.flake8
+      python310Packages.demjson3
       shellcheck
+      luarocks
       shellharden
       shfmt
       statix
@@ -155,6 +158,7 @@ with lib; {
 
       # Other stuff
       bc
+      wget
     ];
   };
 }
