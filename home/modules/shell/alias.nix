@@ -24,10 +24,7 @@ with lib; {
       f = "fg";
       h = "hx";
       b = "bg";
-      zl = "zellij a -c $(basename $(pwd))";
-      nv = "neovide";
-      n = "neovide";
-      np = "proxychains4 -q neovide";
+      n = "lvim";
       pc = "proxychains4 -q";
     };
   };
