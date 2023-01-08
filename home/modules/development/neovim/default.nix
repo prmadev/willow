@@ -13,144 +13,77 @@ with lib; {
   };
 
   config = mkIf config.neovim.enable {
-    # NixVim
-    # programs.nixvim = {
-    #   # --- enabling the whole thing --- #
-    #   enable = false;
+    programs.neovim = {
+      enable = true;
 
-    #   # --- color settings ---#
-    #   colorscheme = "rose-pine";
+      viAlias = true;
 
-    #   # --- plugins to have --- #
-    #   extraPlugins = with pkgs.vimPlugins; [
-    #     rose-pine
-    #     rust-tools-nvim
-    #   ];
+      vimAlias = true;
+      withPython3 = true;
+      withRuby = false;
+      withNodeJs = true;
+      extraPackages = with pkgs; [
+        pyright
+        ccls
+        gopls
+        nodePackages.bash-language-server
+        nodePackages.graphql-language-service-cli
+        nodePackages.vscode-langservers-extracted
+        sumneko-lua-language-server
+        nil
+        rust-analyzer
+        luaformatter
 
-    #   # --- plugins --- #
-    #   plugins = {
-    #     # ---  ui
-    #     # tabs and buffers
-    #     bufferline = {
-    #       enable = true;
-    #       diagnostics = "nvim_lsp";
-    #     };
+        # null-ls sources
+        alejandra
+        black
+        deadnix
+        editorconfig-checker
+        gofumpt
+        gitlint
+        mypy
+        nodePackages.alex
+        nodePackages.prettier
+        nodePackages.markdownlint-cli
+        python3Packages.flake8
+        shellcheck
+        shellharden
+        shfmt
+        statix
+        revive
+        stylua
+        vim-vint
 
-    #     # bottom status
-    #     lualine = {
-    #       enable = true;
-    #     };
+        # DAP servers
+        delve
 
-    #     # notification
-    #     notify = {
-    #       enable = true;
-    #     };
-
-    #     # telescope
-    #     telescope = {
-    #       enable = true;
-    #     };
-
-    #     # file-tree
-    #     nvim-tree = {
-    #       enable = true;
-    #       diagnostics.enable = true;
-    #       git.enable = true;
-    #       hijackNetrw = true;
-    #       updateCwd = true;
-    #       updateFocusedFile.enable = true;
-    #       updateToBufDir.enable = true;
-    #     };
-    #     # terminal
-    #     floaterm = {
-    #       enable = true;
-    #       autoInsert = true;
-    #       shell = "${pkgs.zsh}/bin/zsh";
-    #     };
-
-    #     # gutter
-    #     gitgutter = {
-    #       enable = true;
-    #     };
-
-    #     # --- cmp
-    #     nvim-cmp = {
-    #       enable = true;
-    #       snippet.expand = ''
-    #         function(args)
-    #            require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
-    #         end
-    #       '';
-    #     };
-    #     cmp-nvim-lsp.enable = true;
-    #     cmp-dap.enable = true;
-    #     cmp-nvim-lsp-document-symbol.enable = true;
-    #     cmp-nvim-lsp-signature-help.enable = true;
-    #     cmp-nvim-lua.enable = true;
-    #     cmp-path.enable = true;
-    #     cmp-treesitter.enable = true;
-    #     cmp_luasnip.enable = true;
-
-    #     # --- editing
-    #     comment-nvim.enable = true;
-    #     nvim-autopairs.enable = true;
-    #     undotree.enable = true;
-
-    #     treesitter = {
-    #       enable = true;
-    #       nixGrammars = true;
-    #     };
-
-    #     # lsp
-    #     lsp = {
-    #       enable = true;
-    #       servers = {
-    #         cssls.enable = true;
-    #         gopls.enable = true;
-    #         html.enable = true;
-    #         jsonls.enable = true;
-    #         rnix-lsp.enable = true;
-    #         rust-analyzer.enable = true;
-    #       };
-    #     };
-
-    #     # formatting
-    #     null-ls = {
-    #       enable = true;
-    #       sources.formatting = {
-    #         alejandra.enable = true;
-    #         prettier.enable = true;
-    #       };
-    #     };
-
-    #     # --- language speciifc
-    #     # rust
-    #     crates-nvim.enable = true;
-    #     # nix
-    #     nix.enable = true;
-    #   };
+        # Other stuff
+        bc
+      ];
+      # extraConfig = "";
+      # extraPython3Packages = pyPkgs: with pyPkgs; [python-language-server];
+      plugins = with pkgs.vimPlugins; [
+        {
+          plugin = rose-pine;
+          config = "";
+        }
+      ];
+    };
+    # xdg.configFile = {
+    #   "nvim/init.lua".source = ./init.lua;
+    #   "nvim/lua".source = ./lua;
+    #   "nvim/parser".source = "${parserDir}";
     # };
 
-    home.packages = with pkgs; [
-      wget
-      luarocks
-      sumneko-lua-language-server
-      python310Packages.pip
-      python310Packages.demjson3
-      neovide
-      plocate
-      stylua
-      selene
-      neovim
-      statix
-      gitlint
-      luajit
-      luaformatter
-      nodePackages_latest.prettier
-      luajitPackages.luacheck
-    ];
-    home.sessionVariables = {
-      # NEOVIDE_MULTIGRID = true;
-    };
+    # xdg.dataFile =
+    #   {
+    #     "nvim/vscode-lldb".source = "${pkgs.vscode-extensions.vadimcn.vscode-lldb}/share/vscode/extensions/vadimcn.vscode-lldb";
+    #   }
+    #   // (with lib;
+    #     mapAttrs' (n: v:
+    #       nameValuePair "nvim/plugins/${n}" {
+    #         source = "${v}";
+    #       })
+    #     plugins);
   };
 }
