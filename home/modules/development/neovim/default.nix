@@ -22,6 +22,10 @@ with lib; {
       withPython3 = true;
       withRuby = false;
       withNodeJs = true;
+      extraLuaPackages = luaPkgs:
+        with luaPkgs; [
+          luacheck
+        ];
       extraPackages = with pkgs; [
         pyright
         ccls
@@ -38,6 +42,7 @@ with lib; {
         luaformatter
 
         # null-ls sources
+        selene
         alejandra
         black
         deadnix
