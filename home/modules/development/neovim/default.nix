@@ -29,9 +29,12 @@ with lib; {
         nodePackages.bash-language-server
         nodePackages.graphql-language-service-cli
         nodePackages.vscode-langservers-extracted
+
+        # lsps
         sumneko-lua-language-server
         nil
         rust-analyzer
+        actionlint
         luaformatter
 
         # null-ls sources
@@ -40,6 +43,16 @@ with lib; {
         deadnix
         editorconfig-checker
         gofumpt
+        gotools
+        gotests
+        iferr
+        delve
+        gotestsum
+        impl
+        revive
+        reftools
+        gomodifytags
+        go-swag
         gitlint
         mypy
         nodePackages.alex
