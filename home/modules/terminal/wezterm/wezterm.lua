@@ -8,7 +8,7 @@ return {
 
 	font = wezterm.font_with_fallback {
 		{
-			family = 'Operator Mono SSm Nerd ',
+			family = 'Operator Mono SSm Nerd Font',
 		},
 
 		{
@@ -18,6 +18,7 @@ return {
 		{
 			family = 'Comic Code Ligatures',
 		},
+
 		{
 			family = 'JetbrainsMono Nerd Font',
 		},
@@ -37,6 +38,11 @@ return {
 			intensity = 'Bold',
 			font = wezterm.font_with_fallback {
 				{
+					family = 'Operator Mono SSm Nerd Font',
+					weight = "Bold",
+					style = "Italic",
+				},
+				{
 					family = 'ComicCodeLigatures Nerd Font',
 					weight = "Bold",
 					style = "Italic",
@@ -48,6 +54,10 @@ return {
 			italic = false,
 			intensity = 'Bold',
 			font = wezterm.font_with_fallback {
+				{
+					family = 'Operator Mono SSm Nerd Font',
+					weight = "Bold",
+				},
 				{
 					family = 'ComicCodeLigatures Nerd Font',
 					weight = "Bold",
