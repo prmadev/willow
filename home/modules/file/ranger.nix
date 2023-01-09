@@ -22,6 +22,10 @@ with lib; {
           mime = "text/*";
           command = "wezterm start hx &pistol-filename%";
         }
+        {
+          mime = "text/x-go";
+          command = "wezterm start hx &pistol-filename%";
+        }
       ];
     };
   };
