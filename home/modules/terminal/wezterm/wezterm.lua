@@ -8,6 +8,10 @@ return {
 
 	font = wezterm.font_with_fallback {
 		{
+			family = 'Operator Mono SSm Nerd ',
+		},
+
+		{
 			family = 'ComicCodeLigatures Nerd Font',
 		},
 
