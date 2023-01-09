@@ -38,7 +38,7 @@ with lib; {
         {
           name = "go";
           auto-format = true;
-          formatter = {command = "gofumports";};
+          formatter = {command = "gofumpt";};
 
           indent = {
             tab-width = 4;

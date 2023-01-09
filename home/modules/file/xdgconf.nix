@@ -14,9 +14,21 @@ with lib; {
     xdg = {
       enable = true;
       mime.enable = true;
-      # mimeApps.enable = true;
       userDirs.enable = true;
       # userDirs.createDirectories = true;
+
+      mimeApps.enable = true;
+      mimeApps.defaultApplications = {
+        "application/pdf" = "org.pwmt.zathura.desktop";
+        "image/*" = [
+          "imv.desktop"
+        ];
+        "text/*" = [
+          "hx.desktop"
+          "lvim.dekstop"
+          "nvim.desktop"
+        ];
+      };
     };
   };
 }
