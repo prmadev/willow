@@ -84,8 +84,8 @@ with lib; {
           normal = {
             "S-right" = ":buffer-next";
             "S-left" = ":buffer-previous";
-            "S-L" = ":buffer-next";
-            "S-H" = ":buffer-previous";
+            "S-l" = ":buffer-next";
+            "S-h" = ":buffer-previous";
             # ret = ["open_below" "normal_mode"];
             X = ["extend_line_above"];
             space = {
@@ -104,6 +104,8 @@ with lib; {
           };
 
           insert = {
+            "S-right" = ":buffer-next";
+            "S-left" = ":buffer-previous";
             up = "move_line_up";
             down = "move_line_down";
             left = "move_char_left";
