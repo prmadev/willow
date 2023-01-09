@@ -82,8 +82,10 @@ with lib; {
 
         keys = {
           normal = {
-            "S-l" = ":buffer-next";
-            "S-h" = ":buffer-previous";
+            "Shift-right" = ":buffer-next";
+            "Shift-left" = ":buffer-previous";
+            "Shift-l" = ":buffer-next";
+            "Shift-h" = ":buffer-previous";
             # ret = ["open_below" "normal_mode"];
             X = ["extend_line_above"];
             space = {
@@ -96,14 +98,14 @@ with lib; {
             d = [":clipboard-yank-join" "delete_selection"];
           };
           select = {
-            "S-l" = ":buffer-next";
-            "S-h" = ":buffer-previous";
+            "Shift-right" = ":buffer-next";
+            "Shift-left" = ":buffer-previous";
             y = [":clipboard-yank-join"];
           };
 
           insert = {
-            "S-l" = ":buffer-next";
-            "S-h" = ":buffer-previous";
+            "Shift-right" = ":buffer-next";
+            "Shift-left" = ":buffer-previous";
             up = "move_line_up";
             down = "move_line_down";
             left = "move_char_left";
