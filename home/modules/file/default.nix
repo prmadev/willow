@@ -9,6 +9,7 @@ with lib; {
     ./android.nix
     ./compression.nix
     ./filesearch.nix
+    ./ranger.nix
     ./mpv.nix
     ./nnn.nix
     ./office.nix
@@ -29,6 +30,7 @@ with lib; {
     filesearch.enable = true;
     nnn.enable = true;
     office.enable = true;
+    ranger.enable = true;
     mpv.enable = true;
     pdf.enable = true;
     rename.enable = true;
