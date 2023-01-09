@@ -37,6 +37,9 @@ with lib; {
       MOZ_ENABLE_WAYLAND = 1;
       SDL_VIDEODRIVER = "wayland";
       QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
+      _JAVA_AWT_WM_NONREPARENTING = "1";
+      XKB_DEFAULT_LAYOUT = "us,ir";
+      XKB_DEFAULT_OPTIONS = "grp:caps:escape";
     };
 
     systemd.user.services = {

@@ -12,6 +12,7 @@ with lib; {
     };
   };
   config = mkIf config.hyprland.enable {
+    wayland.enable = true;
     wayland.windowManager.hyprland = {
       enable = true;
       xwayland = {

@@ -477,7 +477,7 @@ with lib; {
           '';
 
           search = {
-            default = "you";
+            default = "google";
             force = true;
             engines = {
               "you" = {
