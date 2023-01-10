@@ -49,6 +49,7 @@ with lib; {
         editorconfig-checker
         gofumpt
         gotools
+        taplo
         gotests
         iferr
         delve
@@ -152,7 +153,7 @@ with lib; {
       revive
       stylua
       vim-vint
-
+      taplo
       # DAP servers
       delve
 
