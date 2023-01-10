@@ -7,21 +7,21 @@ return {
 	font_size = 12.0,
 
 	font = wezterm.font_with_fallback {
-		{
-			family = 'Operator Mono SSm Nerd Lig',
-		},
+		-- {
+			-- family = 'Operator Mono SSm Nerd Lig',
+		-- },
 
-		{
-			family = 'ComicCodeLigatures Nerd Font',
-		},
+		-- {
+			-- family = 'ComicCodeLigatures Nerd Font',
+		-- },
 
-		{
-			family = 'Comic Code Ligatures',
-		},
+		-- {
+			-- family = 'Comic Code Ligatures',
+		-- },
 
-		{
-			family = 'JetbrainsMono Nerd Font',
-		},
+		-- {
+			-- family = 'JetbrainsMono Nerd Font',
+		-- },
 
 		{
 			family = 'Gintronic Nerd Font',
@@ -34,37 +34,43 @@ return {
 	},
 	font_rules = {
 		{
-			italic = true,
-			intensity = 'Bold',
-			font = wezterm.font_with_fallback {
-				{
-					family = 'Operator Mono SSm Nerd Lig',
-					weight = "Bold",
-					style = "Italic",
-				},
-
-				{
-					family = 'ComicCodeLigatures Nerd Font',
-					weight = "Bold",
-					style = "Italic",
-				},
-			},
-		},
-
-		{
 			italic = false,
 			intensity = 'Bold',
 			font = wezterm.font_with_fallback {
 				{
-					family = 'Operator Mono SSm Nerd Lig',
-					weight = "Bold",
+					family = 'Gintronic Nerd Font',
+					weight = "Black",
 				},
-				{
-					family = 'ComicCodeLigatures Nerd Font',
-					weight = "Bold",
-				},
+
 			},
 		},
+		{
+			italic = true,
+			intensity = 'Bold',
+			font = wezterm.font_with_fallback {
+				{
+					family = 'Gintronic Nerd Font',
+					weight = "Black",
+					style = "Italic",
+				},
+
+			},
+		},
+
+		-- {
+		-- 	italic = false,
+		-- 	intensity = 'Bold',
+		-- 	font = wezterm.font_with_fallback {
+		-- 		{
+		-- 			family = 'Operator Mono SSm Nerd Lig',
+		-- 			weight = "Bold",
+		-- 		},
+		-- 		{
+		-- 			family = 'ComicCodeLigatures Nerd Font',
+		-- 			weight = "Bold",
+		-- 		},
+		-- 	},
+		-- },
 
 
 	},
