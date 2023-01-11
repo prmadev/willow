@@ -40,7 +40,7 @@ with lib; {
       mprocs # not a monitoring tool
       zola
       # libresprite
-      aseprite-unfree
+      # aseprite-unfree
       d2
     ];
   };
