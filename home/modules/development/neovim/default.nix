@@ -158,6 +158,17 @@ with lib; {
       taplo
       # DAP servers
       delve
+      checkmake
+      dotenv-linter
+      # DAP servers
+      hadolint
+      delve
+      mdl
+      proselint
+      sqlfluff
+      vale
+      yamllint
+      cbfmt
 
       # Other stuff
       bc
