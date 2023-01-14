@@ -17,18 +17,7 @@ with lib; {
       userDirs.enable = true;
       # userDirs.createDirectories = true;
 
-      mimeApps.enable = true;
-      mimeApps.defaultApplications = {
-        "application/pdf" = "org.pwmt.zathura.desktop";
-        "image/*" = [
-          "imv.desktop"
-        ];
-        "text/*" = [
-          "hx.desktop"
-          "lvim.dekstop"
-          "nvim.desktop"
-        ];
-      };
+      # mimeApps.enable = true;
     };
   };
 }

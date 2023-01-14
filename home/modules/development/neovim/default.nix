@@ -72,21 +72,23 @@ with lib; {
         revive
         stylua
         vim-vint
-
+        checkmake
+        dotenv-linter
         # DAP servers
+        hadolint
         delve
+        mdl
+        proselint
+        sqlfluff
+        vale
+        yamllint
+        cbfmt
 
         # Other stuff
         bc
       ];
       # extraConfig = "";
       # extraPython3Packages = pyPkgs: with pyPkgs; [python-language-server];
-      plugins = with pkgs.vimPlugins; [
-        {
-          plugin = rose-pine;
-          config = "";
-        }
-      ];
     };
     # xdg.configFile = {
     #   "nvim/init.lua".source = ./init.lua;
