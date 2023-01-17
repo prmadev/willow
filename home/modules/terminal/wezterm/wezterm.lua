@@ -46,9 +46,9 @@ return {
 			italic = false,
 			intensity = "Half",
 			font = wezterm.font_with_fallback({
-				{ family = "ComicCodeLigatures Nerd Font", weight = "light" },
-				{ family = "Comic Code Ligatures", weight = "light" },
-				{ family = "Gintronic Nerd Font", weight = "light" },
+				{ family = "ComicCodeLigatures Nerd Font", weight = "Light" },
+				{ family = "Comic Code Ligatures", weight = "Light" },
+				{ family = "Gintronic Nerd Font", weight = "Light" },
 			}),
 		}, ------------------------
 		-- italics
