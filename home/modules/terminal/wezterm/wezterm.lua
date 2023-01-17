@@ -38,8 +38,8 @@ return {
 			intensity = "Normal",
 			font = wezterm.font_with_fallback({
 				{ family = "ComicCodeLigatures Nerd Font" },
-				{ family = "Comic Code Ligatures", weight = "regular" },
-				{ family = "Gintronic Nerd Font", weight = "regular" },
+				{ family = "Comic Code Ligatures" },
+				{ family = "Gintronic Nerd Font" },
 			}),
 		},
 		{
