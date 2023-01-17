@@ -2,7 +2,10 @@
   description = "my nix configuration";
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-
+    neovim-nightly-overlay = {
+      url = "github:nix-community/neovim-nightly-overlay";
+      inputs.nixpkgs.url = "github:nixos/nixpkgs?rev=fad51abd42ca17a60fc1d4cb9382e2d79ae31836";
+    };
     nix-std.url = "github:chessai/nix-std";
 
     nix-alien.url = "github:thiagokokada/nix-alien";
@@ -133,7 +136,8 @@
           modules = [
             {
               nixpkgs.overlays = [
-                nur.overlay
+                inputs.nur.overlay
+                inputs.neovim-nightly-overlay.overlay
               ];
             }
             nur.nixosModules.nur

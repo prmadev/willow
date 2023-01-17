@@ -1,7 +1,6 @@
-{
-  lib,
-  config,
-  ...
+{ lib
+, config
+, ...
 }:
 with lib; {
   options = {
@@ -24,7 +23,7 @@ with lib; {
       f = "fg";
       h = "hx";
       b = "bg";
-      n = "lvim";
+      n = "nvim";
       pc = "proxychains4 -q";
     };
   };

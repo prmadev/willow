@@ -15,6 +15,7 @@ with lib; {
   config = mkIf config.neovim.enable {
     programs.neovim = {
       enable = true;
+      package = pkgs.neovim-nightly;
 
       viAlias = true;
 
@@ -40,7 +41,7 @@ with lib; {
         rust-analyzer
         actionlint
         luaformatter
-
+        lldb
         # null-ls sources
         selene
         alejandra
