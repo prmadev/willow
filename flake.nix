@@ -15,8 +15,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nixme = {
-      url = "github:amirography/nixme";
+    aspen = {
+      url = "github:amirography/aspen";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nur = {

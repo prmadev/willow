@@ -16,7 +16,7 @@ with lib; {
     };
   };
   config = mkIf config.terminal.enable {
-    kitty.enable = true;
+    kitty.enable = false;
     zellij.enable = true;
     wezterm.enable = true;
   };

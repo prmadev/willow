@@ -47,7 +47,7 @@ with lib; {
       ];
     };
 
-    services.pgadmin.enable = true;
+    services.pgadmin.enable = false;
     services.pgadmin.initialEmail = "amirhossein.alesheikh@gmail.com";
     services.pgadmin.initialPasswordFile = ./enter;
   };

@@ -21,7 +21,7 @@ with lib; {
     };
     programs.ncmpcpp = {
       package = pkgs.ncmpcpp.override {visualizerSupport = true;};
-      enable = true;
+      enable = false;
     };
 
     home.packages = with pkgs; [
