@@ -31,7 +31,7 @@ with lib; {
     graphical.enable = true;
     task.enable = false;
     hoard.enable = false;
-    zk.enable = false;
+    zk.enable = true;
     newsboat.enable = false;
     syncthing.enable = true;
     music.enable = true;

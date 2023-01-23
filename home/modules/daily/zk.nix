@@ -15,7 +15,7 @@ with lib; {
   };
   config = mkIf config.zk.enable {
     home.sessionVariables = {
-      ZK_NOTEBOOK_DIR = "$HOME/notes";
+      ZK_NOTEBOOK_DIR = "$HOME/kapa/notes";
     };
     home.packages = with pkgs; [
       zk
