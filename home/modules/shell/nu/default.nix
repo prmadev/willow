@@ -17,7 +17,7 @@ with lib; {
         # starship init nu | save ~/.cache/starship/init.nu
       '';
       configFile.text = ''
-              let config = {
+              let-env config = {
                    filesize_metric: false
                    table_mode: compact
                    use_ls_colors: false
