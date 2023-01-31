@@ -17,14 +17,13 @@ with lib; {
         # starship init nu | save ~/.cache/starship/init.nu
       '';
       configFile.text = ''
-             let-env config = {
-                  filesize_metric: false
-                  table_mode: rounded
-                  use_ls_colors: false
-         EDITOR: nvim
-         VISUAL: nvim
-
-                }
+              let config = {
+                   filesize_metric: false
+                   table_mode: compact
+                   use_ls_colors: false
+        	 EDITOR: nvim
+        	 VISUAL: nvim
+        	}
         source ~/.cache/starship/init.nu
       '';
     };
