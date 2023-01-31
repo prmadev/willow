@@ -14,15 +14,18 @@ with lib; {
     programs.nushell = {
       enable = true;
       envFile.text = ''
-        starship init nu | save ~/.cache/starship/init.nu
+        # starship init nu | save ~/.cache/starship/init.nu
       '';
       configFile.text = ''
-        let-env config = {
-             filesize_metric: false
-             table_mode: rounded
-             use_ls_colors: false
-           }
-             source ~/.cache/starship/init.nu
+             let-env config = {
+                  filesize_metric: false
+                  table_mode: rounded
+                  use_ls_colors: false
+         EDITOR: nvim
+         VISUAL: nvim
+
+                }
+        source ~/.cache/starship/init.nu
       '';
     };
   };
