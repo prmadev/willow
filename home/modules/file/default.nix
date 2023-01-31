@@ -29,7 +29,7 @@ with lib; {
     compression.enable = true;
     filesearch.enable = true;
     nnn.enable = true;
-    office.enable = true;
+    office.enable = false;
     ranger.enable = true;
     mpv.enable = true;
     pdf.enable = true;
