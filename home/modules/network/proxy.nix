@@ -34,6 +34,7 @@ in
         shadowsocks-v2ray-plugin
         tunctl
         tor
+        arti
         torsocks
         qv2ray
         sshuttle
