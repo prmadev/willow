@@ -116,7 +116,7 @@
 
     "comment" = {
       fg = config.colors.text.hex;
-      bg = config.colors.rosebg.hex;
+      bg = config.colors.foambg.hex;
       modifiers = ["italic"];
     };
     "operator" = {
@@ -140,6 +140,7 @@
     "type" = config.colors.foam.hex;
     "string" = {
       fg = config.colors.gold.hex;
+      bg = config.colors.goldbg.hex;
       modifiers = ["italic"];
     };
     "property" = config.colors.foam.hex;
