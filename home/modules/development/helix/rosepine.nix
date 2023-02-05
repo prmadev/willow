@@ -16,7 +16,7 @@
 
     "ui.cursor.match" = {
       # modifiers = ["reversed" "dim"];
-      bg = config.colors.irisbg.hex;
+      bg = config.colors.foambg.hex;
     };
 
     "ui.cursorline.primary" = {
@@ -37,11 +37,11 @@
     };
     "ui.linenr" = {
       fg = config.colors.muted.hex;
-      bg = config.colors.overlay.hex;
+      bg = config.colors.pinebg.hex;
     };
 
     "ui.gutter" = {
-      bg = config.colors.overlay.hex;
+      bg = config.colors.pinebg.hex;
     };
     "ui.gutter.selected" = {
       fg = config.colors.base.hex;
@@ -53,7 +53,7 @@
       bg = config.colors.pine.hex;
       modifiers = ["bold"];
     };
-    "ui.selection" = {bg = config.colors.highlight-med.hex;};
+    "ui.selection" = {bg = config.colors.lovebg.hex;};
     "ui.statusline" = {
       fg = config.colors.subtle.hex;
       bg = config.colors.surface.hex;
@@ -66,7 +66,7 @@
     };
     "ui.statusline.normal" = {
       fg = config.colors.base.hex;
-      bg = config.colors.rose.hex;
+      bg = config.colors.foam.hex;
       modifiers = ["bold"];
     };
     "ui.statusline.select" = {
@@ -116,7 +116,7 @@
 
     "comment" = {
       fg = config.colors.text.hex;
-      bg = config.colors.highlight-med.hex;
+      bg = config.colors.rosebg.hex;
       modifiers = ["italic"];
     };
     "operator" = {
