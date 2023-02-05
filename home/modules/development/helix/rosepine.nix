@@ -22,7 +22,7 @@
       bg = config.colors.surface.hex;
     };
     "ui.cursorcolumn.primary" = {
-      bg = config.colors.surface.hex;
+      bg = config.colors.rosebg.hex;
     };
     "ui.menu" = {
       fg = config.colors.text.hex;

@@ -5,6 +5,10 @@ with lib; {
       type = types.str;
       default = "#ea9a97";
     };
+    colors.rosebg.hex = mkOption {
+      type = types.str;
+      default = "#ea9a9722";
+    };
 
     colors.pine.hex = mkOption {
       type = types.str;
