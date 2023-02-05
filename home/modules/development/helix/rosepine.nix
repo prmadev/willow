@@ -15,14 +15,15 @@
     };
 
     "ui.cursor.match" = {
-      modifiers = ["reversed" "dim"];
+      # modifiers = ["reversed" "dim"];
+      bg = config.colors.irisbg.hex;
     };
 
     "ui.cursorline.primary" = {
       bg = config.colors.surface.hex;
     };
     "ui.cursorcolumn.primary" = {
-      bg = config.colors.rosebg.hex;
+      bg = config.colors.surface.hex;
     };
     "ui.menu" = {
       fg = config.colors.text.hex;
@@ -31,7 +32,7 @@
     };
     "ui.menu.selected" = {
       fg = config.colors.text.hex;
-      bg = config.colors.pine.hex;
+      bg = config.colors.pinebg.hex;
       modifiers = ["bold"];
     };
     "ui.linenr" = {

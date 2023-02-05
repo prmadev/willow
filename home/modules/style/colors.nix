@@ -14,25 +14,45 @@ with lib; {
       type = types.str;
       default = "#3e8fb0";
     };
+    colors.pinebg.hex = mkOption {
+      type = types.str;
+      default = "#202D3D";
+    };
 
     colors.love.hex = mkOption {
       type = types.str;
       default = "#eb6f92";
+    };
+    colors.lovebg.hex = mkOption {
+      type = types.str;
+      default = "#3F2738";
     };
 
     colors.foam.hex = mkOption {
       type = types.str;
       default = "#9ccfd8";
     };
+    colors.foambg.hex = mkOption {
+      type = types.str;
+      default = "#313845";
+    };
 
     colors.gold.hex = mkOption {
       type = types.str;
       default = "#f6c177";
     };
+    colors.goldbg.hex = mkOption {
+      type = types.str;
+      default = "#413633";
+    };
 
     colors.iris.hex = mkOption {
       type = types.str;
       default = "#c4a7e7";
+    };
+    colors.irisbg.hex = mkOption {
+      type = types.str;
+      default = "#383147";
     };
 
     colors.base.hex = mkOption {
