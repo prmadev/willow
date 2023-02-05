@@ -1,6 +1,7 @@
 {
   lib,
   config,
+  pkgs,
   ...
 }:
 with lib; {
@@ -32,6 +33,13 @@ with lib; {
     programs.gh = {
       enable = true;
       enableGitCredentialHelper = true;
+      extensions = with pkgs; [
+        gh-dash
+        gh-eco
+        # gh-poi # not yet available
+        gh-cal
+        gh-markdown-preview
+      ];
     };
   };
 }
