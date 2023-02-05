@@ -7,7 +7,7 @@ with lib; {
     };
     colors.rosebg.hex = mkOption {
       type = types.str;
-      default = "#ea9a9788";
+      default = "#3F2F39";
     };
 
     colors.pine.hex = mkOption {
