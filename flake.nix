@@ -34,6 +34,10 @@
       # inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    ghS = {
+      url = "github:gennaro-tedesco/gh-s";
+      flake = false;
+    };
     # hyprland-contrib = {
     #   url = "github:hyprwm/contrib";
     #   inputs.nixpkgs.follows = "nixpkgs";

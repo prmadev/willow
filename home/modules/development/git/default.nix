@@ -2,6 +2,7 @@
   lib,
   config,
   pkgs,
+  inputs,
   ...
 }:
 with lib; {
@@ -33,12 +34,12 @@ with lib; {
     programs.gh = {
       enable = true;
       enableGitCredentialHelper = true;
-      extensions = with pkgs; [
-        gh-dash
-        gh-eco
+      extensions = [
+        pkgs.gh-dash
+        pkgs.gh-eco
         # gh-poi # not yet available
-        gh-cal
-        gh-markdown-preview
+        pkgs.gh-cal
+        pkgs.gh-markdown-preview
       ];
     };
   };

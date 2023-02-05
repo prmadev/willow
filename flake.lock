@@ -460,6 +460,22 @@
         "type": "github"
       }
     },
+    "ghS": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1662492470,
+        "narHash": "sha256-RnzEkSdsWuwWyujeCKar5QxF1p9/rdY6Yci2imgaw+g=",
+        "owner": "gennaro-tedesco",
+        "repo": "gh-s",
+        "rev": "c8e4e0be0edfe20b6d955486ee2c3389c8bc857f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "gennaro-tedesco",
+        "repo": "gh-s",
+        "type": "github"
+      }
+    },
     "gomod2nix": {
       "inputs": {
         "nixpkgs": [
@@ -906,6 +922,7 @@
         "fzf-finder": "fzf-finder",
         "fzf-fish": "fzf-fish",
         "fzf-tab": "fzf-tab",
+        "ghS": "ghS",
         "gomod2nix": "gomod2nix",
         "helix": "helix",
         "home-manager": "home-manager",
