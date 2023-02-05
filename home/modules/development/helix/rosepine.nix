@@ -37,11 +37,11 @@
     };
     "ui.linenr" = {
       fg = config.colors.muted.hex;
-      bg = config.colors.pinebg.hex;
+      bg = config.colors.overlay.hex;
     };
 
     "ui.gutter" = {
-      bg = config.colors.pinebg.hex;
+      bg = config.colors.overlay.hex;
     };
     "ui.gutter.selected" = {
       fg = config.colors.base.hex;
