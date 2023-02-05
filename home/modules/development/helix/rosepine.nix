@@ -116,7 +116,7 @@
 
     "comment" = {
       fg = config.colors.text.hex;
-      bg = config.colors.foambg.hex;
+      bg = config.colors.pinebg.hex;
       modifiers = ["italic"];
     };
     "operator" = {
