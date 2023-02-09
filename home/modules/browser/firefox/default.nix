@@ -16,22 +16,22 @@ with lib; {
   config = mkIf config.browser.firefox.enable {
     programs.firefox = {
       enable = true;
-      extensions = with pkgs.nur.repos.rycee.firefox-addons; [
-        adnauseam
-        bitwarden
-        clearurls
-        enhanced-github
-        enhancer-for-youtube
-        switchyomega
-        i-dont-care-about-cookies
-        snowflake
-        sponsorblock
-        stylus
-        tabliss
-      ];
       profiles = {
         default = {
           name = "default";
+          extensions = with pkgs.nur.repos.rycee.firefox-addons; [
+            adnauseam
+            bitwarden
+            clearurls
+            enhanced-github
+            enhancer-for-youtube
+            switchyomega
+            i-dont-care-about-cookies
+            snowflake
+            sponsorblock
+            stylus
+            tabliss
+          ];
           bookmarks = [
             {
               name = "home-manager options search";
