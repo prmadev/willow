@@ -26,8 +26,8 @@ with lib; {
               gaps_out = 15
               border_size = 2
               layout = master
-              col.active_border = 0xffea9a97
-              col.inactive_border = 0xff232136
+              col.active_border = 0xfff5a97f
+              col.inactive_border = 0xff24273a
           }
         '';
 
@@ -53,7 +53,7 @@ with lib; {
               shadow_offset = -5 -5
               shadow_scale = 1
               shadow_render_power = 4
-              col.shadow = 0xfff6c177
+              col.shadow = 0xff24273a
               col.shadow_inactive = 0x00000000
               dim_inactive = false
            }
