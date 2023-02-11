@@ -47,7 +47,7 @@ with lib; {
         }
       ];
       settings = {
-        theme = "rp";
+        theme = "catppuccin_macchiato";
         editor = {
           shell = ["zsh" "-c"];
           auto-format = true;
