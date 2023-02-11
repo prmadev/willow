@@ -15,5 +15,6 @@ with lib; {
   };
   config = mkIf config.style.enable {
     font.enable = true;
+    gtkconf.enable = true;
   };
 }

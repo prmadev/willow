@@ -14,6 +14,10 @@ with lib; {
       type = types.str;
       default = "ComicCodeLigatures Nerd Font";
     };
+    gtkconf.enable = mkOption {
+      type = types.bool;
+      default = false;
+    };
   };
 
   config = mkIf config.font.enable {
