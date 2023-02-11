@@ -28,17 +28,16 @@ with lib; {
 
       autocd = true;
       initExtra = ''
-        # eval "$(zellij setup --generate-auto-start zsh)"
+                  # eval "$(zellij setup --generate-auto-start zsh)"
 
-        if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-        			exec tmux
-        fi
+                  if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+                  			exec tmux
+                  fi
 
-            export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS"
-             --color=fg:#e0def4,bg:#2a273f,hl:#6e6a86
-             --color=fg+:#908caa,bg+:#232136,hl+:#908caa
-             --color=info:#9ccfd8,prompt:#f6c177,pointer:#c4a7e7
-             --color=marker:#ea9a97,spinner:#eb6f92,header:#ea9a97"
+                      export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS"
+        --color=bg+:#363a4f,bg:#24273a,spinner:#f4dbd6,hl:#ed8796 \
+        --color=fg:#cad3f5,header:#ed8796,info:#c6a0f6,pointer:#f4dbd6 \
+        --color=marker:#f4dbd6,fg+:#cad3f5,prompt:#c6a0f6,hl+:#ed8796"
       '';
       dotDir = ".config/zsh";
       completionInit = "autoload -U compinit && compinit";
