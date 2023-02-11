@@ -13,8 +13,8 @@ with lib; {
   config = mkIf config.pdf.enable {
     programs.zathura.enable = true;
     programs.zathura.options = {
-      default-bg = config.colors.base.hex;
-      default-fg = config.colors.text.hex;
+      default-bg = config.colors.macchiato.base.hex;
+      default-fg = config.colors.macchiato.text.hex;
     };
   };
 }
