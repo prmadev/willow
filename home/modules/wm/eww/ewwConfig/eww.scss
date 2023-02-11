@@ -13,76 +13,100 @@
 // $foam: #8ccfd8;
 // $rose: #ebbcba;
 
-$base: #232136;
-$surface: #2a273f;
-$overlay: #393552;
+// $base: #232136;
+// $surface: #2a273f;
+// $overlay: #393552;
+//
+// $text: #e0def4;
+// $subtle: #908caa;
+// $muted: #d9e0ee;
+//
+// $love: #eb6f92;
+// $gold: #f6c177;
+// $rose: #ea9a97;
+// $pine: #3e8fb0;
+// $foam: #9ccfd8;
+// $iris: #c4a7e7;
 
-$text: #e0def4;
-$subtle: #908caa;
-$muted: #d9e0ee;
-
-$love: #eb6f92;
-$gold: #f6c177;
-$rose: #ea9a97;
-$pine: #3e8fb0;
-$foam: #9ccfd8;
-$iris: #c4a7e7;
-
+$rosewater: #f4dbd6;
+$flamingo: #f0c6c6;
+$pink: #f5bde6;
+$mauve: #c6a0f6;
+$red: #ed8796;
+$maroon: #ee99a0;
+$peach: #f5a97f;
+$yellow: #eed49f;
+$green: #a6da95;
+$teal: #8bd5ca;
+$sky: #91d7e3;
+$sapphire: #7dc4e4;
+$blue: #8aadf4;
+$lavender: #b7bdf8;
+$text: #cad3f5;
+$subtext1: #b8c0e0;
+$subtext0: #a5adcb;
+$overlay2: #939ab7;
+$overlay1: #8087a2;
+$overlay0: #6e738d;
+$surface2: #5b6078;
+$surface1: #494d64;
+$surface0: #363a4f;
+$base: #24273a;
+$mantle: #1e2030;
+$crust: #181926;
 
 * {
-  all: unset; //Unsets everything so you can style everything from scratch
-  font-family: monosapce;
-  // font-size: 10px;
+	all: unset; //Unsets everything so you can style everything from scratch
+	font-family: monosapce;
+	// font-size: 10px;
 }
 
-.bar {}
+.bar {
+}
 
 // giving some margin to the bar sections
 .top-right,
 .top-middle,
 .top-left {
-  margin: 5px;
+	margin: 5px;
 }
 
 .top-right {
-  // background-color: $gold;
-  // color: $base;
+	// background-color: $gold;
+	// color: $base;
 }
 
-
 .battery scale trough {
-  background-color: $rose;
-  min-height: 13px;
-  min-width: 500px;
-  margin-left: 10px;
-  margin-right: 20px;
+	background-color: $flamingo;
+	min-height: 13px;
+	min-width: 500px;
+	margin-left: 10px;
+	margin-right: 20px;
 }
 
 .top-middle {
-  background-color: $rose;
-  color: $base;
+	background-color: $flamingo;
+	color: $base;
 }
 
-.top-left {}
-
+.top-left {
+}
 
 /*
 time and date
 */
 .time-date {
-  background-color: $surface;
-  border: 3px solid $gold;
-  margin: 5px;
-  padding: 5px;
-  box-shadow: -5px -5px 0px 0px $gold;
+	background-color: $surface0;
+	border: 3px solid $peach;
+	margin: 5px;
+	padding: 5px;
+	box-shadow: -5px -5px 0px 0px $peach;
 
-  .clock {
-
-    font-size: 15px;
-    font-weight: 900;
-    color: $gold;
-  }
-
+	.clock {
+		font-size: 15px;
+		font-weight: 900;
+		color: $peach;
+	}
 }
 
 /*
@@ -91,33 +115,32 @@ battery
 
 // the container that holds the scale
 .battery {
-  font-size: 15px;
-  background-color: $surface;
-  border: 3px solid $foam;
-  margin: 5px;
-  padding: 5px;
-  font-weight: 900;
-  box-shadow: -5px -5px 0px 0px $foam;
-
+	font-size: 15px;
+	background-color: $surface0;
+	border: 3px solid $sapphire;
+	margin: 5px;
+	padding: 5px;
+	font-weight: 900;
+	box-shadow: -5px -5px 0px 0px $sapphire;
 }
 
 // the scale's space
 .battery progressbar trough {
-  background-color: $pine;
-  color: $text;
-  min-width: 100px;
-  min-height: 25px;
+	background-color: $blue;
+	color: $text;
+	min-width: 100px;
+	min-height: 25px;
 }
 
 // the thing that fills the space, the progress
 .bat-ok progress {
-  background-color: $foam;
-  min-height: 25px;
+	background-color: $sapphire;
+	min-height: 25px;
 }
 
 .bat-discharging progress {
-  background-color: $love;
-  min-height: 25px;
+	background-color: $maroon;
+	min-height: 25px;
 }
 
 /*
@@ -125,45 +148,46 @@ workspaces
 */
 .active-workspace,
 .occupied-workspace {
-  background-color: $surface;
+	background-color: $surface0;
 }
 
 .active-workspace,
 .occupied-workspace,
 .inactive-workspace {
-  padding: 5px;
-  font-size: 20px;
-  border: 1px solid;
-  margin: 0px 10px 0px 0px;
+	padding: 5px;
+	font-size: 20px;
+	border: 1px solid;
+	margin: 0px 10px 0px 0px;
 }
 
 .active-workspace {
-  border-color: $rose;
-  color: $rose;
-  font-weight: 900;
-  box-shadow: -5px -5px 0px 1px $rose;
-
+	border-color: $flamingo;
+	color: $flamingo;
+	font-weight: 900;
+	box-shadow: -5px -5px 0px 1px $flamingo;
 }
 
 .occupied-workspace {
-  border-color: $text;
-  color: $text;
+	border-color: $text;
+	color: $text;
 }
 
-.inactive-workspace {}
+.inactive-workspace {
+}
 
-/* 
+/*
 tooltip
 */
-tooltip.background {}
+tooltip.background {
+}
 
 tooltip label {
-  font-size: 15;
-  font-weight: 900;
-  background-color: $overlay;
-  padding: 5px;
-  color: $pine;
-  border: 3px solid $pine;
-  margin: 5px;
-  box-shadow: -5px -5px 0px 0px $pine;
+	font-size: 15;
+	font-weight: 900;
+	background-color: $overlay0;
+	padding: 5px;
+	color: $pine;
+	border: 3px solid $blue;
+	margin: 5px;
+	box-shadow: -5px -5px 0px 0px $blue;
 }

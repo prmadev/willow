@@ -2,7 +2,7 @@ $base: #191724;
 $surface: #1f1d2e;
 $overlay: #26233a;
 
-$text: #d9e0ee;
+// $text: #d9e0ee;
 $subtle: #908caa;
 $muted: #6e6a86;
 
@@ -13,174 +13,190 @@ $iris: #c4a7e7;
 $foam: #8ccfd8;
 $rose: #ebbcba;
 
+$rosewater: #f4dbd6;
+$flamingo: #f0c6c6;
+$pink: #f5bde6;
+$mauve: #c6a0f6;
+$red: #ed8796;
+$maroon: #ee99a0;
+$peach: #f5a97f;
+$yellow: #eed49f;
+$green: #a6da95;
+$teal: #8bd5ca;
+$sky: #91d7e3;
+$sapphire: #7dc4e4;
+$blue: #8aadf4;
+$lavender: #b7bdf8;
+$text: #cad3f5;
+$subtext1: #b8c0e0;
+$subtext0: #a5adcb;
+$overlay2: #939ab7;
+$overlay1: #8087a2;
+$overlay0: #6e738d;
+$surface2: #5b6078;
+$surface1: #494d64;
+$surface0: #363a4f;
+$base: #24273a;
+$mantle: #1e2030;
+$crust: #181926;
 * {
-  all: unset; //Unsets everything so you can style everything from scratch
-  font-family: monosapce;
-  // font-size: 10px;
+	all: unset; //Unsets everything so you can style everything from scratch
+	font-family: monosapce;
+	// font-size: 10px;
 }
 
 .time {
-  .time-date {
-    .clock {
-      font-size: 100px;
-      font-weight: 900;
-      color: $text;
-    }
+	.time-date {
+		.clock {
+			font-size: 100px;
+			font-weight: 900;
+			color: $text;
+		}
 
-    .date {
-      font-size: 90px;
-      font-weight: 400;
-      color: $text;
-    }
-  }
+		.date {
+			font-size: 90px;
+			font-weight: 400;
+			color: $text;
+		}
+	}
 }
 
-
-
 .info {
-  arrow {
-    font-size: 30px;
-    background-color: $love;
-    color: $foam;
-  }
+	arrow {
+		font-size: 30px;
+		background-color: $love;
+		color: $foam;
+	}
 
-  .clock {
-    font-size: 30px;
-    color: $base;
-    font-weight: 900;
-  }
+	.clock {
+		font-size: 30px;
+		color: $base;
+		font-weight: 900;
+	}
 
-  .date {
-    font-size: 15px;
-    color: $overlay;
-    font-weight: 900;
-  }
+	.date {
+		font-size: 15px;
+		color: $overlay;
+		font-weight: 900;
+	}
 
-  .timer {
-    padding: 10px;
-    border: 3px solid $overlay;
-    border-radius: 5px;
-  }
+	.timer {
+		padding: 10px;
+		border: 3px solid $overlay;
+		border-radius: 5px;
+	}
 
+	highlight {
+		border-radius: 5px;
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
 
+	contents {
+		min-width: 200px;
+	}
 
-  highlight {
-    border-radius: 5px;
-    padding-top: 15px;
-    padding-bottom: 15px,
-  }
+	.brightness highlight {
+		background: $foam;
+	}
 
-  contents {
-    min-width: 200px;
-  }
+	.battery highlight {
+		background: $love;
+	}
 
-  .brightness highlight {
-    background: $foam;
-  }
+	.network highlight {
+		background: $iris;
+	}
 
-  .battery highlight {
-    background: $love;
-  }
+	.stat {
+		padding: 10px;
+		border-radius: 5px;
+	}
 
+	.label {
+		background-color: $base;
+		font-weight: 900;
+		border-radius: 5px;
+		min-width: 30px;
+	}
 
-  .network highlight {
-    background: $iris;
-  }
+	.gra trough {
+		border-width: 3px;
+		border-style: solid;
+		border-color: $overlay;
+		border-radius: 5px;
+		min-width: 200px;
+	}
 
-
-
-  .stat {
-    padding: 10px;
-    border-radius: 5px;
-  }
-
-  .label {
-    background-color: $base;
-    font-weight: 900;
-    border-radius: 5px;
-    min-width: 30px;
-  }
-
-
-
-  .gra trough {
-    border-width: 3px;
-    border-style: solid;
-    border-color: $overlay;
-    border-radius: 5px;
-    min-width: 200px;
-  }
-
-
-  .gra trough slider {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-radius: 5px;
-    min-width: 10px;
-  }
+	.gra trough slider {
+		padding-top: 10px;
+		padding-bottom: 10px;
+		border-radius: 5px;
+		min-width: 10px;
+	}
 }
 
 .ws {
-  .tag {
-    margin: 3px;
-    /* background-color: $base; */
-    border: 3px solid $overlay;
-    border-radius: 5px;
+	.tag {
+		margin: 3px;
+		/* background-color: $base; */
+		border: 3px solid $overlay;
+		border-radius: 5px;
 
-    .name {
-      color: $overlay;
-      /* background: $base; */
-      font-weight: 400;
-      padding-right: 5px;
-      margin: 5px;
-      border-top-right-radius: 5px;
-      border-bottom-right-radius: 5px;
-      font-size: 15px;
-    }
+		.name {
+			color: $overlay;
+			/* background: $base; */
+			font-weight: 400;
+			padding-right: 5px;
+			margin: 5px;
+			border-top-right-radius: 5px;
+			border-bottom-right-radius: 5px;
+			font-size: 15px;
+		}
 
-    .monitor {
-      color: $rose;
-      background: $overlay;
-      font-weight: 400;
-      padding: 5px;
-      /* border-radius: 5px; */
-      font-size: 15px;
-    }
+		.monitor {
+			color: $rose;
+			background: $overlay;
+			font-weight: 400;
+			padding: 5px;
+			/* border-radius: 5px; */
+			font-size: 15px;
+		}
 
-    .active-monitor-one {
-      color: $base;
-      background: $love;
-      font-weight: 900;
-      padding: 5px;
-      /* border-radius: 5px; */
-      font-size: 18px;
-    }
+		.active-monitor-one {
+			color: $base;
+			background: $love;
+			font-weight: 900;
+			padding: 5px;
+			/* border-radius: 5px; */
+			font-size: 18px;
+		}
 
-    .active-monitor-two {
-      color: $base;
-      background: $rose;
-      font-weight: 900;
-      padding: 5px;
-      /* border-radius: 5px; */
-      font-size: 18px;
-    }
+		.active-monitor-two {
+			color: $base;
+			background: $rose;
+			font-weight: 900;
+			padding: 5px;
+			/* border-radius: 5px; */
+			font-size: 18px;
+		}
 
-    .occupied {
-      color: $text;
-      background: $overlay;
-      font-weight: 900;
-      padding: 5px;
-      /* border-radius: 5px; */
-      font-size: 18px;
-    }
+		.occupied {
+			color: $text;
+			background: $overlay;
+			font-weight: 900;
+			padding: 5px;
+			/* border-radius: 5px; */
+			font-size: 18px;
+		}
 
-    .empty {
-      color: $muted;
-      background: $overlay;
-      font-weight: 900;
-      padding: 5px;
-      /* border-radius: 5px; */
-      font-size: 18px;
-    }
-  }
+		.empty {
+			color: $muted;
+			background: $overlay;
+			font-weight: 900;
+			padding: 5px;
+			/* border-radius: 5px; */
+			font-size: 18px;
+		}
+	}
 }

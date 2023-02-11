@@ -1,6 +1,113 @@
 {lib, ...}:
 with lib; {
   options = {
+    colors.macchiato.rosewater.hex = mkOption {
+      type = types.str;
+      default = "#f4dbd6";
+    };
+    colors.macchiato.flamingo.hex = mkOption {
+      type = types.str;
+      default = "#f0c6c6";
+    };
+    colors.macchiato.pink.hex = mkOption {
+      type = types.str;
+      default = "#f5bde6";
+    };
+    colors.macchiato.mauve.hex = mkOption {
+      type = types.str;
+      default = "#c6a0f6";
+    };
+    colors.macchiato.red.hex = mkOption {
+      type = types.str;
+      default = "#ed8796";
+    };
+    colors.macchiato.maroon.hex = mkOption {
+      type = types.str;
+      default = "#ee99a0";
+    };
+    colors.macchiato.peach.hex = mkOption {
+      type = types.str;
+      default = "#f5a97f";
+    };
+    colors.macchiato.yellow.hex = mkOption {
+      type = types.str;
+      default = "#eed49f";
+    };
+    colors.macchiato.green.hex = mkOption {
+      type = types.str;
+      default = "#a6da95";
+    };
+    colors.macchiato.teal.hex = mkOption {
+      type = types.str;
+      default = "#8bd5ca";
+    };
+
+    colors.macchiato.sky.hex = mkOption {
+      type = types.str;
+      default = "#91d7e3";
+    };
+    colors.macchiato.sapphire.hex = mkOption {
+      type = types.str;
+      default = "#7dc4e4";
+    };
+    colors.macchiato.blue.hex = mkOption {
+      type = types.str;
+      default = "#8aadf4";
+    };
+    colors.macchiato.lavendar.hex = mkOption {
+      type = types.str;
+      default = "#b7bdf8";
+    };
+    colors.macchiato.text.hex = mkOption {
+      type = types.str;
+      default = "#cad3f5";
+    };
+
+    colors.macchiato.subtext1.hex = mkOption {
+      type = types.str;
+      default = "#b8c0e0";
+    };
+    colors.macchiato.subtext0.hex = mkOption {
+      type = types.str;
+      default = "#a5adcb";
+    };
+    colors.macchiato.overlay2.hex = mkOption {
+      type = types.str;
+      default = "#939ab7";
+    };
+    colors.macchiato.overlay1.hex = mkOption {
+      type = types.str;
+      default = "#8087a2";
+    };
+    colors.macchiato.overlay0.hex = mkOption {
+      type = types.str;
+      default = "#6e738d";
+    };
+    colors.macchiato.surface2.hex = mkOption {
+      type = types.str;
+      default = "#5b6078";
+    };
+    colors.macchiato.surface1.hex = mkOption {
+      type = types.str;
+      default = "#494d64";
+    };
+    colors.macchiato.surface0.hex = mkOption {
+      type = types.str;
+      default = "#363a4f";
+    };
+    colors.macchiato.base.hex = mkOption {
+      type = types.str;
+      default = "#24273a";
+    };
+    colors.macchiato.mantle.hex = mkOption {
+      type = types.str;
+      default = "#1e2030";
+    };
+    colors.macchiato.crust.hex = mkOption {
+      type = types.str;
+      default = "#181926";
+    };
+
     colors.rose.hex = mkOption {
       type = types.str;
       default = "#ea9a97";
