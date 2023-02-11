@@ -31,8 +31,8 @@
       modifiers = [];
     };
     "ui.menu.selected" = {
-      fg = config.colors.text.hex;
-      bg = config.colors.pinebg.hex;
+      fg = config.colors.base.hex;
+      bg = config.colors.foam.hex;
       modifiers = ["bold"];
     };
     "ui.linenr" = {
@@ -115,8 +115,8 @@
     ##### tree-sitter
 
     "comment" = {
-      fg = config.colors.text.hex;
-      bg = config.colors.pinebg.hex;
+      fg = config.colors.muted.hex;
+      # bg = config.colors.pinebg.hex;
       modifiers = ["italic"];
     };
     "operator" = {
