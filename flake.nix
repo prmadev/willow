@@ -85,6 +85,11 @@
       flake = false;
     };
 
+    catppuccin-zsh = {
+      url = "github:catppuccin/zsh-syntax-highlighting";
+      flake = false;
+    };
+
     zsh-tab-title = {
       url = "github:trystan2k/zsh-tab-title";
       flake = false;

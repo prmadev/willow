@@ -52,6 +52,11 @@ with lib; {
           src = inputs.cd-ls;
           name = "cd-ls";
         }
+
+        {
+          src = inputs.catppuccin-zsh;
+          name = "catpuccin-zsh";
+        }
         {
           src = inputs.fzf-tab;
           name = "fzf-tab";
