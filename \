@@ -161,10 +161,10 @@ workspaces
 }
 
 .active-workspace {
-	border-color: $mauve;
-	color: $mauve;
+	border-color: $muave;
+	color: $flamingo;
 	font-weight: 900;
-	box-shadow: -5px -5px 0px 1px $mauve;
+	box-shadow: -5px -5px 0px 1px $flamingo;
 }
 
 .occupied-workspace {
