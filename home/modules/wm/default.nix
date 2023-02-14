@@ -24,7 +24,7 @@ with lib; {
   config = mkIf config.wm.enable {
     mako.enable = true;
     launcher.enable = true;
-    wm.river.enable = false;
+    wm.river.enable = true;
     eww.enable = true;
     hyprland.enable = true;
     sway.enable = false;

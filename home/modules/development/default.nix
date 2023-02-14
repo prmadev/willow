@@ -15,6 +15,8 @@ with lib; {
     ./neovim
     ./helix
     ./nixdev
+    ./protobuf.nix
+    ./grpc.nix
     ./rust
     ./vscode
     ./zig
@@ -32,6 +34,8 @@ with lib; {
     git.enable = true;
     go.enable = true;
     neovim.enable = true;
+    protobuf.enable = true;
+    grpc.enable = true;
     # emacs.enable = false;
     helix.enable = true;
     nixdev.enable = true;

@@ -36,7 +36,7 @@ with lib; {
           exec-once = systemctl --user start hyprland-session.target
           exec-once = v2ray run -c ~/vmess-new.json
           # exec =  swaybg -i "/home/a/.config/wallpaper"
-          exec =  swww init && swww img ~/Downloads/sky.gif
+          exec =  swww init && swww img ~/pretty_5.png
           # exec = hyprpaper
           # exec-once =  wh
           exec-once = eww -c ~/willow/home/modules/wm/eww/ewwConfig daemon &&  eww -c ~/willow/home/modules/wm/eww/ewwConfig open topbar

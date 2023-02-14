@@ -17,19 +17,19 @@ with lib; {
     ];
     programs.waybar = mkIf config.waybar.enable {
       enable = true;
-      systemd.enable = true;
-      systemd.target = mkIf config.sway.enable "sway-session.target";
+      # systemd.enable = true;
+      # systemd.target = mkIf config.sway.enable "sway-session.target";
       settings = {
         mainBar = {
           gtk-layer-shell = true;
           position = "top";
           height = 0;
           modules-left = [
-            "sway/mode"
-            "sway/workspaces"
-            "wlr/workspaces"
+            # "sway/mode"
+            # "sway/workspaces"
+            # "wlr/workspaces"
             # "wlr/taskbar"
-            # "river/mode"
+            "river/mode"
             "river/tags"
           ];
           modules-center = [
@@ -40,7 +40,7 @@ with lib; {
             "network"
             "pulseaudio"
             "battery"
-            "sway/language"
+            # "sway/language"
             "clock"
           ];
 
