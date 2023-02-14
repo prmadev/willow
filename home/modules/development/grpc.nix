@@ -12,6 +12,6 @@ with lib; {
     };
   };
   config = mkIf config.grpc.enable {
-    home.packages = with pkgs; [grpcurl];
+    home.packages = with pkgs; [grpcurl evans];
   };
 }
