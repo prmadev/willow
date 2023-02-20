@@ -20,8 +20,8 @@ with lib; {
     wayland.enable = true;
 
     home.sessionVariables = {
-      # XKB_DEFAULT_LAYOUT = "us,ir";
-      # XKB_DEFAULT_OPTIONS = "grp:alt_shift_toggle,caps:escape";
+      XKB_DEFAULT_LAYOUT = "us,ir";
+      XKB_DEFAULT_OPTIONS = "grp:alt_shift_toggle,caps:escape";
     };
   };
 }

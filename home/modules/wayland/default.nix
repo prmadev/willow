@@ -39,7 +39,7 @@ with lib; {
       QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
       _JAVA_AWT_WM_NONREPARENTING = "1";
       XKB_DEFAULT_LAYOUT = "us,ir";
-      XKB_DEFAULT_OPTIONS = "grp:caps:escape";
+      XKB_DEFAULT_OPTIONS = "grp:alt_shift_toggle,caps:escape";
     };
 
     systemd.user.services = {

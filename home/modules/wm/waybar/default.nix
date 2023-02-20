@@ -29,7 +29,7 @@ with lib; {
             # "sway/workspaces"
             # "wlr/workspaces"
             # "wlr/taskbar"
-            "river/mode"
+            # "river/mode"
             "river/tags"
           ];
           modules-center = [
@@ -126,110 +126,71 @@ with lib; {
       #TODO use variable colors
       style = let
         bordersize-main = "5px";
-        bordersize-support = "1px";
+        bordersize-support = "2px";
 
-        bg-base = "background: ${config.colors.base.hex};";
-        bg-surface = "background: ${config.colors.surface.hex};";
-        bg-overlay = "background: ${config.colors.overlay.hex};";
-        bg-muted = "background: ${config.colors.muted.hex};";
-        bg-subtle = "background: ${config.colors.subtle.hex};";
-        bg-text = "background: ${config.colors.text.hex};";
-        bg-love = "background: ${config.colors.love.hex};";
-        bg-gold = "background: ${config.colors.gold.hex};";
-        bg-rose = "background: ${config.colors.rose.hex};";
-        bg-pine = "background: ${config.colors.pine.hex};";
-        bg-foam = "background: ${config.colors.foam.hex};";
-        bg-iris = "background: ${config.colors.iris.hex};";
-        bg-hl-low = "background: ${config.colors.highlight-low.hex};";
-        bg-hl-med = "background: ${config.colors.highlight-med.hex};";
-        bg-hl-high = "background: ${config.colors.highlight-high.hex};";
+        bg-base = "background: ${config.colors.macchiato.base.hex};";
+        bg-surface = "background: ${config.colors.macchiato.surface0.hex};";
         bg-transparent = "background: transparent;";
 
-        border-base = let color = config.colors.base.hex; in "border-top: ${bordersize-main} solid ${color}; border-left:${bordersize-main} solid ${color};border-right:${bordersize-support} solid ${color};border-bottom:${bordersize-support} solid ${color}; ";
-        border-surface = let color = config.colors.surface.hex; in "border-top: ${bordersize-main} solid ${color}; border-left:${bordersize-main} solid ${color};border-right:${bordersize-support} solid ${color};border-bottom:${bordersize-support} solid ${color}; ";
-        border-overlay = let color = config.colors.overlay.hex; in "border-top: ${bordersize-main} solid ${color}; border-left:${bordersize-main} solid ${color};border-right:${bordersize-support} solid ${color};border-bottom:${bordersize-support} solid ${color}; ";
-        border-muted = let color = config.colors.muted.hex; in "border-top: ${bordersize-main} solid ${color}; border-left:${bordersize-main} solid ${color};border-right:${bordersize-support} solid ${color};border-bottom:${bordersize-support} solid ${color}; ";
-        border-subtle = let color = config.colors.subtle.hex; in "border-top: ${bordersize-main} solid ${color}; border-left:${bordersize-main} solid ${color};border-right:${bordersize-support} solid ${color};border-bottom:${bordersize-support} solid ${color}; ";
-        border-text = let color = config.colors.text.hex; in "border-top: ${bordersize-main} solid ${color}; border-left:${bordersize-main} solid ${color};border-right:${bordersize-support} solid ${color};border-bottom:${bordersize-support} solid ${color}; ";
-        border-love = let color = config.colors.love.hex; in "border-top: ${bordersize-main} solid ${color}; border-left:${bordersize-main} solid ${color};border-right:${bordersize-support} solid ${color};border-bottom:${bordersize-support} solid ${color}; ";
-        border-gold = let color = config.colors.gold.hex; in "border-top: ${bordersize-main} solid ${color}; border-left:${bordersize-main} solid ${color};border-right:${bordersize-support} solid ${color};border-bottom:${bordersize-support} solid ${color}; ";
-        border-rose = let color = config.colors.rose.hex; in "border-top: ${bordersize-main} solid ${color}; border-left:${bordersize-main} solid ${color};border-right:${bordersize-support} solid ${color};border-bottom:${bordersize-support} solid ${color}; ";
-        border-pine = let color = config.colors.pine.hex; in "border-top: ${bordersize-main} solid ${color}; border-left:${bordersize-main} solid ${color};border-right:${bordersize-support} solid ${color};border-bottom:${bordersize-support} solid ${color}; ";
-        border-foam = let color = config.colors.foam.hex; in "border-top: ${bordersize-main} solid ${color}; border-left:${bordersize-main} solid ${color};border-right:${bordersize-support} solid ${color};border-bottom:${bordersize-support} solid ${color}; ";
-        border-iris = let color = config.colors.iris.hex; in "border-top: ${bordersize-main} solid ${color}; border-left:${bordersize-main} solid ${color};border-right:${bordersize-support} solid ${color};border-bottom:${bordersize-support} solid ${color}; ";
-        border-hl-low = let color = config.colors.highlight-low.hex; in "border-top: ${bordersize-main} solid ${color}; border-left:${bordersize-main} solid ${color};border-right:${bordersize-support} solid ${color};border-bottom:${bordersize-support} solid ${color}; ";
-        border-hl-med = let color = config.colors.highlight-med.hex; in "border-top: ${bordersize-main} solid ${color}; border-left:${bordersize-main} solid ${color};border-right:${bordersize-support} solid ${color};border-bottom:${bordersize-support} solid ${color}; ";
-        border-hl-high = let color = config.colors.highlight-high.hex; in "border-top: ${bordersize-main} solid ${color}; border-left:${bordersize-main} solid ${color};border-right:${bordersize-support} solid ${color};border-bottom:${bordersize-support} solid ${color}; ";
-        border-transparent = let color = "transparent"; in "border-top: ${bordersize-main} solid ${color}; border-left:${bordersize-main} solid ${color};border-right:${bordersize-support} solid ${color};border-bottom:${bordersize-support} solid ${color}; ";
+        border-peach = let color = config.colors.macchiato.peach.hex; in "border-top: ${bordersize-main} solid ${color}; border-left:${bordersize-main} solid ${color};border-right:${bordersize-support} solid ${color};border-bottom:${bordersize-support} solid ${color}; ";
+        border-text = let color = config.colors.macchiato.text.hex; in "border-top: ${bordersize-main} solid ${color}; border-left:${bordersize-main} solid ${color};border-right:${bordersize-support} solid ${color};border-bottom:${bordersize-support} solid ${color}; ";
+        border-flamingo = let color = config.colors.macchiato.flamingo.hex; in "border-top: ${bordersize-main} solid ${color}; border-left:${bordersize-main} solid ${color};border-right:${bordersize-support} solid ${color};border-bottom:${bordersize-support} solid ${color}; ";
+        border-sapphire = let color = config.colors.macchiato.sapphire.hex; in "border-top: ${bordersize-main} solid ${color}; border-left:${bordersize-main} solid ${color};border-right:${bordersize-support} solid ${color};border-bottom:${bordersize-support} solid ${color}; ";
+        border-sky = let color = config.colors.macchiato.sky.hex; in "border-top: ${bordersize-main} solid ${color}; border-left:${bordersize-main} solid ${color};border-right:${bordersize-support} solid ${color};border-bottom:${bordersize-support} solid ${color}; ";
+        border-maroon = let color = config.colors.macchiato.maroon.hex; in "border-top: ${bordersize-main} solid ${color}; border-left:${bordersize-main} solid ${color};border-right:${bordersize-support} solid ${color};border-bottom:${bordersize-support} solid ${color}; ";
+        border-lavendar = let color = config.colors.macchiato.lavendar.hex; in "border-top: ${bordersize-main} solid ${color}; border-left:${bordersize-main} solid ${color};border-right:${bordersize-support} solid ${color};border-bottom:${bordersize-support} solid ${color}; ";
+        border-red = let color = config.colors.macchiato.red.hex; in "border-top: ${bordersize-main} solid ${color}; border-left:${bordersize-main} solid ${color};border-right:${bordersize-support} solid ${color};border-bottom:${bordersize-support} solid ${color}; ";
 
-        fg-base = "color: ${config.colors.base.hex};";
-        fg-surface = "color: ${config.colors.surface.hex};";
-        fg-overlay = "color: ${config.colors.overlay.hex};";
-        fg-muted = "color: ${config.colors.muted.hex};";
-        fg-subtle = "color: ${config.colors.subtle.hex};";
-        fg-text = "color: ${config.colors.text.hex};";
-        fg-love = "color: ${config.colors.love.hex};";
-        fg-gold = "color: ${config.colors.gold.hex};";
-        fg-rose = "color: ${config.colors.rose.hex};";
-        fg-pine = "color: ${config.colors.pine.hex};";
-        fg-foam = "color: ${config.colors.foam.hex};";
-        fg-iris = "color: ${config.colors.iris.hex};";
-        fg-hl-low = "color: ${config.colors.highlight-low.hex};";
-        fg-hl-med = "color: ${config.colors.highlight-med.hex};";
-        fg-hl-high = "color: ${config.colors.highlight-high.hex};";
+        fg-text = "color: ${config.colors.macchiato.text.hex};";
+        fg-red = "color: ${config.colors.macchiato.red.hex};";
+        fg-flamingo = "color: ${config.colors.macchiato.flamingo.hex};";
+        fg-maroon = "color: ${config.colors.macchiato.maroon.hex};";
+        fg-sapphire = "color: ${config.colors.macchiato.sapphire.hex};";
+        fg-sky = "color: ${config.colors.macchiato.sky.hex};";
+        fg-lavendar = "color: ${config.colors.macchiato.lavendar.hex};";
+        fg-peach = "color: ${config.colors.macchiato.peach.hex};";
         fg-transparent = "color: transparent;";
 
         radi0 = "border-radius: 0;";
-        radi5 = "border-radius: 5;";
 
-        bold = "font-weight: 900;";
+        bold = "font-weight: bold;";
       in let
         prelude = ''
-                 *{
-                 		border:none;
-                         font-family: ${config.global-fonts.main-family};
-                         font-size: 15px;
-                         min-height: 20px;
-          ${radi0}
-                 	}
+                          *{
+                          		border:none;
+                                 font-family: ${config.global-fonts.main-family};
+                                 font-size: 15px;
+                                 min-height: 20px;
+          border-radius: 0;
+                          	}
         '';
-        language = ''
-          #language {
-            ${bg-base}
-            ${radi0}
-            ${fg-pine}
-            padding: 5px;
-            margin: 10px 10px 0px 10px;
-          }
-        '';
-        workspace-button = ''#workspaces button{ ${border-iris} ${fg-iris} ${bg-base} ${bold} padding: 5px; margin:5px 5px 0px 5px;}'';
-        workspace-button-active = ''#workspaces button.active {${border-gold} ${fg-gold}}'';
-        workspace-button-focused = ''#workspaces button.focused {${border-gold} ${fg-gold}}'';
-        workspace-button-occupied = ''#workspaces button.occupied {${border-foam}}'';
-        workspace-button-visible = ''#workspaces button.visible {${border-foam}}'';
+        workspace-button = ''#workspaces button{ ${border-lavendar} ${fg-lavendar} ${bg-base} ${bold} padding: 5px; margin:5px 5px 0px 5px;}'';
+        workspace-button-active = ''#workspaces button.active {${border-flamingo} ${fg-flamingo}}'';
+        workspace-button-focused = ''#workspaces button.focused {${border-flamingo} ${fg-flamingo}}'';
+        workspace-button-occupied = ''#workspaces button.occupied {${border-sky}}'';
+        workspace-button-visible = ''#workspaces button.visible {${border-sky}}'';
         window-waybar = ''window#waybar{ ${bg-transparent} ${radi0}}'';
         tooltip = ''tooltip { ${bg-surface} }'';
         tooltip-label = ''tooltip label{ ${fg-text} }'';
-        tags = ''#tags{ ${bg-transparent} ${radi0} padding:5px 5px 0px 5px;}'';
-        tags-button = ''#tags button{ ${bg-base}  ${fg-transparent} padding: 0px 5px; margin-right:5px; margin-left:5px;}'';
-        tags-button-occupied = "#tags button.occupied {${radi0} ${bg-base} ${bold} ${fg-iris}}";
-        tags-button-focused = "#tags button.focused {${radi0} ${bg-base} ${bold} ${fg-love}}";
-        tags-button-urgent = "#tags button.urgent {${radi0} ${bg-base} ${bold} ${fg-gold}}";
+        tags = ''#tags{ ${bg-transparent}  ${radi0} padding:5px 5px 0px 5px;}'';
+        tags-button = ''#tags button{ ${bg-base} ${border-text} ${fg-text} ${fg-transparent} padding: 0px 5px; margin-right:5px; margin-left:5px;}'';
+        tags-button-occupied = "#tags button.occupied {${radi0} ${border-sky} ${bg-base}  ${fg-sky}}";
+        tags-button-focused = "#tags button.focused {${radi0} ${bg-base} ${bold}${border-peach} ${fg-peach}}";
+        tags-button-urgent = "#tags button.urgent {${radi0} ${bg-base} ${bold} ${border-red} ${fg-red}}";
         other-widgets = "#custom-date, #clock, #battery, #pulseaudio,#network,#custom-joljol {${fg-text} ${bg-base} ${bold} padding: 2.5px 15px; margin: 5px 5px 0px 0px;}";
-        clock = "#clock { ${fg-gold} ${border-gold}}";
-        network = "#network { ${fg-foam} ${border-foam}}";
-        bat = "#battery { ${fg-pine} ${border-pine}}";
-        batcharging = "#battery.charging{ ${fg-foam} ${border-foam}}";
-        bathundnotcharging = "#battery.hundred:not(.charging){ ${fg-pine} ${border-pine}}";
-        batnotcharging = "#battery:not(.charging){ ${fg-rose} ${border-rose}}";
-        bat30notcharging = "#battery.thirty:not(.charging){ ${fg-love} ${border-love}}";
-        pulse = "#pulseaudio {${radi0} ${border-iris} ${fg-iris}}";
-        pulsemuted = "#pulseaudio.muted {${radi0} ${border-love} ${fg-love}}";
-        tray = "#tray {${radi0} ${border-foam} margin: 10px 10px 0px 10px;}";
+        clock = "#clock { ${fg-flamingo} ${border-flamingo}}";
+        network = "#network { ${fg-sky} ${border-sky}}";
+        bat = "#battery { ${fg-sapphire} ${border-sapphire}}";
+        batcharging = "#battery.charging{ ${fg-sky} ${border-sky}}";
+        bathundnotcharging = "#battery.hundred:not(.charging){ ${fg-sapphire} ${border-sapphire}}";
+        batnotcharging = "#battery:not(.charging){ ${fg-maroon} ${border-maroon}}";
+        bat30notcharging = "#battery.thirty:not(.charging){ ${fg-peach} ${border-peach}}";
+        pulse = "#pulseaudio {${radi0} ${border-lavendar} ${fg-lavendar}}";
+        pulsemuted = "#pulseaudio.muted {${radi0} ${border-peach} ${fg-red}}";
+        tray = "#tray {${radi0} ${border-sky} margin: 10px 10px 0px 10px;}";
         traymenu = "#traymenu {${radi0} }";
       in
         prelude
-        + language
         + workspace-button
         + workspace-button-focused
         + workspace-button-active

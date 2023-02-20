@@ -1,6 +1,7 @@
 {
   lib,
   config,
+  inputs,
   ...
 }:
 with lib; {
@@ -13,6 +14,7 @@ with lib; {
   config = mkIf config.wezterm.enable {
     programs.wezterm = {
       enable = true;
+      package = inputs.stable.legacyPackages."x86_64-linux".wezterm;
       extraConfig = "${builtins.readFile ./wezterm.lua}";
     };
   };
