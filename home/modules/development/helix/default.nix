@@ -92,10 +92,10 @@ with lib; {
               c = ":bc";
               R = [":clipboard-paste-replace"];
             };
-            y = [":clipboard-yank-join"];
-            p = [":clipboard-paste-after"];
-            P = [":clipboard-paste-before"];
-            d = [":clipboard-yank-join" "delete_selection"];
+            # y = [":clipboard-yank-join"];
+            # p = [":clipboard-paste-after"];
+            # P = [":clipboard-paste-before"];
+            # d = [":clipboard-yank-join" "delete_selection"];
           };
           select = {
             "S-right" = ":buffer-next";
