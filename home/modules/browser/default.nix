@@ -18,7 +18,7 @@ with lib; {
   };
   config = mkIf config.browser.enable {
     browser.firefox.enable = true;
-    browser.qutebrowser.enable = true;
+    browser.qutebrowser.enable = false;
     home.file = {
       ".config/startpage/" = {
         source = ./startpage;
@@ -26,8 +26,8 @@ with lib; {
       };
     };
     home.packages = with pkgs; [
-      lynx
-      w3m
+      # lynx
+      # w3m
     ];
   };
 }
