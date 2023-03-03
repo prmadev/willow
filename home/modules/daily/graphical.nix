@@ -18,6 +18,7 @@ with lib; {
     home.packages = with pkgs; [
       inkscape
       # krita
+      libresprite
       gimp
       pastel
       imagemagick
