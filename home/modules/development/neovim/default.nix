@@ -161,6 +161,7 @@ with lib; {
       # DAP servers
       delve
       asciidoctor-with-extensions
+      adrgen
       # Other stuff
       bc
       wget
