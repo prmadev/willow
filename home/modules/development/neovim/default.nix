@@ -160,7 +160,7 @@ with lib; {
       taplo
       # DAP servers
       delve
-
+      asciidoctor-with-extensions
       # Other stuff
       bc
       wget
