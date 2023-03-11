@@ -101,17 +101,17 @@
     #
     # # "ui.virtual.whitespace" = {bg = config.colors.love.hex;};
     # "ui.virtual.indent-guide" = {fg = config.colors.highlight-high.hex;};
-    # "ui.popup" = {bg = config.colors.surface.hex;};
-    # "ui.popup.info" = {bg = config.colors.surface.hex;};
+    "ui.popup" = {bg = config.colors.macchiato.mantle.hex;};
+    "ui.popup.info" = {bg = config.colors.macchiato.mantle.hex;};
     # "ui.window" = {
     #   bg = config.colors.base.hex;
     #   fg = config.colors.base.hex;
     #   modifiers = ["hidden"];
     # };
-    # "ui.help" = {
-    #   bg = config.colors.surface.hex;
-    #   fg = config.colors.subtle.hex;
-    # };
+    "ui.help" = {
+      bg = config.colors.macchiato.mantle.hex;
+      fg = config.colors.subtle.hex;
+    };
     #
     # ##### tree-sitter
     #
