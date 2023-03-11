@@ -6,7 +6,7 @@
   ...
 } @ args:
 with lib; {
-  imports = [./rosepine.nix];
+  imports = [./rosepine.nix ./catppuccin-improved.nix];
   options = {
     helix.enable = mkOption {
       type = types.bool;
