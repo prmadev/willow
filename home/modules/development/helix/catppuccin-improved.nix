@@ -1,5 +1,5 @@
 {config, ...}: {
-  programs.helix.themes.veganMachiato = {
+  programs.helix.themes.veganMacchiato = {
     ###### UI
     inherits = "catppuccin_macchiato";
     # "ui.background" = {bg = config.colors.base.hex;};
