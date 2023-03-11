@@ -165,7 +165,7 @@
     "keyword.control" = {
       fg = config.colors.macchiato.green.hex;
       modifiers = ["bold"];
-    # };
+    };
     #
     "keyword.function" = {
       fg = config.colors.macchiato.red.hex;
