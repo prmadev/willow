@@ -55,7 +55,6 @@
       modifiers = ["bold"];
     };
 
-    # "ui.selection" = {bg = config.colors.lovebg.hex;};
     # "ui.statusline" = {
     #   fg = config.colors.subtle.hex;
     #   bg = config.colors.surface.hex;
@@ -89,16 +88,16 @@
     #   fg = config.colors.text.hex;
     #   modifiers = [];
     # };
-    # "ui.bufferline" = {
-    #   fg = config.colors.muted.hex;
-    #   bg = config.colors.base.hex;
-    #   modifiers = ["bold"];
-    # };
-    # "ui.bufferline.active" = {
-    #   fg = config.colors.base.hex;
-    #   bg = config.colors.pine.hex;
-    #   modifiers = ["bold"];
-    # };
+    "ui.bufferline" = {
+      fg = config.colors.macchiato.subtext0.hex;
+      bg = config.colors.macchiato.base.hex;
+      modifiers = ["bold"];
+    };
+    "ui.bufferline.active" = {
+      fg = config.colors.macchiato.base.hex;
+      bg = config.colors.macchiato.pink.hex;
+      modifiers = ["bold"];
+    };
     #
     # # "ui.virtual.whitespace" = {bg = config.colors.love.hex;};
     # "ui.virtual.indent-guide" = {fg = config.colors.highlight-high.hex;};
