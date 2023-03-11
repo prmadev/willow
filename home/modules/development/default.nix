@@ -40,7 +40,7 @@ with lib; {
     helix.enable = true;
     nixdev.enable = true;
     rust.enable = true;
-    vscode.enable = true;
+    vscode.enable = false;
     zig.enable = true;
 
     home.packages = with pkgs; [

@@ -35,6 +35,16 @@ with lib; {
           name = "toml";
           language-server = {command = "${pkgs.taplo-lsp}/bin/taplo";};
         }
+
+        {
+          name = "rust";
+          language-server = {command = "${pkgs.rust-analyzer}/bin/rust-analyzer";};
+          config = {
+            check = {
+              command = "${pkgs.clippy}/bin/clippy";
+            };
+          };
+        }
         {
           name = "go";
           auto-format = true;
@@ -61,6 +71,8 @@ with lib; {
           bufferline = "always";
 
           lsp.display-messages = true;
+          lsp.display-inlay-hints = true;
+          lsp.display-signature-help-docs = true;
           file-picker.hidden = true;
           indent-guides = {
             render = true;

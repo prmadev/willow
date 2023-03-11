@@ -11,7 +11,7 @@ with lib; {
     };
   };
   config = {
-    programs.mako = mkIf config.mako.enable {
+    services.mako = mkIf config.mako.enable {
       enable = true;
       anchor = "top-right";
       # textColor = "#285511FF" ;
