@@ -144,7 +144,7 @@
     #   bg = config.colors.goldbg.hex;
     #   modifiers = ["italic"];
     # };
-    # "property" = config.colors.foam.hex;
+    "property" = config.colors.macchiato.flamingo.hex;
     #
     "function" = {
       fg = config.colors.macchiato.text.hex;
@@ -162,9 +162,9 @@
     #   modifiers = ["bold"];
     # };
     #
-    # "keyword.control" = {
-    #   fg = config.colors.rose.hex;
-    #   modifiers = ["bold"];
+    "keyword.control" = {
+      fg = config.colors.macchiato.green.hex;
+      modifiers = ["bold"];
     # };
     #
     "keyword.function" = {
