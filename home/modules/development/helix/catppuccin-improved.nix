@@ -27,15 +27,15 @@
       bg = config.colors.macchiato.crust.hex;
     };
     "ui.menu" = {
-      fg = config.colors.text.hex;
-      bg = config.colors.surface.hex;
+      fg = config.colors.macchiato.text.hex;
+      bg = config.colors.macchiato.surface0.hex;
       modifiers = [];
     };
-    # "ui.menu.selected" = {
-    #   fg = config.colors.base.hex;
-    #   bg = config.colors.foam.hex;
-    #   modifiers = ["bold"];
-    # };
+    "ui.menu.selected" = {
+      fg = config.colors.macchiato.crust.hex;
+      bg = config.colors.macchiato.sky.hex;
+      modifiers = ["bold"];
+    };
     # "ui.linenr" = {
     #   fg = config.colors.muted.hex;
     #   bg = config.colors.overlay.hex;
