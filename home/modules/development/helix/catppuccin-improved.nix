@@ -189,6 +189,10 @@
     "comment.block.documentation" = {
       fg = config.colors.macchiato.red.hex;
     };
+
+    "comment.line.documentation" = {
+      fg = config.colors.macchiato.red.hex;
+    };
     #
     # "keyword.storage" = {
     #   fg = config.colors.rose.hex;
