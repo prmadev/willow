@@ -21,10 +21,10 @@
     };
 
     "ui.cursorline.primary" = {
-      bg = config.colors.macchiato.crust.hex;
+      bg = config.colors.macchiato.mantle.hex;
     };
     "ui.cursorcolumn.primary" = {
-      bg = config.colors.macchiato.crust.hex;
+      bg = config.colors.macchiato.mantle.hex;
     };
     "ui.menu" = {
       fg = config.colors.macchiato.text.hex;
@@ -38,11 +38,11 @@
     };
     "ui.linenr" = {
       fg = config.colors.macchiato.text.hex;
-      bg = config.colors.macchiato.surface1.hex;
+      bg = config.colors.macchiato.mantle.hex;
     };
     #
     "ui.gutter" = {
-      bg = config.colors.macchiato.surface1.hex;
+      bg = config.colors.macchiato.mantle.hex;
     };
     "ui.gutter.selected" = {
       fg = config.colors.macchiato.surface1.hex;
@@ -116,7 +116,7 @@
     # ##### tree-sitter
     #
     # "comment" = {
-    #   fg = config.colors.muted.hex;
+    # fg = config.colors.muted.hex;
     #   # bg = config.colors.pinebg.hex;
     #   modifiers = ["italic"];
     # };
