@@ -37,23 +37,24 @@
       modifiers = ["bold"];
     };
     "ui.linenr" = {
-      fg = config.colors.macchiato.crust.hex;
-      bg = config.colors.macchiato.sapphire.hex;
+      fg = config.colors.macchiato.text.hex;
+      bg = config.colors.macchiato.mantle.hex;
     };
     #
     "ui.gutter" = {
-      bg = config.colors.macchiato.sapphire.hex;
+      bg = config.colors.macchiato.mantle.hex;
     };
-    # "ui.gutter.selected" = {
-    #   fg = config.colors.base.hex;
-    #   bg = config.colors.pine.hex;
-    #   modifiers = ["bold"];
-    # };
-    # "ui.linenr.selected" = {
-    #   fg = config.colors.base.hex;
-    #   bg = config.colors.pine.hex;
-    #   modifiers = ["bold"];
-    # };
+    "ui.gutter.selected" = {
+      fg = config.colors.macchiato.mantle.hex;
+      bg = config.colors.macchiato.sky.hex;
+      modifiers = ["bold"];
+    };
+    "ui.linenr.selected" = {
+      fg = config.colors.macchiato.mantle.hex;
+      bg = config.colors.macchiato.sky.hex;
+      modifiers = ["bold"];
+    };
+
     # "ui.selection" = {bg = config.colors.lovebg.hex;};
     # "ui.statusline" = {
     #   fg = config.colors.subtle.hex;
