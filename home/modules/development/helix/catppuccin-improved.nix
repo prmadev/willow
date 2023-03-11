@@ -151,7 +151,10 @@
       modifiers = ["bold"];
     };
     "function.builtin" = config.colors.macchiato.maroon.hex;
-    "function.method" = config.colors.macchiato.text.hex;
+    "function.method" = {
+      fg = config.colors.macchiato.text.hex;
+      modifiers = ["bold"];
+    };
     # "constructor" = config.colors.gold.hex;
     # "special" = config.colors.gold.hex;
     # "keyword" = {
@@ -176,7 +179,7 @@
     #
     # "label" = config.colors.iris.hex;
     #
-    # "namespace" = config.colors.muted.hex;
+    "namespace" = config.colors.macchiato.subtext0.hex;
     # "tag" = config.colors.foam.hex;
     # "text" = config.colors.text.hex;
     #
