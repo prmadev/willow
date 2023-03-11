@@ -111,16 +111,16 @@
     #
     # # "ui.virtual.whitespace" = {bg = config.colors.love.hex;};
     # "ui.virtual.indent-guide" = {fg = config.colors.highlight-high.hex;};
-    "ui.popup" = {bg = config.colors.macchiato.surface1.hex;};
-    "ui.popup.info" = {bg = config.colors.macchiato.surface1.hex;};
+    "ui.popup" = {bg = config.colors.macchiato.mantle.hex;};
+    "ui.popup.info" = {bg = config.colors.macchiato.mantle.hex;};
     "ui.window" = {
-      bg = config.colors.macchiato.surface1.hex;
+      bg = config.colors.macchiato.mantle.hex;
       fg = config.colors.macchiato.surface1.hex;
       modifiers = ["hidden"];
     };
     "ui.help" = {
-      bg = config.colors.macchiato.surface1.hex;
-      fg = config.colors.subtle.hex;
+      bg = config.colors.macchiato.mantle.hex;
+      fg = config.colors.macchiato.text.hex;
     };
     #
     # ##### tree-sitter
@@ -185,13 +185,6 @@
     "keyword.function" = {
       fg = config.colors.macchiato.red.hex;
       modifiers = ["bold" "italic"];
-    };
-    "comment.block.documentation" = {
-      fg = config.colors.macchiato.red.hex;
-    };
-
-    "comment.line.documentation" = {
-      fg = config.colors.macchiato.red.hex;
     };
     #
     # "keyword.storage" = {
