@@ -16,8 +16,8 @@
     };
 
     "ui.cursor.match" = {
-      # modifiers = ["reversed" "dim"];
-      bg = config.colors.macchiato.sky.hex;
+      modifiers = ["bold" "slow_blink"];
+      bg = config.colors.macchiato.surface0.hex;
     };
 
     "ui.cursorline.primary" = {
@@ -26,11 +26,11 @@
     "ui.cursorcolumn.primary" = {
       bg = config.colors.macchiato.crust.hex;
     };
-    # "ui.menu" = {
-    #   fg = config.colors.text.hex;
-    #   bg = config.colors.surface.hex;
-    #   modifiers = [];
-    # };
+    "ui.menu" = {
+      fg = config.colors.text.hex;
+      bg = config.colors.surface.hex;
+      modifiers = [];
+    };
     # "ui.menu.selected" = {
     #   fg = config.colors.base.hex;
     #   bg = config.colors.foam.hex;
