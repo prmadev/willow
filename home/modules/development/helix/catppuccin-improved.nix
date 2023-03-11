@@ -59,7 +59,6 @@
       bg = config.colors.macchiato.base.hex;
     };
     "attribute" = {
-      bg = config.colors.macchiato.surface0.hex;
       fg = config.colors.macchiato.peach.hex;
     };
     # "ui.statusline" = {
@@ -104,6 +103,10 @@
       fg = config.colors.macchiato.base.hex;
       bg = config.colors.macchiato.pink.hex;
       modifiers = ["bold"];
+    };
+
+    "ui.bufferline.background" = {
+      bg = config.colors.macchiato.mantle.hex;
     };
     #
     # # "ui.virtual.whitespace" = {bg = config.colors.love.hex;};
