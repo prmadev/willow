@@ -157,13 +157,13 @@
     };
     # "constructor" = config.colors.gold.hex;
     # "special" = config.colors.gold.hex;
-    # "keyword" = {
-    #   fg = config.colors.rose.hex;
-    #   modifiers = ["bold"];
-    # };
+    "keyword" = {
+      fg = config.colors.macchiato.flamingo.hex;
+      modifiers = ["bold"];
+    };
     #
     "keyword.control" = {
-      fg = config.colors.macchiato.green.hex;
+      fg = config.colors.macchiato.teal.hex;
       modifiers = ["bold"];
     };
     #
