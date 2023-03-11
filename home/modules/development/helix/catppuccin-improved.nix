@@ -256,10 +256,10 @@
     # };
     #
     # "markup.heading.marker" = config.colors.subtle.hex;
-    # "markup.heading.1" = {
-    #   fg = config.colors.love.hex;
-    #   modifiers = ["bold"];
-    # };
+    "markup.heading.1" = {
+      bg = config.colors.macchiato.red.hex;
+      modifiers = ["bold"];
+    };
     # "markup.heading.2" = {
     #   fg = config.colors.gold.hex;
     #   modifiers = ["bold"];
