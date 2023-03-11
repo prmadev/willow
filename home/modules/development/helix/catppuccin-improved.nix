@@ -165,6 +165,11 @@
       fg = config.colors.macchiato.text.hex;
       modifiers = ["bold"];
     };
+
+    "function.macro" = {
+      fg = config.colors.macchiato.peach.hex;
+      modifiers = ["bold"];
+    };
     # "constructor" = config.colors.gold.hex;
     # "special" = config.colors.gold.hex;
     "keyword" = {
