@@ -186,6 +186,9 @@
       fg = config.colors.macchiato.red.hex;
       modifiers = ["bold" "italic"];
     };
+    "comment.block.documentation" = {
+      fg = config.colors.macchiato.red.hex;
+    };
     #
     # "keyword.storage" = {
     #   fg = config.colors.rose.hex;
