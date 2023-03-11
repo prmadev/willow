@@ -57,7 +57,7 @@ with lib; {
         }
       ];
       settings = {
-        theme = "catppuccin_macchiato";
+        theme = "veganMacchiato";
         editor = {
           shell = ["zsh" "-c"];
           auto-format = true;
