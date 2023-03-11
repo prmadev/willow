@@ -255,31 +255,42 @@
     #   };
     # };
     #
-    # "markup.heading.marker" = config.colors.subtle.hex;
+    "markup.heading.marker" = config.colors.macchiato.subtext0.hex;
     "markup.heading.1" = {
       bg = config.colors.macchiato.red.hex;
+      fg = config.colors.macchiato.mantle.hex;
       modifiers = ["bold"];
     };
-    # "markup.heading.2" = {
-    #   fg = config.colors.gold.hex;
-    #   modifiers = ["bold"];
-    # };
-    # "markup.heading.3" = {
-    #   fg = config.colors.rose.hex;
-    #   modifiers = ["bold"];
-    # };
-    # "markup.heading.4" = {
-    #   fg = config.colors.pine.hex;
-    #   modifiers = ["bold"];
-    # };
-    # "markup.heading.5" = {
-    #   fg = config.colors.foam.hex;
-    #   modifiers = ["bold"];
-    # };
-    # "markup.heading.6" = {
-    #   fg = config.colors.iris.hex;
-    #   modifiers = ["bold"];
-    # };
+
+    "markup.heading.2" = {
+      bg = config.colors.macchiato.maroon.hex;
+      fg = config.colors.macchiato.mantle.hex;
+      modifiers = ["bold"];
+    };
+
+    "markup.heading.3" = {
+      bg = config.colors.macchiato.peach.hex;
+      fg = config.colors.macchiato.mantle.hex;
+      modifiers = ["bold"];
+    };
+
+    "markup.heading.4" = {
+      bg = config.colors.macchiato.yellow.hex;
+      fg = config.colors.macchiato.mantle.hex;
+      modifiers = ["bold"];
+    };
+
+    "markup.heading.5" = {
+      bg = config.colors.macchiato.green.hex;
+      fg = config.colors.macchiato.mantle.hex;
+      modifiers = ["bold"];
+    };
+
+    "markup.heading.6" = {
+      bg = config.colors.macchiato.teal.hex;
+      fg = config.colors.macchiato.mantle.hex;
+      modifiers = ["bold"];
+    };
     # "markup.list" = {fg = config.colors.love.hex;};
     # "markup.bold" = {
     #   fg = config.colors.gold.hex;
