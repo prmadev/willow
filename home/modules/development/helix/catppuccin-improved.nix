@@ -138,7 +138,7 @@
     # "constant.numeric" = config.colors.iris.hex;
     # "constant.character.escape" = config.colors.subtle.hex;
     # "attributes" = config.colors.gold.hex;
-    # "type" = config.colors.foam.hex;
+    "type" = config.colors.macchiato.sky.hex;
     # "string" = {
     #   fg = config.colors.gold.hex;
     #   bg = config.colors.goldbg.hex;
@@ -146,12 +146,12 @@
     # };
     # "property" = config.colors.foam.hex;
     #
-    # "function" = {
-    #   fg = config.colors.text.hex;
-    #   modifiers = ["bold"];
-    # };
-    # "function.builtin" = config.colors.rose.hex;
-    # "function.method" = config.colors.text.hex;
+    "function" = {
+      fg = config.colors.macchiato.text.hex;
+      modifiers = ["bold"];
+    };
+    "function.builtin" = config.colors.macchiato.maroon.hex;
+    "function.method" = config.colors.macchiato.text.hex;
     # "constructor" = config.colors.gold.hex;
     # "special" = config.colors.gold.hex;
     # "keyword" = {
@@ -164,10 +164,10 @@
     #   modifiers = ["bold"];
     # };
     #
-    # "keyword.function" = {
-    #   fg = config.colors.rose.hex;
-    #   modifiers = ["bold" "italic"];
-    # };
+    "keyword.function" = {
+      fg = config.colors.macchiato.red.hex;
+      modifiers = ["bold" "italic"];
+    };
     #
     # "keyword.storage" = {
     #   fg = config.colors.rose.hex;
