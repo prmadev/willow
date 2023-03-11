@@ -55,6 +55,9 @@
       modifiers = ["bold"];
     };
 
+    "ui.background" = {
+      bg = config.colors.macchiato.base.hex;
+    };
     # "ui.statusline" = {
     #   fg = config.colors.subtle.hex;
     #   bg = config.colors.surface.hex;
