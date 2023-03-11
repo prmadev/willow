@@ -28,7 +28,7 @@
     };
     "ui.menu" = {
       fg = config.colors.macchiato.text.hex;
-      bg = config.colors.macchiato.surface0.hex;
+      bg = config.colors.macchiato.crust.hex;
       modifiers = [];
     };
     "ui.menu.selected" = {
@@ -36,14 +36,14 @@
       bg = config.colors.macchiato.sky.hex;
       modifiers = ["bold"];
     };
-    # "ui.linenr" = {
-    #   fg = config.colors.muted.hex;
-    #   bg = config.colors.overlay.hex;
-    # };
+    "ui.linenr" = {
+      fg = config.colors.macchiato.crust.hex;
+      bg = config.colors.macchiato.sapphire.hex;
+    };
     #
-    # "ui.gutter" = {
-    #   bg = config.colors.overlay.hex;
-    # };
+    "ui.gutter" = {
+      bg = config.colors.macchiato.sapphire.hex;
+    };
     # "ui.gutter.selected" = {
     #   fg = config.colors.base.hex;
     #   bg = config.colors.pine.hex;
