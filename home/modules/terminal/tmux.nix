@@ -1,6 +1,7 @@
 {
   lib,
   config,
+  pkgs,
   ...
 }:
 with lib; {
@@ -10,10 +11,8 @@ with lib; {
   config = mkIf config.terminal.enable {
     programs.tmux = {
       enable = true;
-      keyMode = "vi";
-      prefix = "C-x";
-      shortcut = "x";
       terminal = "wezterm";
+      shell = "${pkgs.zsh}/bin/zsh";
     };
   };
 }
