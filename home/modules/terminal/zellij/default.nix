@@ -20,19 +20,20 @@ with lib; {
         scroll_buffer_size = 20000;
         scrollback_editor = "${pkgs.helix}/bin/hx";
         copy_command = "wl-copy";
+        theme = "catppuccin-macchiato";
         themes = {
           default = {
-            fg = config.colors.subtle.rgb;
-            bg = config.colors.base.rgb;
-            black = config.colors.surface.rgb;
-            red = config.colors.pine.rgb;
-            green = config.colors.pine.rgb;
-            yellow = config.colors.gold.rgb;
-            blue = config.colors.foam.rgb;
-            magenta = config.colors.iris.rgb;
-            cyan = config.colors.rose.rgb;
-            white = config.colors.subtle.rgb;
-            orange = config.colors.gold.rgb;
+            fg = config.colors.macchiato.subtext0.hex;
+            bg = config.colors.macchiato.base.hex;
+            black = config.colors.macchiato.mantle.hex;
+            red = config.colors.macchiato.red.hex;
+            green = config.colors.macchiato.green.hex;
+            yellow = config.colors.macchiato.yellow.hex;
+            blue = config.colors.macchiato.blue.hex;
+            magenta = config.colors.macchiato.mauve.hex;
+            cyan = config.colors.macchiato.teal.hex;
+            white = config.colors.macchiato.text.hex;
+            orange = config.colors.macchiato.peach.hex;
           };
         };
       };
