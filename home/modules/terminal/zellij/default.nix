@@ -11,7 +11,7 @@ with lib; {
   };
   config = mkIf config.zellij.enable {
     programs.zellij = {
-      enable = false;
+      enable = true;
       # package = inputs.zellij;
       settings = {
         default_shell = "zsh";
@@ -37,6 +37,6 @@ with lib; {
         };
       };
     };
-    home.packages = with pkgs; [skim];
+    # home.packages = with pkgs; [skim];
   };
 }
