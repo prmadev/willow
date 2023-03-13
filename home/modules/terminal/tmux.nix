@@ -8,7 +8,7 @@ with lib; {
   options = {
     tmux.enable = mkEnableOption "tmux";
   };
-  config = mkIf config.terminal.enable {
+  config = mkIf config.tmux.enable {
     programs.tmux = {
       enable = true;
       terminal = "wezterm";
