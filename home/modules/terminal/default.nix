@@ -8,6 +8,7 @@ with lib; {
     ./kitty
     ./wezterm
     ./zellij
+    ./tmux.nix
   ];
   options = {
     terminal.enable = mkOption {
@@ -19,5 +20,6 @@ with lib; {
     kitty.enable = false;
     zellij.enable = true;
     wezterm.enable = true;
+    tmux.enable = true;
   };
 }
