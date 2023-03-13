@@ -22,7 +22,7 @@ with lib; {
         copy_command = "wl-copy";
         theme = "catppuccin-macchiato";
         themes = {
-          default = {
+          catppuccin-macchiato = {
             fg = config.colors.macchiato.subtext0.hex;
             bg = config.colors.macchiato.base.hex;
             black = config.colors.macchiato.mantle.hex;
