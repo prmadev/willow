@@ -44,7 +44,7 @@ with lib; {
           config = {
             check = {
               command = "${pkgs.clippy}/bin/clippy";
-              args = ["--all-targets" "--all-features" "--workspace"];
+              args = ["--workspace" "--all-targets" "--all-features"];
             };
           };
         }
@@ -76,7 +76,7 @@ with lib; {
           lsp.display-messages = true;
           lsp.display-inlay-hints = true;
           lsp.display-signature-help-docs = true;
-          file-picker.hidden = true;
+          file-picker.hidden = false;
           indent-guides = {
             render = true;
             character = "│";
