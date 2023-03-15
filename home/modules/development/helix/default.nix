@@ -38,11 +38,14 @@ with lib; {
 
         {
           name = "rust";
-          language-server = {command = "${pkgs.rust-analyzer}/bin/rust-analyzer";};
+          language-server = {
+            command = "${pkgs.rust-analyzer}/bin/rust-analyzer";
+            args = ["--parallel" "--with-deps"];
+          };
           config = {
             check = {
               command = "${pkgs.clippy}/bin/clippy";
-              args = ["--all-targets" "--all-features"];
+              args = ["--all-targets" "--all-features" "--workspace"];
             };
           };
         }
