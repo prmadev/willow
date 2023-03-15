@@ -42,6 +42,7 @@ with lib; {
           config = {
             check = {
               command = "${pkgs.clippy}/bin/clippy";
+              args = ["--all-targets" "--all-features"];
             };
           };
         }
