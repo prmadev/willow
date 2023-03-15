@@ -40,7 +40,6 @@ with lib; {
           name = "rust";
           language-server = {
             command = "${pkgs.rust-analyzer}/bin/rust-analyzer";
-            args = ["--parallel" "--with-deps"];
           };
           config = {
             check = {
