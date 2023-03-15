@@ -17,7 +17,8 @@ with lib; {
       default-fg = config.colors.macchiato.text.hex;
       recolor-darkcolor = config.colors.macchiato.text.hex;
       recolor-lightcolor = config.colors.macchiato.base.hex;
-      keep-hue = true;
+      recolor-keephue = true;
+      recolor = true;
     };
   };
 }
