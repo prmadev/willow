@@ -15,6 +15,9 @@ with lib; {
     programs.zathura.options = {
       default-bg = config.colors.macchiato.base.hex;
       default-fg = config.colors.macchiato.text.hex;
+      recolor-darkcolor = config.colors.macchiato.text.hex;
+      recolor-lightcolor = config.colors.macchiato.base.hex;
+      keep-hue = true;
     };
   };
 }
