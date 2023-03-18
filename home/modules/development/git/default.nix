@@ -13,6 +13,10 @@ with lib; {
     };
   };
   config = mkIf config.git.enable {
+    home.packages = with pkgs; [
+      git-gone # trim stale branches
+      git-bug # bug reporting right inside the repo
+    ];
     programs.git = {
       enable = true;
       userEmail = "amirhossein.alesheikh@gmail.com";
@@ -25,6 +29,10 @@ with lib; {
         init = {
           defaultBranch = "main";
         };
+      };
+      signing = {
+        key = "EA109402685DDDDB";
+        signByDefault = true;
       };
 
       delta.enable = true;
