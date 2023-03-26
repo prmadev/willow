@@ -13,7 +13,7 @@ with lib; {
       enable = true;
       terminal = "wezterm";
       historyLimit = 10000;
-      mouse = true;
+      mouse = false;
       shell = "${pkgs.zsh}/bin/zsh";
       sensibleOnTop = true;
       plugins = with pkgs; [
