@@ -12,7 +12,11 @@ with lib; {
     programs.tmux = {
       enable = true;
       terminal = "wezterm";
+      historyLimit = 10000;
+      mouse = true;
       shell = "${pkgs.zsh}/bin/zsh";
+      sensibleOnTop = true;
+      plugins = [];
     };
   };
 }
