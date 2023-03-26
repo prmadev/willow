@@ -20,6 +20,6 @@ with lib; {
     kitty.enable = false;
     zellij.enable = true;
     wezterm.enable = true;
-    tmux.enable = false;
+    tmux.enable = true;
   };
 }

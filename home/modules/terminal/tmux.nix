@@ -11,7 +11,7 @@ with lib; {
   config = mkIf config.tmux.enable {
     programs.tmux = {
       enable = true;
-      terminal = "wezterm";
+      terminal = "WezTerm";
       shell = "${pkgs.zsh}/bin/zsh";
     };
   };
