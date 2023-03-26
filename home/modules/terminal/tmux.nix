@@ -20,6 +20,7 @@ with lib; {
         tmuxPlugins.open
         tmuxPlugins.tmux-fzf
         tmuxPlugins.catppuccin
+        tmuxPlugins.tmux-thumbs
       ];
     };
   };
