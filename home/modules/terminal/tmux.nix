@@ -19,7 +19,10 @@ with lib; {
       plugins = with pkgs; [
         tmuxPlugins.open
         tmuxPlugins.tmux-fzf
-        tmuxPlugins.catppuccin
+        {
+          plugin = tmuxPlugins.catppuccin;
+          extraConfig = "set -g @catppuccin_flavour 'macchiato'";
+        }
         tmuxPlugins.tmux-thumbs
       ];
     };
