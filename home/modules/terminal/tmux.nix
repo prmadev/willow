@@ -13,6 +13,7 @@ with lib; {
       enable = true;
       terminal = "wezterm";
       historyLimit = 10000;
+      escapeTime = 0;
       mouse = false;
       shell = "${pkgs.zsh}/bin/zsh";
       sensibleOnTop = true;
@@ -26,5 +27,8 @@ with lib; {
         tmuxPlugins.tmux-thumbs
       ];
     };
+    home.packages = with pkgs; [
+      smug
+    ];
   };
 }
