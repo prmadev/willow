@@ -13,13 +13,13 @@ with lib; {
   };
   config = mkIf config.database.enable {
     environment.systemPackages = with pkgs; [
-      pgcli
-      python310Packages.keyring
-      pgweb
+      # pgcli
+      # python310Packages.keyring
+      # pgweb
       # gobang
     ];
     services.postgresql = {
-      enable = true;
+      enable = false;
 
       enableTCPIP = true;
       port = 5432;

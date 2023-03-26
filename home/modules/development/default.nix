@@ -52,9 +52,9 @@ with lib; {
       # atk
       # glib
       # libepoxy
-      redis
+      # redis
       # redis-desktop-manager
-      iredis
+      # iredis
       dfeet
       hyperfine
       # pgadmin
