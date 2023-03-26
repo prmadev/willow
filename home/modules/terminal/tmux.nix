@@ -16,7 +16,7 @@ with lib; {
       mouse = true;
       shell = "${pkgs.zsh}/bin/zsh";
       sensibleOnTop = true;
-      plugins = [];
+      plugins = with pkgs; [tmuxPlugins.open];
     };
   };
 }
