@@ -10,6 +10,7 @@ with lib; {
   };
   config = let
     nextToggle = ''bind-key  -n C-\\ next-window'';
+    killSession = ''bind-key   C-k kill-session'';
     horPane = ''bind | split-window -h -c "#{pane_current_path}"'';
     verPane = ''bind - split-window -v -c "#{pane_current_path}"'';
     newWin = ''bind c new-window -c "#{pane_current_path}"'';
@@ -23,7 +24,7 @@ with lib; {
         mouse = true;
         shell = "${pkgs.zsh}/bin/zsh";
         sensibleOnTop = true;
-        extraConfig = nextToggle + "\n" + horPane + "\n" + verPane + "\n" + newWin + "\n";
+        extraConfig = nextToggle + "\n" + horPane + "\n" + verPane + "\n" + newWin + "\n" + killSession + "\n";
         plugins = with pkgs; [
           tmuxPlugins.open
           {
