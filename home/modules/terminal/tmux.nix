@@ -26,10 +26,13 @@ with lib; {
         extraConfig = nextToggle + "\n" + horPane + "\n" + verPane + "\n" + newWin + "\n";
         plugins = with pkgs; [
           tmuxPlugins.open
-          tmuxPlugins.tmux-fzf
+          {
+            plugin = tmuxPlugins.tmux-fzf;
+            extraConfig = ''TMUX_FZF_LAUNCH_KEY="C-f"'';
+          }
           {
             plugin = tmuxPlugins.catppuccin;
-            extraConfig = "set -g @catppuccin_flavour 'macchiato'\n" + "set -g @catppuccin_window_tabs_enabled on";
+            extraConfig = "set -g @catppuccin_flavour 'macchiato'\n" + "set -g @catppuccin_window_tabs_enabled on" + "\n";
           }
           tmuxPlugins.tmux-thumbs
         ];
