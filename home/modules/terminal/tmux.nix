@@ -14,7 +14,7 @@ with lib; {
       terminal = "wezterm";
       historyLimit = 10000;
       escapeTime = 0;
-      mouse = false;
+      mouse = true;
       shell = "${pkgs.zsh}/bin/zsh";
       sensibleOnTop = true;
       plugins = with pkgs; [
