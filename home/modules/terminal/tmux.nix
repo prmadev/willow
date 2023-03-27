@@ -18,7 +18,7 @@ with lib; {
     mkIf config.tmux.enable {
       programs.tmux = {
         enable = true;
-        terminal = "wezterm";
+        terminal = "tmux-256color";
         historyLimit = 10000;
         escapeTime = 0;
         mouse = true;
