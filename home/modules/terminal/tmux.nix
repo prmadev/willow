@@ -22,7 +22,7 @@ with lib; {
         tmuxPlugins.tmux-fzf
         {
           plugin = tmuxPlugins.catppuccin;
-          extraConfig = "set -g @catppuccin_flavour 'macchiato'";
+          extraConfig = "set -g @catppuccin_flavour 'macchiato'\n" + "set -g @catppuccin_window_tabs_enabled on";
         }
         tmuxPlugins.tmux-thumbs
       ];
