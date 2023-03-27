@@ -10,6 +10,9 @@ with lib; {
   };
   config = let
     nextToggle = ''bind-key  -n C-\\ next-window'';
+    horPane = ''bind | split-window -h -c "#{pane_current_path}"'';
+    verPane = ''bind - split-window -v -c "#{pane_current_path}"'';
+    newWin = ''bind c new-window -c "#{pane_current_path}"'';
   in
     mkIf config.tmux.enable {
       programs.tmux = {
@@ -20,7 +23,7 @@ with lib; {
         mouse = true;
         shell = "${pkgs.zsh}/bin/zsh";
         sensibleOnTop = true;
-        extraConfig = nextToggle + "\n";
+        extraConfig = nextToggle + "\n" + horPane + "\n" + verPane + "\n" + newWin + "\n";
         plugins = with pkgs; [
           tmuxPlugins.open
           tmuxPlugins.tmux-fzf
