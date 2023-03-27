@@ -9,7 +9,7 @@ with lib; {
     tmux.enable = mkEnableOption "tmux";
   };
   config = let
-    nextToggle = "bind-key  C-\ next-window";
+    nextToggle = "bind-key  C-\\ next-window";
   in
     mkIf config.tmux.enable {
       programs.tmux = {
