@@ -15,6 +15,7 @@ with lib; {
     programs = {
       fzf.enable = true;
       fzf.changeDirWidgetCommand = "fd --type d";
+      fzf.tmux.enableShellIntegration = true;
     };
     home.packages = with pkgs; [
       fzf
