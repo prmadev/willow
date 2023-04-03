@@ -75,12 +75,9 @@ with lib; {
           cursorline = true;
           cursorcolumn = true;
           bufferline = "always";
-          lsp.display-messages = true;
-          lsp.display-inlay-hints = true;
-          lsp.display-signature-help-docs = true;
           indent-guides = {
             render = true;
-            character = "█";
+            character = "│";
           };
           cursor-shape = {
             insert = "bar";
@@ -88,10 +85,15 @@ with lib; {
             select = "block";
           };
           statusline = {
-            left = ["mode"];
-            center = ["file-name"];
-            right = ["diagnostics" "spinner" "position-percentage"];
+            left = ["mode" "diagnostics"];
+            center = ["file-name" "file-modification-indicator" "version-control"];
+            right = ["workspace-diagnostics" "spinner" "position-percentage" "total-line-numbers"];
           };
+
+          # lsp
+          lsp.display-messages = true;
+          lsp.display-inlay-hints = true;
+          lsp.display-signature-help-docs = true;
 
           # tools
           auto-pairs = true;
