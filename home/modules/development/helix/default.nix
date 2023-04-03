@@ -43,7 +43,7 @@ with lib; {
           };
           config = {
             check = {
-              command = "${pkgs.clippy}/bin/clippy";
+              command = "${pkgs.clippy}/bin/cargo-clippy";
               args = ["--workspace" "--all-targets" "--all-features"];
             };
           };
@@ -63,36 +63,39 @@ with lib; {
         theme = "veganMacchiato";
         editor = {
           shell = ["zsh" "-c"];
-          auto-format = true;
+          # auto-format = true; # default is true
+
+          # auto completion
+          idle-timeout = 0;
           completion-trigger-len = 1;
+
+          # ui
           line-number = "relative";
           color-modes = true;
           cursorline = true;
           cursorcolumn = true;
-          idle-timeout = 0;
-          auto-pairs = true;
           bufferline = "always";
-
           lsp.display-messages = true;
           lsp.display-inlay-hints = true;
           lsp.display-signature-help-docs = true;
-          file-picker.hidden = false;
           indent-guides = {
             render = true;
             character = "│";
           };
-
           cursor-shape = {
             insert = "bar";
             normal = "block";
             select = "block";
           };
-
           statusline = {
             left = ["mode"];
             center = ["file-name"];
-            right = ["selections" "diagnostics" "spinner" "position-percentage"];
+            right = ["diagnostics" "spinner" "position-percentage"];
           };
+
+          # tools
+          auto-pairs = true;
+          file-picker.hidden = false;
         };
 
         keys = {
