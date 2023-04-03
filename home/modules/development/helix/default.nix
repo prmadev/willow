@@ -43,7 +43,7 @@ with lib; {
           };
           config = {
             check = {
-              command = "${pkgs.clippy}/bin/cargo-clippy";
+              command = "clippy";
               args = ["--workspace" "--all-targets" "--all-features"];
             };
           };
