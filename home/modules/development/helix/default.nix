@@ -80,7 +80,7 @@ with lib; {
           lsp.display-signature-help-docs = true;
           indent-guides = {
             render = true;
-            character = "│";
+            character = "█";
           };
           cursor-shape = {
             insert = "bar";
