@@ -97,15 +97,16 @@ with lib; {
 
           # tools
           auto-pairs = true;
-          file-picker.hidden = false;
+          # file-picker.hidden = true;
+          file-picker.git-ignore = false;
         };
 
         keys = {
           normal = {
             "S-right" = ":buffer-next";
             "S-left" = ":buffer-previous";
-            "S-l" = ":buffer-next";
-            "S-h" = ":buffer-previous";
+            "S-L" = ":buffer-next";
+            "S-H" = ":buffer-previous";
             # ret = ["open_below" "normal_mode"];
             X = ["extend_line_above"];
             space = {
@@ -116,11 +117,15 @@ with lib; {
             # p = [":clipboard-paste-after"];
             # P = [":clipboard-paste-before"];
             # d = [":clipboard-yank-join" "delete_selection"];
+            pageup = "no_op";
+            pagedown = "no_op";
           };
           select = {
             "S-right" = ":buffer-next";
             "S-left" = ":buffer-previous";
-            y = [":clipboard-yank-join"];
+            # y = [":clipboard-yank-join"];
+            pageup = "no_op";
+            pagedown = "no_op";
           };
 
           insert = {
