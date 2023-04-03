@@ -87,7 +87,7 @@ with lib; {
           statusline = {
             left = ["mode" "diagnostics"];
             center = ["file-name" "file-modification-indicator" "version-control"];
-            right = ["workspace-diagnostics" "spinner" "position-percentage" "total-line-numbers"];
+            right = ["workspace-diagnostics" "spacer" "spinner" "spacer" "position-percentage" "spacer" "total-line-numbers"];
           };
 
           # lsp
