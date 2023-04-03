@@ -81,8 +81,8 @@ with lib; {
           };
           cursor-shape = {
             insert = "bar";
-            normal = "block";
-            select = "block";
+            # normal = "block"; # default is block
+            # select = "block"; # default is block
           };
           statusline = {
             left = ["mode" "diagnostics"];
@@ -93,7 +93,7 @@ with lib; {
           # lsp
           lsp.display-messages = true;
           lsp.display-inlay-hints = true;
-          lsp.display-signature-help-docs = true;
+          lsp.display-signature-help-docs = false;
 
           # tools
           auto-pairs = true;
