@@ -147,6 +147,7 @@ with lib; {
       nodePackages.vscode-langservers-extracted
       taplo-lsp
       yaml-language-server
+      clang
     ];
   };
 }
