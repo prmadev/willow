@@ -85,7 +85,7 @@ with lib; {
             # select = "block"; # default is block
           };
           statusline = {
-            left = ["mode" "diagnostics"];
+            left = ["mode" "spacer" "diagnostics"];
             center = ["file-name" "file-modification-indicator" "version-control"];
             right = ["workspace-diagnostics" "spacer" "spinner" "spacer" "position-percentage" "spacer" "total-line-numbers"];
           };
@@ -97,7 +97,7 @@ with lib; {
 
           # tools
           auto-pairs = true;
-          # file-picker.hidden = true;
+          file-picker.hidden = true;
           file-picker.git-ignore = false;
         };
 
