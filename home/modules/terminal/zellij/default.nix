@@ -41,7 +41,7 @@ with lib; {
           normal = {
             bind = {
               _args = [''Ctrl \''];
-              GoToNextTab = "";
+              GoToNextTab = [];
             };
           };
         };
