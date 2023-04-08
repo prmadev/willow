@@ -39,10 +39,6 @@ with lib; {
         };
         keybinds = {
           normal = {
-            bind = {
-              _args = [''Ctrl "\\" ''];
-              GoToNextTab = [];
-            };
           };
         };
       };
