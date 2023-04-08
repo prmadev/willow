@@ -98,7 +98,7 @@ with lib; {
           # tools
           auto-pairs = true;
           file-picker.hidden = true;
-          file-picker.git-ignore = false;
+          file-picker.git-ignore = true;
         };
 
         keys = {
@@ -108,6 +108,7 @@ with lib; {
             "S-L" = ":buffer-next";
             "S-H" = ":buffer-previous";
             # ret = ["open_below" "normal_mode"];
+            "C-f" = [":new" ":insert-output lf-pick" ":theme default" "select_all" "split_selection_on_newline" "goto_file" "goto_last_modified_file" ":buffer-close!" ":theme veganMacchiato"];
             X = ["extend_line_above"];
             space = {
               c = ":bc";
@@ -148,6 +149,23 @@ with lib; {
       taplo-lsp
       yaml-language-server
       clang
+      marksman
     ];
+    home.file = {
+      lfPick = {
+        enable = true;
+        executable = true;
+        source = pkgs.writeShellScript "lf-pick" ''
+          function lfp(){
+            local TEMP=$(mktemp)
+            lf -selection-path=$TEMP
+            cat $TEMP
+          }
+
+          lfp
+        '';
+        target = ".local/bin/lf-pick";
+      };
+    };
   };
 }

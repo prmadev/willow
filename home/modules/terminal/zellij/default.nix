@@ -19,6 +19,7 @@ with lib; {
         pane_frames = false;
         scroll_buffer_size = 20000;
         scrollback_editor = "${pkgs.helix}/bin/hx";
+        ui.pane_frames.rounded_corners = true;
         copy_command = "wl-copy";
         theme = "catppuccin-macchiato";
         themes = {
@@ -34,6 +35,14 @@ with lib; {
             cyan = config.colors.macchiato.teal.hex;
             white = config.colors.macchiato.text.hex;
             orange = config.colors.macchiato.peach.hex;
+          };
+        };
+        keybinds = {
+          normal = {
+            bind = {
+              _args = [''Ctrl \''];
+              GoToNextTab = "";
+            };
           };
         };
       };

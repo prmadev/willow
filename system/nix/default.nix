@@ -32,7 +32,9 @@
   environment.defaultPackages = with pkgs; [
     rsync
     strace
-    neovim
+    vim
+
+    # neovim-nightly
   ];
 
   systemd.services.nix-daemon = {

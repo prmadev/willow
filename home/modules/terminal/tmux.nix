@@ -7,6 +7,7 @@
 with lib; {
   options = {
     tmux.enable = mkEnableOption "tmux";
+    tmux.autorun = mkEnableOption "autorun tmux";
   };
   config = let
     nextToggle = ''bind-key  -n C-\\ next-window'';

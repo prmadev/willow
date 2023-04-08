@@ -35,7 +35,7 @@ with lib; {
               		 filesize_metric: false
               		 table_mode: compact
               		 use_ls_colors: false
-                    		 EDITOR: nvim
+                    		 EDITOR: hx
               }
                     source ~/.cache/starship/init.nu
       '';

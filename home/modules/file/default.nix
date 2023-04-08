@@ -17,6 +17,7 @@ with lib; {
     ./rename.nix
     ./xdgconf.nix
     ./broot.nix
+    ./lf.nix
   ];
   options = {
     file.enable = mkOption {
@@ -36,6 +37,7 @@ with lib; {
     rename.enable = true;
     xdgconf.enable = true;
     brootFile.enable = true;
+    lf.enable = true;
     home.packages = with pkgs; [
       jql
       trashy
