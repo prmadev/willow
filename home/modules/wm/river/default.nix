@@ -33,7 +33,7 @@ with lib; {
 
           chosen=$(echo "$smug_list" | rofi -dmenu)
 
-          if [[ -Z "$chosen"  ]]; then
+          if [[ -z "$chosen"  ]]; then
             exit 0
            else
 
