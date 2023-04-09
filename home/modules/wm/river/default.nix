@@ -37,13 +37,14 @@ with lib; {
             exit 0
            else
 
-          fi
-
           if [[ "$smug_list" == *"$chosen"* ]]; then
               wezterm start smug "$chosen" -a
             else
               wezterm start tmux new -s "$chosen"
           fi
+
+          fi
+
         '';
         target = ".local/bin/tmux-picker";
       };
