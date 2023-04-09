@@ -35,8 +35,8 @@ with lib; {
           exec-once = dbus-update-activation-environment --systemd WAYLAND_DISPLAY DISPLAY HYPRLAND_INSTANCE_SIGNATURE
           exec-once = systemctl --user start hyprland-session.target
           exec-once = v2ray run -c ~/vless-new.json
-          # exec =  swaybg -i "/home/a/.config/wallpaper"
-          exec =  swww init && swww img ~/pretty_5.png
+          exec =  swaybg -i "/home/a/pretty_5.png"
+          # exec =  swww init && swww img ~/pretty_5.png
           # exec = hyprpaper
           # exec-once =  wh
           exec-once = eww -c ~/willow/home/modules/wm/eww/ewwConfig daemon &&  eww -c ~/willow/home/modules/wm/eww/ewwConfig open topbar
@@ -96,7 +96,8 @@ with lib; {
         '';
         binds = let
           running = ''
-            bind = SUPER,RETURN,exec,wezterm
+            bind = SUPER,RETURN,exec,tmux-picker
+            bind = SUPERSHIFT,RETURN,exec,wezterm
             bind = SUPER,d,exec,rofi -show
             bind = SUPERSHIFT,SPACE,exec,hyprctl switchxkblayout at-translated-set-2-keyboard next
             bind = ,XF86MonBrightnessDown, exec, brightnessctl s 10%-
