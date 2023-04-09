@@ -32,6 +32,13 @@ with lib; {
           smug_list=$(smug list)
 
           chosen=$(echo "$smug_list" | rofi -dmenu)
+
+          if [[ -Z "$chosen"  ]]; then
+            exit 0
+           else
+
+          fi
+
           if [[ "$smug_list" == *"$chosen"* ]]; then
               wezterm start smug "$chosen" -a
             else
