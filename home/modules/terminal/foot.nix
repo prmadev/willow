@@ -45,6 +45,12 @@ with lib; {
           bright6 = "8bd5ca"; # teal
           bright7 = "a5adcb"; # Subtext 0
         };
+        key-bindings = {
+          scrollback-up-page = "Control+Shit+Page_Up";
+          scrollback-down-page = "Control+Shit+Page_Down";
+          scrollback-up-line = "Control+Shit+up";
+          scrollback-down-line = "Control+Shit+Down";
+        };
       };
     };
   };
