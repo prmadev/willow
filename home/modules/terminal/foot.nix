@@ -19,7 +19,7 @@ with lib; {
           shell = "zsh";
           font = "monospace:size=9";
           # font-bold  = ""
-          box-drawing-uses-font-glypths = true;
+          box-drawings-uses-font-glyphs = true;
           bold-text-in-bright = true;
         };
         scrollback = {
