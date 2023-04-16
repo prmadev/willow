@@ -38,9 +38,9 @@ with lib; {
            else
 
           if [[ "$smug_list" == *"$chosen"* ]]; then
-              wezterm start smug "$chosen" -a
+              foot smug "$chosen" -a
             else
-              wezterm start tmux new -s "$chosen"
+              foot tmux new -s "$chosen"
           fi
 
           fi
