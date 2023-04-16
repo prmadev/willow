@@ -20,7 +20,7 @@ with lib; {
           font = "monospace:size=7";
           # font-bold  = ""
           box-drawings-uses-font-glyphs = true;
-          bold-text-in-bright = true;
+          bold-text-in-bright = false;
         };
         scrollback = {
           lines = 10000;
