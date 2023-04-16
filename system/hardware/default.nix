@@ -18,6 +18,9 @@
     pulse.enable = true;
   };
 
+  services.logind.extraConfig = ''
+    RuntimeDirectorySize=4G
+  '';
   hardware.bluetooth.enable = true;
   services.printing.enable = false;
   services.blueman.enable = true;

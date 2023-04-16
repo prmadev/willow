@@ -14,8 +14,8 @@ with lib; {
 
   config = mkIf config.neovim.enable {
     programs.neovim = {
-      enable = false;
-      package = pkgs.neovim;
+      enable = true;
+      # package = pkgs.neovim-nightly;
 
       viAlias = true;
 
@@ -23,10 +23,10 @@ with lib; {
       withPython3 = true;
       withRuby = false;
       withNodeJs = true;
-      # extraLuaPackages = luaPkgs:
-      #   with luaPkgs; [
-      #     luacheck
-      #   ];
+      extraLuaPackages = luaPkgs:
+        with luaPkgs; [
+          luacheck
+        ];
       extraPackages = with pkgs; [
         pyright
         ccls

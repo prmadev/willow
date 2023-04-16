@@ -147,7 +147,7 @@
             {
               nixpkgs.overlays = [
                 inputs.nur.overlay
-                inputs.neovim-nightly-overlay.overlay
+                # inputs.neovim-nightly-overlay.overlay
               ];
             }
             nur.nixosModules.nur

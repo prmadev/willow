@@ -9,6 +9,7 @@ with lib; {
     ./wezterm
     ./zellij
     ./tmux.nix
+    ./foot.nix
   ];
   options = {
     terminal.enable = mkOption {
@@ -21,5 +22,6 @@ with lib; {
     zellij.enable = true;
     wezterm.enable = true;
     tmux.enable = true;
+    foot.enable = true;
   };
 }
