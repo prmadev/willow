@@ -73,6 +73,7 @@ with lib; {
         rust-audit-info
         lapce
         rust-code-analysis
+        trunk # for wasm
       ];
     in
       cargoSubCommands
