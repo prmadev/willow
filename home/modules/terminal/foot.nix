@@ -17,9 +17,9 @@ with lib; {
       settings = {
         main = {
           shell = "zsh";
-          font = "monospace:size=12";
+          font = "monospace:size=9";
           # font-bold  = ""
-          box-drawings-uses-font-glypths = true;
+          box-drawing-uses-font-glypths = true;
           bold-text-in-bright = true;
         };
         scrollback = {
