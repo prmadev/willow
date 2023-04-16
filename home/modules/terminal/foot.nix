@@ -17,7 +17,7 @@ with lib; {
       settings = {
         main = {
           shell = "zsh";
-          font = "monospace:size=9";
+          font = "monospace:size=7";
           # font-bold  = ""
           box-drawings-uses-font-glyphs = true;
           bold-text-in-bright = true;
