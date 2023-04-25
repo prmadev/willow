@@ -63,8 +63,7 @@ with lib; {
           soapberry = {
             session = "soapberry ";
           };
-        in
-          generators.toYAML {} soapberry;
+        in (generators.toYAML {} soapberry);
         target = ".config/smug/soapberrya.yml";
       };
     };
