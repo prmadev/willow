@@ -137,6 +137,22 @@ with lib; {
             ];
           };
       };
+
+      "unified-aero.yml" = with lib; {
+        target = ".config/smug/unified-aero.yml";
+        text =
+          generators.toYAML {}
+          {
+            session = "unified-aero ";
+            root = "~/kapa/pro/asanbilit/unified-aero/src";
+            windows = [
+              (codeWindow {commandPrefix = ["nix-shell -p clang golangci-lint"];})
+              (terminalWindow {commandPrefix = ["nix-shell -p clang golangci-lint"];})
+              fileManagerWindow
+              goLogsWindow
+            ];
+          };
+      };
     };
   };
 }
