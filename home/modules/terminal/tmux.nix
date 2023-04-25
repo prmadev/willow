@@ -64,7 +64,7 @@ with lib; {
             session = "soapberry ";
           };
         in
-          builtins.toJSON soapberry;
+          lib.generators.toYAML {} soapberry;
         target = ".config/smug/soapberrya.yml";
       };
     };
