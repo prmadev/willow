@@ -78,6 +78,23 @@ with lib; {
         name = " files";
         commands = ["lf"];
       };
+
+      goLogsWindow = {
+        name = " logs";
+        commands = [
+          "nix-shell -p clang golangci-lint hwatch"
+          "hwatch -c -n 10  go build"
+        ];
+        panes = [
+          {
+            commands = [
+              "nix-shell -p clang golangci-lint hwatch"
+              "hwatch -c -n 10 golangci-lint run"
+            ];
+          }
+        ];
+      };
+
       cargoLogWindow = {
         name = " logs";
         commands = [
@@ -90,6 +107,7 @@ with lib; {
       };
     in {
       "soapberry.yml" = with lib; {
+        target = ".config/smug/soapberry.yml";
         text =
           generators.toYAML {}
           {
@@ -98,21 +116,24 @@ with lib; {
             windows = [
               (codeWindow {})
               (terminalWindow {})
-              cargoLogWindow
               fileManagerWindow
+              cargoLogWindow
             ];
           };
-
-        target = ".config/smug/soapberry.yml";
       };
+
       "aero-core.yml" = with lib; {
+        target = ".config/smug/aero-core.yml";
         text =
           generators.toYAML {}
           {
             session = "aero-core ";
             root = "~/kapa/pro/asanbilit/asanbilit-core/src";
             windows = [
-              # (codeWindow {commandPrefix = ["nix-shell -p clang golangci-lint"];} {})
+              (codeWindow {commandPrefix = ["nix-shell -p clang golangci-lint"];})
+              (terminalWindow {commandPrefix = ["nix-shell -p clang golangci-lint"];})
+              fileManagerWindow
+              goLogsWindow
             ];
           };
       };
