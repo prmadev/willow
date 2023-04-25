@@ -62,6 +62,14 @@ with lib; {
         text = let
           soapberry = {
             session = "soapberry ";
+            root = "~/kapa/pro/soapberry";
+            windows = [
+              {
+                name = " code";
+                commands = ["hx ."];
+                layout = "main-horizontal";
+              }
+            ];
           };
         in (generators.toYAML {} soapberry);
         target = ".config/smug/soapberrya.yml";
