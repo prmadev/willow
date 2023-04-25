@@ -26,6 +26,7 @@ with lib; {
         mouse = true;
         shell = "${pkgs.zsh}/bin/zsh";
         sensibleOnTop = true;
+        keyMode = "vi";
         prefix = "C-Space";
         extraConfig = nextToggle + "\n" + horPane + "\n" + verPane + "\n" + newWin + "\n" + killSession + "\n" + newPrefix + "\n";
         plugins = with pkgs; [
@@ -38,6 +39,7 @@ with lib; {
             plugin = tmuxPlugins.catppuccin;
             extraConfig = "set -g @catppuccin_flavour 'macchiato'\n" + "set -g @catppuccin_window_tabs_enabled on" + "\n";
           }
+          tmuxPlugins.yank
           tmuxPlugins.tmux-thumbs
         ];
       };
