@@ -58,7 +58,7 @@ with lib; {
       dfeet
       hyperfine
       # pgadmin
-      ventoy-bin-full
+      ventoy-full
       hurl
       jq
       nodePackages.npm

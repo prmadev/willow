@@ -150,6 +150,7 @@ with lib; {
       yaml-language-server
       clang
       marksman
+      # gcc
     ];
     home.file = {
       lfPick = {

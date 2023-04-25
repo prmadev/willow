@@ -51,7 +51,9 @@
 
     helix = {
       url = "github:helix-editor/helix";
-      inputs.nixpkgs.follows = "nixpkgs";
+      # inputs.nixpkgs.follows = "nixpkgs";
+      # helix.inputs.nixpkgs.follows = "nixpkgs";
+      # in
     };
 
     nil = {

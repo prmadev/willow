@@ -35,6 +35,7 @@ with lib; {
         nodePackages.graphql-language-service-cli
         nodePackages.vscode-langservers-extracted
 
+        tree-sitter
         # lsps
         sumneko-lua-language-server
         nil

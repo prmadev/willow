@@ -46,10 +46,10 @@ with lib; {
           bright7 = "a5adcb"; # Subtext 0
         };
         key-bindings = {
-          scrollback-up-page = "Control+Shit+Page_Up";
-          scrollback-down-page = "Control+Shit+Page_Down";
-          scrollback-up-line = "Control+Shit+up";
-          scrollback-down-line = "Control+Shit+Down";
+          scrollback-up-page = "Control+Shift+Page_Up";
+          scrollback-down-page = "Control+Shift+Page_Down";
+          scrollback-up-line = "Control+Shift+up";
+          scrollback-down-line = "Control+Shift+Down";
         };
       };
     };
