@@ -64,7 +64,7 @@ with lib; {
           };
         in
           builtins.toJSON soapberry;
-        target = ".local/bin/soapberrya.yml";
+        target = "~/.config/smug/soapberrya.yml";
       };
     };
   };
