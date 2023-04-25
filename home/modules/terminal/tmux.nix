@@ -138,18 +138,33 @@ with lib; {
           };
       };
 
-      "unified-aero.yml" = with lib; {
-        target = ".config/smug/unified-aero.yml";
+      "aero-unified.yml" = with lib; {
+        target = ".config/smug/aero-unified.yml";
         text =
           generators.toYAML {}
           {
-            session = "unified-aero ";
+            session = "aero-unified ";
             root = "~/kapa/pro/asanbilit/unified-aero/src";
             windows = [
               (codeWindow {commandPrefix = ["nix-shell -p clang golangci-lint"];})
               (terminalWindow {commandPrefix = ["nix-shell -p clang golangci-lint"];})
               fileManagerWindow
               goLogsWindow
+            ];
+          };
+      };
+
+      "willow.yml" = with lib; {
+        target = ".config/smug/willow.yml";
+        text =
+          generators.toYAML {}
+          {
+            session = "willow ";
+            root = "~/willow/";
+            windows = [
+              (codeWindow {})
+              (terminalWindow {})
+              fileManagerWindow
             ];
           };
       };
