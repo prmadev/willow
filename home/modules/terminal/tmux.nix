@@ -189,6 +189,21 @@ with lib; {
             ];
           };
       };
+
+      "nvim.yml" = with lib; {
+        target = ".config/smug/nvim.yml";
+        text =
+          generators.toYAML {}
+          {
+            session = "nvim";
+            root = "~/.config/nvim/";
+            windows = [
+              (codeWindow {commandPrefix = ["nix-shell -p clang"];})
+              (terminalWindow {commandPrefix = ["nix-shell -p clang"];})
+              fileManagerWindow
+            ];
+          };
+      };
     };
   };
 }
