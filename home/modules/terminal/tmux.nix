@@ -56,5 +56,16 @@ with lib; {
     home.packages = with pkgs; [
       smug
     ];
+    home.file = {
+      smugSoapBerry = {
+        text = let
+          soapberry = {
+            session = "soapberry ";
+          };
+        in
+          builtins.toJSON soapberry;
+        target = ".local/bin/soapberrya.yml";
+      };
+    };
   };
 }
