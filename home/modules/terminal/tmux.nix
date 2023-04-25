@@ -105,6 +105,11 @@ with lib; {
           "cargo watch --exec  \"clippy --workspace --all-targets --all-features\""
         ];
       };
+
+      zolaServeWindow = {
+        name = " serving";
+        commands = ["zola serve"];
+      };
     in {
       "soapberry.yml" = with lib; {
         target = ".config/smug/soapberry.yml";
@@ -163,6 +168,22 @@ with lib; {
             root = "~/willow/";
             windows = [
               (codeWindow {})
+              (terminalWindow {})
+              fileManagerWindow
+            ];
+          };
+      };
+
+      "blog.yml" = with lib; {
+        target = ".config/smug/blog.yml";
+        text =
+          generators.toYAML {}
+          {
+            session = "blog ";
+            root = "~/kapa/pro/2022-11-16-amirography_com/amirography/";
+            windows = [
+              (codeWindow {})
+              zolaServeWindow
               (terminalWindow {})
               fileManagerWindow
             ];
