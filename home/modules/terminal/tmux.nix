@@ -59,8 +59,9 @@ with lib; {
     home.file = {
       "soapberrya.yml" = with lib; {
         enable = true;
-        text = generators.toYAML {} {
-          soapberry = {
+        text =
+          generators.toYAML {}
+          {
             session = "soapberry ";
             root = "~/kapa/pro/soapberry";
             windows = [
@@ -92,7 +93,7 @@ with lib; {
               }
             ];
           };
-        };
+
         target = ".config/smug/soapberrya.yml";
       };
     };
