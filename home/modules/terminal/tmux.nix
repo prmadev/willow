@@ -58,13 +58,14 @@ with lib; {
     ];
     home.file = {
       smugSoapBerry = {
+        enable = true;
         text = let
           soapberry = {
             session = "soapberry ";
           };
         in
           builtins.toJSON soapberry;
-        target = "~/.config/smug/soapberrya.yml";
+        target = ".config/smug/soapberrya.yml";
       };
     };
   };
