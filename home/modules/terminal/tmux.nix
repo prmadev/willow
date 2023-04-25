@@ -29,7 +29,7 @@ with lib; {
         newPrefix = ''bind C-Space send-prefix'';
         willowBinding = ''bind -n M-w new-session -A -s willow "smug willow -a"'';
       in
-        nextToggle + "\n" + horPane + "\n" + verPane + "\n" + newWin + "\n" + killSession + "\n" + newPrefix + "\n" + willowBinding + "\n";
+        builtins.concatStringsSep "\n" [nextToggle horPane verPane newWin killSession newPrefix willowBinding];
       plugins = with pkgs; [
         tmuxPlugins.open
         {
