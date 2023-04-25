@@ -204,6 +204,26 @@ with lib; {
             ];
           };
       };
+
+      "proxy.yml" = with lib; {
+        target = ".config/smug/proxy.yml";
+        text =
+          generators.toYAML {}
+          {
+            session = "proxy ";
+            root = "~";
+            windows = [
+              {
+                name = "v2ray";
+                commands = ["v2ray run -c ~/vless-hackap.json"];
+              }
+              {
+                name = "arti";
+                commands = ["arti proxy"];
+              }
+            ];
+          };
+      };
     };
   };
 }
