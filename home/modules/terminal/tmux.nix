@@ -39,7 +39,15 @@ with lib; {
             plugin = tmuxPlugins.catppuccin;
             extraConfig = "set -g @catppuccin_flavour 'macchiato'\n" + "set -g @catppuccin_window_tabs_enabled on" + "\n";
           }
-          tmuxPlugins.yank
+          {
+            plugin = tmuxPlugins.yank;
+            extraConfig = let
+              beginSelection = "bind-key -T copy-mode-vi v send-keys -X begin-selection";
+              rectangleToggle = "bind-key -T copy-mode-vi C-v send-keys -X rectangle-toggle";
+              copySelectionAndCancel = "bind-key -T copy-mode-vi y send-keys -X copy-selection-and-cancel";
+            in
+              beginSelection + "\n" + rectangleToggle + "\n" + copySelectionAndCancel + "\n";
+          }
           tmuxPlugins.tmux-thumbs
         ];
       };
