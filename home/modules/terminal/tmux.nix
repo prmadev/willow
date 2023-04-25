@@ -57,14 +57,14 @@ with lib; {
       smug
     ];
     home.file = {
-      smugSoapBerry = {
+      "soapberrya.yml" = with lib; {
         enable = true;
         text = let
           soapberry = {
             session = "soapberry ";
           };
         in
-          lib.generators.toYAML {} soapberry;
+          generators.toYAML {} soapberry;
         target = ".config/smug/soapberrya.yml";
       };
     };
