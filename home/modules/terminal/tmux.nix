@@ -30,6 +30,7 @@ with lib; {
         willowBinding = ''bind -n M-w new-session -A -s willow "smug willow -a"'';
       in
         builtins.concatStringsSep "\n" [nextToggle horPane verPane newWin killSession newPrefix willowBinding];
+
       plugins = with pkgs; [
         tmuxPlugins.open
         {
@@ -47,7 +48,7 @@ with lib; {
             rectangleToggle = "bind-key -T copy-mode-vi C-v send-keys -X rectangle-toggle";
             copySelectionAndCancel = "bind-key -T copy-mode-vi y send-keys -X copy-selection-and-cancel";
           in
-            beginSelection + "\n" + rectangleToggle + "\n" + copySelectionAndCancel + "\n";
+            builtins.concatStringsSep "\n" [beginSelection rectangleToggle copySelectionAndCancel];
         }
         tmuxPlugins.tmux-thumbs
       ];
