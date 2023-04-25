@@ -59,17 +59,20 @@ with lib; {
     ];
 
     home.file = let
-      codeWindow = {
+      codeWindow = {commandPrefix ? []}: {
         name = " code";
-        commands = ["hx ."];
+        commands = commandPrefix ++ ["hx ."];
         layout = "main-horizontal";
       };
-      terminalWindow = {
+
+      terminalWindow = {commandPrefix ? []}: {
         name = "  terminal";
-        commands = [
-          "git status"
-          "ls"
-        ];
+        commands =
+          commandPrefix
+          ++ [
+            "git status"
+            "ls"
+          ];
       };
       fileManagerWindow = {
         name = " files";
@@ -87,21 +90,31 @@ with lib; {
       };
     in {
       "soapberry.yml" = with lib; {
-        enable = true;
         text =
           generators.toYAML {}
           {
             session = "soapberry ";
             root = "~/kapa/pro/soapberry";
             windows = [
-              codeWindow
-              terminalWindow
+              (codeWindow {})
+              (terminalWindow {})
               cargoLogWindow
               fileManagerWindow
             ];
           };
 
         target = ".config/smug/soapberry.yml";
+      };
+      "aero-core.yml" = with lib; {
+        text =
+          generators.toYAML {}
+          {
+            session = "aero-core ";
+            root = "~/kapa/pro/asanbilit/asanbilit-core/src";
+            windows = [
+              # (codeWindow {commandPrefix = ["nix-shell -p clang golangci-lint"];} {})
+            ];
+          };
       };
     };
   };
