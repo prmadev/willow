@@ -59,7 +59,7 @@ with lib; {
     home.file = {
       "soapberrya.yml" = with lib; {
         enable = true;
-        text = let
+        text = generators.toYAML {} {
           soapberry = {
             session = "soapberry ";
             root = "~/kapa/pro/soapberry";
@@ -69,9 +69,30 @@ with lib; {
                 commands = ["hx ."];
                 layout = "main-horizontal";
               }
+              {
+                name = " code";
+                commands = [
+                  "git status"
+                  "ls"
+                ];
+              }
+              {
+                name = " code";
+                commands = [
+                  "cargo update"
+                  "cargo fetch"
+                  "cargo test"
+                  "cargo clippy --workspace --all-targets --all-features"
+                  "cargo watch --exec  \"clippy --workspace --all-targets --all-features\""
+                ];
+              }
+              {
+                name = " files";
+                commands = ["lf"];
+              }
             ];
           };
-        in (generators.toYAML {} soapberry);
+        };
         target = ".config/smug/soapberrya.yml";
       };
     };
