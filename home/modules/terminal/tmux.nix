@@ -53,11 +53,40 @@ with lib; {
         tmuxPlugins.tmux-thumbs
       ];
     };
+
     home.packages = with pkgs; [
       smug
     ];
-    home.file = {
-      "soapberrya.yml" = with lib; {
+
+    home.file = let
+      codeWindow = {
+        name = " code";
+        commands = ["hx ."];
+        layout = "main-horizontal";
+      };
+      terminalWindow = {
+        name = "  terminal";
+        commands = [
+          "git status"
+          "ls"
+        ];
+      };
+      fileManagerWindow = {
+        name = " files";
+        commands = ["lf"];
+      };
+      cargoLogWindow = {
+        name = " logs";
+        commands = [
+          "cargo update"
+          "cargo fetch"
+          "cargo test"
+          "cargo clippy --workspace --all-targets --all-features"
+          "cargo watch --exec  \"clippy --workspace --all-targets --all-features\""
+        ];
+      };
+    in {
+      "soapberry.yml" = with lib; {
         enable = true;
         text =
           generators.toYAML {}
@@ -65,36 +94,14 @@ with lib; {
             session = "soapberry ";
             root = "~/kapa/pro/soapberry";
             windows = [
-              {
-                name = " code";
-                commands = ["hx ."];
-                layout = "main-horizontal";
-              }
-              {
-                name = "  terminal";
-                commands = [
-                  "git status"
-                  "ls"
-                ];
-              }
-              {
-                name = " logs";
-                commands = [
-                  "cargo update"
-                  "cargo fetch"
-                  "cargo test"
-                  "cargo clippy --workspace --all-targets --all-features"
-                  "cargo watch --exec  \"clippy --workspace --all-targets --all-features\""
-                ];
-              }
-              {
-                name = " files";
-                commands = ["lf"];
-              }
+              codeWindow
+              terminalWindow
+              cargoLogWindow
+              fileManagerWindow
             ];
           };
 
-        target = ".config/smug/soapberrya.yml";
+        target = ".config/smug/soapberry.yml";
       };
     };
   };
