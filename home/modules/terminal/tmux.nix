@@ -71,14 +71,14 @@ with lib; {
                 layout = "main-horizontal";
               }
               {
-                name = " code";
+                name = "  terminal";
                 commands = [
                   "git status"
                   "ls"
                 ];
               }
               {
-                name = " code";
+                name = " logs";
                 commands = [
                   "cargo update"
                   "cargo fetch"
