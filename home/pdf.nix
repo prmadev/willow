@@ -4,12 +4,8 @@
   ...
 }:
 with lib; {
-  options = {
-    pdf.enable = mkOption {
-      type = types.bool;
-      default = false;
-    };
-  };
+  options.pdf.enable = mkEnableOption "pdf settings";
+
   config = mkIf config.pdf.enable {
     programs.zathura.enable = true;
     programs.zathura.options = {

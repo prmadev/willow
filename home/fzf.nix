@@ -5,20 +5,16 @@
   ...
 }:
 with lib; {
-  options = {
-    fzf.enable = mkOption {
-      type = types.bool;
-      default = false;
-    };
-  };
+  options.fzf.enable = mkEnableOption "fzf settings";
+
   config = mkIf config.fzf.enable {
-    programs = {
-      fzf.enable = true;
-      fzf.changeDirWidgetCommand = "fd --type d";
-      fzf.tmux.enableShellIntegration = true;
+    programs.fzf = {
+      enable = true;
+      changeDirWidgetCommand = "fd --type d";
+      tmux.enableShellIntegration = mkIf config.tmux.enable true;
     };
+
     home.packages = with pkgs; [
-      fzf
       skim
     ];
   };

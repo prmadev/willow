@@ -4,12 +4,8 @@
   ...
 }:
 with lib; {
-  options = {
-    foot.enable = mkOption {
-      type = types.bool;
-      default = false;
-    };
-  };
+  options.foot.enable = mkEnableOption "foot settings";
+
   config = mkIf config.foot.enable {
     programs.foot = {
       enable = true;

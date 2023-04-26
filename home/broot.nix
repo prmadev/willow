@@ -4,10 +4,8 @@
   ...
 }:
 with lib; {
-  options.brootFile.enable = mkOption {
-    type = types.bool;
-    default = false;
-  };
+  options.brootFile.enable = mkEnableOption "broot settings";
+
   config = mkIf config.brootFile.enable {
     programs.broot = {
       enable = true;

@@ -7,9 +7,8 @@
     ./qute.nix
 
     ./syncthing.nix
-    ./communication.nix
+    ./telegram.nix
     ./exercism.nix
-    ./favo.nix
     ./graphical.nix
     ./hoard.nix
     ./task.nix
@@ -63,7 +62,7 @@
     ./skim.nix
 
     ./audio.nix
-    ./storage.nix
+    ./partition.nix
 
     ./download.nix
     ./proxy.nix
@@ -89,10 +88,10 @@
     # ./monitor.nix
   ];
 
-  browser.firefox.enable = true;
-  browser.qutebrowser.enable = false;
+  firefox.enable = true;
+  qutebrowser.enable = false;
 
-  communication.enable = true;
+  telegram.enable = true;
   exercism.enable = true;
   graphical.enable = true;
   task.enable = false;
@@ -103,9 +102,9 @@
   music.enable = true;
 
   audio.enable = true;
-  storage.enable = true;
+  partition.enable = true;
 
-  launcher.rofi.enable = true;
+  rofi.enable = true;
 
   android.enable = true;
   compression.enable = true;
@@ -136,7 +135,7 @@
   nu.enable = true;
   pager.enable = true;
   prompt.enable = true;
-  snippet.enable = true;
+  pet.enable = true;
   zsh.enable = true;
 
   font.enable = true;
@@ -150,7 +149,7 @@
 
   mako.enable = true;
   # launcher.enable = true;
-  wm.river.enable = true;
+  river.enable = true;
   eww.enable = true;
   hyprland.enable = true;
   sway.enable = false;

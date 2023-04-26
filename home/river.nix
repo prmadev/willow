@@ -5,13 +5,8 @@
   ...
 }:
 with lib; {
-  options.wm.river = {
-    enable = mkOption {
-      type = types.bool;
-      default = false;
-    };
-  };
-  config = mkIf config.wm.river.enable {
+  options.river.enable = mkEnableOption "riverwm settings";
+  config = mkIf config.river.enable {
     home.packages = [
       pkgs.river
       # pkgs.ristate

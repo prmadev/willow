@@ -5,12 +5,8 @@
   ...
 }:
 with lib; {
-  options = {
-    office.enable = mkOption {
-      type = types.bool;
-      default = false;
-    };
-  };
+  options.office.enable = mkEnableOption "office settings";
+
   config = mkIf config.office.enable {
     home.packages = with pkgs; [
       libreoffice-still

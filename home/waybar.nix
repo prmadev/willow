@@ -5,17 +5,10 @@
   ...
 }:
 with lib; {
-  options.waybar = {
-    enable = mkOption {
-      type = types.bool;
-      default = false;
-    };
-  };
+  options.waybar.enable = mkEnableOption "waybar settings";
 
-  config = {
-    home.packages = with pkgs; [
-    ];
-    programs.waybar = mkIf config.waybar.enable {
+  config = mkIf config.waybar.enable {
+    programs.waybar = {
       enable = true;
       # systemd.enable = true;
       # systemd.target = mkIf config.sway.enable "sway-session.target";

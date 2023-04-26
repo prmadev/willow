@@ -5,14 +5,7 @@
   ...
 }:
 with lib; {
-  options = {
-    exercism = {
-      enable = mkOption {
-        type = types.bool;
-        default = false;
-      };
-    };
-  };
+  options.exercism.enable = mkEnableOption "exercism settings";
 
   config = mkIf config.exercism.enable {
     home.packages = with pkgs; [

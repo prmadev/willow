@@ -5,12 +5,8 @@
   ...
 }:
 with lib; {
-  options = {
-    kitty.enable = mkOption {
-      type = types.bool;
-      default = false;
-    };
-  };
+  options.kitty.enable = mkEnableOption "kitty settings";
+
   config = mkIf config.kitty.enable {
     programs.kitty = {
       enable = true;

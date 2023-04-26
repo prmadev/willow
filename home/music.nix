@@ -5,12 +5,7 @@
   ...
 }:
 with lib; {
-  options = {
-    music.enable = mkOption {
-      type = types.bool;
-      default = false;
-    };
-  };
+  options.music.enable = mkEnableOption "music settings";
 
   config = mkIf config.music.enable {
     services.mpd = {
@@ -19,6 +14,7 @@ with lib; {
       # network.startWhenNeeded = true;
       network.port = 6601;
     };
+
     programs.ncmpcpp = {
       package = pkgs.ncmpcpp.override {visualizerSupport = true;};
       enable = false;

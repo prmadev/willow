@@ -6,12 +6,7 @@
   ...
 }:
 with lib; {
-  options = {
-    zsh.enable = mkOption {
-      type = types.bool;
-      default = false;
-    };
-  };
+  options.zsh.enable = mkEnableOption "zsh settings";
 
   config = mkIf config.zsh.enable {
     programs.zsh = {

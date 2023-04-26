@@ -4,12 +4,8 @@
   ...
 }:
 with lib; {
-  options = {
-    pager.enable = mkOption {
-      type = types.bool;
-      default = false;
-    };
-  };
+  options.pager.enable = mkEnableOption "pager settings";
+
   config = mkIf config.pager.enable {
     programs.bat.enable = true;
     home.sessionVariables = {

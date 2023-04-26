@@ -5,13 +5,8 @@
   ...
 }:
 with lib; {
-  options = {
-    browser.qutebrowser.enable = mkOption {
-      type = types.bool;
-      default = false;
-    };
-  };
-  config = mkIf config.browser.qutebrowser.enable {
+  options.qutebrowser.enable = mkEnableOption "qute settings";
+  config = mkIf config.qutebrowser.enable {
     programs.qutebrowser = {
       enable = true;
       package = pkgs.qutebrowser-qt6;

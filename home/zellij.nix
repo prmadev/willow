@@ -5,10 +5,8 @@
   ...
 }:
 with lib; {
-  options = {
-    zellij.enable =
-      mkOption {};
-  };
+  options.zellij.enable = mkEnableOption "zellij setitngs";
+
   config = mkIf config.zellij.enable {
     programs.zellij = {
       enable = true;

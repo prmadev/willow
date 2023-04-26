@@ -6,18 +6,14 @@
 }:
 with lib; {
   options = {
-    font.enable = mkOption {
-      type = types.bool;
-      default = false;
-    };
+    font.enable = mkEnableOption "font settings";
+
     font.main = mkOption {
       type = types.str;
       default = "ComicCodeLigatures Nerd Font";
     };
-    gtkconf.enable = mkOption {
-      type = types.bool;
-      default = false;
-    };
+
+    gtkconf.enable = mkEnableOption "gtkConf settings";
   };
 
   config = mkIf config.font.enable {
@@ -28,6 +24,7 @@ with lib; {
         name = config.font.main;
         size = 12;
       };
+
       theme = {
         name = "Catppuccin-Macchiato-Standard-Pink-Dark";
         package = pkgs.catppuccin-gtk.override {
@@ -36,6 +33,7 @@ with lib; {
         };
       };
     };
+
     home.packages = with pkgs; [
       nerd-font-patcher
     ];

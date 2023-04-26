@@ -4,12 +4,8 @@
   ...
 }:
 with lib; {
-  options.mako = {
-    enable = mkOption {
-      type = types.bool;
-      default = false;
-    };
-  };
+  options.mako.enable = mkEnableOption "mako settings";
+
   config = {
     services.mako = mkIf config.mako.enable {
       enable = true;

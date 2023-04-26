@@ -5,12 +5,8 @@
   ...
 }:
 with lib; {
-  options = {
-    download.enable = mkOption {
-      type = types.bool;
-      default = false;
-    };
-  };
+  options.download.enable = mkEnableOption "downloader settings";
+
   config = mkIf config.download.enable {
     programs.aria2 = {
       enable = true;
@@ -20,6 +16,7 @@ with lib; {
         continue = true;
       };
     };
+
     home.packages = with pkgs; [
       qbittorrent-nox
       wget2

@@ -5,10 +5,11 @@
   ...
 }:
 with lib; {
-  options = {
-    tmux.enable = mkEnableOption "tmux";
-    tmux.autorun = mkEnableOption "autorun tmux";
+  options.tmux = {
+    enable = mkEnableOption "tmux";
+    autorun = mkEnableOption "autorun tmux";
   };
+
   config = mkIf config.tmux.enable {
     programs.tmux = {
       enable = true;

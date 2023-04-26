@@ -16,12 +16,8 @@
     };
 in
   with lib; {
-    options = {
-      proxy.enable = mkOption {
-        type = types.bool;
-        default = false;
-      };
-    };
+    options.proxy.enable = mkEnableOption "proxy settings";
+
     config = mkIf config.proxy.enable {
       home.packages = with pkgs; [
         clash # for networking #TODO
@@ -48,15 +44,8 @@ in
       # };
 
       home.file = {
-        ".config/shadowsocks/config.json" = {
-          source = configData;
-        };
-      };
-
-      home.file = {
-        ".proxychains/proxychains.conf" = {
-          source = ./proxychains.conf;
-        };
+        ".config/shadowsocks/config.json".source = configData;
+        ".proxychains/proxychains.conf".source = ./proxychains.conf;
       };
     };
   }

@@ -1,273 +1,75 @@
 {lib, ...}:
 with lib; {
-  options = {
-    colors.macchiato.rosewater.hex = mkOption {
-      type = types.str;
-      default = "#f4dbd6";
-    };
-    colors.macchiato.flamingo.hex = mkOption {
-      type = types.str;
-      default = "#f0c6c6";
-    };
-    colors.macchiato.pink.hex = mkOption {
-      type = types.str;
-      default = "#f5bde6";
-    };
-    colors.macchiato.mauve.hex = mkOption {
-      type = types.str;
-      default = "#c6a0f6";
-    };
-    colors.macchiato.red.hex = mkOption {
-      type = types.str;
-      default = "#ed8796";
-    };
-    colors.macchiato.maroon.hex = mkOption {
-      type = types.str;
-      default = "#ee99a0";
-    };
-    colors.macchiato.peach.hex = mkOption {
-      type = types.str;
-      default = "#f5a97f";
-    };
-    colors.macchiato.yellow.hex = mkOption {
-      type = types.str;
-      default = "#eed49f";
-    };
-    colors.macchiato.green.hex = mkOption {
-      type = types.str;
-      default = "#a6da95";
-    };
-    colors.macchiato.teal.hex = mkOption {
-      type = types.str;
-      default = "#8bd5ca";
-    };
+  options = let
+    mkColor = s: {l ? [0 0 0]}: {
+      hex = mkOption {
+        type = types.str;
+        default = "#${s}";
+      };
 
-    colors.macchiato.sky.hex = mkOption {
-      type = types.str;
-      default = "#91d7e3";
+      rawHex = mkOption {
+        type = types.str;
+        default = s;
+      };
+      rgb = mkOption {
+        type = types.listOf types.int;
+        default = l;
+      };
     };
-    colors.macchiato.sapphire.hex = mkOption {
-      type = types.str;
-      default = "#7dc4e4";
-    };
-    colors.macchiato.blue.hex = mkOption {
-      type = types.str;
-      default = "#8aadf4";
-    };
-    colors.macchiato.lavendar.hex = mkOption {
-      type = types.str;
-      default = "#b7bdf8";
-    };
-    colors.macchiato.text.hex = mkOption {
-      type = types.str;
-      default = "#cad3f5";
-    };
+  in {
+    colors = {
+      macchiato = {
+        rosewater = mkColor "f4dbd6" {};
+        flamingo = mkColor "f0c6c6" {};
+        pink = mkColor "f5bde6" {};
+        mauve = mkColor "c6a0f6" {};
+        red = mkColor "ed8796" {};
+        maroon = mkColor "ee99a0" {};
+        peach = mkColor "f5a97f" {};
+        yellow = mkColor "eed49f" {};
+        green = mkColor "a6da95" {};
+        teal = mkColor "8bd5ca" {};
+        sky = mkColor "91d7e3" {};
+        sapphire = mkColor "7dc4e4" {};
+        blue = mkColor "8aadf4" {};
+        lavendar = mkColor "b7bdf8" {};
+        text = mkColor "cad3f5" {};
+        subtext1 = mkColor "b8c0e0" {};
+        subtext0 = mkColor "a5adcb" {};
+        overlay2 = mkColor "939ab7" {};
+        overlay1 = mkColor "8087a2" {};
+        overlay0 = mkColor "6e738d" {};
+        surface2 = mkColor "5b6078" {};
+        surface1 = mkColor "494d64" {};
+        surface0 = mkColor "363a4f" {};
+        base = mkColor "24273a" {};
+        mantle = mkColor "1e2030" {};
+        crust = mkColor "181926" {};
+      };
 
-    colors.macchiato.subtext1.hex = mkOption {
-      type = types.str;
-      default = "#b8c0e0";
-    };
-    colors.macchiato.subtext0.hex = mkOption {
-      type = types.str;
-      default = "#a5adcb";
-    };
-    colors.macchiato.overlay2.hex = mkOption {
-      type = types.str;
-      default = "#939ab7";
-    };
-    colors.macchiato.overlay1.hex = mkOption {
-      type = types.str;
-      default = "#8087a2";
-    };
-    colors.macchiato.overlay0.hex = mkOption {
-      type = types.str;
-      default = "#6e738d";
-    };
-    colors.macchiato.surface2.hex = mkOption {
-      type = types.str;
-      default = "#5b6078";
-    };
-    colors.macchiato.surface1.hex = mkOption {
-      type = types.str;
-      default = "#494d64";
-    };
-    colors.macchiato.surface0.hex = mkOption {
-      type = types.str;
-      default = "#363a4f";
-    };
-    colors.macchiato.base.hex = mkOption {
-      type = types.str;
-      default = "#24273a";
-    };
-    colors.macchiato.mantle.hex = mkOption {
-      type = types.str;
-      default = "#1e2030";
-    };
-    colors.macchiato.crust.hex = mkOption {
-      type = types.str;
-      default = "#181926";
-    };
-
-    colors.rose.hex = mkOption {
-      type = types.str;
-      default = "#ea9a97";
-    };
-    colors.rosebg.hex = mkOption {
-      type = types.str;
-      default = "#3F2F39";
-    };
-
-    colors.pine.hex = mkOption {
-      type = types.str;
-      default = "#3e8fb0";
-    };
-    colors.pinebg.hex = mkOption {
-      type = types.str;
-      default = "#202D3D";
-    };
-
-    colors.love.hex = mkOption {
-      type = types.str;
-      default = "#eb6f92";
-    };
-    colors.lovebg.hex = mkOption {
-      type = types.str;
-      default = "#3F2738";
-    };
-
-    colors.foam.hex = mkOption {
-      type = types.str;
-      default = "#9ccfd8";
-    };
-    colors.foambg.hex = mkOption {
-      type = types.str;
-      default = "#313845";
-    };
-
-    colors.gold.hex = mkOption {
-      type = types.str;
-      default = "#f6c177";
-    };
-    colors.goldbg.hex = mkOption {
-      type = types.str;
-      default = "#413633";
-    };
-
-    colors.iris.hex = mkOption {
-      type = types.str;
-      default = "#c4a7e7";
-    };
-    colors.irisbg.hex = mkOption {
-      type = types.str;
-      default = "#383147";
-    };
-
-    colors.base.hex = mkOption {
-      type = types.str;
-      default = "#232136";
-    };
-
-    colors.surface.hex = mkOption {
-      type = types.str;
-      default = "#2a273f";
-    };
-    colors.overlay.hex = mkOption {
-      type = types.str;
-      default = "#393552";
-    };
-    colors.text.hex = mkOption {
-      type = types.str;
-      default = "#e0def4";
-    };
-    colors.subtle.hex = mkOption {
-      type = types.str;
-      default = "#908caa";
-    };
-    colors.muted.hex = mkOption {
-      type = types.str;
-      default = "#6e6a86";
-    };
-    colors.highlight-low.hex = mkOption {
-      type = types.str;
-      default = "#2a283e";
-    };
-    colors.highlight-med.hex = mkOption {
-      type = types.str;
-      default = "#44415a";
-    };
-    colors.highlight-high.hex = mkOption {
-      type = types.str;
-      default = "#56526e";
-    };
-
-    # RGB
-
-    colors.rose.rgb = mkOption {
-      type = types.listOf types.int;
-      default = [234 154 151];
-    };
-
-    colors.pine.rgb = mkOption {
-      type = types.listOf types.int;
-      default = [62 143 176];
-    };
-
-    colors.love.rgb = mkOption {
-      type = types.listOf types.int;
-      default = [235 111 146];
-    };
-
-    colors.foam.rgb = mkOption {
-      type = types.listOf types.int;
-      default = [156 207 216];
-    };
-
-    colors.gold.rgb = mkOption {
-      type = types.listOf types.int;
-      default = [246 193 119];
-    };
-
-    colors.iris.rgb = mkOption {
-      type = types.listOf types.int;
-      default = [196 167 231];
-    };
-
-    colors.base.rgb = mkOption {
-      type = types.listOf types.int;
-      default = [35 33 54];
-    };
-
-    colors.surface.rgb = mkOption {
-      type = types.listOf types.int;
-      default = [42 39 63];
-    };
-    colors.overlay.rgb = mkOption {
-      type = types.listOf types.int;
-      default = [57 53 82];
-    };
-    colors.text.rgb = mkOption {
-      type = types.listOf types.int;
-      default = [224 222 244];
-    };
-    colors.subtle.rgb = mkOption {
-      type = types.listOf types.int;
-      default = [144 140 170];
-    };
-    colors.muted.rgb = mkOption {
-      type = types.listOf types.int;
-      default = [110 106 134];
-    };
-    colors.highlight-low.rgb = mkOption {
-      type = types.listOf types.int;
-      default = [42 40 62];
-    };
-    colors.highlight-med.rgb = mkOption {
-      type = types.listOf types.int;
-      default = [68 65 90];
-    };
-    colors.highlight-high.rgb = mkOption {
-      type = types.listOf types.int;
-      default = [86 82 110];
+      rosepine = {
+        rose = mkColor "ea9a97" {l = [234 154 151];};
+        rosebg = mkColor "3f2f39" {l = [];};
+        pine = mkColor "3e9fb0" {l = [62 143 176];};
+        pinebg = mkColor "202d3d" {l = [];};
+        love = mkColor "eb6f92" {l = [235 111 146];};
+        lovebg = mkColor "3f2738" {l = [];};
+        foam = mkColor "9ccfd8" {l = [156 207 216];};
+        foambg = mkColor "313845" {l = [];};
+        gold = mkColor "f5c177" {l = [246 193 119];};
+        goldbg = mkColor "413633" {l = [];};
+        iris = mkColor "c4a7e7" {l = [196 167 231];};
+        irisbg = mkColor "383147" {l = [];};
+        base = mkColor "232136" {l = [35 33 54];};
+        surface = mkColor "2a273f" {l = [42 39 63];};
+        overlay = mkColor "393552" {l = [57 53 82];};
+        text = mkColor "e0def4" {l = [224 222 244];};
+        subtle = mkColor "908caa" {l = [144 140 170];};
+        muted = mkColor "6e6a86" {l = [110 106 134];};
+        highlight-low = mkColor "2a283e" {l = [42 40 62];};
+        highlight-med = mkColor "44415a" {l = [68 65 90];};
+        highlight-high = mkColor "56526e" {l = [86 82 110];};
+      };
     };
   };
 }

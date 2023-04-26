@@ -6,12 +6,8 @@
   ...
 }:
 with lib; {
-  options = {
-    nnn.enable = mkOption {
-      type = types.bool;
-      default = false;
-    };
-  };
+  options.nnn.enable = mkEnableOption "nnn settings";
+
   config = mkIf config.nnn.enable {
     programs.nnn = {
       enable = true;

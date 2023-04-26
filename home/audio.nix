@@ -5,12 +5,8 @@
   ...
 }:
 with lib; {
-  options = {
-    audio.enable = mkOption {
-      type = types.bool;
-      default = false;
-    };
-  };
+  options.audio.enable = mkEnableOption "audio settings";
+
   config = mkIf config.audio.enable {
     home.packages = with pkgs; [
       pavucontrol

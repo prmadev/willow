@@ -4,13 +4,8 @@
   ...
 }:
 with lib; {
-  options = {
-    snippet.enable = mkOption {
-      type = types.bool;
-      default = false;
-    };
-  };
-  config = mkIf config.snippet.enable {
+  options.pet.enable = mkEnableOption "pet settings";
+  config = mkIf config.pet.enable {
     programs.pet.enable = true; # TODO
   };
 }

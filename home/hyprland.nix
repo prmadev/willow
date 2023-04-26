@@ -5,12 +5,8 @@
   ...
 }:
 with lib; {
-  options = {
-    hyprland.enable = mkOption {
-      type = types.bool;
-      default = false;
-    };
-  };
+  options.hyprland.enable = mkEnableOption "hyperland settings";
+
   config = mkIf config.hyprland.enable {
     wayland.enable = true;
     wayland.windowManager.hyprland = {

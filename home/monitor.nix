@@ -5,12 +5,8 @@
   ...
 }:
 with lib; {
-  options = {
-    monitor.enable = mkOption {
-      type = types.bool;
-      default = false;
-    };
-  };
+  options.monitor.enable = mkEnableOption "monitor settings";
+
   config = mkIf config.monitor.enable {
     programs.bottom = {
       enable = true;
@@ -41,7 +37,9 @@ with lib; {
         };
       };
     };
+
     programs.htop.enable = true;
+
     home.packages = with pkgs; [
       procs
       neofetch

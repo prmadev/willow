@@ -2,18 +2,12 @@
   config,
   lib,
   pkgs,
-  inputs,
   ...
 }:
 with lib; {
-  options = {
-    browser.firefox.enable = mkOption {
-      type = types.bool;
-      default = false;
-    };
-  };
+  options.firefox.enable = mkEnableOption "firefox settings";
 
-  config = mkIf config.browser.firefox.enable {
+  config = mkIf config.firefox.enable {
     programs.firefox = {
       enable = true;
       profiles = {
@@ -32,6 +26,7 @@ with lib; {
             stylus
             tabliss
           ];
+
           bookmarks = [
             {
               name = "home-manager options search";
@@ -64,9 +59,7 @@ with lib; {
             #   url = "";
             # }
           ];
-          extraConfig = ''
 
-          '';
           isDefault = true;
           settings = {
             "browser.startup.homepage" = "https://fosstodon.org";
@@ -108,12 +101,12 @@ with lib; {
              #fullscr-toggler { background-color: rgba(0, 0, 0, 0) !important; }
              :root {
                --toolbarbutton-border-radius: 0px;
-               --uc-bg-color: ${config.colors.base.hex};
+               --uc-bg-color: ${config.colors.rosepine.base.hex};
                --uc-show-new-tab-button: none;
                --uc-show-tab-separators: none;
                --uc-tab-separators-color: none;
                --uc-tab-separators-width: none;
-               --uc-tab-fg-color: ${config.colors.base.hex};
+               --uc-tab-fg-color: ${config.colors.rosepine.base.hex};
                --autocomplete-popup-background: var(--mff-bg) !important;
                --default-arrowpanel-background: var(--mff-bg) !important;
                --default-arrowpanel-color: #fefefa !important;
@@ -133,18 +126,18 @@ with lib; {
                --mff-tab-font-weight: 400;
                --mff-tab-height: 32px;
                --mff-tab-pinned-bg: #9BCED7;
-               --mff-tab-selected-bg: ${config.colors.pine.hex};
+               --mff-tab-selected-bg: ${config.colors.rosepine.pine.hex};
                --mff-tab-soundplaying-bg: #9c89b8;
-               --mff-urlbar-color: ${config.colors.base.hex}!important;
+               --mff-urlbar-color: ${config.colors.rosepine.base.hex}!important;
                --mff-urlbar-focused-color: #403C58;
                --mff-urlbar-font-family: "ComicCodeLigatures Nerd Font";
                --mff-urlbar-font-size: 11pt;
                --mff-urlbar-font-weight: 700;
-               --mff-urlbar-results-color: ${config.colors.text.hex};
+               --mff-urlbar-results-color: ${config.colors.rosepine.text.hex};
                --mff-urlbar-results-font-family: "ComicCodeLigatures Nerd Font";
                --mff-urlbar-results-font-size: 11pt;
                --mff-urlbar-results-font-weight: 700;
-               --mff-urlbar-results-url-color: ${config.colors.text.hex};
+               --mff-urlbar-results-url-color: ${config.colors.rosepine.text.hex};
                --tab-border-radius: 0px;
              }
             * {
@@ -158,24 +151,24 @@ with lib; {
             menupopup menuitem,
             menupopup menu,
             menupopup menuseparator {
-              background-color: ${config.colors.overlay.hex}!important;
+              background-color: ${config.colors.rosepine.overlay.hex}!important;
             }
 
             .tab-text.tab-label {
-              color: ${config.colors.muted.hex}!important;
+              color: ${config.colors.rosepine.muted.hex}!important;
             }
 
             #tabbrowser-tabs:not([secondarytext-unsupported]) .tab-label-container{
               height: 1.5em;
             }
             #urlbar-input, #urlbar-scheme, .searchbar-textbox{
-              color: ${config.colors.text.hex}!important;
+              color: ${config.colors.rosepine.text.hex}!important;
             }
             #TabsToolbar #firefox-view-button[open] > .toolbarbutton-icon, .tab-background:is([selected], [multiselected]) {
-              border: 2px solid  ${config.colors.pine.hex}!important;
-              background-color:  ${config.colors.base.hex}!important;
+              border: 2px solid  ${config.colors.rosepine.pine.hex}!important;
+              background-color:  ${config.colors.rosepine.base.hex}!important;
               background-image: none!important;
-              filter: drop-shadow(-5px -5px 0px ${config.colors.pine.hex});
+              filter: drop-shadow(-5px -5px 0px ${config.colors.rosepine.pine.hex});
             }
 
             .tab-background {

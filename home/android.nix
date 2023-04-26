@@ -5,12 +5,8 @@
   ...
 }:
 with lib; {
-  options = {
-    android.enable = mkOption {
-      type = types.bool;
-      default = false;
-    };
-  };
+  options.android.enable = mkEnableOption "android settings";
+
   config = mkIf config.android.enable {
     home.packages = with pkgs; [
       android-file-transfer

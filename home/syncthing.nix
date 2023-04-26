@@ -4,12 +4,8 @@
   ...
 }:
 with lib; {
-  options = {
-    syncthing.enable = mkOption {
-      type = types.bool;
-      default = false;
-    };
-  };
+  options.syncthing.enable = mkEnableOption "syncthing settings";
+
   config = mkIf config.syncthing.enable {
     services.syncthing = {
       enable = true;

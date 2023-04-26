@@ -5,14 +5,8 @@
   ...
 }:
 with lib; {
-  options = {
-    task = {
-      enable = mkOption {
-        type = types.bool;
-        default = false;
-      };
-    };
-  };
+  options.task.enable = mkEnableOption "task manager settings";
+
   config = mkIf config.task.enable {
     programs.taskwarrior = {
       enable = true;

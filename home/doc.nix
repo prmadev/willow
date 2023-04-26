@@ -4,12 +4,8 @@
   ...
 }:
 with lib; {
-  options = {
-    doc.enable = mkOption {
-      type = types.bool;
-      default = false;
-    };
-  };
+  options.doc.enable = mkEnableOption "documentation settings";
+
   config = mkIf config.doc.enable {
     programs = {
       info.enable = true;

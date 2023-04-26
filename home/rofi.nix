@@ -5,17 +5,9 @@
   ...
 }:
 with lib; {
-  options.launcher.rofi = {
-    enable = mkOption {
-      type = types.bool;
-      default = false;
-      description = ''
-        If enabled, rofi will be installed.
-      '';
-    };
-  };
+  options.rofi.enable = mkEnableOption "rofi settings";
 
-  config = mkIf config.launcher.rofi.enable {
+  config = mkIf config.rofi.enable {
     programs.rofi = {
       enable = true;
       font = config.global-fonts.main-family + " 10";

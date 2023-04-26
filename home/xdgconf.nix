@@ -4,12 +4,8 @@
   ...
 }:
 with lib; {
-  options = {
-    xdgconf.enable = mkOption {
-      type = types.bool;
-      default = false;
-    };
-  };
+  options.xdgconf.enable = mkEnableOption "xdg config settings";
+
   config = mkIf config.xdgconf.enable {
     xdg = {
       enable = true;

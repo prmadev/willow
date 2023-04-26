@@ -5,12 +5,8 @@
   ...
 }:
 with lib; {
-  options = {
-    mpv.enable = mkOption {
-      type = types.bool;
-      default = false;
-    };
-  };
+  options.mpv.enable = mkEnableOption "mpv settings";
+
   config = mkIf config.mpv.enable {
     programs.mpv = {
       enable = true;

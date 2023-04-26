@@ -5,14 +5,14 @@
   ...
 }:
 with lib; {
-  options = {
-    lf.enable = mkEnableOption "lf";
-  };
+  options.lf.enable = mkEnableOption "lf";
+
   config = mkIf config.lf.enable {
     programs.lf = {
       enable = true;
       previewer = {
         keybinding = "i";
+
         source = pkgs.writeShellScript "pv.sh" ''
           #!/bin/sh
           case "''${1,,}" in
@@ -25,6 +25,7 @@ with lib; {
           esac
         '';
       };
+
       settings = {
         color256 = false;
         hidden = true;
@@ -32,6 +33,7 @@ with lib; {
         shell = "zsh";
         shellopts = "-c";
       };
+
       keybindings = {
         nd = "mkdir";
         nf = "mkfile";
@@ -42,6 +44,7 @@ with lib; {
         o = "&mimeopen $f";
         O = "map O $mimeopen --ask $f";
       };
+
       commands = {
         f = "$vi $(fzf)";
         fzf_search = ''
@@ -90,12 +93,14 @@ with lib; {
               atool -x $f
           }}
         '';
+
         z = ''
           %{{
                 	result="$(zoxide query --exclude $PWD $@)"
                 	lf -remote "send $id cd $result"
           }}
         '';
+
         zi = ''
           ''${{
           	result="$(zoxide query -i)"

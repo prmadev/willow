@@ -5,10 +5,8 @@
   ...
 }:
 with lib; {
-  options.picom.enable = mkOption {
-    type = types.bool;
-    default = false;
-  };
+  options.picom.enable = mkEnableOption "picom settings";
+
   config = mkIf config.picom.enable {
     services.picom = {
       enable = true;

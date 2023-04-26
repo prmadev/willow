@@ -5,14 +5,7 @@
   ...
 }:
 with lib; {
-  options = {
-    graphical = {
-      enable = mkOption {
-        type = types.bool;
-        default = false;
-      };
-    };
-  };
+  options.graphical.enable = mkEnableOption "graphical settings";
 
   config = mkIf config.graphical.enable {
     home.packages = with pkgs; [

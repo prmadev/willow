@@ -14,6 +14,7 @@ with lib; {
     programs.helix = {
       enable = true;
       package = inputs.helix.packages.${pkgs.system}.default;
+
       languages = let
         nixSettings = {
           name = "nix";
@@ -23,14 +24,17 @@ with lib; {
             args = ["--quiet"];
           };
         };
+
         htmlSettings = {
           name = "html";
           file-types = ["html" "tmpl"];
         };
+
         tomlSettings = {
           name = "toml";
           language-server = {command = "${pkgs.taplo-lsp}/bin/taplo";};
         };
+
         rustSettings = {
           name = "rust";
           language-server = {
@@ -42,15 +46,16 @@ with lib; {
               args = ["--workspace" "--all-targets" "--all-features"];
             };
           };
-          goSettings = {
-            name = "go";
-            auto-format = true;
-            formatter = {command = "gofumpt";};
+        };
 
-            indent = {
-              tab-width = 4;
-              unit = "  ";
-            };
+        goSettings = {
+          name = "go";
+          auto-format = true;
+          formatter = {command = "gofumpt";};
+
+          indent = {
+            tab-width = 4;
+            unit = "  ";
           };
         };
       in [

@@ -5,12 +5,8 @@
   ...
 }:
 with lib; {
-  options = {
-    bw.enable = mkOption {
-      type = types.bool;
-      default = false;
-    };
-  };
+  options.bw.enable = mkEnableOption "bitwarden settings";
+
   config = mkIf config.bw.enable {
     programs.rbw = {
       enable = true;
@@ -26,7 +22,7 @@ with lib; {
     };
 
     home.packages = with pkgs;
-      mkIf config.launcher.rofi.enable [
+      mkIf config.rofi.enable [
         rofi-rbw # for password management
         wtype
         wl-clipboard

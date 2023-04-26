@@ -5,7 +5,7 @@
   ...
 }:
 with lib; {
-  options.go.enable = mkEnableOption;
+  options.go.enable = mkEnableOption "go settings";
 
   config = mkIf config.go.enable {
     programs.go = {

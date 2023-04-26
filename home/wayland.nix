@@ -5,14 +5,7 @@
   ...
 }:
 with lib; {
-  options = {
-    wayland = {
-      enable = mkOption {
-        type = types.bool;
-        default = false;
-      };
-    };
-  };
+  options.wayland.enable = mkEnableOption "wayland settings";
 
   config = mkIf config.wayland.enable {
     home.packages = with pkgs; [

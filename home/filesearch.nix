@@ -5,12 +5,8 @@
   ...
 }:
 with lib; {
-  options = {
-    filesearch.enable = mkOption {
-      type = types.bool;
-      default = false;
-    };
-  };
+  options.filesearch.enable = mkEnableOption "file search settings";
+
   config = mkIf config.filesearch.enable {
     home.packages = with pkgs; [
       fd

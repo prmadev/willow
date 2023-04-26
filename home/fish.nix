@@ -5,12 +5,8 @@
   ...
 }:
 with lib; {
-  options = {
-    fish.enable = mkOption {
-      type = types.bool;
-      default = false;
-    };
-  };
+  options.fish.enable = mkEnableOption "fish enable";
+
   config = mkIf config.fish.enable {
     programs.fish = {
       enable = true;

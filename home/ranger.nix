@@ -5,12 +5,8 @@
   ...
 }:
 with lib; {
-  options = {
-    ranger.enable = mkOption {
-      type = types.bool;
-      default = false;
-    };
-  };
+  options.ranger.enable = mkEnableOption "ranger settings";
+
   config = mkIf config.ranger.enable {
     home.packages = with pkgs; [
       ranger

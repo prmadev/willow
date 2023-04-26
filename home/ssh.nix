@@ -4,12 +4,8 @@
   ...
 }:
 with lib; {
-  options = {
-    ssh.enable = mkOption {
-      type = types.bool;
-      default = false;
-    };
-  };
+  options.ssh.enable = mkEnableOption "ssh settings";
+
   config = mkIf config.ssh.enable {
     programs.ssh.enable = true;
   };

@@ -4,12 +4,7 @@
   ...
 }:
 with lib; {
-  options = {
-    newsboat.enable = mkOption {
-      type = types.bool;
-      default = false;
-    };
-  };
+  options.newsboat.enable = mkEnableOption "newsboat settings";
 
   config = mkIf config.newsboat.enable {
     programs.newsboat = {
