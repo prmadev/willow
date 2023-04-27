@@ -9,7 +9,6 @@ with lib; {
 
   config = mkIf config.general.enable {
     home.packages = with pkgs; [
-      gcc
       # clang
       cmake
       pkg-config

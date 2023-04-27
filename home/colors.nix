@@ -1,6 +1,7 @@
 {lib, ...}:
 with lib; {
   options = let
+    # color ::  string -> listof.integers  -> color
     mkColor = s: {l ? [0 0 0]}: {
       hex = mkOption {
         type = types.str;
@@ -19,32 +20,32 @@ with lib; {
   in {
     colors = {
       macchiato = {
-        rosewater = mkColor "f4dbd6" {};
-        flamingo = mkColor "f0c6c6" {};
-        pink = mkColor "f5bde6" {};
-        mauve = mkColor "c6a0f6" {};
-        red = mkColor "ed8796" {};
-        maroon = mkColor "ee99a0" {};
-        peach = mkColor "f5a97f" {};
-        yellow = mkColor "eed49f" {};
-        green = mkColor "a6da95" {};
-        teal = mkColor "8bd5ca" {};
-        sky = mkColor "91d7e3" {};
-        sapphire = mkColor "7dc4e4" {};
-        blue = mkColor "8aadf4" {};
-        lavendar = mkColor "b7bdf8" {};
-        text = mkColor "cad3f5" {};
-        subtext1 = mkColor "b8c0e0" {};
-        subtext0 = mkColor "a5adcb" {};
-        overlay2 = mkColor "939ab7" {};
-        overlay1 = mkColor "8087a2" {};
-        overlay0 = mkColor "6e738d" {};
-        surface2 = mkColor "5b6078" {};
-        surface1 = mkColor "494d64" {};
-        surface0 = mkColor "363a4f" {};
-        base = mkColor "24273a" {};
-        mantle = mkColor "1e2030" {};
-        crust = mkColor "181926" {};
+        rosewater = mkColor "f4dbd6" {l = [244 219 214];};
+        flamingo = mkColor "f0c6c6" {l = [240 198 198];};
+        pink = mkColor "f5bde6" {l = [245 189 230];};
+        mauve = mkColor "c6a0f6" {l = [198 160 246];};
+        red = mkColor "ed8796" {l = [237 135 150];};
+        maroon = mkColor "ee99a0" {l = [238 153 160];};
+        peach = mkColor "f5a97f" {l = [245 169 127];};
+        yellow = mkColor "eed49f" {l = [238 212 159];};
+        green = mkColor "a6da95" {l = [166 218 149];};
+        teal = mkColor "8bd5ca" {l = [139 213 202];};
+        sky = mkColor "91d7e3" {l = [145 215 227];};
+        sapphire = mkColor "7dc4e4" {l = [125 196 228];};
+        blue = mkColor "8aadf4" {l = [138 173 244];};
+        lavendar = mkColor "b7bdf8" {l = [183 189 248];};
+        text = mkColor "cad3f5" {l = [202 211 245];};
+        subtext1 = mkColor "b8c0e0" {l = [184 192 224];};
+        subtext0 = mkColor "a5adcb" {l = [165 173 203];};
+        overlay2 = mkColor "939ab7" {l = [147 154 183];};
+        overlay1 = mkColor "8087a2" {l = [128 135 162];};
+        overlay0 = mkColor "6e738d" {l = [110 115 141];};
+        surface2 = mkColor "5b6078" {l = [91 96 120];};
+        surface1 = mkColor "494d64" {l = [73 77 100];};
+        surface0 = mkColor "363a4f" {l = [54 58 79];};
+        base = mkColor "24273a" {l = [36 39 58];};
+        mantle = mkColor "1e2030" {l = [30 32 48];};
+        crust = mkColor "181926" {l = [24 25 38];};
       };
 
       rosepine = {

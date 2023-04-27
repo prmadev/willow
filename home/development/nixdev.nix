@@ -6,7 +6,7 @@
   ...
 }:
 with lib; {
-  options.nixdev.enable = mkEnableOption "nix developement pacakges]";
+  options.nixdev.enable = mkEnableOption "nix developement packages";
   config = mkIf config.nixdev.enable {
     home.packages = with pkgs; [
       alejandra

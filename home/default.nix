@@ -17,6 +17,7 @@
     ./music.nix
 
     ./rofi.nix
+    ./general.nix
 
     ./kitty.nix
     ./wezterm
@@ -122,6 +123,7 @@
   download.enable = true;
   proxy.enable = true;
   ssh.enable = true;
+  general.enable = true;
 
   bw.enable = true;
   gpg.enable = true;
