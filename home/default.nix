@@ -86,7 +86,7 @@
     # ./style
     # ./terminal
     # ./wm
-    # ./monitor.nix
+    ./monitor.nix
   ];
 
   firefox.enable = true;
@@ -163,7 +163,7 @@
   development.enable = true; # development and languages
   # file.enable = true; # development and languages
   # hardware.enable = true;
-  # monitor.enable = true; # monitoring utilities
+  monitor.enable = true; # monitoring utilities
   # network.enable = true;
   # security.enable = true; # secerts
   # shell.enable = true;
