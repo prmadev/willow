@@ -84,13 +84,13 @@ with lib; {
         name = " logs";
         commands = [
           "nix-shell -p clang golangci-lint hwatch"
-          "hwatch -c -n 10  go build"
+          # "hwatch -c -n 10  go build"
         ];
         panes = [
           {
             commands = [
               "nix-shell -p clang golangci-lint hwatch"
-              "hwatch -c -n 10 golangci-lint run"
+              # "hwatch -c -n 10 golangci-lint run"
             ];
           }
         ];
