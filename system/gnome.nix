@@ -1,7 +1,27 @@
 {pkgs, ...}: {
   services = {
     xserver = {
-      displayManager.gdm.enable = true;
+      displayManager = {
+        gdm.enable = true;
+        session = [
+          {
+            manage = "desktop";
+            name = "Riverwm";
+            start = ''
+              ${pkgs.river}/bin/river &
+              waitPID=$!
+            '';
+          }
+          {
+            manage = "desktop";
+            name = "Hyperland";
+            start = ''
+              Hyperland &
+              waitPID=$!
+            '';
+          }
+        ];
+      };
       desktopManager = {
         gnome = {
           enable = true;
