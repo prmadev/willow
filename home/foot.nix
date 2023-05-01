@@ -13,7 +13,7 @@ with lib; {
       settings = {
         main = {
           shell = "zsh";
-          font = "monospace:size=7";
+          font = "monospace:size=9";
           # font-bold  = ""
           box-drawings-uses-font-glyphs = true;
           bold-text-in-bright = false;
@@ -21,25 +21,25 @@ with lib; {
         scrollback = {
           lines = 10000;
         };
-        colors = {
-          foreground = "cad3f5"; # Text
-          background = "24273a"; # Base
-          regular0 = "494d64"; # Surface 1
-          regular1 = "ed8796"; # red
-          regular2 = "a6da95"; # green
-          regular3 = "eed49f"; # yellow
-          regular4 = "8aadf4"; # blue
-          regular5 = "f5bde6"; # pink
-          regular6 = "8bd5ca"; # teal
-          regular7 = "b8c0e0"; # Subtext 1
-          bright0 = "5b6078"; # Surface 2
-          bright1 = "ed8796"; # red
-          bright2 = "a6da95"; # green
-          bright3 = "eed49f"; # yellow
-          bright4 = "8aadf4"; # blue
-          bright5 = "f5bde6"; # pink
-          bright6 = "8bd5ca"; # teal
-          bright7 = "a5adcb"; # Subtext 0
+        colors = with config.colors.macchiato; {
+          foreground = text.rawHex; # Text
+          background = base.rawHex; # Base
+          regular0 = surface1.rawHex; # Surface 1
+          regular1 = red.rawHex; # red
+          regular2 = green.rawHex; # green
+          regular3 = yellow.rawHex; # yellow
+          regular4 = blue.rawHex; # blue
+          regular5 = pink.rawHex; # pink
+          regular6 = teal.rawHex; # teal
+          regular7 = subtext1.rawHex; # Subtext 1
+          bright0 = surface2.rawHex; # Surface 2
+          bright1 = red.rawHex; # red
+          bright2 = green.rawHex; # green
+          bright3 = yellow.rawHex; # yellow
+          bright4 = blue.rawHex; # blue
+          bright5 = pink.rawHex; # pink
+          bright6 = teal.rawHex; # teal
+          bright7 = subtext0.rawHex; # Subtext 0
         };
         key-bindings = {
           scrollback-up-page = "Control+Shift+Page_Up";
