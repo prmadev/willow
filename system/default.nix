@@ -12,6 +12,7 @@
     ./users.nix
     ./network.nix
     ./database
+    ./gnome.nix
   ];
   config.database.enable = true;
 }

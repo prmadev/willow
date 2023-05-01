@@ -8,7 +8,7 @@
   # Audio
   sound.enable = true;
   sound.mediaKeys.enable = true;
-  # hardware.pulseaudio.enable = true;
+  hardware.pulseaudio.enable = false;
   services.pipewire = {
     enable = true;
     wireplumber.enable = true;
@@ -28,7 +28,7 @@
   services.dbus.enable = true;
 
   # Power management
-  services.tlp.enable = true;
+  services.tlp.enable = false;
   services.acpid.enable = true;
 
   # SSD management
