@@ -48,13 +48,13 @@ _: {
     "squashfs"
     "udf"
     "bluetooth"
-    "uvcvideo" # webcam
+    # "uvcvideo" # webcam
     "hpfs"
     "jfs"
     "minix"
     "nilfs2"
     "omfs"
-    "uvcvideo"
+    # "uvcvideo"
     "qnx4"
     "qnx6"
     "sysv"

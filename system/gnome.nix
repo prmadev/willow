@@ -2,7 +2,7 @@
   services = {
     xserver = {
       displayManager = {
-        gdm.enable = true;
+        gdm.enable = false;
         session = [
           {
             manage = "desktop";
@@ -24,7 +24,7 @@
       };
       desktopManager = {
         gnome = {
-          enable = true;
+          enable = false;
         };
       };
     };
