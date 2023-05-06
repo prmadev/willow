@@ -6,12 +6,16 @@
 }:
 with lib; {
   options.telegram.enable = mkEnableOption "telegram settings";
+  options.discord.enable = mkEnableOption "discord settings";
 
-  config = mkIf config.telegram.enable {
-    home.packages = with pkgs; [
-      tdesktop
-      discord
-      discordo
-    ];
+  config = {
+    home.packages = with pkgs;
+      mkIf config.telegram.enable [
+        tdesktop
+      ]
+      + mkIf config.discord.enable [
+        discord
+        discordo
+      ];
   };
 }

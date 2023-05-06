@@ -72,6 +72,7 @@
     ./bw.nix
     ./gpg.nix
     ./agenix.nix
+    ./discord.nix
 
     ./wayland.nix
 
@@ -87,12 +88,14 @@
     # ./terminal
     # ./wm
     ./monitor.nix
+    # ./communication.nix
   ];
 
   firefox.enable = true;
   qutebrowser.enable = false;
 
   telegram.enable = true;
+  discord.enable = true;
   exercism.enable = true;
   graphical.enable = true;
   task.enable = false;
