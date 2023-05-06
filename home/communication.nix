@@ -11,6 +11,7 @@ with lib; {
     home.packages = with pkgs; [
       tdesktop
       discord
+      discordo
     ];
   };
 }
