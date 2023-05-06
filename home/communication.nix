@@ -10,6 +10,7 @@ with lib; {
   config = mkIf config.telegram.enable {
     home.packages = with pkgs; [
       tdesktop
+      discord
     ];
   };
 }
