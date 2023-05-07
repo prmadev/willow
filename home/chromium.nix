@@ -19,7 +19,7 @@ with lib; {
         "padekgcemlokbadohgkifijomclgjgif" # SwitchyOmega
         # "ennpfpdlaclocpomkiablnmbppdnlhoh" # rust search engine
       ];
-      commandLineArgs = ["--ozone-platform-hint=auto" "--gtk-version=4"];
+      commandLineArgs = ["--ozone-platform-hint=wayland" "--gtk-version=4"];
     };
   };
 }
