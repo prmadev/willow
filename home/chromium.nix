@@ -8,7 +8,7 @@ with lib; {
 
   config = mkIf config.chrome.enable {
     programs.chromium = {
-      enable = false;
+      enable = true;
       extensions = [
         "cjpalhdlnbpafiamejdnhcphjbkeiagm" # uBlock Origin
         # "dhdgffkkebhmkfjojejmpbldmpobfkfo" # Tampermonkey
