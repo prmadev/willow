@@ -122,6 +122,7 @@
   xdgconf.enable = true;
   brootFile.enable = true;
   lf.enable = true;
+  chrome.enable = true;
 
   download.enable = true;
   proxy.enable = true;
