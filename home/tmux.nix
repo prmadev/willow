@@ -225,6 +225,118 @@ with lib; {
             ];
           };
       };
+
+      "jafam-auth.yml" = with lib; {
+        target = ".config/smug/jafam-auth.yml";
+        text =
+          generators.toYAML {}
+          {
+            session = "jafam-auth ";
+            root = "~/kapa/pro/jafam2/auth/";
+            windows = [
+              (codeWindow {commandPrefix = ["nix-shell -p clang golangci-lint"];})
+              (terminalWindow {commandPrefix = ["nix-shell -p clang golangci-lint"];})
+              fileManagerWindow
+              goLogsWindow
+            ];
+          };
+      };
+
+      "jafam-entry.yml" = with lib; {
+        target = ".config/smug/jafam-entry.yml";
+        text =
+          generators.toYAML {}
+          {
+            session = "jafam-entry ";
+            root = "~/kapa/pro/jafam2/entry/";
+            windows = [
+              (codeWindow {commandPrefix = ["nix-shell -p clang golangci-lint"];})
+              (terminalWindow {commandPrefix = ["nix-shell -p clang golangci-lint"];})
+              fileManagerWindow
+              goLogsWindow
+            ];
+          };
+      };
+
+      "jafam-models.yml" = with lib; {
+        target = ".config/smug/jafam-models.yml";
+        text =
+          generators.toYAML {}
+          {
+            session = "jafam-models ";
+            root = "~/kapa/pro/jafam2/models/";
+            windows = [
+              (codeWindow {commandPrefix = ["nix-shell -p clang golangci-lint"];})
+              (terminalWindow {commandPrefix = ["nix-shell -p clang golangci-lint"];})
+              fileManagerWindow
+              goLogsWindow
+            ];
+          };
+      };
+
+      "jafam-rbac.yml" = with lib; {
+        target = ".config/smug/jafam-rbac.yml";
+        text =
+          generators.toYAML {}
+          {
+            session = "jafam-rbac ";
+            root = "~/kapa/pro/jafam2/rbac/";
+            windows = [
+              (codeWindow {commandPrefix = ["nix-shell -p clang golangci-lint"];})
+              (terminalWindow {commandPrefix = ["nix-shell -p clang golangci-lint"];})
+              fileManagerWindow
+              goLogsWindow
+            ];
+          };
+      };
+
+      "jafam-redisHelper.yml" = with lib; {
+        target = ".config/smug/jafam-redisHelper.yml";
+        text =
+          generators.toYAML {}
+          {
+            session = "jafam-redisHelper ";
+            root = "~/kapa/pro/jafam2/redisHelper/";
+            windows = [
+              (codeWindow {commandPrefix = ["nix-shell -p clang golangci-lint"];})
+              (terminalWindow {commandPrefix = ["nix-shell -p clang golangci-lint"];})
+              fileManagerWindow
+              goLogsWindow
+            ];
+          };
+      };
+
+      "jafam-session.yml" = with lib; {
+        target = ".config/smug/jafam-session.yml";
+        text =
+          generators.toYAML {}
+          {
+            session = "jafam-session ";
+            root = "~/kapa/pro/jafam2/session/";
+            windows = [
+              (codeWindow {commandPrefix = ["nix-shell -p clang golangci-lint"];})
+              (terminalWindow {commandPrefix = ["nix-shell -p clang golangci-lint"];})
+              fileManagerWindow
+              goLogsWindow
+            ];
+          };
+      };
+
+      "jafam-user.yml" = with lib; {
+        target = ".config/smug/jafam-user.yml";
+        text =
+          generators.toYAML {}
+          {
+            session = "jafam- ";
+            root = "~/kapa/pro/jafam2/user/";
+            windows = [
+              (codeWindow {commandPrefix = ["nix-shell -p clang golangci-lint"];})
+              (terminalWindow {commandPrefix = ["nix-shell -p clang golangci-lint"];})
+              fileManagerWindow
+              goLogsWindow
+            ];
+          };
+      };
     };
   };
 }
