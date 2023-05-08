@@ -14,10 +14,12 @@ with lib; {
         # "dhdgffkkebhmkfjojejmpbldmpobfkfo" # Tampermonkey
         "cojpndognjdcakkimaloeealehpkljna" # caretTab
         # "gjnmgffpgcigkfipakdijeonkoelhcdh" # rose pine
-        "eimadpbcbfnmbkopoojfekhnkhdbieeh" # dark reader
+        # "eimadpbcbfnmbkopoojfekhnkhdbieeh" # dark reader
         "nngceckbapebfimnlniiiahkandclblb" # bitwarden
         "padekgcemlokbadohgkifijomclgjgif" # SwitchyOmega
         # "ennpfpdlaclocpomkiablnmbppdnlhoh" # rust search engine
+        "cmpdlhmnmjhihmcfnigoememnffkimlk" # catppuccin-macchiato
+        "gnnhhfiajnkfjfnnojggfdlpjifhlmom" # word tune
       ];
       commandLineArgs = ["--ozone-platform-hint=wayland" "--gtk-version=4"];
     };
