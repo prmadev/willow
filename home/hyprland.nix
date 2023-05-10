@@ -35,7 +35,7 @@ with lib; {
           # exec =  swww init && swww img ~/pretty_5.png
           # exec = hyprpaper
           # exec-once =  wh
-          exec-once = eww -c ~/willow/home/modules/wm/eww/ewwConfig daemon &&  eww -c ~/willow/home/modules/wm/eww/ewwConfig open topbar
+          exec-once = eww -c ~/willow/home/eww/ewwConfig daemon &&  eww -c ~/willow/home/eww/ewwConfig open topbar
           # exec-once =   cat ~/vmess.json | v2ray run
         '';
         decoration = ''
