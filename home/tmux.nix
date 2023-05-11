@@ -234,10 +234,9 @@ with lib; {
             session = "jafam-auth ";
             root = "~/kapa/pro/jafam2/auth/";
             windows = [
-              (codeWindow {commandPrefix = ["nix-shell -p clang golangci-lint"];})
-              (terminalWindow {commandPrefix = ["nix-shell -p clang golangci-lint"];})
+              (codeWindow {commandPrefix = [];})
+              (terminalWindow {commandPrefix = [];})
               fileManagerWindow
-              goLogsWindow
             ];
           };
       };
@@ -250,10 +249,9 @@ with lib; {
             session = "jafam-entry ";
             root = "~/kapa/pro/jafam2/entry/";
             windows = [
-              (codeWindow {commandPrefix = ["nix-shell -p clang golangci-lint"];})
-              (terminalWindow {commandPrefix = ["nix-shell -p clang golangci-lint"];})
+              (codeWindow {commandPrefix = [];})
+              (terminalWindow {commandPrefix = [];})
               fileManagerWindow
-              goLogsWindow
             ];
           };
       };
@@ -266,10 +264,9 @@ with lib; {
             session = "jafam-models ";
             root = "~/kapa/pro/jafam2/models/";
             windows = [
-              (codeWindow {commandPrefix = ["nix-shell -p clang golangci-lint"];})
-              (terminalWindow {commandPrefix = ["nix-shell -p clang golangci-lint"];})
+              (codeWindow {commandPrefix = [];})
+              (terminalWindow {commandPrefix = [];})
               fileManagerWindow
-              goLogsWindow
             ];
           };
       };
@@ -282,10 +279,9 @@ with lib; {
             session = "jafam-rbac ";
             root = "~/kapa/pro/jafam2/rbac/";
             windows = [
-              (codeWindow {commandPrefix = ["nix-shell -p clang golangci-lint"];})
-              (terminalWindow {commandPrefix = ["nix-shell -p clang golangci-lint"];})
+              (codeWindow {commandPrefix = [];})
+              (terminalWindow {commandPrefix = [];})
               fileManagerWindow
-              goLogsWindow
             ];
           };
       };
@@ -298,10 +294,9 @@ with lib; {
             session = "jafam-redisHelper ";
             root = "~/kapa/pro/jafam2/redisHelper/";
             windows = [
-              (codeWindow {commandPrefix = ["nix-shell -p clang golangci-lint"];})
-              (terminalWindow {commandPrefix = ["nix-shell -p clang golangci-lint"];})
+              (codeWindow {commandPrefix = [];})
+              (terminalWindow {commandPrefix = [];})
               fileManagerWindow
-              goLogsWindow
             ];
           };
       };
@@ -314,10 +309,9 @@ with lib; {
             session = "jafam-session ";
             root = "~/kapa/pro/jafam2/session/";
             windows = [
-              (codeWindow {commandPrefix = ["nix-shell -p clang golangci-lint"];})
-              (terminalWindow {commandPrefix = ["nix-shell -p clang golangci-lint"];})
+              (codeWindow {commandPrefix = [];})
+              (terminalWindow {commandPrefix = [];})
               fileManagerWindow
-              goLogsWindow
             ];
           };
       };
@@ -327,13 +321,12 @@ with lib; {
         text =
           generators.toYAML {}
           {
-            session = "jafam- ";
+            session = "jafam-user ";
             root = "~/kapa/pro/jafam2/user/";
             windows = [
-              (codeWindow {commandPrefix = ["nix-shell -p clang golangci-lint"];})
-              (terminalWindow {commandPrefix = ["nix-shell -p clang golangci-lint"];})
+              (codeWindow {commandPrefix = [];})
+              (terminalWindow {commandPrefix = [];})
               fileManagerWindow
-              goLogsWindow
             ];
           };
       };
