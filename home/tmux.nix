@@ -57,6 +57,8 @@ with lib; {
 
     home.packages = with pkgs; [
       smug
+      tmux-sessionizer
+      twm
     ];
 
     home.file = let
