@@ -23,14 +23,16 @@ with lib; {
       prefix = "C-Space";
       extraConfig = let
         nextToggle = ''bind-key  -n C-\\ next-window'';
-        killSession = ''bind-key   C-k kill-session'';
+        newWindow = ''bind-key  -n C-n next-window'';
+        killSession2 = ''bind-key   C-k kill-session'';
+        killSession = ''bind-key -n  C-k kill-session'';
         horPane = ''bind | split-window -h -c "#{pane_current_path}"'';
         verPane = ''bind - split-window -v -c "#{pane_current_path}"'';
         newWin = ''bind c new-window -c "#{pane_current_path}"'';
         newPrefix = ''bind C-Space send-prefix'';
         willowBinding = ''bind -n M-w new-session -A -s willow "smug willow -a"'';
       in
-        builtins.concatStringsSep "\n" [nextToggle horPane verPane newWin killSession newPrefix willowBinding];
+        builtins.concatStringsSep "\n" [nextToggle horPane verPane newWin newWindow killSession2 killSession newPrefix willowBinding];
 
       plugins = with pkgs; [
         tmuxPlugins.open
