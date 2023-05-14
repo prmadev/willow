@@ -24,6 +24,7 @@
     ./zellij.nix
     ./tmux.nix
     ./foot.nix
+    ./insomnia.nix
 
     ./android.nix
     ./compression.nix
@@ -174,6 +175,7 @@
   # style.enable = true;
   # terminal.enable = true;
   # wm.enable = true; # window manager
+  insomnia.enable = true;
 
   nixpkgs.overlays = [
     inputs.neovim-nightly-overlay.overlay
