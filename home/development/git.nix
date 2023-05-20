@@ -11,6 +11,7 @@ with lib; {
     home.packages = with pkgs; [
       git-gone # trim stale branches
       git-bug # bug reporting right inside the repo
+      git-workspace # workspace management
     ];
 
     programs.git = {
