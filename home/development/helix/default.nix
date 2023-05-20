@@ -32,14 +32,14 @@ with lib; {
 
         tomlSettings = {
           name = "toml";
-          language-servers = {command = "${pkgs.taplo-lsp}/bin/taplo";};
+          language-servers = [{command = "${pkgs.taplo-lsp}/bin/taplo";}];
         };
 
         rustSettings = {
           name = "rust";
-          language-servers = {
+          language-servers = [{
             command = "${pkgs.rust-analyzer}/bin/rust-analyzer";
-          };
+          }];
           config = {
             check = {
               command = "clippy";
