@@ -46,8 +46,8 @@ with lib; {
 
       rustBasics = [
         # llvmPackages_latest.bintools
-        llvmPackages_latest.lld
-        llvmPackages_latest.llvm
+        # llvmPackages_latest.lld
+        # llvmPackages_latest.llvm
         rustup
         cargo-binutils
       ];
