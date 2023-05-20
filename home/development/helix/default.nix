@@ -37,7 +37,7 @@ with lib; {
 
         rustSettings = {
           name = "rust";
-          language-server = {
+          language-servers = {
             command = "${pkgs.rust-analyzer}/bin/rust-analyzer";
           };
           config = {
