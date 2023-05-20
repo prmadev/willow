@@ -13,11 +13,11 @@ with lib; {
       # package = inputs.zellij;
       settings = {
         default_shell = "zsh";
-        simplified_ui = true;
-        pane_frames = false;
+        simplified_ui = false;
+        pane_frames = true;
         scroll_buffer_size = 20000;
         scrollback_editor = "${pkgs.helix}/bin/hx";
-        ui.pane_frames.rounded_corners = true;
+        ui.pane_frames.rounded_corners = false;
         copy_command = "wl-copy";
         theme = "catppuccin-macchiato";
         themes = {
