@@ -117,7 +117,7 @@ with lib; {
       # lsps
       sumneko-lua-language-server
       nil
-      rust-analyzer
+      # rust-analyzer
       actionlint
       luaformatter
 

@@ -19,6 +19,7 @@ with lib; {
       swaybg
       # evdevremapkeys
       wev
+      egl-wayland
     ];
 
     programs.firefox = {

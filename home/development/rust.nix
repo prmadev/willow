@@ -66,7 +66,7 @@ with lib; {
       utils = [
         lldb
         mdbook
-        rust-analyzer
+        # rust-analyzer
         taplo
         rusty-man
         rust-audit-info
