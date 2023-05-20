@@ -32,7 +32,7 @@ with lib; {
 
         tomlSettings = {
           name = "toml";
-          language-server = {command = "${pkgs.taplo-lsp}/bin/taplo";};
+          language-servers = {command = "${pkgs.taplo-lsp}/bin/taplo";};
         };
 
         rustSettings = {
