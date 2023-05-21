@@ -47,12 +47,12 @@ with lib; {
         rustSettings = {
           name = "rust";
           # language-servers = ["rust-analyzer-custome"];
-          config = {
-            check = {
-              command = "clippy";
-              args = ["--workspace" "--all-targets" "--all-features"];
-            };
-          };
+          # config = {
+          #   check = {
+          #     command = "clippy";
+          #     args = ["--workspace" "--all-targets" "--all-features"];
+          #   };
+          # };
         };
 
         goSettings = {
