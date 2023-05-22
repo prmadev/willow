@@ -42,10 +42,17 @@ with lib; {
       history.size = 30000000;
       plugins = [
         {
-          src = inputs.cd-ls;
-          name = "cd-ls";
+          src = inputs.zsh-nix-completion;
+          name = "zsh-nix-shell";
         }
-
+        {
+          src = inputs.zsh-nix-shell;
+          name = "zsh-nix-shell";
+        }
+        # {
+        #   src = inputs.cd-ls;
+        #   name = "cd-ls";
+        # }
         {
           src = inputs.catppuccin-zsh;
           name = "catpuccin-zsh";
@@ -63,10 +70,12 @@ with lib; {
           src = inputs.zsh-terminal-title;
           name = "zsh-terminal-title";
         }
+
         {
           src = inputs.zsh-tab-title;
           name = "zsh-tab-title";
         }
+
         {
           src = inputs.zsh-skim;
           name = "zsh-skim";

@@ -1547,6 +1547,8 @@
         "ragenix": "ragenix",
         "sponge-fish": "sponge-fish",
         "stable": "stable",
+        "zsh-nix-completion": "zsh-nix-completion",
+        "zsh-nix-shell": "zsh-nix-shell",
         "zsh-skim": "zsh-skim",
         "zsh-tab-title": "zsh-tab-title",
         "zsh-terminal-title": "zsh-terminal-title",
@@ -1799,6 +1801,38 @@
       "original": {
         "owner": "hyprwm",
         "repo": "xdg-desktop-portal-hyprland",
+        "type": "github"
+      }
+    },
+    "zsh-nix-completion": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1675042156,
+        "narHash": "sha256-aXetjkl5nPuYHHyuX59ywXF+4Xg+PUCV6Y2u+g18gEk=",
+        "owner": "nix-community",
+        "repo": "nix-zsh-completions",
+        "rev": "6a1bfc024481bdba568f2ced65e02f3a359a7692",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "nix-zsh-completions",
+        "type": "github"
+      }
+    },
+    "zsh-nix-shell": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1684683511,
+        "narHash": "sha256-oQpYKBt0gmOSBgay2HgbXiDoZo5FoUKwyHSlUrOAP5E=",
+        "owner": "chisui",
+        "repo": "zsh-nix-shell",
+        "rev": "df48366e858feec2f770b48a7d92b56eab613396",
+        "type": "github"
+      },
+      "original": {
+        "owner": "chisui",
+        "repo": "zsh-nix-shell",
         "type": "github"
       }
     },
