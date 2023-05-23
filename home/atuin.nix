@@ -10,7 +10,7 @@ with lib; {
     programs.atuin = {
       enable = true;
 
-      enableNushellIntegration = config.nu.enable;
+      enableNushellIntegration = false;
       enableZshIntegration = config.zsh.enable;
       enableFishIntegration = config.fish.enable;
       enableBashIntegration = config.bash.enable;
