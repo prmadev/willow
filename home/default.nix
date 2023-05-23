@@ -18,6 +18,7 @@
 
     ./rofi.nix
     ./general.nix
+    ./atuin.nix
 
     ./kitty.nix
     ./wezterm
@@ -124,6 +125,7 @@
   brootFile.enable = true;
   lf.enable = true;
   chrome.enable = true;
+  atuin.enable = true;
 
   download.enable = true;
   proxy.enable = true;
