@@ -60,7 +60,7 @@
     ./snippet.nix
     ./bash.nix
     ./fish.nix
-    ./nu
+    ./nu.nix
     ./zsh.nix
     ./skim.nix
 
