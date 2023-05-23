@@ -18,10 +18,6 @@ with lib; {
         starship_shell_env = "let-env STARSHIP_SHELL = \"nu\"";
         leftPrompt = "def create_left_prompt [] { starship prompt --cmd-duration $env.CMD_DURATION_MS $'--status=($env.LAST_EXIT_CODE)' }";
         misc = ''
-          def create_left_prompt [] {
-          	starship prompt --cmd-duration $env.CMD_DURATION_MS $'--status=($env.LAST_EXIT_CODE)'
-          }
-
           let-env PROMPT_COMMAND = { create_left_prompt }
 
           let-env PROMPT_COMMAND_RIGHT = ""
