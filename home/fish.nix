@@ -32,10 +32,10 @@ with lib; {
       '';
     };
 
-    programs.fzf.enableFishIntegration = config.fzf.enable;
+    # programs.fzf.enableFishIntegration = config.fzf.enable;
     programs.nix-index.enableFishIntegration = true;
     programs.starship.enableFishIntegration = config.starship.enable;
-    programs.zoxide.enableFishIntegration = config.zoxide.enable;
+    # programs.zoxide.enableFishIntegration = config.zoxide.enable;
     services.gpg-agent.enableFishIntegration = config.gpg.enable;
     home.sessionVariables = {
       fish_greeting = "";
