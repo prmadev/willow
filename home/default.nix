@@ -56,7 +56,7 @@
     ./doc.nix
     ./fzf.nix
     ./pager.nix
-    ./prompt.nix
+    ./starship.nix
     ./snippet.nix
     ./bash.nix
     ./fish.nix
@@ -143,7 +143,7 @@
   fzf.enable = true;
   nu.enable = true;
   pager.enable = true;
-  prompt.enable = true;
+  starship.enable = true;
   pet.enable = true;
   zsh.enable = true;
 

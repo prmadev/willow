@@ -32,11 +32,11 @@ with lib; {
       '';
     };
 
-    programs.fzf.enableFishIntegration = mkIf config.fzf.enable true;
+    programs.fzf.enableFishIntegration = config.fzf.enable;
     programs.nix-index.enableFishIntegration = true;
-    programs.starship.enableFishIntegration = true;
-    programs.zoxide.enableFishIntegration = true;
-    services.gpg-agent.enableFishIntegration = true;
+    programs.starship.enableFishIntegration = config.starship.enable;
+    programs.zoxide.enableFishIntegration = config.zoxide.enable;
+    services.gpg-agent.enableFishIntegration = config.gpg.enable;
     home.sessionVariables = {
       fish_greeting = "";
       fish_tmux_config = "$HOME/.config/tmux/tmux.conf";

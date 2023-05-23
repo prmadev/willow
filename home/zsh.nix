@@ -83,10 +83,10 @@ with lib; {
       ];
     };
 
-    programs.fzf.enableZshIntegration = mkIf config.fzf.enable true;
+    programs.fzf.enableZshIntegration = config.fzf.enable;
     programs.nix-index.enableZshIntegration = true;
-    programs.starship.enableZshIntegration = mkIf config.prompt.enable true;
-    programs.zoxide.enableZshIntegration = mkIf config.filesearch.enable true;
-    services.gpg-agent.enableZshIntegration = mkIf config.gpg.enable true;
+    programs.starship.enableZshIntegration = config.starship.enable;
+    programs.zoxide.enableZshIntegration = config.filesearch.enable;
+    services.gpg-agent.enableZshIntegration = config.gpg.enable;
   };
 }
