@@ -8,11 +8,11 @@ with lib; {
 
   config = mkIf config.atuin.enable {
     programs.atuin = {
-      # enable = true;
-      # enableNushellIntegration = true;
-      # enableZshIntegration = true;
-      # enableFishIntegration = true;
-      # enableBashIntegration = true;
+      enable = true;
+      enableNushellIntegration = true;
+      enableZshIntegration = true;
+      enableFishIntegration = true;
+      enableBashIntegration = true;
     };
   };
 }
