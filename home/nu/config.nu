@@ -1,5 +1,5 @@
 
-        let-env STARSHIP_SHELL = "nu"
+let-env STARSHIP_SHELL = "nu"
 
 
 def create_left_prompt [] {

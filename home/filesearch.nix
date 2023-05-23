@@ -15,6 +15,9 @@ with lib; {
       sd
     ];
     programs.exa.enable = true;
-    programs.zoxide.enable = true;
+    programs.zoxide = {
+      enable = true;
+      enableNushellIntegration = false;
+    };
   };
 }
