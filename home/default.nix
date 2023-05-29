@@ -1,4 +1,8 @@
-{inputs, ...}: {
+{
+  inputs,
+  pkgs,
+  ...
+}: {
   imports = [
     ./general.nix
 
@@ -178,6 +182,8 @@
   # terminal.enable = true;
   # wm.enable = true; # window manager
   insomnia.enable = true;
+
+  home.packages = with pkgs; [skypeforlinux];
 
   nixpkgs.overlays = [
     inputs.neovim-nightly-overlay.overlay
