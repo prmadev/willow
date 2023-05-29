@@ -118,8 +118,8 @@ with lib; {
 
       #TODO use variable colors
       style = let
-        bordersize-main = "5px";
-        bordersize-support = "2px";
+        bordersize-main = "3px";
+        bordersize-support = "1px";
 
         bg-base = "background: ${config.colors.macchiato.base.hex};";
         bg-surface = "background: ${config.colors.macchiato.surface0.hex};";
