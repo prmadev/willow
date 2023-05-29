@@ -183,8 +183,6 @@
   # wm.enable = true; # window manager
   insomnia.enable = true;
 
-  home.packages = with pkgs; [skypeforlinux];
-
   nixpkgs.overlays = [
     inputs.neovim-nightly-overlay.overlay
   ];
