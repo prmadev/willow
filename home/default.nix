@@ -1,8 +1,4 @@
-{
-  inputs,
-  pkgs,
-  ...
-}: {
+{inputs, ...}: {
   imports = [
     ./general.nix
 
@@ -23,6 +19,7 @@
     ./rofi.nix
     ./general.nix
     ./atuin.nix
+    ./typst.nix
 
     ./kitty.nix
     ./wezterm
@@ -110,6 +107,7 @@
   newsboat.enable = false;
   syncthing.enable = true;
   music.enable = true;
+  typst.enable = true;
 
   audio.enable = true;
   partition.enable = true;
