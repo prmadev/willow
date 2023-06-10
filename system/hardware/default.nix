@@ -28,7 +28,7 @@
   services.dbus.enable = true;
 
   # Power management
-  services.tlp.enable = false;
+  services.tlp.enable = true;
   services.acpid.enable = true;
 
   # SSD management

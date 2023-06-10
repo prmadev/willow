@@ -1,7 +1,7 @@
 {
   description = "my nix configuration";
   inputs = {
-    stable.url = "github:nixos/nixpkgs/nixos-22.11";
+    stable.url = "github:nixos/nixpkgs/nixos-23.05";
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     neovim-nightly-overlay = {
       url = "github:nix-community/neovim-nightly-overlay";

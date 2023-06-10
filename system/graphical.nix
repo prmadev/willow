@@ -4,8 +4,8 @@ _: {
   # services.xserver.displayManager.gdm.enable = false;
   services.xserver.displayManager.lightdm.enable = false;
   services.xserver.displayManager.sddm.enable = false;
-  services.xserver.displayManager.startx.enable = true;
-  services.xserver.enable = true;
+  services.xserver.displayManager.startx.enable = false;
+  services.xserver.enable = false;
   # programs.hyprland.enable = true;
 
   xdg.portal = {
@@ -13,5 +13,6 @@ _: {
     wlr.enable = true;
   };
 
+  programs.river.enable = true;
   programs.xwayland.enable = true;
 }
