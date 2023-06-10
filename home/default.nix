@@ -99,15 +99,15 @@
 
   telegram.enable = true;
   discord.enable = true;
-  exercism.enable = true;
+  exercism.enable = false;
   graphical.enable = true;
   task.enable = false;
   hoard.enable = false;
-  zk.enable = true;
+  zk.enable = false;
   newsboat.enable = false;
-  syncthing.enable = true;
+  syncthing.enable = false;
   music.enable = true;
-  typst.enable = true;
+  typst.enable = false;
 
   audio.enable = true;
   partition.enable = true;
@@ -146,7 +146,7 @@
   nu.enable = true;
   pager.enable = true;
   starship.enable = true;
-  pet.enable = true;
+  pet.enable = false;
   zsh.enable = true;
 
   font.enable = true;
@@ -162,7 +162,7 @@
   # launcher.enable = true;
   river.enable = true;
   eww.enable = true;
-  hyprland.enable = true;
+  hyprland.enable = false;
   sway.enable = false;
 
   # xsession.windowManager.awesome.enable = true;
@@ -179,7 +179,7 @@
   # style.enable = true;
   # terminal.enable = true;
   # wm.enable = true; # window manager
-  insomnia.enable = true;
+  insomnia.enable = false;
 
   nixpkgs.overlays = [
     inputs.neovim-nightly-overlay.overlay

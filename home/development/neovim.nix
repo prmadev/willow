@@ -156,7 +156,7 @@ with lib; {
       taplo
       # DAP servers
       delve
-      asciidoctor-with-extensions
+      # asciidoctor-with-extensions
       adrgen
       # Other stuff
       bc

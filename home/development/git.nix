@@ -26,9 +26,9 @@ with lib; {
         init = {
           defaultBranch = "main";
         };
-        url = {
-          "ssh://git@github.com".insteadOf = "https://github.com";
-        };
+        # url = {
+        # "ssh://git@github.com".insteadOf = "https://github.com";
+        # };
       };
       signing = {
         key = "EA109402685DDDDB";

@@ -17,7 +17,7 @@ with lib; {
 
       gum
 
-      calibre
+      # calibre
       mprocs # not a monitoring tool
       zola
       d2

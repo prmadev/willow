@@ -12,13 +12,13 @@ with lib; {
     };
   };
   config = mkIf config.database.enable {
-    environment.systemPackages = with pkgs; [
-      mongodb-compass
-      # pgcli
-      # python310Packages.keyring
-      # pgweb
-      # gobang
-    ];
+    # environment.systemPackages = with pkgs; [
+    #   # mongodb-compass
+    #   # pgcli
+    #   # python310Packages.keyring
+    #   # pgweb
+    #   # gobang
+    # ];
     services.postgresql = {
       enable = false;
 

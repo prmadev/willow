@@ -15,16 +15,10 @@ with lib; {
       enable = true;
       package = inputs.helix.packages.${pkgs.system}.default;
 
-
       languages = let
-
         # taplo-lsp-custome = {
         #   command = "${pkgs.taplo-lsp}/bin/taplo";
         # };
-        # rust-analyzer-custom = {
-        #   command = "${pkgs.rust-analyzer}/bin/rust-analyzer";
-        # };
-
         nixSettings = {
           name = "nix";
           auto-format = true;
@@ -46,7 +40,7 @@ with lib; {
 
         rustSettings = {
           name = "rust";
-          # language-servers = ["rust-analyzer-custome"];
+          language-servers = ["rust-analyzer-custome"];
           # config = {
           #   check = {
           #     command = "clippy";
@@ -65,13 +59,20 @@ with lib; {
             unit = "  ";
           };
         };
-      in [
-        nixSettings
-        htmlSettings
-        tomlSettings
-        rustSettings
-        goSettings
-      ];
+      in {
+        language-server = {
+          rust-analyzer-custom = {
+            command = "${pkgs.rust-analyzer}/bin/rust-analyzer";
+          };
+        };
+        language = [
+          rustSettings
+          nixSettings
+          tomlSettings
+          htmlSettings
+          goSettings
+        ];
+      };
 
       settings = {
         theme = "veganMacchiato";
