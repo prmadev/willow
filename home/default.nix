@@ -164,6 +164,7 @@
   eww.enable = true;
   hyprland.enable = false;
   sway.enable = false;
+  wayland.enable = true;
 
   # xsession.windowManager.awesome.enable = true;
   picom.enable = false;
