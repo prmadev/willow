@@ -162,7 +162,7 @@
   # launcher.enable = true;
   river.enable = true;
   eww.enable = true;
-  hyprland.enable = false;
+  hyprland.enable = true;
   sway.enable = false;
   wayland.enable = true;
 
