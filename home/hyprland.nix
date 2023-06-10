@@ -106,8 +106,8 @@ with lib; {
         ];
         binds = let
           running = builtins.concatStringsSep "\n" [
-            "bind = SUPER,RETURN,exec,tmux-picker"
-            "bind = SUPERSHIFT,RETURN,exec,wezterm"
+            "bind = SUPERSHIFT,RETURN,exec,tmux-picker"
+            "bind = SUPER,RETURN,exec,wezterm"
             "bind = SUPER,d,exec,rofi -show"
             "bind = SUPERSHIFT,SPACE,exec,hyprctl switchxkblayout at-translated-set-2-keyboard next"
             "bind = ,XF86MonBrightnessDown, exec, brightnessctl s 10%-"

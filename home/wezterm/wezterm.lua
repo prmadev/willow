@@ -5,7 +5,7 @@ return {
 	color_scheme = "Catppuccin Macchiato",
 	hide_tab_bar_if_only_one_tab = true,
 	default_prog = { "zsh" },
-	font_size = 12.0,
+	font_size = 14.0,
 	font = wezterm.font_with_fallback({
 		-- {
 		-- family = 'Operator Mono SSm Nerd Lig',
