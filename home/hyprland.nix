@@ -22,10 +22,8 @@ with lib; {
               gaps_out = 5
               border_size = 5
               layout = master
-              # col.active_border = 0xff8bd5ca
-              col.active_border = 0xffffffff
-              # col.inactive_border = 0xff24273a
-              col.inactive_border = 0xff000000
+              col.active_border = 0xff8bd5ca
+              col.inactive_border = 0xff24273a
           }
         '';
 
@@ -34,7 +32,7 @@ with lib; {
           exec-once = systemctl --user start hyprland-session.target
           exec-once = v2ray run -c ~/vless-new.json
           # exec =  swaybg -i "/home/a/pretty_5.png"
-          exec =  swaybg -c "#000000"
+          exec =  swaybg -i "/home/a/Pictures/wallpapers/8_Circuit_Board_Catppuccin.png"
           # exec =  swww init && swww img ~/pretty_5.png
           # exec = hyprpaper
           # exec-once =  wh
@@ -44,7 +42,7 @@ with lib; {
         decoration = ''
           decoration {
               rounding = 5
-              multisample_edges = true
+              multisample_edges = false
           	  blurls = paper
               blur =  false
            	  drop_shadow = true
@@ -52,8 +50,7 @@ with lib; {
               shadow_offset = -5 -5
               shadow_scale = 1
               shadow_render_power = 4
-              # col.shadow = 0xfff5a97f
-              col.shadow = 0xffffffff
+              col.shadow = 0xfff5a97f
               col.shadow_inactive = 0x00000000
               dim_inactive = false
            }
