@@ -22,8 +22,10 @@ with lib; {
               gaps_out = 5
               border_size = 5
               layout = master
-              col.active_border = 0xff8bd5ca
-              col.inactive_border = 0xff24273a
+              # col.active_border = 0xff8bd5ca
+              col.active_border = 0xffffffff
+              # col.inactive_border = 0xff24273a
+              col.inactive_border = 0xff000000
           }
         '';
 
@@ -31,7 +33,8 @@ with lib; {
           exec-once = dbus-update-activation-environment --systemd WAYLAND_DISPLAY DISPLAY HYPRLAND_INSTANCE_SIGNATURE
           exec-once = systemctl --user start hyprland-session.target
           exec-once = v2ray run -c ~/vless-new.json
-          exec =  swaybg -i "/home/a/pretty_5.png"
+          # exec =  swaybg -i "/home/a/pretty_5.png"
+          exec =  swaybg -c "#000000"
           # exec =  swww init && swww img ~/pretty_5.png
           # exec = hyprpaper
           # exec-once =  wh
