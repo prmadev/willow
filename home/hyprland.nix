@@ -12,14 +12,14 @@ with lib; {
     wayland.windowManager.hyprland = {
       enable = true;
       xwayland = {
-        hidpi = false;
+        hidpi = true;
       };
 
       extraConfig = let
         general = ''
           general {
               gaps_in = 5
-              gaps_out = 10
+              gaps_out = 5
               border_size = 5
               layout = master
               col.active_border = 0xff8bd5ca
@@ -40,7 +40,7 @@ with lib; {
         '';
         decoration = ''
           decoration {
-              rounding = 0
+              rounding = 5
               multisample_edges = false
           	  blurls = paper
               blur =  false
