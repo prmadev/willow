@@ -15,64 +15,59 @@ with lib; {
       enable = true;
       package = inputs.helix.packages.${pkgs.system}.default;
 
-      languages = let
-        # taplo-lsp-custome = {
-        #   command = "${pkgs.taplo-lsp}/bin/taplo";
-        # };
-        nixSettings = {
-          name = "nix";
-          auto-format = true;
-          formatter = {
-            command = "alejandra";
-            args = ["--quiet"];
-          };
-        };
-
-        htmlSettings = {
-          name = "html";
-          file-types = ["html" "tmpl"];
-        };
-
-        tomlSettings = {
-          name = "toml";
-          # language-servers = ["taplo-lsp-custome"];
-        };
-
-        rustSettings = {
-          name = "rust";
-          language-servers = ["rust-analyzer-custome"];
-          # config = {
-          #   check = {
-          #     command = "clippy";
-          #     args = ["--workspace" "--all-targets" "--all-features"];
-          #   };
-          # };
-        };
-
-        goSettings = {
-          name = "go";
-          auto-format = true;
-          formatter = {command = "gofumpt";};
-
-          indent = {
-            tab-width = 4;
-            unit = "  ";
-          };
-        };
-      in {
-        language-server = {
-          rust-analyzer-custom = {
-            command = "${pkgs.rust-analyzer}/bin/rust-analyzer";
-          };
-        };
-        language = [
-          rustSettings
-          nixSettings
-          tomlSettings
-          htmlSettings
-          goSettings
-        ];
-      };
+      # languages = let
+      # taplo-lsp-custome = {
+      #   command = "${pkgs.taplo-lsp}/bin/taplo";
+      # };
+      # nixSettings = {
+      #   name = "nix";
+      #   auto-format = true;
+      #   formatter = {
+      #     command = "alejandra";
+      #     args = ["--quiet"];
+      #   };
+      # };
+      # htmlSettings = {
+      # name = "html";
+      # uj         file-types = ["html" "tmpl"];
+      # };
+      # tomlSettings = {
+      # name = "toml";
+      # language-servers = ["taplo-lsp-custome"];
+      # };
+      # rustSettings = {
+      # name = "rust";
+      # language-servers = ["rust-analyzer-custome"];
+      # config = {
+      #   check = {
+      #     command = "clippy";
+      #     args = ["--workspace" "--all-targets" "--all-features"];
+      #   };
+      # };
+      # };
+      # goSettings = {
+      #   name = "go";
+      #   auto-format = true;
+      #   formatter = {command = "gofumpt";};
+      #   indent = {
+      #     tab-width = 4;
+      #     unit = "  ";
+      #   };
+      # };
+      # in {
+      # language-server = {
+      #   rust-analyzer-custom = {
+      #     command = "${pkgs.rust-analyzer}/bin/rust-analyzer";
+      #   };
+      # };
+      # language = [
+      #   rustSettings
+      #   nixSettings
+      #   tomlSettings
+      #   htmlSettings
+      #   goSettings
+      # ];
+      # };
 
       settings = {
         theme = "veganMacchiato";
