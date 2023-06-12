@@ -41,7 +41,7 @@ with lib; {
         '';
         decoration = ''
           decoration {
-              rounding = 5
+              rounding = 0
               multisample_edges = false
           	  blurls = paper
               blur =  false
