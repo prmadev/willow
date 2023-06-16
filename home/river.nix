@@ -7,9 +7,8 @@
 with lib; {
   options.river.enable = mkEnableOption "riverwm settings";
   config = mkIf config.river.enable {
-    home.packages = [
-      pkgs.river
-      # pkgs.ristate
+    home.packages = with pkgs; [
+      wlr-randr
     ];
     waybar.enable = true;
     wayland.enable = true;
