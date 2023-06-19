@@ -127,7 +127,7 @@
   brootFile.enable = true;
   lf.enable = true;
   chrome.enable = true;
-  atuin.enable = true;
+  atuin.enable = false;
 
   download.enable = true;
   proxy.enable = true;
