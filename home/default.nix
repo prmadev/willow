@@ -21,6 +21,7 @@
     ./atuin.nix
     ./typst.nix
 
+    ./irssi.nix
     ./kitty.nix
     ./wezterm
     ./zellij.nix
@@ -108,6 +109,7 @@
   syncthing.enable = false;
   music.enable = true;
   typst.enable = false;
+  irssi.enable = true;
 
   audio.enable = true;
   partition.enable = true;
