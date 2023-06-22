@@ -6,6 +6,7 @@
     ./chromium.nix
     ./qute.nix
     ./senpai.nix
+    ./tiny.nix
 
     ./syncthing.nix
     ./telegram.nix
@@ -98,6 +99,7 @@
 
   firefox.enable = true;
   qutebrowser.enable = false;
+  tiny.enable = true;
 
   telegram.enable = true;
   discord.enable = true;
