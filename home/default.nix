@@ -5,6 +5,7 @@
     ./firefox.nix
     ./chromium.nix
     ./qute.nix
+    ./senpai.nix
 
     ./syncthing.nix
     ./telegram.nix
@@ -110,6 +111,7 @@
   music.enable = true;
   typst.enable = false;
   irssi.enable = true;
+  senpai.enable =true;
 
   audio.enable = true;
   partition.enable = true;
