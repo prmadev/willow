@@ -1,7 +1,6 @@
 {
   lib,
   config,
-  pkgs,
   ...
 }:
 with lib; {
@@ -9,7 +8,7 @@ with lib; {
   config = mkIf config.qutebrowser.enable {
     programs.qutebrowser = {
       enable = true;
-      package = pkgs.qutebrowser-qt6;
+      # package = pkgs.qutebrowser-qt6;
       aliases = {
         "adblock-toggle" = "config-cycle -t content.blocking.enabled";
         "mpv" = "spawn --detach mpv {url}";
@@ -84,66 +83,65 @@ with lib; {
         tabs.tooltips = false;
         tabs.tabs_are_windows = true;
 
-        url.default_page = "file:///home/a/.config/startpage/index.html";
+        url.default_page = "";
         url.open_base_url = true;
         url.start_pages = [
-          "file:///home/a/.config/startpage/index.html"
         ];
         window.hide_decoration = true;
         window.title_format = "{current_title} qb";
 
-        colors.completion.category.bg = config.colors.base.hex;
+        colors.completion.category.bg = config.colors.macchiato.base.hex;
 
         # Bottom border color of the completion widget category headers.
-        colors.completion.category.border.bottom = config.colors.base.hex;
+        colors.completion.category.border.bottom = config.colors.macchiato.base.hex;
 
         # Top border color of the completion widget category headers.
-        colors.completion.category.border.top = config.colors.base.hex;
+        colors.completion.category.border.top = config.colors.macchiato.base.hex;
 
         # Foreground color of completion widget category headers.
-        colors.completion.category.fg = config.colors.text.hex;
+        colors.completion.category.fg = config.colors.macchiato.text.hex;
 
         # Background color of the completion widget for even rows.
-        colors.completion.even.bg = config.colors.base.hex;
+        colors.completion.even.bg = config.colors.macchiato.base.hex;
 
         # Background color of the completion widget for odd rows.
-        colors.completion.odd.bg = config.colors.base.hex;
+        colors.completion.odd.bg = config.colors.macchiato.base.hex;
 
         # Text color of the completion widget.
-        colors.completion.fg = config.colors.text.hex;
+        colors.completion.fg = config.colors.macchiato.text.hex;
 
         # Background color of the selected completion item.
-        colors.completion.item.selected.bg = config.colors.pine.hex;
+        colors.completion.item.selected.bg = config.colors.macchiato.sapphire.hex;
 
         # Bottom border color of the selected completion item.
-        colors.completion.item.selected.border.bottom = config.colors.highlight-high.hex;
+        colors.completion.item.selected.border.bottom = config.colors.macchiato.subtext1.hex;
 
         # Top border color of the completion widget category headers.
-        colors.completion.item.selected.border.top = config.colors.highlight-high.hex;
+        colors.completion.item.selected.border.top = config.colors.macchiato.subtext1.hex;
 
         # Foreground color of the selected completion item.
-        colors.completion.item.selected.fg = config.colors.text.hex;
+        colors.completion.item.selected.fg = config.colors.macchiato.text.hex;
 
         # Foreground color of the matched text in the completion.
-        colors.completion.match.fg = config.colors.gold.hex;
+        colors.completion.match.fg = config.colors.macchiato.yellow.hex;
 
         # Color of the scrollbar in completion view
-        colors.completion.scrollbar.bg = config.colors.base.hex;
+        colors.completion.scrollbar.bg = config.colors.macchiato.base.hex;
 
         # Color of the scrollbar handle in completion view.
-        colors.completion.scrollbar.fg = config.colors.text.hex;
+        colors.completion.scrollbar.fg = config.colors.macchiato.text.hex;
 
         # Background color for the download bar.
-        colors.downloads.bar.bg = config.colors.base.hex;
+        colors.downloads.bar.bg = config.colors.macchiato.base.hex;
 
         # Background color for downloads with errors.
-        colors.downloads.error.bg = config.colors.base.hex;
+        colors.downloads.error.bg = config.colors.macchiato.base.hex;
 
         # Foreground color for downloads with errors.
-        colors.downloads.error.fg = config.colors.love.hex;
+        colors.downloads.error.fg = config.colors.macchiato.red.hex;
 
         # Color gradient stop for download backgrounds.
-        colors.downloads.stop.bg = config.colors.base.hex;
+        colors.downloads.stop.bg = config.colors.macchiato.base.hex;
 
         # Color gradient interpolation system for download backgrounds.
         # Type: ColorSystem
@@ -156,157 +154,157 @@ with lib; {
 
         # Background color for hints. Note that you can use a `rgba(...)` value
         # for transparency.
-        colors.hints.bg = config.colors.base.hex;
+        colors.hints.bg = config.colors.macchiato.base.hex;
 
         # Font color for hints.
-        colors.hints.fg = config.colors.iris.hex;
+        colors.hints.fg = config.colors.macchiato.lavendar.hex;
 
         # Hints
-        hints.border = config.colors.surface.hex;
+        hints.border = config.colors.macchiato.surface1.hex;
 
         # Font color for the matched part of hints.
-        colors.hints.match.fg = config.colors.subtle.hex;
+        colors.hints.match.fg = config.colors.macchiato.subtext0.hex;
 
         # Background color of the keyhint widget.
-        colors.keyhint.bg = config.colors.base.hex;
+        colors.keyhint.bg = config.colors.macchiato.base.hex;
 
         # Text color for the keyhint widget.
-        colors.keyhint.fg = config.colors.iris.hex;
+        colors.keyhint.fg = config.colors.macchiato.lavendar.hex;
 
         # Highlight color for keys to complete the current keychain.
-        colors.keyhint.suffix.fg = config.colors.highlight-high.hex;
+        colors.keyhint.suffix.fg = config.colors.macchiato.subtext1.hex;
 
         # Background color of an error message.
-        colors.messages.error.bg = config.colors.base.hex;
+        colors.messages.error.bg = config.colors.macchiato.base.hex;
 
         # Border color of an error message.
-        colors.messages.error.border = config.colors.surface.hex;
+        colors.messages.error.border = config.colors.macchiato.surface1.hex;
 
         # Foreground color of an error message.
-        colors.messages.error.fg = config.colors.love.hex;
+        colors.messages.error.fg = config.colors.macchiato.red.hex;
 
         # Background color of an info message.
-        colors.messages.info.bg = config.colors.base.hex;
+        colors.messages.info.bg = config.colors.macchiato.base.hex;
 
         # Border color of an info message.
-        colors.messages.info.border = config.colors.surface.hex;
+        colors.messages.info.border = config.colors.macchiato.surface1.hex;
 
         # Foreground color an info message.
-        colors.messages.info.fg = config.colors.pine.hex;
+        colors.messages.info.fg = config.colors.macchiato.sapphire.hex;
 
         # Background color of a warning message.
-        colors.messages.warning.bg = config.colors.base.hex;
+        colors.messages.warning.bg = config.colors.macchiato.base.hex;
 
         # Border color of a warning message.
-        colors.messages.warning.border = config.colors.surface.hex;
+        colors.messages.warning.border = config.colors.macchiato.surface1.hex;
 
         # Foreground color a warning message.
-        colors.messages.warning.fg = config.colors.love.hex;
+        colors.messages.warning.fg = config.colors.macchiato.red.hex;
 
         # Background color for prompts.
-        colors.prompts.bg = config.colors.base.hex;
+        colors.prompts.bg = config.colors.macchiato.base.hex;
 
         # # Border used around UI elements in prompts.
-        colors.prompts.border = config.colors.surface.hex;
+        colors.prompts.border = config.colors.macchiato.surface1.hex;
 
         # Foreground color for prompts.
-        colors.prompts.fg = config.colors.foam.hex;
+        colors.prompts.fg = config.colors.macchiato.teal.hex;
 
         # Background color for the selected item in filename prompts.
-        colors.prompts.selected.bg = config.colors.highlight-high.hex;
+        colors.prompts.selected.bg = config.colors.macchiato.subtext1.hex;
 
         # Background color of the statusbar in caret mode.
-        colors.statusbar.caret.bg = config.colors.base.hex;
+        colors.statusbar.caret.bg = config.colors.macchiato.base.hex;
 
         # Foreground color of the statusbar in caret mode.
-        colors.statusbar.caret.fg = config.colors.gold.hex;
+        colors.statusbar.caret.fg = config.colors.macchiato.yellow.hex;
 
         # Background color of the statusbar in caret mode with a selection.
-        colors.statusbar.caret.selection.bg = config.colors.base.hex;
+        colors.statusbar.caret.selection.bg = config.colors.macchiato.base.hex;
 
         # Foreground color of the statusbar in caret mode with a selection.
-        colors.statusbar.caret.selection.fg = config.colors.gold.hex;
+        colors.statusbar.caret.selection.fg = config.colors.macchiato.yellow.hex;
 
         # Background color of the statusbar in command mode.
-        colors.statusbar.command.bg = config.colors.pine.hex;
+        colors.statusbar.command.bg = config.colors.macchiato.sapphire.hex;
 
         # Foreground color of the statusbar in command mode.
-        colors.statusbar.command.fg = config.colors.base.hex;
+        colors.statusbar.command.fg = config.colors.macchiato.base.hex;
 
         # Background color of the statusbar in private browsing + command mode.
-        colors.statusbar.command.private.bg = config.colors.base.hex;
+        colors.statusbar.command.private.bg = config.colors.macchiato.base.hex;
 
         # Foreground color of the statusbar in private browsing + command mode.
-        colors.statusbar.command.private.fg = config.colors.subtle.hex;
+        colors.statusbar.command.private.fg = config.colors.macchiato.subtext0.hex;
 
         # Background color of the statusbar in insert mode.
-        colors.statusbar.insert.bg = config.colors.foam.hex;
+        colors.statusbar.insert.bg = config.colors.macchiato.teal.hex;
 
         # Foreground color of the statusbar in insert mode.
-        colors.statusbar.insert.fg = config.colors.base.hex;
+        colors.statusbar.insert.fg = config.colors.macchiato.base.hex;
 
         # Background color of the statusbar.
-        colors.statusbar.normal.bg = config.colors.base.hex;
+        colors.statusbar.normal.bg = config.colors.macchiato.base.hex;
 
         # Foreground color of the statusbar.
-        colors.statusbar.normal.fg = config.colors.text.hex;
+        colors.statusbar.normal.fg = config.colors.macchiato.text.hex;
 
         # Background color of the statusbar in passthrough mode.
-        colors.statusbar.passthrough.bg = config.colors.gold.hex;
+        colors.statusbar.passthrough.bg = config.colors.macchiato.yellow.hex;
 
         # Foreground color of the statusbar in passthrough mode.
-        colors.statusbar.passthrough.fg = config.colors.base.hex;
+        colors.statusbar.passthrough.fg = config.colors.macchiato.base.hex;
 
         # Background color of the statusbar in private browsing mode.
-        colors.statusbar.private.bg = config.colors.surface.hex;
+        colors.statusbar.private.bg = config.colors.macchiato.surface1.hex;
 
         # Foreground color of the statusbar in private browsing mode.
-        colors.statusbar.private.fg = config.colors.subtle.hex;
+        colors.statusbar.private.fg = config.colors.macchiato.subtext0.hex;
 
         # Background color of the progress bar.
-        colors.statusbar.progress.bg = config.colors.base.hex;
+        colors.statusbar.progress.bg = config.colors.macchiato.base.hex;
 
         # Foreground color of the URL in the statusbar on error.
-        colors.statusbar.url.error.fg = config.colors.love.hex;
+        colors.statusbar.url.error.fg = config.colors.macchiato.red.hex;
 
         # Default foreground color of the URL in the statusbar.
-        colors.statusbar.url.fg = config.colors.text.hex;
+        colors.statusbar.url.fg = config.colors.macchiato.text.hex;
 
         # Foreground color of the URL in the statusbar for hovered links.
-        colors.statusbar.url.hover.fg = config.colors.foam.hex;
+        colors.statusbar.url.hover.fg = config.colors.macchiato.teal.hex;
 
         # Foreground color of the URL in the statusbar on successful load
-        colors.statusbar.url.success.http.fg = config.colors.pine.hex;
+        colors.statusbar.url.success.http.fg = config.colors.macchiato.sapphire.hex;
 
         # Foreground color of the URL in the statusbar on successful load
-        colors.statusbar.url.success.https.fg = config.colors.pine.hex;
+        colors.statusbar.url.success.https.fg = config.colors.macchiato.sapphire.hex;
 
         # Foreground color of the URL in the statusbar when there's a warning.
-        colors.statusbar.url.warn.fg = config.colors.gold.hex;
+        colors.statusbar.url.warn.fg = config.colors.macchiato.yellow.hex;
 
         # Background color of the tab bar.
         # Type: QtColor
-        colors.tabs.bar.bg = config.colors.surface.hex;
+        colors.tabs.bar.bg = config.colors.macchiato.surface1.hex;
 
         # Background color of unselected even tabs.
         # Type: QtColor
-        colors.tabs.even.bg = config.colors.surface.hex;
+        colors.tabs.even.bg = config.colors.macchiato.surface1.hex;
 
         # Foreground color of unselected even tabs.
         # Type: QtColor
-        colors.tabs.even.fg = config.colors.text.hex;
+        colors.tabs.even.fg = config.colors.macchiato.text.hex;
 
         # Color for the tab indicator on errors.
         # Type: QtColor
-        colors.tabs.indicator.error = config.colors.love.hex;
+        colors.tabs.indicator.error = config.colors.macchiato.red.hex;
 
         # Color gradient start for the tab indicator.
         # Type: QtColor
-        colors.tabs.indicator.start = config.colors.gold.hex;
+        colors.tabs.indicator.start = config.colors.macchiato.yellow.hex;
 
         # Color gradient end for the tab indicator.
         # Type: QtColor
-        colors.tabs.indicator.stop = config.colors.pine.hex;
+        colors.tabs.indicator.stop = config.colors.macchiato.sapphire.hex;
 
         # Color gradient interpolation system for the tab indicator.
         # Type: ColorSystem
@@ -319,27 +317,27 @@ with lib; {
 
         # Background color of unselected odd tabs.
         # Type: QtColor
-        colors.tabs.odd.bg = config.colors.surface.hex;
+        colors.tabs.odd.bg = config.colors.macchiato.surface1.hex;
 
         # Foreground color of unselected odd tabs.
         # Type: QtColor
-        colors.tabs.odd.fg = config.colors.text.hex;
+        colors.tabs.odd.fg = config.colors.macchiato.text.hex;
 
         #  Background color of selected even tabs.
         #  Type: QtColor
-        colors.tabs.selected.even.bg = config.colors.pine.hex;
+        colors.tabs.selected.even.bg = config.colors.macchiato.sapphire.hex;
 
         #  Foreground color of selected even tabs.
         #  Type: QtColor
-        colors.tabs.selected.even.fg = config.colors.text.hex;
+        colors.tabs.selected.even.fg = config.colors.macchiato.text.hex;
 
         #  Background color of selected odd tabs.
         #  Type: QtColor
-        colors.tabs.selected.odd.bg = config.colors.pine.hex;
+        colors.tabs.selected.odd.bg = config.colors.macchiato.sapphire.hex;
 
         # # Foreground color of selected odd tabs.
         # # Type: QtColor
-        colors.tabs.selected.odd.fg = config.colors.text.hex;
+        colors.tabs.selected.odd.fg = config.colors.macchiato.text.hex;
       };
     };
   };

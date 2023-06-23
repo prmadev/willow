@@ -98,7 +98,7 @@
   ];
 
   firefox.enable = true;
-  qutebrowser.enable = false;
+  qutebrowser.enable = true;
   tiny.enable = true;
 
   telegram.enable = true;
