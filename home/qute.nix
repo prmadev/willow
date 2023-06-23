@@ -31,7 +31,7 @@ with lib; {
         content.headers.accept_language = "en-US,en;q=0.9";
         content.headers.do_not_track = true;
         content.headers.referer = "same-domain";
-        content.headers.user_agent = "Mozilla/5.0 ({os_info}) AppleWebKit/{webkit_version} (KHTML, like Gecko) {qt_key}/{qt_version} {upstream_browser_key}/{upstream_browser_version} Safari/{webkit_version}";
+        # content.headers.user_agent = "Mozilla/5.0 ({os_info}) AppleWebKit/{webkit_version} (KHTML, like Gecko) {qt_key}/{qt_version} {upstream_browser_key}/{upstream_browser_version} Safari/{webkit_version}";
         content.blocking.enabled = true;
         content.blocking.adblock.lists = [
           "https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts"
