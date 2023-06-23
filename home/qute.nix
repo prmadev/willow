@@ -83,9 +83,10 @@ with lib; {
         tabs.tooltips = false;
         tabs.tabs_are_windows = true;
 
-        url.default_page = "";
+        url.default_page = "google.com";
         url.open_base_url = true;
         url.start_pages = [
+        "google.com"
         ];
         window.hide_decoration = true;
         window.title_format = "{current_title} qb";
