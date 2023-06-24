@@ -4,7 +4,7 @@ with lib; {
     global-fonts = {
       main-family = mkOption {
         type = types.str;
-        default = "Operator Mono Nerd Lig";
+        default = "LigaOperatorMono Nerd Font";
       };
 
       main-black = mkOption {
@@ -58,7 +58,7 @@ with lib; {
       };
       main-set = mkOption {
         type = types.listOf types.str;
-        default = ["ComicCodeLigatures Nerd Font" "ComicCodeLigatures Nerd Font Complete Mono" "Gintronic" "Vazirmatn"];
+        default = [ "LigaOperatorMono Nerd Font" "ComicCodeLigatures Nerd Font" "ComicCodeLigatures Nerd Font Complete Mono" "Gintronic" "Vazirmatn"];
       };
     };
   };
