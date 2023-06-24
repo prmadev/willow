@@ -1,5 +1,4 @@
 {
-  config,
   pkgs,
   ...
 }: {
@@ -11,6 +10,7 @@
     package = pkgs.nixVersions.stable;
     extraOptions = "experimental-features = nix-command flakes";
     optimise.automatic = true;
+    systemFeatures = ["recursive-nix"];
     settings.auto-optimise-store = true;
 
     settings = {

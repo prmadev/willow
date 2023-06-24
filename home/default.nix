@@ -167,8 +167,8 @@
   mako.enable = true;
   # launcher.enable = true;
   river.enable = true;
-  eww.enable = true;
-  hyprland.enable = true;
+  eww.enable = false;
+  hyprland.enable = false;
   sway.enable = false;
   wayland.enable = true;
 
