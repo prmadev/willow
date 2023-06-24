@@ -4,7 +4,7 @@ with lib; {
     global-fonts = {
       main-family = mkOption {
         type = types.str;
-        default = "Operator Mono SSm Nerd Lig";
+        default = "Operator Mono Nerd Lig";
       };
 
       main-black = mkOption {
