@@ -163,6 +163,7 @@
             {
               nixpkgs.overlays = [
                 inputs.nur.overlay
+                inputs.zig.overlays.default
                 # inputs.neovim-nightly-overlay.overlay
               ];
             }
