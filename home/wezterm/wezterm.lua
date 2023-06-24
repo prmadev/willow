@@ -29,7 +29,7 @@ return {
 			italic = false,
 			intensity = "Bold",
 			font = wezterm.font_with_fallback({
-				{ family = "Operator Mono Nerd Lig", weight = "Bold" },
+				{ family = "OperatorMono Nerd Font Mono", weight = "Bold" },
 				{ family = "ComicCodeLigatures Nerd Font", weight = "Bold" },
 				{ family = "Comic Code Ligatures", weight = "Bold" },
 				{ family = "Gintronic Nerd Font", weight = "Black" },
@@ -39,7 +39,7 @@ return {
 			italic = false,
 			intensity = "Normal",
 			font = wezterm.font_with_fallback({
-				{ family = "Operator Mono Nerd Lig", weight = "Book" },
+				{ family = "OperatorMono Nerd Font Mono", weight = "Book" },
 				{ family = "ComicCodeLigatures Nerd Font" },
 				{ family = "Comic Code Ligatures" },
 				{ family = "Gintronic Nerd Font" },
@@ -49,7 +49,7 @@ return {
 			italic = false,
 			intensity = "Half",
 			font = wezterm.font_with_fallback({
-				{ family = "Operator Mono Nerd Lig", weight = "Light" },
+				{ family = "OperatorMono Nerd Font Mono", weight = "Light" },
 				{ family = "ComicCodeLigatures Nerd Font" },
 				{ family = "ComicCodeLigatures Nerd Font", weight = "Light" },
 				{ family = "Comic Code Ligatures", weight = "Light" },
@@ -63,7 +63,7 @@ return {
 			intensity = "Bold",
 			font = wezterm.font_with_fallback({
 				{
-					family = "Operator Mono Nerd Lig",
+					family = "OperatorMono Nerd Font Mono",
 					weight = "Bold",
 					style = "Italic",
 				},
@@ -88,7 +88,7 @@ return {
 			italic = true,
 			intensity = "Normal",
 			font = wezterm.font_with_fallback({
-				{ family = "Operator Mono Nerd Lig", style = "Italic", weight = "Book" },
+				{ family = "OperatorMono Nerd Font Mono", style = "Italic", weight = "Book" },
 				{ family = "ComicCodeLigatures Nerd Font", style = "Italic" },
 				{ family = "Comic Code Ligatures", style = "Italic" },
 				{ family = "Gintronic Nerd Font", style = "Italic" },
@@ -98,7 +98,7 @@ return {
 			italic = true,
 			intensity = "Half",
 			font = wezterm.font_with_fallback({
-				{ family = "Operator Mono Nerd Lig", style = "Italic", weight = "Light" },
+				{ family = "OperatorMono Nerd Font Mono", style = "Italic", weight = "Light" },
 				{
 					family = "ComicCodeLigatures Nerd Font",
 					weight = "Light",
