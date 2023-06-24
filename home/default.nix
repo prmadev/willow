@@ -113,7 +113,7 @@
   music.enable = true;
   typst.enable = false;
   irssi.enable = true;
-  senpai.enable =true;
+  senpai.enable = true;
 
   audio.enable = true;
   partition.enable = true;

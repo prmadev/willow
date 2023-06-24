@@ -36,6 +36,9 @@
       # inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    zig.url = "github:mitchellh/zig-overlay";
+    zls.url = "github:zigtools/zls";
+
     ghS = {
       url = "github:gennaro-tedesco/gh-s";
       flake = false;
@@ -145,6 +148,8 @@
   outputs = {
     nixpkgs,
     home-manager,
+    zig,
+    zls,
     ...
   } @ inputs: let
     system = "x86_64-linux";

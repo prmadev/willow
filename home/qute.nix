@@ -86,7 +86,7 @@ with lib; {
         url.default_page = "google.com";
         url.open_base_url = true;
         url.start_pages = [
-        "google.com"
+          "google.com"
         ];
         window.hide_decoration = true;
         window.title_format = "{current_title} qb";

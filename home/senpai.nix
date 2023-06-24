@@ -11,8 +11,7 @@ with lib; {
       config = {
         addr = "libera.chat:6697";
         nick = "amirography";
-
-      }; 
+      };
     };
   };
 }
