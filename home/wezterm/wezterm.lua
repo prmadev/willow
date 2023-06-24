@@ -7,9 +7,10 @@ return {
 	default_prog = { "zsh" },
 	font_size = 14.0,
 	font = wezterm.font_with_fallback({
-		-- {
-		-- family = 'Operator Mono SSm Nerd Lig',
-		-- },
+		{
+		family = 'Operator Mono SSm Nerd Lig',
+		 weight = "Book"
+			},
 
 		{ family = "ComicCodeLigatures Nerd Font" },
 
@@ -28,7 +29,7 @@ return {
 			italic = false,
 			intensity = "Bold",
 			font = wezterm.font_with_fallback({
-				{ family = "ComicCodeLigatures Nerd Font" },
+				{ family = "ComicCodeLigatures Nerd Font", weight = "Bold"  },
 				{ family = "ComicCodeLigatures Nerd Font", weight = "Bold" },
 				{ family = "Comic Code Ligatures", weight = "Bold" },
 				{ family = "Gintronic Nerd Font", weight = "Black" },
