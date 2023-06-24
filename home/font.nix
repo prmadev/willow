@@ -10,7 +10,7 @@ with lib; {
 
     font.main = mkOption {
       type = types.str;
-      default = "ComicCodeLigatures Nerd Font";
+      default = "Operator Mono SSm Nerd Lig";
     };
 
     gtkconf.enable = mkEnableOption "gtkConf settings";
