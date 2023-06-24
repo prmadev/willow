@@ -35,6 +35,7 @@ in
         qv2ray
         sshuttle
         go-graft
+        # cloudflare-warp
       ];
 
       # home.file = {
