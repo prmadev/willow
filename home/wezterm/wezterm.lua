@@ -39,7 +39,7 @@ return {
 			italic = false,
 			intensity = "Normal",
 			font = wezterm.font_with_fallback({
-				{ family = "Operator Mono SSm Nerd Lig" },
+				{ family = "Operator Mono SSm Nerd Lig", weight = "Book" },
 				{ family = "ComicCodeLigatures Nerd Font" },
 				{ family = "Comic Code Ligatures" },
 				{ family = "Gintronic Nerd Font" },
