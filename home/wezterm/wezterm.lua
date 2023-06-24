@@ -49,6 +49,7 @@ return {
 			italic = false,
 			intensity = "Half",
 			font = wezterm.font_with_fallback({
+				{ family = "Operator Mono SSm Nerd Lig", weight = "Light" },
 				{ family = "ComicCodeLigatures Nerd Font" },
 				{ family = "ComicCodeLigatures Nerd Font", weight = "Light" },
 				{ family = "Comic Code Ligatures", weight = "Light" },
@@ -61,6 +62,11 @@ return {
 			italic = true,
 			intensity = "Bold",
 			font = wezterm.font_with_fallback({
+				{
+					family = "Operator Mono SSm Nerd Lig",
+					weight = "Bold",
+					style = "Italic",
+				},
 				{
 					family = "ComicCodeLigatures Nerd Font",
 					weight = "Bold",
@@ -82,6 +88,7 @@ return {
 			italic = true,
 			intensity = "Normal",
 			font = wezterm.font_with_fallback({
+				{ family = "Operator Mono SSm Nerd Lig", style = "Italic", weight = "Book" },
 				{ family = "ComicCodeLigatures Nerd Font", style = "Italic" },
 				{ family = "Comic Code Ligatures", style = "Italic" },
 				{ family = "Gintronic Nerd Font", style = "Italic" },
@@ -91,6 +98,7 @@ return {
 			italic = true,
 			intensity = "Half",
 			font = wezterm.font_with_fallback({
+				{ family = "Operator Mono SSm Nerd Lig", style = "Italic", weight = "Light" },
 				{
 					family = "ComicCodeLigatures Nerd Font",
 					weight = "Light",
