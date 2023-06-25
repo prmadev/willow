@@ -8,9 +8,9 @@ with lib; {
   options.zig.enable = mkEnableOption "zig settings";
 
   config = mkIf config.zig.enable {
-    home.packages = with pkgs; [
-      zigpkg
-      zls
+    home.packages = [
+      pkgs.zigpkg
+      pkgs.zls
     ];
   };
 }
