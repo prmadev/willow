@@ -58,7 +58,7 @@ with lib; {
       };
       main-set = mkOption {
         type = types.listOf types.str;
-        default = ["LigaOperatorMono Nerd Font" "ComicCodeLigatures Nerd Font" "ComicCodeLigatures Nerd Font Complete Mono" "Gintronic" "Vazirmatn"];
+        default = ["LigaOperatorMono Nerd Font" "DanaVF" "ComicCodeLigatures Nerd Font" "ComicCodeLigatures Nerd Font Complete Mono" "Gintronic" "Vazirmatn"];
       };
     };
   };

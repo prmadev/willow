@@ -163,7 +163,13 @@
             {
               nixpkgs.overlays = [
                 inputs.nur.overlay
-                inputs.zig.overlays.default
+
+                (final: prev: {
+                  # Replace `master` with a Zig version or a build date to pin package
+                  # Show available versions using: nix flake show 'github:mitchellh/zig-overlay'
+                  zigpkg = inputs.zig.packages.${prev.system}.master;
+                })
+      
                 # inputs.neovim-nightly-overlay.overlay
               ];
             }

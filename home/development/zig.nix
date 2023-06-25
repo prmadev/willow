@@ -9,7 +9,7 @@ with lib; {
 
   config = mkIf config.zig.enable {
     home.packages = with pkgs; [
-      zig
+      zigpkg
       zls
     ];
   };
