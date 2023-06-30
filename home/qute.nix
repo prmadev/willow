@@ -19,7 +19,10 @@ with lib; {
       };
 
       searchEngines = {
-        DEFAULT = "https://google.com/search?q={}";
+      kagi = "https://kagi.com/search?q={}";
+      DEFAULT = "https://kagi.com/search?q={}";
+
+        google = "https://google.com/search?q={}";
       };
       settings = {
         content.cookies.accept = "all";
@@ -83,10 +86,10 @@ with lib; {
         tabs.tooltips = false;
         tabs.tabs_are_windows = true;
 
-        url.default_page = "google.com";
+        url.default_page = "kagi.com";
         url.open_base_url = true;
         url.start_pages = [
-          "google.com"
+        "kagi.com"
         ];
         window.hide_decoration = true;
         window.title_format = "{current_title} qb";

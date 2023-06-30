@@ -169,7 +169,7 @@
                   # Show available versions using: nix flake show 'github:mitchellh/zig-overlay'
                   zigpkg = inputs.zig.packages.${prev.system}.master;
                 })
-      
+
                 # inputs.neovim-nightly-overlay.overlay
               ];
             }

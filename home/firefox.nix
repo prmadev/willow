@@ -470,9 +470,14 @@ with lib; {
           '';
 
           search = {
-            default = "google";
+            default = "kagi";
             force = true;
             engines = {
+              "kagi" = {
+                urls = [
+                  {template = "https://kagi.com/search?q={searchTerms}";}
+                ];
+              };
               "you" = {
                 urls = [
                   {

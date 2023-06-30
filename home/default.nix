@@ -8,6 +8,7 @@
     ./senpai.nix
     ./tiny.nix
 
+    ./slack.nix
     ./syncthing.nix
     ./telegram.nix
     ./exercism.nix
@@ -171,6 +172,7 @@
   hyprland.enable = false;
   sway.enable = false;
   wayland.enable = true;
+  slack.enable = false;
 
   # xsession.windowManager.awesome.enable = true;
   picom.enable = false;

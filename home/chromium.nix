@@ -20,6 +20,9 @@ with lib; {
         # "ennpfpdlaclocpomkiablnmbppdnlhoh" # rust search engine
         "cmpdlhmnmjhihmcfnigoememnffkimlk" # catppuccin-macchiato
         "gnnhhfiajnkfjfnnojggfdlpjifhlmom" # word tune
+        "cdglnehniifkbagbbombnjghhcihifij" # kagi extension
+
+        "icpgjfneehieebagbmdbhnlpiopdcmna" # new tab redirect
       ];
       commandLineArgs = ["--ozone-platform-hint=wayland" "--gtk-version=4"];
     };
