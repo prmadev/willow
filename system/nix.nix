@@ -2,15 +2,16 @@
   nixpkgs.config.allowUnfree = true;
 
   system.stateVersion = "22.11";
+
   nix = {
     # for the initial setup of flakes
     package = pkgs.nixVersions.stable;
     extraOptions = "experimental-features = nix-command flakes";
     optimise.automatic = true;
-    systemFeatures = ["recursive-nix"];
-    settings.auto-optimise-store = true;
-
     settings = {
+      auto-optimise-store = true;
+      system-features = ["recursive-nix"];
+      trusted-users = ["root" "a" "@wheel"];
       substituters = [
         "https://nix-community.cachix.org"
         "https://cache.nixos.org"

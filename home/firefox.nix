@@ -21,7 +21,7 @@ with lib; {
             enhancer-for-youtube
             switchyomega
             i-dont-care-about-cookies
-            snowflake
+            # snowflake
             sponsorblock
             stylus
             tabliss
@@ -101,12 +101,12 @@ with lib; {
              #fullscr-toggler { background-color: rgba(0, 0, 0, 0) !important; }
              :root {
                --toolbarbutton-border-radius: 0px;
-               --uc-bg-color: ${config.colors.rosepine.base.hex};
+               --uc-bg-color: ${config.colors.macchiato.base.hex};
                --uc-show-new-tab-button: none;
                --uc-show-tab-separators: none;
                --uc-tab-separators-color: none;
                --uc-tab-separators-width: none;
-               --uc-tab-fg-color: ${config.colors.rosepine.base.hex};
+               --uc-tab-fg-color: ${config.colors.macchiato.base.hex};
                --autocomplete-popup-background: var(--mff-bg) !important;
                --default-arrowpanel-background: var(--mff-bg) !important;
                --default-arrowpanel-color: #fefefa !important;
@@ -126,18 +126,18 @@ with lib; {
                --mff-tab-font-weight: 400;
                --mff-tab-height: 32px;
                --mff-tab-pinned-bg: #9BCED7;
-               --mff-tab-selected-bg: ${config.colors.rosepine.pine.hex};
+               --mff-tab-selected-bg: ${config.colors.macchiato.teal.hex};
                --mff-tab-soundplaying-bg: #9c89b8;
-               --mff-urlbar-color: ${config.colors.rosepine.base.hex}!important;
+               --mff-urlbar-color: ${config.colors.macchiato.base.hex}!important;
                --mff-urlbar-focused-color: #403C58;
                --mff-urlbar-font-family: "ComicCodeLigatures Nerd Font";
                --mff-urlbar-font-size: 11pt;
                --mff-urlbar-font-weight: 700;
-               --mff-urlbar-results-color: ${config.colors.rosepine.text.hex};
+               --mff-urlbar-results-color: ${config.colors.macchiato.text.hex};
                --mff-urlbar-results-font-family: "ComicCodeLigatures Nerd Font";
                --mff-urlbar-results-font-size: 11pt;
                --mff-urlbar-results-font-weight: 700;
-               --mff-urlbar-results-url-color: ${config.colors.rosepine.text.hex};
+               --mff-urlbar-results-url-color: ${config.colors.macchiato.text.hex};
                --tab-border-radius: 0px;
              }
             * {
@@ -151,24 +151,24 @@ with lib; {
             menupopup menuitem,
             menupopup menu,
             menupopup menuseparator {
-              background-color: ${config.colors.rosepine.overlay.hex}!important;
+              background-color: ${config.colors.macchiato.surface1.hex}!important;
             }
 
             .tab-text.tab-label {
-              color: ${config.colors.rosepine.muted.hex}!important;
+              color: ${config.colors.macchiato.subtext0.hex}!important;
             }
 
             #tabbrowser-tabs:not([secondarytext-unsupported]) .tab-label-container{
               height: 1.5em;
             }
             #urlbar-input, #urlbar-scheme, .searchbar-textbox{
-              color: ${config.colors.rosepine.text.hex}!important;
+              color: ${config.colors.macchiato.text.hex}!important;
             }
             #TabsToolbar #firefox-view-button[open] > .toolbarbutton-icon, .tab-background:is([selected], [multiselected]) {
-              border: 2px solid  ${config.colors.rosepine.pine.hex}!important;
-              background-color:  ${config.colors.rosepine.base.hex}!important;
+              border: 2px solid  ${config.colors.macchiato.teal.hex}!important;
+              background-color:  ${config.colors.macchiato.base.hex}!important;
               background-image: none!important;
-              filter: drop-shadow(-5px -5px 0px ${config.colors.rosepine.pine.hex});
+              filter: drop-shadow(-5px -5px 0px ${config.colors.macchiato.teal.hex});
             }
 
             .tab-background {
@@ -341,7 +341,7 @@ with lib; {
             /*Light*/
             html:not(#ublock0-epicker),
             html:not(#ublock0-epicker) body,
-            #newtab-customize-overlay {
+            #newtab-customize-surface1 {
               background-color: var(--light_color1) !important;}
             html {--in-content-page-background: var(--light_color1) !important;}
             .wordmark {fill: #201841 !important;}
@@ -351,7 +351,7 @@ with lib; {
             /*Dark*/
             html:not(#ublock0-epicker)[lwt-newtab-brighttext],
             html:not(#ublock0-epicker) body[lwt-newtab-brighttext],
-            #newtab-customize-overlay[lwt-newtab-brighttext] {
+            #newtab-customize-surface1[lwt-newtab-brighttext] {
               background-color: var(--dark_color1) !important;}
             html[lwt-newtab-brighttext] {--in-content-page-background: var(--dark_color1) !important;}
             [lwt-newtab-brighttext] .wordmark {fill: #fefafe !important;}

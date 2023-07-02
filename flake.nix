@@ -23,7 +23,7 @@
 
     nur = {
       url = "github:nix-community/NUR";
-      inputs.nixpkgs.follows = "nixpkgs";
+      # inputs.nixpkgs.follows = "nixpkgs";
     };
 
     ragenix = {
@@ -138,84 +138,66 @@
       url = "github:andreiborisov/sponge";
       flake = false;
     };
-    ## for go
-    gomod2nix = {
-      url = "github:tweag/gomod2nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs = {
     nixpkgs,
     home-manager,
-    zig,
-    zls,
     ...
   } @ inputs: let
     system = "x86_64-linux";
     inherit (nixpkgs) lib;
   in
     with inputs; {
-      nixosConfigurations = {
+      nixosConfigurations.
         nixer = lib.nixosSystem {
-          inherit system;
-          modules = [
-            {
-              nixpkgs.overlays = [
-                inputs.nur.overlay
+        inherit system;
+        modules = [
+          {
+            nixpkgs.overlays = [
+              inputs.nur.overlay
+              (final: prev: {zigpkg = inputs.zig.packages.${prev.system}.master;})
+              # inputs.neovim-nightly-overlay.overlay
+            ];
+          }
+          nur.nixosModules.nur
+          # importing style defnitions
+          (import ./style)
 
-                (final: prev: {
-                  # Replace `master` with a Zig version or a build date to pin package
-                  # Show available versions using: nix flake show 'github:mitchellh/zig-overlay'
-                  zigpkg = inputs.zig.packages.${prev.system}.master;
-                })
+          # ragenix module to provide encryption and secret keeping inside the flake
+          ragenix.nixosModules.age
+          {
+            age.identityPaths = ["/home/a/keys/id_ed25519"];
+            age.secrets.bwid.file = ./secrets/bwid.age;
+            age.secrets.bwsec.file = ./secrets/bwsec.age;
+          }
 
-                # inputs.neovim-nightly-overlay.overlay
+          # importing system configurations
+          ./system
+
+          # importing nixvim modules
+          # inputs.nixvim.nixosModules.nixvim
+
+          # importing hyprland module
+          inputs.hyprland.nixosModules.default
+
+          #importing home-manager module
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true; # uses the packages that comes with nix not home-manager.
+            home-manager.useUserPackages = true;
+            home-manager.extraSpecialArgs = {
+              inherit inputs;
+            };
+            home-manager.users.a = {
+              home.stateVersion = "22.11";
+              imports = [
+                ./home
+                inputs.hyprland.homeManagerModules.default
               ];
-            }
-            nur.nixosModules.nur
-            # importing style defnitions
-            (import ./style)
-
-            # ragenix module to provide encryption and secret keeping inside the flake
-            ragenix.nixosModules.age
-            {
-              age.identityPaths = ["/home/a/keys/id_ed25519"];
-              age.secrets.bwid = {
-                file = ./secrets/bwid.age;
-              };
-              age.secrets.bwsec = {
-                file = ./secrets/bwsec.age;
-              };
-            }
-
-            # importing system configurations
-            ./system
-
-            # importing nixvim modules
-            # inputs.nixvim.nixosModules.nixvim
-
-            # importing hyprland module
-            inputs.hyprland.nixosModules.default
-
-            #importing home-manager module
-            home-manager.nixosModules.home-manager
-            {
-              home-manager.useGlobalPkgs = true; # uses the packages that comes with nix not home-manager.
-              home-manager.useUserPackages = true;
-              home-manager.extraSpecialArgs = {
-                inherit inputs;
-              };
-              home-manager.users.a = {
-                home.stateVersion = "22.11";
-                imports = [
-                  ./home
-                  inputs.hyprland.homeManagerModules.default
-                ];
-              };
-            }
-          ];
-        };
+            };
+          }
+        ];
       };
     };
 }

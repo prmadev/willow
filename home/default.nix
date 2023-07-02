@@ -192,5 +192,7 @@
 
   nixpkgs.overlays = [
     inputs.neovim-nightly-overlay.overlay
+    # inputs.nur.overlay
+    (final: prev: {zigpkg = inputs.zig.packages.${prev.system}.master;})
   ];
 }
