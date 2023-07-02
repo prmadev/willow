@@ -10,7 +10,7 @@
     optimise.automatic = true;
     settings = {
       auto-optimise-store = true;
-      system-features = ["recursive-nix"];
+      system-features = ["recursive-nix" "big-parallel"];
       trusted-users = ["root" "a" "@wheel"];
       substituters = [
         "https://nix-community.cachix.org"
