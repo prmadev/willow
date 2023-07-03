@@ -121,7 +121,7 @@ with lib; {
                --mff-sidebar-color: #F1CA93;
                --mff-tab-border-radius: 0px;
                --mff-tab-color: #EA6F91;
-               --mff-tab-font-family: "FiraCode Nerd Font";
+               --mff-tab-font-family: "LigaOperatorMono Nerd Font";
                --mff-tab-font-size: 11pt;
                --mff-tab-font-weight: 400;
                --mff-tab-height: 32px;
@@ -130,11 +130,11 @@ with lib; {
                --mff-tab-soundplaying-bg: #9c89b8;
                --mff-urlbar-color: ${config.colors.macchiato.base.hex}!important;
                --mff-urlbar-focused-color: #403C58;
-               --mff-urlbar-font-family: "ComicCodeLigatures Nerd Font";
+               --mff-urlbar-font-family: "LigaOperatorMono Nerd Font";
                --mff-urlbar-font-size: 11pt;
                --mff-urlbar-font-weight: 700;
                --mff-urlbar-results-color: ${config.colors.macchiato.text.hex};
-               --mff-urlbar-results-font-family: "ComicCodeLigatures Nerd Font";
+               --mff-urlbar-results-font-family: "LigaOperatorMono Nerd Font";
                --mff-urlbar-results-font-size: 11pt;
                --mff-urlbar-results-font-weight: 700;
                --mff-urlbar-results-url-color: ${config.colors.macchiato.text.hex};
