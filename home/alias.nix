@@ -7,7 +7,7 @@ with lib; {
   options.alias.enable = mkEnableOption "alias settings";
 
   config = mkIf config.alias.enable {
-    programs.exa.enableAliases = mkIf config.filesearch.enable true;
+    # programs.exa.enableAliases = mkIf config.filesearch.enable true;
 
     home.shellAliases = {
       tree = mkIf config.filesearch.enable "exa --tree --icons";

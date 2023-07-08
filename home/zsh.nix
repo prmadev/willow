@@ -16,6 +16,27 @@ with lib; {
       enableCompletion = true;
       syntaxHighlighting.enable = true;
       enableVteIntegration = true;
+      cdpath = [
+        "$HOME/Videos/p/p"
+        "$HOME/repos/notes"
+        "$HOME/repos/asan-availability"
+        "$HOME/repos/asan-intrabuf"
+        "$HOME/repos/ziglings"
+        "$HOME/repos/prma"
+        "$HOME/repos"
+        "$HOME/willow"
+      ];
+      dirHashes = {
+        notes = "$HOME/repos/notes";
+        vid = "$HOME/Videos";
+        dow ="$HOME/Downloads"; 
+        dl ="$HOME/Downloads"; 
+        rep ="$HOME/repos"; 
+        prma ="$HOME/repos/prma"; 
+        ava ="$HOME/repos/asan-availability"; 
+        int ="$HOME/repos/asan-intrabuf"; 
+        
+      };
       localVariables = {
         DISABLE_CORRECTION = true;
         SKIM_BASE = "${pkgs.skim}/bin/sk";
