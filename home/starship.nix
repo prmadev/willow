@@ -9,8 +9,6 @@ with lib; {
   config = mkIf config.starship.enable {
     programs.starship = {
       enable = true;
-      enableNushellIntegration = false;
     };
-    # TODO customize it
   };
 }

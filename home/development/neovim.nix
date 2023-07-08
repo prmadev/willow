@@ -15,19 +15,19 @@ with lib; {
       viAlias = true;
 
       vimAlias = true;
-      withPython3 = true;
+      withPython3 = false;
       withRuby = false;
-      withNodeJs = true;
+      withNodeJs = false;
       extraLuaPackages = luaPkgs:
         with luaPkgs; [
           luacheck
         ];
       extraPackages = with pkgs; [
-        pyright
-        ccls
+        # pyright
+        # ccls
         gopls
-        nodePackages.bash-language-server
-        nodePackages.graphql-language-service-cli
+        # nodePackages.bash-language-server
+        # nodePackages.graphql-language-service-cli
         nodePackages.vscode-langservers-extracted
 
         # tree-sitter
@@ -35,15 +35,15 @@ with lib; {
         sumneko-lua-language-server
         nil
         rust-analyzer
-        actionlint
+        # actionlint
         luaformatter
         lldb
         # null-ls sources
-        selene
+        # selene
         alejandra
-        black
+        # black
         deadnix
-        editorconfig-checker
+        # editorconfig-checker
         gofumpt
         gotools
         golangci-lint
@@ -58,29 +58,29 @@ with lib; {
         gomodifytags
         go-swag
         gitlint
-        mypy
-        nodePackages.alex
-        nodePackages.prettier
-        nodePackages.markdownlint-cli
-        python3Packages.flake8
-        shellcheck
-        shellharden
-        shfmt
+        # mypy
+        # nodePackages.alex
+        # nodePackages.prettier
+        # nodePackages.markdownlint-cli
+        # python3Packages.flake8
+        # shellcheck
+        # shellharden
+        # shfmt
         statix
         revive
         stylua
-        vim-vint
+        # vim-vint
         checkmake
         dotenv-linter
         # DAP servers
-        hadolint
+        # hadolint
         delve
         mdl
         proselint
-        sqlfluff
+        # sqlfluff
         vale
         yamllint
-        cbfmt
+        # cbfmt
 
         # Other stuff
         bc
@@ -106,11 +106,11 @@ with lib; {
     #     plugins);
 
     home.packages = with pkgs; [
-      pyright
-      ccls
+      # pyright
+      # ccls
       gopls
       nodePackages.bash-language-server
-      nodePackages.graphql-language-service-cli
+      # nodePackages.graphql-language-service-cli
       nodePackages.vscode-langservers-extracted
       wget
 
@@ -118,15 +118,15 @@ with lib; {
       sumneko-lua-language-server
       nil
       # rust-analyzer
-      actionlint
+      # actionlint
       luaformatter
 
       # null-ls sources
-      selene
+      # selene
       alejandra
-      black
+      # black
       deadnix
-      editorconfig-checker
+      # editorconfig-checker
       gofumpt
       gotools
       gotests
@@ -142,9 +142,9 @@ with lib; {
       mypy
       nodePackages.alex
       nodePackages.prettier
-      nodePackages.markdownlint-cli
-      python3Packages.flake8
-      python310Packages.demjson3
+      # nodePackages.markdownlint-cli
+      # python3Packages.flake8
+      # python310Packages.demjson3
       shellcheck
       luarocks
       shellharden
@@ -160,7 +160,7 @@ with lib; {
       adrgen
       # Other stuff
       bc
-      wget
+      # wget
     ];
   };
 }

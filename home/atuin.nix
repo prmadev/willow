@@ -11,6 +11,7 @@ with lib; {
       enable = true;
 
       enableNushellIntegration = false;
+
       enableZshIntegration = config.zsh.enable;
       enableFishIntegration = config.fish.enable;
       enableBashIntegration = config.bash.enable;
