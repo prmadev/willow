@@ -10,11 +10,6 @@ with lib; {
     programs.ssh = {
       enable = true;
       matchBlocks = {
-        "git.jafam.ir" = {
-          identityFile = [".ssh/github"];
-          host = "git.jafam.ir";
-          user = "amir.al";
-        };
       };
     };
   };

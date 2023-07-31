@@ -49,13 +49,13 @@
       "locked": {
         "lastModified": 1674454047,
         "narHash": "sha256-QMjyIlyFwhY8IbXbaGMx+Et0rsGddCd8WZBpJoAYD/A=",
-        "owner": "amirography",
+        "owner": "prmadev",
         "repo": "aspen",
         "rev": "c2df1b414b6fc1e65baf00cd5f9c7d8992dc0c62",
         "type": "github"
       },
       "original": {
-        "owner": "amirography",
+        "owner": "prmadev",
         "repo": "aspen",
         "type": "github"
       }
@@ -669,13 +669,13 @@
       "locked": {
         "lastModified": 1690018333,
         "narHash": "sha256-AK08F9C571EvDlYzmxlYCQ3elYE/4ImFFTjw6Dv9D5M=",
-        "owner": "amirography",
+        "owner": "prmadev",
         "repo": "soapberry",
         "rev": "82ead2a25c0861a9d51e6da10752dc4956d7b566",
         "type": "github"
       },
       "original": {
-        "owner": "amirography",
+        "owner": "prmadev",
         "repo": "soapberry",
         "type": "github"
       }

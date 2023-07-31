@@ -39,7 +39,7 @@ with lib; {
         };
       };
       signing = {
-        key = "EA109402685DDDDB";
+        key = "39FEBB6A870385E3";
         signByDefault = true;
       };
 
