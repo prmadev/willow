@@ -159,7 +159,7 @@
     prma.enable = true;
     algae.enable = true;
     webarchive.enable = true;
-    amirography.enable = true;
+    prmadev.enable = true;
     amirographycom.enable = true;
     soapberry.enable = true;
   };

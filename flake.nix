@@ -17,7 +17,7 @@
     };
 
     aspen = {
-      url = "github:amirography/aspen";
+      url = "github:prmadev/aspen";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -38,7 +38,7 @@
 
     zig.url = "github:mitchellh/zig-overlay";
     zls.url = "github:zigtools/zls";
-    kyushu.url = "github:amirography/soapberry";
+    kyushu.url = "github:prmadev/soapberry";
 
     # ghS = {
     #   url = "github:gennaro-tedesco/gh-s";

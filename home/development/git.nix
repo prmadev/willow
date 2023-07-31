@@ -17,7 +17,7 @@ with lib; {
     programs.git = {
       enable = true;
       userEmail = "prma.dev@protonmail.com";
-      userName = "amirography";
+      userName = "prmadev";
       ignores = [
         ".env"
         ".vscode"

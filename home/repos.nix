@@ -23,7 +23,7 @@ with lib; {
 
       remote = lib.mkOption {
         type = types.str;
-        default = "https://github.com/amirography/notes";
+        default = "https://github.com/prmadev/notes";
         description = "the remote";
       };
 
@@ -41,7 +41,7 @@ with lib; {
 
       remote = lib.mkOption {
         type = types.str;
-        default = "https://github.com/amirography/prma";
+        default = "https://github.com/prmadev/prma";
         description = "the remote";
       };
 
@@ -59,7 +59,7 @@ with lib; {
 
       remote = lib.mkOption {
         type = types.str;
-        default = "https://github.com/amirography/algae";
+        default = "https://github.com/prmadev/algae";
         description = "the remote";
       };
 
@@ -77,29 +77,29 @@ with lib; {
 
       remote = lib.mkOption {
         type = types.str;
-        default = "https://github.com/amirography/webarchive";
+        default = "https://github.com/prmadev/webarchive";
         description = "the remote";
       };
 
       description = "the path for the webarchive";
     };
 
-    amirography = {
-      enable = mkEnableOption "enable amirography repo";
+    prmadev = {
+      enable = mkEnableOption "enable prmadev repo";
 
       path = lib.mkOption {
         type = types.path;
-        default = "${config.repos.path}/amirography";
-        description = "the path for the amirography";
+        default = "${config.repos.path}/prmadev";
+        description = "the path for the prmadev";
       };
 
       remote = lib.mkOption {
         type = types.str;
-        default = "https://github.com/amirography/amirography";
+        default = "https://github.com/prmadev/prmadev";
         description = "the remote";
       };
 
-      description = "the path for the amirography";
+      description = "the path for the prmadev";
     };
 
     amirographycom = {
@@ -113,7 +113,7 @@ with lib; {
 
       remote = lib.mkOption {
         type = types.str;
-        default = "https://github.com/amirography/amirographycom";
+        default = "https://github.com/prmadev/amirographycom";
         description = "the remote";
       };
 
@@ -131,7 +131,7 @@ with lib; {
 
       remote = lib.mkOption {
         type = types.str;
-        default = "https://github.com/amirography/soapberry";
+        default = "https://github.com/prmadev/soapberry";
         description = "the remote";
       };
 
@@ -155,8 +155,8 @@ with lib; {
       WEBARCHIVE = mkIf config.repos.webarchive.enable "${config.repos.webarchive.path}";
       WEBARCHIVE_REPO = mkIf config.repos.webarchive.enable "${config.repos.webarchive.remote}";
 
-      AMIROGRAPHY = mkIf config.repos.amirography.enable "${config.repos.amirography.path}";
-      AMIROGRAPHY_REPO = mkIf config.repos.amirography.enable "${config.repos.amirography.remote}";
+      PRMADEV = mkIf config.repos.prmadev.enable "${config.repos.prmadev.path}";
+      PRMADEV_REPO = mkIf config.repos.prmadev.enable "${config.repos.prmadev.remote}";
 
       AMIROGRAPHYCOM = mkIf config.repos.amirographycom.enable "${config.repos.amirographycom.path}";
       AMIROGRAPHYCOM_REPO = mkIf config.repos.amirographycom.enable "${config.repos.amirographycom.remote}";
