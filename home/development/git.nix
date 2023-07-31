@@ -16,7 +16,7 @@ with lib; {
 
     programs.git = {
       enable = true;
-      userEmail = "amirhossein.alesheikh@gmail.com";
+      userEmail = "prma.dev@protonmail.com";
       userName = "amirography";
       ignores = [
         ".env"
@@ -26,9 +26,17 @@ with lib; {
         init = {
           defaultBranch = "main";
         };
-        # url = {
-        # "ssh://git@github.com".insteadOf = "https://github.com";
-        # };
+        rebase.autosquash = true;
+        rebase.autoStash = true;
+        url = {
+          # "ssh://git@github.com".insteadOf = "https://github.com";
+          "https://github.com/" = {
+            insteadOf = [
+              "gh:"
+              "github:"
+            ];
+          };
+        };
       };
       signing = {
         key = "EA109402685DDDDB";
@@ -37,6 +45,12 @@ with lib; {
 
       delta.enable = true;
       lfs.enable = true;
+      aliases = {
+        lg = "log --pretty=\"%C(green bold)%h%C(reset) %C(blue)%d%C(reset) %C(italic)%s%C(reset) %C(Cyan)(%ar)%C(reset)\" --graph";
+        gsi = "stash save --keep-index";
+        new = "lg main..HEAD";
+        missing = "lg HEAD..main";
+      };
     };
 
     programs.gh = {

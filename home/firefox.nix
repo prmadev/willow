@@ -33,36 +33,16 @@ with lib; {
               keyword = "nix";
               url = "https://mipmip.github.io/home-manager-option-search/";
             }
-            # {
-            #   name = "";
-            #   keyword = "";
-            #   url = "";
-            # }
-            # {
-            #   name = "";
-            #   keyword = "";
-            #   url = "";
-            # }
-            # {
-            #   name = "";
-            #   keyword = "";
-            #   url = "";
-            # }
-            # {
-            #   name = "";
-            #   keyword = "";
-            #   url = "";
-            # }
-            # {
-            #   name = "";
-            #   keyword = "";
-            #   url = "";
-            # }
+            {
+              name = "save to feedbin";
+              keyword = "feedbin";
+              url = "javascript:void%20(function()%20{%20%20%20%20var%20script%20=%20document.createElement(%22script%22);%20%20%20%20var%20body%20=%20document.querySelector(%22body%22);%20%20%20%20var%20title%20=%20document.title;%20%20%20%20document.title%20=%20%22Sending%20to%20Feedbin:%20%22%20+%20title;%20%20%20%20script.type%20=%20%22text/javascript%22;%20%20%20%20script.async%20=%20true;%20%20%20%20script.src%20=%20%22https://feedbin.com/bookmarklet/replace_me%22.replace(%22replace_me%22,%20Date.now());%20%20%20%20script.setAttribute(%22data-feedbin-token%22,%20%228fd4869ef0c02129c5f86a85e10a1f2f%22);%20%20%20%20script.setAttribute(%22data-original-title%22,%20title);%20%20%20%20script.onerror%20=%20function()%20{%20%20%20%20%20%20%20window.location%20=%20%22https://feedbin.com/pages?url=%22%20+%20encodeURIComponent(window.location.href)%20+%20%22&title=%22%20+%20encodeURIComponent(title)%20+%20%22&page_token=8fd4869ef0c02129c5f86a85e10a1f2f%22;%20%20%20%20%20%20%20document.title%20=%20title;%20%20%20%20};%20%20%20%20body.appendChild(script);})();";
+            }
           ];
 
           isDefault = true;
           settings = {
-            "browser.startup.homepage" = "https://fosstodon.org";
+            "browser.startup.homepage" = "https://feedbin.com";
 
             # --- UI
             "browser.search.separatePrivateDefault.urlbarResult.enabled" = false;
@@ -95,6 +75,30 @@ with lib; {
             "distribution.searchplugins.defaultLocale" = "en-US";
             "general.useragent.locale" = "en-US";
             "browser.region.update.region" = "US";
+            #--- pocket should be off
+
+            "browser.newtabpage.activity-stream.discoverystream.saveToPocketCard.enabled" = false;
+            "browser.newtabpage.activity-stream.discoverystream.sendToPocket.enabled" = false;
+            "services.sync.prefs.sync.browser.newtabpage.activity-stream.section.highlights.includePocket" = false;
+            "browser.newtabpage.activity-stream.discoverystream.enabled" = false;
+            "browser.newtabpage.activity-stream.feeds.discoverystreamfeed" = false;
+            "browser.newtabpage.activity-stream.default.sites" = ["https://kagi.com" "https://feedbin.com" "https://fosstodon.org"];
+
+            #-------
+            "browser.newtabpage.pinned" = [
+              {
+                title = "kagi";
+                url = "https://kagi.com";
+              }
+              {
+                title = "feedbin";
+                url = "https://feedbin.com";
+              }
+              {
+                title = "fosstodon";
+                url = "https://fosstodon.org";
+              }
+            ];
           };
 
           userChrome = ''
@@ -121,7 +125,7 @@ with lib; {
                --mff-sidebar-color: #F1CA93;
                --mff-tab-border-radius: 0px;
                --mff-tab-color: #EA6F91;
-               --mff-tab-font-family: "LigaOperatorMono Nerd Font";
+               --mff-tab-font-family: "${config.global-fonts.main-regular}";
                --mff-tab-font-size: 11pt;
                --mff-tab-font-weight: 400;
                --mff-tab-height: 32px;
@@ -130,11 +134,11 @@ with lib; {
                --mff-tab-soundplaying-bg: #9c89b8;
                --mff-urlbar-color: ${config.colors.macchiato.base.hex}!important;
                --mff-urlbar-focused-color: #403C58;
-               --mff-urlbar-font-family: "LigaOperatorMono Nerd Font";
+               --mff-urlbar-font-family: "${config.global-fonts.main-regular}";
                --mff-urlbar-font-size: 11pt;
                --mff-urlbar-font-weight: 700;
                --mff-urlbar-results-color: ${config.colors.macchiato.text.hex};
-               --mff-urlbar-results-font-family: "LigaOperatorMono Nerd Font";
+               --mff-urlbar-results-font-family: "${config.global-fonts.main-black}";
                --mff-urlbar-results-font-size: 11pt;
                --mff-urlbar-results-font-weight: 700;
                --mff-urlbar-results-url-color: ${config.colors.macchiato.text.hex};

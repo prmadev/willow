@@ -13,8 +13,10 @@ with lib; {
       settings = {
         main = {
           shell = "zsh";
-          font = "${config.global-fonts.main-regular}:size=9";
-          font-bold = "${config.global-fonts.main-bold}";
+          font = "${config.global-fonts.main-regular}:size=15";
+          font-italic = "${config.global-fonts.main-regular}:size=15:style=Italic";
+          font-bold = "${config.global-fonts.main-bold}:size=15";
+          font-bold-italic = "${config.global-fonts.main-bold}:size=15:style=Italic";
           box-drawings-uses-font-glyphs = true;
           bold-text-in-bright = false;
         };

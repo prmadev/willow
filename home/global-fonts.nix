@@ -4,61 +4,61 @@ with lib; {
     global-fonts = {
       main-family = mkOption {
         type = types.str;
-        default = "LigaOperatorMono Nerd Font";
+        default = "Operator Mono";
       };
 
       main-black = mkOption {
         type = types.str;
-        default = "LigaOperatorMono Nerd Font";
+        default = "Operator Mono Bold";
       };
       main-black-italic = mkOption {
         type = types.str;
-        default = "LigaOperatorMono Bold Italic Nerd Font";
+        default = "Operator Mono Bold Italic";
       };
       main-bold = mkOption {
         type = types.str;
-        default = "LigaOperatorMono Bold Nerd Font";
+        default = "Operator Mono Bold";
       };
       main-bold-italic = mkOption {
         type = types.str;
-        default = "LigaOperatorMono Bold Italic Nerd Font";
+        default = "Operator Mono Bold Italic";
       };
       main-medium = mkOption {
         type = types.str;
-        default = "LigaOperatorMono Medium Nerd Font";
+        default = "Operator Mono Medium";
       };
       main-medium-italic = mkOption {
         type = types.str;
-        default = "LigaOperatorMono Medium Italic Nerd Font";
+        default = "Operator Mono Medium Italic";
       };
       main-regular = mkOption {
         type = types.str;
-        default = "LigaOperatorMono Book Nerd Font";
+        default = "Operator Mono Book";
       };
       main-italic = mkOption {
         type = types.str;
-        default = "LigaOperatorMono Book Italic Nerd Font";
+        default = "Operator Mono Book Italic";
       };
 
       main-light = mkOption {
         type = types.str;
-        default = "LigaOperatorMono Light Nerd Font";
+        default = "Operator Mono Light";
       };
       main-light-italic = mkOption {
         type = types.str;
-        default = "LigaOperatorMono Light Italic Nerd Font";
+        default = "Operator Mono Light Italic";
       };
       main-thin = mkOption {
         type = types.str;
-        default = "LigaOperatorMono Light Nerd Font";
+        default = "Operator Mono XLight";
       };
       main-thin-italic = mkOption {
         type = types.str;
-        default = "LigaOperatorMono Light Italic Nerd Font";
+        default = "Operator Mono XLight Italic";
       };
       main-set = mkOption {
         type = types.listOf types.str;
-        default = ["LigaOperatorMono Nerd Font" "ComicCodeLigatures Nerd Font" "ComicCodeLigatures Nerd Font Complete Mono" "Gintronic" "Vazirmatn"];
+        default = ["Operator Mono" "LigaOperatorMono Nerd Font" "OperatorMono Nerd Font Mono" "ComicCodeLigatures Nerd Font" "ComicCodeLigatures Nerd Font Complete Mono" "Gintronic" "Vazirmatn"];
       };
     };
   };

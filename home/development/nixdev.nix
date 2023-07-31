@@ -27,7 +27,7 @@ with lib; {
       nix-diff
       comma
       nixpkgs-lint
-      inputs.nix-alien.packages.${system}.nix-alien
+      # inputs.nix-alien.packages.${system}.nix-alien
       # nix-index-update
       inputs.aspen.packages.${system}.aspen
     ];

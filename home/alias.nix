@@ -24,6 +24,13 @@ with lib; {
       b = "bg";
       n = "nvim";
       pc = "proxychains4 -q";
+
+      # git related stuff
+      gl = "git lg";
+      gc = "git commit -S -m ";
+      ga = "git add --patch";
+      gd = "git diff";
+      gsi = "git si";
     };
   };
 }

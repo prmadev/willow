@@ -11,6 +11,7 @@ with lib; {
     ./git.nix
     ./neovim.nix
     ./helix
+    ./haskell.nix
     ./nixdev.nix
     ./protobuf.nix
     ./grpc.nix
@@ -29,11 +30,11 @@ with lib; {
     neovim.enable = true;
     protobuf.enable = true;
     grpc.enable = true;
-    # emacs.enable = false;
     helix.enable = true;
     nixdev.enable = true;
     rust.enable = true;
     vscode.enable = false;
-    zig.enable = true;
+    zig.enable = false;
+    haskell.enable = true;
   };
 }

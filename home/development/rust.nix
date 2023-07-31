@@ -42,6 +42,7 @@ with lib; {
         cargo-public-api
         cargo-supply-chain
         cargo-unused-features
+        cargo-nextest
       ];
 
       rustBasics = [

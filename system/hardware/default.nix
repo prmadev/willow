@@ -23,7 +23,7 @@
   '';
   hardware.bluetooth.enable = true;
   services.printing.enable = false;
-  services.blueman.enable = true;
+  services.blueman.enable = false;
   # System management
   services.dbus.enable = true;
 
@@ -63,6 +63,8 @@
 
   environment.variables = {
     VDPAU_DRIVER = "va_gl";
+
+    LIBVA_DRIVER_NAME = "iHD";
   };
 
   hardware.opengl.extraPackages = with pkgs; [

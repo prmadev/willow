@@ -15,13 +15,13 @@ with lib; {
             addr = "irc.libera.chat";
             port = 6697;
             tls = true;
-            realname = "Amir Alesheikh";
-            nicks = ["amirography" "prma"];
+            realname = "Perma";
+            nicks = ["prma"];
           }
         ];
         defaults = {
-          nicks = ["amirography" "prma"];
-          realname = "Amir Alesheikh";
+          nicks = ["prma"];
+          realname = "Perma";
           join = [
             "permacomputing"
           ];

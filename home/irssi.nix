@@ -10,7 +10,7 @@ with lib; {
       enable = true;
       networks = {
         liberachat = {
-          nick = "amirography";
+          nick = "prma";
           server = {
             address = "irc.libera.chat";
             port = 6697;

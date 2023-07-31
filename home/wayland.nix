@@ -37,19 +37,19 @@ with lib; {
     };
 
     systemd.user.services = {
-      evdev = {
-        Unit = {
-          Description = "evremap remaps keys for a better experience";
-        };
-        Service = {
-          WorkingDirectory = "/";
-          ExecStart = "bash -c evremap remap /home/a/evre.toml";
-          Restart = "always";
-        };
-        Install = {
-          WantedBy = ["hyprland-session.target"];
-        };
-      };
+      # evdev = {
+      #   Unit = {
+      #     Description = "evremap remaps keys for a better experience";
+      #   };
+      #   Service = {
+      #     WorkingDirectory = "/";
+      #     ExecStart = "bash -c evremap remap /home/a/evre.toml";
+      #     Restart = "always";
+      #   };
+      #   Install = {
+      #     WantedBy = ["hyprland-session.target"];
+      #   };
+      # };
     };
   };
 }

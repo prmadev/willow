@@ -1,15 +1,15 @@
 {
   description = "my nix configuration";
   inputs = {
-    stable.url = "github:nixos/nixpkgs/nixos-23.05";
+    # stable.url = "github:nixos/nixpkgs/nixos-23.05";
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     # neovim-nightly-overlay = {
     #   url = "github:nix-community/neovim-nightly-overlay";
     #   inputs.nixpkgs.url = "github:nixos/nixpkgs?rev=fad51abd42ca17a60fc1d4cb9382e2d79ae31836";
     # };
-    nix-std.url = "github:chessai/nix-std";
+    # nix-std.url = "github:chessai/nix-std";
 
-    nix-alien.url = "github:thiagokokada/nix-alien";
+    # nix-alien.url = "github:thiagokokada/nix-alien";
     # nix-ld.url = "github:Mic92/nix-ld/main";
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -31,18 +31,19 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    hyprland = {
-      url = "github:hyprwm/hyprland";
-      # inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # hyprland = {
+    # url = "github:hyprwm/hyprland";
+    # inputs.nixpkgs.follows = "nixpkgs";
+    # };
 
     zig.url = "github:mitchellh/zig-overlay";
     zls.url = "github:zigtools/zls";
+    kyushu.url = "github:amirography/soapberry";
 
-    ghS = {
-      url = "github:gennaro-tedesco/gh-s";
-      flake = false;
-    };
+    # ghS = {
+    #   url = "github:gennaro-tedesco/gh-s";
+    #   flake = false;
+    # };
     # hyprland-contrib = {
     #   url = "github:hyprwm/contrib";
     #   inputs.nixpkgs.follows = "nixpkgs";
@@ -65,10 +66,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nixago = {
-      url = "github:nix-community/nixago";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # nixago = {
+    #   url = "github:nix-community/nixago";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
     # naersk = {
     #   url = "github:nmattia/naersk";
     #   inputs.nixpkgs.follows = "nixpkgs";
@@ -126,18 +127,18 @@
       flake = false;
     };
     ## fish plugins
-    fzf-fish = {
-      url = "github:PatrickF1/fzf.fish";
-      flake = false;
-    };
-    done-fish = {
-      url = "github:franciscolourenco/done";
-      flake = false;
-    };
-    sponge-fish = {
-      url = "github:andreiborisov/sponge";
-      flake = false;
-    };
+    # fzf-fish = {
+    #   url = "github:PatrickF1/fzf.fish";
+    #   flake = false;
+    # };
+    # done-fish = {
+    #   url = "github:franciscolourenco/done";
+    #   flake = false;
+    # };
+    # sponge-fish = {
+    #   url = "github:andreiborisov/sponge";
+    #   flake = false;
+    # };
   };
 
   outputs = {
@@ -179,7 +180,7 @@
           # inputs.nixvim.nixosModules.nixvim
 
           # importing hyprland module
-          inputs.hyprland.nixosModules.default
+          # inputs.hyprland.nixosModules.default
 
           #importing home-manager module
           home-manager.nixosModules.home-manager
@@ -188,12 +189,13 @@
             home-manager.useUserPackages = true;
             home-manager.extraSpecialArgs = {
               inherit inputs;
+              inherit system;
             };
             home-manager.users.a = {
               home.stateVersion = "22.11";
               imports = [
                 ./home
-                inputs.hyprland.homeManagerModules.default
+                # inputs.hyprland.homeManagerModules.default
               ];
             };
           }

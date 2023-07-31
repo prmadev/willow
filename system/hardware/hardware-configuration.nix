@@ -19,17 +19,19 @@
   fileSystems."/" = {
     device = "none";
     fsType = "tmpfs";
+    options = ["noatime"];
   };
 
   fileSystems."/boot" = {
     device = "/dev/disk/by-uuid/58F3-8F4B";
     fsType = "vfat";
+    options = ["noatime"];
   };
 
   fileSystems."/nix" = {
     device = "/dev/nvme0n1p3";
     fsType = "btrfs";
-    options = ["subvol=nix"];
+    options = ["subvol=nix" "noatime"];
   };
 
   fileSystems."/etc" = {

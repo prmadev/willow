@@ -12,7 +12,7 @@ _: {
         "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDJRc7ke7Io8zQWOkmrJrq1gviaCUQL/GCLJnHTem4v7O1C4ct6ngdcIY/GQp6VWPQmlPVFvlvsqTDvKtkM0LM5jzn6Iwu0si9f7zc+pOvock4gpP2J9jiFgwBCwTpYsN19mS/UdrBeST3aZ8pR5M5yuGlTbJIJzOw2rQ0Go6U6XTQjS19zabZ9XFwGMAcKZiuqtE0tVyYD5eakOrHRvad7nwDhwegp9xg+UHQjxITgYGcR6NsWhkQJUUALPSKaS8AbT8iBKPTCbdZCxDNbhxTUTKbKjIYPCoETqOBcYLFRrrTTKB74o2qiMbKeRDIkJqMGmZbStpoAIqVsGMuUGTCrZSG6H2nuRVCXfWQ1GMXvP7bUDXbf2xBTvExSdaWOgE7VKQEdfxOtNk/3ZMc65oW+dk60nzfvAmX8jzFEy+03OlUX4w3kT8pFDeZxwFeFvaAeqb+SFXC1epnjlqLlxkwX7+Z9KxOq4HeLRX3HgBcfC/RHz34R7AwKAxK2dDN3gCc= a@nixer"
       ];
     };
-    home = "/home/a/";
+    home = "/home/a";
     hashedPassword = "$y$j9T$gbOWLUXWN12WX0m.YvrFD0$32g35gkbkZOcEkus7tZ19Pznpzl1Wf669lKGSIlhTf0";
 
     extraGroups = [

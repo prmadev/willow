@@ -18,5 +18,5 @@ with lib; {
     programs.zoxide = {
       enable = true;
     };
- };
+  };
 }

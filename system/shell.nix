@@ -40,4 +40,13 @@
   programs.mtr.enable = true;
   environment.localBinInPath = true;
   environment.homeBinInPath = true;
+  # documentation = {
+  #   man = {
+  #     # generateCaches = true;
+  #   };
+  #   # dev.enable = true;
+  #   # nixos = {
+  #   #   includeAllModules = true;
+  #   # };
+  # };
 }

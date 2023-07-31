@@ -13,6 +13,8 @@ with lib; {
   config = mkIf config.helix.enable {
     programs.helix = {
       enable = true;
+      defaultEditor = true;
+
       package = inputs.helix.packages.${pkgs.system}.default;
 
       # languages = let
@@ -69,6 +71,96 @@ with lib; {
       # ];
       # };
 
+      languages = {
+        language-server = {
+          gopls = {
+            command = "gopls";
+            config = {
+              hints = {
+                assignVariableTypes = true;
+                compositeLiteralFields = true;
+                constantValues = true;
+                functionTypeParameters = true;
+                parameterNames = true;
+                rangeVariableTypes = true;
+              };
+              gofumpt = true;
+
+              staticcheck = true;
+
+              analyses = {
+                fieldalignment = true;
+                nilness = true;
+                shadow = true;
+                unusedwrite = true;
+                unusedparams = true;
+                useany = true;
+                unusedvariable = true;
+              };
+
+              vulncheck = "Imports";
+              semanticTokens = true;
+            };
+          };
+          nil = {
+            command = "nil";
+
+            config.nil = {
+              formatting.command = ["alejandra" "--quiet"];
+              nix.flake = {
+                # autoEvalInputs = true;
+              };
+            };
+          };
+
+          hls = {
+            command = "haskell-language-server-wrapper";
+            args = ["--lsp"];
+            config = {
+              hling.config.flags = [
+                "--all"
+              ];
+              rename.config.crossModule = true;
+            };
+          };
+          rustanalyzer = {
+            command = "rust-analyzer";
+            config = {
+              check.command = "clippy";
+              inlayHints.bindingModeHints.enable = false;
+              inlayHints.closingBraceHints.minLines = 10;
+              inlayHints.closureReturnTypeHints.enable = "with_block";
+              inlayHints.discriminantHints.enable = "fieldless";
+              inlayHints.lifetimeElisionHints.enable = "skip_trivial";
+              inlayHints.typeHints.hideClosureInitialization = false;
+            };
+          };
+        };
+        language = [
+          {
+            name = "haskell";
+            roots = ["Setup.hs" "stack.yaml" "cabal.project" "*.cabal" "hie.yaml"];
+            auto-format = true;
+          }
+          {
+            name = "nix";
+            auto-format = true;
+            formatter = {
+              command = "alejandra";
+              args = ["--quiet"];
+            };
+
+            language-servers = ["nil"];
+          }
+
+          {
+            name = "go";
+            auto-format = true;
+            formatter.command = "gofumpt";
+          }
+        ];
+      };
+
       settings = {
         theme = "veganMacchiato";
         editor = {
@@ -124,7 +216,7 @@ with lib; {
             X = ["extend_line_above"];
             space = {
               c = ":bc";
-              R = [":clipboard-paste-replace"];
+              R = [":primary-clipboard-paste-replace"];
             };
             # y = [":clipboard-yank-join"];
             # p = [":clipboard-paste-after"];
@@ -166,23 +258,5 @@ with lib; {
       marksman
       # gcc
     ];
-
-    home.file = {
-      lfPick = {
-        enable = true;
-        executable = true;
-        source = pkgs.writeShellScript "lf-pick" ''
-          function lfp(){
-            local TEMP=$(mktemp)
-            lf -selection-path=$TEMP
-            cat $TEMP
-          }
-
-          lfp
-        '';
-
-        target = ".local/bin/lf-pick";
-      };
-    };
   };
 }

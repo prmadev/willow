@@ -1,4 +1,8 @@
-{inputs, ...}: {
+{
+  inputs,
+  system,
+  ...
+}: {
   imports = [
     ./general.nix
     ./firefox.nix
@@ -28,6 +32,7 @@
     ./foot.nix
     ./insomnia.nix
     ./android_file_browser.nix
+    ./obs.nix
     ./compression.nix
     ./filesearch.nix
     ./ranger.nix
@@ -41,8 +46,9 @@
     ./lf.nix
     ./river.nix
     ./waybar.nix
+    ./repos.nix
     ./mako.nix
-    ./hyprland.nix
+    # ./hyprland.nix
     ./sway
     ./eww
     ./picom.nix
@@ -73,24 +79,26 @@
     ./development
     ./monitor.nix
     ./pueue.nix
+    ./monolith.nix
   ];
 
+  monolith.enable = true;
   firefox.enable = true;
   qutebrowser.enable = false;
-  tiny.enable = true;
+  tiny.enable = false;
   telegram.enable = true;
   discord.enable = true;
-  exercism.enable = false;
+  exercism.enable = true;
   graphical.enable = true;
   task.enable = false;
-  hoard.enable = false;
+  hoard.enable = false; # candidate for cleaning
   zk.enable = false;
-  newsboat.enable = false;
-  syncthing.enable = false;
+  newsboat.enable = false; # candidate for cleaning
+  syncthing.enable = false; # candidate for cleaning
   music.enable = true;
-  typst.enable = false;
+  typst.enable = false; # candidate for cleaning
   irssi.enable = true;
-  senpai.enable = true;
+  senpai.enable = false; # candidate for cleaning
   audio.enable = true;
   partition.enable = true;
   rofi.enable = true;
@@ -98,14 +106,14 @@
   compression.enable = true;
   filesearch.enable = true;
   nnn.enable = true;
-  office.enable = false;
-  ranger.enable = true;
+  office.enable = true;
+  ranger.enable = false;
   mpv.enable = true;
-  pueue.enable= true;
+  pueue.enable = false;
   pdf.enable = true;
   rename.enable = true;
   xdgconf.enable = true;
-  brootFile.enable = true;
+  brootFile.enable = false;
   lf.enable = true;
   chrome.enable = true;
   atuin.enable = false;
@@ -117,14 +125,15 @@
   gpg.enable = true;
   ragenix.enable = true;
   alias.enable = true;
+  obs.enable = true;
   bash.enable = true;
   doc.enable = true;
-  fish.enable = true;
+  fish.enable = false;
   fzf.enable = true;
   nu.enable = true;
   pager.enable = true;
   starship.enable = true;
-  pet.enable = false;
+  pet.enable = false; # candidate for cleaning
   zsh.enable = true;
   font.enable = true;
   gtkconf.enable = true;
@@ -136,16 +145,28 @@
   mako.enable = true;
   river.enable = true;
   eww.enable = false;
-  hyprland.enable = false;
-  sway.enable = false;
+  # hyprland.enable = false;
+  sway.enable = false; # candidate for cleaning
   wayland.enable = true;
-  slack.enable = false;
-  picom.enable = false;
+  slack.enable = false; # candidate for cleaning
+  picom.enable = false; # candidate for cleaning
   development.enable = true; # development and languages
   monitor.enable = true; # monitoring utilities
-  insomnia.enable = false;
+  insomnia.enable = false; # candidate for cleaning
+  repos = {
+    enable = true;
+    notes.enable = true;
+    prma.enable = true;
+    algae.enable = true;
+    webarchive.enable = true;
+    amirography.enable = true;
+    amirographycom.enable = true;
+    soapberry.enable = true;
+  };
+
   nixpkgs.overlays = [
     inputs.neovim-nightly-overlay.overlay
     (final: prev: {zigpkg = inputs.zig.packages.${prev.system}.master;})
   ];
+  home.packages = [inputs.kyushu.packages.${system}.kyushu];
 }

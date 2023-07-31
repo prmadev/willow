@@ -10,7 +10,7 @@ with lib; {
       enable = true;
       config = {
         addr = "libera.chat:6697";
-        nick = "amirography";
+        nick = "prma";
       };
     };
   };

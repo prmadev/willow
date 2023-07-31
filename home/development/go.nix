@@ -20,6 +20,7 @@ with lib; {
     home.packages = with pkgs; [
       richgo
       golangci-lint-langserver
+      go-tools
     ];
 
     home.sessionPath = ["$HOME/go/bin"];

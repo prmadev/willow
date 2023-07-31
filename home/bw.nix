@@ -11,7 +11,7 @@ with lib; {
     programs.rbw = {
       enable = true;
       settings = {
-        email = "amirhossein.alesheikh@gmail.com";
+        email = "prma.dev@protonmail.com";
         pinentry = "gtk2";
       };
     };
