@@ -125,7 +125,7 @@ with lib; {
                --mff-sidebar-color: #F1CA93;
                --mff-tab-border-radius: 0px;
                --mff-tab-color: #EA6F91;
-               --mff-tab-font-family: "${config.global-fonts.main-regular}";
+               --mff-tab-font-family: "${config.global-fonts.main-regular} book";
                --mff-tab-font-size: 11pt;
                --mff-tab-font-weight: 400;
                --mff-tab-height: 32px;

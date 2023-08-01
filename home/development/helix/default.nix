@@ -115,7 +115,7 @@ with lib; {
 
           hls = {
             command = "haskell-language-server-wrapper";
-            args = ["--lsp"];
+            # args = ["--lsp"];
             config = {
               hling.config.flags = [
                 "--all"
@@ -141,6 +141,7 @@ with lib; {
             name = "haskell";
             roots = ["Setup.hs" "stack.yaml" "cabal.project" "*.cabal" "hie.yaml"];
             auto-format = true;
+            language-servers = ["hls"];
           }
           {
             name = "nix";
