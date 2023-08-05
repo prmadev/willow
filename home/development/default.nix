@@ -18,6 +18,7 @@ with lib; {
     ./rust.nix
     ./vscode.nix
     ./zig.nix
+    ./ocaml.nix
   ];
 
   options.development.enable = mkEnableOption "development options";
@@ -34,7 +35,8 @@ with lib; {
     nixdev.enable = true;
     rust.enable = true;
     vscode.enable = false;
-    zig.enable = false;
+    zig.enable = true;
     haskell.enable = true;
+    ocaml.enable = true;
   };
 }
