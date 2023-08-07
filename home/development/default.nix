@@ -19,6 +19,7 @@ with lib; {
     ./vscode.nix
     ./zig.nix
     ./ocaml.nix
+    ./sql.nix
   ];
 
   options.development.enable = mkEnableOption "development options";
@@ -38,5 +39,6 @@ with lib; {
     zig.enable = true;
     haskell.enable = true;
     ocaml.enable = true;
+    sql.enable = true;
   };
 }

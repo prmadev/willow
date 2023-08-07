@@ -43,6 +43,7 @@ with lib; {
         cargo-supply-chain
         cargo-unused-features
         cargo-nextest
+        cargo-leptos
       ];
 
       rustBasics = [
@@ -74,6 +75,8 @@ with lib; {
         lapce
         rust-code-analysis
         trunk # for wasm
+        sea-orm-cli
+        sqlx-cli
       ];
     in
       cargoSubCommands
