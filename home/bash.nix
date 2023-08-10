@@ -9,7 +9,6 @@ with lib; {
   config = mkIf config.bash.enable {
     programs.bash = {
       enable = true;
-
       enableCompletion = true;
       enableVteIntegration = true;
     };

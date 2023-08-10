@@ -48,6 +48,7 @@
     ./waybar.nix
     ./repos.nix
     ./mako.nix
+    ./zola.nix
     # ./hyprland.nix
     ./sway
     ./eww
@@ -69,6 +70,7 @@
     ./audio.nix
     ./partition.nix
     ./download.nix
+    ./yt-dlp.nix
     ./proxy.nix
     ./ssh.nix
     ./bw.nix
@@ -80,8 +82,11 @@
     ./monitor.nix
     ./pueue.nix
     ./monolith.nix
+    ./jq.nix
   ];
 
+  yt-dlp.enable = true;
+  jq.enable = true;
   monolith.enable = true;
   firefox.enable = true;
   qutebrowser.enable = false;
@@ -93,6 +98,7 @@
   task.enable = false;
   hoard.enable = false; # candidate for cleaning
   zk.enable = false;
+  zola.enable = true;
   newsboat.enable = false; # candidate for cleaning
   syncthing.enable = false; # candidate for cleaning
   music.enable = true;
@@ -128,7 +134,7 @@
   obs.enable = true;
   bash.enable = true;
   doc.enable = true;
-  fish.enable = false;
+  fish.enable = true;
   fzf.enable = true;
   nu.enable = true;
   pager.enable = true;

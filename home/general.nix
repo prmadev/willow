@@ -14,15 +14,11 @@ with lib; {
       pkg-config
       openssl_3
       musl
-
       gum
-
       # calibre
       mprocs # not a monitoring tool
-      zola
       d2
       zk
-      jql
       trashy
       dig.dnsutils
       sniffnet
@@ -44,7 +40,6 @@ with lib; {
       # pgadmin
       ventoy-full
       hurl
-      jq
       nodePackages.npm
       nodejs
     ];

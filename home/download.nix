@@ -20,7 +20,6 @@ with lib; {
     home.packages = with pkgs; [
       qbittorrent-nox
       wget2
-      yt-dlp
     ];
   };
 }

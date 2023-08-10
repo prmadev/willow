@@ -20,11 +20,13 @@ with lib; {
     ./zig.nix
     ./ocaml.nix
     ./sql.nix
+    ./elm.nix
   ];
 
   options.development.enable = mkEnableOption "development options";
 
   config = mkIf config.development.enable {
+    elm.enable = true;
     build.enable = true;
     direnv.enable = true;
     git.enable = true;

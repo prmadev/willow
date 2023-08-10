@@ -25,7 +25,7 @@ with lib; {
         allow_remote_control = true;
 
         # Default shell
-        shell = "${pkgs.zsh}/bin/zsh";
+        shell = "${pkgs.fish}/bin/fish";
 
         # Font settings
         font_size = 11;

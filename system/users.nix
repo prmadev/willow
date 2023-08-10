@@ -4,7 +4,7 @@ _: {
     createHome = true;
     name = "a";
     isNormalUser = true;
-    initialHashedPassword = "$y$j9T$gbOWLUXWN12WX0m.YvrFD0$32g35gkbkZOcEkus7tZ19Pznpzl1Wf669lKGSIlhTf0";
+    initialHashedPassword = "$y$j9T$DObab.uS2RGdfjd6F9ZXu/$iA0K./y1rkZdPuUvN6sSfCmbUuedEn5QK8UV6.9jMC.";
     openssh.authorizedKeys = {
       keys = [
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEUYZWlY3NrgLHeDCChXIm2Wu/cQAIg7dB0WNsD0yRQa a@nixer"
@@ -14,7 +14,7 @@ _: {
       ];
     };
     home = "/home/a";
-    hashedPassword = "$y$j9T$gbOWLUXWN12WX0m.YvrFD0$32g35gkbkZOcEkus7tZ19Pznpzl1Wf669lKGSIlhTf0";
+    hashedPassword = "$y$j9T$DObab.uS2RGdfjd6F9ZXu/$iA0K./y1rkZdPuUvN6sSfCmbUuedEn5QK8UV6.9jMC.";
 
     extraGroups = [
       "wheel"

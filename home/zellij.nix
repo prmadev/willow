@@ -12,7 +12,7 @@ with lib; {
       enable = true;
       # package = inputs.zellij;
       settings = {
-        default_shell = "zsh";
+        default_shell = "fish";
         simplified_ui = false;
         pane_frames = true;
         scroll_buffer_size = 20000;

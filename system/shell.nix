@@ -40,6 +40,13 @@
   programs.mtr.enable = true;
   environment.localBinInPath = true;
   environment.homeBinInPath = true;
+
+  programs.bash = {
+    blesh.enable = true;
+    undistractMe.enable = true;
+
+    enableCompletion = true;
+  };
   # documentation = {
   #   man = {
   #     # generateCaches = true;

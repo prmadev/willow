@@ -17,7 +17,7 @@ with lib; {
       historyLimit = 10000;
       escapeTime = 0;
       mouse = true;
-      shell = "${pkgs.zsh}/bin/zsh";
+      shell = "${pkgs.fish}/bin/fish";
       sensibleOnTop = true;
       keyMode = "vi";
       prefix = "C-Space";

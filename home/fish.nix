@@ -1,7 +1,7 @@
 {
   lib,
   config,
-  inputs,
+  pkgs,
   ...
 }:
 with lib; {
@@ -12,16 +12,36 @@ with lib; {
       enable = true;
       plugins = [
         {
-          name = "fzf-fish";
-          src = inputs.fzf-fish;
+          name = "fish-autopair";
+          src = pkgs.fishPlugins.autopair;
         }
         {
-          name = "done-fish";
-          src = inputs.done-fish;
+          name = "fish-done";
+          src = pkgs.fishPlugins.done;
         }
         {
-          name = "sponge-fish";
-          src = inputs.sponge-fish;
+          name = "fish-fzf";
+          src = pkgs.fishPlugins.fzf;
+        }
+        {
+          name = "fish-grc";
+          src = pkgs.fishPlugins.grc;
+        }
+        {
+          name = "fish-sponge";
+          src = pkgs.fishPlugins.sponge;
+        }
+        {
+          name = "fish-puffer";
+          src = pkgs.fishPlugins.puffer;
+        }
+        {
+          name = "fish-fzf-fish";
+          src = pkgs.fishPlugins.fzf-fish;
+        }
+        {
+          name = "fish-colored-man-pages";
+          src = pkgs.fishPlugins.colored-man-pages;
         }
       ];
       interactiveShellInit = ''
