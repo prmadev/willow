@@ -127,7 +127,7 @@ with lib; {
                --mff-tab-color: #EA6F91;
                --mff-tab-font-family: "${config.global-fonts.main-regular} book";
                --mff-tab-font-size: 11pt;
-               --mff-tab-font-weight: 400;
+               --mff-tab-font-weight: 325;
                --mff-tab-height: 32px;
                --mff-tab-pinned-bg: #9BCED7;
                --mff-tab-selected-bg: ${config.colors.macchiato.teal.hex};

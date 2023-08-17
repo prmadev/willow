@@ -40,6 +40,7 @@ with lib; {
           };
         };
       };
+      enableZshIntegration = false;
     };
     # home.packages = with pkgs; [skim];
   };

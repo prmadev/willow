@@ -1,6 +1,7 @@
 {
   lib,
   config,
+  pkgs,
   ...
 }:
 with lib; {
@@ -20,7 +21,7 @@ with lib; {
       fzf = mkIf config.fzf.enable "fzf --preview='pistol {}'";
       j = "jobs";
       f = "fg";
-      h = "hx";
+      # h = "hx";
       b = "bg";
       n = "nvim";
       pc = "proxychains4 -q";
@@ -31,6 +32,9 @@ with lib; {
       ga = "git add --patch";
       gd = "git diff";
       gsi = "git si";
+
+      #tmux
+      # t = "${pkgs.tmux}/bin/tmux new -A -s $(${pkgs.gum}/bin/gum input --placeholder=name)";
     };
   };
 }

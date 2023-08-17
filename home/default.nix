@@ -6,12 +6,14 @@
   imports = [
     ./general.nix
     ./firefox.nix
+    ./fuzzel.nix
     ./chromium.nix
     ./qute.nix
     ./senpai.nix
     ./tiny.nix
     ./slack.nix
     ./syncthing.nix
+    ./pinentry.nix
     ./telegram.nix
     ./exercism.nix
     ./graphical.nix
@@ -24,6 +26,7 @@
     ./general.nix
     ./atuin.nix
     ./typst.nix
+    ./wofi.nix
     ./irssi.nix
     ./kitty.nix
     ./wezterm
@@ -138,6 +141,8 @@
   fzf.enable = true;
   nu.enable = true;
   pager.enable = true;
+  wofi.enable = true;
+  fuzzel.enable = true;
   starship.enable = true;
   pet.enable = false; # candidate for cleaning
   zsh.enable = true;
@@ -156,6 +161,7 @@
   wayland.enable = true;
   slack.enable = false; # candidate for cleaning
   picom.enable = false; # candidate for cleaning
+  pinentry.enable = true;
   development.enable = true; # development and languages
   monitor.enable = true; # monitoring utilities
   insomnia.enable = false; # candidate for cleaning

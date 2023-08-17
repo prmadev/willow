@@ -7,6 +7,14 @@ with lib; {
         type = types.str;
         default = "#${s}";
       };
+      hexWithLastFF = mkOption {
+        type = types.str;
+        default = "#${s}FF";
+      };
+      rawHexWithLastFF = mkOption {
+        type = types.str;
+        default = "${s}FF";
+      };
 
       rawHex = mkOption {
         type = types.str;

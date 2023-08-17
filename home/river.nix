@@ -23,22 +23,7 @@ with lib; {
         enable = true;
         executable = true;
         source = pkgs.writeShellScript "tmux-picker" ''
-          smug_list=$(smug list)
-
-          chosen=$(echo "$smug_list" | rofi -dmenu)
-
-          if [[ -z "$chosen"  ]]; then
-            exit 0
-           else
-
-          if [[ "$smug_list" == *"$chosen"* ]]; then
-              foot smug "$chosen" -a
-            else
-              foot tmux new -s "$chosen"
-          fi
-
-          fi
-
+          riverctl spawn "${pkgs.foot}/bin/foot ${pkgs.tmux}/bin/tmux new -A -s $(${pkgs.fuzzel}/bin/fuzzel --dmenu --log-level=none)"
         '';
         target = ".local/bin/tmux-picker";
       };

@@ -55,7 +55,7 @@ with lib; {
 
     programs.gh = {
       enable = true;
-      enableGitCredentialHelper = true;
+      gitCredentialHelper.enable = true;
       extensions = [
         pkgs.gh-dash
         pkgs.gh-eco

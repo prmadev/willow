@@ -46,10 +46,19 @@ with lib; {
       ];
       interactiveShellInit = ''
         set -Ux FZF_DEFAULT_OPTS "\
-        --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
+        --color=bg+:#313244,bg:${config.colors.macchiato.base.hex},spinner:#f5e0dc,hl:#f38ba8 \
         --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
         --color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
       '';
+      shellAbbrs = {
+        hxi = "hx $(${pkgs.gum}/bin/gum file -a)";
+        h = "hx $(${pkgs.gum}/bin/gum file -a)";
+        sw = "sudo nixos-rebuild switch --flake ~/willow/#";
+        swf = "sudo nixos-rebuild switch --flake ~/willow/# --fast";
+        t = "${pkgs.tmux}/bin/tmux new -A -s $(${pkgs.gum}/bin/gum input --placeholder=name)";
+        v2 = "${pkgs.v2ray}/bin/v2ray run -c ~/vless-hackap.json";
+        new-pro = "cat vless-hackap.json | ${pkgs.jq}/bin/jq .outbounds=\"$(wl-paste | ${pkgs.jq}/bin/jq .outbounds)\" > vless-hackap.json";
+      };
     };
 
     # programs.fzf.enableFishIntegration = config.fzf.enable;

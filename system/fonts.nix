@@ -7,6 +7,7 @@
     recursive
     vazir-fonts
     material-design-icons
+    commit-mono
     (nerdfonts.override {fonts = ["JetBrainsMono" "CascadiaCode" "DaddyTimeMono"];})
   ];
   fonts = {
