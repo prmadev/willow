@@ -58,7 +58,7 @@ with lib; {
       };
       main-set = mkOption {
         type = types.listOf types.str;
-        default = ["Pragmata Pro Mono" "Belinsky" "Operator Mono Book" "Operator Mono Regular" "" "OperatorMono Nerd Font Mono" "ComicCodeLigatures Nerd Font" "ComicCodeLigatures Nerd Font Complete Mono" "Gintronic" "Vazirmatn"];
+        default = ["Pragmata Pro" "Pragmata Pro Mono" "Belinsky" "Operator Mono Book" "Operator Mono Regular" "" "OperatorMono Nerd Font Mono" "ComicCodeLigatures Nerd Font" "ComicCodeLigatures Nerd Font Complete Mono" "Gintronic" "Vazirmatn"];
       };
     };
   };

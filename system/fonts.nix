@@ -8,6 +8,10 @@
     vazir-fonts
     material-design-icons
     commit-mono
+    maple-mono-NF
+    maple-mono-otf
+
+    martian-mono
     (nerdfonts.override {fonts = ["JetBrainsMono" "CascadiaCode" "DaddyTimeMono"];})
   ];
   fonts = {

@@ -8,8 +8,8 @@ return {
 	font_size = 15.0,
 	font = wezterm.font_with_fallback({
 		{
-		family = 'Operator Mono Book',
-		 weight = "Book"
+		family = 'Pragmata Pro Mono',
+		 weight = "Regular"
 		},
 
 		{ family = "ComicCodeLigatures Nerd Font" },
@@ -29,6 +29,7 @@ return {
 			italic = false,
 			intensity = "Bold",
 			font = wezterm.font_with_fallback({
+				{ family = "Pragmata Pro Mono", weight = "Bold" },
 				{ family = "Operator Mono", weight = "Bold" },
 				{ family = "ComicCodeLigatures Nerd Font", weight = "Bold" },
 				{ family = "Comic Code Ligatures", weight = "Bold" },
@@ -39,6 +40,7 @@ return {
 			italic = false,
 			intensity = "Normal",
 			font = wezterm.font_with_fallback({
+				{ family = "Pragmata Pro Mono", weight = "Regular" },
 				{ family = "Operator Mono", weight = "Book" },
 				{ family = "ComicCodeLigatures Nerd Font" },
 				{ family = "Comic Code Ligatures" },
@@ -49,6 +51,7 @@ return {
 			italic = false,
 			intensity = "Half",
 			font = wezterm.font_with_fallback({
+				{ family = "Pragmata Pro Mono", weight = "Regular" },
 				{ family = "Operator Mono", weight = "Light" },
 				{ family = "ComicCodeLigatures Nerd Font" },
 				{ family = "ComicCodeLigatures Nerd Font", weight = "Light" },
@@ -62,6 +65,11 @@ return {
 			italic = true,
 			intensity = "Bold",
 			font = wezterm.font_with_fallback({
+				{
+					family = "Pragmata Mono",
+					weight = "Bold",
+					style = "Italic",
+				},
 				{
 					family = "Operator Mono",
 					weight = "Bold",
@@ -88,6 +96,7 @@ return {
 			italic = true,
 			intensity = "Normal",
 			font = wezterm.font_with_fallback({
+				{ family = "Pragmata Pro Mono", style = "Italic", weight = "Regular" },
 				{ family = "Operator Mono", style = "Italic", weight = "Book" },
 				{ family = "ComicCodeLigatures Nerd Font", style = "Italic" },
 				{ family = "Comic Code Ligatures", style = "Italic" },
@@ -98,6 +107,7 @@ return {
 			italic = true,
 			intensity = "Half",
 			font = wezterm.font_with_fallback({
+				{ family = "Pragmata Pro Mono", style = "Italic", weight = "Regular" },
 				{ family = "Operator Mono", style = "Italic", weight = "Light" },
 				{
 					family = "ComicCodeLigatures Nerd Font",

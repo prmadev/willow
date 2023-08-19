@@ -10,7 +10,7 @@ with lib; {
 
     font.main = mkOption {
       type = types.str;
-      default = "Operator Mono";
+      default = "Pragmata Pro";
     };
 
     gtkconf.enable = mkEnableOption "gtkConf settings";

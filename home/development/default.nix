@@ -19,6 +19,7 @@ with lib; {
     ./vscode.nix
     ./zig.nix
     ./ocaml.nix
+    ./datagrip.nix
     ./sql.nix
     ./elm.nix
   ];
@@ -26,6 +27,7 @@ with lib; {
   options.development.enable = mkEnableOption "development options";
 
   config = mkIf config.development.enable {
+    datagrip.enable = true;
     elm.enable = true;
     build.enable = true;
     direnv.enable = true;
