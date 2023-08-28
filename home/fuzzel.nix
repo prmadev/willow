@@ -23,9 +23,9 @@ with lib; {
           background = config.colors.macchiato.base.rawHexWithLastFF;
           text = config.colors.macchiato.text.rawHexWithLastFF;
           match = config.colors.macchiato.red.rawHexWithLastFF;
-          selection = config.colors.macchiato.red.rawHexWithLastFF;
-          selection-text = config.colors.macchiato.surface1.rawHexWithLastFF;
-          selection-match = config.colors.macchiato.base.rawHexWithLastFF;
+          selection = config.colors.macchiato.text.rawHexWithLastFF;
+          selection-text = config.colors.macchiato.base.rawHexWithLastFF;
+          selection-match = config.colors.macchiato.red.rawHexWithLastFF;
           border = config.colors.macchiato.base.rawHexWithLastFF;
         };
         border = {

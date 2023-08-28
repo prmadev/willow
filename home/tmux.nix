@@ -42,7 +42,7 @@ with lib; {
         }
         {
           plugin = tmuxPlugins.catppuccin;
-          extraConfig = "set -g @catppuccin_flavour 'macchiato'\n" + "set -g @catppuccin_window_tabs_enabled on" + "\n";
+          extraConfig = "set -g @catppuccin_flavour 'macchiato'\n" + "set -g @catppuccin_window_tabs_enabled on" + "\n" + "set -g @catppuccin_window_right_separator \"█ \"" + "\n" + "set -g @catppuccin_status_left_separator \"█\"" + "\n" + "set -g @catppuccin_status_right_separator \"█\"" + "\n";
         }
         {
           plugin = tmuxPlugins.yank;

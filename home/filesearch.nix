@@ -10,7 +10,7 @@ with lib; {
   config = mkIf config.filesearch.enable {
     home.packages = with pkgs; [
       fd
-      ripgrep-all
+      # ripgrep-all
       ripgrep
       sd
     ];

@@ -10,19 +10,37 @@ with lib; {
 
     font.main = mkOption {
       type = types.str;
-      default = "Pragmata Pro";
+      default = "Maple Mono";
     };
 
     gtkconf.enable = mkEnableOption "gtkConf settings";
   };
 
   config = mkIf config.font.enable {
+    home.pointerCursor = {
+      package = pkgs.catppuccin-cursors;
+      name = "macchiatoSky";
+      x11 = {
+        enable = true;
+      };
+      gtk.enable = true;
+      size = 24;
+    };
+    home.keyboard.options = [
+      "grp:alt_shift_toggle,caps:escape"
+    ];
     fonts.fontconfig.enable = true;
     gtk = mkIf config.gtkconf.enable {
       enable = true;
       font = {
         name = config.font.main;
         size = 12;
+      };
+
+      cursorTheme = {
+        package = pkgs.catppuccin-cursors;
+        name = "macchiatoSky";
+        size = 24;
       };
 
       theme = {

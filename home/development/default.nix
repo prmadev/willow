@@ -28,7 +28,7 @@ with lib; {
 
   config = mkIf config.development.enable {
     datagrip.enable = true;
-    elm.enable = true;
+    elm.enable = false;
     build.enable = true;
     direnv.enable = true;
     git.enable = true;
@@ -41,8 +41,8 @@ with lib; {
     rust.enable = true;
     vscode.enable = false;
     zig.enable = true;
-    haskell.enable = true;
-    ocaml.enable = true;
+    haskell.enable = false;
+    ocaml.enable = false;
     sql.enable = true;
   };
 }

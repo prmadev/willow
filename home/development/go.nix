@@ -10,7 +10,7 @@ with lib; {
   config = mkIf config.go.enable {
     programs.go = {
       enable = true;
-      package = pkgs.go_1_20;
+      package = pkgs.go_1_21;
       packages = {
         # "golang.org/x/text" = builtins.fetchGit "https://go.googlesource.com/text";
       };
@@ -20,6 +20,7 @@ with lib; {
     home.packages = with pkgs; [
       richgo
       golangci-lint-langserver
+      ent-go
       go-tools
     ];
 

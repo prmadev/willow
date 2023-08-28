@@ -20,6 +20,7 @@ with lib; {
       # evdevremapkeys
       wev
       egl-wayland
+      wbg
     ];
 
     programs.firefox = {

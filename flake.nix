@@ -126,6 +126,15 @@
       url = "github:leophys/zsh-plugin-fzf-finder";
       flake = false;
     };
+    catppuccin-fish = {
+      url = "github:catppuccin/fish";
+      flake = false;
+    };
+    bat-catppuccin = {
+      url = "github:catppuccin/bat";
+
+      flake = false;
+    };
   };
 
   outputs = {

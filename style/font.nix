@@ -4,61 +4,61 @@ with lib; {
     global-fonts = {
       main-family = mkOption {
         type = types.str;
-        default = "Pragmata Pro Mono";
+        default = "Maple Mono";
       };
 
       main-black = mkOption {
         type = types.str;
-        default = "Pragmata Pro Mono Bold";
+        default = "Maple Mono Bold";
       };
       main-black-italic = mkOption {
         type = types.str;
-        default = "Pragmata Pro Mono Bold Italic";
+        default = "Maple Mono Bold Italic";
       };
       main-bold = mkOption {
         type = types.str;
-        default = "Pragmata Pro Mono Bold";
+        default = "Maple Mono Bold";
       };
       main-bold-italic = mkOption {
         type = types.str;
-        default = "Pragmata Pro Mono Bold Italic";
+        default = "Maple Mono Bold Italic";
       };
       main-medium = mkOption {
         type = types.str;
-        default = "Pragmata Pro Mono Bold";
+        default = "Maple Mono Bold";
       };
       main-medium-italic = mkOption {
         type = types.str;
-        default = "Pragmata Pro Mono Bold Italic";
+        default = "Maple Mono Bold Italic";
       };
       main-regular = mkOption {
         type = types.str;
-        default = "Pragmata Pro Mono";
+        default = "Maple Mono";
       };
       main-italic = mkOption {
         type = types.str;
-        default = "Pragmata Pro Mono Italic";
+        default = "Maple Mono Italic";
       };
 
       main-light = mkOption {
         type = types.str;
-        default = "Pragmata Pro Mono";
+        default = "Maple Mono Light";
       };
       main-light-italic = mkOption {
         type = types.str;
-        default = "Pragmata Pro Mono Italic";
+        default = "Maple Mono Light Italic";
       };
       main-thin = mkOption {
         type = types.str;
-        default = "Pragmata Pro Mono";
+        default = "Maple Mono Light";
       };
       main-thin-italic = mkOption {
         type = types.str;
-        default = "Pragmata Pro Mono Italic";
+        default = "Maple Mono Light Italic";
       };
       main-set = mkOption {
         type = types.listOf types.str;
-        default = ["Pragmata Pro" "Operator Mono Book" "LigaOperatorMono Nerd Font" "OperatorMono Nerd Font Mono" "ComicCodeLigatures Nerd Font" "ComicCodeLigatures Nerd Font Complete Mono" "Gintronic" "Vazirmatn"];
+        default = ["Maple Mono" "Pragmata Pro" "Operator Mono Book" "LigaOperatorMono Nerd Font" "OperatorMono Nerd Font Mono" "ComicCodeLigatures Nerd Font" "ComicCodeLigatures Nerd Font Complete Mono" "Gintronic" "Vazirmatn"];
       };
     };
   };

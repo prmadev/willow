@@ -86,6 +86,7 @@
     ./pueue.nix
     ./monolith.nix
     ./jq.nix
+    ./pls.nix
   ];
 
   yt-dlp.enable = true;
@@ -165,6 +166,7 @@
   development.enable = true; # development and languages
   monitor.enable = true; # monitoring utilities
   insomnia.enable = false; # candidate for cleaning
+  pls.enable = true;
   repos = {
     enable = true;
     notes.enable = true;
@@ -174,6 +176,7 @@
     prmadev.enable = true;
     amirographycom.enable = true;
     soapberry.enable = true;
+    hxkeyboards.enable = true;
   };
 
   nixpkgs.overlays = [

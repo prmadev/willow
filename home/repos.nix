@@ -137,6 +137,24 @@ with lib; {
 
       description = "the path for the soapberry";
     };
+
+    hxkeyboards = {
+      enable = mkEnableOption "enable hxkeyboards repo";
+
+      path = lib.mkOption {
+        type = types.path;
+        default = "${config.repos.path}/hxkeyboards";
+        description = "the path for the hxkeyboards";
+      };
+
+      remote = lib.mkOption {
+        type = types.str;
+        default = "https://github.com/prmadev/hxkeyboards";
+        description = "the remote";
+      };
+
+      description = "the path for the hxkeyboards";
+    };
   };
 
   config = mkIf config.repos.enable {
@@ -163,6 +181,9 @@ with lib; {
 
       SOAPBERRY = mkIf config.repos.soapberry.enable "${config.repos.soapberry.path}";
       SOAPBERRY_REPO = mkIf config.repos.soapberry.enable "${config.repos.soapberry.remote}";
+
+      HXKEYBOARDS = mkIf config.repos.hxkeyboards.enable "${config.repos.hxkeyboards.path}";
+      HXKEYBOARDS_REPO = mkIf config.repos.hxkeyboards.enable "${config.repos.hxkeyboards.remote}";
     };
   };
 }

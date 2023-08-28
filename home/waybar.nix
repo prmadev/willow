@@ -1,5 +1,4 @@
 {
-  pkgs,
   lib,
   config,
   ...
@@ -26,6 +25,7 @@ with lib; {
             "river/tags"
           ];
           modules-center = [
+            "group/hx"
           ];
 
           modules-right = [
@@ -36,6 +36,32 @@ with lib; {
             # "sway/language"
             "clock"
           ];
+
+          "group/hx" = {
+            "orientation" = "horizontal";
+            "modules" = [
+              "custom/hxsubject"
+              "custom/hxkey"
+              "custom/hxdesc"
+              "custom/hxcommand"
+            ];
+          };
+          "custom/hxsubject" = {
+            "exec" = "cat ${config.repos.hxkeyboards.path}/$(date +%j).json | jq '.subject' --unbuffered --compact-output --raw-output";
+            "restart-interval" = 300;
+          };
+          "custom/hxkey" = {
+            "exec" = "cat ${config.repos.hxkeyboards.path}/$(date +%j).json | jq '.key' --unbuffered --compact-output --raw-output";
+            "restart-interval" = 300;
+          };
+          "custom/hxdesc" = {
+            "exec" = "cat ${config.repos.hxkeyboards.path}/$(date +%j).json | jq '.description' --unbuffered --compact-output --raw-output";
+            "restart-interval" = 300;
+          };
+          "custom/hxcommand" = {
+            "exec" = "cat ${config.repos.hxkeyboards.path}/$(date +%j).json | jq '.command' --unbuffered --compact-output --raw-output";
+            "restart-interval" = 300;
+          };
 
           "sway/workspaces" = {
             all-outputs = false;
@@ -80,8 +106,8 @@ with lib; {
           };
 
           network = {
-            "format-wifi" = " ";
-            "format-ethernet" = "ﯱ";
+            "format-wifi" = "  {essid}";
+            "format-ethernet" = "ﯱ {ifname}";
             "format-linked" = "  (No IP)";
             "format-disconnected" = "睊";
             "format-alt" = "{bandwidthUpBytes} {bandwidthDownBits}";
@@ -119,76 +145,84 @@ with lib; {
       #TODO use variable colors
       style = let
         bordersize-main = "3px";
-        bordersize-support = "1px";
-
-        bg-base = "background: ${config.colors.macchiato.base.hex};";
-        bg-surface = "background: ${config.colors.macchiato.surface0.hex};";
-        bg-transparent = "background: transparent;";
-
-        border-peach = let color = config.colors.macchiato.peach.hex; in "border-top: ${bordersize-main} solid ${color}; border-left:${bordersize-main} solid ${color};border-right:${bordersize-support} solid ${color};border-bottom:${bordersize-support} solid ${color}; ";
-        border-text = let color = config.colors.macchiato.text.hex; in "border-top: ${bordersize-main} solid ${color}; border-left:${bordersize-main} solid ${color};border-right:${bordersize-support} solid ${color};border-bottom:${bordersize-support} solid ${color}; ";
-        border-flamingo = let color = config.colors.macchiato.flamingo.hex; in "border-top: ${bordersize-main} solid ${color}; border-left:${bordersize-main} solid ${color};border-right:${bordersize-support} solid ${color};border-bottom:${bordersize-support} solid ${color}; ";
-        border-sapphire = let color = config.colors.macchiato.sapphire.hex; in "border-top: ${bordersize-main} solid ${color}; border-left:${bordersize-main} solid ${color};border-right:${bordersize-support} solid ${color};border-bottom:${bordersize-support} solid ${color}; ";
-        border-sky = let color = config.colors.macchiato.sky.hex; in "border-top: ${bordersize-main} solid ${color}; border-left:${bordersize-main} solid ${color};border-right:${bordersize-support} solid ${color};border-bottom:${bordersize-support} solid ${color}; ";
-        border-maroon = let color = config.colors.macchiato.maroon.hex; in "border-top: ${bordersize-main} solid ${color}; border-left:${bordersize-main} solid ${color};border-right:${bordersize-support} solid ${color};border-bottom:${bordersize-support} solid ${color}; ";
-        border-lavendar = let color = config.colors.macchiato.lavendar.hex; in "border-top: ${bordersize-main} solid ${color}; border-left:${bordersize-main} solid ${color};border-right:${bordersize-support} solid ${color};border-bottom:${bordersize-support} solid ${color}; ";
-        border-red = let color = config.colors.macchiato.red.hex; in "border-top: ${bordersize-main} solid ${color}; border-left:${bordersize-main} solid ${color};border-right:${bordersize-support} solid ${color};border-bottom:${bordersize-support} solid ${color}; ";
-
-        fg-text = "color: ${config.colors.macchiato.text.hex};";
-        fg-red = "color: ${config.colors.macchiato.red.hex};";
-        fg-flamingo = "color: ${config.colors.macchiato.flamingo.hex};";
-        fg-maroon = "color: ${config.colors.macchiato.maroon.hex};";
-        fg-sapphire = "color: ${config.colors.macchiato.sapphire.hex};";
-        fg-sky = "color: ${config.colors.macchiato.sky.hex};";
-        fg-lavendar = "color: ${config.colors.macchiato.lavendar.hex};";
-        fg-peach = "color: ${config.colors.macchiato.peach.hex};";
-        fg-transparent = "color: transparent;";
-
-        radi0 = "border-radius: 0;";
-
+        bordersize-support = "3px";
+        radi0 = "border-radius: 3px;";
         bold = "font-weight: bold;";
+
+        mkBorder = color: "border-top: ${bordersize-main} solid ${color}; border-left:${bordersize-main} solid ${color};border-right:${bordersize-support} solid ${color};border-bottom:${bordersize-support} solid ${color}; ";
+        mkBg = color: "background: ${color};";
+        mkFg = color: "color: ${color};";
+        mkPR = color: {
+          fg = mkFg color;
+          bg = mkBg color;
+          border = mkBorder color;
+        };
+
+        prop = {
+          base = mkPR config.colors.macchiato.base.hex;
+          surface0 = mkPR config.colors.macchiato.surface0.hex;
+          text = mkPR config.colors.macchiato.text.hex;
+          rosewater = mkPR config.colors.macchiato.rosewater.hex;
+          flamingo = mkPR config.colors.macchiato.flamingo.hex;
+          pink = mkPR config.colors.macchiato.pink.hex;
+          mauve = mkPR config.colors.macchiato.mauve.hex;
+          red = mkPR config.colors.macchiato.red.hex;
+          maroon = mkPR config.colors.macchiato.maroon.hex;
+          peach = mkPR config.colors.macchiato.peach.hex;
+          yellow = mkPR config.colors.macchiato.yellow.hex;
+          green = mkPR config.colors.macchiato.green.hex;
+          teal = mkPR config.colors.macchiato.teal.hex;
+          sky = mkPR config.colors.macchiato.sky.hex;
+          sapphire = mkPR config.colors.macchiato.sapphire.hex;
+          blue = mkPR config.colors.macchiato.blue.hex;
+          lavendar = mkPR config.colors.macchiato.lavendar.hex;
+          subtext1 = mkPR config.colors.macchiato.subtext1.hex;
+          subtext0 = mkPR config.colors.macchiato.subtext0.hex;
+          overlay2 = mkPR config.colors.macchiato.overlay2.hex;
+          overlay1 = mkPR config.colors.macchiato.overlay1.hex;
+          overlay0 = mkPR config.colors.macchiato.overlay0.hex;
+          surface2 = mkPR config.colors.macchiato.surface2.hex;
+          surface1 = mkPR config.colors.macchiato.surface1.hex;
+          mantle = mkPR config.colors.macchiato.mantle.hex;
+          crust = mkPR config.colors.macchiato.crust.hex;
+          transparent = mkPR "transparent";
+        };
       in let
         prelude = ''
-                          *{
-                          		border:none;
-                                 font-family: ${config.global-fonts.main-family};
-                                 font-size: 15px;
-                                 min-height: 20px;
-          border-radius: 0;
-                          	}
+          * {
+           		border:none;
+               font-family: ${config.global-fonts.main-family};
+               font-size: 15px;
+               min-height: 20px;
+               border-radius: 1px;
+           	}
         '';
-        workspace-button = ''#workspaces button{ ${border-lavendar} ${fg-lavendar} ${bg-base} ${bold} padding: 5px; margin:5px 5px 0px 5px;}'';
-        workspace-button-active = ''#workspaces button.active {${border-flamingo} ${fg-flamingo}}'';
-        workspace-button-focused = ''#workspaces button.focused {${border-flamingo} ${fg-flamingo}}'';
-        workspace-button-occupied = ''#workspaces button.occupied {${border-sky}}'';
-        workspace-button-visible = ''#workspaces button.visible {${border-sky}}'';
-        window-waybar = ''window#waybar{ ${bg-transparent} ${radi0}}'';
-        tooltip = ''tooltip { ${bg-surface} }'';
-        tooltip-label = ''tooltip label{ ${fg-text} }'';
-        tags = ''#tags{ ${bg-transparent}  ${radi0} padding:5px 5px 0px 5px;}'';
-        tags-button = ''#tags button{ ${bg-base} ${border-text} ${fg-text} ${fg-transparent} padding: 0px 5px; margin-right:5px; margin-left:5px;}'';
-        tags-button-occupied = "#tags button.occupied {${radi0} ${border-sky} ${bg-base}  ${fg-sky}}";
-        tags-button-focused = "#tags button.focused {${radi0} ${bg-base} ${bold}${border-peach} ${fg-peach}}";
-        tags-button-urgent = "#tags button.urgent {${radi0} ${bg-base} ${bold} ${border-red} ${fg-red}}";
-        other-widgets = "#custom-date, #clock, #battery, #pulseaudio,#network,#custom-joljol {${fg-text} ${bg-base} ${bold} padding: 2.5px 15px; margin: 5px 5px 0px 0px;}";
-        clock = "#clock { ${fg-flamingo} ${border-flamingo}}";
-        network = "#network { ${fg-sky} ${border-sky}}";
-        bat = "#battery { ${fg-sapphire} ${border-sapphire}}";
-        batcharging = "#battery.charging{ ${fg-sky} ${border-sky}}";
-        bathundnotcharging = "#battery.hundred:not(.charging){ ${fg-sapphire} ${border-sapphire}}";
-        batnotcharging = "#battery:not(.charging){ ${fg-maroon} ${border-maroon}}";
-        bat30notcharging = "#battery.thirty:not(.charging){ ${fg-peach} ${border-peach}}";
-        pulse = "#pulseaudio {${radi0} ${border-lavendar} ${fg-lavendar}}";
-        pulsemuted = "#pulseaudio.muted {${radi0} ${border-peach} ${fg-red}}";
-        tray = "#tray {${radi0} ${border-sky} margin: 10px 10px 0px 10px;}";
-        traymenu = "#traymenu {${radi0} }";
+        window-waybar = ''window#waybar{ ${prop.transparent.bg} ${radi0}}'';
+        tooltip = ''tooltip { ${prop.surface0.bg} }'';
+        tooltip-label = ''tooltip label{ ${prop.text.fg} }'';
+        tags = ''#tags{ ${prop.transparent.bg} ${radi0} padding:5px 5px 0px 5px; }'';
+        tags-button = ''#tags button{ ${prop.base.bg} ${prop.base.border} ${prop.transparent.fg} padding: 0px 5px; margin-right:5px; margin-left:5px; }'';
+        tags-button-occupied = "#tags button.occupied {${radi0} ${prop.base.border} ${prop.base.bg}  ${prop.text.fg}}";
+        tags-button-focused = "#tags button.focused {${radi0} ${prop.text.bg} ${bold}${prop.base.border} ${prop.base.fg}}";
+        tags-button-urgent = "#tags button.urgent {${radi0} ${prop.base.bg} ${bold} ${prop.text.border} ${prop.text.fg}}";
+        other-widgets = "#custom-date, #clock, #battery, #pulseaudio,#network,#custom-joljol {${prop.text.fg} ${prop.base.bg} ${prop.transparent.border} ${bold} padding: 2.5px 15px; margin: 5px 5px 0px 0px;}";
+        clock = "#clock { ${prop.text.fg} }";
+        network = "#network {  }";
+        bat = "#battery { }";
+        batcharging = "#battery.charging{ }";
+        bathundnotcharging = "#battery.hundred:not(.charging){ ${prop.text.border}}";
+        batnotcharging = "#battery:not(.charging){ ${prop.text.border}}";
+        bat30notcharging = "#battery.thirty:not(.charging){ ${prop.base.fg} ${prop.text.bg} }";
+        pulse = "#pulseaudio { ${radi0} }";
+        pulsemuted = "#pulseaudio.muted {${radi0} ${prop.text.border}  ${prop.base.bg} }";
+        tray = "#tray { ${radi0}  margin: 10px 10px 0px 10px; padding: 2.5px 15px; margin: 5px 5px 0px 0px; }";
+        traymenu = "#traymenu { ${radi0} }";
+        customhxsubject = "#custom-hxsubject { ${prop.text.fg} ${prop.base.bg} margin: 10px 10px 0px 10px; padding: 2.5px 15px; margin: 5px 5px 0px 0px; }";
+        customhxkey = "#custom-hxkey { ${prop.text.bg} ${prop.base.fg} margin: 10px 10px 0px 10px; padding: 2.5px 15px; margin: 5px 5px 0px 0px; }";
+        customhxdesc = "#custom-hxdesc { ${prop.text.fg} ${prop.base.bg} margin: 10px 10px 0px 10px; padding: 2.5px 15px; margin: 5px 5px 0px 0px; }";
+        customhxcommand = "#custom-hxcommand { ${prop.subtext0.fg} ${prop.base.bg} margin: 10px 10px 0px 10px; padding: 2.5px 15px; margin: 5px 5px 0px 0px; }";
       in
         prelude
-        + workspace-button
-        + workspace-button-focused
-        + workspace-button-active
-        + workspace-button-occupied
-        + workspace-button-visible
         + window-waybar
         + tooltip
         + tooltip-label
@@ -200,6 +234,10 @@ with lib; {
         + other-widgets
         + clock
         + network
+        + customhxsubject
+        + customhxkey
+        + customhxdesc
+        + customhxcommand
         + bat
         + batcharging
         + bathundnotcharging

@@ -42,7 +42,7 @@
   environment.homeBinInPath = true;
 
   programs.bash = {
-    blesh.enable = true;
+    blesh.enable = false;
     undistractMe.enable = true;
 
     enableCompletion = true;

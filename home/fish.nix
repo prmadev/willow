@@ -2,6 +2,7 @@
   lib,
   config,
   pkgs,
+  inputs,
   ...
 }:
 with lib; {
@@ -43,12 +44,19 @@ with lib; {
           name = "fish-colored-man-pages";
           src = pkgs.fishPlugins.colored-man-pages;
         }
+        {
+          name = "fish-catppuccin";
+          src = inputs.catppuccin-fish;
+        }
       ];
       interactiveShellInit = ''
-        set -Ux FZF_DEFAULT_OPTS "\
-        --color=bg+:#313244,bg:${config.colors.macchiato.base.hex},spinner:#f5e0dc,hl:#f38ba8 \
-        --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
-        --color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
+
+        fish_config theme choose "Base16 Default Dark"
+
+         set -Ux FZF_DEFAULT_OPTS "\
+         --color=bg+:#313244,bg:${config.colors.macchiato.base.hex},spinner:#f5e0dc,hl:#f38ba8 \
+         --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
+         --color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
       '';
       shellAbbrs = {
         hxi = "hx $(${pkgs.gum}/bin/gum file -a)";
@@ -58,6 +66,7 @@ with lib; {
         t = "${pkgs.tmux}/bin/tmux new -A -s $(${pkgs.gum}/bin/gum input --placeholder=name)";
         v2 = "${pkgs.v2ray}/bin/v2ray run -c ~/vless-hackap.json";
         new-pro = "cat vless-hackap.json | ${pkgs.jq}/bin/jq .outbounds=\"$(wl-paste | ${pkgs.jq}/bin/jq .outbounds)\" > vless-hackap.json";
+        ta = "${pkgs.tmux}/bin/tmux at -t $(tmux ls | cut --delimiter=\":\" --fields=1 |  ${pkgs.gum}/bin/gum choose))";
       };
     };
 

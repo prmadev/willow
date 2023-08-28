@@ -7,8 +7,9 @@ return {
 	default_prog = { "fish" },
 	font_size = 15.0,
 	font = wezterm.font_with_fallback({
+		{ family = "Maple Mono NF" },
 		{
-		family = 'Pragmata Pro Mono',
+		 family = 'Pragmata Pro Mono',
 		 weight = "Regular"
 		},
 
@@ -29,6 +30,7 @@ return {
 			italic = false,
 			intensity = "Bold",
 			font = wezterm.font_with_fallback({
+				{ family = "Maple Mono NF", weight = "Bold" },
 				{ family = "Pragmata Pro Mono", weight = "Bold" },
 				{ family = "Operator Mono", weight = "Bold" },
 				{ family = "ComicCodeLigatures Nerd Font", weight = "Bold" },
@@ -40,6 +42,7 @@ return {
 			italic = false,
 			intensity = "Normal",
 			font = wezterm.font_with_fallback({
+				{ family = "Maple Mono NF", weight = "Regular" },
 				{ family = "Pragmata Pro Mono", weight = "Regular" },
 				{ family = "Operator Mono", weight = "Book" },
 				{ family = "ComicCodeLigatures Nerd Font" },
@@ -51,6 +54,7 @@ return {
 			italic = false,
 			intensity = "Half",
 			font = wezterm.font_with_fallback({
+				{ family = "Maple Mono NF", weight = "Light" },
 				{ family = "Pragmata Pro Mono", weight = "Regular" },
 				{ family = "Operator Mono", weight = "Light" },
 				{ family = "ComicCodeLigatures Nerd Font" },
@@ -65,6 +69,11 @@ return {
 			italic = true,
 			intensity = "Bold",
 			font = wezterm.font_with_fallback({
+				{
+					family = "Maple Mono NF",
+					weight = "Bold",
+					style = "Italic",
+				},
 				{
 					family = "Pragmata Mono",
 					weight = "Bold",
@@ -96,6 +105,7 @@ return {
 			italic = true,
 			intensity = "Normal",
 			font = wezterm.font_with_fallback({
+				{ family = "Maple Mono NF", style = "Italic", weight = "Regular" },
 				{ family = "Pragmata Pro Mono", style = "Italic", weight = "Regular" },
 				{ family = "Operator Mono", style = "Italic", weight = "Book" },
 				{ family = "ComicCodeLigatures Nerd Font", style = "Italic" },
@@ -107,6 +117,7 @@ return {
 			italic = true,
 			intensity = "Half",
 			font = wezterm.font_with_fallback({
+				{ family = "Maple Mono NF", style = "Italic", weight = "Regular" },
 				{ family = "Pragmata Pro Mono", style = "Italic", weight = "Regular" },
 				{ family = "Operator Mono", style = "Italic", weight = "Light" },
 				{
