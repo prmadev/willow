@@ -32,7 +32,7 @@ in
         tor
         arti
         torsocks
-        qv2ray
+        # qv2ray
         sshuttle
         go-graft
         # cloudflare-warp

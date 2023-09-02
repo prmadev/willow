@@ -17,7 +17,7 @@ with lib; {
         pane_frames = true;
         scroll_buffer_size = 20000;
         scrollback_editor = "${pkgs.helix}/bin/hx";
-        ui.pane_frames.rounded_corners = false;
+        # ui.pane_frames.rounded_corners = false;
         copy_command = "wl-copy";
         theme = "catppuccin-macchiato";
         themes = {
