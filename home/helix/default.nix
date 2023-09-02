@@ -2,7 +2,6 @@
   pkgs,
   lib,
   config,
-  inputs,
   ...
 }:
 with lib; {
@@ -15,7 +14,7 @@ with lib; {
       enable = true;
       defaultEditor = true;
 
-      package = inputs.helix.packages.${pkgs.system}.default;
+      package = config.editor.helix.package;
 
       languages = {
         language-server = {

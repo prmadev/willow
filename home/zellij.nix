@@ -5,19 +5,29 @@
   ...
 }:
 with lib; {
-  options.zellij.enable = mkEnableOption "zellij setitngs";
+  options.zellij = {
+    enable = mkEnableOption "zellij setitngs";
+    shell = mkOption {
+      type = types.str;
+      default = config.shell.user;
+    };
+    package = mkOption {
+      type = types.package;
+      default = config.multiplexer.zellij.package;
+    };
+  };
 
   config = mkIf config.zellij.enable {
     programs.zellij = {
       enable = true;
-      # package = inputs.zellij;
+      package = config.zellij.package;
       settings = {
-        default_shell = "fish";
-        simplified_ui = false;
+        default_shell = config.zellij.shell;
+        simplified_ui = true;
         pane_frames = true;
-        scroll_buffer_size = 20000;
-        scrollback_editor = "${pkgs.helix}/bin/hx";
-        # ui.pane_frames.rounded_corners = false;
+        scroll_buffer_size = 200000;
+        scrollback_editor = config.editor.terminal;
+        ui.pane_frames.rounded_corners = true;
         copy_command = "wl-copy";
         theme = "catppuccin-macchiato";
         themes = {
@@ -36,12 +46,15 @@ with lib; {
           };
         };
         keybinds = {
+          unbind = ["Ctrl t"];
           normal = {
+            "bind \"Alt t\"" = {
+              SwitchToMode = "Tab";
+            };
           };
         };
       };
       enableZshIntegration = false;
     };
-    # home.packages = with pkgs; [skim];
   };
 }

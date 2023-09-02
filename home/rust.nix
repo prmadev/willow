@@ -17,6 +17,7 @@ with lib; {
         cargo-vet
         cargo-pgx
         cargo-temp
+        cargo-shuttle
         cargo-sort
         cargo-sweep
         cargo-audit

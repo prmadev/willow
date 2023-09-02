@@ -73,7 +73,7 @@ with lib; {
         enable = true;
         # envFile.text = "starship init nu | save -f  ~/.cache/starship/init.nu";
         environmentVariables = {
-          EDITOR = "hx";
+          EDITOR = config.editor.terminal;
           PROMPT_COMMAND = "{ def create_left_prompt [] { starship prompt --cmd-duration $env.CMD_DURATION_MS $'--status=($env.LAST_EXIT_CODE)' } }";
           # STARSHIP_SHELL = "nu";
           NU_LIB_DIRS = "\"${nuLibDirs}\"";

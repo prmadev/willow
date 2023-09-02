@@ -1,10 +1,30 @@
 {
   inputs,
   system,
+  pkgs,
+  config,
   ...
 }: {
   imports = [
     ./general.nix
+    ./build.nix
+    ./direnv.nix
+    ./go.nix
+    ./git.nix
+    ./neovim.nix
+    ./helix
+    ./pref.nix
+    ./haskell.nix
+    ./nixdev.nix
+    ./protobuf.nix
+    ./grpc.nix
+    ./rust.nix
+    ./vscode.nix
+    ./zig.nix
+    ./ocaml.nix
+    ./datagrip.nix
+    ./sql.nix
+    ./elm.nix
     ./firefox.nix
     ./fuzzel.nix
     ./chromium.nix
@@ -53,7 +73,7 @@
     ./mako.nix
     ./zola.nix
     # ./hyprland.nix
-    ./sway
+    ./sway.nix
     ./eww
     ./picom.nix
     ./global-fonts.nix
@@ -81,7 +101,6 @@
     ./agenix.nix
     ./discord.nix
     ./wayland.nix
-    ./development
     ./monitor.nix
     ./pueue.nix
     ./monolith.nix
@@ -157,16 +176,39 @@
   mako.enable = true;
   river.enable = true;
   eww.enable = false;
-  # hyprland.enable = false;
   sway.enable = false; # candidate for cleaning
   wayland.enable = true;
   slack.enable = false; # candidate for cleaning
   picom.enable = false; # candidate for cleaning
   pinentry.enable = true;
-  development.enable = true; # development and languages
+  datagrip.enable = false;
+  elm.enable = false;
+  build.enable = true;
+  direnv.enable = true;
+  git.enable = true;
+  go.enable = true;
+  neovim.enable = true;
+  protobuf.enable = true;
+  grpc.enable = true;
+  helix.enable = true;
+  nixdev.enable = true;
+  rust.enable = true;
+  vscode.enable = false;
+  zig.enable = true;
+  haskell.enable = false;
+  ocaml.enable = false;
+  sql.enable = true;
   monitor.enable = true; # monitoring utilities
   insomnia.enable = false; # candidate for cleaning
   pls.enable = true;
+
+  shell.user = "${pkgs.fish}/bin/fish";
+  editor = {
+    terminal = "${config.editor.helix.package}/bin/hx";
+    helix.package = inputs.helix.packages.${pkgs.system}.default;
+  };
+
+  terminal = "${pkgs.foot}/bin/foot";
   repos = {
     enable = true;
     notes.enable = true;

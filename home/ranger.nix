@@ -16,11 +16,11 @@ with lib; {
       associations = [
         {
           mime = "text/*";
-          command = "wezterm start hx &pistol-filename%";
+          command = "${config.terminal} ${config.editor.terminal} &pistol-filename%";
         }
         {
           mime = "text/x-go";
-          command = "wezterm start hx &pistol-filename%";
+          command = "${config.terminal} ${config.editor.terminal} &pistol-filename%";
         }
       ];
     };

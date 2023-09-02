@@ -8,6 +8,10 @@ with lib; {
   options.tmux = {
     enable = mkEnableOption "tmux";
     autorun = mkEnableOption "autorun tmux";
+    shell = mkOption {
+      type = types.str;
+      default = config.shell.user;
+    };
   };
 
   config = mkIf config.tmux.enable {
@@ -17,7 +21,7 @@ with lib; {
       historyLimit = 10000;
       escapeTime = 0;
       mouse = true;
-      shell = "${pkgs.fish}/bin/fish";
+      shell = config.tmux.shell;
       sensibleOnTop = true;
       keyMode = "vi";
       prefix = "C-Space";
