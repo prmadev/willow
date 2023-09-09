@@ -23,7 +23,7 @@ with lib; {
 
       remote = lib.mkOption {
         type = types.str;
-        default = "https://github.com/prmadev/notes";
+        default = "https://codeberg.org/prma/notes";
         description = "the remote";
       };
 
@@ -59,7 +59,7 @@ with lib; {
 
       remote = lib.mkOption {
         type = types.str;
-        default = "https://github.com/prmadev/algae";
+        default = "https://codeberg.org/prma/algae";
         description = "the remote";
       };
 
@@ -131,7 +131,7 @@ with lib; {
 
       remote = lib.mkOption {
         type = types.str;
-        default = "https://github.com/prmadev/soapberry";
+        default = "https://codeberg.org/prma/soapberry";
         description = "the remote";
       };
 

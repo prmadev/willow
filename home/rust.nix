@@ -78,6 +78,7 @@ with lib; {
         trunk # for wasm
         sea-orm-cli
         sqlx-cli
+        bunyan-rs
       ];
     in
       cargoSubCommands

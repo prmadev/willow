@@ -38,7 +38,7 @@
 
     zig.url = "github:mitchellh/zig-overlay";
     zls.url = "github:zigtools/zls";
-    kyushu.url = "github:prmadev/soapberry";
+    kyushu.url = "git+https://codeberg.org/prma/soapberry.git";
 
     # ghS = {
     #   url = "github:gennaro-tedesco/gh-s";

@@ -22,14 +22,28 @@ _: {
 
   programs.gnupg.agent = {
     enable = true;
+    enableBrowserSocket = true;
+    enableExtraSocket = true;
     enableSSHSupport = true;
+    pinentryFlavor = "curses";
+    # enableSSHSupport = false;
+  };
+  programs.ssh.knownHosts = {
+    # github = {
+    #   extraHostNames = ["github.com"];
+    #   publicKey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMBdfp2WO8FIN6dYb+fCUpJRmu2+bhI8kfrgVcdI5PRn prma.dev@protonmail.com";
+    # };
+    # codeberg = {
+    #   extraHostNames = ["codeberg.org" "217.197.91.145"];
+    #   publicKey = "SHA256 mIlxA9k46MmM6qdJOdMnAQpzGxF4WIVVL+fj+wZbw0g";
+    # };
   };
 
   environment.variables = {
     NIX_CURL_FLAGS = "";
   };
 
-  services.openssh.enable = true;
+  services.openssh.enable = false;
 
   networking.wireguard = {
     # enable = true;

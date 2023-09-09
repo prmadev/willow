@@ -12,6 +12,7 @@ with lib; {
       git-gone # trim stale branches
       git-bug # bug reporting right inside the repo
       git-workspace # workspace management
+      codeberg-cli
     ];
 
     programs.git = {
@@ -29,11 +30,18 @@ with lib; {
         rebase.autosquash = true;
         rebase.autoStash = true;
         url = {
-          # "ssh://git@github.com".insteadOf = "https://github.com";
+          "ssh://git@codeberg.org".insteadOf = "https://codeberg.org";
+          "ssh://git@github.com".insteadOf = "https://github.com";
           "https://github.com/" = {
             insteadOf = [
               "gh:"
               "github:"
+            ];
+          };
+          "https://codeberg.org/" = {
+            insteadOf = [
+              "cb:"
+              "codeberg:"
             ];
           };
         };
@@ -55,7 +63,7 @@ with lib; {
 
     programs.gh = {
       enable = true;
-      gitCredentialHelper.enable = true;
+      gitCredentialHelper.enable = false;
       extensions = [
         pkgs.gh-dash
         pkgs.gh-eco
