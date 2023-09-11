@@ -7,7 +7,9 @@ with lib; {
   options.gpg.enable = mkEnableOption "gpg settings";
 
   config = mkIf config.gpg.enable {
-    programs.gpg.enable = true;
+    programs.gpg = {
+      enable = true;
+    };
 
     services.gpg-agent = {
       enable = true;
@@ -16,6 +18,9 @@ with lib; {
       enableBashIntegration = true;
       enableFishIntegration = true;
       enableZshIntegration = true;
+      enableExtraSocket = true;
+      defaultCacheTtl = 3600;
+      defaultCacheTtlSsh = 3600;
       sshKeys = [
         # "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEUYZWlY3NrgLHeDCChXIm2Wu/cQAIg7dB0WNsD0yRQa a@nixer"
         # "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEUYZWlY3NrgLHeDCChXIm2Wu/cQAIg7dB0WNsD0yRQa a@nixer"

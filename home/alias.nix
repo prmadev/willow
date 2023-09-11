@@ -11,7 +11,7 @@ with lib; {
     # programs.exa.enableAliases = mkIf config.filesearch.enable true;
 
     home.shellAliases = {
-      tree = mkIf config.filesearch.enable "exa --tree --icons";
+      tree = mkIf config.filesearch.enable "eza --tree --icons";
       rg = mkIf config.filesearch.enable "rg --sort path";
       jctl = "journalctl -p 3 -xb";
       df = "df -h";

@@ -26,7 +26,6 @@ _: {
     enableExtraSocket = true;
     enableSSHSupport = true;
     pinentryFlavor = "curses";
-    # enableSSHSupport = false;
   };
   programs.ssh.knownHosts = {
     # github = {

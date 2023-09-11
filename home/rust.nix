@@ -79,6 +79,7 @@ with lib; {
         sea-orm-cli
         sqlx-cli
         bunyan-rs
+        rust-script
       ];
     in
       cargoSubCommands
