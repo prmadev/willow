@@ -7,6 +7,7 @@
 }: {
   imports = [
     ./general.nix
+    ./soupault.nix
     ./build.nix
     ./direnv.nix
     ./go.nix
@@ -201,6 +202,7 @@
   monitor.enable = true; # monitoring utilities
   insomnia.enable = false; # candidate for cleaning
   pls.enable = true;
+  soupault.enable = true;
 
   shell.user = "${pkgs.fish}/bin/fish";
   editor = {

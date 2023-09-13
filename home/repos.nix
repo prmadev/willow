@@ -95,7 +95,7 @@ with lib; {
 
       remote = lib.mkOption {
         type = types.str;
-        default = "https://github.com/prmadev/prmadev";
+        default = "https://codeberg.org/prma/prmadev";
         description = "the remote";
       };
 

@@ -50,7 +50,7 @@ with lib; {
             file_name="$date-$slug.md"
             echo "$info_tag $(${gum} style "The output file will be named:" --italic) $(${gum} style "$file_name" --bold  --italic)"
 
-            repo_local="${config.repos.prma.path}/content"
+            repo_local="${config.repos.prmadev.path}/content"
             echo "$info_tag $(${gum} style "And located at:" --italic) $(${gum} style "$repo_local" --bold  --italic)"
 
             cd "$repo_local" || exit
@@ -74,7 +74,7 @@ with lib; {
             +++
 
 
-            # Dear Readers...
+            ## Dear Readers...
 
 
             {{ discussion() }}
