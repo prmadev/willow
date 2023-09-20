@@ -14,6 +14,7 @@
     ./git.nix
     ./neovim.nix
     ./helix
+    ./emacs.nix
     ./pref.nix
     ./haskell.nix
     ./nixdev.nix
@@ -70,6 +71,8 @@
     ./lf.nix
     ./river.nix
     ./waybar.nix
+    ./pandoc.nix
+    ./asciidoc.nix
     ./repos.nix
     ./mako.nix
     ./zola.nix
@@ -188,6 +191,8 @@
   direnv.enable = true;
   git.enable = true;
   go.enable = true;
+  pandoc.enable = true;
+  asciidoc.enable = true;
   neovim.enable = true;
   protobuf.enable = true;
   grpc.enable = true;
@@ -199,10 +204,11 @@
   haskell.enable = false;
   ocaml.enable = false;
   sql.enable = true;
+  emacs.enable = true;
   monitor.enable = true; # monitoring utilities
   insomnia.enable = false; # candidate for cleaning
   pls.enable = true;
-  soupault.enable = true;
+  soup.enable = true;
 
   shell.user = "${pkgs.fish}/bin/fish";
   editor = {
