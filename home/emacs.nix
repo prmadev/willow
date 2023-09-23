@@ -1,83 +1,119 @@
 {
-  pkgs,
   lib,
   config,
+  pkgs,
   ...
 }:
 with lib; {
   options.emacs.enable = mkEnableOption "emacs settings";
 
   config = mkIf config.emacs.enable {
-    programs.emacs = {
-      enable = true;
-      package = pkgs.emacs29-pgtk;
-      extraPackages = epkgs:
-        with epkgs; [
-          magit
-          catppuccin-theme
-          evil
-          counsel
-          swiper
-          ivy
-          doom-modeline
-          doom-themes
-          nerd-icons
-          nerd-icons-ivy-rich
-          nerd-icons-ibuffer
-          nerd-icons-dired
-          nerd-icons-completion
-        ];
+    # programs.doom-emacs = {
+      #   enable = true;
+      # doomPrivateDir = ./doom.d;
+      # emacsPackage = pkgs.emacs29-pgtk;
 
-      extraConfig = let
-        gsk = keys: command: "(global-set-key (kbd \"" + keys + "\") '" + command + " )";
-        disableStartup = "(setq inhibit-startup-message t)";
-        disableVisibleScrollbar = "(scroll-bar-mode -1)";
-        disableTooltipmode = "(tooltip-mode -1)";
-        disableToolbar = "(tool-bar-mode -1)";
-        disableMenubar = "(menu-bar-mode -1)";
-        setFringMode = "(set-fringe-mode 10)";
-        setVisualbell = "(setq visible-bell t)";
-        setFont = "(set-face-attribute `default nil :font \"monospace\" :height 150)";
-        setTheme = "(load-theme 'catppuccin :no-confirm) (setq catppuccin-flavor 'macchiato) (catppuccin-reload)";
-        disableFrame = "(setq default-frame-alist '((undecorated . t)))";
-        escapeIsJustEscape = "(global-set-key (kbd \"<escape>\") 'keyboard-escape-quit)";
-        enableEvil = "(require 'evil) (evil-mode 1)";
-        enableIvyMode = "(ivy-mode)(setq ivy-use-virtual-buffers t)(setq enable-recursive-minibuffers t)(setq search-default-mode #'char-fold-to-regexp)";
-        counselMBHistoryBind = "(define-key minibuffer-local-map (kbd \"C-r\") 'counsel-minibuffer-history)";
-        doomModeline = "(require 'doom-modeline)(doom-modeline-mode 1)";
-      in
-        builtins.concatStringsSep "\n" [
-          disableStartup
-          setFont
-          escapeIsJustEscape
-          disableFrame
-          setVisualbell
-          disableMenubar
-          disableVisibleScrollbar
-          disableToolbar
-          disableTooltipmode
-          setFringMode
-          setTheme
-          enableEvil
-          enableIvyMode
-          (gsk "\\C-s" "swiper")
-          (gsk "C-c C-r" "ivy-resume")
-          (gsk "M-x" "counsel-M-x")
-          (gsk "C-x C-f" "counsel-find-file")
-          (gsk "<f1> f" "counsel-describe-function")
-          (gsk "<f1> v" "counsel-describe-variable")
-          (gsk "<f1> o" "counsel-describe-symbol")
-          (gsk "<f1> l" "counsel-find-library")
-          (gsk "<f2> i" "counsel-info-lookup-symbol")
-          (gsk "<f2> u" "counsel-unicode-char")
-          (gsk "C-c g" "counsel-git")
-          (gsk "C-c j" "counsel-git-grep")
-          (gsk "C-c k" "counsel-ag")
-          (gsk "C-x l" "counsel-locate")
-          (gsk "C-S-o" "counsel-rhythmbox")
-          counselMBHistoryBind
-          doomModeline
-        ];
-    };
+      # extraPackages = with pkgs.emacsPackages; [
+        #   vterm
+        #   org
+        #   ob-async
+        # ];
+        # };
+
+        programs.emacs = {
+          enable = true;
+          package = pkgs.emacs29-pgtk;
+
+          extraPackages = epkgs:
+          with epkgs; [
+            magit
+            # forge
+            eldoc
+            treesit-grammars.with-all-grammars
+            lsp-tailwindcss
+            scss-mode
+            # company
+            ligature
+            sql-indent
+            yaml-mode
+            lsp-mode
+            lsp-ui
+            git-timemachine
+            auto-compile
+            evil-nerd-commenter
+            corfu
+            catppuccin-theme # configured
+            evil # configured
+            evil-collection
+            hydra
+            general
+            doom-modeline # configured
+            doom-themes # configured
+            rainbow-delimiters # configured
+            which-key # configured
+            go-mode # configured
+            indent-guide
+            jq-mode
+            fish-mode
+            # moody
+            # consult-eglot
+            gcmh
+            rainbow-mode
+            evil-mc
+
+            git-gutter
+            evil-commentary
+            web-mode
+            consult-lsp
+            consult-projectile
+            consult-yasnippet
+            consult-dir
+            json-mode
+            key-chord
+            markdown-mode
+            flycheck
+            multiple-cursors
+            nix-mode
+            nixos-options
+            # org-bullets
+            protobuf-mode
+            smartparens
+            vterm
+            yaml-mode
+            yasnippet
+            yasnippet-snippets
+            treemacs
+            lsp-treemacs
+            treemacs-evil
+            treemacs-projectile
+            treemacs-magit
+            treemacs-all-the-icons
+
+            treemacs-icons-dired
+            use-package # configured
+            rustic
+            org
+            deadgrep
+            all-the-icons
+            all-the-icons-dired
+            counsel-projectile
+            evil-surround
+            vertico
+            direnv
+            vertico-posframe
+            marginalia
+            consult
+            embark
+            embark-consult
+            orderless
+            emacs
+
+            prescient
+            corfu-prescient
+            vertico-prescient
+            projectile
+          ];
+
+        };
   };
 }

@@ -40,6 +40,10 @@
     zls.url = "github:zigtools/zls";
     kyushu.url = "git+https://codeberg.org/prma/soapberry.git";
 
+    # nix-doom-emacs.url = "github:nix-community/nix-doom-emacs";
+    emacs-overlay.url = "github:nix-community/emacs-overlay";
+
+    # nix-doom-emacs.url = "github:prmadev/nix-doom-emacs";
     # ghS = {
     #   url = "github:gennaro-tedesco/gh-s";
     #   flake = false;
@@ -154,6 +158,7 @@
             nixpkgs.overlays = [
               inputs.nur.overlay
               (final: prev: {zigpkg = inputs.zig.packages.${prev.system}.master;})
+              inputs.emacs-overlay.overlays.default
               # inputs.neovim-nightly-overlay.overlay
             ];
           }

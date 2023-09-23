@@ -14,7 +14,7 @@ with lib; {
     services.gpg-agent = {
       enable = true;
       enableSshSupport = true;
-      pinentryFlavor = "curses";
+      pinentryFlavor = "gtk2";
       enableBashIntegration = true;
       enableFishIntegration = true;
       enableZshIntegration = true;
