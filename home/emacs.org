@@ -228,6 +228,10 @@ Default mode for the *scratch* buffer
    user-full-name "Perma"
    user-mail-address "prma.dev@protonmail.com")
 #+end_src
+*** Exec path
+#+begin_src emacs-lisp
+
+#+end_src
 *** Keybindings
 **** which-key
 #+begin_src emacs-lisp
@@ -691,18 +695,18 @@ Automatically tangle our Emacs.org config file when we save it
 #+end_src
 *** Projectile
 #+begin_src emacs-lisp
-  (use-package projectile
+ (use-package projectile
   :delight projectile-mode
    :config
    (projectile-mode 1)
    (rune/leader-keys "p" '(projectile-switch-project :which-key "switch project"))
    :custom ((projectile-enable-caching t) (projectile-completion-system 'ivy))
-   :bind-keymap ("C-c p" . projectile-command-map)
+   :bind-keymap ("c-c p" . projectile-command-map)
    :general (nmap
-        :prefix "SPC"
+        :prefix "spc"
         "p" '(projectile-switch-project :which-key "switch project"))
    :init
-   ;; NOTE: Set this to the folder where you keep your Git repos!
+   ;; note: set this to the folder where you keep your git repos!
    ;; (when (file-directory-p "~/repos")
    ;;   (setq projectile-project-search-path '("~/repos")))
    (setq projectile-project-search-path '("~/willow/" "~/repos/"))
