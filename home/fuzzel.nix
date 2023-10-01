@@ -34,5 +34,9 @@ with lib; {
         };
       };
     };
+
+    home.sessionVariables = {
+      "LAUNCHER"= "fuzzel";
+    };
   };
 }

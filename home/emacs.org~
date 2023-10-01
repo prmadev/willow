@@ -1,0 +1,536 @@
+#+PROPERTY: header-args:emacs-lisp :tangle ~/.emacs.d/init.el
+
+* Emacs Configuration
+
+** Lexical
+
+#+NAME: lexical-binding
+#+begin_src emacs-lisp
+;; -*- lexical-binding: t; -*-
+#+end_src
+
+
+** Early Init
+*** lexical binding
+#+begin_src elisp :tangle ~/.emacs.d/early-init.el :noweb yes
+<<lexical-binding>>
+#+end_src
+
+*** Managing Garbage Collection
+
+Increase gc threshold to 100MB to increase the startup time temporarily
+#+begin_src elisp :tangle ~/.emacs.d/early-init.el
+  (setq gc-cons-threshold (* 100 1000 1000))
+#+end_src
+
+*** Noise reduction
+By setting byte-compile-warnings in this way,
+I am telling Emacs not to produce warnings related to obsolete functions and variables during the byte-compilation process.
+#+begin_src elisp :tangle ~/.emacs.d/early-init.el
+  (setq byte-compile-warnings '(not obsolete))
+#+end_src
+
+Supress noise logs related to compilation (=comp=) and byte-compilation (=bytecomp=).
+#+begin_src elisp :tangle ~/.emacs.d/early-init.el
+  (setq warning-suppress-log-types '((comp) (bytecomp)))
+  (setq native-comp-async-report-warnings-errors 'silent)
+#+end_src
+*** Startup Message
+Simple hook which informs me how long it took and with how many garbage collections it did, to Emacs.
+#+begin_src elisp :tangle ~/.emacs.d/early-init.el
+  (add-hook
+   'emacs-startup-hook
+   (lambda ()
+     (message
+      "*** Emacs loaded in %s with %d garbage collections."
+      (format "%.2f seconds"
+              (float-time
+               (time-subtract after-init-time before-init-time)))
+      gcs-done)))
+#+end_src
+
+#+begin_src elisp :tangle ~/.emacs.d/early-init.el
+  (setq inhibit-startup-message t)
+  (setq initial-scratch-message "")
+  (setq inhibit-startup-echo-area-message (user-login-name))
+#+end_src
+*** Prefer newer
+This means that it will prefer the newer version of a library if multiple versions are available.
+#+begin_src elisp
+  (setq load-prefer-newer t)
+#+end_src
+*** Maximum Read process output
+This was suggested by lsp-mode for performance.
+#+begin_src elisp :tangle ~/.emacs.d/early-init.el
+  (setq read-process-output-max (* 1024 1024))
+#+end_src
+
+*** Default Frame Settings
+
+#+begin_src elisp :tangle ~/.emacs.d/early-init.el
+  (setq frame-resize-pixelwise t)
+#+end_src
+
+#+NAME: initial-mode
+#+begin_src emacs-lisp
+  (initial-major-mode . fundamental-mode) ; default mode for the *scratch* buffer
+#+end_src
+
+#+NAME: maximized
+#+begin_src emacs-lisp
+  (fullscreen . maximized)
+#+end_src
+
+#+NAME: no-vertical-sb
+#+begin_src emacs-lisp
+  (vertical-scroll-bars . nil)
+#+end_src
+
+#+NAME: no-horizontal-sb
+#+begin_src emacs-lisp
+  (horizontal-scroll-bars . nil)
+#+end_src
+
+#+NAME: default-background
+#+begin_src emacs-lisp
+  (background-color . "#24273a")
+#+end_src
+
+#+NAME: ns-dark
+#+begin_src emacs-lisp
+  (ns-appearance . dark)
+#+end_src
+
+#+NAME: ns-titlebar-transparent
+#+begin_src emacs-lisp
+  (ns-transparent-titlebar . t)
+#+end_src
+
+#+NAME: no-decorations
+#+begin_src emacs-lisp
+  (undecorated . t)
+#+end_src
+
+#+NAME: hide-scrollbar
+#+begin_src emacs-lisp
+  (scroll-bar-mode . -1)
+#+end_src
+
+#+NAME: hide-tooltip
+#+begin_src emacs-lisp
+  (tooltip-mode . -1)
+#+end_src
+
+#+NAME: hide-toolbar
+#+begin_src emacs-lisp
+  (tool-bar-mode . -1)
+#+end_src
+
+#+NAME: hide-menubar
+#+begin_src emacs-lisp
+  (menu-bar-mode . -1)
+#+end_src
+
+#+NAME: fring-10
+#+begin_src emacs-lisp
+  (set-fringe-mode . 10)
+#+end_src
+
+#+NAME: set-default-font
+#+begin_src emacs-lisp :noweb yes
+  (set-face-attribute `default nil :font "Maple Mono" :height 180)
+#+end_src
+
+#+NAME: escape-quit
+#+begin_src emacs-lisp :noweb yes
+  (global-set-key (kbd "<escape>") 'keyboard-escape-quit)
+#+end_src
+
+#+NAME: no-default-load-avarage
+#+begin_src emacs-lisp :noweb yes
+  (display-time-default-load-average . nil) ; this information is useless for most
+#+end_src
+
+#+begin_src elisp :tangle ~/.emacs.d/early-init.el :noweb yes
+  (setq default-frame-alist
+      '(<<maximized>>
+       <<no-vertical-sb>>
+       <<no-horizontal-sb>>
+       <<default-background>>
+       <<ns-dark>>
+       <<ns-titlebar-transparent>>
+       <<no-decorations>>
+       <<hide-scrollbar>>
+       <<hide-menubar>>
+       <<hide-toolbar>>
+       <<hide-tooltip>>
+       <<fring-10>>
+       <<set-default-font>>
+       <<escape-quit>>
+       <<no-default-load-avarage>>
+       <<initial-mode>>
+       ))
+#+end_src
+
+
+** Init
+*** Lexical Binding
+#+begin_src elisp :noweb yes
+    <<lexical-binding>>
+#+end_src
+
+*** Use-package
+#+begin_src elisp
+  (setq-default
+   ;;use-package-always-defer t
+   use-package-always-ensure t)
+
+  (eval-when-compile
+    (require 'use-package))
+#+end_src
+*** Personal Info
+#+begin_src elisp
+  (setq
+   user-full-name "Perma"
+   user-mail-address "prma.dev@protonmail.com")
+#+end_src
+*** Garbage Collection
+**** Collect Garbage When Losing Focus
+
+#+begin_src elisp
+  (add-hook 'focus-out-hook #'garbage-collect)
+#+end_src
+*** UI
+**** SaveHist
+Saves history of minibuffer
+#+begin_src emacs-lisp
+  (use-package savehist
+    :init (savehist-mode 1))
+#+end_src
+**** which-key
+#+begin_src elisp
+(use-package which-key
+ :init (which-key-mode)
+ :delight which-key-mode
+ :custom (which-key-idle-delay 0.3))
+#+end_src
+**** Delight mode
+Manipulates the showing of minor modes.
+#+begin_src elisp
+  (use-package delight)
+#+end_src
+**** UTF8
+#+begin_src elisp
+  (set-default-coding-systems 'utf-8)
+  (set-language-environment "UTF-8")
+  (prefer-coding-system 'utf-8)
+  (set-terminal-coding-system 'utf-8)
+#+end_src
+**** Themes
+***** Doom Themes
+Although I'm not using them, but it is fun to check them out and see what I'm missing.
+#+begin_src emacs-lisp
+  (use-package doom-themes
+   :custom
+   (doom-themes-enable-bold t)
+   (doom-themes-enable-italic t))
+#+end_src
+***** Catppuccin Theme
+my main theme
+#+begin_src emacs-lisp
+  (use-package catppuccin-theme
+   :custom
+   (catppuccin-flavor 'macchiato)
+   (catppuccin-italic-comments t)
+   :config (catppuccin-reload))
+#+end_src
+**** Modeline
+***** Doom modeline
+#+begin_src emacs-lisp
+  (use-package doom-modeline
+   :delight
+   :init (doom-modeline-mode 1)
+   :custom
+   (doom-modeline-height 20)
+   (doom-modeline-icon (display-graphic-p))
+   (doom-modeline-buffer-encoding nil))
+#+end_src
+**** icons
+#+begin_src emacs-lisp
+  (use-package all-the-icons :if (display-graphic-p))
+#+end_src
+**** Rainbow
+Show the color of the color codes in programming buffers.
+#+begin_src elisp
+  (use-package rainbow-mode
+    :delight
+    :hook prog-mode
+    :config (rainbow-mode))
+#+end_src
+**** Rainbow-Delimiters
+#+begin_src emacs-lisp
+  (use-package rainbow-delimiters
+   :delight rainbow-delimiters-mode
+   :hook (prog-mode . rainbow-delimiters-mode))
+#+end_src
+**** Eldoc
+***** Go
+#+begin_src emacs-lisp
+  (use-package go-eldoc)
+#+end_src
+**** Rulers
+
+#+begin_src elisp
+  (column-number-mode)
+  (global-display-line-numbers-mode t)
+#+end_src
+
+Not use rulers in Org-mode and terminal mode
+#+begin_src elisp
+  (dolist (mode '(org-mode-hook term-mode-hook eshell-mode-hook))
+    (add-hook mode (lambda () (display-line-numbers-mode 0))))
+#+end_src
+**** No-wraping in programming
+#+begin_src emacs-lisp
+  (add-hook 'prog-mode-hook (lambda () (visual-line-mode -1))
+  (add-hook 'prog-mode-hook (lambda () (setq truncate-lines t)))
+#+end_src
+**** Useful Right-Click
+#+begin_src emacs-lisp
+  (when (display-graphic-p)
+    (context-menu-mode))
+#+end_src
+**** Symbols
+#+begin_src emacs-lisp
+    (global-prettify-symbols-mode t)
+#+end_src
+*** auto-compile
+#+begin_src elisp
+  (use-package auto-compile :config (auto-compile-on-load-mode))
+#+end_src
+*** Keybindings
+**** Evil
+***** Evil Bindings
+#+begin_src emacs-lisp
+  (use-package evil
+   :delight evil-mode
+   :init
+   (setq evil-want-integration t)
+   (setq evil-want-keybinding nil)
+   (setq evil-want-C-u-scroll t)
+   (setq evil-want-C-i-jump nil)
+   :config
+   (evil-mode 1)
+   (define-key evil-insert-state-map (kbd "C-g") 'evil-normal-state)
+   (evil-global-set-key 'motion "j" 'evil-next-visual-line)
+   (evil-global-set-key 'motion "k" 'evil-previous-visual-line)
+   (evil-set-initial-state 'messages-buffer-mode 'normal)
+   (evil-set-initial-state 'dashboard-mode 'normal))
+#+end_src
+Evil mode for others
+#+begin_src emacs-lisp
+(use-package evil-collection
+ :after evil
+ :custom (Evil-collection-minibuffer-setup t)
+ :config (evil-collection-init))
+#+end_src
+**** General
+#+begin_src emacs-lisp
+  (use-package general
+    :config (general-evil-setup t)
+    (general-create-definer
+     rune/leader-keys
+     :keymaps '(normal insert visual emacs)
+     :prefix "SPC"
+     :global-prefix "C-SPC"))
+#+end_src
+**** Window Moving
+#+begin_src emacs-lisp
+  (windmove-default-keybindings 'control)
+#+end_src
+**** Minibuffer
+For help, see: https://www.masteringemacs.org/article/understanding-minibuffer-completion
+
+Use the minibuffer whilst in the minibuffer
+#+BEGIN_SRC emacs-lisp
+  (setq enable-recursive-minibuffers t)
+#+END_SRC
+
+completion-cycle-threshold
+#+BEGIN_SRC emacs-lisp
+  (setq completion-cycle-threshold 1)
+#+END_SRC
+
+Show annotations
+#+BEGIN_SRC emacs-lisp
+  (setq completions-detailed t)
+#+END_SRC
+
+When I hit TAB, try to complete, otherwise, indent
+#+BEGIN_SRC emacs-lisp
+  (setq tab-always-indent 'complete)
+#+END_SRC
+
+Different styles to match input to candidates
+#+BEGIN_SRC emacs-lisp
+  (setq completion-styles
+        '(basic initials substring))
+#+END_SRC
+
+Open completion always
+#+BEGIN_SRC emacs-lisp
+  (setq completion-auto-help 'always)
+#+END_SRC
+
+This is arbitrary
+#+BEGIN_SRC emacs-lisp
+  (setq completions-max-height 20)
+#+END_SRC
+
+#+BEGIN_SRC emacs-lisp
+  (setq completions-detailed t)
+#+END_SRC
+
+#+BEGIN_SRC emacs-lisp
+  (setq completions-format 'one-column)
+#+END_SRC
+
+#+BEGIN_SRC emacs-lisp
+  (setq completions-group t)
+#+END_SRC
+
+Much more eager
+#+BEGIN_SRC emacs-lisp
+  (setq completion-auto-select 'second-tab)
+#+END_SRC
+
+See `C-h v completion-auto-select' for more possible values
+#+BEGIN_SRC emacs-lisp
+;;(setq completion-auto-select t)
+#+END_SRC
+
+TAB acts more like how it does in the shell
+#+BEGIN_SRC emacs-lisp
+(keymap-set minibuffer-mode-map "TAB" 'minibuffer-complete)
+#+END_SRC
+**** Smooth scrolling
+#+begin_src elisp
+
+  (pixel-scroll-precision-mode 1)
+  (defvar +scroll-delta 180)
+
+  (defun +scroll-up-some ()
+    (interactive)
+    (pixel-scroll-precision-scroll-up +scroll-delta))
+
+  (defun +scroll-down-some ()
+    (interactive)
+    (pixel-scroll-precision-scroll-down +scroll-delta))
+
+  (defun +bind-scroll-keys (mode-map)
+    (evil-define-key
+     '(motion normal) mode-map (kbd "K") '+scroll-up-some)
+    (evil-define-key
+     '(motion normal) mode-map (kbd "J") '+scroll-down-some))
+
+#+end_src
+*** Editing
+**** Revert mode
+#+BEGIN_SRC emacs-lisp
+  ;; Set the auto-revert interval to 1 second
+  (setq auto-revert-interval 1
+        ;; Enable checking for version control system info
+        auto-revert-check-vc-info t)
+
+  ;; Enable global auto-revert mode
+  (global-auto-revert-mode 1)
+#+END_SRC
+
+**** Surrounding
+#+begin_src elisp
+  (use-package evil-surround
+   :after evil
+   :config (global-evil-surround-mode 1))
+#+end_src
+**** Multiple Cursors
+#+begin_src elisp
+  (use-package evil-mc
+    :after evil
+    :init (global-evil-mc-mode 1))
+#+end_src
+**** Commenting
+#+begin_src emacs-lisp
+  (use-package evil-commentary
+    :after evil
+    :defer 2
+    :config (evil-commentary-mode))
+#+end_src
+**** Doule space is off
+#+begin_src elisp
+  (setq sentence-end-double-space nil)
+#+end_src
+*** Reformating
+Delete extra spaces at the end of the line before saving.
+#+begin_src elisp
+  (add-hook 'before-save-hook 'delete-trailing-whitespace)
+#+end_src
+*** GNUTLS
+Increase the cryptographic security by inceasing minimum size (in bits) of the prime numbers used in cryptographic operations.
+#+begin_src elisp
+  (setq gnutls-min-prime-bits 4096)
+#+end_src
+*** LSP
+**** Logs
+#+begin_src elisp
+  (setq lsp-log-io nil)
+#+end_src
+****
+**** Eglot
+*** OrgMode
+**** soft-wrap
+#+begin_src emacs-lisp
+  (add-hook 'org-mode-hook 'visual-line-mode)
+#+end_src
+**** Entangler
+Automatically tangle our Emacs.org config file when we save it
+#+begin_src emacs-lisp
+  (defun prma/org-babel-tangle-config ()
+    (when (string-equal (buffer-file-name)
+                        (expand-file-name "~/willow/home/emacs.org"))
+      ;; Dynamic scoping to the rescue
+      (let ((org-confirm-babel-evaluate nil))
+        (org-babel-tangle))))
+
+  (add-hook 'org-mode-hook (lambda () (add-hook 'after-save-hook #'prma/org-babel-tangle-config)))
+#+end_src
+
+#+RESULTS:
+| (lambda nil (add-hook 'after-save-hook #'prma/org-babel-tangle-config)) | #[0 \301\211\207 [imenu-create-index-function org-imenu-get-tree] 2] | org-tempo-setup | (closure (t) nil (set (make-local-variable 'company-backends) '(company-org-block)) (company-mode 1)) | org-superstar-mode | evil-org-mode | #[0 \300\301\302\303\304$\207 [add-hook change-major-mode-hook org-fold-show-all append local] 5] | #[0 \300\301\302\303\304$\207 [add-hook change-major-mode-hook org-babel-show-result-all append local] 5] | org-babel-result-hide-spec | org-babel-hide-all-hashes | prma/org-mode-setup | (closure (t) nil (display-line-numbers-mode 0)) | org-eldoc-load |
+
+*** Dired
+#+begin_src emacs-lisp
+    (rune/leader-keys "."
+      '(find-file :which-key "dired"))
+#+end_src
+*** Projectile
+#+begin_src emacs-lisp
+(use-package
+ projectile
+ :delight projectile-mode
+ :config (projectile-mode 1)
+ :custom ((projectile-enable-caching t) (projectile-completion-system 'ivy))
+ :bind-keymap ("C-c p" . projectile-command-map)
+ :init
+ ;; NOTE: Set this to the folder where you keep your Git repos!
+ ;; (when (file-directory-p "~/repos")
+ ;;   (setq projectile-project-search-path '("~/repos")))
+ (setq projectile-project-search-path '("~/willow/" "~/repos/"))
+ (setq projectile-switch-project-action #'projectile-dired))
+
+#+end_src
+*** Counsel-projectile
+#+begin_src elisp
+  (use-package counsel-projectile
+    :after projectile
+    :config (counsel-projectile-mode 1))
+#+end_src

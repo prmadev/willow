@@ -38,6 +38,7 @@
     ./pinentry.nix
     ./telegram.nix
     ./exercism.nix
+    ./cinny.nix
     ./graphical.nix
     ./hoard.nix
     ./task.nix
@@ -98,6 +99,7 @@
     ./partition.nix
     ./download.nix
     ./yt-dlp.nix
+    ./fluffychat.nix
     ./proxy.nix
     ./ssh.nix
     ./bw.nix
@@ -110,8 +112,11 @@
     ./monolith.nix
     ./jq.nix
     ./pls.nix
+    ./iamb.nix
   ];
 
+  iamb.enable = true;
+  fluffychat.enable = true;
   yt-dlp.enable = true;
   jq.enable = true;
   monolith.enable = true;
@@ -124,6 +129,7 @@
   graphical.enable = true;
   task.enable = false;
   hoard.enable = false; # candidate for cleaning
+  cinny.enable= true;
   zk.enable = false;
   zola.enable = true;
   newsboat.enable = false; # candidate for cleaning

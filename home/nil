@@ -1,0 +1,1 @@
+'(display-time-default-load-average . nil) ; this information is useless for most

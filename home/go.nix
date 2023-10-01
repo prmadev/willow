@@ -22,6 +22,7 @@ with lib; {
       golangci-lint-langserver
       ent-go
       go-tools
+      gocode
     ];
 
     home.sessionPath = ["$HOME/go/bin"];
