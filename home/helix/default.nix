@@ -31,7 +31,7 @@ with lib; {
               };
               gofumpt = true;
 
-              staticcheck = true;
+              staticcheck = false;
 
               analyses = {
                 nilness = true;

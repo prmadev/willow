@@ -6,7 +6,9 @@
   ...
 }: {
   imports = [
+    ./hugo.nix
     ./general.nix
+    ./pantalaimon.nix
     ./soupault.nix
     ./build.nix
     ./direnv.nix
@@ -115,6 +117,7 @@
     ./iamb.nix
   ];
 
+  panta.enable= true;
   iamb.enable = true;
   fluffychat.enable = true;
   yt-dlp.enable = true;
@@ -215,6 +218,7 @@
   insomnia.enable = false; # candidate for cleaning
   pls.enable = true;
   soup.enable = true;
+  hugo.enable = true;
 
   shell.user = "${pkgs.fish}/bin/fish";
   editor = {

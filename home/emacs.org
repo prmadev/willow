@@ -212,7 +212,18 @@ Default mode for the *scratch* buffer
 ;; Call of emacs with --daemon option.
 (add-hook 'after-make-frame-functions #'my-frame-tweaks t)
 #+end_src
+*** Manage backup files
+#+begin_src emacs-lisp
+(setq backup-directory-alist
+      `(("." . "~/.cache/emacs_backups/")))
+(setq backup-by-copying t)
+(setq
+ delete-old-versions t
+ kept-new-versions 6
+ kept-old-versions 2
+ version-control t)
 
+#+end_src
 *** Use-package
 #+begin_src emacs-lisp
   (setq-default
@@ -228,8 +239,14 @@ Default mode for the *scratch* buffer
    user-full-name "Perma"
    user-mail-address "prma.dev@protonmail.com")
 #+end_src
-*** Exec path
+*** gcmh
 #+begin_src emacs-lisp
+  (use-package gcmh
+    :ensure t
+    :demand t
+    :config
+    (gcmh-mode 1)
+    )
 
 #+end_src
 *** Keybindings
@@ -450,6 +467,12 @@ my main theme
   (use-package  all-the-icons-dired
     :hook (dired-mode . all-the-icons-dired-mode))
 #+end_src
+#+begin_src emacs-lisp
+  (use-package all-the-icons-completion
+    :ensure t
+    :after all-the-icons
+  )
+#+end_src
 **** Rainbow
 Show the color of the color codes in programming buffers.
 #+begin_src emacs-lisp
@@ -467,7 +490,21 @@ Show the color of the color codes in programming buffers.
 **** Eldoc
 ***** Go
 #+begin_src emacs-lisp
-  (use-package go-eldoc)
+  (use-package go-eldoc
+    :ensure t
+    )
+#+end_src
+***** Css
+#+begin_src emacs-lisp
+  (use-package css-eldoc
+    :ensure t
+    )
+#+end_src
+***** toml
+#+begin_src emacs-lisp
+  (use-package eldoc-toml
+    :ensure t
+    )
 #+end_src
 **** Rulers
 
@@ -530,8 +567,10 @@ Not use rulers in Org-mode and terminal mode
 #+END_SRC
 
 **** Surrounding
+something is here
 #+begin_src emacs-lisp
   (use-package evil-surround
+   :ensure t
    :after evil
    :config (global-evil-surround-mode 1))
 #+end_src
@@ -546,7 +585,7 @@ Not use rulers in Org-mode and terminal mode
   (use-package evil-nerd-commenter
     :after evil
     :defer 2
-    :bind ("M-/" . evilnc-comment-or-uncomment-lines)
+    :bind ("M-;" . evilnc-comment-or-uncomment-lines)
     :config (evil-commentary-mode))
 #+end_src
 **** Doule space is off
@@ -586,6 +625,21 @@ Delete extra spaces at the end of the line before saving.
 Increase the cryptographic security by inceasing minimum size (in bits) of the prime numbers used in cryptographic operations.
 #+begin_src emacs-lisp
   (setq gnutls-min-prime-bits 4096)
+#+end_src
+*** Format
+#+begin_src emacs-lisp
+    (use-package format-all
+    :ensure t
+    :hook (prog-mode . format-all-mode)
+    :init (setq format-all-formatters '(("Go" goimports)
+                                      ("Nix" alejandra)
+  ;;                                       ("SQL" pgformatter)
+                                        ("HTML" prettier)
+  ;;                                       ("Shell" shfmt)
+  ;;                                       ("Lua" prettier)
+                                        ))
+
+    )
 #+end_src
 *** OrgMode
 **** org-mode
@@ -701,9 +755,9 @@ Automatically tangle our Emacs.org config file when we save it
    (projectile-mode 1)
    (rune/leader-keys "p" '(projectile-switch-project :which-key "switch project"))
    :custom ((projectile-enable-caching t) (projectile-completion-system 'ivy))
-   :bind-keymap ("c-c p" . projectile-command-map)
+   :bind-keymap ("C-c p" . projectile-command-map)
    :general (nmap
-        :prefix "spc"
+        :prefix "SPC"
         "p" '(projectile-switch-project :which-key "switch project"))
    :init
    ;; note: set this to the folder where you keep your git repos!
@@ -724,25 +778,116 @@ Automatically tangle our Emacs.org config file when we save it
 *** Term
 **** term
 #+begin_src emacs-lisp
-(use-package term
+(use-package
+ term
  :commands term
  :config
- (setq explicit-shell-file-name "fish") ;; Change this to zsh, etc
+ (setq explicit-shell-file-name
+       "fish") ;; Change this to zsh, etc
  ;;(setq explicit-zsh-args '())         ;; Use 'explicit-<shell>-args for shell-specific args
 
  ;; Match the default Bash shell prompt.  Update this if you have a custom prompt
- (setq term-prompt-regexp "^[^#$%>\n]*[#$%>] *"))
+ (setq term-prompt-regexp
+       "^[^#$%>\n]*[#$%>] *"))
 
 #+end_src
 **** vterm
 #+begin_src emacs-lisp
-  (use-package vterm
-   :commands vterm
-   :general (nmap :prefix "SPC" "v" 'projectile-run-vterm)
+(use-package
+ vterm
+ :commands vterm
+ :general
+ (nmap
+  :prefix
+  "SPC"
+  "v"
+  'projectile-run-vterm)
+ :config
+ (setq term-prompt-regexp
+       "^[^#$%>\n]*[#$%>] *") ;; Set this to match your custom shell prompt
+ (setq vterm-shell "fish") ;; Set this to customize the shell to launch
+ (setq vterm-max-scrollback 10000))
+#+end_src
+
+#+begin_src emacs-lisp
+  (global-set-key [f2] 'vterm-toggle)
+  (global-set-key
+   [C-f2] 'vterm-toggle-cd)
+  ;; an cd to the directory where previous buffer file exists
+  ;; after I have toggle to the vterm buffer with `vterm-toggle'.
+  ;; (define-key
+  ;;   'vterm-mode-map
+  ;;  [(control return)]
+  ;;  #'vterm-toggle-insert-cd)
+
+  ;Switch to next vterm buffer
+  ;; (define-key
+  ;;  'vterm-mode-map
+  ;;  (kbd "s-n")
+  ;;  'vterm-toggle-forward)
+  ;Switch to previous vterm buffer
+  (setq vterm-toggle-fullscreen-p nil)
+  (add-to-list
+   'display-buffer-alist
+   '((lambda (buffer-or-name _)
+       (let ((buffer
+              (get-buffer
+               buffer-or-name)))
+         (with-current-buffer buffer
+           (or (equal
+                major-mode
+                'vterm-mode)
+               (string-prefix-p
+                vterm-buffer-name
+                (buffer-name
+                 buffer))))))
+     (display-buffer-reuse-window
+      display-buffer-at-bottom)
+     ;;(display-buffer-reuse-window display-buffer-in-direction)
+     ;;display-buffer-in-direction/direction/dedicated is added in emacs27
+     ;;(direction . bottom)
+     ;;(dedicated . t) ;dedicated is supported in emacs27
+     (reusable-frames . visible)
+     (window-height . 0.3)))
+
+#+end_src
+
+#+begin_src emacs-lisp
+  (use-package multi-vterm
+   :ensure t
    :config
-   (setq term-prompt-regexp "^[^#$%>\n]*[#$%>] *") ;; Set this to match your custom shell prompt
-   (setq vterm-shell "fish")                       ;; Set this to customize the shell to launch
-   (setq vterm-max-scrollback 10000))
+          (add-hook 'vterm-mode-hook
+                          (lambda ()
+                          (setq-local evil-insert-state-cursor 'box)
+                          (evil-insert-state)))
+          (define-key vterm-mode-map [return]                      #'vterm-send-return)
+
+          (setq vterm-keymap-exceptions nil)
+          (evil-define-key 'insert vterm-mode-map (kbd "C-e")      #'vterm--self-insert)
+          (evil-define-key 'insert vterm-mode-map (kbd "C-f")      #'vterm--self-insert)
+          (evil-define-key 'insert vterm-mode-map (kbd "C-a")      #'vterm--self-insert)
+          (evil-define-key 'insert vterm-mode-map (kbd "C-v")      #'vterm--self-insert)
+          (evil-define-key 'insert vterm-mode-map (kbd "C-b")      #'vterm--self-insert)
+          (evil-define-key 'insert vterm-mode-map (kbd "C-w")      #'vterm--self-insert)
+          (evil-define-key 'insert vterm-mode-map (kbd "C-u")      #'vterm--self-insert)
+          (evil-define-key 'insert vterm-mode-map (kbd "C-d")      #'vterm--self-insert)
+          (evil-define-key 'insert vterm-mode-map (kbd "C-n")      #'vterm--self-insert)
+          (evil-define-key 'insert vterm-mode-map (kbd "C-m")      #'vterm--self-insert)
+          (evil-define-key 'insert vterm-mode-map (kbd "C-p")      #'vterm--self-insert)
+          (evil-define-key 'insert vterm-mode-map (kbd "C-j")      #'vterm--self-insert)
+          (evil-define-key 'insert vterm-mode-map (kbd "C-k")      #'vterm--self-insert)
+          (evil-define-key 'insert vterm-mode-map (kbd "C-r")      #'vterm--self-insert)
+          (evil-define-key 'insert vterm-mode-map (kbd "C-t")      #'vterm--self-insert)
+          (evil-define-key 'insert vterm-mode-map (kbd "C-g")      #'vterm--self-insert)
+          (evil-define-key 'insert vterm-mode-map (kbd "C-c")      #'vterm--self-insert)
+          (evil-define-key 'insert vterm-mode-map (kbd "C-SPC")    #'vterm--self-insert)
+          (evil-define-key 'normal vterm-mode-map (kbd "C-d")      #'vterm--self-insert)
+          (evil-define-key 'normal vterm-mode-map (kbd ",c")       #'multi-vterm)
+          (evil-define-key 'normal vterm-mode-map (kbd ",n")       #'multi-vterm-next)
+          (evil-define-key 'normal vterm-mode-map (kbd ",p")       #'multi-vterm-prev)
+          (evil-define-key 'normal vterm-mode-map (kbd "i")        #'evil-insert-resume)
+          (evil-define-key 'normal vterm-mode-map (kbd "o")        #'evil-insert-resume)
+          (evil-define-key 'normal vterm-mode-map (kbd "<return>") #'evil-insert-resume))
 #+end_src
 
 *** Direnv
@@ -800,11 +945,12 @@ Automatically tangle our Emacs.org config file when we save it
 
 #+end_src
 #+begin_src emacs-lisp
-  (use-package
-   flycheck-eglot
-   :ensure t
-   :after (flycheck eglot)
-   :config (global-flycheck-eglot-mode 1))
+    (use-package
+     flycheck-eglot
+     :ensure t
+     :after (flycheck eglot)
+     :config (global-flycheck-eglot-mode 1)
+     )
 #+end_src
 *** Languages
 **** Rust
@@ -832,6 +978,7 @@ Automatically tangle our Emacs.org config file when we save it
 #+begin_src emacs-lisp
 (use-package
  web-mode
+ :ensure t
  :custom
  (web-mode-code-indent-offset 2)
  (web-mode-markup-indent-offset 2))
@@ -884,36 +1031,75 @@ Automatically tangle our Emacs.org config file when we save it
 #+end_src
 
 #+begin_src emacs-lisp
-  (setq-default eglot-workspace-configuration
-      '((:gopls .
-          ((staticcheck . t)
-           ))))
+    (setq-default eglot-workspace-configuration
+        '((:gopls .
+            (
+             (completeUnimported . t)
+             (usePlaceholders . t)
+             ))))
 
 #+end_src
 
 #+begin_src emacs-lisp :lexical no
-  (use-package eglot
-   :ensure t
-   :defer t
-   :config
-   (setq eglot-events-buffer-size 0)
-   (setq read-process-output-max (* 1024 1024))
-   (push :documentHighlightProvider eglot-ignored-server-capabilities)
-   (add-hook 'go-mode-hook 'eglot-ensure)
-   (add-hook 'rust-mode-hook 'eglot-ensure)
-   (add-hook 'rust-ts-mode-hook 'eglot-ensure)
-   (add-hook 'go-ts-mode-hook 'eglot-ensure)
-   (add-hook 'nix-mode-hook 'eglot-ensure))
+(use-package
+ eglot
+ :ensure t
+ :defer t
+ :hook
+ ((nix-mode . eglot-ensure)
+  (go-ts-mode . eglot-ensure)
+  (go-mode . eglot-ensure)
+  (go-mod-ts-mode . eglot-ensure)
+  (rust-mode . eglot-ensure)
+  (rust-ts-mode . eglot-ensure)
+  (yaml-ts-mode . eglot-ensure)
+  (yaml-mode . eglot-ensure)
+  (toml-mode . eglot-ensure)
+  (toml-ts-mode . eglot-ensure)
+  (css-ts-mode . eglot-ensure)
+  (css-mode . eglot-ensure)
+  (scss-mode . eglot-ensure)
+  (bash-mode . eglot-ensure)
+  (bash-ts-mode . eglot-ensure)
+  (json-ts-mode . eglot-ensure)
+  (json-mode . eglot-ensure)
+  (dockerfile-ts-mode . eglot-ensure))
+
+ :config
+ (setq eglot-extend-to-xref t)
+ (setq eglot-events-buffer-size 0)
+ (setq read-process-output-max (* 1024 1024)))
 #+end_src
 
 #+begin_src emacs-lisp
   (defun eglot-format-buffer-on-save ()
     (add-hook 'before-save-hook #'eglot-format-buffer -10 t))
   (add-hook 'go-mode-hook #'eglot-format-buffer-on-save)
+  (add-hook 'go-mode-hook #'eglot-format-buffer-on-save)
+  (add-hook 'rust-mode-hook #'eglot-format-buffer-on-save)
+  (add-hook 'rust-mod-mode-hook #'eglot-format-buffer-on-save)
+  (add-hook 'go-mod-ts-mode-hook #'eglot-format-buffer-on-save)
+  (add-hook 'json-ts-mod-mode-hook #'eglot-format-buffer-on-save)
+  (add-hook 'json-mode-hook #'eglot-format-buffer-on-save)
+  (add-hook 'toml-mode-hook #'eglot-format-buffer-on-save)
+  (add-hook 'toml-ts-mode-hook #'eglot-format-buffer-on-save)
+  (add-hook 'nix-mode-hook #'eglot-format-buffer-on-save)
+  (add-hook 'css-mode-hook #'eglot-format-buffer-on-save)
+  (add-hook 'css-ts-mode-hook #'eglot-format-buffer-on-save)
+  (add-hook 'scss-mode-hook #'eglot-format-buffer-on-save)
+  (add-hook 'html-mode-hook #'eglot-format-buffer-on-save)
+  (add-hook 'html+-mode-hook #'eglot-format-buffer-on-save)
+#+end_src
+
+#+begin_src emacs-lisp
+  (use-package eldoc-box
+    :ensure t
+    :hook (eglot-managed-mode . eldoc-box-hover-at-point-mode)
+    :after eglot)
 #+end_src
 *** Completion
 **** ivy
-#+begin_src emacs-lisp
+#+begin_src emacs-lisp :tangle no
     (use-package ivy
      :delight
      :bind (
@@ -936,7 +1122,7 @@ Automatically tangle our Emacs.org config file when we save it
      :config (ivy-mode 1))
 #+end_src
 
-#+begin_src emacs-lisp
+#+begin_src emacs-lisp :tangle no
 (use-package
  all-the-icons-ivy-rich
  :delight
@@ -944,14 +1130,14 @@ Automatically tangle our Emacs.org config file when we save it
  :init (all-the-icons-ivy-rich-mode 1))
 #+end_src
 
-#+begin_src emacs-lisp
+#+begin_src emacs-lisp :tangle no
     (use-package ivy-rich
         :delight
         :ensure t
         :init (ivy-rich-mode 1))
 #+end_src
 
-#+begin_src emacs-lisp
+#+begin_src emacs-lisp :tangle no
   (use-package
    ivy-prescient
    :after counsel
@@ -961,15 +1147,14 @@ Automatically tangle our Emacs.org config file when we save it
    (prescient-persist-mode 1) (ivy-prescient-mode 1))
 
 #+end_src
-#+begin_src emacs-lisp
+#+begin_src emacs-lisp :tangle no
   (use-package lsp-ivy
       :after lsp
       :ensure t)
 #+end_src
 **** counsel
-#+begin_src emacs-lisp
-  (use-package
-   counsel
+#+begin_src emacs-lisp :tangle no
+  (use-package counsel
    :delight
    :general
      (nmap
@@ -1045,7 +1230,7 @@ Automatically tangle our Emacs.org config file when we save it
     (orderless-component-separator #'orderless-escapable-split-on-space))
 #+end_src
 **** Vertico
-#+begin_src emacs-lisp :lexical no
+#+begin_src emacs-lisp
   (use-package vertico
     :demand t
     :bind (:map vertico-map
@@ -1056,33 +1241,40 @@ Automatically tangle our Emacs.org config file when we save it
 #+end_src
 **** Marginalia
 #+begin_src emacs-lisp
-    (use-package marginalia
-      :custom
-      (marginalia-align 'right)
-      :init (marginalia-mode))
+  (use-package marginalia
+    :demand t
+    :custom
+    (marginalia-align 'right)
+    :init (marginalia-mode))
 #+end_src
 **** Consult
 #+begin_src emacs-lisp
   (use-package consult
-    ;; :init
+    :init
 
         ;; Optionally configure the register formatting. This improves the register
         ;; preview for `consult-register', `consult-register-load',
         ;; `consult-register-store' and the Emacs built-ins.
-        ;; (setq register-preview-delay 0.5
-        ;;         register-preview-function #'consult-register-format)
+        (setq register-preview-delay 0.5
+                register-preview-function #'consult-register-format)
 
         ;; Optionally tweak the register preview window.
         ;; This adds thin lines, sorting and hides the mode line of the window.
-    ;;     (advice-add #'register-preview :override #'consult-register-window)
+        (advice-add #'register-preview :override #'consult-register-window)
 
     ;;     ;; Use Consult to select xref locations with preview
-    ;;     (setq xref-show-xrefs-function #'consult-xref
-    ;;             xref-show-definitions-function #'consult-xref)
+        (setq xref-show-xrefs-function #'consult-xref
+                xref-show-definitions-function #'consult-xref)
 
-    ;; ;; :defer 0.5
+    ;; :defer 0.5
     :general (nmap :prefix "SPC"
                "b" 'consult-projectile-switch-to-buffer
+               "p" 'consult-projectile
+               "m" 'consult-minor-mode-menu
+               "f" 'consult-fd
+               "i" 'consult-imenu
+               "/" 'consult-ripgrep
+               "e" 'consult-flycheck
                )
     :bind (([remap repeat-complex-command] . consult-complex-command)
            ([remap switch-to-buffer] . consult-buffer)
@@ -1118,26 +1310,26 @@ Automatically tangle our Emacs.org config file when we save it
            ("M-s l" . consult-line)
            :map minibuffer-local-map
            ("M-s" . consult-history))
-    ;; :custom
-    ;; (register-preview-delay 0.5)
-    ;; (register-preview-function #'consult-register-format)
-    ;; (consult-narrow-key "<")
-    ;; (xref-search-program 'ripgrep)
-    ;; (xref-show-xrefs-function #'consult-xref)
-    ;; (xref-show-definitions-function #'consult-xref)
-    ;; :commands consult--customize-put
-    ;; :init
-    ;; (advice-add #'register-preview :override #'consult-register-window)
+    :custom
+    (consult-preview-at-point-mode t)
+    (register-preview-delay 0.5)
+    (register-preview-function #'consult-register-format)
+    (consult-narrow-key "<")
+    (xref-search-program 'ripgrep)
+    (xref-show-xrefs-function #'consult-xref)
+    (xref-show-definitions-function #'consult-xref)
+    :commands consult--customize-put
     :config
-    ;; (consult-customize
-    ;;  consult-theme :preview-key '(:debounce 0.2 any)
-    ;;  consult-ripgrep consult-git-grep consult-grep
-    ;;  consult-bookmark consult-recent-file consult-xref
-    ;;  consult--source-bookmark consult--source-file-register
-    ;;  consult--source-recent-file consult--source-project-recent-file
-    ;;  :preview-key "M-.")
+    (consult-customize
+     consult-theme :preview-key '(:debounce 0.2 any)
+     consult-ripgrep consult-git-grep consult-grep
+     consult-bookmark consult-recent-file consult-xref
+     consult--source-bookmark consult--source-file-register
+     consult--source-recent-file consult--source-project-recent-file
+     :preview-key "M-.")
     )
 #+end_src
+
 #+begin_src emacs-lisp
 (defun consult--orderless-regexp-compiler (input type &rest _config)
   (setq input (orderless-pattern-compiler input))
@@ -1145,66 +1337,135 @@ Automatically tangle our Emacs.org config file when we save it
    (mapcar (lambda (r) (consult--convert-regexp r type)) input)
    (lambda (str) (orderless--highlight input str))))
 
-;; OPTION 1: Activate globally for all consult-grep/ripgrep/find/...
 (setq consult--regexp-compiler #'consult--orderless-regexp-compiler)
 #+end_src
 **** Embark
 #+begin_src emacs-lisp
 
-  ;; (use-package embark
-  ;;   :bind
-  ;;   ("C-." . embark-act)
-  ;;   ("M-." . embark-dwim)
-  ;;   ("C-h b" . embark-bindings)
-  ;;   ("C-h B" . embark-bindings-at-point)
-  ;;   ("M-n" . embark-next-symbol)
-  ;;   ("M-p" . embark-previous-symbol)
-  ;;   (:map dired-mode-map ("e" . dired-open-externally))
-  ;;   :custom
-  ;;   (embark-quit-after-action nil)
-  ;;   (prefix-help-command #'embark-prefix-help-command)
-  ;;   (embark-indicators '(embark-minimal-indicator
-  ;;                        embark-highlight-indicator
-  ;;                        embark-isearch-highlight-indicator))
-  ;;   (embark-cycle-key ".")
-  ;;   (embark-help-key "?")
-  ;;   :commands embark-open-externally
-  ;;   :config
-  ;;   (setq embark-candidate-collectors
-  ;;         (cl-substitute 'embark-sorted-minibuffer-candidates
-  ;;                        'embark-minibuffer-candidates
-  ;;                        embark-candidate-collectors))
-  ;;   (defun dired-open-externally (&optional arg)
-  ;;     "Open marked or current file in operating system's default application."
-  ;;     (interactive "P")
-  ;;     (dired-map-over-marks (embark-open-externally (dired-get-filename)) arg)))
+  (use-package embark
+    :bind
+    ("C-." . embark-act)
+    ("M-." . embark-dwim)
+    ("C-h b" . embark-bindings)
+    ("C-h B" . embark-bindings-at-point)
+    ("M-n" . embark-next-symbol)
+    ("M-p" . embark-previous-symbol)
+    (:map dired-mode-map ("e" . dired-open-externally))
+    :custom
+    (embark-quit-after-action nil)
+    (prefix-help-command #'embark-prefix-help-command)
+    (embark-indicators '(embark-minimal-indicator
+                         embark-highlight-indicator
+                         embark-isearch-highlight-indicator))
+    (embark-cycle-key ".")
+    (embark-help-key "?")
+    :commands embark-open-externally
+    :config
+    (setq embark-candidate-collectors
+          (cl-substitute 'embark-sorted-minibuffer-candidates
+                         'embark-minibuffer-candidates
+                         embark-candidate-collectors))
+    (defun dired-open-externally (&optional arg)
+      "Open marked or current file in operating system's default application."
+      (interactive "P")
+      (dired-map-over-marks (embark-open-externally (dired-get-filename)) arg)))
+#+end_src
+
+#+begin_src emacs-lisp
+(use-package embark-consult
+  :ensure t ; only need to install it, embark loads it after consult if found
+  :hook
+  (embark-collect-mode . consult-preview-at-point-mode))
+#+end_src
+**** Tempel
+#+begin_src emacs-lisp
+  (use-package tempel
+  ;; :custom
+  ;; (tempel-trigger-prefix "<")
+
+   :init
+   ;; Setup completion at point
+   (defun tempel-setup-capf ()
+     ;; Add the Tempel Capf to `completion-at-point-functions'.
+     ;; `tempel-expand' only triggers on exact matches. Alternatively use
+     ;; `tempel-complete' if you want to see all matches, but then you
+     ;; should also configure `tempel-trigger-prefix', such that Tempel
+     ;; does not trigger too often when you don't expect it. NOTE: We add
+     ;; `tempel-expand' *before* the main programming mode Capf, such
+     ;; that it will be tried first.
+     (setq-local completion-at-point-functions
+                 (cons #'tempel-expand completion-at-point-functions)))
+
+   (add-hook 'conf-mode-hook 'tempel-setup-capf)
+   (add-hook 'prog-mode-hook 'tempel-setup-capf)
+   (add-hook 'text-mode-hook 'tempel-setup-capf)
+   (add-hook 'rust-mode-hook 'tempel-setup-capf)
+
+   ;; Optionally make the Tempel templates available to Abbrev,
+   ;; either locally or globally. `expand-abbrev' is bound to C-x '.
+   ;; (add-hook 'prog-mode-hook #'tempel-abbrev-mode)
+   (global-tempel-abbrev-mode))
+#+end_src
+
+#+begin_src emacs-lisp
+(use-package tempel-collection)
+#+end_src
+
+#+begin_src emacs-lisp :tangle ~/.emacs.d/templates
+  rustic-mode
+  (ttat "s" p "{};")
+
+  rust-mode
+  (ttat "s" p "{};")
+  rust-ts-mode
+  (ttat "s" p "{};")
 #+end_src
 **** Corfu
 #+begin_src emacs-lisp
-  (use-package corfu
-    :delight
+    (use-package corfu
+      :delight
+      :custom
+      (corfu-cycle t)
+      (corfu-auto t)
+      (corfu-auto-prefix 1)
+      (corfu-auto-delay 0.1)
+      (corfu-preselect 'prompt)
+      (corfu-on-exact-match nil)
+      (corfu-popupinfo-delay 0.1)
+      (corfu-echo-delay 0.1)
+      (corfu-prescient-mode 1)
+      :bind (:map corfu-map
+                  ([tab] . corfu-next)
+                  ([backtab] . corfu-previous)
+                  ("S-<return>" . corfu-insert)
+                  ("RET" . nil)
+                  ([remap move-end-of-line] . nil))
+      :hook (eshell-mode . (lambda () (setq-local corfu-auto nil)))
+      :init
+      (global-corfu-mode)
+      (corfu-history-mode)
+      (corfu-echo-mode)
+      (corfu-popupinfo-mode))
+
+    (defun my/eglot-capf ()
+    (setq-local completion-at-point-functions
+                (list (cape-super-capf
+                       #'eglot-completion-at-point
+                       #'tempel-expand
+                       #'cape-file))))
+
+  (add-hook 'eglot-managed-mode-hook #'my/eglot-capf)
+#+end_src
+**** dabbrev
+#+begin_src emacs-lisp
+    ;; Use Dabbrev with Corfu!
+    (use-package dabbrev
+    ;; Swap M-/ and C-M-/
+    :bind (("M-/" . dabbrev-completion)
+            ("C-M-/" . dabbrev-expand))
+    ;; Other useful Dabbrev configurations.
     :custom
-    (corfu-cycle t)
-    (corfu-auto t)
-    (corfu-auto-prefix 1)
-    (corfu-auto-delay 0.1)
-    (corfu-preselect 'prompt)
-    (corfu-on-exact-match nil)
-    (corfu-popupinfo-delay 0.1)
-    (corfu-echo-delay 0.1)
-    (corfu-prescient-mode 1)
-    :bind (:map corfu-map
-                ([tab] . corfu-next)
-                ([backtab] . corfu-previous)
-                ("S-<return>" . corfu-insert)
-                ("RET" . nil)
-                ([remap move-end-of-line] . nil))
-    :hook (eshell-mode . (lambda () (setq-local corfu-auto nil)))
-    :init
-    (global-corfu-mode)
-    (corfu-history-mode)
-    (corfu-echo-mode)
-    (corfu-popupinfo-mode))
+    (dabbrev-ignored-buffer-regexps '("\\.\\(?:pdf\\|jpe?g\\|png\\)\\'")))
 #+end_src
 *** treesit
 #+begin_src emacs-lisp
@@ -1227,6 +1488,35 @@ Automatically tangle our Emacs.org config file when we save it
   (add-to-list 'auto-mode-alist '("\\.ts\\'" . typescript-ts-mode))
   (add-to-list 'auto-mode-alist '("\\.tsx\\'" . tsx-ts-mode))
   (add-to-list 'auto-mode-alist '("\\.ya?ml\\'" . yaml-ts-mode))
+#+end_src
+*** Mastodon
+#+begin_src emacs-lisp
+  (use-package mastodon
+    :ensure t
+    :custom
+    (mastodon-instance-url "https://fosstodon.org")
+    (mastodon-active-user "prma")
+    :config
+    (mastodon-discover))
+#+end_src
+*** Easy hugo
+#+begin_src emacs-lisp
+  (use-package easy-hugo
+    :ensure t
+    :bind ("C-c C-k" . easy-hugo-menu)
+    :config
+    (easy-hugo-enable-menu)
+    :custom
+    (easy-hugo-server-flags "-D")
+    (easy-hugo-server-flags "-D")
+    (easy-hugo-default-ext ".org")
+    (easy-hugo-ext ".org")
+    (easy-hugo-no-help nil)
+    (easy-hugo-basedir "~/repos/prmadev_v3")
+    (easy-hugo-url "https://prma.dev")
+    (easy-hugo-postdir "content/posts")
+    (easy-hugo-org-header t)
+  )
 #+end_src
 *** Small Garbage-collector
 #+begin_src emacs-lisp
