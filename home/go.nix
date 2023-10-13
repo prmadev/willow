@@ -23,6 +23,7 @@ with lib; {
       ent-go
       go-tools
       gocode
+      gopls
     ];
 
     home.sessionPath = ["$HOME/go/bin"];

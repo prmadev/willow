@@ -3,7 +3,6 @@
 * Emacs Configuration
 
 ** Lexical
-
 #+NAME: lexical-binding
 #+begin_src emacs-lisp
 ;; -*- lexical-binding: t; -*-
@@ -214,15 +213,26 @@ Default mode for the *scratch* buffer
 #+end_src
 *** Manage backup files
 #+begin_src emacs-lisp
-(setq backup-directory-alist
-      `(("." . "~/.cache/emacs_backups/")))
-(setq backup-by-copying t)
-(setq
- delete-old-versions t
- kept-new-versions 6
- kept-old-versions 2
- version-control t)
+    (defconst emacs-tmp-dir "~/.cache/emacs_backups/")
+#+end_src
+#+begin_src emacs-lisp
+  (setq backup-directory-alist
+        `(("." . ,emacs-tmp-dir)))
 
+  (setq backup-by-copying t)
+  (setq
+   delete-old-versions t
+   kept-new-versions 6
+   kept-old-versions 2
+   version-control t)
+
+#+end_src
+*** Manage auto save files
+#+begin_src emacs-lisp
+   (setq auto-save-file-name-transforms
+        `((".*" ,emacs-tmp-dir t)))
+    (setq auto-save-list-file-prefix
+        emacs-tmp-dir)
 #+end_src
 *** Use-package
 #+begin_src emacs-lisp
@@ -303,6 +313,11 @@ Evil mode for others
      :keymaps '(normal insert visual emacs)
      :prefix "SPC"
      :global-prefix "C-SPC"))
+#+end_src
+**** other things
+#+begin_src emacs-lisp
+ (rune/leader-keys "w"
+    '(save-buffer :which-key "save"))
 #+end_src
 **** Window Moving
 #+begin_src emacs-lisp
@@ -537,7 +552,7 @@ Not use rulers in Org-mode and terminal mode
 #+begin_src emacs-lisp
   (defun prog/prettify-set ()
     (interactive)
-    (setq prettify-symbols-alist '(("lambda" . "λ") ("fn" . "𝒇"))))
+    (setq prettify-symbols-alist '(("lambda" . "λ"))))
   (add-hook 'prog-mode-hook 'prog/prettify-set)
 #+end_src
 **** Org-superstar
@@ -555,15 +570,37 @@ Not use rulers in Org-mode and terminal mode
   (use-package auto-compile :config (auto-compile-on-load-mode))
 #+end_src
 *** Editing
+**** Aggressive indent
+#+begin_src emacs-lisp
+  (use-package aggressive-indent
+    :config
+    (add-hook 'css-mode-hook #'aggressive-indent-mode)
+    (add-hook 'emacs-lisp-mode-hook #'aggressive-indent-mode)
+    (add-hook 'html-mode-hook #'aggressive-indent-mode)
+    (add-hook 'scss-mode-hook #'aggressive-indent-mode)
+    (add-hook 'scss-mode-hook #'aggressive-indent-mode)
+    (add-hook 'json-mode-hook #'aggressive-indent-mode)
+    (add-hook 'json-ts-mode-hook #'aggressive-indent-mode)
+    (add-hook 'toml-ts-mode-hook #'aggressive-indent-mode)
+    (add-hook 'toml-mode-hook #'aggressive-indent-mode)
+    (add-hook 'go-ts-mode-hook #'aggressive-indent-mode)
+    (add-hook 'go-mode-hook #'aggressive-indent-mode)
+    (add-hook 'nix-mode-hook #'aggressive-indent-mode)
+    (add-hook 'rust-mode-hook #'aggressive-indent-mode)
+    (add-hook 'rust-ts-mode-hook #'aggressive-indent-mode)
+    (add-hook 'rustic-mode-hook #'aggressive-indent-mode)
+    )
+#+end_src
 **** Revert mode
 #+BEGIN_SRC emacs-lisp
-  ;; Set the auto-revert interval to 1 second
-  (setq auto-revert-interval 1
-        ;; Enable checking for version control system info
-        auto-revert-check-vc-info t)
+;; Set the auto-revert interval to 1 second
+(setq
+ auto-revert-interval 1
+ ;; Enable checking for version control system info
+ auto-revert-check-vc-info t)
 
-  ;; Enable global auto-revert mode
-  (global-auto-revert-mode 1)
+;; Enable global auto-revert mode
+(global-auto-revert-mode 1)
 #+END_SRC
 
 **** Surrounding
@@ -646,7 +683,7 @@ Increase the cryptographic security by inceasing minimum size (in bits) of the p
 #+begin_src emacs-lisp
   (defun prma/org-mode-setup ()
     (org-indent-mode 1)
-    (truncate-lines t)
+    (electric-pair-mode 1)
     )
 #+end_src
 
@@ -657,6 +694,7 @@ Increase the cryptographic security by inceasing minimum size (in bits) of the p
    :general
     (nmap
         :prefix "SPC"
+        "oo" 'consult-outline
         "o" '(nil :which-key "org")
         "ot" '(nil :which-key "table")
         "ota" 'org-table-align
@@ -668,6 +706,8 @@ Increase the cryptographic security by inceasing minimum size (in bits) of the p
         "oe" 'org-set-effort
         "op" 'org-set-property
         "oc" 'org-capture)
+    :config
+    (electric-pair-mode 1)
    :custom
     (org-directory "~/repos/notes/")
     (org-agenda-files '("~/repos/notes/agenda.org" "~/repos/notes/birthdays.org"))
@@ -696,13 +736,51 @@ Increase the cryptographic security by inceasing minimum size (in bits) of the p
       ("@home" . ?h)
       ("@famedly" . ?f)
       ("@kitkat" . ?f))))
+
+
+
+
 #+end_src
 
+#+begin_src emacs-lisp
+  ;; Populates only the EXPORT_FILE_NAME property in the inserted heading.
+  (with-eval-after-load 'org-capture
+    (defun org-hugo-new-subtree-post-capture-template ()
+      "Returns `org-capture' template string for new Hugo post.
+  See `org-capture-templates' for more information."
+      (let* ((title (read-from-minibuffer "Post Title: ")) ;Prompt to enter the post title
+             (fname (org-hugo-slug title)))
+        (mapconcat #'identity
+                   `(
+                     ,(concat "* TODO " title)
+                     ":PROPERTIES:"
+                     ,(concat ":EXPORT_FILE_NAME: " fname)
+                     ":END:"
+                     "%?\n")          ;Place the cursor here finally
+                   "\n")))
+
+                (add-to-list 'org-capture-templates
+                 '("h"                ;`org-capture' binding + h
+                   "Hugo post"
+                   entry
+                   ;; It is assumed that below file is present in `org-directory'
+                   ;; and that it has a "Blog Ideas" heading. It can even be a
+                   ;; symlink pointing to the actual location of all-posts.org!
+                   (file+olp "~/repos/prmadev/content-org/all-posts.org" "Blog Ideas")
+                   (function org-hugo-new-subtree-post-capture-template))))
+#+end_src
+
+#+RESULTS:
+| h  | Hugo post | entry | (file+olp ~/repos/prmadev/content-org/all-posts.org Blog Ideas) | #'org-hugo-new-subtree-post-capture-template |
+| t  | TASKS     |       |                                                                 |                                              |
+| j  | JOURNAL   |       |                                                                 |                                              |
+| jj | Journal   | entry | (file+olp+datetree ~/repos/notes/journal.org)                   |                                              |
 
 **** soft-wrap
 #+begin_src emacs-lisp
   (add-hook 'org-mode-hook 'visual-line-mode)
 #+end_src
+
 **** Entangler
 Automatically tangle our Emacs.org config file when we save it
 #+begin_src emacs-lisp
@@ -915,11 +993,13 @@ Automatically tangle our Emacs.org config file when we save it
      (nmap
      :prefix "SPC"
      "g" '(nil :which-key "magit")
-     "gs" 'magit-status
+     "gg" 'magit-status
      "gb" 'magit-blame
      "gP" 'magit-push
      "gp" 'magit-pull
      "gc" 'magit-commit
+     "gb" 'magit-branch
+     "gm" 'magit-merge
      ))
 #+end_src
 
@@ -932,7 +1012,7 @@ Automatically tangle our Emacs.org config file when we save it
 #+end_src
 
 *** Flycheck
-#+begin_src emacs-lisp
+#+begin_src emacs-lisp :tangle no
   (use-package flycheck
     :ensure t
     :hook (prog-mode . flycheck-mode))
@@ -944,12 +1024,12 @@ Automatically tangle our Emacs.org config file when we save it
     :hook (go-mode . flycheck-golangci-lint-setup))
 
 #+end_src
-#+begin_src emacs-lisp
+#+begin_src emacs-lisp :tangle no
     (use-package
      flycheck-eglot
      :ensure t
      :after (flycheck eglot)
-     :config (global-flycheck-eglot-mode 1)
+     ;; :config (global-flycheck-eglot-mode- 0)
      )
 #+end_src
 *** Languages
@@ -1028,15 +1108,17 @@ Automatically tangle our Emacs.org config file when we save it
   (rune/leader-keys "li" '(eglot-find-implementations :which-key "references"))
   (rune/leader-keys "lr" '(eglot-rename :which-key "rename"))
   (rune/leader-keys "la" '(eglot-code-actions :which-key "code-actions"))
+  (rune/leader-keys "a" '(eglot-code-actions :which-key "code-actions"))
+  (rune/leader-keys "ls" '(consult-eglot-symbols :which-key "symbols"))
 #+end_src
 
 #+begin_src emacs-lisp
-    (setq-default eglot-workspace-configuration
-        '((:gopls .
-            (
-             (completeUnimported . t)
-             (usePlaceholders . t)
-             ))))
+  (setq-default eglot-workspace-configuration
+      '((:gopls .
+          (
+           (staticcheck . t)
+           (completeUnimported . t)
+           ))))
 
 #+end_src
 
@@ -1163,7 +1245,7 @@ Automatically tangle our Emacs.org config file when we save it
      "i" 'counsel-imenu
      ;"b" 'counsel-switch-buffer
      "f" 'counsel-fzf
-     "e" 'counsel-flycheck
+     ;; "e" 'counsel-flycheck
      )
    :custom
    (counsel-linux-app-format-function #'counsel-linux-app-format-function-name-only)
@@ -1274,7 +1356,7 @@ Automatically tangle our Emacs.org config file when we save it
                "f" 'consult-fd
                "i" 'consult-imenu
                "/" 'consult-ripgrep
-               "e" 'consult-flycheck
+               ;; "e" 'consult-flycheck
                )
     :bind (([remap repeat-complex-command] . consult-complex-command)
            ([remap switch-to-buffer] . consult-buffer)
@@ -1377,48 +1459,55 @@ Automatically tangle our Emacs.org config file when we save it
   :hook
   (embark-collect-mode . consult-preview-at-point-mode))
 #+end_src
+
 **** Tempel
 #+begin_src emacs-lisp
-  (use-package tempel
-  ;; :custom
-  ;; (tempel-trigger-prefix "<")
+(use-package
+ tempel
+ ;; :custom
+ ;; (tempel-trigger-prefix "<")
+ :general (nmap :prefix "SPC" "t" '(tempel-insert :which-key templates))
+ :init
+ ;; Setup completion at point
+ (defun tempel-setup-capf ()
+   ;; Add the Tempel Capf to `completion-at-point-functions'.
+   ;; `tempel-expand' only triggers on exact matches. Alternatively use
+   ;; `tempel-complete' if you want to see all matches, but then you
+   ;; should also configure `tempel-trigger-prefix', such that Tempel
+   ;; does not trigger too often when you don't expect it. NOTE: We add
+   ;; `tempel-expand' *before* the main programming mode Capf, such
+   ;; that it will be tried first.
+   (setq-local completion-at-point-functions
+               (cons #'tempel-expand completion-at-point-functions)))
 
-   :init
-   ;; Setup completion at point
-   (defun tempel-setup-capf ()
-     ;; Add the Tempel Capf to `completion-at-point-functions'.
-     ;; `tempel-expand' only triggers on exact matches. Alternatively use
-     ;; `tempel-complete' if you want to see all matches, but then you
-     ;; should also configure `tempel-trigger-prefix', such that Tempel
-     ;; does not trigger too often when you don't expect it. NOTE: We add
-     ;; `tempel-expand' *before* the main programming mode Capf, such
-     ;; that it will be tried first.
-     (setq-local completion-at-point-functions
-                 (cons #'tempel-expand completion-at-point-functions)))
+ (add-hook 'conf-mode-hook 'tempel-setup-capf)
+ (add-hook 'prog-mode-hook 'tempel-setup-capf)
+ (add-hook 'text-mode-hook 'tempel-setup-capf)
+ (add-hook 'rust-mode-hook 'tempel-setup-capf)
 
-   (add-hook 'conf-mode-hook 'tempel-setup-capf)
-   (add-hook 'prog-mode-hook 'tempel-setup-capf)
-   (add-hook 'text-mode-hook 'tempel-setup-capf)
-   (add-hook 'rust-mode-hook 'tempel-setup-capf)
-
-   ;; Optionally make the Tempel templates available to Abbrev,
-   ;; either locally or globally. `expand-abbrev' is bound to C-x '.
-   ;; (add-hook 'prog-mode-hook #'tempel-abbrev-mode)
-   (global-tempel-abbrev-mode))
+ ;; Optionally make the Tempel templates available to Abbrev,
+ ;; either locally or globally. `expand-abbrev' is bound to C-x '.
+ ;; (add-hook 'prog-mode-hook #'tempel-abbrev-mode)
+ (global-tempel-abbrev-mode))
 #+end_src
 
 #+begin_src emacs-lisp
 (use-package tempel-collection)
 #+end_src
 
-#+begin_src emacs-lisp :tangle ~/.emacs.d/templates
-  rustic-mode
-  (ttat "s" p "{};")
 
-  rust-mode
-  (ttat "s" p "{};")
-  rust-ts-mode
-  (ttat "s" p "{};")
+#+begin_src emacs-lisp :tangle ~/.emacs.d/templates
+  rust-mode rust-ts-mode rustic-mode
+  (testnorm > "fn is_normal<T:Sized + Send + Sync + Unpin>(){}" n> n> "#[test]" n> "fn normal_types() {" n> "is_normal::<" (s TYPE) ">();" n> "}" q)
+  (testmod > "#[cfg(test)]" n> "mod testing{" n> > "#[allow(clippy::wildcard_imports)]" n> > "use super::*;" n> q n> "}" )
+  (ndrv > "#[cfg_attr(feature = \"serde\"), derive(serde::Serialize, serde::Deserialize)]" n>"#[derive(Clone, Debug, PartialEq, Eq, Hash, PartialOrd, Ord)]" q)
+  (edrv > "#[cfg_attr(feature = \"serde\"), derive(serde::Serialize, serde::Deserialize)]" n>"#[derive(Clone, Debug, PartialEq, Eq, Hash, thiserror::Error)]" q)
+  (al > "#allow("q")")
+  (enum > "enum " p "{" n> q "}")
+  (iflet > "if let " p " = " p " {" n> q n> "}")
+  (test > "#[test]" n> "fn " p "() {" n> q n> "}")
+  (whilel > "while let " p " = " p "{" n> q n>"}")
+
 #+end_src
 **** Corfu
 #+begin_src emacs-lisp
@@ -1438,6 +1527,7 @@ Automatically tangle our Emacs.org config file when we save it
                   ([tab] . corfu-next)
                   ([backtab] . corfu-previous)
                   ("S-<return>" . corfu-insert)
+                  ("SPC" . corfu-insert)
                   ("RET" . nil)
                   ([remap move-end-of-line] . nil))
       :hook (eshell-mode . (lambda () (setq-local corfu-auto nil)))
@@ -1491,13 +1581,13 @@ Automatically tangle our Emacs.org config file when we save it
 #+end_src
 *** Mastodon
 #+begin_src emacs-lisp
-  (use-package mastodon
-    :ensure t
-    :custom
-    (mastodon-instance-url "https://fosstodon.org")
-    (mastodon-active-user "prma")
-    :config
-    (mastodon-discover))
+  ;; (use-package mastodon
+  ;;   :ensure t
+  ;;   :custom
+  ;;   (mastodon-instance-url "https://fosstodon.org")
+  ;;   (mastodon-active-user "prma")
+  ;;   :config
+  ;;   (mastodon-discover))
 #+end_src
 *** Easy hugo
 #+begin_src emacs-lisp
@@ -1518,6 +1608,18 @@ Automatically tangle our Emacs.org config file when we save it
     (easy-hugo-org-header t)
   )
 #+end_src
+
+*** ox-hugo
+#+begin_src emacs-lisp
+  (use-package ox-hugo
+                :ensure t
+                :demand t
+                :after ox
+                ;; :custom
+                ;; (org-hugo-footer "<p class=\"discuss\">Comment section? I have none! <a href=\"mailto:prma.dev@protonmail.com\"> email me </a></p>")
+                )
+#+end_src
+
 *** Small Garbage-collector
 #+begin_src emacs-lisp
   (setq gc-cons-threshold (* 200 1000 1000))

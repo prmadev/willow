@@ -80,13 +80,14 @@ with lib; {
           all-the-icons
           all-the-icons-dired
           all-the-icons-completion
-           auto-compile
+          auto-compile
+          aggressive-indent
           cape
           catppuccin-theme # configured
           consult
           consult-dir
           consult-eglot
-          consult-flycheck
+          # consult-flycheck
           consult-projectile
           consult-yasnippet
           corfu
@@ -116,15 +117,24 @@ with lib; {
           easy-hugo
           fish-completion
           fish-mode
-          flycheck
-          flycheck-eglot
-          flycheck-golangci-lint
-          flycheck-posframe
-          flycheck-projectile
-          flycheck-rust
+
+          flymake
+          flymake-yamllint
+          flymake-yaml
+          flymake-sqlfluff
+          flymake-json
+          flymake-go
+          flymake-diagnostic-at-point
+
+          # flycheck
+          # flycheck-eglot
+          # flycheck-golangci-lint
+          # flycheck-posframe
+          # flycheck-projectile
+          # flycheck-rust
           eldoc-box
 
-          flycheck-yamllint
+          # flycheck-yamllint
           format-all
           gcmh
           general

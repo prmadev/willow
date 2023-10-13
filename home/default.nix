@@ -115,9 +115,10 @@
     ./jq.nix
     ./pls.nix
     ./iamb.nix
+    ./yazi.nix
   ];
 
-  panta.enable= true;
+  panta.enable = true;
   iamb.enable = true;
   fluffychat.enable = true;
   yt-dlp.enable = true;
@@ -132,7 +133,7 @@
   graphical.enable = true;
   task.enable = false;
   hoard.enable = false; # candidate for cleaning
-  cinny.enable= true;
+  cinny.enable = true;
   zk.enable = false;
   zola.enable = true;
   newsboat.enable = false; # candidate for cleaning
@@ -202,7 +203,7 @@
   go.enable = true;
   pandoc.enable = true;
   asciidoc.enable = true;
-  neovim.enable = true;
+  neovim.enable = false;
   protobuf.enable = true;
   grpc.enable = true;
   helix.enable = true;
@@ -219,6 +220,7 @@
   pls.enable = true;
   soup.enable = true;
   hugo.enable = true;
+  yazi.enable = true;
 
   shell.user = "${pkgs.fish}/bin/fish";
   editor = {
