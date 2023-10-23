@@ -28,6 +28,7 @@
         # "https://hyprland.cachix.org"
         "https://helix.cachix.org"
         "https://devenv.cachix.org"
+        "https://crane.cachix.org"
 
         "https://cache.iog.io"
       ];
@@ -38,6 +39,7 @@
         "neovim-nightly.cachix.org-1:feIoInHRevVEplgdZvQDjhp11kYASYCE2NGY9hNrwxY="
         "helix.cachix.org-1:ejp9KQpR1FBI2onstMQ34yogDm4OgU2ru6lIwPvuCVs="
         "devenv.cachix.org-1:w1cLUi8dv3hnoSPGAuibQv+f9TZLr6cv/Hm9XgU50cw="
+        "crane.cachix.org-1:8Scfpmn9w+hGdXH/Q9tTLiYAE/2dnJYRJP7kl80GuRk="
       ];
     };
   };

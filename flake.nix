@@ -39,6 +39,7 @@
     zig.url = "github:mitchellh/zig-overlay";
     zls.url = "github:zigtools/zls";
     kyushu.url = "git+https://codeberg.org/prma/soapberry.git";
+    prmait.url = "git+https://codeberg.org/prma/prmait.git";
 
     # nix-doom-emacs.url = "github:nix-community/nix-doom-emacs";
     emacs-overlay.url = "github:nix-community/emacs-overlay";
@@ -139,6 +140,11 @@
 
       flake = false;
     };
+
+    snippets-ls = {
+      url = "github:prmadev/snippets-ls";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -160,6 +166,7 @@
               (final: prev: {zigpkg = inputs.zig.packages.${prev.system}.master;})
               inputs.emacs-overlay.overlays.default
               # inputs.neovim-nightly-overlay.overlay
+              (final: prev: {external.snippets-ls = snippets-ls.packages.${prev.system}.snippets-ls;})
             ];
           }
           nur.nixosModules.nur

@@ -24,6 +24,9 @@ with lib; {
       go-tools
       gocode
       gopls
+      godef
+      gotools
+      errcheck
     ];
 
     home.sessionPath = ["$HOME/go/bin"];

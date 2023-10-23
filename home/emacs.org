@@ -189,7 +189,7 @@ Default mode for the *scratch* buffer
   (visual-line-mode -1)
   (setq truncate-lines t)
   (setq-default truncate-lines t)
-  (set-face-attribute `default nil :font "Maple Mono" :height 180)
+  (set-face-attribute `default nil :font "Maple Mono" :height 150)
 #+end_src
 
 #+RESULTS: frame-settings
@@ -504,19 +504,19 @@ Show the color of the color codes in programming buffers.
 #+end_src
 **** Eldoc
 ***** Go
-#+begin_src emacs-lisp
+#+begin_src emacs-lisp :tangle no
   (use-package go-eldoc
     :ensure t
     )
 #+end_src
 ***** Css
-#+begin_src emacs-lisp
+#+begin_src emacs-lisp :tangle no
   (use-package css-eldoc
     :ensure t
     )
 #+end_src
 ***** toml
-#+begin_src emacs-lisp
+#+begin_src emacs-lisp :tangle no
   (use-package eldoc-toml
     :ensure t
     )
@@ -556,7 +556,7 @@ Not use rulers in Org-mode and terminal mode
   (add-hook 'prog-mode-hook 'prog/prettify-set)
 #+end_src
 **** Org-superstar
-#+begin_src emacs-lisp
+#+begin_src emacs-lisp :tangle no
   (use-package
    org-superstar
    :after org
@@ -564,14 +564,24 @@ Not use rulers in Org-mode and terminal mode
    :custom (org-superstar-headline-bullets-list '("█" "▓" "▒" "░")))
 
 #+end_src
-
-*** auto-compile
+**** org-appear
 #+begin_src emacs-lisp
+(use-package org-appear
+  :commands (org-appear-mode)
+  :hook (org-mode . org-appear-mode)
+  :init
+  (setq org-hide-emphasis-markers t		;; A default setting that needs to be t for org-appear
+        org-appear-autoemphasis t		;; Enable org-appear on emphasis (bold, italics, etc)
+        org-appear-autolinks t
+        org-appear-autosubmarkers t))
+#+end_src
+*** auto-compile
+#+begin_src emacs-lisp :tangle no
   (use-package auto-compile :config (auto-compile-on-load-mode))
 #+end_src
 *** Editing
 **** Aggressive indent
-#+begin_src emacs-lisp
+#+begin_src emacs-lisp :tangle no
   (use-package aggressive-indent
     :config
     (add-hook 'css-mode-hook #'aggressive-indent-mode)
@@ -612,7 +622,7 @@ something is here
    :config (global-evil-surround-mode 1))
 #+end_src
 **** Multiple Cursors
-#+begin_src emacs-lisp
+#+begin_src emacs-lisp :tangle no
   (use-package evil-mc
     :after evil
     :init (global-evil-mc-mode 1))
@@ -846,7 +856,7 @@ Automatically tangle our Emacs.org config file when we save it
 #+end_src
 
 *** Counsel-projectile
-#+begin_src emacs-lisp
+#+begin_src emacs-lisp :tangle no
       (use-package counsel-projectile
         :after projectile
         :config (counsel-projectile-mode 1)
@@ -855,7 +865,7 @@ Automatically tangle our Emacs.org config file when we save it
 
 *** Term
 **** term
-#+begin_src emacs-lisp
+#+begin_src emacs-lisp :tangle no
 (use-package
  term
  :commands term
@@ -887,7 +897,7 @@ Automatically tangle our Emacs.org config file when we save it
  (setq vterm-max-scrollback 10000))
 #+end_src
 
-#+begin_src emacs-lisp
+#+begin_src emacs-lisp :tangle no
   (global-set-key [f2] 'vterm-toggle)
   (global-set-key
    [C-f2] 'vterm-toggle-cd)
@@ -930,7 +940,7 @@ Automatically tangle our Emacs.org config file when we save it
 
 #+end_src
 
-#+begin_src emacs-lisp
+#+begin_src emacs-lisp :tangle no
   (use-package multi-vterm
    :ensure t
    :config
@@ -969,7 +979,7 @@ Automatically tangle our Emacs.org config file when we save it
 #+end_src
 
 *** Direnv
-#+begin_src emacs-lisp
+#+begin_src emacs-lisp :tangle no
   (use-package direnv
    :ensure t
    :config
@@ -978,7 +988,7 @@ Automatically tangle our Emacs.org config file when we save it
 #+end_src
 
 *** Timemachine
-#+begin_src emacs-lisp :lexical no
+#+begin_src emacs-lisp
   (use-package git-timemachine
     :ensure t
     )
@@ -1004,7 +1014,7 @@ Automatically tangle our Emacs.org config file when we save it
 #+end_src
 
 *** Git-gutter
-#+begin_src emacs-lisp
+#+begin_src emacs-lisp :tangle no
   (use-package git-gutter
     :ensure t
     :defer 3
@@ -1012,24 +1022,24 @@ Automatically tangle our Emacs.org config file when we save it
 #+end_src
 
 *** Flycheck
-#+begin_src emacs-lisp :tangle no
+#+begin_src emacs-lisp
   (use-package flycheck
     :ensure t
     :hook (prog-mode . flycheck-mode))
 #+end_src
 
-#+begin_src emacs-lisp :tangle no
+#+begin_src emacs-lisp
   (use-package flycheck-golangci-lint
     :ensure t
     :hook (go-mode . flycheck-golangci-lint-setup))
 
 #+end_src
-#+begin_src emacs-lisp :tangle no
+#+begin_src emacs-lisp
     (use-package
      flycheck-eglot
      :ensure t
      :after (flycheck eglot)
-     ;; :config (global-flycheck-eglot-mode- 0)
+     :config (global-flycheck-eglot-mode 1)
      )
 #+end_src
 *** Languages
@@ -1055,7 +1065,7 @@ Automatically tangle our Emacs.org config file when we save it
   (add-hook 'rust-mode-hook #'lsp)
 #+end_src
 **** Web-mode
-#+begin_src emacs-lisp
+#+begin_src emacs-lisp :tangle no
 (use-package
  web-mode
  :ensure t
@@ -1157,9 +1167,9 @@ Automatically tangle our Emacs.org config file when we save it
   (defun eglot-format-buffer-on-save ()
     (add-hook 'before-save-hook #'eglot-format-buffer -10 t))
   (add-hook 'go-mode-hook #'eglot-format-buffer-on-save)
-  (add-hook 'go-mode-hook #'eglot-format-buffer-on-save)
+  (add-hook 'go-ts-mode-hook #'eglot-format-buffer-on-save)
   (add-hook 'rust-mode-hook #'eglot-format-buffer-on-save)
-  (add-hook 'rust-mod-mode-hook #'eglot-format-buffer-on-save)
+  (add-hook 'rust-ts-mode-hook #'eglot-format-buffer-on-save)
   (add-hook 'go-mod-ts-mode-hook #'eglot-format-buffer-on-save)
   (add-hook 'json-ts-mod-mode-hook #'eglot-format-buffer-on-save)
   (add-hook 'json-mode-hook #'eglot-format-buffer-on-save)
@@ -1356,7 +1366,7 @@ Automatically tangle our Emacs.org config file when we save it
                "f" 'consult-fd
                "i" 'consult-imenu
                "/" 'consult-ripgrep
-               ;; "e" 'consult-flycheck
+               "e" 'consult-flycheck
                )
     :bind (([remap repeat-complex-command] . consult-complex-command)
            ([remap switch-to-buffer] . consult-buffer)
@@ -1580,17 +1590,17 @@ Automatically tangle our Emacs.org config file when we save it
   (add-to-list 'auto-mode-alist '("\\.ya?ml\\'" . yaml-ts-mode))
 #+end_src
 *** Mastodon
-#+begin_src emacs-lisp
-  ;; (use-package mastodon
-  ;;   :ensure t
-  ;;   :custom
-  ;;   (mastodon-instance-url "https://fosstodon.org")
-  ;;   (mastodon-active-user "prma")
-  ;;   :config
-  ;;   (mastodon-discover))
+#+begin_src emacs-lisp :tangle no
+  (use-package mastodon
+    :ensure t
+    :custom
+    (mastodon-instance-url "https://fosstodon.org")
+    (mastodon-active-user "prma")
+    :config
+    (mastodon-discover))
 #+end_src
 *** Easy hugo
-#+begin_src emacs-lisp
+#+begin_src emacs-lisp :tangle no
   (use-package easy-hugo
     :ensure t
     :bind ("C-c C-k" . easy-hugo-menu)
@@ -1619,6 +1629,7 @@ Automatically tangle our Emacs.org config file when we save it
                 ;; (org-hugo-footer "<p class=\"discuss\">Comment section? I have none! <a href=\"mailto:prma.dev@protonmail.com\"> email me </a></p>")
                 )
 #+end_src
+
 
 *** Small Garbage-collector
 #+begin_src emacs-lisp

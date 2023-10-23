@@ -56,6 +56,26 @@ with lib; {
               };
             };
           };
+          snippets-go = {
+            command = "snippets-ls";
+            args = ["-config" "/home/a/.config/helix/snippets-go.json"];
+          };
+          snippets-rust = {
+            command = "snippets-ls";
+            args = ["-config" "/home/a/.config/helix/snippets-rust.json"];
+          };
+          snippets-nix = {
+            command = "snippets-ls";
+            args = ["-config" "/home/a/.config/helix/snippets-nix.json"];
+          };
+          snippets-md = {
+            command = "snippets-ls";
+            args = ["-config" "/home/a/.config/helix/snippets-md.json"];
+          };
+          snippets-org = {
+            command = "snippets-ls";
+            args = ["-config" "/home/a/.config/helix/snippets-org.json"];
+          };
 
           hls = mkIf config.haskell.enable {
             command = "haskell-language-server-wrapper";
@@ -95,13 +115,18 @@ with lib; {
               args = ["--quiet"];
             };
 
-            language-servers = ["nil"];
+            language-servers = ["nil" "snippets-nix"];
           }
 
           {
             name = "go";
             auto-format = true;
             formatter.command = "gofumpt";
+            language-servers = ["gopls" "snippets-go"];
+          }
+          {
+            name = "rust";
+            language-servers = ["rustanalyzer" "snippets-rust"];
           }
         ];
       };
@@ -193,6 +218,103 @@ with lib; {
       };
     };
 
+    home.file = let
+      snippets-go = pkgs.writeTextFile {
+        name = "snippets-go.json";
+        text = builtins.toJSON {
+          "function declaration" = {
+            "prefix" = "gf";
+            "body" = "func $1($2) $3 {\n\t$0\n}";
+            "description" = "Snippet for function declaration";
+          };
+
+          "better Err" = {
+            "body" = "fmt.Errorf(\"$0: %w\", err)";
+            "description" = "Snippet for wrapping error";
+            "prefix" = "erf";
+          };
+          "new error" = {
+            "body" = "var $0 error = errors.New(\"$1\")";
+            "description" = "Snippet for wrapping error";
+            "prefix" = "ern";
+          };
+        };
+        destination = "";
+      };
+      snippets-rust = pkgs.writeTextFile {
+        name = "snippets-rust.json";
+        text = builtins.toJSON {
+          "test module" = {
+            body = "#[cfg(test)]\nmod testing{\n\t#[allow(clippy::wildcard_imports)]\n\tuse super::*;\n\t$0\n}";
+            description = "Snippet for creating test modules";
+            prefix = "tmod";
+          };
+
+          "Is Normal Test" = {
+            body = "fn is_normal<T: Sized + Send + Sync + Unpin>() {}\n#[test]\nfn normal_types() {\n\tis_normal::<$0>();\n}";
+            description = "Snippet for creating normal test";
+            prefix = "tnorm";
+          };
+          "optionally derive serde" = {
+            body = "#[cfg_attr(feature = \"serde\", derive(serde::Serialize, serde::Deserialize))]";
+            description = "Snippet for optionally deriving serde";
+            prefix = "drserde";
+          };
+          "usual struct derieves " = {
+            body = "#[cfg_attr(feature = \"serde\", derive(serde::Serialize, serde::Deserialize))]\n#[derive(Clone, Debug, PartialEq, Eq, Hash, PartialOrd, Ord)]";
+            description = "Snippet for optionally deriving serde";
+            prefix = "drn";
+          };
+          "error enum derieves " = {
+            body = "#[cfg_attr(feature = \"serde\", derive(serde::Serialize, serde::Deserialize))]\n#[derive(Clone, Debug, PartialEq, Eq, Hash, thiserror::Error)]";
+            description = "Snippet for optionally deriving serde";
+            prefix = "dre";
+          };
+        };
+        destination = "";
+      };
+      snippets-nix = pkgs.writeTextFile {
+        name = "snippets-nix.json";
+        text = builtins.toJSON {
+          "new role" = {
+            body = "{\n\tpkgs,\n\tlib,\n\tconfig,\n\t...\n}:\nwith lib;{\n\toptions.$\{1:foo\}.enable = mkEnableOption \"$\{2:foo\} settings\";\n\tconfig = mkIf config.$\{3:foo\}.enable {\n\t$0\n\t};\n}";
+            description = "Snippet for creating module";
+            prefix = "nmod";
+          };
+        };
+        destination = "";
+      };
+      snippets-md = pkgs.writeTextFile {
+        name = "snippets-md.json";
+        text =
+          builtins.toJSON {
+          };
+        destination = "";
+      };
+      snippets-org = pkgs.writeTextFile {
+        name = "snippets-org.json";
+        text =
+          builtins.toJSON {
+          };
+        destination = "";
+      };
+    in {
+      ".config/helix/snippets-go.json" = {
+        source = snippets-go;
+      };
+      ".config/helix/snippets-rust.json" = {
+        source = snippets-rust;
+      };
+      ".config/helix/snippets-nix.json" = {
+        source = snippets-nix;
+      };
+      ".config/helix/snippets-md.json" = {
+        source = snippets-md;
+      };
+      ".config/helix/snippets-org.json" = {
+        source = snippets-org;
+      };
+    };
     home.packages = with pkgs; [
       nodePackages.bash-language-server
       nodePackages.dockerfile-language-server-nodejs
@@ -201,6 +323,8 @@ with lib; {
       yaml-language-server
       clang
       marksman
+      external.snippets-ls
+
       # gcc
     ];
   };

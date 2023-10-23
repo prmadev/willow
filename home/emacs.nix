@@ -87,7 +87,7 @@ with lib; {
           consult
           consult-dir
           consult-eglot
-          # consult-flycheck
+          consult-flycheck
           consult-projectile
           consult-yasnippet
           corfu
@@ -126,15 +126,15 @@ with lib; {
           flymake-go
           flymake-diagnostic-at-point
 
-          # flycheck
-          # flycheck-eglot
-          # flycheck-golangci-lint
-          # flycheck-posframe
-          # flycheck-projectile
-          # flycheck-rust
+          flycheck
+          flycheck-eglot
+          flycheck-golangci-lint
+          flycheck-posframe
+          flycheck-projectile
+          flycheck-rust
           eldoc-box
 
-          # flycheck-yamllint
+          flycheck-yamllint
           format-all
           gcmh
           general
@@ -163,6 +163,8 @@ with lib; {
           ob-rust
           orderless
           org
+          org-appear
+          org-ql
           org-contrib
           org-superstar
           ox-hugo

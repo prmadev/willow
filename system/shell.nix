@@ -5,6 +5,7 @@
     vim #just in case I need it at system level
     curl # obvious
     systeroid
+    parallel
   ];
 
   console.colors = [

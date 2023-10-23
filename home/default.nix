@@ -17,6 +17,7 @@
     ./neovim.nix
     ./helix
     ./emacs.nix
+    ./prmait.nix
     ./pref.nix
     ./haskell.nix
     ./nixdev.nix
@@ -221,6 +222,7 @@
   soup.enable = true;
   hugo.enable = true;
   yazi.enable = true;
+  prmait.enable = true;
 
   shell.user = "${pkgs.fish}/bin/fish";
   editor = {
