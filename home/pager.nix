@@ -22,7 +22,10 @@ with lib; {
         batdiff
       ];
       themes = {
-        macchiato = builtins.readFile (inputs.bat-catppuccin + "/Catppuccin-macchiato.tmTheme");
+        macchiato = {
+          src = inputs.bat-catppuccin;
+          file = "Catppuccin-macchiato.tmTheme";
+        };
       };
     };
     home.sessionVariables = {

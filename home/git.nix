@@ -31,6 +31,7 @@ with lib; {
         rebase.autoStash = true;
         url = {
           "ssh://git@codeberg.org".insteadOf = "https://codeberg.org";
+          "ssh://git@gitlab.com".insteadOf = "https://gitlab.com";
           "ssh://git@github.com".insteadOf = "https://github.com";
           "https://github.com/" = {
             insteadOf = [

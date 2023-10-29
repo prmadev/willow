@@ -14,8 +14,11 @@ with lib; {
       content = pkgs.writeTextFile {
         name = "snippets-rust.json";
         text = builtins.toJSON {
-          "journal_configs" = {
-            journal_path = "${config.repos.notes.path}/journal/";
+          "journal" = {
+            path = "${config.repos.notes.path}/journal/";
+          };
+          "task" = {
+            path = "${config.repos.notes.path}/task/";
           };
           destination = "";
         };

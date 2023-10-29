@@ -4,7 +4,7 @@
     ./hardware-configuration.nix
   ];
   # kernel
-  boot.kernelPackages = pkgs.linuxKernel.packages.linux_6_1;
+  boot.kernelPackages = pkgs.linuxKernel.packages.linux_6_5;
   # Audio
   sound.enable = true;
   sound.mediaKeys.enable = true;
@@ -57,6 +57,8 @@
     "mem_sleep_default=freeze"
     "i915.enable_fbc=1"
     "i915.enable_psr=2"
+    "kptr_restrict=0"
+    "perf_event_paranoid=1"
   ];
   boot.initrd.kernelModules = ["i915"];
   services.thermald.enable = true;

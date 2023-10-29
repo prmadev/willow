@@ -1,7 +1,7 @@
 {
   description = "my nix configuration";
   inputs = {
-    # stable.url = "github:nixos/nixpkgs/nixos-23.05";
+    stable.url = "github:nixos/nixpkgs/nixos-23.05";
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     # neovim-nightly-overlay = {
     #   url = "github:nix-community/neovim-nightly-overlay";
@@ -16,6 +16,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    nixvim = {
+      url = "github:nix-community/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     aspen = {
       url = "github:prmadev/aspen";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -42,6 +46,7 @@
     prmait.url = "git+https://codeberg.org/prma/prmait.git";
 
     # nix-doom-emacs.url = "github:nix-community/nix-doom-emacs";
+    # nixneovim.url = "github:nixneovim/nixneovim";
     emacs-overlay.url = "github:nix-community/emacs-overlay";
 
     # nix-doom-emacs.url = "github:prmadev/nix-doom-emacs";
@@ -162,6 +167,7 @@
         modules = [
           {
             nixpkgs.overlays = [
+              # inputs.nixneovim.overlays.default
               inputs.nur.overlay
               (final: prev: {zigpkg = inputs.zig.packages.${prev.system}.master;})
               inputs.emacs-overlay.overlays.default
@@ -203,6 +209,9 @@
               home.stateVersion = "22.11";
               imports = [
                 ./home
+
+                nixvim.homeManagerModules.nixvim
+                # inputs.nixvim.nixosModules.default
                 # inputs.hyprland.homeManagerModules.default
               ];
             };

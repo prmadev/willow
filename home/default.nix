@@ -6,10 +6,12 @@
   ...
 }: {
   imports = [
+    ./rustrover.nix
     ./hugo.nix
     ./general.nix
     ./pantalaimon.nix
     ./soupault.nix
+    ./element.nix
     ./build.nix
     ./direnv.nix
     ./go.nix
@@ -119,7 +121,7 @@
     ./yazi.nix
   ];
 
-  panta.enable = true;
+  panta.enable = false;
   iamb.enable = true;
   fluffychat.enable = true;
   yt-dlp.enable = true;
@@ -204,7 +206,7 @@
   go.enable = true;
   pandoc.enable = true;
   asciidoc.enable = true;
-  neovim.enable = false;
+  neovim.enable = true;
   protobuf.enable = true;
   grpc.enable = true;
   helix.enable = true;
@@ -223,6 +225,8 @@
   hugo.enable = true;
   yazi.enable = true;
   prmait.enable = true;
+  rust-rover.enable = false;
+  element.enable = true;
 
   shell.user = "${pkgs.fish}/bin/fish";
   editor = {

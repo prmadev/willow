@@ -19,23 +19,24 @@ in
     options.proxy.enable = mkEnableOption "proxy settings";
 
     config = mkIf config.proxy.enable {
-      home.packages = with pkgs; [
-        clash # for networking #TODO
-        shadowsocks-rust
-        proxychains-ng
-        chisel
-        v2ray
-        tun2socks
-        v2ray-geoip
-        shadowsocks-v2ray-plugin
-        tunctl
-        tor
-        arti
-        torsocks
-        # qv2ray
-        sshuttle
-        go-graft
-        # cloudflare-warp
+      home.packages = [
+        pkgs.clash # for networking #TODO
+        pkgs.shadowsocks-rust
+        pkgs.proxychains-ng
+        pkgs.chisel
+        # inputs.stable.legacyPackages.${system}.v2ray
+        pkgs.tun2socks
+        # inputs.stable.legacyPackages.${system}.v2ray-geoip
+        pkgs.xray
+        # pkgs.shadowsocks-v2ray-plugin
+        pkgs.tunctl
+        pkgs.tor
+        pkgs.arti
+        pkgs.torsocks
+        #pkgs.qv2ray
+        pkgs.sshuttle
+        pkgs.go-graft
+        #pkgs.cloudflare-warp
       ];
 
       # home.file = {

@@ -60,7 +60,7 @@ with lib; {
         grub2
         clang
         openssl
-        qemu
+        # qemu
         zlib.out
         xorriso
         pkg-config
@@ -80,6 +80,7 @@ with lib; {
         sqlx-cli
         bunyan-rs
         rust-script
+        sqlite
       ];
     in
       cargoSubCommands
@@ -87,6 +88,11 @@ with lib; {
       ++ externalLibs
       ++ utils;
 
+    home.sessionVariables = {
+      PKG_CONFIG_PATH = "${pkgs.openssl.dev}/lib/pkgconfig";
+
+      RUST_SRC_PATH = "${pkgs.rust.packages.stable.rustPlatform.rustLibSrc}";
+    };
     home.sessionPath = ["$HOME/.cargo/bin" "/$HOME/a/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin"];
   };
 }
