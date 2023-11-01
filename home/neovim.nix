@@ -153,6 +153,7 @@ with lib; {
 
         ### Git
 
+        fugitive.enable = true;
         diffview.enable = true;
         gitgutter.enable = true;
         gitsigns.enable = true;
