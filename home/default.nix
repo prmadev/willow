@@ -121,8 +121,10 @@
     ./pls.nix
     ./iamb.nix
     ./yazi.nix
+    ./lazygit.nix
   ];
-  beet.enable = true;
+  lazygit.enable = true;
+  beet.enable = false; # tests don't pass
   panta.enable = false;
   iamb.enable = true;
   fluffychat.enable = true;
