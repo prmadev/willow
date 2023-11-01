@@ -7,6 +7,7 @@
 }: {
   imports = [
     ./rustrover.nix
+    ./beet.nix
     ./hugo.nix
     ./general.nix
     ./pantalaimon.nix
@@ -120,7 +121,7 @@
     ./iamb.nix
     ./yazi.nix
   ];
-
+  beet.enable = true;
   panta.enable = false;
   iamb.enable = true;
   fluffychat.enable = true;
