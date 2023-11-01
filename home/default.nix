@@ -6,6 +6,7 @@
   ...
 }: {
   imports = [
+    ./gitui.nix
     ./rustrover.nix
     ./beet.nix
     ./hugo.nix
@@ -139,6 +140,7 @@
   hoard.enable = false; # candidate for cleaning
   cinny.enable = true;
   zk.enable = false;
+  gitui.enable = true;
   zola.enable = true;
   newsboat.enable = false; # candidate for cleaning
   syncthing.enable = false; # candidate for cleaning
