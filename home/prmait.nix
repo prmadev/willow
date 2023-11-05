@@ -31,5 +31,10 @@ with lib; {
     programs.fish.interactiveShellInit = ''
       ${inputs.prmait.packages.${system}.default}/bin/prmait completions fish | source
     '';
+    programs.zsh.interactiveShellInit = ''
+      if [[ $options[zle] = on ]]; then
+         eval "$(${inputs.prmait.packages.${system}.default}/bin/prmait completions zsh)"
+      fi
+    '';
   };
 }

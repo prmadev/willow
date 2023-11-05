@@ -6,6 +6,7 @@
   ...
 }: {
   imports = [
+    ./carapace.nix
     ./gitui.nix
     ./rustrover.nix
     ./beet.nix
@@ -123,6 +124,7 @@
     ./yazi.nix
     ./lazygit.nix
   ];
+  carapace.enable = true;
   lazygit.enable = true;
   beet.enable = false; # tests don't pass
   panta.enable = false;
