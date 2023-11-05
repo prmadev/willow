@@ -794,11 +794,11 @@
         "rust-overlay": "rust-overlay_2"
       },
       "locked": {
-        "lastModified": 1699058138,
-        "narHash": "sha256-2wLYJTWSnz2bw84nYmEgSkka9ZzqA8ZcdMthHCt3iK4=",
+        "lastModified": 1699187479,
+        "narHash": "sha256-J+M/m9+XcC+fGhJuNWb61eFIVOlpkMKVZtYjRhl4Zko=",
         "owner": "helix-editor",
         "repo": "helix",
-        "rev": "10b178e94b0d3c44c56f5cd573ff65b3249aea78",
+        "rev": "2fddc2a4fcd3b8d9415e35994af3049d6960b23a",
         "type": "github"
       },
       "original": {
@@ -1069,11 +1069,11 @@
     },
     "nur": {
       "locked": {
-        "lastModified": 1699174032,
-        "narHash": "sha256-OSiNVBhNeleAfMZ4mMMF1h4l95tGfAhWE4OzYtMU3tI=",
+        "lastModified": 1699186655,
+        "narHash": "sha256-OFoCxYaQrA1VB/30Mj/ArzronpY42DWLBSIIH1mnX60=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "9d4f93294abb6017f139d8986d91bd4f9db8c083",
+        "rev": "8d9f20f147c17d62d16025e9769adbd76245591e",
         "type": "github"
       },
       "original": {
@@ -1142,11 +1142,11 @@
         "rust-overlay": "rust-overlay_6"
       },
       "locked": {
-        "lastModified": 1699183601,
-        "narHash": "sha256-lFankp45n4XoJLPmukfuLDciLV9GU9V3lZa9PN1l+KE=",
+        "lastModified": 1699185669,
+        "narHash": "sha256-TPcMc10xBWiBoRSVgode1yZ/B9pv0xWNZj8zZcmC11M=",
         "ref": "refs/heads/main",
-        "rev": "14a9fb67e016ff066d581a25cf872ebaafce63a3",
-        "revCount": 35,
+        "rev": "7ae87f68c38a52a8ada54780b270d240c2d2cd16",
+        "revCount": 36,
         "type": "git",
         "url": "https://codeberg.org/prma/prmait.git"
       },

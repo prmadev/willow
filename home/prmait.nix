@@ -31,10 +31,23 @@ with lib; {
     programs.fish.interactiveShellInit = ''
       ${inputs.prmait.packages.${system}.default}/bin/prmait completions fish | source
     '';
-    programs.zsh.interactiveShellInit = ''
+    programs.zsh.initExtra = ''
       if [[ $options[zle] = on ]]; then
          eval "$(${inputs.prmait.packages.${system}.default}/bin/prmait completions zsh)"
       fi
     '';
+
+    programs.nushell = {
+      extraEnv = ''
+        let atuin_cache = "${config.xdg.cacheHome}/prmait"
+        if not ($atuin_cache | path exists) {
+          mkdir $atuin_cache
+        }
+         ${inputs.prmait.packages.${system}.default}/bin/prmait completions zsh| save --force ${config.xdg.cacheHome}/prmait/init.nu
+      '';
+      extraConfig = ''
+        source ${config.xdg.cacheHome}/prmait/init.nu
+      '';
+    };
   };
 }
