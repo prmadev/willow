@@ -40,6 +40,21 @@ with lib; {
       ###############################
       # plugins
       ###############################
+      extraPlugins = with pkgs.vimPlugins; [
+        rose-pine
+        oxocarbon-nvim
+        poimandres-nvim
+        nord-nvim
+        nightfox-nvim
+        nightfly
+        material-nvim
+        falcon
+        adwaita-nvim
+        tokyonight-nvim
+        gruvbox-nvim
+        everforest
+        kanagawa-nvim
+      ];
 
       plugins = {
         ### Completion
@@ -84,6 +99,27 @@ with lib; {
                 "s"
               ];
             };
+            "<s-Tab>" = {
+              action = ''
+                function(fallback)
+                  if cmp.visible() then
+                    cmp.select_previous_item()
+                  elseif require("luasnip").expandable() then
+                    require("luasnip").expand()
+                  elseif require("luasnip").expand_or_jumpable() then
+                    require("luasnip").expand_or_jump()
+                  elseif check_backspace() then
+                    fallback()
+                  else
+                    fallback()
+                  end
+                end
+              '';
+              modes = [
+                "i"
+                "s"
+              ];
+            };
           };
           formatting.fields = ["kind" "abbr" "menu"];
           snippet.expand = "luasnip";
@@ -101,6 +137,15 @@ with lib; {
         };
 
         ### Utils
+        harpoon = {
+          enable = true;
+          enableTelescope = true;
+          keymaps = {
+            addFile = "<leader>haf";
+            navPrev = "<leader>hp";
+            navNext = "<leader>hn";
+          };
+        };
 
         nvim-tree = {
           enable = true;
@@ -153,9 +198,9 @@ with lib; {
 
         ### Git
 
-        fugitive.enable = true;
+        # fugitive.enable = true;
         diffview.enable = true;
-        gitgutter.enable = true;
+        # gitgutter.enable = true;
         gitsigns.enable = true;
         neogit = {
           enable = true;

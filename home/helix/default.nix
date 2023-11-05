@@ -91,7 +91,7 @@ with lib; {
             command = "rust-analyzer";
             config = {
               check.command = "clippy";
-              inlayHints.bindingModeHints.enable = false;
+              inlayHints.bindingModeHints.enable = true;
               inlayHints.closingBraceHints.minLines = 10;
               inlayHints.closureReturnTypeHints.enable = "with_block";
               inlayHints.discriminantHints.enable = "fieldless";
@@ -116,6 +116,10 @@ with lib; {
             };
 
             language-servers = ["nil" "snippets-nix"];
+          }
+          {
+            name = "markdown";
+            language-servers = ["snippets-md" "marksman"];
           }
 
           {
@@ -149,7 +153,7 @@ with lib; {
           bufferline = "always";
           indent-guides = {
             render = true;
-            character = "│";
+            character = "┃";
           };
 
           cursor-shape = {
@@ -276,19 +280,43 @@ with lib; {
       snippets-nix = pkgs.writeTextFile {
         name = "snippets-nix.json";
         text = builtins.toJSON {
-          "new role" = {
+          "new module" = {
             body = "{\n\tpkgs,\n\tlib,\n\tconfig,\n\t...\n}:\nwith lib;{\n\toptions.$\{1:foo\}.enable = mkEnableOption \"$\{2:foo\} settings\";\n\tconfig = mkIf config.$\{3:foo\}.enable {\n\t$0\n\t};\n}";
             description = "Snippet for creating module";
             prefix = "nmod";
+          };
+          "new program" = {
+            body = "programs.$\{0:foo\}={\n\tenable = true;\n}";
+            description = "snippet for enabling program";
+            prefix = "pe";
+          };
+          "new service" = {
+            body = "servicess.$\{0:foo\}={\n\tenable = true;\n}";
+            description = "snippet for enabling service";
+            prefix = "se";
           };
         };
         destination = "";
       };
       snippets-md = pkgs.writeTextFile {
         name = "snippets-md.json";
-        text =
-          builtins.toJSON {
+        text = builtins.toJSON {
+          "dfn" = {
+            body = "{{<dfn `$\{1\}`>}}$\{0\}";
+            description = "definitions";
+            prefix = "dfn";
           };
+          "lang" = {
+            body = "{{<lang `$\{1\}`>}}$\{0\}";
+            description = "languages";
+            prefix = "lang";
+          };
+          "abbr" = {
+            body = "{{<abbr `$\{1\}`>}}$\{0\}";
+            description = "abbreviation";
+            prefix = "abbr";
+          };
+        };
         destination = "";
       };
       snippets-org = pkgs.writeTextFile {
