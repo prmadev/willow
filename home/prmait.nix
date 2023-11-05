@@ -28,5 +28,8 @@ with lib; {
         source = content;
       };
     };
+    programs.fish.interactiveShellInit = ''
+      ${inputs.prmait.packages.${system}.default}/bin/prmait completions fish | source
+    '';
   };
 }
