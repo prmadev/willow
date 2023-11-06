@@ -25,7 +25,7 @@ with lib; {
             "river/tags"
           ];
           modules-center = [
-            "group/hx"
+            # "group/hx"
           ];
 
           modules-right = [
@@ -37,31 +37,31 @@ with lib; {
             "clock"
           ];
 
-          "group/hx" = {
-            "orientation" = "horizontal";
-            "modules" = [
-              "custom/hxsubject"
-              "custom/hxkey"
-              "custom/hxdesc"
-              "custom/hxcommand"
-            ];
-          };
-          "custom/hxsubject" = {
-            "exec" = "cat ${config.repos.hxkeyboards.path}/$(date +%j).json | jq '.subject' --unbuffered --compact-output --raw-output";
-            "restart-interval" = 300;
-          };
-          "custom/hxkey" = {
-            "exec" = "cat ${config.repos.hxkeyboards.path}/$(date +%j).json | jq '.key' --unbuffered --compact-output --raw-output";
-            "restart-interval" = 300;
-          };
-          "custom/hxdesc" = {
-            "exec" = "cat ${config.repos.hxkeyboards.path}/$(date +%j).json | jq '.description' --unbuffered --compact-output --raw-output";
-            "restart-interval" = 300;
-          };
-          "custom/hxcommand" = {
-            "exec" = "cat ${config.repos.hxkeyboards.path}/$(date +%j).json | jq '.command' --unbuffered --compact-output --raw-output";
-            "restart-interval" = 300;
-          };
+          # "group/hx" = {
+          #   "orientation" = "horizontal";
+          #   "modules" = [
+          #     "custom/hxsubject"
+          #     "custom/hxkey"
+          #     "custom/hxdesc"
+          #     "custom/hxcommand"
+          #   ];
+          # };
+          # "custom/hxsubject" = {
+          #   "exec" = "cat ${config.repos.hxkeyboards.path}/$(date +%j).json | jq '.subject' --unbuffered --compact-output --raw-output";
+          #   "restart-interval" = 300;
+          # };
+          # "custom/hxkey" = {
+          #   "exec" = "cat ${config.repos.hxkeyboards.path}/$(date +%j).json | jq '.key' --unbuffered --compact-output --raw-output";
+          #   "restart-interval" = 300;
+          # };
+          # "custom/hxdesc" = {
+          #   "exec" = "cat ${config.repos.hxkeyboards.path}/$(date +%j).json | jq '.description' --unbuffered --compact-output --raw-output";
+          #   "restart-interval" = 300;
+          # };
+          # "custom/hxcommand" = {
+          #   "exec" = "cat ${config.repos.hxkeyboards.path}/$(date +%j).json | jq '.command' --unbuffered --compact-output --raw-output";
+          #   "restart-interval" = 300;
+          # };
 
           "sway/workspaces" = {
             all-outputs = false;
@@ -217,10 +217,10 @@ with lib; {
         pulsemuted = "#pulseaudio.muted {${radi0} ${prop.text.border}  ${prop.base.bg} }";
         tray = "#tray { ${radi0}  margin: 10px 10px 0px 10px; padding: 2.5px 15px; margin: 5px 5px 0px 0px; }";
         traymenu = "#traymenu { ${radi0} }";
-        customhxsubject = "#custom-hxsubject { ${prop.text.fg} ${prop.base.bg} margin: 10px 10px 0px 10px; padding: 2.5px 15px; margin: 5px 5px 0px 0px; }";
-        customhxkey = "#custom-hxkey { ${prop.text.bg} ${prop.base.fg} margin: 10px 10px 0px 10px; padding: 2.5px 15px; margin: 5px 5px 0px 0px; }";
-        customhxdesc = "#custom-hxdesc { ${prop.text.fg} ${prop.base.bg} margin: 10px 10px 0px 10px; padding: 2.5px 15px; margin: 5px 5px 0px 0px; }";
-        customhxcommand = "#custom-hxcommand { ${prop.subtext0.fg} ${prop.base.bg} margin: 10px 10px 0px 10px; padding: 2.5px 15px; margin: 5px 5px 0px 0px; }";
+        # customhxsubject = "#custom-hxsubject { ${prop.text.fg} ${prop.base.bg} margin: 10px 10px 0px 10px; padding: 2.5px 15px; margin: 5px 5px 0px 0px; }";
+        # customhxkey = "#custom-hxkey { ${prop.text.bg} ${prop.base.fg} margin: 10px 10px 0px 10px; padding: 2.5px 15px; margin: 5px 5px 0px 0px; }";
+        # customhxdesc = "#custom-hxdesc { ${prop.text.fg} ${prop.base.bg} margin: 10px 10px 0px 10px; padding: 2.5px 15px; margin: 5px 5px 0px 0px; }";
+        # customhxcommand = "#custom-hxcommand { ${prop.subtext0.fg} ${prop.base.bg} margin: 10px 10px 0px 10px; padding: 2.5px 15px; margin: 5px 5px 0px 0px; }";
       in
         prelude
         + window-waybar
@@ -234,10 +234,10 @@ with lib; {
         + other-widgets
         + clock
         + network
-        + customhxsubject
-        + customhxkey
-        + customhxdesc
-        + customhxcommand
+        # + customhxsubject
+        # + customhxkey
+        # + customhxdesc
+        # + customhxcommand
         + bat
         + batcharging
         + bathundnotcharging
