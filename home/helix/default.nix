@@ -16,6 +16,17 @@ with lib; {
 
       package = config.editor.helix.package;
 
+      extraPackages = with pkgs; [
+        nodePackages.bash-language-server
+        nodePackages.dockerfile-language-server-nodejs
+        nodePackages.vscode-langservers-extracted
+        taplo-lsp
+        yaml-language-server
+        clang
+        marksman
+        external.snippets-ls
+      ];
+
       languages = {
         language-server = {
           gopls = {
@@ -342,16 +353,6 @@ with lib; {
       ".config/helix/snippets-org.json" = {
         source = snippets-org;
       };
-      extraPackages = with pkgs; [
-        nodePackages.bash-language-server
-        nodePackages.dockerfile-language-server-nodejs
-        nodePackages.vscode-langservers-extracted
-        taplo-lsp
-        yaml-language-server
-        clang
-        marksman
-        external.snippets-ls
-      ];
     };
     # home.packages = with pkgs; [
     #   nodePackages.bash-language-server
