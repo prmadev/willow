@@ -13,6 +13,7 @@
     ./network.nix
     ./database
     ./gnome.nix
+    ./gpg.nix
   ];
   config.database.enable = true;
 }
