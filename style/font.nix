@@ -4,61 +4,61 @@ with lib; {
     global-fonts = {
       main-family = mkOption {
         type = types.str;
-        default = "Maple Mono";
+        default = "Lotion";
       };
 
       main-black = mkOption {
         type = types.str;
-        default = "Maple Mono Bold";
+        default = "Lotion Black";
       };
       main-black-italic = mkOption {
         type = types.str;
-        default = "Maple Mono Bold Italic";
+        default = "Lotion Black Italic";
       };
       main-bold = mkOption {
         type = types.str;
-        default = "Maple Mono Bold";
+        default = "Lotion Bold";
       };
       main-bold-italic = mkOption {
         type = types.str;
-        default = "Maple Mono Bold Italic";
+        default = "Lotion Bold Italic";
       };
       main-medium = mkOption {
         type = types.str;
-        default = "Maple Mono Bold";
+        default = "Lotion SemiBold";
       };
       main-medium-italic = mkOption {
         type = types.str;
-        default = "Maple Mono Bold Italic";
+        default = "Lotion SemiBold Italic";
       };
       main-regular = mkOption {
         type = types.str;
-        default = "Maple Mono";
+        default = "Lotion";
       };
       main-italic = mkOption {
         type = types.str;
-        default = "Maple Mono Italic";
+        default = "Lotion Italic";
       };
 
       main-light = mkOption {
         type = types.str;
-        default = "Maple Mono Light";
+        default = "Lotion";
       };
       main-light-italic = mkOption {
         type = types.str;
-        default = "Maple Mono Light Italic";
+        default = "Lotion Italic";
       };
       main-thin = mkOption {
         type = types.str;
-        default = "Maple Mono Light";
+        default = "Lotion";
       };
       main-thin-italic = mkOption {
         type = types.str;
-        default = "Maple Mono Light Italic";
+        default = "Lotion Italic";
       };
       main-set = mkOption {
         type = types.listOf types.str;
-        default = ["Maple Mono" "Pragmata Pro" "Operator Mono Book" "LigaOperatorMono Nerd Font" "OperatorMono Nerd Font Mono" "ComicCodeLigatures Nerd Font" "ComicCodeLigatures Nerd Font Complete Mono" "Gintronic" "Vazirmatn"];
+        default = ["Lotion" "Cascadia Code" "Maple Mono" "Pragmata Pro" "Operator Mono Book" "LigaOperatorMono Nerd Font" "OperatorMono Nerd Font Mono" "ComicCodeLigatures Nerd Font" "ComicCodeLigatures Nerd Font Complete Mono" "Gintronic" "Vazirmatn"];
       };
     };
   };

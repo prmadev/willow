@@ -6,6 +6,7 @@
   ...
 }: {
   imports = [
+    ./jitsi.nix
     ./carapace.nix
     ./gitui.nix
     ./rustrover.nix
@@ -234,7 +235,7 @@
   prmait.enable = true;
   rust-rover.enable = false;
   element.enable = true;
-
+  jitsi.enable = true;
   shell.user = "${pkgs.fish}/bin/fish";
   editor = {
     terminal = "${config.editor.helix.package}/bin/hx";

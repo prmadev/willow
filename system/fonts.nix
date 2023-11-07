@@ -10,6 +10,7 @@
     commit-mono
     maple-mono-NF
     maple-mono-otf
+    cascadia-code
 
     martian-mono
     (nerdfonts.override {fonts = ["JetBrainsMono" "CascadiaCode" "DaddyTimeMono"];})

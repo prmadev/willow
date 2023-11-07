@@ -17,5 +17,10 @@ with lib; {
       keymap = {};
       settings = {};
     };
+    home.packages = with pkgs; [
+      ffmpegthumbnailer # for video thumbnails
+      unar # for archive preview
+      poppler # for PDF
+    ];
   };
 }

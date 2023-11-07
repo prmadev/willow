@@ -10,12 +10,12 @@ with lib; {
 
     font.main = mkOption {
       type = types.str;
-      default = "Maple Mono";
+      default = "Lotion";
     };
 
     gtkconf.enable = mkEnableOption "gtkConf settings";
   };
-
+  #  | -> :=  some things -> f
   config = mkIf config.font.enable {
     home.pointerCursor = {
       package = pkgs.catppuccin-cursors;

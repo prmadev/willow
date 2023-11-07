@@ -7,6 +7,7 @@ return {
 	default_prog = { "fish" },
 	font_size = 15.0,
 	font = wezterm.font_with_fallback({
+		{ family = "Lotion" },
 		{ family = "Maple Mono NF" },
 		{
 		 family = 'Pragmata Pro Mono',
@@ -30,6 +31,7 @@ return {
 			italic = false,
 			intensity = "Bold",
 			font = wezterm.font_with_fallback({
+				{ family = "Lotion", weight = "Bold" },
 				{ family = "Maple Mono NF", weight = "Bold" },
 				{ family = "Pragmata Pro Mono", weight = "Bold" },
 				{ family = "Operator Mono", weight = "Bold" },
@@ -42,6 +44,7 @@ return {
 			italic = false,
 			intensity = "Normal",
 			font = wezterm.font_with_fallback({
+				{ family = "Lotion", weight = "Regular" },
 				{ family = "Maple Mono NF", weight = "Regular" },
 				{ family = "Pragmata Pro Mono", weight = "Regular" },
 				{ family = "Operator Mono", weight = "Book" },
@@ -54,6 +57,7 @@ return {
 			italic = false,
 			intensity = "Half",
 			font = wezterm.font_with_fallback({
+				{ family = "Lotion", weight = "Regular" },
 				{ family = "Maple Mono NF", weight = "Light" },
 				{ family = "Pragmata Pro Mono", weight = "Regular" },
 				{ family = "Operator Mono", weight = "Light" },
@@ -69,6 +73,11 @@ return {
 			italic = true,
 			intensity = "Bold",
 			font = wezterm.font_with_fallback({
+				{
+					family = "Lotion",
+					weight = "Bold",
+					style = "Italic",
+				},
 				{
 					family = "Maple Mono NF",
 					weight = "Bold",
@@ -105,6 +114,7 @@ return {
 			italic = true,
 			intensity = "Normal",
 			font = wezterm.font_with_fallback({
+				{ family = "Lotion", style = "Italic", weight = "Regular" },
 				{ family = "Maple Mono NF", style = "Italic", weight = "Regular" },
 				{ family = "Pragmata Pro Mono", style = "Italic", weight = "Regular" },
 				{ family = "Operator Mono", style = "Italic", weight = "Book" },
@@ -117,6 +127,7 @@ return {
 			italic = true,
 			intensity = "Half",
 			font = wezterm.font_with_fallback({
+				{ family = "Lotion", style = "Italic", weight = "Regular" },
 				{ family = "Maple Mono NF", style = "Italic", weight = "Regular" },
 				{ family = "Pragmata Pro Mono", style = "Italic", weight = "Regular" },
 				{ family = "Operator Mono", style = "Italic", weight = "Light" },

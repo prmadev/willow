@@ -13,10 +13,10 @@ with lib; {
       settings = {
         main = {
           shell = "fish";
-          font = "${config.global-fonts.main-regular}:size=15";
-          font-italic = "${config.global-fonts.main-regular}:size=15:style=Italic";
-          font-bold = "${config.global-fonts.main-regular}:size=15:style=Bold";
-          font-bold-italic = "${config.global-fonts.main-regular}:size=15:style=BoldItalic";
+          font = "${config.global-fonts.main-regular}:size=18";
+          font-italic = "${config.global-fonts.main-italic}:size=18:style=Italic";
+          font-bold = "${config.global-fonts.main-black}:size=18:style=Black";
+          font-bold-italic = "${config.global-fonts.main-black}:size=18:style=BlackItalic";
           box-drawings-uses-font-glyphs = true;
           bold-text-in-bright = false;
         };
