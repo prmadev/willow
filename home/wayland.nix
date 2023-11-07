@@ -16,7 +16,12 @@ with lib; {
       brightnessctl
       grim # for wayland
       wtype
+      wayland-protocols
+      wayland
       swaybg
+      wayland-scanner
+      wlroots
+      wlr-protocols
       # evdevremapkeys
       wev
       egl-wayland
