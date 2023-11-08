@@ -7,6 +7,7 @@
 }: {
   imports = [
     ./jitsi.nix
+    ./tailwindcss.nix
     ./carapace.nix
     ./gitui.nix
     ./rustrover.nix
@@ -201,7 +202,7 @@
   mako.enable = true;
   river.enable = true;
   eww.enable = false;
-  sway.enable = false; # candidate for cleaning
+  sway.enable = true; # candidate for cleaning
   wayland.enable = true;
   slack.enable = false; # candidate for cleaning
   picom.enable = false; # candidate for cleaning
@@ -236,6 +237,7 @@
   rust-rover.enable = false;
   element.enable = true;
   jitsi.enable = true;
+  tailwindcss.enable = true;
   shell.user = "${pkgs.fish}/bin/fish";
   editor = {
     terminal = "${config.editor.helix.package}/bin/hx";

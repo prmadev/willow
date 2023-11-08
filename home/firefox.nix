@@ -10,6 +10,16 @@ with lib; {
   config = mkIf config.firefox.enable {
     programs.firefox = {
       enable = true;
+      package = pkgs.firefox-wayland.override {
+        cfg = {
+          forceWayland = true;
+          extraPolicies = {
+            ExtensionSettings = {};
+          };
+
+          pipewireSupport = true;
+        };
+      };
       profiles = {
         default = {
           name = "default";

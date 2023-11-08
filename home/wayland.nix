@@ -28,9 +28,9 @@ with lib; {
       wbg
     ];
 
-    programs.firefox = {
-      package = pkgs.firefox-wayland;
-    };
+    # programs.firefox = {
+    #   package = pkgs.firefox-wayland;
+    # };
 
     home.sessionVariables = {
       QT_QPA_PLATFORM = "wayland";

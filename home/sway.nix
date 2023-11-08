@@ -36,49 +36,51 @@ with lib; {
       config = {
         bars = [];
 
-        colors = {
-          background = config.colors.base.hex;
+        colors = let
+          c = config.colors.macchiato;
+        in {
+          background = c.base.hex;
           focused = {
-            background = config.colors.love.hex;
-            border = config.colors.love.hex;
-            childBorder = config.colors.love.hex;
-            indicator = config.colors.gold.hex;
-            text = config.colors.base.hex;
+            background = c.base.hex;
+            border = c.text.hex;
+            childBorder = c.text.hex;
+            indicator = c.text.hex;
+            text = c.text.hex;
           };
           focusedInactive = {
-            background = config.colors.rose.hex;
-            border = config.colors.rose.hex;
-            childBorder = config.colors.rose.hex;
-            indicator = config.colors.gold.hex;
-            text = config.colors.base.hex;
+            background = c.base.hex;
+            border = c.base.hex;
+            childBorder = c.base.hex;
+            indicator = c.base.hex;
+            text = c.base.hex;
           };
 
           placeholder = {
-            background = config.colors.surface.hex;
-            border = config.colors.surface.hex;
-            childBorder = config.colors.overlay.hex;
-            indicator = config.colors.overlay.hex;
-            text = config.colors.text.hex;
+            background = c.surface0.hex;
+            border = c.surface0.hex;
+            childBorder = c.overlay0.hex;
+            indicator = c.overlay0.hex;
+            text = c.text.hex;
           };
 
           unfocused = {
-            background = config.colors.base.hex;
-            border = config.colors.base.hex;
-            childBorder = config.colors.base.hex;
-            indicator = config.colors.base.hex;
-            text = config.colors.text.hex;
+            background = c.base.hex;
+            border = c.base.hex;
+            childBorder = c.base.hex;
+            indicator = c.base.hex;
+            text = c.text.hex;
           };
           urgent = {
-            background = config.colors.gold.hex;
-            border = config.colors.gold.hex;
-            childBorder = config.colors.pine.hex;
-            indicator = config.colors.pine.hex;
-            text = config.colors.base.hex;
+            background = c.red.hex;
+            border = c.red.hex;
+            childBorder = c.red.hex;
+            indicator = c.red.hex;
+            text = c.base.hex;
           };
         };
         floating.border = 5;
         focus = {
-          #followMouse = "always";
+          followMouse = "always";
           mouseWarping = true;
         };
         fonts = {
@@ -97,20 +99,21 @@ with lib; {
             xkb_numlock = "enabled";
             drag = "enabled";
             tap = "enabled";
+            natural_scroll = "enabled";
           };
         };
         keybindings = let
           modifier = "Mod4";
         in
           lib.mkOptionDefault {
-            "${modifier}+Return" = "exec ${pkgs.kitty}/bin/kitty";
-            # "${modifier}+D" = "exec ${pkgs.rofi}/bin/rofi -show";
+            "${modifier}+Return" = "exec ${pkgs.foot}/bin/foot";
+            # "${modifier}+D" = "exec ${pkgs.fuzzel}/bin/fuzzel";
 
             "${modifier}+q" = "kill";
             "${modifier}+tab" = "layout toggle default tabbed splitv splith";
             "${modifier}+asciitilde" = "move window scratchpad";
-            "${modifier}+minus" = "show scratchpad";
-            "${modifier}+Shift+r" = "reload";
+            "${modifier}+backslash" = "show scratchpad";
+            "${modifier}+Shift+R" = "reload";
             "${modifier}+Mod1+h" = "resize grow width -10";
             "${modifier}+Mod1+l" = "resize grow width +10";
             "${modifier}+Mod2+j" = "resize grow heigth +10";
@@ -124,28 +127,30 @@ with lib; {
             "${modifier}+Ctrl+period" = "move workspace to output right";
             "${modifier}+Ctrl+comma" = "move workspace to output left";
           };
-        menu = "rofi -show";
+        menu = "fuzzel";
         modifier = "Mod4";
         output = {
-          eDP-1 = {bg = " ~/.config/wallpaper fill";};
-          DP-1 = {bg = " ~/.config/wallpaper fill";};
-          HDMI-A-1 = {bg = " ~/.config/wallpaper fill";};
+          # eDP-1 = {bg = " ~/.config/wallpaper fill";};
+          eDP-1 = {
+            # bg = " ~/pretty_12.png fill";
+          };
+          # HDMI-A-1 = {bg = " ~/.config/wallpaper fill";};
         };
         startup = [
           {
             command = "systemctl --user restart waybar";
             always = true;
           }
-          {
-            command = "workstyle";
-            always = true;
-          }
-          {
-            command = "clash";
-          }
-          {command = "sslocal -c ~/.config/shadowsocks/config.json --server-url \"ss://YWVzLTI1Ni1nY206WTZSOXBBdHZ4eHptR0M@38.114.114.69:338#US_1009\"";}
+          # {
+          #   command = "workstyle";
+          #   always = true;
+          # }
+          # {
+          #   command = "clash";
+          # }
+          # {command = "sslocal -c ~/.config/shadowsocks/config.json --server-url \"ss://YWVzLTI1Ni1nY206WTZSOXBBdHZ4eHptR0M@38.114.114.69:338#US_1009\"";}
         ];
-        terminal = "${pkgs.kitty}/bin/kitty";
+        terminal = "${pkgs.foot}/bin/foot";
         window = {
           border = 5;
         };
@@ -211,11 +216,11 @@ with lib; {
     #   };
     # };
 
-    home.file = {
-      ".config/workstyle/config-1.toml" = {
-        source = configData;
-      };
-    };
+    # home.file = {
+    #   ".config/workstyle/config-1.toml" = {
+    #     source = configData;
+    #   };
+    # };
     home.sessionVariables = {
       SDL_VIDEODRIVER = "wayland";
       QT_QPA_PLATFORM = "wayland";

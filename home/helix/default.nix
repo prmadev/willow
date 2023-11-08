@@ -25,6 +25,8 @@ with lib; {
         clang
         marksman
         external.snippets-ls
+        tailwindcss
+        tailwindcss-language-server
       ];
 
       languages = {
@@ -117,6 +119,18 @@ with lib; {
             roots = ["Setup.hs" "stack.yaml" "cabal.project" "*.cabal" "hie.yaml"];
             auto-format = true;
             language-servers = ["hls"];
+          }
+          {
+            name = "html";
+            language-servers = ["vscode-html-language-server" "tailwindcss-ls"];
+          }
+          {
+            name = "css";
+            language-servers = ["vscode-css-language-server" "tailwindcss-ls"];
+          }
+          {
+            name = "javascript";
+            language-servers = ["typescript-language-server" "tailwindcss-ls"];
           }
           {
             name = "nix";

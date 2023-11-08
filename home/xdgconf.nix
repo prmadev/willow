@@ -11,6 +11,7 @@ with lib; {
       enable = true;
       mime.enable = true;
       userDirs.enable = true;
+
       # userDirs.createDirectories = true;
 
       # mimeApps.enable = true;

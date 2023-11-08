@@ -1,4 +1,4 @@
-_: {
+{pkgs, ...}: {
   # I don't want any stinky display manager :D
   services.xserver.desktopManager.gnome.enable = false;
   # services.xserver.displayManager.gdm.enable = false;
@@ -11,6 +11,10 @@ _: {
   xdg.portal = {
     enable = true;
     wlr.enable = true;
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-wlr
+      xdg-desktop-portal-gtk
+    ];
   };
 
   programs.river = {
