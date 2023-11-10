@@ -27,6 +27,7 @@ with lib; {
         external.snippets-ls
         tailwindcss
         tailwindcss-language-server
+        lua-language-server
       ];
 
       languages = {

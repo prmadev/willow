@@ -1,12 +1,16 @@
 local wezterm = require("wezterm")
+local monaspace_features = {"calt", "clig", "liga", "dlig", "ss01", "ss02", "ss03", "ss04", "ss05", "ss06", "ss07", "ss08"}
 
 return {
 	-- color_scheme = "Rosé Pine Moon (base16)",
 	color_scheme = "Catppuccin Macchiato",
 	hide_tab_bar_if_only_one_tab = true,
 	default_prog = { "fish" },
-	font_size = 15.0,
-	font = wezterm.font_with_fallback({
+	font_size = 17.0,
+
+	  harfbuzz_features = monaspace_features,
+		font = wezterm.font_with_fallback({
+		{family = "Monaspace Argon", harfbuzz_features = monaspace_features },
 		{ family = "Lotion" },
 		{ family = "Maple Mono NF" },
 		{
@@ -31,6 +35,7 @@ return {
 			italic = false,
 			intensity = "Bold",
 			font = wezterm.font_with_fallback({
+				{ family = "Monaspace Argon", weight = "Bold", harfbuzz_features = monaspace_features },
 				{ family = "Lotion", weight = "Bold" },
 				{ family = "Maple Mono NF", weight = "Bold" },
 				{ family = "Pragmata Pro Mono", weight = "Bold" },
@@ -44,6 +49,7 @@ return {
 			italic = false,
 			intensity = "Normal",
 			font = wezterm.font_with_fallback({
+				{ family = "Monaspace Argon", weight = "Regular", harfbuzz_features = monaspace_features },
 				{ family = "Lotion", weight = "Regular" },
 				{ family = "Maple Mono NF", weight = "Regular" },
 				{ family = "Pragmata Pro Mono", weight = "Regular" },
@@ -57,6 +63,7 @@ return {
 			italic = false,
 			intensity = "Half",
 			font = wezterm.font_with_fallback({
+				{ family = "Monaspace Argon", weight = "Light", harfbuzz_features = monaspace_features },
 				{ family = "Lotion", weight = "Regular" },
 				{ family = "Maple Mono NF", weight = "Light" },
 				{ family = "Pragmata Pro Mono", weight = "Regular" },
@@ -73,6 +80,12 @@ return {
 			italic = true,
 			intensity = "Bold",
 			font = wezterm.font_with_fallback({
+				{
+					family = "Monaspace Radon",
+					weight = "ExtraBold",
+					style = "Italic",
+					harfbuzz_features = monaspace_features,
+			},
 				{
 					family = "Lotion",
 					weight = "Bold",
@@ -114,6 +127,7 @@ return {
 			italic = true,
 			intensity = "Normal",
 			font = wezterm.font_with_fallback({
+				{ family = "Monaspace Radon", style = "Italic", weight = "Regular", harfbuzz_features = monaspace_features },
 				{ family = "Lotion", style = "Italic", weight = "Regular" },
 				{ family = "Maple Mono NF", style = "Italic", weight = "Regular" },
 				{ family = "Pragmata Pro Mono", style = "Italic", weight = "Regular" },
@@ -127,6 +141,7 @@ return {
 			italic = true,
 			intensity = "Half",
 			font = wezterm.font_with_fallback({
+				{ family = "Monaspace Radon", style = "Italic", weight = "Light", harfbuzz_features = monaspace_features },
 				{ family = "Lotion", style = "Italic", weight = "Regular" },
 				{ family = "Maple Mono NF", style = "Italic", weight = "Regular" },
 				{ family = "Pragmata Pro Mono", style = "Italic", weight = "Regular" },
