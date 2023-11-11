@@ -4,17 +4,17 @@
 - OS: **Nixos**
 - Window Manager: **River**
 - Bar: **Waybar**
-- Launcher: **Rofi**
+- Launcher: **Fuzzel**
 - Notification: **Mako**
 - Screenshot: **Grim**
 - Browser: **Firefox** 
 - Editor: **Helix** (and Neovim for fallback)
-- Terminal: **Foot** (and Wezterm for fallback) 
+- Terminal: **Wezterm** (and Foot for fallback) 
 - Colorscheme: **catppuccin**
-- Font: **OperatorMono** (nerd fontified)
-- Shell: **Bash** (for underlying system and user) and **zsh** (for interactive use).
+- Font: **Monaspace super-family** 
+- Shell: **Bash** (for underlying system and user) and **Fish** (for interactive use).
 
 ## Authors
 
-- [@prmadev](https://www.github.com/prmadev)
+- [@prma](https://prma.dev/)
 
