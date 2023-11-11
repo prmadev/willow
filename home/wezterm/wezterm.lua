@@ -6,7 +6,7 @@ return {
 	color_scheme = "Catppuccin Macchiato",
 	hide_tab_bar_if_only_one_tab = true,
 	default_prog = { "fish" },
-	font_size = 17.0,
+	font_size = 18.0,
 
 	  harfbuzz_features = monaspace_features,
 		font = wezterm.font_with_fallback({

@@ -4,61 +4,79 @@ with lib; {
     global-fonts = {
       main-family = mkOption {
         type = types.str;
-        default = "Lotion";
+        default = "Monaspace Argon Var";
+      };
+      second-family = mkOption {
+        type = types.str;
+        default = "Monaspace Radon Var";
+      };
+      third-family = mkOption {
+        type = types.str;
+        default = "Monaspace Neon Var";
+      };
+
+      forth-family = mkOption {
+        type = types.str;
+        default = "Monaspace Xenon Var";
+      };
+
+      fifth-family = mkOption {
+        type = types.str;
+        default = "Monaspace Krypton Var";
       };
 
       main-black = mkOption {
         type = types.str;
-        default = "Lotion Black";
+        default = "Monaspace Argon ExtraBold";
       };
       main-black-italic = mkOption {
         type = types.str;
-        default = "Lotion Black Italic";
+        default = "Monaspace Radon ExtraBold";
       };
       main-bold = mkOption {
         type = types.str;
-        default = "Lotion Bold";
+        default = "Monaspace Argon Bold";
       };
       main-bold-italic = mkOption {
         type = types.str;
-        default = "Lotion Bold Italic";
+        default = "Monaspace Radon Bold";
       };
       main-medium = mkOption {
         type = types.str;
-        default = "Lotion SemiBold";
+        default = "Monaspace Argon Medium";
       };
       main-medium-italic = mkOption {
         type = types.str;
-        default = "Lotion SemiBold Italic";
+        default = "Monaspace Radon Medium";
       };
       main-regular = mkOption {
         type = types.str;
-        default = "Lotion";
+        default = "Monaspace Argon";
       };
       main-italic = mkOption {
         type = types.str;
-        default = "Lotion Italic";
+        default = "Monaspace Radon";
       };
 
       main-light = mkOption {
         type = types.str;
-        default = "Lotion";
+        default = "Monaspcae Argon Light";
       };
       main-light-italic = mkOption {
         type = types.str;
-        default = "Lotion Italic";
+        default = "Monaspace Radon Light";
       };
       main-thin = mkOption {
         type = types.str;
-        default = "Lotion";
+        default = "Monaspace Argon ExtraLight";
       };
       main-thin-italic = mkOption {
         type = types.str;
-        default = "Lotion Italic";
+        default = "Monaspace Radon ExtraLight";
       };
       main-set = mkOption {
         type = types.listOf types.str;
-        default = ["Lotion" "Cascadia Code" "Maple Mono" "Pragmata Pro" "Operator Mono Book" "LigaOperatorMono Nerd Font" "OperatorMono Nerd Font Mono" "ComicCodeLigatures Nerd Font" "ComicCodeLigatures Nerd Font Complete Mono" "Gintronic" "Vazirmatn"];
+        default = ["Monaspace Argon" "Monaspace Radon" "Monospace Neon" "Monospace Xenon" "Monospace Krypton" "Lotion" "Cascadia Code" "Maple Mono" "Pragmata Pro" "Operator Mono Book" "LigaOperatorMono Nerd Font" "OperatorMono Nerd Font Mono" "ComicCodeLigatures Nerd Font" "ComicCodeLigatures Nerd Font Complete Mono" "Gintronic" "Vazirmatn"];
       };
     };
   };

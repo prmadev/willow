@@ -6,6 +6,7 @@
   ...
 }: {
   imports = [
+    ./hut.nix
     ./jitsi.nix
     ./tailwindcss.nix
     ./carapace.nix
@@ -238,6 +239,7 @@
   element.enable = true;
   jitsi.enable = true;
   tailwindcss.enable = true;
+  hut.enable = true;
   shell.user = "${pkgs.fish}/bin/fish";
   editor = {
     terminal = "${config.editor.helix.package}/bin/hx";

@@ -10,7 +10,7 @@ with lib; {
 
     font.main = mkOption {
       type = types.str;
-      default = "Lotion";
+      default = "Monaspace Argon";
     };
 
     gtkconf.enable = mkEnableOption "gtkConf settings";

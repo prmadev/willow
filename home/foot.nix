@@ -14,9 +14,9 @@ with lib; {
         main = {
           shell = "fish";
           font = "${config.global-fonts.main-regular}:size=18";
-          font-italic = "${config.global-fonts.main-regular}:size=18:style=Italic";
-          font-bold = "${config.global-fonts.main-black}:size=18:style=Black";
-          font-bold-italic = "${config.global-fonts.main-black}:size=18:style=Black Italic";
+          font-italic = "${config.global-fonts.main-italic}:size=18:style=Italic";
+          font-bold = "${config.global-fonts.main-black}:size=18:style=ExtraBold";
+          font-bold-italic = "${config.global-fonts.main-black-italic}:size=18:style=ExtraBold Italic";
           box-drawings-uses-font-glyphs = true;
           bold-text-in-bright = false;
         };
