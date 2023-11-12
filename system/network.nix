@@ -24,7 +24,7 @@ _: {
     enable = true;
     enableBrowserSocket = true;
     enableExtraSocket = true;
-    enableSSHSupport = true;
+    enableSSHSupport = false;
     pinentryFlavor = "curses";
   };
   programs.ssh.knownHosts = {

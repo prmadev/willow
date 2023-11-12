@@ -1142,17 +1142,17 @@
         "rust-overlay": "rust-overlay_6"
       },
       "locked": {
-        "lastModified": 1699265022,
-        "narHash": "sha256-pSb3e9JwIQJ++jGLyU4owhxV6EFRTTrhVPLwF02Xfus=",
+        "lastModified": 1699783769,
+        "narHash": "sha256-/LmvPKtVpCdwm5ER/XGTNnwn8RqMj83DEAOgRqJDeMM=",
         "ref": "refs/heads/main",
-        "rev": "1f459c6f5425f57646a90aaa368d3957d746c182",
-        "revCount": 38,
+        "rev": "d128f9c17da22656b5ed98af951f6ed346eaad01",
+        "revCount": 40,
         "type": "git",
-        "url": "https://codeberg.org/prma/prmait.git"
+        "url": "https://git.sr.ht/~prma/prmait"
       },
       "original": {
         "type": "git",
-        "url": "https://codeberg.org/prma/prmait.git"
+        "url": "https://git.sr.ht/~prma/prmait"
       }
     },
     "ragenix": {

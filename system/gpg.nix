@@ -3,9 +3,10 @@
     enable = true;
     enableExtraSocket = true;
     enableBrowserSocket = true;
-    enableSSHSupport = true;
+    enableSSHSupport = false;
     settings = {
-      default-cache-ttl = 0;
+      default-cache-ttl = 800000;
+      default-cache-ttl-ssh = 800000;
     };
   };
 }

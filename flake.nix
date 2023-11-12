@@ -43,7 +43,7 @@
     zig.url = "github:mitchellh/zig-overlay";
     zls.url = "github:zigtools/zls";
     kyushu.url = "git+https://codeberg.org/prma/soapberry.git";
-    prmait.url = "git+https://codeberg.org/prma/prmait.git";
+    prmait.url = "git+https://git.sr.ht/~prma/prmait";
 
     # nix-doom-emacs.url = "github:nix-community/nix-doom-emacs";
     # nixneovim.url = "github:nixneovim/nixneovim";

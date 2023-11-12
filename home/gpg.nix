@@ -13,14 +13,14 @@ with lib; {
 
     services.gpg-agent = {
       enable = true;
-      enableSshSupport = true;
+      enableSshSupport = false;
       pinentryFlavor = "gtk2";
       enableBashIntegration = true;
       enableFishIntegration = true;
       enableZshIntegration = true;
       enableExtraSocket = true;
-      defaultCacheTtl = 0;
-      defaultCacheTtlSsh = 0;
+      defaultCacheTtl = 14400;
+      defaultCacheTtlSsh = 14400;
       maxCacheTtl = 14400;
       maxCacheTtlSsh = 14400;
       sshKeys = [
