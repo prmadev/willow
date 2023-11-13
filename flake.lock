@@ -322,11 +322,11 @@
         "nixpkgs-stable": "nixpkgs-stable"
       },
       "locked": {
-        "lastModified": 1699781857,
-        "narHash": "sha256-0KFhWECrnADm/VKrB53BgT/3LD+jMJG1vVG+dQng+rk=",
+        "lastModified": 1699870846,
+        "narHash": "sha256-PHOVgZpU5npMT40Y+aB69dFSkhj7hADPghMgDXQ0Wwo=",
         "owner": "nix-community",
         "repo": "emacs-overlay",
-        "rev": "574004568151819a92d44728614334e91a16c2c3",
+        "rev": "4ed083888eac6202ec4887b02577cc168352d10f",
         "type": "github"
       },
       "original": {
@@ -794,11 +794,11 @@
         "rust-overlay": "rust-overlay_2"
       },
       "locked": {
-        "lastModified": 1699520217,
-        "narHash": "sha256-+b4R/GUQrRBGGpmDXna8w28ueeK7FhIYhQTSHqFJuqo=",
+        "lastModified": 1699826676,
+        "narHash": "sha256-L7816eSomVqG1lw07eTMBexHo6F5XxpSiSER+8GXGgU=",
         "owner": "helix-editor",
         "repo": "helix",
-        "rev": "6ab774da0b473c36a437d90abcdac3558353d32e",
+        "rev": "23fea46815371a8e1a0fa340be34d80624cd9bcc",
         "type": "github"
       },
       "original": {
@@ -902,11 +902,11 @@
     },
     "nixpkgs-stable": {
       "locked": {
-        "lastModified": 1699291058,
-        "narHash": "sha256-5ggduoaAMPHUy4riL+OrlAZE14Kh7JWX4oLEs22ZqfU=",
+        "lastModified": 1699596684,
+        "narHash": "sha256-XSXP8zjBZJBVvpNb2WmY0eW8O2ce+sVyj1T0/iBRIvg=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "41de143fda10e33be0f47eab2bfe08a50f234267",
+        "rev": "da4024d0ead5d7820f6bd15147d3fe2a0c0cec73",
         "type": "github"
       },
       "original": {
@@ -1038,11 +1038,11 @@
         "pre-commit-hooks": "pre-commit-hooks"
       },
       "locked": {
-        "lastModified": 1699721903,
-        "narHash": "sha256-ghsMr6EqRNCRJtzNokmqeyA3soMjl7bc+/TN7LX/Izc=",
+        "lastModified": 1699867465,
+        "narHash": "sha256-0WM6/TgAbWPgYQrCOX1bsGa9nbEnS0nLiclRqu04J10=",
         "owner": "nix-community",
         "repo": "nixvim",
-        "rev": "1286a0f41e37b2bb94f2eb87a7f4efde727f8e87",
+        "rev": "47260b5e53aa0e1b5ef341367799d090beef5b7a",
         "type": "github"
       },
       "original": {
@@ -1069,11 +1069,11 @@
     },
     "nur": {
       "locked": {
-        "lastModified": 1699798856,
-        "narHash": "sha256-gW/7h1Vsz7YFuRmuIGL7D0AiQXxXHwX6SpZYCjUG8Kw=",
+        "lastModified": 1699862277,
+        "narHash": "sha256-SmtANzj840vIfqOSHbhZ6+Xo8u4DDOElwlcbFEBfoGQ=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "392c30309165a4dd98e85b975e4b17b295d75968",
+        "rev": "7b5f75ad624728f00cdae8c980aefd1b36e9cb48",
         "type": "github"
       },
       "original": {
@@ -1142,11 +1142,11 @@
         "rust-overlay": "rust-overlay_6"
       },
       "locked": {
-        "lastModified": 1699798924,
-        "narHash": "sha256-zuttn85wATq0o7LygoZtRe1TGEejM2mI4bpfRWJhJ3s=",
+        "lastModified": 1699873420,
+        "narHash": "sha256-a27bGbeEufBWebvo/BwpwBvdxkLPRfQ0suyKyiO9lz4=",
         "ref": "refs/heads/main",
-        "rev": "9a2aec057b8420e23e3523bdebd30a457f470cad",
-        "revCount": 44,
+        "rev": "52bf14814eef7a39a812f004b9efeda6d0f5e87f",
+        "revCount": 45,
         "type": "git",
         "url": "https://git.sr.ht/~prma/prmait"
       },
