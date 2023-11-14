@@ -1142,11 +1142,11 @@
         "rust-overlay": "rust-overlay_6"
       },
       "locked": {
-        "lastModified": 1699960235,
-        "narHash": "sha256-NFGqZQ7eg+2YWfGzqfa0Eol75h6HAXQrrYN/V/bN71M=",
+        "lastModified": 1699964196,
+        "narHash": "sha256-q/mCY4BAZlNKYFoRwRJU7SPzN1oJ8ONUumOrf8Wjz3Y=",
         "ref": "refs/heads/main",
-        "rev": "21118582d84abec8355985b9682d56798f6fa603",
-        "revCount": 46,
+        "rev": "b1172baa8bcaed739b505e9fa2c49c588b5905c4",
+        "revCount": 48,
         "type": "git",
         "url": "https://git.sr.ht/~prma/prmait"
       },
@@ -1599,11 +1599,11 @@
         "nixpkgs": "nixpkgs_6"
       },
       "locked": {
-        "lastModified": 1699921337,
-        "narHash": "sha256-1z3jLB899FZFiyqwkkBGHKQB9BTOb2uRmdYJnqLALAA=",
+        "lastModified": 1699963707,
+        "narHash": "sha256-guVQVu9RHks0GfR/ThggOw5oSdMzG87qIkCXNFiCUvs=",
         "owner": "mitchellh",
         "repo": "zig-overlay",
-        "rev": "e61e6e3dc0a5fb36c92d5955f5de244c3df17011",
+        "rev": "10ac4bf5210caa9e075337eb3c3554208a725c6e",
         "type": "github"
       },
       "original": {

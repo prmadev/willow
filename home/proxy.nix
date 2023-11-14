@@ -20,7 +20,7 @@ in
 
     config = mkIf config.proxy.enable {
       home.packages = [
-        pkgs.clash # for networking #TODO
+        # pkgs.clash # for networking #TODO
         pkgs.shadowsocks-rust
         pkgs.proxychains-ng
         pkgs.chisel

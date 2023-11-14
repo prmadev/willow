@@ -19,14 +19,21 @@ with lib; {
     };
 
     home.file = {
-      tmuxPicker = {
-        enable = true;
+      initer = {
         executable = true;
-        source = pkgs.writeShellScript "tmux-picker" ''
-          riverctl spawn "${pkgs.foot}/bin/foot ${pkgs.tmux}/bin/tmux new -A -s $(${pkgs.fuzzel}/bin/fuzzel --dmenu --log-level=none)"
+        source = pkgs.writeShellScript "river-initer" ''
+          prmait river
         '';
-        target = ".local/bin/tmux-picker";
+        target = ".config/river/init";
       };
+      # tmuxPicker = {
+      #   enable = true;
+      #   executable = true;
+      #   source = pkgs.writeShellScript "tmux-picker" ''
+      #     riverctl spawn "${pkgs.foot}/bin/foot ${pkgs.tmux}/bin/tmux new -A -s $(${pkgs.fuzzel}/bin/fuzzel --dmenu --log-level=none)"
+      #   '';
+      #   target = ".local/bin/tmux-picker";
+      # };
     };
   };
 }
