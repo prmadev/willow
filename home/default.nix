@@ -6,6 +6,9 @@
   ...
 }: {
   imports = [
+    ./notmuch.nix
+    ./aerc.nix
+    ./mbsync.nix
     ./hut.nix
     ./keychain.nix
     ./jitsi.nix
@@ -89,7 +92,6 @@
     ./repos.nix
     ./mako.nix
     ./zola.nix
-    # ./hyprland.nix
     ./sway.nix
     ./eww
     ./picom.nix
@@ -128,6 +130,9 @@
     ./yazi.nix
     ./lazygit.nix
   ];
+  notmuch.enable = true;
+  aerc.enable = true;
+  mbsync.enable = true;
   carapace.enable = true;
   lazygit.enable = true;
   beet.enable = false; # tests don't pass
