@@ -17,8 +17,8 @@ with lib; {
 
     programs.git = {
       enable = true;
-      userEmail = "prma.dev@protonmail.com";
-      userName = "prmadev";
+      userEmail = "me@prma.dev";
+      userName = "prma";
       ignores = [
         ".env"
         ".vscode"
@@ -48,7 +48,7 @@ with lib; {
         };
       };
       signing = {
-        key = "39FEBB6A870385E3";
+        key = "6F22A2C7CFE7AF61";
         signByDefault = true;
       };
 

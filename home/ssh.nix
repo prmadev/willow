@@ -21,7 +21,7 @@ with lib; {
         codeberg = {
           identitiesOnly = true;
           hostname = "git@codeberg.org";
-          identityFile = "~/.ssh/id_ed25519";
+          identityFile = "~/.ssh/prma_id_ed25519";
           user = "prma";
         };
       };

@@ -6,6 +6,7 @@
   ...
 }: {
   imports = [
+    ./i3status-rust.nix
     ./notmuch.nix
     ./aerc.nix
     ./mbsync.nix
@@ -150,6 +151,8 @@
   exercism.enable = true;
   graphical.enable = true;
   task.enable = false;
+
+  i3status-rust.enable = true;
   hoard.enable = false; # candidate for cleaning
   cinny.enable = true;
   zk.enable = false;

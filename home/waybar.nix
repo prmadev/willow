@@ -9,7 +9,8 @@ with lib; {
   config = mkIf config.waybar.enable {
     programs.waybar = {
       enable = true;
-      # systemd.enable = true;
+      systemd.enable = true;
+      # systemd.target =graphical-session.target;
       # systemd.target = mkIf config.sway.enable "sway-session.target";
       settings = {
         mainBar = {
@@ -17,8 +18,8 @@ with lib; {
           position = "top";
           height = 0;
           modules-left = [
-            # "sway/mode"
-            # "sway/workspaces"
+            "sway/mode"
+            "sway/workspaces"
             # "wlr/workspaces"
             # "wlr/taskbar"
             # "river/mode"
@@ -33,7 +34,7 @@ with lib; {
             "network"
             "pulseaudio"
             "battery"
-            # "sway/language"
+            "sway/language"
             "clock"
           ];
 

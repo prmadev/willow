@@ -33,12 +33,69 @@ with lib; {
     wayland.enable = true;
     wayland.windowManager.sway = {
       enable = true;
-      config = {
-        bars = [];
+      systemd.enable = true;
+      extraSessionCommands = ''
+        export SDL_VIDEODRIVER=wayland
+        # needs qt5.qtwayland in systemPackages
+        export QT_QPA_PLATFORM=wayland
+        export QT_WAYLAND_DISABLE_WINDOWDECORATION="1"
+        # Fix for some Java AWT applications (e.g. Andro>
+        # use this if they aren't displayed properly:
+        export _JAVA_AWT_WM_NONREPARENTING=1
+      '';
+      config = let
+        c = config.colors.macchiato;
+      in {
+        bars = [
+          {
+            colors = {
+              background = c.base.hex;
+              statusline = c.text.hex;
+              separator = c.text.hex;
+              focusedBackground = c.base.hex;
+              focusedStatusline = c.text.hex;
+              focusedSeparator = c.text.hex;
+              urgentWorkspace = {
+                background = c.base.hex;
+                border = c.maroon.hex;
+                text = c.text.hex;
+              };
+              focusedWorkspace = {
+                background = c.text.hex;
+                border = c.text.hex;
+                text = c.base.hex;
+              };
+              activeWorkspace = {
+                background = c.base.hex;
+                border = c.text.hex;
+                text = c.text.hex;
+              };
+              inactiveWorkspace = {
+                background = c.base.hex;
+                border = c.base.hex;
+                text = c.text.hex;
+              };
+              bindingMode = {
+                background = c.base.hex;
+                border = c.base.hex;
+                text = c.text.hex;
+              };
+            };
+            fonts = {
+              names = ["Monaspace Krypton"];
+              style = "Bold";
+              size = 15.0;
+            };
+            id = "top";
+            position = "top";
+            trayPadding = 5;
+            workspaceButtons = true;
+            workspaceNumbers = true;
+            statusCommand = "${pkgs.i3status-rust}/bin/i3status-rs config-default";
+          }
+        ];
 
-        colors = let
-          c = config.colors.macchiato;
-        in {
+        colors = {
           background = c.base.hex;
           focused = {
             background = c.base.hex;
@@ -84,12 +141,13 @@ with lib; {
           mouseWarping = true;
         };
         fonts = {
-          names = ["monospace"];
+          names = ["Monaspace Krypton"];
           style = "Bold";
           size = 10.0;
         };
         gaps = {
           inner = 5;
+          outer = 5;
         };
         input = {
           "*" = {
@@ -132,15 +190,15 @@ with lib; {
         output = {
           # eDP-1 = {bg = " ~/.config/wallpaper fill";};
           eDP-1 = {
-            # bg = " ~/pretty_12.png fill";
+            bg = "${c.base.hex} solid_color";
           };
           # HDMI-A-1 = {bg = " ~/.config/wallpaper fill";};
         };
         startup = [
-          {
-            command = "systemctl --user restart waybar";
-            always = true;
-          }
+          # {
+          # command = "systemctl --user restart waybar";
+          # always = true;
+          # }
           # {
           #   command = "workstyle";
           #   always = true;
@@ -150,7 +208,7 @@ with lib; {
           # }
           # {command = "sslocal -c ~/.config/shadowsocks/config.json --server-url \"ss://YWVzLTI1Ni1nY206WTZSOXBBdHZ4eHptR0M@38.114.114.69:338#US_1009\"";}
         ];
-        terminal = "${pkgs.foot}/bin/foot";
+        terminal = "${pkgs.wezterm}/bin/wezterm";
         window = {
           border = 5;
         };

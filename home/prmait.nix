@@ -61,8 +61,8 @@ with lib; {
                   ];
                 }
                 {
-                  executible = "${pkgs.waybar}/bin/waybar";
-                  args = [];
+                  executible = "systemctl";
+                  args = ["restart" "--user" "waybar"];
                 }
                 {
                   executible = "${pkgs.wl-clipboard}/bin/wl-paste";
