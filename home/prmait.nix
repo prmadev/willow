@@ -51,18 +51,26 @@ with lib; {
               };
               startups = [
                 {
-                  executible = "${pkgs.dbus}/bin/dbus-update-activation-environment";
-                  args = [
-                    "seatd_sock"
-                    "display"
-                    "wayland_display"
-                    "xdg_session_type"
-                    "xdg_current_desktop"
-                  ];
+                  executible = "riverctl";
+                  args = ["spawn" "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=river"];
                 }
                 {
-                  executible = "systemctl";
-                  args = ["restart" "--user" "waybar"];
+                  executible = "riverctl";
+                  args = ["spawn" "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=river"];
+                }
+                # {
+                #   executible = "${pkgs.dbus}/bin/dbus-update-activation-environment";
+                #   args = [
+                #     "seatd_sock"
+                #     "display"
+                #     "wayland_display"
+                #     "xdg_session_type"
+                #     "xdg_current_desktop"
+                #   ];
+                # }
+                {
+                  executible = "riverctl";
+                  args = ["spawn" "systemctl restart --user waybar"];
                 }
                 {
                   executible = "${pkgs.wl-clipboard}/bin/wl-paste";

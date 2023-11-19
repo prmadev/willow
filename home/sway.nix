@@ -20,6 +20,10 @@ with lib; {
       type = types.bool;
       default = false;
     };
+    borderAndGap = mkOption {
+      type = types.int;
+      default = 5;
+    };
   };
   config = mkIf config.sway.enable {
     home.packages = with pkgs; [
@@ -29,9 +33,10 @@ with lib; {
       workstyle
     ];
 
-    waybar.enable = true;
     wayland.enable = true;
-    wayland.windowManager.sway = {
+    wayland.windowManager.sway = let
+      c = config.colors.macchiato;
+    in {
       enable = true;
       systemd.enable = true;
       extraSessionCommands = ''
@@ -43,9 +48,7 @@ with lib; {
         # use this if they aren't displayed properly:
         export _JAVA_AWT_WM_NONREPARENTING=1
       '';
-      config = let
-        c = config.colors.macchiato;
-      in {
+      config = {
         bars = [
           {
             colors = {
@@ -88,21 +91,25 @@ with lib; {
             };
             id = "top";
             position = "top";
-            trayPadding = 5;
+            trayPadding = config.sway.borderAndGap;
             workspaceButtons = true;
             workspaceNumbers = true;
             statusCommand = "${pkgs.i3status-rust}/bin/i3status-rs config-default";
+            extraConfig = ''
+              gaps 10
+              workspace_min_width 10
+            '';
           }
         ];
 
         colors = {
           background = c.base.hex;
           focused = {
-            background = c.base.hex;
+            background = c.text.hex;
             border = c.text.hex;
             childBorder = c.text.hex;
-            indicator = c.text.hex;
-            text = c.text.hex;
+            indicator = c.overlay0.hex;
+            text = c.base.hex;
           };
           focusedInactive = {
             background = c.base.hex;
@@ -122,7 +129,7 @@ with lib; {
 
           unfocused = {
             background = c.base.hex;
-            border = c.base.hex;
+            border = c.text.hex;
             childBorder = c.base.hex;
             indicator = c.base.hex;
             text = c.text.hex;
@@ -135,7 +142,7 @@ with lib; {
             text = c.base.hex;
           };
         };
-        floating.border = 5;
+        floating.border = config.sway.borderAndGap;
         focus = {
           followMouse = "always";
           mouseWarping = true;
@@ -143,11 +150,11 @@ with lib; {
         fonts = {
           names = ["Monaspace Krypton"];
           style = "Bold";
-          size = 10.0;
+          size = 17.0;
         };
         gaps = {
-          inner = 5;
-          outer = 5;
+          inner = config.sway.borderAndGap;
+          outer = config.sway.borderAndGap;
         };
         input = {
           "*" = {
@@ -164,16 +171,16 @@ with lib; {
           modifier = "Mod4";
         in
           lib.mkOptionDefault {
-            "${modifier}+Return" = "exec ${pkgs.foot}/bin/foot";
+            "${modifier}+Return" = "exec ${pkgs.wezterm}/bin/wezterm";
             # "${modifier}+D" = "exec ${pkgs.fuzzel}/bin/fuzzel";
 
             "${modifier}+q" = "kill";
             "${modifier}+tab" = "layout toggle default tabbed splitv splith";
             "${modifier}+asciitilde" = "move window scratchpad";
-            "${modifier}+backslash" = "show scratchpad";
+            "${modifier}+backslash" = "scratchpad show";
             "${modifier}+Shift+R" = "reload";
-            "${modifier}+Mod1+h" = "resize grow width -10";
-            "${modifier}+Mod1+l" = "resize grow width +10";
+            "${modifier}+Mod1+h" = "resize grow width +10";
+            "${modifier}+Mod1+l" = "resize grow width -10";
             "${modifier}+Mod2+j" = "resize grow heigth +10";
             "${modifier}+Mod2+k" = "resize grow heigth -10";
             "${modifier}+period" = "focus output right";
@@ -182,8 +189,14 @@ with lib; {
             "${modifier}+less" = "move window to output right";
             # "${modifier}+r mode" = "$mode_resize";
             "${modifier}+space" = "splitt";
+            "${modifier}+Mod1+space" = "split none";
             "${modifier}+Ctrl+period" = "move workspace to output right";
             "${modifier}+Ctrl+comma" = "move workspace to output left";
+            "XF86MonBrightnessUp" = "exec ${pkgs.brightnessctl}/bin/brightnessctl s 10%+";
+            "XF86MonBrightnessDown" = "exec ${pkgs.brightnessctl}/bin/brightnessctl s 10%-";
+            "XF86AudioMute" = "exec ${pkgs.wireplumber}/bin/wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
+            "XF86AudioLowerVolume" = "exec ${pkgs.wireplumber}/bin/wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-";
+            "XF86AudioRaiseVolume" = "exec ${pkgs.wireplumber}/bin/wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+";
           };
         menu = "fuzzel";
         modifier = "Mod4";
@@ -195,6 +208,9 @@ with lib; {
           # HDMI-A-1 = {bg = " ~/.config/wallpaper fill";};
         };
         startup = [
+          {
+            command = "xray run -c ~/vless-hackap.json";
+          }
           # {
           # command = "systemctl --user restart waybar";
           # always = true;
@@ -203,14 +219,11 @@ with lib; {
           #   command = "workstyle";
           #   always = true;
           # }
-          # {
-          #   command = "clash";
-          # }
-          # {command = "sslocal -c ~/.config/shadowsocks/config.json --server-url \"ss://YWVzLTI1Ni1nY206WTZSOXBBdHZ4eHptR0M@38.114.114.69:338#US_1009\"";}
         ];
         terminal = "${pkgs.wezterm}/bin/wezterm";
         window = {
-          border = 5;
+          border = config.sway.borderAndGap;
+          titlebar = false;
         };
         workspaceAutoBackAndForth = true;
         workspaceOutputAssign = [
@@ -266,6 +279,15 @@ with lib; {
         base = true;
       };
       xwayland = true;
+      extraConfigEarly = ''
+        bindgesture swipe:right workspace prev
+        bindgesture swipe:left workspace next
+        client.focused_tab_title ${c.text.hex} ${c.text.hex} ${c.base.hex} ${c.text.hex} ${c.overlay0.hex}
+        titlebar_border_thickness 4
+        titlebar_padding ${toString config.sway.borderAndGap}
+        bindswitch lid:on  output eDP-1 disable
+        bindswitch lid:off output eDP-1 enable
+      '';
     };
 
     # home.file = {

@@ -134,7 +134,7 @@
   notmuch.enable = true;
   aerc.enable = true;
   mbsync.enable = true;
-  carapace.enable = true;
+  carapace.enable = false; # tests don't pass
   lazygit.enable = true;
   beet.enable = false; # tests don't pass
   panta.enable = false;
