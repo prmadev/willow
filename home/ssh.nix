@@ -14,14 +14,20 @@ with lib; {
         asanbilit-ir-0 = {
           identitiesOnly = true;
           hostname = "46.245.64.96";
-          identityFile = "~/.ssh/id_ed25519";
+          identityFile = "~/.ssh/proton_id_ed25519";
           port = 65531;
           user = "administrator";
         };
         codeberg = {
           identitiesOnly = true;
           hostname = "git@codeberg.org";
-          identityFile = "~/.ssh/prma_id_ed25519";
+          identityFile = "~/.ssh/id_ed25519";
+          user = "prma";
+        };
+        gitlab = {
+          identitiesOnly = true;
+          hostname = "http://gitlab.iranairs.com/asanbilit/backend/asan-availability.git";
+          identityFile = "~/.ssh/id_ed25519";
           user = "prma";
         };
       };

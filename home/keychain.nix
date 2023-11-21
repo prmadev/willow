@@ -8,7 +8,7 @@ with lib; {
   config = mkIf config.keychain.enable {
     programs.keychain = {
       enable = true;
-      keys = ["id_ed25519" "asanbilit"];
+      keys = ["id_ed25519" "proton_id_ed25519" "asanbilit"];
     };
   };
 }

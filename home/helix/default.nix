@@ -146,6 +146,7 @@ with lib; {
           {
             name = "markdown";
             language-servers = ["snippets-md" "marksman"];
+            soft-wrap = true;
           }
 
           {

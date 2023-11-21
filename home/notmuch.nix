@@ -1,20 +1,21 @@
 {
   lib,
   config,
+  pkgs,
   ...
 }:
 with lib; {
   options.notmuch.enable = mkEnableOption "notmuch settings";
   config = mkIf config.notmuch.enable {
-    # accounts.email.maildirBasePath = "${config.home.homeDirectory}/.mail";
+    accounts.email.maildirBasePath = "${config.home.homeDirectory}/mail";
     accounts.email.accounts.Personal = {
       # maildir = null;
       primary = true;
       address = "me@prma.dev";
       userName = "me@prma.dev";
       realName = "Perma";
-      passwordCommand = "cat ~/secrets/k"; # I know! it is embarresing
-      # maildir.path = "maildir://~/maildir/prma";
+      passwordCommand = "${pkgs.coreutils}/bin/cat ~/secrets/k"; # I know! it is embarresing
+      maildir.path = "prma";
       # folder.inbox = "virtual.all";
       imap = {
         host = "imap.migadu.com";
@@ -26,9 +27,15 @@ with lib; {
         port = 465;
         tls.enable = true;
       };
+      himalaya = {
+        enable = true;
+      };
       thunderbird = {
         enable = true;
         profiles = ["prma"];
+      };
+      msmtp = {
+        enable = true;
       };
 
       aerc = {
@@ -37,14 +44,10 @@ with lib; {
         smtpAuth = "plain";
       };
       # notmuch.enable = true;
-      mbsync = {
-        # enable = true;
-        # create = "imap";
-        # patterns = ["INBOX"];
-      };
 
       neomutt = {
-        # enable = true;
+        enable = true;
+        sendMailCommand = "${pkgs.go-graft}/bin/gg ${pkgs.msmtp}/bin/msmtpq --read-envelope-from --read-recipients";
       };
     };
     programs.thunderbird = {
@@ -53,8 +56,15 @@ with lib; {
         isDefault = true;
       };
     };
-    # programs.neomutt = {
-    #   enable = true;
-    # };
+    programs.himalaya = {
+      enable = true;
+    };
+    programs.neomutt = {
+      enable = true;
+      vimKeys = true;
+    };
+    programs.msmtp = {
+      enable = true;
+    };
   };
 }

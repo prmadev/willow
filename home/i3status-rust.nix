@@ -12,6 +12,10 @@ with lib; {
         default = {
           blocks = [
             {
+              block = "maildir";
+              inboxes = ["~/mail/prma/*"];
+            }
+            {
               block = "sound";
             }
             {

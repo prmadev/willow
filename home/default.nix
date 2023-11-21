@@ -119,7 +119,7 @@
     ./ssh.nix
     ./bw.nix
     ./gpg.nix
-    ./agenix.nix
+    # ./agenix.nix
     ./discord.nix
     ./wayland.nix
     ./monitor.nix
@@ -188,7 +188,7 @@
   general.enable = true;
   bw.enable = true;
   gpg.enable = true;
-  ragenix.enable = true;
+  # ragenix.enable = true;
   alias.enable = true;
   obs.enable = true;
   bash.enable = true;

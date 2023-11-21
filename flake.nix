@@ -30,10 +30,10 @@
       # inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    ragenix = {
-      url = "github:yaxitech/ragenix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # ragenix = {
+    #   url = "github:yaxitech/ragenix";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
 
     # hyprland = {
     # url = "github:hyprwm/hyprland";
@@ -180,12 +180,12 @@
           (import ./style)
 
           # ragenix module to provide encryption and secret keeping inside the flake
-          ragenix.nixosModules.age
-          {
-            age.identityPaths = ["/home/a/keys/id_ed25519"];
-            age.secrets.bwid.file = ./secrets/bwid.age;
-            age.secrets.bwsec.file = ./secrets/bwsec.age;
-          }
+          # ragenix.nixosModules.age
+          # {
+          #   age.identityPaths = ["/home/a/secrets/prma_id_ed25519"];
+          #   age.secrets.bwid.file = ./secrets/bwid.age;
+          #   age.secrets.bwsec.file = ./secrets/bwsec.age;
+          # }
 
           # importing system configurations
           ./system
