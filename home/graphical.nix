@@ -12,7 +12,7 @@ with lib; {
       inkscape
       # krita
       # libresprite
-      aseprite
+      # aseprite
       gimp
       pastel
       imagemagick

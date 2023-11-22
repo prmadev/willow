@@ -28,7 +28,7 @@ with lib; {
             bitwarden
             clearurls
             enhanced-github
-            enhancer-for-youtube
+            
             switchyomega
             i-dont-care-about-cookies
             # snowflake

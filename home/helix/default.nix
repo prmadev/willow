@@ -104,6 +104,7 @@ with lib; {
           rustanalyzer = {
             command = "rust-analyzer";
             config = {
+              rust-analyzer.cargo.extraEnv = {CARGO_TARGET_DIR = "./target/rust_analyzer";};
               check.command = "clippy";
               inlayHints.bindingModeHints.enable = true;
               inlayHints.closingBraceHints.minLines = 10;
@@ -146,7 +147,9 @@ with lib; {
           {
             name = "markdown";
             language-servers = ["snippets-md" "marksman"];
-            soft-wrap = true;
+            soft-wrap = {
+              enable = true;
+            };
           }
 
           {

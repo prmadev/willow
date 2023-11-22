@@ -7,7 +7,7 @@
 with lib; {
   options.fuzzel.enable = mkEnableOption "fuzzel settings";
 
-  config = mkIf config.wofi.enable {
+  config = mkIf config.fuzzel.enable {
     programs.fuzzel = {
       enable = true;
       settings = {
@@ -36,7 +36,7 @@ with lib; {
     };
 
     home.sessionVariables = {
-      "LAUNCHER"= "fuzzel";
+      "LAUNCHER" = "fuzzel";
     };
   };
 }

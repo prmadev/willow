@@ -38,7 +38,7 @@
   environment.systemPackages = with pkgs; [
     ntfs3g
     pciutils
-    pipewire.pulse
+    pipewire
     nvme-cli
     libbpf
   ];

@@ -167,8 +167,8 @@ with lib; {
       PRMA = mkIf config.repos.prma.enable "${config.repos.prma.path}";
       PRMA_REPO = mkIf config.repos.prma.enable "${config.repos.prma.remote}";
 
-      ALGAE = mkIf config.repos.algae.enable "${config.repos.algae.path}";
-      ALGAE_REPO = mkIf config.repos.algae.enable "${config.repos.algae.remote}";
+      # ALGAE = mkIf config.repos.algae.enable "${config.repos.algae.path}";
+      # ALGAE_REPO = mkIf config.repos.algae.enable "${config.repos.algae.remote}";
 
       WEBARCHIVE = mkIf config.repos.webarchive.enable "${config.repos.webarchive.path}";
       WEBARCHIVE_REPO = mkIf config.repos.webarchive.enable "${config.repos.webarchive.remote}";
@@ -176,14 +176,14 @@ with lib; {
       PRMADEV = mkIf config.repos.prmadev.enable "${config.repos.prmadev.path}";
       PRMADEV_REPO = mkIf config.repos.prmadev.enable "${config.repos.prmadev.remote}";
 
-      AMIROGRAPHYCOM = mkIf config.repos.amirographycom.enable "${config.repos.amirographycom.path}";
-      AMIROGRAPHYCOM_REPO = mkIf config.repos.amirographycom.enable "${config.repos.amirographycom.remote}";
+      # AMIROGRAPHYCOM = mkIf config.repos.amirographycom.enable "${config.repos.amirographycom.path}";
+      # AMIROGRAPHYCOM_REPO = mkIf config.repos.amirographycom.enable "${config.repos.amirographycom.remote}";
 
       SOAPBERRY = mkIf config.repos.soapberry.enable "${config.repos.soapberry.path}";
       SOAPBERRY_REPO = mkIf config.repos.soapberry.enable "${config.repos.soapberry.remote}";
 
-      HXKEYBOARDS = mkIf config.repos.hxkeyboards.enable "${config.repos.hxkeyboards.path}";
-      HXKEYBOARDS_REPO = mkIf config.repos.hxkeyboards.enable "${config.repos.hxkeyboards.remote}";
+      # HXKEYBOARDS = mkIf config.repos.hxkeyboards.enable "${config.repos.hxkeyboards.path}";
+      # HXKEYBOARDS_REPO = mkIf config.repos.hxkeyboards.enable "${config.repos.hxkeyboards.remote}";
     };
   };
 }

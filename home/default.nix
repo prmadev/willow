@@ -1,6 +1,5 @@
 {
   inputs,
-  system,
   pkgs,
   config,
   ...
@@ -130,15 +129,16 @@
     ./iamb.nix
     ./yazi.nix
     ./lazygit.nix
+    ./cliphist.nix
   ];
   notmuch.enable = true;
   aerc.enable = true;
   mbsync.enable = true;
   carapace.enable = false; # tests don't pass
-  lazygit.enable = true;
+  lazygit.enable = false;
   beet.enable = false; # tests don't pass
   panta.enable = false;
-  iamb.enable = true;
+  iamb.enable = false;
   fluffychat.enable = true;
   yt-dlp.enable = true;
   jq.enable = true;
@@ -148,7 +148,7 @@
   tiny.enable = false;
   telegram.enable = true;
   discord.enable = true;
-  exercism.enable = true;
+  exercism.enable = false;
   graphical.enable = true;
   task.enable = false;
 
@@ -156,8 +156,8 @@
   hoard.enable = false; # candidate for cleaning
   cinny.enable = true;
   zk.enable = false;
-  gitui.enable = true;
-  zola.enable = true;
+  gitui.enable = false;
+  zola.enable = false;
   newsboat.enable = false; # candidate for cleaning
   syncthing.enable = false; # candidate for cleaning
   music.enable = true;
@@ -186,7 +186,7 @@
   proxy.enable = true;
   ssh.enable = true;
   general.enable = true;
-  bw.enable = true;
+  bw.enable = false;
   gpg.enable = true;
   # ragenix.enable = true;
   alias.enable = true;
@@ -197,7 +197,7 @@
   fzf.enable = true;
   nu.enable = true;
   pager.enable = true;
-  wofi.enable = true;
+  wofi.enable = false;
   fuzzel.enable = true;
   starship.enable = true;
   pet.enable = false; # candidate for cleaning
@@ -213,6 +213,7 @@
   river.enable = true;
   eww.enable = false;
   sway.enable = true; # candidate for cleaning
+  cliphist.enable = true;
   wayland.enable = true;
   slack.enable = false; # candidate for cleaning
   picom.enable = false; # candidate for cleaning
@@ -224,7 +225,7 @@
   git.enable = true;
   go.enable = true;
   pandoc.enable = true;
-  asciidoc.enable = true;
+  asciidoc.enable = false;
   neovim.enable = true;
   protobuf.enable = true;
   grpc.enable = true;
@@ -232,15 +233,15 @@
   nixdev.enable = true;
   rust.enable = true;
   vscode.enable = false;
-  zig.enable = true;
+  zig.enable = false;
   haskell.enable = false;
   ocaml.enable = false;
   sql.enable = true;
-  emacs.enable = true;
+  emacs.enable = false;
   monitor.enable = true; # monitoring utilities
   insomnia.enable = false; # candidate for cleaning
   pls.enable = true;
-  soup.enable = true;
+  soup.enable = false;
   hugo.enable = true;
   yazi.enable = true;
   prmait.enable = true;
@@ -261,17 +262,17 @@
     enable = true;
     notes.enable = true;
     prma.enable = true;
-    algae.enable = true;
+    algae.enable = false;
     webarchive.enable = true;
     prmadev.enable = true;
-    amirographycom.enable = true;
+    amirographycom.enable = false;
     soapberry.enable = true;
-    hxkeyboards.enable = true;
+    hxkeyboards.enable = false;
   };
 
   nixpkgs.overlays = [
     inputs.neovim-nightly-overlay.overlay
     (final: prev: {zigpkg = inputs.zig.packages.${prev.system}.master;})
   ];
-  home.packages = [inputs.kyushu.packages.${system}.kyushu];
+  # home.packages = [inputs.kyushu.packages.${system}.kyushu];
 }

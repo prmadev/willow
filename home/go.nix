@@ -20,6 +20,7 @@ with lib; {
     home.packages = with pkgs; [
       richgo
       golangci-lint-langserver
+      golangci-lint
       ent-go
       go-tools
       gocode
