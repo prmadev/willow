@@ -16,7 +16,7 @@ with lib; {
           hostname = "46.245.64.96";
           identityFile = "~/.ssh/proton_id_ed25519";
           port = 65531;
-          user = "administrator";
+          user = "amir";
         };
         codeberg = {
           identitiesOnly = true;
