@@ -1050,11 +1050,11 @@
         "rust-overlay": "rust-overlay_6"
       },
       "locked": {
-        "lastModified": 1700468324,
-        "narHash": "sha256-M7yloL4MKCsS86yzQTx5T707Fups5kzODSHHW+zawrA=",
+        "lastModified": 1700901404,
+        "narHash": "sha256-BGlHJjTSQUE2PwbKNAH2zLkE04lewRLXKpoaPKU0IGY=",
         "ref": "refs/heads/main",
-        "rev": "300094f15b31bebf9a87b7cffa029f9f0513c472",
-        "revCount": 66,
+        "rev": "f56536eda6b0d96b4fd2910a32be723ba01d44fb",
+        "revCount": 67,
         "type": "git",
         "url": "https://git.sr.ht/~prma/prmait"
       },
@@ -1256,11 +1256,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1697883452,
-        "narHash": "sha256-U47gRkGsGS5DwYpb8b0jia1y5DuCTg2Vk6wJdBXRQq8=",
+        "lastModified": 1700900715,
+        "narHash": "sha256-gCU0bgqkk/7PSHEMqmyymOtlgk6qI0Q2OFQi3m1zsI8=",
         "owner": "prmadev",
         "repo": "snippets-ls",
-        "rev": "6a2aed78c35891616d159d7d5c6a68b76686ee72",
+        "rev": "1a1b1b83310fa7662b8a1ae4244833d5df9aa198",
         "type": "github"
       },
       "original": {
