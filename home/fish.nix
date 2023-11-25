@@ -61,12 +61,12 @@ with lib; {
          # eval (zellij setup --generate-completion fish | string collect)
       '';
       shellAbbrs = {
-        hxi = "${config.editor.terminal} $(${pkgs.gum}/bin/gum file -a)";
-        h = "${config.editor.terminal} $(${pkgs.gum}/bin/gum file -a)";
-        sw = "sudo nixos-rebuild switch --flake ~/willow/#";
-        swf = "sudo nixos-rebuild switch --flake ~/willow/# --fast";
+        # hxi = "${config.editor.terminal} $(${pkgs.gum}/bin/gum file -a)";
+        # h = "${config.editor.terminal} $(${pkgs.gum}/bin/gum file -a)";
+        # sw = "sudo nixos-rebuild switch --flake ~/willow/#";
+        # swf = "sudo nixos-rebuild switch --flake ~/willow/# --fast";
         # v2 = "${pkgs.v2ray}/bin/v2ray run -c ~/vless-hackap.json";
-        new-pro = "cat vless-hackap.json | ${pkgs.jq}/bin/jq .outbounds=\"$(wl-paste | ${pkgs.jq}/bin/jq .outbounds)\" > vless-hackap.json";
+        # new-pro = "cat vless-hackap.json | ${pkgs.jq}/bin/jq .outbounds=\"$(wl-paste | ${pkgs.jq}/bin/jq .outbounds)\" > vless-hackap.json";
       };
     };
 

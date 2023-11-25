@@ -147,7 +147,7 @@
     };
 
     snippets-ls = {
-      url = "github:prmadev/snippets-ls";
+      url = "git+https://git.sr.ht/~prma/snippets-ls";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };

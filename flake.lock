@@ -1258,15 +1258,15 @@
       "locked": {
         "lastModified": 1700900715,
         "narHash": "sha256-gCU0bgqkk/7PSHEMqmyymOtlgk6qI0Q2OFQi3m1zsI8=",
-        "owner": "prmadev",
-        "repo": "snippets-ls",
+        "ref": "refs/heads/main",
         "rev": "1a1b1b83310fa7662b8a1ae4244833d5df9aa198",
-        "type": "github"
+        "revCount": 19,
+        "type": "git",
+        "url": "https://git.sr.ht/~prma/snippets-ls"
       },
       "original": {
-        "owner": "prmadev",
-        "repo": "snippets-ls",
-        "type": "github"
+        "type": "git",
+        "url": "https://git.sr.ht/~prma/snippets-ls"
       }
     },
     "stable": {
