@@ -2,8 +2,8 @@
 
 ## Fetch
 - OS: **Nixos**
-- Window Manager: **River**
-- Bar: **Waybar**
+- Window Manager: **SwayWM**
+- Bar: **i3status-rust**
 - Launcher: **Fuzzel**
 - Notification: **Mako**
 - Screenshot: **Grim**

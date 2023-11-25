@@ -311,7 +311,7 @@ with lib; {
             rust-analyzer = {
               enable = true;
               installCargo = false;
-              InstallRustc = false;
+              installRustc = false;
               settings = {
                 checkOnSave = true;
                 check.command = "clippy";

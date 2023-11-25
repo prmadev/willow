@@ -34,7 +34,7 @@ with lib; {
             }
             {
               block = "time";
-              format = " $timestamp.datetime(f:'%a %y-%d-%m %R') ";
+              format = " $timestamp.datetime(f:'%a %Y-%m-%d %R') ";
               interval = 1;
             }
           ];
