@@ -316,12 +316,12 @@ with lib; {
             prefix = "nmod";
           };
           "new program" = {
-            body = "programs.$\{0:foo\}={\n\tenable = true;\n}";
+            body = "programs.$\{0:foo\}={\n\tenable = true;\n};";
             description = "snippet for enabling program";
             prefix = "pe";
           };
           "new service" = {
-            body = "servicess.$\{0:foo\}={\n\tenable = true;\n}";
+            body = "services.$\{0:foo\}={\n\tenable = true;\n};";
             description = "snippet for enabling service";
             prefix = "se";
           };
