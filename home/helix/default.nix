@@ -156,7 +156,7 @@ with lib; {
             name = "go";
             auto-format = true;
             formatter.command = "gofumpt";
-            language-servers = ["gopls" "snippets-go"];
+            language-servers = ["gopls" "golangci-lint-lsp" "snippets-go"];
           }
           {
             name = "rust";

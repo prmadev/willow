@@ -17,11 +17,14 @@ with lib; {
           c = config.colors.macchiato;
         in
           builtins.toJSON {
+            "time_offset" = [3 30 0];
             "journal" = {
               path = "${config.repos.notes.path}/journal/";
+              file_name_format = "[year]-[month]-[day]-[hour]-[minute]-[second].json";
             };
             "task" = {
               path = "${config.repos.notes.path}/task/";
+              file_name_format = "[year]-[month]-[day]-[hour]-[minute]-[second].json";
             };
             "river" = {
               border_width = 5;
