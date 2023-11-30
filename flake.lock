@@ -19,11 +19,11 @@
     "advisory-db_2": {
       "flake": false,
       "locked": {
-        "lastModified": 1699714741,
-        "narHash": "sha256-7cRZc3RoBv4n9GgMun+OoTK5ssI2fzqkDAZsp37uhTs=",
+        "lastModified": 1701193254,
+        "narHash": "sha256-Hr7efA3GjwqBkGYKmd3XmGckdPQikbcCmOrq7fmTp3A=",
         "owner": "rustsec",
         "repo": "advisory-db",
-        "rev": "3338fcfb59cea5fcd7d2a4e7fe24cbc7cb778003",
+        "rev": "43af5fef0591531a72ebb86c5f1c623ee95c62fe",
         "type": "github"
       },
       "original": {
@@ -243,11 +243,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1699548976,
-        "narHash": "sha256-xnpxms0koM8mQpxIup9JnT0F7GrKdvv0QvtxvRuOYR4=",
+        "lastModified": 1701305027,
+        "narHash": "sha256-/LUYOjcPn5vam8DJjHBpGGKfGMSDp1P1wUW1Ca4h3yQ=",
         "owner": "ipetkov",
         "repo": "crane",
-        "rev": "6849911446e18e520970cc6b7a691e64ee90d649",
+        "rev": "c53a8c071dc59430bc54b3ad0b58d96252a07ab8",
         "type": "github"
       },
       "original": {
@@ -263,11 +263,11 @@
         "nixpkgs-stable": "nixpkgs-stable"
       },
       "locked": {
-        "lastModified": 1701250828,
-        "narHash": "sha256-liIO7Y1kaKElk44OgcWehah2hj5UHNtrtuXh+e2y9fM=",
+        "lastModified": 1701334333,
+        "narHash": "sha256-rsJ11xznoc2JSmM57bstxyas8xq8ZaEqNhQuQWyoQ/A=",
         "owner": "nix-community",
         "repo": "emacs-overlay",
-        "rev": "f59e99c3973f99a9338bdb03876b9072400589aa",
+        "rev": "913e44a13636fd111139ee683a6741ccb4c28672",
         "type": "github"
       },
       "original": {
@@ -889,11 +889,11 @@
     },
     "nixpkgs_5": {
       "locked": {
-        "lastModified": 1699601893,
-        "narHash": "sha256-9f008k1k5SmEAO1ldjO5sQf+oWHFkeK5jhS3Ji3vFyk=",
+        "lastModified": 1701174899,
+        "narHash": "sha256-1W+FMe8mWsJKXoBc+QgKmEeRj33kTFnPq7XCjU+bfnA=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "e06c716ef149f466f25e62a836c30b90476e65e5",
+        "rev": "010c7296f3b19a58b206fdf7d68d75a5b0a09e9e",
         "type": "github"
       },
       "original": {
@@ -976,11 +976,11 @@
     },
     "nur": {
       "locked": {
-        "lastModified": 1701250248,
-        "narHash": "sha256-wdflUdHaWiXeC9y0VGXSZQo1NHS/QAAy5NV5WkPV85U=",
+        "lastModified": 1701333924,
+        "narHash": "sha256-w953OKiXjECq44lI+vA1YR0XW/Np/B4OrIIm/d/GntU=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "cc705ad8bd1dce959447690070619e55c05f7f31",
+        "rev": "f0d92d2737c97b37804ca485d10148ee9abccf69",
         "type": "github"
       },
       "original": {
@@ -1050,11 +1050,11 @@
         "rust-overlay": "rust-overlay_6"
       },
       "locked": {
-        "lastModified": 1701253488,
-        "narHash": "sha256-uiFnu8eu6aUmeZ5XsvYlF5Nxzu+oWhE4fmhNsZdSxc8=",
+        "lastModified": 1701337624,
+        "narHash": "sha256-LCl7IeuGGBzNxjukAMUtmIg3UMI12FvYGp4OdYfUPZo=",
         "ref": "refs/heads/main",
-        "rev": "766153cc0ed82e69fe6cac55d00082c944f56df6",
-        "revCount": 73,
+        "rev": "090c72d7cd6d15abd583d05c16582148a300cb82",
+        "revCount": 75,
         "type": "git",
         "url": "https://git.sr.ht/~prma/prmait"
       },
@@ -1236,11 +1236,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1699755324,
-        "narHash": "sha256-DJBtQB5VIUXJZwVrhgkKOH8g2wTJFHe+5Dc2oJjpcNs=",
+        "lastModified": 1701310566,
+        "narHash": "sha256-CL9J3xUR2Ejni4LysrEGX0IdO+Y4BXCiH/By0lmF3eQ=",
         "owner": "oxalica",
         "repo": "rust-overlay",
-        "rev": "d15b1b2be8daba77c80ee6716616e5c841d3ab14",
+        "rev": "6d3c6e185198b8bf7ad639f22404a75aa9a09bff",
         "type": "github"
       },
       "original": {
@@ -1442,11 +1442,11 @@
         "nixpkgs": "nixpkgs_6"
       },
       "locked": {
-        "lastModified": 1701217390,
-        "narHash": "sha256-xES4PKl1EhMJX+XLwEA2e6lqia9d4UFROFxypOdIfqI=",
+        "lastModified": 1701259715,
+        "narHash": "sha256-k323e7C01XaVyvzprw6Lay51V1quKzkPOsrbEtkV390=",
         "owner": "mitchellh",
         "repo": "zig-overlay",
-        "rev": "eea50fe1d3c8a0508fe916c5ea96e6e872adf8e6",
+        "rev": "3b7938f44a345b12f70f0e34d5492b75e4005767",
         "type": "github"
       },
       "original": {
