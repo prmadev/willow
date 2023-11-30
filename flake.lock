@@ -1050,11 +1050,11 @@
         "rust-overlay": "rust-overlay_6"
       },
       "locked": {
-        "lastModified": 1701337624,
-        "narHash": "sha256-LCl7IeuGGBzNxjukAMUtmIg3UMI12FvYGp4OdYfUPZo=",
+        "lastModified": 1701338384,
+        "narHash": "sha256-mZVbEnsyEJnLgu84GBoKOseYxlbFCfz+qklpaVxnDVQ=",
         "ref": "refs/heads/main",
-        "rev": "090c72d7cd6d15abd583d05c16582148a300cb82",
-        "revCount": 75,
+        "rev": "c570afd83094740ec8b82f2e7d1393caa8e37951",
+        "revCount": 76,
         "type": "git",
         "url": "https://git.sr.ht/~prma/prmait"
       },
