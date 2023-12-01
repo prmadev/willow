@@ -233,7 +233,7 @@
   nixdev.enable = true;
   rust.enable = true;
   vscode.enable = false;
-  zig.enable = false;
+  zig.enable = true;
   haskell.enable = false;
   ocaml.enable = false;
   sql.enable = true;
