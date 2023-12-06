@@ -23,7 +23,7 @@ with lib; {
       };
       ".config/prmait/tsk.json" = {
         source = pkgs.writeTextFile {
-          name = "jnl.json";
+          name = "tsk.json";
           text = builtins.toJSON {
             "time_offset" = [3 30 0];
             path = "${config.repos.notes.path}/task/";
