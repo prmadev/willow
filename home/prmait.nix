@@ -9,7 +9,7 @@
 with lib; {
   options.prmait.enable = mkEnableOption "prmait settings";
   config = mkIf config.prmait.enable {
-    home.packages = [inputs.prmait.packages.${system}.default];
+    home.packages = with inputs.prmait.packages.${system}; [rvr jnl tsk];
     home.file = {
       ".config/prmait/jnl.json" = {
         source = pkgs.writeTextFile {
