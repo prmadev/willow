@@ -10,23 +10,34 @@ with lib; {
   options.prmait.enable = mkEnableOption "prmait settings";
   config = mkIf config.prmait.enable {
     home.packages = [inputs.prmait.packages.${system}.default];
-    home.file = let
-      content = pkgs.writeTextFile {
-        name = "snippets-rust.json";
-        text = let
-          c = config.colors.macchiato;
-        in
-          builtins.toJSON {
+    home.file = {
+      ".config/prmait/jnl.json" = {
+        source = pkgs.writeTextFile {
+          name = "jnl.json";
+          text = builtins.toJSON {
             "time_offset" = [3 30 0];
-            "journal" = {
-              path = "${config.repos.notes.path}/journal/";
-              file_name_format = "[year]-[month]-[day]-[hour]-[minute]-[second].json";
-            };
-            "task" = {
-              path = "${config.repos.notes.path}/task/";
-              file_name_format = "[year]-[month]-[day]-[hour]-[minute]-[second].json";
-            };
-            "river" = {
+            path = "${config.repos.notes.path}/journal/";
+            file_name_format = "[year]-[month]-[day]-[hour]-[minute]-[second].json";
+          };
+        };
+      };
+      ".config/prmait/tsk.json" = {
+        source = pkgs.writeTextFile {
+          name = "jnl.json";
+          text = builtins.toJSON {
+            "time_offset" = [3 30 0];
+            path = "${config.repos.notes.path}/task/";
+            file_name_format = "[year]-[month]-[day]-[hour]-[minute]-[second].json";
+          };
+        };
+      };
+      ".config/prmait/rvr.json" = {
+        source = pkgs.writeTextFile {
+          name = "rvr.json";
+          text = let
+            c = config.colors.macchiato;
+          in
+            builtins.toJSON {
               border_width = 5;
               colors = {
                 background = "0x" + c.base.rawHex;
@@ -85,29 +96,32 @@ with lib; {
                 }
               ];
             };
-            destination = "";
-          };
-      };
-    in {
-      ".config/prmait/config.json" = {
-        source = content;
+        };
       };
     };
     programs.fish.interactiveShellInit = ''
-      ${inputs.prmait.packages.${system}.default}/bin/prmait completions fish | source
+      ${inputs.prmait.packages.${system}.rvr}/bin/rvr completions fish | source;
+      ${inputs.prmait.packages.${system}.jnl}/bin/jnl completions fish | source;
+      ${inputs.prmait.packages.${system}.tsk}/bin/tsk completions fish | source;
     '';
     programs.zsh.initExtra = ''
       if [[ $options[zle] = on ]]; then
-         eval "$(${inputs.prmait.packages.${system}.default}/bin/prmait completions zsh)"
+         eval "$(${inputs.prmait.packages.${system}.rvr}/bin/rvr completions zsh)";
+         eval "$(${inputs.prmait.packages.${system}.jnl}/bin/jnl completions zsh)";
+         eval "$(${inputs.prmait.packages.${system}.tsk}/bin/tsk completions zsh)";
       fi
     '';
 
     programs.nushell = {
       extraEnv = ''
-        ${inputs.prmait.packages.${system}.default}/bin/prmait completions zsh| save --force ${config.xdg.cacheHome}/prmait/init.nu
+        ${inputs.prmait.packages.${system}.rvr}/bin/rvr completions zsh| save --force ${config.xdg.cacheHome}/rvr/init.nu;
+        ${inputs.prmait.packages.${system}.jnl}/bin/jnl completions zsh| save --force ${config.xdg.cacheHome}/jnl/init.nu;
+        ${inputs.prmait.packages.${system}.tsk}/bin/tsk completions zsh| save --force ${config.xdg.cacheHome}/tsk/init.nu;
       '';
       extraConfig = ''
-        source ${config.xdg.cacheHome}/prmait/init.nu
+        source ${config.xdg.cacheHome}/rvr/init.nu
+        source ${config.xdg.cacheHome}/jnl/init.nu
+        source ${config.xdg.cacheHome}/tsk/init.nu
       '';
     };
   };

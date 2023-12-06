@@ -22,7 +22,7 @@ with lib; {
       initer = {
         executable = true;
         source = pkgs.writeShellScript "river-initer" ''
-          prmait river
+          rvr
         '';
         target = ".config/river/init";
       };
