@@ -951,11 +951,11 @@
     },
     "nur": {
       "locked": {
-        "lastModified": 1701871484,
-        "narHash": "sha256-xSBoiIp8xAisGASgjBdPkmlMQ2d2VvwrsGW3gp8+4e0=",
+        "lastModified": 1701873733,
+        "narHash": "sha256-dIa3uHV7w6fh8k0o69U1IMbCTgGy/l2vNrDZOYRPntA=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "ad1670afc074ed6e1255b60bfe18cbaf113c00f0",
+        "rev": "3381e1ed869eb16a62fa3504df1d96ea99766e82",
         "type": "github"
       },
       "original": {
@@ -1025,11 +1025,11 @@
         "rust-overlay": "rust-overlay_6"
       },
       "locked": {
-        "lastModified": 1701872095,
-        "narHash": "sha256-tpVa8BdUXhEDQpK8nNjU00SbA5EezkcF4ZUEUO8TTmo=",
+        "lastModified": 1701873738,
+        "narHash": "sha256-TgzfDHTKaiaUwKYV5ikRmu/SnkG4OVUKS/Rcc96uoEI=",
         "ref": "refs/heads/main",
-        "rev": "c7da82e7e74961bb6a765c4a846137e8daa425e8",
-        "revCount": 109,
+        "rev": "439d24d2d91c7deec39724e4f3fea1030da02b0d",
+        "revCount": 110,
         "type": "git",
         "url": "https://git.sr.ht/~prma/prmait"
       },
