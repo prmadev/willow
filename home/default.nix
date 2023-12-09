@@ -248,7 +248,7 @@
   prmait.enable = true;
   rust-rover.enable = false;
   element.enable = true;
-  jitsi.enable = true;
+  jitsi.enable = false;
   tailwindcss.enable = true;
   hut.enable = true;
   hare.enable = true;
