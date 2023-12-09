@@ -5,6 +5,7 @@
   ...
 }: {
   imports = [
+    ./hare.nix
     ./i3status-rust.nix
     ./notmuch.nix
     ./aerc.nix
@@ -235,7 +236,7 @@
   vscode.enable = false;
   zig.enable = true;
   haskell.enable = false;
-  ocaml.enable = false;
+  ocaml.enable = true;
   sql.enable = true;
   emacs.enable = false;
   monitor.enable = true; # monitoring utilities
@@ -250,6 +251,7 @@
   jitsi.enable = true;
   tailwindcss.enable = true;
   hut.enable = true;
+  hare.enable = true;
   keychain.enable = true;
   shell.user = "${pkgs.fish}/bin/fish";
   editor = {

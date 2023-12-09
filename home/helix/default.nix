@@ -123,6 +123,14 @@ with lib; {
             language-servers = ["hls"];
           }
           {
+            name = "ocaml";
+            auto-format = true;
+            formatter = {
+              command = "dune";
+              args = ["fmt"];
+            };
+          }
+          {
             name = "html";
             language-servers = ["vscode-html-language-server" "tailwindcss-ls"];
           }
