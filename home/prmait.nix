@@ -54,8 +54,8 @@ with lib; {
                 };
               };
               apps = {
-                terminal = "${pkgs.wezterm}/bin/wezterm";
-                launcher = "${pkgs.fuzzel}/bin/fuzzel";
+                terminal = config.terminal;
+                launcher = config.launcher;
                 player_ctl = "${pkgs.playerctl}/bin/playerctl";
                 volume_up = "${pkgs.wireplumber}/bin/wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+";
                 volume_down = "${pkgs.wireplumber}/bin/wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-";

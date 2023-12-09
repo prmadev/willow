@@ -253,13 +253,14 @@
   hut.enable = true;
   hare.enable = true;
   keychain.enable = true;
+
   shell.user = "${pkgs.fish}/bin/fish";
   editor = {
     terminal = "${config.editor.helix.package}/bin/hx";
     helix.package = inputs.helix.packages.${pkgs.system}.default;
   };
-
   terminal = "${pkgs.foot}/bin/foot";
+
   repos = {
     enable = true;
     notes.enable = true;

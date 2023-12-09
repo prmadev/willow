@@ -15,6 +15,7 @@ in {
         default = "${pkgs.zsh}/bin/zsh";
       };
     };
+
     editor = {
       terminal = mkOption {
         type = types.str;
@@ -30,6 +31,10 @@ in {
     terminal = mkOption {
       type = types.str;
       default = "${pkgs.foot}/bin/foot";
+    };
+    launcher = mkOption {
+      type = types.str;
+      default = "${pkgs.fuzzel}/bin/fuzzel";
     };
     multiplexer = {
       tmux = {
