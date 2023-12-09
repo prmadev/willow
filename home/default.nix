@@ -247,7 +247,7 @@
   yazi.enable = true;
   prmait.enable = true;
   rust-rover.enable = false;
-  element.enable = true;
+  element.enable = false;
   jitsi.enable = false;
   tailwindcss.enable = true;
   hut.enable = true;
@@ -260,6 +260,7 @@
     helix.package = inputs.helix.packages.${pkgs.system}.default;
   };
   terminal = "${pkgs.foot}/bin/foot";
+  launcher = "${pkgs.fuzzel}/bin/fuzzel";
 
   repos = {
     enable = true;
