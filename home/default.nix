@@ -234,7 +234,7 @@
   nixdev.enable = true;
   rust.enable = true;
   vscode.enable = false;
-  zig.enable = true;
+  zig.enable = false;
   haskell.enable = false;
   ocaml.enable = true;
   sql.enable = true;
@@ -251,7 +251,7 @@
   jitsi.enable = false;
   tailwindcss.enable = true;
   hut.enable = true;
-  hare.enable = true;
+  hare.enable = false;
   keychain.enable = true;
 
   shell.user = "${pkgs.fish}/bin/fish";
