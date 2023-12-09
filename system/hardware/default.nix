@@ -18,6 +18,7 @@
     pulse.enable = true;
   };
 
+  services.samba.enable = false;
   services.logind.extraConfig = ''
     RuntimeDirectorySize=4G
   '';

@@ -126,8 +126,9 @@ with lib; {
             name = "ocaml";
             auto-format = true;
             formatter = {
-              command = "dune";
-              args = ["fmt"];
+              command = "ocamlformat";
+              args = ["--impl" "-"];
+              formatStdin = true;
             };
           }
           {

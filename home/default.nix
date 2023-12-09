@@ -140,7 +140,7 @@
   beet.enable = false; # tests don't pass
   panta.enable = false;
   iamb.enable = false;
-  fluffychat.enable = true;
+  fluffychat.enable = false;
   yt-dlp.enable = true;
   jq.enable = true;
   monolith.enable = true;
