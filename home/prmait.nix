@@ -11,7 +11,7 @@ with lib; {
   config = mkIf config.prmait.enable {
     home.packages = with inputs.prmait.packages.${system}; [rvr jnl tsk];
     home.file = {
-      ".config/prmait/jnl.json" = {
+      ".config/leafslug/jnl.json" = {
         source = pkgs.writeTextFile {
           name = "jnl.json";
           text = builtins.toJSON {
@@ -21,7 +21,7 @@ with lib; {
           };
         };
       };
-      ".config/prmait/tsk.json" = {
+      ".config/leafslug/tsk.json" = {
         source = pkgs.writeTextFile {
           name = "tsk.json";
           text = builtins.toJSON {
@@ -31,7 +31,7 @@ with lib; {
           };
         };
       };
-      ".config/prmait/rvr.json" = {
+      ".config/leafslug/rvr.json" = {
         source = pkgs.writeTextFile {
           name = "rvr.json";
           text = let

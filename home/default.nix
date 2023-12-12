@@ -278,5 +278,4 @@
     inputs.neovim-nightly-overlay.overlay
     (final: prev: {zigpkg = inputs.zig.packages.${prev.system}.master;})
   ];
-  # home.packages = [inputs.kyushu.packages.${system}.kyushu];
 }

@@ -36,6 +36,7 @@ in
         #pkgs.qv2ray
         pkgs.sshuttle
         pkgs.go-graft
+        pkgs.openconnect
         #pkgs.cloudflare-warp
       ];
 

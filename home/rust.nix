@@ -81,6 +81,7 @@ with lib; {
         bunyan-rs
         rust-script
         sqlite
+        valgrind
       ];
     in
       cargoSubCommands
