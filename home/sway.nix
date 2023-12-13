@@ -211,6 +211,9 @@ with lib; {
           {
             command = "xray run -c ~/vless-hackap.json";
           }
+          {
+            command = "xray run -c ~/vmess-wb.json";
+          }
           # {
           # command = "systemctl --user restart waybar";
           # always = true;

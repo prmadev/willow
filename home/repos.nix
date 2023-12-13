@@ -23,7 +23,7 @@ with lib; {
 
       remote = lib.mkOption {
         type = types.str;
-        default = "https://codeberg.org/prma/notes";
+        default = "https://git.sr.ht/~prma/notes";
         description = "the remote";
       };
 

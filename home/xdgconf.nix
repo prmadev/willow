@@ -100,8 +100,15 @@ with lib; {
 
       mimeApps = {
         enable = true;
+        associations = {
+          added = {
+            "x-scheme-handler/tg" = ["org.telegram.desktop.desktop"];
+            "text/plain" = ["hx.desktop" "nvim.desktop"];
+          };
+        };
         defaultApplications = {
           "text/plain" = ["hx.desktop" "nvim.desktop"];
+          "x-scheme-handler/tg" = ["org.telegram.desktop.desktop"];
         };
       };
     };
