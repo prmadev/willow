@@ -104,8 +104,9 @@ with lib; {
           rustanalyzer = {
             command = "rust-analyzer";
             config = {
-              rust-analyzer.cargo.extraEnv = {CARGO_TARGET_DIR = "./target/rust_analyzer";};
+              cargo.extraEnv = {CARGO_TARGET_DIR = "./target/rust_analyzer";};
               check.command = "clippy";
+              rustc.source = "discover";
               inlayHints.bindingModeHints.enable = true;
               inlayHints.closingBraceHints.minLines = 10;
               inlayHints.closureReturnTypeHints.enable = "with_block";
