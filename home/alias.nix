@@ -25,6 +25,7 @@ with lib; {
       b = "bg";
       n = "nvim";
       pc = "proxychains4 -q";
+      y = "yazi";
 
       # git related stuff
       gl = "git lg";
