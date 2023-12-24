@@ -239,7 +239,7 @@ with lib; {
           #   always = true;
           # }
         ];
-        terminal = "${pkgs.wezterm}/bin/wezterm";
+        terminal = config.terminal;
         window = {
           border = config.sway.borderAndGap;
           titlebar = false;
