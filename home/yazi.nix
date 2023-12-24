@@ -14,7 +14,14 @@ with lib; {
       enableFishIntegration = true;
       enableNushellIntegration = true;
       enableZshIntegration = true;
-      keymap = {};
+      keymap = {
+        manager.keymap = [
+          {
+            exec = "shell \"$SHELL\" --block --confirm";
+            on = ["<C-c>"];
+          }
+        ];
+      };
       settings = {};
     };
     home.packages = with pkgs; [
