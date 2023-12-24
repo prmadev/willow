@@ -16,6 +16,7 @@ with lib; {
         cargo-release
         cargo-vet
         cargo-pgx
+        cargo-shuttle
         cargo-temp
         cargo-shuttle
         cargo-sort
