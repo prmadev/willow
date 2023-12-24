@@ -8,6 +8,10 @@ with lib; {
   options.xdgconf.enable = mkEnableOption "xdg config settings";
 
   config = mkIf config.xdgconf.enable {
+    home.file.".icons/default/index.theme".text = ''
+      [icon theme]
+      Inherits=phinger-cursors
+    '';
     home.packages = with pkgs; [xdg-utils];
     xdg = {
       enable = true;
