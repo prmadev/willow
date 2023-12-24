@@ -107,12 +107,72 @@ with lib; {
         associations = {
           added = {
             "x-scheme-handler/tg" = ["org.telegram.desktop.desktop"];
-            "text/plain" = ["hx.desktop" "nvim.desktop"];
+            "text/plain" = ["Helix.desktop" "nvim.desktop"];
           };
         };
-        defaultApplications = {
-          "text/plain" = ["hx.desktop" "nvim.desktop"];
-          "x-scheme-handler/tg" = ["org.telegram.desktop.desktop"];
+        defaultApplications = let
+          browser = ["firefox.desktop"];
+          pdfViewer = ["org.pwmt.zathura.desktop" "firefox.desktop"];
+          textEditor = ["Helix.desktop" "nvim.desktop"];
+          imageViewer = ["imv.desktop"];
+          videoPlayer = ["mpv.desktop"];
+          audioPlayer = ["mpv.desktop"];
+          terminal = ["org.wezfurlong.wezterm.desktop"];
+        in {
+          "x-scheme-handler/http" = browser;
+          "x-scheme-handler/https" = browser;
+          "application/xhtml+xml" = browser;
+          "text/html" = browser;
+          "text/xml" = browser;
+          "application/xml" = browser;
+          "application/xhtml_xml" = browser;
+          "application/rdf+xml" = browser;
+          "application/rss+xml" = browser;
+          "application/x-extension-htm" = browser;
+          "application/x-extension-html" = browser;
+          "application/x-extension-shtml" = browser;
+          "application/x-extension-xht" = browser;
+          "application/x-extension-xhtml" = browser;
+
+          "x-scheme-handler/about" = browser;
+          "x-scheme-handler/ftp" = browser;
+          "x-scheme-handler/unknown" = browser;
+          "application/pdf" = pdfViewer;
+          "application/json" = textEditor;
+          "text/plain" = textEditor;
+
+          "audio/*" = audioPlayer;
+
+          "video/*" = videoPlayer;
+          "image/*" = imageViewer;
+          "image/gif" = imageViewer;
+          "image/jpeg" = imageViewer;
+          "image/png" = imageViewer;
+          "image/webp" = imageViewer;
+          "image/bmp" = imageViewer;
+          "image/jpg" = imageViewer;
+          "image/pjpeg" = imageViewer;
+          "image/tiff" = imageViewer;
+          "image/x-bmp" = imageViewer;
+          "image/x-gray" = imageViewer;
+          "image/x-icb" = imageViewer;
+          "image/x-ico" = imageViewer;
+          "image/x-png" = imageViewer;
+          "image/x-portable-anymap" = imageViewer;
+          "image/x-portable-bitmap" = imageViewer;
+          "image/x-portable-graymap" = imageViewer;
+          "image/x-portable-pixmap" = imageViewer;
+          "image/x-xbitmap" = imageViewer;
+          "image/x-xpixmap" = imageViewer;
+          "image/x-pcx" = imageViewer;
+          "image/svg+xml" = imageViewer;
+          "image/svg+xml-compressed" = imageViewer;
+          "image/vnd.wap.wbmp" = imageViewer;
+          "image/x-icns" = imageViewer;
+
+          "x-scheme-handler/terminal" = terminal;
+          "x-scheme-handler/tg" = ["org.telegram.desktop.desktop" "telegramdesktop.desktop"];
+          "x-scheme-handler/discord" = ["discord.desktop"];
         };
       };
     };
