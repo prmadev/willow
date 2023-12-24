@@ -175,7 +175,6 @@
   android.enable = true;
   compression.enable = true;
   filesearch.enable = true;
-  nnn.enable = true;
   office.enable = true;
   ranger.enable = false;
   mpv.enable = true;
@@ -183,8 +182,6 @@
   pdf.enable = true;
   rename.enable = true;
   xdgconf.enable = true;
-  brootFile.enable = false;
-  lf.enable = true;
   chrome.enable = true;
   atuin.enable = false;
   download.enable = true;
@@ -196,24 +193,26 @@
   # ragenix.enable = true;
   alias.enable = true;
   obs.enable = true;
-  bash.enable = true;
   doc.enable = true;
-  fish.enable = true;
   fzf.enable = true;
+
+  bash.enable = true;
+  fish.enable = true;
   nu.enable = true;
+  zsh.enable = true;
+
   pager.enable = true;
   wofi.enable = false;
   fuzzel.enable = true;
   starship.enable = true;
   pet.enable = false; # candidate for cleaning
-  zsh.enable = true;
   font.enable = true;
   gtkconf.enable = true;
-  kitty.enable = false;
   zellij.enable = true;
-  wezterm.enable = true;
   tmux.enable = true;
+  wezterm.enable = true;
   foot.enable = true;
+  kitty.enable = false;
   mako.enable = true;
   river.enable = true;
   eww.enable = false;
@@ -223,39 +222,47 @@
   slack.enable = false; # candidate for cleaning
   picom.enable = false; # candidate for cleaning
   pinentry.enable = true;
-  datagrip.enable = false;
-  elm.enable = false;
   build.enable = true;
   direnv.enable = true;
   git.enable = true;
-  go.enable = true;
   pandoc.enable = true;
   asciidoc.enable = false;
+
   neovim.enable = true;
+  helix.enable = true;
+  vscode.enable = false;
+  emacs.enable = false;
+  rust-rover.enable = false;
+  datagrip.enable = false;
+
+  elm.enable = false;
+  go.enable = true;
   protobuf.enable = true;
   grpc.enable = true;
-  helix.enable = true;
   nixdev.enable = true;
   rust.enable = true;
-  vscode.enable = false;
   zig.enable = false;
   haskell.enable = false;
-  ocaml.enable = true;
+  ocaml.enable = false;
   sql.enable = true;
-  emacs.enable = false;
+  tailwindcss.enable = true;
+  hare.enable = false;
+
   monitor.enable = true; # monitoring utilities
   insomnia.enable = false; # candidate for cleaning
   pls.enable = true;
   soup.enable = false;
   hugo.enable = true;
+
+  brootFile.enable = false;
+  nnn.enable = true;
+  lf.enable = true;
   yazi.enable = true;
+
   prmait.enable = true;
-  rust-rover.enable = false;
   element.enable = false;
   jitsi.enable = false;
-  tailwindcss.enable = true;
   hut.enable = true;
-  hare.enable = false;
   keychain.enable = true;
 
   shell.user = "${pkgs.fish}/bin/fish";
