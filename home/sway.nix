@@ -49,6 +49,11 @@ with lib; {
         export _JAVA_AWT_WM_NONREPARENTING=1
       '';
       config = {
+        seat = {
+          "*" = {
+            hide_cursor = "when-typing disable";
+          };
+        };
         bars = [
           {
             colors = {
@@ -146,6 +151,7 @@ with lib; {
         focus = {
           followMouse = "always";
           mouseWarping = true;
+          wrapping = "yes";
         };
         fonts = {
           names = ["Monaspace Krypton"];
