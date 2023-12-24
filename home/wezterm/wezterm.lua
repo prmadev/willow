@@ -1,5 +1,6 @@
 local wezterm = require("wezterm")
-local monaspace_features = {"calt", "clig", "liga", "dlig", "ss01", "ss02", "ss03", "ss04", "ss05", "ss06", "ss07", "ss08"}
+local monaspace_features = { "calt", "clig", "liga", "dlig", "ss01", "ss02", "ss03", "ss04", "ss05", "ss06", "ss07",
+	"ss08" }
 
 return {
 	-- color_scheme = "Rosé Pine Moon (base16)",
@@ -7,16 +8,15 @@ return {
 	hide_tab_bar_if_only_one_tab = true,
 	default_prog = { "fish" },
 	font_size = 18.0,
+	enable_wayland = true,
+	enable_kitty_graphics = true,
 
-	  harfbuzz_features = monaspace_features,
-		font = wezterm.font_with_fallback({
-		{family = "Monaspace Argon", harfbuzz_features = monaspace_features },
+	harfbuzz_features = monaspace_features,
+	font = wezterm.font_with_fallback({
+		{ family = "Monaspace Argon",             harfbuzz_features = monaspace_features },
 		{ family = "Lotion" },
 		{ family = "Maple Mono NF" },
-		{
-		 family = 'Pragmata Pro Mono',
-		 weight = "Regular"
-		},
+		{ family = 'Pragmata Pro Mono',           weight = "Regular" },
 
 		{ family = "ComicCodeLigatures Nerd Font" },
 
@@ -35,25 +35,25 @@ return {
 			italic = false,
 			intensity = "Bold",
 			font = wezterm.font_with_fallback({
-				{ family = "Monaspace Argon", weight = "Bold", harfbuzz_features = monaspace_features },
-				{ family = "Lotion", weight = "Bold" },
-				{ family = "Maple Mono NF", weight = "Bold" },
-				{ family = "Pragmata Pro Mono", weight = "Bold" },
-				{ family = "Operator Mono", weight = "Bold" },
+				{ family = "Monaspace Argon",              weight = "Bold", harfbuzz_features = monaspace_features },
+				{ family = "Lotion",                       weight = "Bold" },
+				{ family = "Maple Mono NF",                weight = "Bold" },
+				{ family = "Pragmata Pro Mono",            weight = "Bold" },
+				{ family = "Operator Mono",                weight = "Bold" },
 				{ family = "ComicCodeLigatures Nerd Font", weight = "Bold" },
-				{ family = "Comic Code Ligatures", weight = "Bold" },
-				{ family = "Gintronic Nerd Font", weight = "Black" },
+				{ family = "Comic Code Ligatures",         weight = "Bold" },
+				{ family = "Gintronic Nerd Font",          weight = "Black" },
 			}),
 		},
 		{
 			italic = false,
 			intensity = "Normal",
 			font = wezterm.font_with_fallback({
-				{ family = "Monaspace Argon", weight = "Regular", harfbuzz_features = monaspace_features },
-				{ family = "Lotion", weight = "Regular" },
-				{ family = "Maple Mono NF", weight = "Regular" },
-				{ family = "Pragmata Pro Mono", weight = "Regular" },
-				{ family = "Operator Mono", weight = "Book" },
+				{ family = "Monaspace Argon",             weight = "Regular", harfbuzz_features = monaspace_features },
+				{ family = "Lotion",                      weight = "Regular" },
+				{ family = "Maple Mono NF",               weight = "Regular" },
+				{ family = "Pragmata Pro Mono",           weight = "Regular" },
+				{ family = "Operator Mono",               weight = "Book" },
 				{ family = "ComicCodeLigatures Nerd Font" },
 				{ family = "Comic Code Ligatures" },
 				{ family = "Gintronic Nerd Font" },
@@ -63,15 +63,15 @@ return {
 			italic = false,
 			intensity = "Half",
 			font = wezterm.font_with_fallback({
-				{ family = "Monaspace Argon", weight = "Light", harfbuzz_features = monaspace_features },
-				{ family = "Lotion", weight = "Regular" },
-				{ family = "Maple Mono NF", weight = "Light" },
-				{ family = "Pragmata Pro Mono", weight = "Regular" },
-				{ family = "Operator Mono", weight = "Light" },
+				{ family = "Monaspace Argon",              weight = "Light",  harfbuzz_features = monaspace_features },
+				{ family = "Lotion",                       weight = "Regular" },
+				{ family = "Maple Mono NF",                weight = "Light" },
+				{ family = "Pragmata Pro Mono",            weight = "Regular" },
+				{ family = "Operator Mono",                weight = "Light" },
 				{ family = "ComicCodeLigatures Nerd Font" },
 				{ family = "ComicCodeLigatures Nerd Font", weight = "Light" },
-				{ family = "Comic Code Ligatures", weight = "Light" },
-				{ family = "Gintronic Nerd Font", weight = "Light" },
+				{ family = "Comic Code Ligatures",         weight = "Light" },
+				{ family = "Gintronic Nerd Font",          weight = "Light" },
 			}),
 		}, ------------------------
 		-- italics
@@ -85,7 +85,7 @@ return {
 					weight = "ExtraBold",
 					style = "Italic",
 					harfbuzz_features = monaspace_features,
-			},
+				},
 				{
 					family = "Lotion",
 					weight = "Bold",
@@ -127,25 +127,25 @@ return {
 			italic = true,
 			intensity = "Normal",
 			font = wezterm.font_with_fallback({
-				{ family = "Monaspace Radon", style = "Italic", weight = "Regular", harfbuzz_features = monaspace_features },
-				{ family = "Lotion", style = "Italic", weight = "Regular" },
-				{ family = "Maple Mono NF", style = "Italic", weight = "Regular" },
-				{ family = "Pragmata Pro Mono", style = "Italic", weight = "Regular" },
-				{ family = "Operator Mono", style = "Italic", weight = "Book" },
+				{ family = "Monaspace Radon",              style = "Italic", weight = "Regular", harfbuzz_features = monaspace_features },
+				{ family = "Lotion",                       style = "Italic", weight = "Regular" },
+				{ family = "Maple Mono NF",                style = "Italic", weight = "Regular" },
+				{ family = "Pragmata Pro Mono",            style = "Italic", weight = "Regular" },
+				{ family = "Operator Mono",                style = "Italic", weight = "Book" },
 				{ family = "ComicCodeLigatures Nerd Font", style = "Italic" },
-				{ family = "Comic Code Ligatures", style = "Italic" },
-				{ family = "Gintronic Nerd Font", style = "Italic" },
+				{ family = "Comic Code Ligatures",         style = "Italic" },
+				{ family = "Gintronic Nerd Font",          style = "Italic" },
 			}),
 		},
 		{
 			italic = true,
 			intensity = "Half",
 			font = wezterm.font_with_fallback({
-				{ family = "Monaspace Radon", style = "Italic", weight = "Light", harfbuzz_features = monaspace_features },
-				{ family = "Lotion", style = "Italic", weight = "Regular" },
-				{ family = "Maple Mono NF", style = "Italic", weight = "Regular" },
+				{ family = "Monaspace Radon",   style = "Italic", weight = "Light",  harfbuzz_features = monaspace_features },
+				{ family = "Lotion",            style = "Italic", weight = "Regular" },
+				{ family = "Maple Mono NF",     style = "Italic", weight = "Regular" },
 				{ family = "Pragmata Pro Mono", style = "Italic", weight = "Regular" },
-				{ family = "Operator Mono", style = "Italic", weight = "Light" },
+				{ family = "Operator Mono",     style = "Italic", weight = "Light" },
 				{
 					family = "ComicCodeLigatures Nerd Font",
 					weight = "Light",
