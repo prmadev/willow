@@ -5,6 +5,8 @@
   ...
 }: {
   imports = [
+    ./ollama.nix
+    ./meli.nix
     ./hare.nix
     ./i3status-rust.nix
     ./notmuch.nix
@@ -132,8 +134,10 @@
     ./lazygit.nix
     ./cliphist.nix
   ];
+  ollama.enable = true;
   notmuch.enable = true;
   aerc.enable = true;
+  meli.enable = true;
   mbsync.enable = true;
   carapace.enable = false; # tests don't pass
   lazygit.enable = false;
