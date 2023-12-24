@@ -215,10 +215,20 @@ with lib; {
         };
         startup = [
           {
+            #1080
+            command = "xray run -c ~/vless-hackap-fr.json";
+          }
+          {
+            #1081
             command = "xray run -c ~/vless-hackap.json";
           }
           {
+            #1085
             command = "xray run -c ~/vmess-wb.json";
+          }
+          {
+            #1086
+            command = "xray run -c ~/vmess-wb-daily.json";
           }
           # {
           # command = "systemctl --user restart waybar";
