@@ -38,10 +38,14 @@ with lib; {
       };
 
       cursorTheme = {
-        package = pkgs.catppuccin-cursors;
-        name = "macchiatoSky";
-        size = 24;
+        package = pkgs.phinger-cursors;
+        name = "phinger-cursors";
       };
+      # cursorTheme = {
+      #   package = pkgs.catppuccin-cursors;
+      #   name = "macchiatoSky";
+      #   size = 24;
+      # };
 
       theme = {
         name = "Catppuccin-Macchiato-Standard-Pink-Dark";
