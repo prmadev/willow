@@ -18,6 +18,7 @@ with lib; {
     };
 
     home.packages = with pkgs; [
+      # deadcode
       richgo
       golangci-lint-langserver
       golangci-lint
