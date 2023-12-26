@@ -23,6 +23,7 @@ with lib; {
           genericName = "Text Editor";
           exec = "hx %F";
           terminal = true;
+          type = "Application";
           categories = ["Application" "TextEditor" "Utility"];
           mimeType = [
             "text/plain" # Plain text files
@@ -107,7 +108,7 @@ with lib; {
         associations = {
           added = {
             "x-scheme-handler/tg" = ["org.telegram.desktop.desktop"];
-            "text/plain" = ["Helix.desktop" "nvim.desktop"];
+            "text/plain" = ["hx.desktop" "nvim.desktop"];
           };
         };
         defaultApplications = let

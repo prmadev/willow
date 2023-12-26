@@ -5,6 +5,8 @@
   ...
 }: {
   imports = [
+    ./handlr.nix
+    ./just.nix
     ./ollama.nix
     ./meli.nix
     ./hare.nix
@@ -134,6 +136,7 @@
     ./lazygit.nix
     ./cliphist.nix
   ];
+  just.enable = true;
   ollama.enable = true;
   notmuch.enable = true;
   aerc.enable = true;
@@ -265,6 +268,7 @@
   hut.enable = true;
   keychain.enable = true;
 
+  handlr.enable = true;
   shell.user = "${pkgs.fish}/bin/fish";
   editor = {
     terminal = "${config.editor.helix.package}/bin/hx";

@@ -1,5 +1,4 @@
 {
-  pkgs,
   lib,
   config,
   ...
@@ -27,7 +26,8 @@ with lib; {
 
         configFile.text = let
           misc = ''
-            let-env config = {
+            $env.config = {
+              show_banner: false,
               table: {
                 mode: compact
               }
@@ -35,17 +35,8 @@ with lib; {
               ls: {
                 use_ls_colors: false
               }
-
-              cd: {
-                abbreviations: true
-              }
-
               shell_integration: true
             }
-
-
-
-            use job.nu
           '';
         in
           builtins.concatStringsSep "\n" [misc];

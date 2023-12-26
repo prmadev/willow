@@ -114,9 +114,12 @@ with lib; {
 
     programs.nushell = {
       extraEnv = ''
-        ${inputs.prmait.packages.${system}.rvr}/bin/rvr completions zsh| save --force ${config.xdg.cacheHome}/rvr/init.nu;
-        ${inputs.prmait.packages.${system}.jnl}/bin/jnl completions zsh| save --force ${config.xdg.cacheHome}/jnl/init.nu;
-        ${inputs.prmait.packages.${system}.tsk}/bin/tsk completions zsh| save --force ${config.xdg.cacheHome}/tsk/init.nu;
+        mkdir ${config.xdg.cacheHome}/rvr/
+        ${inputs.prmait.packages.${system}.rvr}/bin/rvr completions nushell| save --force ${config.xdg.cacheHome}/rvr/init.nu;
+        mkdir ${config.xdg.cacheHome}/jnl/
+        ${inputs.prmait.packages.${system}.jnl}/bin/jnl completions nushell| save --force ${config.xdg.cacheHome}/jnl/init.nu;
+        mkdir ${config.xdg.cacheHome}/tsk/
+        ${inputs.prmait.packages.${system}.tsk}/bin/tsk completions nushell| save --force ${config.xdg.cacheHome}/tsk/init.nu;
       '';
       extraConfig = ''
         source ${config.xdg.cacheHome}/rvr/init.nu
