@@ -5,6 +5,7 @@
   ...
 }: {
   imports = [
+    ./deno.nix
     ./handlr.nix
     ./just.nix
     ./ollama.nix
