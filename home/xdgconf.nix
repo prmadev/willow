@@ -18,7 +18,7 @@ with lib; {
       mime.enable = true;
       userDirs.enable = true;
       desktopEntries = {
-        hx = {
+        Helix = {
           name = "Helix";
           genericName = "Text Editor";
           exec = "hx %F";
