@@ -2,11 +2,12 @@
   lib,
   config,
   pkgs,
+  inputs,
   ...
 }:
 with lib; {
-  options.notmuch.enable = mkEnableOption "notmuch settings";
-  config = mkIf config.notmuch.enable {
+  options.email.enable = mkEnableOption "email settings";
+  config = mkIf config.email.enable {
     accounts.email.maildirBasePath = "${config.home.homeDirectory}/mail";
     accounts.email.accounts.Personal = {
       # maildir = null;
@@ -29,6 +30,11 @@ with lib; {
       };
       himalaya = {
         enable = true;
+        settings = {
+          envelope.list.backend = "imap";
+          backend = "imap";
+          # "maildir-root-dir" = "${config.home.homeDirectory}/mail";
+        };
       };
       thunderbird = {
         enable = true;
@@ -58,7 +64,17 @@ with lib; {
     };
     programs.himalaya = {
       enable = true;
+      # package = inputs.himalaya.packages.x86_64-linux.musl;
+      settings = {
+        Personal = {
+          "maildir-root-dir" = "${config.home.homeDirectory}/mail";
+        };
+      };
     };
+
+    programs.fish.interactiveShellInit = ''
+      ${inputs.himalaya.packages.x86_64-linux.musl}/bin/himalaya completions fish | ${pkgs.sd}/bin/sd "Shell script successfully generated for shell fish!" "" | source;
+    '';
     programs.neomutt = {
       enable = true;
       vimKeys = true;

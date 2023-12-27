@@ -12,7 +12,7 @@
     ./meli.nix
     ./hare.nix
     ./i3status-rust.nix
-    ./notmuch.nix
+    ./email.nix
     ./aerc.nix
     ./mbsync.nix
     ./hut.nix
@@ -138,8 +138,8 @@
     ./cliphist.nix
   ];
   just.enable = true;
-  ollama.enable = true;
-  notmuch.enable = true;
+  ollama.enable = false;
+  email.enable = true;
   aerc.enable = true;
   meli.enable = true;
   mbsync.enable = true;
