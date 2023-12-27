@@ -17,6 +17,7 @@ with lib; {
 
     programs.git = {
       enable = true;
+      package = pkgs.gitFull;
       userEmail = "me@prma.dev";
       userName = "prma";
       ignores = [
