@@ -29,6 +29,9 @@
       url = "github:nix-community/NUR";
       # inputs.nixpkgs.follows = "nixpkgs";
     };
+    himalaya = {
+      url = "github:soywod/himalaya";
+    };
 
     # ragenix = {
     #   url = "github:yaxitech/ragenix";
