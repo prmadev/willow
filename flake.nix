@@ -42,7 +42,7 @@
 
     zig.url = "github:mitchellh/zig-overlay";
     zls.url = "github:zigtools/zls";
-    prmait.url = "git+https://git.sr.ht/~prma/leafslug";
+    leafslug.url = "git+https://git.sr.ht/~prma/leafslug";
 
     # nix-doom-emacs.url = "github:nix-community/nix-doom-emacs";
     # nixneovim.url = "github:nixneovim/nixneovim";

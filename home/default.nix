@@ -34,7 +34,7 @@
     ./neovim.nix
     ./helix
     ./emacs.nix
-    ./prmait.nix
+    ./leafslug.nix
     ./pref.nix
     ./haskell.nix
     ./nixdev.nix
@@ -262,11 +262,12 @@
   lf.enable = true;
   yazi.enable = true;
 
-  prmait.enable = true;
+  leafslug.enable = true;
   element.enable = false;
   jitsi.enable = false;
   hut.enable = true;
   keychain.enable = true;
+  deno.enable = true;
 
   handlr.enable = true;
   shell.user = "${pkgs.fish}/bin/fish";
