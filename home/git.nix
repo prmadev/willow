@@ -43,6 +43,9 @@ with lib; {
       ignores = [
         ".env"
         ".vscode"
+        "target/"
+        "result/"
+        ".idea/"
       ];
       aliases = {
         cs = "commit --signoff --gpg-sign";
