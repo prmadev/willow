@@ -11,7 +11,7 @@
   xdg.portal = {
     enable = true;
     wlr.enable = true;
-    xdgOpenUsePortal = true;
+    xdgOpenUsePortal = false;
     config = {
       common.default = "wlr";
     };
