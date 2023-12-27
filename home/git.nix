@@ -19,12 +19,41 @@ with lib; {
       enable = true;
       package = pkgs.gitFull;
       userEmail = "me@prma.dev";
-      userName = "prma";
+      userName = "Perma Alesheikh";
+      hooks = {
+        "prepare-commit-msg" = pkgs.writeShellScript "signOffCheck.sh" ''
+          NAME=$(git config user.name)
+          EMAIL=$(git config user.email)
+
+          if [ -z "$NAME" ]; then
+              echo "empty git config user.name"
+              exit 1
+          fi
+
+          if [ -z "$EMAIL" ]; then
+              echo "empty git config user.email"
+              exit 1
+          fi
+
+          git interpret-trailers --if-exists doNothing --trailer \
+              "Signed-off-by: $NAME <$EMAIL>" \
+              --in-place "$1"
+        '';
+      };
       ignores = [
         ".env"
         ".vscode"
       ];
+      aliases = {
+        cs = "commit --signoff --gpg-sign";
+        ai = "add -p";
+        ra = "rebase -i";
+      };
       extraConfig = {
+        format.signOff = true;
+
+        sendemail.annotate = true;
+        pull.rebase = true;
         init = {
           defaultBranch = "main";
         };
