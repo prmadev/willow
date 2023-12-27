@@ -7,9 +7,9 @@
   ...
 }:
 with lib; {
-  options.prmait.enable = mkEnableOption "prmait settings";
-  config = mkIf config.prmait.enable {
-    home.packages = with inputs.prmait.packages.${system}; [rvr jnl tsk];
+  options.leafslug.enable = mkEnableOption "leafslug settings";
+  config = mkIf config.leafslug.enable {
+    home.packages = with inputs.leafslug.packages.${system}; [rvr jnl tsk];
     home.file = {
       ".config/leafslug/jnl.json" = {
         source = pkgs.writeTextFile {
@@ -100,26 +100,26 @@ with lib; {
       };
     };
     programs.fish.interactiveShellInit = ''
-      ${inputs.prmait.packages.${system}.rvr}/bin/rvr completions fish | source;
-      ${inputs.prmait.packages.${system}.jnl}/bin/jnl completions fish | source;
-      ${inputs.prmait.packages.${system}.tsk}/bin/tsk completions fish | source;
+      ${inputs.leafslug.packages.${system}.rvr}/bin/rvr completions fish | source;
+      ${inputs.leafslug.packages.${system}.jnl}/bin/jnl completions fish | source;
+      ${inputs.leafslug.packages.${system}.tsk}/bin/tsk completions fish | source;
     '';
     programs.zsh.initExtra = ''
       if [[ $options[zle] = on ]]; then
-         eval "$(${inputs.prmait.packages.${system}.rvr}/bin/rvr completions zsh)";
-         eval "$(${inputs.prmait.packages.${system}.jnl}/bin/jnl completions zsh)";
-         eval "$(${inputs.prmait.packages.${system}.tsk}/bin/tsk completions zsh)";
+         eval "$(${inputs.leafslug.packages.${system}.rvr}/bin/rvr completions zsh)";
+         eval "$(${inputs.leafslug.packages.${system}.jnl}/bin/jnl completions zsh)";
+         eval "$(${inputs.leafslug.packages.${system}.tsk}/bin/tsk completions zsh)";
       fi
     '';
 
     programs.nushell = {
       extraEnv = ''
         mkdir ${config.xdg.cacheHome}/rvr/
-        ${inputs.prmait.packages.${system}.rvr}/bin/rvr completions nushell| save --force ${config.xdg.cacheHome}/rvr/init.nu;
+        ${inputs.leafslug.packages.${system}.rvr}/bin/rvr completions nushell| save --force ${config.xdg.cacheHome}/rvr/init.nu;
         mkdir ${config.xdg.cacheHome}/jnl/
-        ${inputs.prmait.packages.${system}.jnl}/bin/jnl completions nushell| save --force ${config.xdg.cacheHome}/jnl/init.nu;
+        ${inputs.leafslug.packages.${system}.jnl}/bin/jnl completions nushell| save --force ${config.xdg.cacheHome}/jnl/init.nu;
         mkdir ${config.xdg.cacheHome}/tsk/
-        ${inputs.prmait.packages.${system}.tsk}/bin/tsk completions nushell| save --force ${config.xdg.cacheHome}/tsk/init.nu;
+        ${inputs.leafslug.packages.${system}.tsk}/bin/tsk completions nushell| save --force ${config.xdg.cacheHome}/tsk/init.nu;
       '';
       extraConfig = ''
         source ${config.xdg.cacheHome}/rvr/init.nu
