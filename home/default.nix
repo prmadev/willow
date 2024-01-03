@@ -5,6 +5,8 @@
   ...
 }: {
   imports = [
+    ./lefthook.nix
+    ./precommit.nix
     ./deno.nix
     ./handlr.nix
     ./just.nix
@@ -137,6 +139,8 @@
     ./lazygit.nix
     ./cliphist.nix
   ];
+  precommit.enable = false;
+  lefthook.enable = true;
   just.enable = true;
   ollama.enable = false;
   email.enable = true;

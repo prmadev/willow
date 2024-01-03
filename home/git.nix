@@ -39,6 +39,9 @@ with lib; {
               "Signed-off-by: $NAME <$EMAIL>" \
               --in-place "$1"
         '';
+        # "pre-commit" = pkgs.writeShellScript "pre-commit.sh" ''
+        # exec ${pkgs.pre-commit}/bin/pre-commit run
+        # '';
       };
       ignores = [
         ".env"
