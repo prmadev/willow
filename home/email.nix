@@ -32,8 +32,8 @@ with lib; {
         enable = true;
         settings = {
           envelope.list.backend = "imap";
-          backend = "imap";
-          # "maildir-root-dir" = "${config.home.homeDirectory}/mail";
+          backend = "maildir";
+          "maildir-root-dir" = "${config.home.homeDirectory}/mail/prma";
         };
       };
       thunderbird = {

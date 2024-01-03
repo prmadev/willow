@@ -170,7 +170,7 @@ with lib; {
           }
           {
             name = "rust";
-            language-servers = ["rustanalyzer" "snippets-rust"];
+            language-servers = ["rustanalyzer" "tailwindcss-ls" "snippets-rust"];
           }
         ];
       };

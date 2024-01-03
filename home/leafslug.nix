@@ -21,6 +21,16 @@ with lib; {
           };
         };
       };
+      ".config/leafslug/blg.json" = {
+        source = pkgs.writeTextFile {
+          name = "blg.json";
+          text = builtins.toJSON {
+            "time_offset" = [3 30 0];
+            src_files = "/home/a/tst/blg/";
+            public = "/home/a/tst/out/";
+          };
+        };
+      };
       ".config/leafslug/tsk.json" = {
         source = pkgs.writeTextFile {
           name = "tsk.json";

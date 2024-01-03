@@ -24,6 +24,9 @@ with lib; {
         "prepare-commit-msg" = pkgs.writeShellScript "signOffCheck.sh" ''
           NAME=$(git config user.name)
           EMAIL=$(git config user.email)
+          COMMIT_MSG_FILE=$1
+          COMMIT_SOURCE=$2
+          SHA1=$3
 
           if [ -z "$NAME" ]; then
               echo "empty git config user.name"
@@ -35,9 +38,40 @@ with lib; {
               exit 1
           fi
 
+          # Check if it is a merge commit
+          if [ "$COMMIT_SOURCE" = "merge" ]; then
+              # Avoid adding template text to merge commits
+              TEMPLATE=""
+          else
+              # Prepare the reason template to append to the commit message
+              TEMPLATE="\n\n# Mention the reasons for this change in bullet points:
+          # Consider this prompt:
+          # This is to...
+          Reasons:
+          - .
+          "
+          fi
+
+          # Prepare signature with an empty line before it
+          SIGN_OFF="
+          Signed-off-by: $NAME <$EMAIL>"
+
+          # Append the change reason template if not a merge commit and the template is not already included
+          if ! grep -q "Reasons:" "$COMMIT_MSG_FILE" && [ -n "$TEMPLATE" ]; then
+              echo -e "$TEMPLATE" >> "$COMMIT_MSG_FILE"
+          fi
+
+          # Ensure the trailers are properly interpreted, just as before
           git interpret-trailers --if-exists doNothing --trailer \
-              "Signed-off-by: $NAME <$EMAIL>" \
-              --in-place "$1"
+              "\n\nSigned-off-by: $NAME <$EMAIL>" \
+              --in-place "$COMMIT_MSG_FILE"
+
+          exit 0
+
+          # git interpret-trailers --if-exists doNothing --trailer \
+          #     \
+          #     "Signed-off-by: $NAME <$EMAIL>" \
+          #     --in-place "$1"
         '';
         # "pre-commit" = pkgs.writeShellScript "pre-commit.sh" ''
         # exec ${pkgs.pre-commit}/bin/pre-commit run
