@@ -104,7 +104,6 @@ with lib; {
     };
 
     programs.fzf.enableZshIntegration = config.fzf.enable;
-    programs.nix-index.enableZshIntegration = true;
     programs.starship.enableZshIntegration = config.starship.enable;
     programs.zoxide.enableZshIntegration = config.filesearch.enable;
     services.gpg-agent.enableZshIntegration = config.gpg.enable;

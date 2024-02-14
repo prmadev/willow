@@ -14,6 +14,7 @@
     ./database
     ./gnome.nix
     ./gpg.nix
+    ./mullvad.nix
   ];
   config.database.enable = true;
 }

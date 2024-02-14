@@ -41,21 +41,5 @@ with lib; {
       XKB_DEFAULT_LAYOUT = "us,ir";
       XKB_DEFAULT_OPTIONS = "grp:alt_shift_toggle,caps:escape";
     };
-
-    systemd.user.services = {
-      # evdev = {
-      #   Unit = {
-      #     Description = "evremap remaps keys for a better experience";
-      #   };
-      #   Service = {
-      #     WorkingDirectory = "/";
-      #     ExecStart = "bash -c evremap remap /home/a/evre.toml";
-      #     Restart = "always";
-      #   };
-      #   Install = {
-      #     WantedBy = ["hyprland-session.target"];
-      #   };
-      # };
-    };
   };
 }

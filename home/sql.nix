@@ -9,7 +9,7 @@ with lib; {
 
   config = mkIf config.sql.enable {
     home.packages = with pkgs; [
-      sqlfluff
+      # sqlfluff
     ];
   };
 }

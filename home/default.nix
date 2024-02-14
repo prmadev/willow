@@ -5,6 +5,14 @@
   ...
 }: {
   imports = [
+    ./mcfly.nix
+    ./vieb.nix
+    ./dateutils.nix
+    ./gleam.nix
+    ./watchexec.nix
+    ./staticwebserver.nix
+    ./pass.nix
+    ./mullvad.nix
     ./lefthook.nix
     ./precommit.nix
     ./deno.nix
@@ -36,7 +44,7 @@
     ./git.nix
     ./neovim.nix
     ./helix
-    ./emacs.nix
+    # ./emacs.nix
     ./leafslug.nix
     ./pref.nix
     ./haskell.nix
@@ -139,8 +147,14 @@
     ./lazygit.nix
     ./cliphist.nix
   ];
+  dateutils.enable = true;
+  mcfly.enable = true;
+  staticwebserver.enable = true;
+  mullvad.enable = true;
+  pass.enable = true;
   precommit.enable = false;
   lefthook.enable = true;
+  watchexec.enable = true;
   just.enable = true;
   ollama.enable = false;
   email.enable = true;
@@ -161,7 +175,7 @@
   tiny.enable = false;
   telegram.enable = true;
   discord.enable = true;
-  exercism.enable = false;
+  exercism.enable = true;
   graphical.enable = true;
   task.enable = false;
 
@@ -174,7 +188,7 @@
   newsboat.enable = false; # candidate for cleaning
   syncthing.enable = false; # candidate for cleaning
   music.enable = true;
-  typst.enable = false; # candidate for cleaning
+  typst.enable = true; # candidate for cleaning
   irssi.enable = true;
   senpai.enable = false; # candidate for cleaning
   audio.enable = true;
@@ -239,7 +253,7 @@
   neovim.enable = true;
   helix.enable = true;
   vscode.enable = false;
-  emacs.enable = false;
+  # emacs.enable = false;
   rust-rover.enable = false;
   datagrip.enable = false;
 
@@ -251,7 +265,8 @@
   rust.enable = true;
   zig.enable = false;
   haskell.enable = false;
-  ocaml.enable = false;
+  gleam.enable = false;
+  ocaml.enable = true;
   sql.enable = true;
   tailwindcss.enable = true;
   hare.enable = false;
@@ -272,7 +287,8 @@
   jitsi.enable = false;
   hut.enable = true;
   keychain.enable = true;
-  deno.enable = true;
+  deno.enable = true; # need it for protobuf kit
+  vieb.enable = true;
 
   handlr.enable = true;
   shell.user = "${pkgs.fish}/bin/fish";
@@ -297,6 +313,6 @@
 
   nixpkgs.overlays = [
     inputs.neovim-nightly-overlay.overlay
-    (final: prev: {zigpkg = inputs.zig.packages.${prev.system}.master;})
+    # (final: prev: {zigpkg = inputs.zig.packages.${prev.system}.master;})
   ];
 }

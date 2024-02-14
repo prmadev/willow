@@ -15,7 +15,8 @@ with lib; {
       address = "me@prma.dev";
       userName = "me@prma.dev";
       realName = "Perma";
-      passwordCommand = "${pkgs.coreutils}/bin/cat ~/secrets/k"; # I know! it is embarresing
+      # passwordCommand = "${pkgs.coreutils}/bin/cat ~/secrets/k"; # I know! it is embarresing
+      passwordCommand = "${pkgs.gopass}/bin/gopass show -o email/me@prma.dev";
       maildir.path = "prma";
       # folder.inbox = "virtual.all";
       imap = {
@@ -32,8 +33,26 @@ with lib; {
         enable = true;
         settings = {
           envelope.list.backend = "imap";
-          backend = "maildir";
-          "maildir-root-dir" = "${config.home.homeDirectory}/mail/prma";
+          message.send.backend = "smtp";
+          backend = "imap";
+          imap = {
+            host = "imap.migadu.com";
+            port = 993;
+            auth = "passwd";
+            login = "me@prma.dev";
+            encryption = "tls";
+            passwd.cmd = "${pkgs.gopass}/bin/gopass show -o email/me@prma.dev";
+          };
+          smtp = {
+            host = "smtp.migadu.com";
+            port = 465;
+            login = "me@prma.dev";
+            encryption = "tls";
+            auth = "passwd";
+            passwd.cmd = "${pkgs.gopass}/bin/gopass show -o email/me@prma.dev";
+          };
+
+          # "maildir-root-dir" = "${config.home.homeDirectory}/mail/prma";
         };
       };
       thunderbird = {
@@ -53,7 +72,8 @@ with lib; {
 
       neomutt = {
         enable = true;
-        sendMailCommand = "${pkgs.go-graft}/bin/gg ${pkgs.msmtp}/bin/msmtpq --read-envelope-from --read-recipients";
+        # sendMailCommand = "${pkgs.go-graft}/bin/gg ${pkgs.msmtp}/bin/msmtpq --read-envelope-from --read-recipients";
+        sendMailCommand = "${pkgs.msmtp}/bin/msmtpq --read-envelope-from --read-recipients";
       };
     };
     programs.thunderbird = {
@@ -64,17 +84,15 @@ with lib; {
     };
     programs.himalaya = {
       enable = true;
-      # package = inputs.himalaya.packages.x86_64-linux.musl;
-      settings = {
-        Personal = {
-          "maildir-root-dir" = "${config.home.homeDirectory}/mail";
-        };
-      };
+      # package = inputs.himalaya.packages.x86_64-linux.linux;
     };
 
     programs.fish.interactiveShellInit = ''
-      ${inputs.himalaya.packages.x86_64-linux.musl}/bin/himalaya completions fish | ${pkgs.sd}/bin/sd "Shell script successfully generated for shell fish!" "" | source;
+      ${pkgs.himalaya}/bin/himalaya completion fish | sd "Shell script successfully generated for shell fish!" "" | source;
     '';
+    # programs.fish.interactiveShellInit = ''
+    # ${pkgs.himalaya}/bin/himalaya completion fish | source;
+    # '';
     programs.neomutt = {
       enable = true;
       vimKeys = true;

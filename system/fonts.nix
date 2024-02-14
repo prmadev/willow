@@ -12,6 +12,7 @@
     maple-mono-otf
     cascadia-code
 
+    redhat-official-fonts
     martian-mono
     (nerdfonts.override {fonts = ["JetBrainsMono" "CascadiaCode" "DaddyTimeMono"];})
   ];

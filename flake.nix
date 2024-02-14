@@ -7,30 +7,31 @@
     #   url = "github:nix-community/neovim-nightly-overlay";
     #   inputs.nixpkgs.url = "github:nixos/nixpkgs?rev=fad51abd42ca17a60fc1d4cb9382e2d79ae31836";
     # };
-    # nix-std.url = "github:chessai/nix-std";
+    nix-std.url = "github:chessai/nix-std";
 
+    nix-index-database.url = "github:Mic92/nix-index-database";
+    nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
     # nix-alien.url = "github:thiagokokada/nix-alien";
     # nix-ld.url = "github:Mic92/nix-ld/main";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
+    # garden = {
+    #   url = "github:davvid/garden";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
     nixvim = {
       url = "github:nix-community/nixvim";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    aspen = {
-      url = "github:prmadev/aspen";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
     nur = {
       url = "github:nix-community/NUR";
-      # inputs.nixpkgs.follows = "nixpkgs";
     };
     himalaya = {
       url = "github:soywod/himalaya";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     # ragenix = {
@@ -38,27 +39,18 @@
     #   inputs.nixpkgs.follows = "nixpkgs";
     # };
 
-    # hyprland = {
-    # url = "github:hyprwm/hyprland";
-    # inputs.nixpkgs.follows = "nixpkgs";
-    # };
-
-    zig.url = "github:mitchellh/zig-overlay";
-    zls.url = "github:zigtools/zls";
+    # zig.url = "github:mitchellh/zig-overlay";
+    # zls.url = "github:zigtools/zls";
     leafslug.url = "git+https://git.sr.ht/~prma/leafslug";
 
     # nix-doom-emacs.url = "github:nix-community/nix-doom-emacs";
     # nixneovim.url = "github:nixneovim/nixneovim";
-    emacs-overlay.url = "github:nix-community/emacs-overlay";
+    # emacs-overlay.url = "github:nix-community/emacs-overlay";
 
     # nix-doom-emacs.url = "github:prmadev/nix-doom-emacs";
     # ghS = {
     #   url = "github:gennaro-tedesco/gh-s";
     #   flake = false;
-    # };
-    # hyprland-contrib = {
-    #   url = "github:hyprwm/contrib";
-    #   inputs.nixpkgs.follows = "nixpkgs";
     # };
 
     # zellij = {
@@ -171,8 +163,8 @@
             nixpkgs.overlays = [
               # inputs.nixneovim.overlays.default
               inputs.nur.overlay
-              (final: prev: {zigpkg = inputs.zig.packages.${prev.system}.master;})
-              inputs.emacs-overlay.overlays.default
+              # (final: prev: {zigpkg = inputs.zig.packages.${prev.system}.master;})
+              # inputs.emacs-overlay.overlays.default
               # inputs.neovim-nightly-overlay.overlay
               (final: prev: {external.snippets-ls = snippets-ls.packages.${prev.system}.snippets-ls;})
             ];
@@ -195,9 +187,6 @@
           # importing nixvim modules
           # inputs.nixvim.nixosModules.nixvim
 
-          # importing hyprland module
-          # inputs.hyprland.nixosModules.default
-
           #importing home-manager module
           home-manager.nixosModules.home-manager
           {
@@ -211,10 +200,12 @@
               home.stateVersion = "22.11";
               imports = [
                 ./home
-
                 nixvim.homeManagerModules.nixvim
+
+                nix-index-database.hmModules.nix-index
+
+                {programs.nix-index-database.comma.enable = true;}
                 # inputs.nixvim.nixosModules.default
-                # inputs.hyprland.homeManagerModules.default
               ];
             };
           }

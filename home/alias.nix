@@ -33,6 +33,7 @@ with lib; {
       ga = "git add --patch";
       gd = "git diff";
       gsi = "git si";
+      note = "hx $NOTES/$(date +\"%Y/%m\")";
 
       #tmux
       # t = "${pkgs.tmux}/bin/tmux new -A -s $(${pkgs.gum}/bin/gum input --placeholder=name)";

@@ -2,7 +2,6 @@
   pkgs,
   lib,
   config,
-  inputs,
   ...
 }:
 with lib; {
@@ -25,13 +24,11 @@ with lib; {
       nix-top
       nix-tree
       nix-diff
-      comma
+      # comma
       nixpkgs-lint
       # inputs.nix-alien.packages.${system}.nix-alien
       # nix-index-update
-      inputs.aspen.packages.${system}.aspen
+      # inputs.aspen.packages.${system}.aspen
     ];
-
-    programs.nix-index.enable = true;
   };
 }

@@ -177,7 +177,8 @@ with lib; {
           modifier = "Mod4";
         in
           lib.mkOptionDefault {
-            "${modifier}+Return" = "exec ${pkgs.wezterm}/bin/wezterm";
+            "${modifier}+Return" = "exec ${pkgs.foot}/bin/foot";
+            "${modifier}+Shift+Return" = "exec ${pkgs.wezterm}/bin/wezterm";
             # "${modifier}+D" = "exec ${pkgs.fuzzel}/bin/fuzzel";
 
             "${modifier}+q" = "kill";

@@ -378,10 +378,9 @@ with lib; {
               gofmt.enable = true;
               jq.enable = true;
               markdownlint.enable = true;
-              prettier_d_slim.enable = true;
               protolint.enable = true;
               rustfmt.enable = true;
-              sqlfluff.enable = true;
+              sqlfluff.enable = false;
               shfmt.enable = true;
               stylua.enable = true;
               taplo.enable = true;

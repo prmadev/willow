@@ -31,6 +31,7 @@ with lib; {
       ];
 
       languages = {
+
         language-server = {
           gopls = {
             command = "gopls";
@@ -103,9 +104,14 @@ with lib; {
           };
           rustanalyzer = {
             command = "rust-analyzer";
+            args = [];
             config = {
-              cargo.extraEnv = {CARGO_TARGET_DIR = "./target/rust_analyzer";};
+              hover.actions.references.enable = true;
+              completion.fullFunctionSignatures.enable = true;
+
+              # cargo.extraEnv = {CARGO_TARGET_DIR = "./target/rust_analyzer";};
               check.command = "clippy";
+              cargo.features = "all";
               rustc.source = "discover";
               inlayHints.bindingModeHints.enable = true;
               inlayHints.closingBraceHints.minLines = 10;
@@ -115,6 +121,16 @@ with lib; {
               inlayHints.typeHints.hideClosureInitialization = false;
             };
           };
+          tailwindls = {
+            command = "tailwindcss-language-server";
+            args = ["--stdio"];
+            config = {
+              userLanguages = {
+                rust = "html";
+                "*.rs" = "html";
+              };
+            };
+          };
         };
         language = [
           {
@@ -122,6 +138,15 @@ with lib; {
             roots = ["Setup.hs" "stack.yaml" "cabal.project" "*.cabal" "hie.yaml"];
             auto-format = true;
             language-servers = ["hls"];
+          }
+          {
+            name = "typst";
+            auto-format = true;
+            formatter = {
+              command = "typstfmt";
+              # args = ["--impl" "-"];
+              formatStdin = true;
+            };
           }
           {
             name = "ocaml";
@@ -160,17 +185,25 @@ with lib; {
             soft-wrap = {
               enable = true;
             };
+            rulers = [50 72 80];
           }
+          # {
+          #   name = "email";
+          #   rulers = [50 72 80];
+          #   file-types = ["eml"];
+          # }
 
           {
             name = "go";
             auto-format = true;
             formatter.command = "gofumpt";
             language-servers = ["gopls" "golangci-lint-lsp" "snippets-go"];
+            rulers = [50 72 80];
           }
           {
             name = "rust";
-            language-servers = ["rustanalyzer" "tailwindcss-ls" "snippets-rust"];
+            language-servers = ["rustanalyzer" "tailwindls" "snippets-rust"];
+            rulers = [50 72 80];
           }
         ];
       };

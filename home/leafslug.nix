@@ -26,8 +26,8 @@ with lib; {
           name = "blg.json";
           text = builtins.toJSON {
             "time_offset" = [3 30 0];
-            src_files = "/home/a/tst/blg/";
-            public = "/home/a/tst/out/";
+            src_files = "/home/a/repos/leafslug/blg/content/";
+            public = "/home/a/repos/leafslug/blg/public/";
           };
         };
       };

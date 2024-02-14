@@ -71,7 +71,6 @@ with lib; {
     };
 
     # programs.fzf.enableFishIntegration = config.fzf.enable;
-    programs.nix-index.enableFishIntegration = true;
     programs.starship.enableFishIntegration = config.starship.enable;
     # programs.zoxide.enableFishIntegration = config.zoxide.enable;
     services.gpg-agent.enableFishIntegration = config.gpg.enable;

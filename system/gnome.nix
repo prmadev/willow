@@ -12,14 +12,6 @@
               waitPID=$!
             '';
           }
-          {
-            manage = "desktop";
-            name = "Hyperland";
-            start = ''
-              Hyperland &
-              waitPID=$!
-            '';
-          }
         ];
       };
       desktopManager = {

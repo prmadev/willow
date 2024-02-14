@@ -15,12 +15,6 @@ with lib; {
       enableNushellIntegration = true;
       enableZshIntegration = true;
       keymap = {
-        manager.keymap = [
-          {
-            exec = "shell \"$SHELL\" --block --confirm";
-            on = ["<C-c>"];
-          }
-        ];
       };
       settings = {};
     };

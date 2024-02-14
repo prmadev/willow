@@ -9,10 +9,18 @@ with lib; {
 
   config = mkIf config.git.enable {
     home.packages = with pkgs; [
-      git-gone # trim stale branches
-      git-bug # bug reporting right inside the repo
+      git-gone # trim stale branches :: Cleanup stale Git branches of pull requests
+      git-open # :: Type `git open` to open the GitHub page or website for a repository in your browser.
+      git-bug # bug reporting right inside the repo :: Distributed, offline-first bug tracker embedded in git, with bridges
       git-workspace # workspace management
       codeberg-cli
+      git-get # :: A better way to clone, organize and manage multiple git repositories
+      gitleaks # :: Protect and discover secrets using Gitleaks
+      git-graph # :: Command line tool to show clear git graphs arranged for your branching model
+      git-ps-rs # :: Git Patch Stack command line interface, gps
+      git-trim # :: Automatically trims your branches whose tracking remote refs are merged or stray
+      # gitrs # :: A simple, opinionated, tool, written in Rust, for declaratively managing Git repos on your machine
+      mani # :: CLI tool to help you manage multiple repositories
     ];
 
     programs.git = {
@@ -38,32 +46,11 @@ with lib; {
               exit 1
           fi
 
-          # Check if it is a merge commit
-          if [ "$COMMIT_SOURCE" = "merge" ]; then
-              # Avoid adding template text to merge commits
-              TEMPLATE=""
-          else
-              # Prepare the reason template to append to the commit message
-              TEMPLATE="\n\n# Mention the reasons for this change in bullet points:
-          # Consider this prompt:
-          # This is to...
-          Reasons:
-          - .
-          "
-          fi
 
-          # Prepare signature with an empty line before it
-          SIGN_OFF="
-          Signed-off-by: $NAME <$EMAIL>"
-
-          # Append the change reason template if not a merge commit and the template is not already included
-          if ! grep -q "Reasons:" "$COMMIT_MSG_FILE" && [ -n "$TEMPLATE" ]; then
-              echo -e "$TEMPLATE" >> "$COMMIT_MSG_FILE"
-          fi
 
           # Ensure the trailers are properly interpreted, just as before
           git interpret-trailers --if-exists doNothing --trailer \
-              "\n\nSigned-off-by: $NAME <$EMAIL>" \
+              Signed-off-by:" $NAME <$EMAIL>" \
               --in-place "$COMMIT_MSG_FILE"
 
           exit 0
@@ -92,15 +79,36 @@ with lib; {
       extraConfig = {
         format.signOff = true;
 
+        # commit.template = "${config.home.homeDirectory}/.config/git/gitmessage";
+        commit.template = "${pkgs.writeTextFile
+          {
+            name = "git";
+            text = ''
+
+              # When applied, this commit will… ━━━━━━━━━━━━━━━┙
+
+              Reasons:
+              - .
+              # I made this change to…━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┙
+              #
+              # More on good Git messages:
+              # How to Write a Git Commit Message: https://chris.beams.io/posts/git-commit/
+              # Tips for a disciplined git workflow: https://drewdevault.com/2019/02/25/Using-git-with-discipline.html
+            '';
+            destination = "";
+          }}";
         sendemail.annotate = true;
         pull.rebase = true;
         init = {
           defaultBranch = "main";
         };
+        merge.conflictStyle = "zdiff3";
         rebase.autosquash = true;
+        rebase.autoSquash = true;
         rebase.autoStash = true;
         url = {
           "ssh://git@codeberg.org".insteadOf = "https://codeberg.org";
+          "ssh://git@gitlab.iranairs.com".insteadOf = "https://gitlab.iranairs.com";
           "ssh://git@gitlab.com".insteadOf = "https://gitlab.com";
           "ssh://git@github.com".insteadOf = "https://github.com";
           "https://github.com/" = {

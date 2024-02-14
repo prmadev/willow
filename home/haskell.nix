@@ -25,8 +25,8 @@ with lib; {
 
           fast-tags
           hasktags
-          haskell-language-server
         ]))
+      haskell-language-server
     ];
   };
 }

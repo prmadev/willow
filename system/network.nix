@@ -45,7 +45,9 @@ _: {
   services.openssh.enable = false;
 
   networking.wireguard = {
-    # enable = true;
+    enable = true;
   };
-  networking.firewall.checkReversePath = false;
+
+  networking.firewall.checkReversePath = "loose";
+  # networking.firewall.checkReversePath = false;
 }
