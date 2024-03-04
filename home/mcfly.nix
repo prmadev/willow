@@ -9,7 +9,7 @@ with lib; {
   config = mkIf config.mcfly.enable {
     programs.mcfly = {
       enable = true;
-      fzf.enable = true;
+      # fzf.enable = true; // TODO: enable after update
     };
   };
 }

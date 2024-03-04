@@ -28,17 +28,17 @@ with lib; {
         '';
         inputStyle = ''
           window {
-            background-color: ${config.colors.macchiato.base.hex};
+            background-color: ${config.colors.moon.base.hex};
            }
 
           #text {
-            color:${config.colors.macchiato.text.hex};
+            color:${config.colors.moon.text.hex};
             font-size: 20px;
           }
 
           #input{
-            background-color: ${config.colors.macchiato.base.hex};
-            color:${config.colors.macchiato.text.hex};
+            background-color: ${config.colors.moon.base.hex};
+            color:${config.colors.moon.text.hex};
             font-size: 25px;
             border: 0px none;
           }
@@ -66,19 +66,19 @@ with lib; {
           }
 
           #selected{
-            background-color : ${config.colors.macchiato.red.hex};
-            color:${config.colors.macchiato.base.hex};
+            background-color : ${config.colors.moon.love.hex};
+            color:${config.colors.moon.base.hex};
 
           }
 
           #entry:selected{
-            color:${config.colors.macchiato.base.hex};
-            background-color : ${config.colors.macchiato.red.hex};
+            color:${config.colors.moon.base.hex};
+            background-color : ${config.colors.moon.love.hex};
           }
 
           #text:selected{
-            color:${config.colors.macchiato.base.hex};
-            background-color : ${config.colors.macchiato.red.hex};
+            color:${config.colors.moon.base.hex};
+            background-color : ${config.colors.moon.love.hex};
             font-family: ${config.global-fonts.main-black};
           }
 

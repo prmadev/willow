@@ -27,6 +27,39 @@ with lib; {
     };
   in {
     colors = {
+      moon = {
+        # for most backgrounds
+        base = mkColor "232136" {l = [35 33 54];};
+        # for a surface thing
+        surface = mkColor "2a273f" {l = [42 39 63];};
+        # for overlay of an object
+        overlay = mkColor "393552" {l = [57 53 82];};
+        # for a muted text
+        muted = mkColor "6e6a86" {l = [110 106 134];};
+        # for a subtle text
+        subtle = mkColor "908caa" {l = [144 140 170];};
+        # for main text
+        text = mkColor "e0def4" {l = [224 222 244];};
+        # red-ish
+        love = mkColor "eb6f92" {l = [235 111 146];};
+        # gold color
+        gold = mkColor "f6c177" {l = [246 193 119];};
+        # golbehi
+        rose = mkColor "ea9a97" {l = [206 202 205];};
+        # blue-green-ish
+        pine = mkColor "3e8fb0" {l = [62 143 176];};
+        # blueish
+        foam = mkColor "9ccfd8" {l = [156 207 216];};
+        # purple-ish
+        iris = mkColor "c4a7e7" {l = [196 167 231];};
+        # moderate background highlight
+        hllow = mkColor "2a283e" {l = [42 40 62];};
+        # background highlight
+        hlmed = mkColor "44415a" {l = [68 65 90];};
+        # high contrast highlight
+        hlhigh = mkColor "56526e" {l = [86 82 110];};
+      };
+
       macchiato = {
         rosewater = mkColor "f4dbd6" {l = [244 219 214];};
         flamingo = mkColor "f0c6c6" {l = [240 198 198];};

@@ -85,10 +85,9 @@ with lib; {
             name = "git";
             text = ''
 
-              # When applied, this commit will… ━━━━━━━━━━━━━━━┙
 
-              Reasons:
-              - .
+
+              # When applied, this commit will… ━━━━━━━━━━━━━━━┙
               # I made this change to…━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┙
               #
               # More on good Git messages:

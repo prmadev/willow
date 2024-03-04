@@ -35,7 +35,7 @@ with lib; {
 
     wayland.enable = true;
     wayland.windowManager.sway = let
-      c = config.colors.macchiato;
+      c = config.colors.moon;
     in {
       enable = true;
       systemd.enable = true;
@@ -65,7 +65,7 @@ with lib; {
               focusedSeparator = c.text.hex;
               urgentWorkspace = {
                 background = c.base.hex;
-                border = c.maroon.hex;
+                border = c.love.hex;
                 text = c.text.hex;
               };
               focusedWorkspace = {
@@ -113,7 +113,7 @@ with lib; {
             background = c.text.hex;
             border = c.text.hex;
             childBorder = c.text.hex;
-            indicator = c.overlay0.hex;
+            indicator = c.overlay.hex;
             text = c.base.hex;
           };
           focusedInactive = {
@@ -125,10 +125,10 @@ with lib; {
           };
 
           placeholder = {
-            background = c.surface0.hex;
-            border = c.surface0.hex;
-            childBorder = c.overlay0.hex;
-            indicator = c.overlay0.hex;
+            background = c.surface.hex;
+            border = c.surface.hex;
+            childBorder = c.overlay.hex;
+            indicator = c.overlay.hex;
             text = c.text.hex;
           };
 
@@ -140,10 +140,10 @@ with lib; {
             text = c.text.hex;
           };
           urgent = {
-            background = c.red.hex;
-            border = c.red.hex;
-            childBorder = c.red.hex;
-            indicator = c.red.hex;
+            background = c.love.hex;
+            border = c.love.hex;
+            childBorder = c.love.hex;
+            indicator = c.love.hex;
             text = c.base.hex;
           };
         };
@@ -180,16 +180,22 @@ with lib; {
             "${modifier}+Return" = "exec ${pkgs.foot}/bin/foot";
             "${modifier}+Shift+Return" = "exec ${pkgs.wezterm}/bin/wezterm";
             # "${modifier}+D" = "exec ${pkgs.fuzzel}/bin/fuzzel";
+            "${modifier}+F1" = "exec ${pkgs.qutebrowser}/bin/qutebrowser";
+            "${modifier}+F2" = "exec ${pkgs.qutebrowser}/bin/qutebrowser fosstodon.org";
+            "${modifier}+F3" = "exec ${pkgs.qutebrowser}/bin/qutebrowser feedbin.com";
+            "${modifier}+F9" = "exec ${pkgs.qutebrowser}/bin/qutebrowser kagi.com";
 
             "${modifier}+q" = "kill";
             "${modifier}+tab" = "layout toggle default tabbed splitv splith";
             "${modifier}+asciitilde" = "move window scratchpad";
+            "${modifier}+bar" = "move window scratchpad";
             "${modifier}+backslash" = "scratchpad show";
             "${modifier}+Shift+R" = "reload";
             "${modifier}+Mod1+h" = "resize grow width +10";
             "${modifier}+Mod1+l" = "resize grow width -10";
             "${modifier}+Mod2+j" = "resize grow heigth +10";
             "${modifier}+Mod2+k" = "resize grow heigth -10";
+            "${modifier}+Shift+F" = "floating toggle";
             "${modifier}+period" = "focus output right";
             "${modifier}+comma" = "focus output left";
             "${modifier}+greater" = "move window to output left";
@@ -230,6 +236,12 @@ with lib; {
           {
             #1086
             command = "xray run -c ~/vmess-wb-daily.json";
+          }
+          {
+            command = "telegram-desktop";
+          }
+          {
+            command = "foot --server";
           }
           # {
           # command = "systemctl --user restart waybar";
@@ -302,7 +314,7 @@ with lib; {
       extraConfigEarly = ''
         bindgesture swipe:right workspace prev
         bindgesture swipe:left workspace next
-        client.focused_tab_title ${c.text.hex} ${c.text.hex} ${c.base.hex} ${c.text.hex} ${c.overlay0.hex}
+        client.focused_tab_title ${c.text.hex} ${c.text.hex} ${c.base.hex} ${c.text.hex} ${c.overlay.hex}
         titlebar_border_thickness 4
         titlebar_padding ${toString config.sway.borderAndGap}
         bindswitch lid:on  output eDP-1 disable

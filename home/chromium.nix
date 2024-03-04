@@ -18,7 +18,8 @@ with lib; {
         "nngceckbapebfimnlniiiahkandclblb" # bitwarden
         "padekgcemlokbadohgkifijomclgjgif" # SwitchyOmega
         # "ennpfpdlaclocpomkiablnmbppdnlhoh" # rust search engine
-        "cmpdlhmnmjhihmcfnigoememnffkimlk" # catppuccin-macchiato
+        # "cmpdlhmnmjhihmcfnigoememnffkimlk" # catppuccin-macchiato
+        "ohjebgkppidheiajbgnnmmieaapjppje" # rosepine moon
         "gnnhhfiajnkfjfnnojggfdlpjifhlmom" # word tune
         "cdglnehniifkbagbbombnjghhcihifij" # kagi extension
 

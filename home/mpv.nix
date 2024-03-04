@@ -13,11 +13,11 @@ with lib; {
       package = pkgs.wrapMpv (pkgs.mpv-unwrapped.override {vapoursynthSupport = true;}) {youtubeSupport = true;};
       config = {
         ytdl-format = "bestvideo+bestaudio";
-        background = config.colors.macchiato.base.hex;
-        osd-color = config.colors.macchiato.base.hex;
-        sub-color = config.colors.macchiato.base.hex;
-        osd-border-color = config.colors.macchiato.text.hex;
-        sub-border-color = config.colors.macchiato.text.hex;
+        background = config.colors.moon.base.hex;
+        osd-color = config.colors.moon.base.hex;
+        sub-color = config.colors.moon.base.hex;
+        osd-border-color = config.colors.moon.text.hex;
+        sub-border-color = config.colors.moon.text.hex;
         sub-font = "monospace";
         sub-scale = "0.5";
       };

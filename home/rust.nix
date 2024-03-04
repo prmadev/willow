@@ -21,7 +21,7 @@ with lib; {
         cargo-shuttle
         cargo-sort
         cargo-sweep
-        cargo-audit
+        cargo-audit # libgit2
         cargo-auditable
         cargo-tarpaulin
         cargo-semver-checks
@@ -43,7 +43,7 @@ with lib; {
         cargo-workspaces
         cargo-public-api
         cargo-supply-chain
-        cargo-unused-features
+        cargo-unused-features #libgit2
         cargo-nextest
         cargo-leptos
       ];

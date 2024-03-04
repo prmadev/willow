@@ -44,18 +44,25 @@ with lib; {
           name = "fish-colored-man-pages";
           src = pkgs.fishPlugins.colored-man-pages;
         }
+        # {
+        #   name = "fish-catppuccin";
+        #   src = inputs.catppuccin-fish;
+        # }
         {
-          name = "fish-catppuccin";
-          src = inputs.catppuccin-fish;
+          name = "fish-rosepine";
+          src = inputs.rosepine-fish;
         }
       ];
-      interactiveShellInit = ''
 
-        fish_config theme choose "Base16 Default Dark"
+      interactiveShellInit = let
+        c = config.colors.moon;
+      in ''
+
+        fish_config theme choose "Rosé Pine Moon"
 
          set -Ux FZF_DEFAULT_OPTS "\
-         --color=bg+:#313244,bg:${config.colors.macchiato.base.hex},spinner:#f5e0dc,hl:#f38ba8 \
-         --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
+         --color=bg+:${c.surface.hex},bg:${c.base.hex},spinner:${c.love.hex},hl:${c.hlmed.hex} \
+         --color=fg:${c.text.hex},header:${c.love.hex},info:${c.iris.hex},pointer:${c.love.hex} \
          --color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
 
          # eval (zellij setup --generate-completion fish | string collect)
@@ -79,5 +86,7 @@ with lib; {
       fish_tmux_config = "$HOME/.config/tmux/tmux.conf";
       fish_tmux_autoconnect = "false";
     };
+
+    xdg.configFile."fish/themes/Rosé Pine Moon.theme".source = "${inputs.rosepine-fish}/themes/Rosé Pine Moon.theme";
   };
 }

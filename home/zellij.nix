@@ -1,5 +1,4 @@
 {
-  pkgs,
   config,
   lib,
   ...
@@ -29,7 +28,7 @@ with lib; {
         scrollback_editor = config.editor.terminal;
         ui.pane_frames.rounded_corners = true;
         copy_command = "wl-copy";
-        theme = "catppuccin-macchiato";
+        theme = "moon";
         themes = {
           catppuccin-macchiato = {
             fg = config.colors.macchiato.subtext0.hex;
@@ -43,6 +42,19 @@ with lib; {
             cyan = config.colors.macchiato.teal.hex;
             white = config.colors.macchiato.text.hex;
             orange = config.colors.macchiato.peach.hex;
+          };
+          moon = {
+            fg = config.colors.moon.subtle.hex;
+            bg = config.colors.moon.base.hex;
+            black = config.colors.moon.base.hex;
+            red = config.colors.moon.love.hex;
+            green = config.colors.moon.foam.hex;
+            yellow = config.colors.moon.gold.hex;
+            blue = config.colors.moon.pine.hex;
+            magenta = config.colors.moon.iris.hex;
+            cyan = config.colors.moon.foam.hex;
+            white = config.colors.moon.text.hex;
+            orange = config.colors.moon.love.hex;
           };
         };
         keybinds = {

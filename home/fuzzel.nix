@@ -20,13 +20,13 @@ with lib; {
           inner-pad = 30;
         };
         colors = {
-          background = config.colors.macchiato.base.rawHexWithLastFF;
-          text = config.colors.macchiato.text.rawHexWithLastFF;
-          match = config.colors.macchiato.red.rawHexWithLastFF;
-          selection = config.colors.macchiato.text.rawHexWithLastFF;
-          selection-text = config.colors.macchiato.base.rawHexWithLastFF;
-          selection-match = config.colors.macchiato.red.rawHexWithLastFF;
-          border = config.colors.macchiato.base.rawHexWithLastFF;
+          background = config.colors.moon.base.rawHexWithLastFF;
+          text = config.colors.moon.text.rawHexWithLastFF;
+          match = config.colors.moon.love.rawHexWithLastFF;
+          selection = config.colors.moon.text.rawHexWithLastFF;
+          selection-text = config.colors.moon.base.rawHexWithLastFF;
+          selection-match = config.colors.moon.love.rawHexWithLastFF;
+          border = config.colors.moon.base.rawHexWithLastFF;
         };
         border = {
           width = 0;

@@ -31,7 +31,6 @@ with lib; {
       ];
 
       languages = {
-
         language-server = {
           gopls = {
             command = "gopls";
@@ -209,7 +208,7 @@ with lib; {
       };
 
       settings = {
-        theme = "veganMacchiato";
+        theme = "rose_pine_moon";
         editor = {
           shell = ["zsh" "-c"];
           # auto-format = true; # default is true
@@ -256,14 +255,23 @@ with lib; {
           normal = {
             "S-right" = ":buffer-next";
             "S-left" = ":buffer-previous";
+
             "S-L" = ":buffer-next";
             "S-H" = ":buffer-previous";
             # ret = ["open_below" "normal_mode"];
-            "C-f" = [":new" ":insert-output lf-pick" ":theme default" "select_all" "split_selection_on_newline" "goto_file" "goto_last_modified_file" ":buffer-close!" ":theme veganMacchiato"];
+            # "C-f" = [":new" ":insert-output lf-pick" ":theme default" "select_all" "split_selection_on_newline" "goto_file" "goto_last_modified_file" ":buffer-close!" ":theme veganMacchiato"];
             X = ["extend_line_above"];
             space = {
               c = ":bc";
+              i = {
+                "d" = ":insert-output date +%Y-%m-%d\\ %H:%M:%S";
+                "n" = '':insert-output printf "-\t%s\t" $(date +"%Y-%m-%d_%H-%M-%S")'';
+              };
               R = [":primary-clipboard-paste-replace"];
+              o = {
+                "n" = '':o '' + config.repos.notes.path + ''/2024/02'';
+                "b" = '':o '' + config.repos.notes.path + ''/2024/backlog'';
+              };
             };
             # y = [":clipboard-yank-join"];
             # p = [":clipboard-paste-after"];

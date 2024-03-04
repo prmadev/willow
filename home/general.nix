@@ -17,7 +17,7 @@ with lib; {
       gum
       # calibre
       mprocs # not a monitoring tool
-      d2
+      # d2
       zk
       trashy
       dig.dnsutils

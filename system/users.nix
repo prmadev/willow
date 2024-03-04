@@ -15,7 +15,7 @@ _: {
       ];
     };
     home = "/home/a";
-    hashedPassword = "$y$j9T$DObab.uS2RGdfjd6F9ZXu/$iA0K./y1rkZdPuUvN6sSfCmbUuedEn5QK8UV6.9jMC.";
+    # hashedPassword = "$y$j9T$DObab.uS2RGdfjd6F9ZXu/$iA0K./y1rkZdPuUvN6sSfCmbUuedEn5QK8UV6.9jMC.";
 
     extraGroups = [
       "wheel"

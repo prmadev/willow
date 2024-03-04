@@ -28,7 +28,7 @@ with lib; {
             bitwarden
             clearurls
             enhanced-github
-            
+
             switchyomega
             i-dont-care-about-cookies
             # snowflake
@@ -115,12 +115,12 @@ with lib; {
              #fullscr-toggler { background-color: rgba(0, 0, 0, 0) !important; }
              :root {
                --toolbarbutton-border-radius: 0px;
-               --uc-bg-color: ${config.colors.macchiato.base.hex};
+               --uc-bg-color: ${config.colors.moon.base.hex};
                --uc-show-new-tab-button: none;
                --uc-show-tab-separators: none;
                --uc-tab-separators-color: none;
                --uc-tab-separators-width: none;
-               --uc-tab-fg-color: ${config.colors.macchiato.base.hex};
+               --uc-tab-fg-color: ${config.colors.moon.base.hex};
                --autocomplete-popup-background: var(--mff-bg) !important;
                --default-arrowpanel-background: var(--mff-bg) !important;
                --default-arrowpanel-color: #fefefa !important;
@@ -140,18 +140,18 @@ with lib; {
                --mff-tab-font-weight: 325;
                --mff-tab-height: 32px;
                --mff-tab-pinned-bg: #9BCED7;
-               --mff-tab-selected-bg: ${config.colors.macchiato.teal.hex};
+               --mff-tab-selected-bg: ${config.colors.moon.foam.hex};
                --mff-tab-soundplaying-bg: #9c89b8;
-               --mff-urlbar-color: ${config.colors.macchiato.base.hex}!important;
+               --mff-urlbar-color: ${config.colors.moon.base.hex}!important;
                --mff-urlbar-focused-color: #403C58;
                --mff-urlbar-font-family: "${config.global-fonts.main-regular}";
                --mff-urlbar-font-size: 11pt;
                --mff-urlbar-font-weight: 700;
-               --mff-urlbar-results-color: ${config.colors.macchiato.text.hex};
+               --mff-urlbar-results-color: ${config.colors.moon.text.hex};
                --mff-urlbar-results-font-family: "${config.global-fonts.main-black}";
                --mff-urlbar-results-font-size: 11pt;
                --mff-urlbar-results-font-weight: 700;
-               --mff-urlbar-results-url-color: ${config.colors.macchiato.text.hex};
+               --mff-urlbar-results-url-color: ${config.colors.moon.text.hex};
                --tab-border-radius: 0px;
              }
             * {
@@ -165,24 +165,24 @@ with lib; {
             menupopup menuitem,
             menupopup menu,
             menupopup menuseparator {
-              background-color: ${config.colors.macchiato.surface1.hex}!important;
+              background-color: ${config.colors.moon.surface.hex}!important;
             }
 
             .tab-text.tab-label {
-              color: ${config.colors.macchiato.subtext0.hex}!important;
+              color: ${config.colors.moon.muted.hex}!important;
             }
 
             #tabbrowser-tabs:not([secondarytext-unsupported]) .tab-label-container{
               height: 1.5em;
             }
             #urlbar-input, #urlbar-scheme, .searchbar-textbox{
-              color: ${config.colors.macchiato.text.hex}!important;
+              color: ${config.colors.moon.text.hex}!important;
             }
             #TabsToolbar #firefox-view-button[open] > .toolbarbutton-icon, .tab-background:is([selected], [multiselected]) {
-              border: 2px solid  ${config.colors.macchiato.teal.hex}!important;
-              background-color:  ${config.colors.macchiato.base.hex}!important;
+              border: 2px solid  ${config.colors.moon.foam.hex}!important;
+              background-color:  ${config.colors.moon.base.hex}!important;
               background-image: none!important;
-              filter: drop-shadow(-5px -5px 0px ${config.colors.macchiato.teal.hex});
+              filter: drop-shadow(-5px -5px 0px ${config.colors.moon.foam.hex});
             }
 
             .tab-background {

@@ -5,6 +5,7 @@
   ...
 }: {
   imports = [
+    ./xmpp.nix
     ./mcfly.nix
     ./vieb.nix
     ./dateutils.nix
@@ -171,7 +172,7 @@
   jq.enable = true;
   monolith.enable = true;
   firefox.enable = true;
-  qutebrowser.enable = false;
+  qutebrowser.enable = true;
   tiny.enable = false;
   telegram.enable = true;
   discord.enable = true;
@@ -276,6 +277,7 @@
   pls.enable = true;
   soup.enable = false;
   hugo.enable = true;
+  xmpp.enable = true;
 
   brootFile.enable = false;
   nnn.enable = true;
@@ -288,7 +290,7 @@
   hut.enable = true;
   keychain.enable = true;
   deno.enable = true; # need it for protobuf kit
-  vieb.enable = true;
+  vieb.enable = false; # does not run in the wayland-mode by default
 
   handlr.enable = true;
   shell.user = "${pkgs.fish}/bin/fish";

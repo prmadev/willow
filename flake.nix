@@ -135,9 +135,12 @@
       url = "github:catppuccin/fish";
       flake = false;
     };
+    rosepine-fish = {
+      url = "github:rose-pine/fish";
+      flake = false;
+    };
     bat-catppuccin = {
       url = "github:catppuccin/bat";
-
       flake = false;
     };
 

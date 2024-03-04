@@ -40,19 +40,33 @@ with lib; {
           ];
           settings = {
             theme = {
+              # theme = "ctp-macchiato";
+              # overrides = {
+              #   separator = "   ";
+              #   idle_bg = config.colors.macchiato.base.hex;
+              #   idle_fg = config.colors.macchiato.text.hex;
+              #   good_bg = config.colors.macchiato.base.hex;
+              #   good_fg = config.colors.macchiato.green.hex;
+              #   warning_bg = config.colors.macchiato.yellow.hex;
+              #   warning_fg = config.colors.macchiato.base.hex;
+              #   critical_bg = config.colors.macchiato.maroon.hex;
+              #   critical_fg = config.colors.macchiato.base.hex;
+              #   info_bg = config.colors.macchiato.base.hex;
+              #   info_fg = config.colors.macchiato.blue.hex;
+              # };
               theme = "ctp-macchiato";
               overrides = {
                 separator = "   ";
-                idle_bg = config.colors.macchiato.base.hex;
-                idle_fg = config.colors.macchiato.text.hex;
-                good_bg = config.colors.macchiato.base.hex;
-                good_fg = config.colors.macchiato.green.hex;
-                warning_bg = config.colors.macchiato.yellow.hex;
-                warning_fg = config.colors.macchiato.base.hex;
-                critical_bg = config.colors.macchiato.maroon.hex;
-                critical_fg = config.colors.macchiato.base.hex;
-                info_bg = config.colors.macchiato.base.hex;
-                info_fg = config.colors.macchiato.blue.hex;
+                idle_bg = config.colors.moon.base.hex;
+                idle_fg = config.colors.moon.text.hex;
+                good_bg = config.colors.moon.base.hex;
+                good_fg = config.colors.moon.pine.hex;
+                warning_bg = config.colors.moon.gold.hex;
+                warning_fg = config.colors.moon.base.hex;
+                critical_bg = config.colors.moon.love.hex;
+                critical_fg = config.colors.moon.base.hex;
+                info_bg = config.colors.moon.base.hex;
+                info_fg = config.colors.moon.foam.hex;
               };
             };
           };

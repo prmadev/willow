@@ -25,7 +25,7 @@ in
         pkgs.proxychains-ng
         pkgs.chisel
         # inputs.stable.legacyPackages.${system}.v2ray
-        pkgs.tun2socks
+        # pkgs.tun2socks
         # inputs.stable.legacyPackages.${system}.v2ray-geoip
         pkgs.xray
         # pkgs.shadowsocks-v2ray-plugin

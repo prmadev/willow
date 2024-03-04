@@ -12,6 +12,7 @@ with lib; {
       glib #for wayland gsettings
       slurp # for wayland
       wl-clipboard
+      wf-recorder
       clipman # for wayland
       brightnessctl
       grim # for wayland
