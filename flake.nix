@@ -22,10 +22,10 @@
     #   url = "github:davvid/garden";
     #   inputs.nixpkgs.follows = "nixpkgs";
     # };
-    nixvim = {
-      url = "github:nix-community/nixvim";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # nixvim = {
+    #   url = "github:nix-community/nixvim";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
 
     nur = {
       url = "github:nix-community/NUR";
@@ -201,7 +201,7 @@
               home.stateVersion = "22.11";
               imports = [
                 ./home
-                nixvim.homeManagerModules.nixvim
+                # nixvim.homeManagerModules.nixvim
 
                 nix-index-database.hmModules.nix-index
 
