@@ -2,7 +2,8 @@ sudo:="doas"
 flake_path:=justfile_directory()+"#"
 
 rebuild:
-	{{sudo}} nixos-rebuild switch --flake  {{flake_path}} -v
+	{{sudo}} nixos-rebuild switch --flake  {{flake_path}} -v --show-trace
+
 rebuild-boot:
 	{{sudo}} nixos-rebuild switch --install-bootloader --flake  {{flake_path}} -v 
 
@@ -14,7 +15,7 @@ rebuild-fast:
 update: update-flake update-channel 
 
 update-flake:
-	{{sudo}} nix flake update
+	{{sudo}} nix flake update 
 
 update-channel: 
 	nix-channel --update
