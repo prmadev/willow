@@ -5,6 +5,8 @@
   ...
 }: {
   imports = [
+    ./browserpass.nix
+    ./javascript.nix
     ./xmpp.nix
     ./mcfly.nix
     ./vieb.nix
@@ -148,8 +150,10 @@
     ./lazygit.nix
     ./cliphist.nix
   ];
+  browserpass.enable = true;
+  js.enable = true;
   dateutils.enable = true;
-  mcfly.enable = true;
+  mcfly.enable = false;
   staticwebserver.enable = true;
   mullvad.enable = true;
   pass.enable = true;
@@ -182,15 +186,15 @@
 
   i3status-rust.enable = true;
   hoard.enable = false; # candidate for cleaning
-  cinny.enable = true;
-  zk.enable = false;
+  cinny.enable = false; # matrix
+  zk.enable = false; # notetaking #candidate for cleaning
   gitui.enable = false;
-  zola.enable = false;
+  zola.enable = false; # blogging # candidate for cleaning
   newsboat.enable = false; # candidate for cleaning
   syncthing.enable = false; # candidate for cleaning
   music.enable = true;
   typst.enable = true; # candidate for cleaning
-  irssi.enable = true;
+  irssi.enable = true; # irc
   senpai.enable = false; # candidate for cleaning
   audio.enable = true;
   partition.enable = true;
@@ -206,14 +210,14 @@
   rename.enable = true;
   xdgconf.enable = true;
   chrome.enable = true;
-  atuin.enable = false;
+  atuin.enable = true;
   download.enable = true;
   proxy.enable = true;
   ssh.enable = true;
   general.enable = true;
-  bw.enable = false;
+  bw.enable = false; # Bitwarden #candidate for cleaning
   gpg.enable = true;
-  # ragenix.enable = true;
+  # ragenix.enable = true; # Candidate for cleaning
   alias.enable = true;
   obs.enable = true;
   doc.enable = true;
@@ -225,7 +229,7 @@
   zsh.enable = true;
 
   pager.enable = true;
-  wofi.enable = false;
+  wofi.enable = false; # candidate for cleaning
   fuzzel.enable = true;
   starship.enable = true;
   pet.enable = false; # candidate for cleaning
@@ -235,11 +239,11 @@
   tmux.enable = true;
   wezterm.enable = true;
   foot.enable = true;
-  kitty.enable = false;
+  kitty.enable = false; # candidate for cleaning
   mako.enable = true;
   river.enable = true;
-  eww.enable = false;
-  sway.enable = true; # candidate for cleaning
+  eww.enable = false; # candidate for cleaning
+  sway.enable = true;
   cliphist.enable = true;
   wayland.enable = true;
   slack.enable = false; # candidate for cleaning
@@ -249,33 +253,33 @@
   direnv.enable = true;
   git.enable = true;
   pandoc.enable = true;
-  asciidoc.enable = false;
+  asciidoc.enable = false; # candidate for cleaning
 
   neovim.enable = true;
   helix.enable = true;
-  vscode.enable = false;
-  # emacs.enable = false;
-  rust-rover.enable = false;
-  datagrip.enable = false;
+  vscode.enable = false; # candidate for cleaning
+  # emacs.enable = false; # candidate for cleaning
+  rust-rover.enable = false; # candidate for cleaning
+  datagrip.enable = false; # candidate for cleaning
 
-  elm.enable = false;
+  elm.enable = false; # candidate for cleaning
   go.enable = true;
   protobuf.enable = true;
   grpc.enable = true;
   nixdev.enable = true;
   rust.enable = true;
-  zig.enable = false;
-  haskell.enable = false;
-  gleam.enable = false;
+  zig.enable = false; # candidate for cleaning
+  haskell.enable = false; # candidate for cleaning
+  gleam.enable = true;
   ocaml.enable = true;
   sql.enable = true;
   tailwindcss.enable = true;
-  hare.enable = false;
+  hare.enable = false; # candidate for cleaning
 
   monitor.enable = true; # monitoring utilities
   insomnia.enable = false; # candidate for cleaning
   pls.enable = true;
-  soup.enable = false;
+  soup.enable = false; # candidate for cleaning
   hugo.enable = true;
   xmpp.enable = true;
 
@@ -286,7 +290,7 @@
 
   leafslug.enable = true;
   element.enable = false;
-  jitsi.enable = false;
+  jitsi.enable = false; # candidate for cleaning
   hut.enable = true;
   keychain.enable = true;
   deno.enable = true; # need it for protobuf kit

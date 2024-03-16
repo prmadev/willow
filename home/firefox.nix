@@ -25,14 +25,34 @@ with lib; {
           name = "default";
           extensions = with pkgs.nur.repos.rycee.firefox-addons; [
             adnauseam
-            bitwarden
+            # bitwarden
             clearurls
+            gopass-bridge
+            browserpass
             enhanced-github
+            buster-captcha-solver
+            bypass-paywalls-clean
+            cliget
 
+            # mozilla-addons-to-nix
+            vimium
+            censor-tracker
+            to-deepl
+            terms-of-service-didnt-read
+            substitoot
+            streetpass-for-mastodon
+            re-enable-right-click
+            mullvad
+            istilldontcareaboutcookies
+            kagi-search
+
+            fediact
+            don-t-fuck-with-paste
+            disconnect
+            consent-o-matic
             switchyomega
-            i-dont-care-about-cookies
             # snowflake
-            sponsorblock
+            # sponsorblock
             stylus
             tabliss
           ];

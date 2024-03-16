@@ -85,12 +85,12 @@ with lib; {
             name = "git";
             text = ''
 
-
-
-
-
               # When applied, this commit will… ━━━━━━━━━━━━━━━┙
+
+
+
               # I made this change to…━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┙
+
               #
               # More on good Git messages:
               # How to Write a Git Commit Message: https://chris.beams.io/posts/git-commit/
@@ -107,6 +107,7 @@ with lib; {
         rebase.autosquash = true;
         rebase.autoSquash = true;
         rebase.autoStash = true;
+        rerere.enabled = true;
         url = {
           "ssh://git@codeberg.org".insteadOf = "https://codeberg.org";
           "ssh://git@gitlab.iranairs.com".insteadOf = "https://gitlab.iranairs.com";

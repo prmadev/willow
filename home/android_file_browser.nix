@@ -10,6 +10,7 @@ with lib; {
   config = mkIf config.android.enable {
     home.packages = with pkgs; [
       android-file-transfer
+      android-tools
     ];
   };
 }

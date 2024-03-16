@@ -12,17 +12,15 @@ with lib; {
     programs.zsh = {
       enable = true;
       defaultKeymap = "emacs";
-      enableAutosuggestions = true;
+
+      autosuggestion.enable = true;
       enableCompletion = true;
       syntaxHighlighting.enable = true;
       enableVteIntegration = true;
       cdpath = [
         "$HOME/Videos/p/p"
         "$HOME/repos/notes"
-        "$HOME/repos/asan-availability"
-        "$HOME/repos/asan-intrabuf"
-        "$HOME/repos/ziglings"
-        "$HOME/repos/prma"
+        "$HOME/repos/asanbilit"
         "$HOME/repos"
         "$HOME/willow"
       ];

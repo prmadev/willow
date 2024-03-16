@@ -18,8 +18,8 @@ with lib; {
       # calibre
       mprocs # not a monitoring tool
       # d2
-      zk
-      trashy
+      # zk
+      # trashy
       dig.dnsutils
       sniffnet
       # libresprite
@@ -35,7 +35,7 @@ with lib; {
       # redis
       # redis-desktop-manager
       # iredis
-      dfeet
+      # dfeet
       hyperfine
       # pgadmin
       ventoy-full

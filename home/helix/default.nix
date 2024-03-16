@@ -131,6 +131,12 @@ with lib; {
             };
           };
         };
+        grammar = [
+          {
+            name = "bj";
+            source.path = "/home/a/repos/tree-sitter-bj";
+          }
+        ];
         language = [
           {
             name = "haskell";
@@ -191,6 +197,12 @@ with lib; {
           #   rulers = [50 72 80];
           #   file-types = ["eml"];
           # }
+          {
+            name = "bj";
+            scope = "source.bj";
+            file-types = ["bj"];
+            comment-token = "|";
+          }
 
           {
             name = "go";

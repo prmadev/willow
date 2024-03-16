@@ -16,7 +16,7 @@ with lib; {
       nix-update
       nix-template
       manix
-      rnix-lsp
+      # rnix-lsp
       deadnix
       patchelf
       nil
