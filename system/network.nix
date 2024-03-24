@@ -1,10 +1,18 @@
-_: {
+{pkgs, ...}: {
   networking.hostName = "nixer";
   networking.networkmanager = {
-    enable = true;
+    enable = false;
     unmanaged = ["docker0" "rndis0"];
   };
 
+  services.connman = {
+    enable = true;
+    enableVPN = true;
+    package = pkgs.connmanFull;
+    wifi = {
+      backend = "wpa_supplicant"; # iwd
+    };
+  };
   services.https-dns-proxy = {
     enable = true;
   };

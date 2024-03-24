@@ -9,7 +9,7 @@ with lib; {
 
   config = mkIf config.wayland.enable {
     home.packages = with pkgs; [
-      glib #for wayland gsettings
+      # glib #for wayland gsettings
       slurp # for wayland
       wl-clipboard
       wf-recorder

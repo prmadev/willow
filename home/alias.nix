@@ -26,6 +26,9 @@ with lib; {
       n = "nvim";
       pc = "proxychains4 -q";
       y = "yazi";
+      "h" = "himalaya";
+      "hr" = "himalaya msg read ";
+      "hm" = "himlaya msg";
 
       # git related stuff
       gl = "git lg";

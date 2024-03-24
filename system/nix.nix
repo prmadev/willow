@@ -28,7 +28,6 @@
         "https://helix.cachix.org"
         "https://devenv.cachix.org"
         "https://crane.cachix.org"
-
         "https://cache.iog.io"
       ];
       trusted-public-keys = [
@@ -62,7 +61,7 @@
     # memory-managed by the userspace systemd-oomd killer
     slices."nix-daemon".sliceConfig = {
       ManagedOOMMemoryPressure = "kill";
-      ManagedOOMMemoryPressureLimit = "50%";
+      ManagedOOMMemoryPressureLimit = "20%";
     };
     services."nix-daemon".serviceConfig.Slice = "nix-daemon.slice";
 

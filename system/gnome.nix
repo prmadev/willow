@@ -44,8 +44,10 @@
       yelp
       gnome-contacts
       gnome-initial-setup
+      gnome-tweak
+      gnome-tweaks
     ]);
   environment.systemPackages = with pkgs; [
-    gnome.gnome-tweaks
+    # gnome.gnome-tweaks
   ];
 }

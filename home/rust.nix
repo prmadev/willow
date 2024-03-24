@@ -10,6 +10,7 @@ with lib; {
   config = mkIf config.rust.enable {
     home.packages = with pkgs; let
       cargoSubCommands = [
+        cargo-wizard
         cargo-cross
         cargo-geiger
         cargo-clone
@@ -68,6 +69,8 @@ with lib; {
       ];
 
       utils = [
+        mold
+        lld_16
         lldb
         mdbook
         # rust-analyzer

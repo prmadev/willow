@@ -4,7 +4,7 @@
     ./hardware-configuration.nix
   ];
   # kernel
-  # boot.kernelPackages = pkgs.linuxKernel.packages.linux_zen;
+  # boot.kernelPackages = pkgs.linuxKernel.packages.linux_6_8;
   # Audio
   sound.enable = true;
   sound.mediaKeys.enable = true;
