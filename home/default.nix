@@ -5,6 +5,7 @@
   ...
 }: {
   imports = [
+    ./typos.nix
     ./browserpass.nix
     ./javascript.nix
     ./xmpp.nix
@@ -287,6 +288,8 @@
   nnn.enable = true;
   lf.enable = true;
   yazi.enable = true;
+
+  typos.enable = true;
 
   leafslug.enable = true;
   element.enable = false;
