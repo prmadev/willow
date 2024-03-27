@@ -28,6 +28,7 @@ with lib; {
         tailwindcss
         tailwindcss-language-server
         lua-language-server
+        typos
       ];
 
       languages = {
@@ -105,19 +106,26 @@ with lib; {
             command = "rust-analyzer";
             args = [];
             config = {
-              hover.actions.references.enable = true;
-              completion.fullFunctionSignatures.enable = true;
-
-              # cargo.extraEnv = {CARGO_TARGET_DIR = "./target/rust_analyzer";};
-              check.command = "clippy";
-              cargo.features = "all";
-              rustc.source = "discover";
-              inlayHints.bindingModeHints.enable = true;
+              inlayHints.bindingModeHints.enable = false;
               inlayHints.closingBraceHints.minLines = 10;
               inlayHints.closureReturnTypeHints.enable = "with_block";
               inlayHints.discriminantHints.enable = "fieldless";
               inlayHints.lifetimeElisionHints.enable = "skip_trivial";
               inlayHints.typeHints.hideClosureInitialization = false;
+
+              # hover.actions.references.enable = true;
+              # completion.fullFunctionSignatures.enable = true;
+
+              # cargo.extraEnv = {CARGO_TARGET_DIR = "./target/rust_analyzer";};
+              check.command = "clippy";
+              # cargo.features = "all";
+              # rustc.source = "discover";
+              # inlayHints.bindingModeHints.enable = true;
+              # inlayHints.closingBraceHints.minLines = 10;
+              # inlayHints.closureReturnTypeHints.enable = "with_block";
+              # inlayHints.discriminantHints.enable = "fieldless";
+              # inlayHints.lifetimeElisionHints.enable = "skip_trivial";
+              # inlayHints.typeHints.hideClosureInitialization = false;
             };
           };
           tailwindls = {
