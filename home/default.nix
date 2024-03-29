@@ -5,6 +5,7 @@
   ...
 }: {
   imports = [
+    ./nasm.nix
     ./typos.nix
     ./browserpass.nix
     ./javascript.nix
@@ -283,6 +284,7 @@
   soup.enable = false; # candidate for cleaning
   hugo.enable = true;
   xmpp.enable = true;
+  nasm.enable = true;
 
   brootFile.enable = false;
   nnn.enable = true;
