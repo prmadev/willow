@@ -7,6 +7,6 @@
 with lib; {
   options.nasm.enable = mkEnableOption "nasm settings";
   config = mkIf config.nasm.enable {
-    home.package = with pkgs; [nasm];
+    home.packages = with pkgs; [nasm];
   };
 }
