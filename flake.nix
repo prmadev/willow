@@ -67,6 +67,8 @@
       # in
     };
 
+    niri.url = "github:sodiboo/niri-flake";
+
     nil = {
       url = "github:oxalica/nil";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -207,6 +209,7 @@
                 ./home
                 # nixvim.homeManagerModules.nixvim
 
+                niri.homeModules.config
                 nix-index-database.hmModules.nix-index
 
                 {programs.nix-index-database.comma.enable = true;}
