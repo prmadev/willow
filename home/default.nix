@@ -7,7 +7,7 @@
   imports = [
     ./nasm.nix
     ./niri.nix
-
+    ./centerpiece.nix
     ./typos.nix
     ./browserpass.nix
     ./javascript.nix
@@ -155,6 +155,7 @@
     ./cliphist.nix
   ];
   browserpass.enable = true;
+  centerpiece.enable = true;
   js.enable = true;
   dateutils.enable = true;
   mcfly.enable = false;
@@ -246,7 +247,7 @@
   kitty.enable = false; # candidate for cleaning
   mako.enable = true;
   river.enable = true;
-  eww.enable = false; # candidate for cleaning
+  eww.enable = true; # candidate for cleaning
   sway.enable = true;
   cliphist.enable = true;
   wayland.enable = true;

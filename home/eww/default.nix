@@ -19,7 +19,7 @@ in {
     ];
     programs.eww = {
       enable = true;
-      package = pkgs.eww-wayland;
+      # package = pkgs.eww-wayland;
       configDir = ./ewwConfig;
     };
 

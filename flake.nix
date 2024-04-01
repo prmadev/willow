@@ -11,6 +11,7 @@
     # };
     nix-std.url = "github:chessai/nix-std";
 
+    inputs.centerpiece.url = "github:friedow/centerpiece";
     nix-index-database.url = "github:Mic92/nix-index-database";
     nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
     # nix-alien.url = "github:thiagokokada/nix-alien";
@@ -180,6 +181,10 @@
           # importing style defnitions
           (import ./style)
 
+          niri.nixosModules.niri
+          {
+            programs.niri.enable = true;
+          }
           # ragenix module to provide encryption and secret keeping inside the flake
           # ragenix.nixosModules.age
           # {
@@ -209,7 +214,7 @@
                 ./home
                 # nixvim.homeManagerModules.nixvim
 
-                niri.homeModules.config
+                inputs.centerpiece.hmModules.default
                 nix-index-database.hmModules.nix-index
 
                 {programs.nix-index-database.comma.enable = true;}
