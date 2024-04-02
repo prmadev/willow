@@ -7,6 +7,10 @@
 with lib; {
   options.niri.enable = mkEnableOption "niri settings";
   config = mkIf config.niri.enable {
+    systemd.user.services.niri-flake-polkit.serviceConfig = {
+      Type = "simple";
+      ExecStart = "echo 'hello'";
+    };
     programs.niri = {
     };
     systemd.user.services = {

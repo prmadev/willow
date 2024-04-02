@@ -76,6 +76,7 @@ with lib; {
         # rust-analyzer
         taplo
         rusty-man
+        bacon
         rust-audit-info
         lapce
         rust-code-analysis

@@ -11,7 +11,7 @@
     # };
     nix-std.url = "github:chessai/nix-std";
 
-    inputs.centerpiece.url = "github:friedow/centerpiece";
+    centerpiece.url = "git+file:/home/a/repos/centerpiece";
     nix-index-database.url = "github:Mic92/nix-index-database";
     nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
     # nix-alien.url = "github:thiagokokada/nix-alien";
@@ -214,7 +214,7 @@
                 ./home
                 # nixvim.homeManagerModules.nixvim
 
-                inputs.centerpiece.hmModules.default
+                inputs.centerpiece.hmModules.${system}.default
                 nix-index-database.hmModules.nix-index
 
                 {programs.nix-index-database.comma.enable = true;}

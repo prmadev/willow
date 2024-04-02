@@ -14,9 +14,9 @@ in {
     # thats why we have all the home.files
 
     # eww package
-    home.packages = with pkgs; [
-      eww-wayland
-    ];
+    # home.packages = with pkgs; [
+    # eww
+    # ];
     programs.eww = {
       enable = true;
       # package = pkgs.eww-wayland;
