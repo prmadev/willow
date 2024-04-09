@@ -215,7 +215,7 @@
   rename.enable = true;
   xdgconf.enable = true;
   chrome.enable = true;
-  atuin.enable = true;
+  atuin.enable = false;
   download.enable = true;
   proxy.enable = true;
   ssh.enable = true;

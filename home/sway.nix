@@ -185,6 +185,7 @@ with lib; {
             "${modifier}+F3" = "exec ${pkgs.qutebrowser}/bin/qutebrowser feedbin.com";
             "${modifier}+F9" = "exec ${pkgs.qutebrowser}/bin/qutebrowser kagi.com";
             "${modifier}+w" = "exec ${pkgs.qutebrowser}/bin/qutebrowser kagi.com";
+            "${modifier}+c" = "exec centerpiece";
 
             "${modifier}+q" = "kill";
             "${modifier}+tab" = "layout toggle default tabbed splitv splith";

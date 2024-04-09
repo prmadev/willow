@@ -3,6 +3,7 @@
   networking.networkmanager = {
     enable = true;
     unmanaged = ["docker0" "rndis0"];
+    # wifi.backend = "iwd";
   };
 
   services.connman = {
@@ -13,9 +14,9 @@
       backend = "iwd"; # iwd
     };
   };
-  services.https-dns-proxy = {
-    enable = true;
-  };
+
+  services.https-dns-proxy.enable = true;
+
   services.tor = {
     # i want this as system level, because I need it for circumventing gitlab's sanctions.
     # enable = true;
@@ -45,15 +46,16 @@
     # };
   };
 
-  environment.variables = {
-    NIX_CURL_FLAGS = "";
-  };
+  environment.variables.NIX_CURL_FLAGS = "";
+
+  # networking.wireless.iwd = {
+  #   enable = true;
+  # };
+  # environment.systemPackages = with pkgs; [iw];
 
   services.openssh.enable = false;
 
-  networking.wireguard = {
-    enable = true;
-  };
+  networking.wireguard.enable = true;
 
   networking.firewall.checkReversePath = "loose";
   # networking.firewall.checkReversePath = false;

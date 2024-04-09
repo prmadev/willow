@@ -4,7 +4,7 @@
     stable.url = "github:nixos/nixpkgs/nixos-23.11";
     # nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     # nixpkgs.url = "github:nixos/nixpkgs";
-    nixpkgs.url = "git+file:/home/a/repos/nixpkgs";
+    nixpkgs.url = "git+file:/home/a/repos/nixpkgs?ref=nixos-unstable";
     # neovim-nightly-overlay = {
     #   url = "github:nix-community/neovim-nightly-overlay";
     #   inputs.nixpkgs.url = "github:nixos/nixpkgs?rev=fad51abd42ca17a60fc1d4cb9382e2d79ae31836";
@@ -185,6 +185,7 @@
           {
             programs.niri.enable = true;
           }
+
           # ragenix module to provide encryption and secret keeping inside the flake
           # ragenix.nixosModules.age
           # {
@@ -211,6 +212,7 @@
             home-manager.users.a = {
               home.stateVersion = "22.11";
               imports = [
+                # niri.homeModules.niri
                 ./home
                 # nixvim.homeManagerModules.nixvim
 

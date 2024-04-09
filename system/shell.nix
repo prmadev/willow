@@ -33,6 +33,8 @@
   environment.variables = {
     EDITOR = "hx";
     VISUAL = "hx";
+
+    NIXOS_OZONE_WL = "1";
   };
 
   programs.git.enable = true;

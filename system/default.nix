@@ -11,10 +11,8 @@
     ./shell.nix
     ./users.nix
     ./network.nix
-    ./database
     ./gnome.nix
     ./gpg.nix
     ./mullvad.nix
   ];
-  config.database.enable = true;
 }
