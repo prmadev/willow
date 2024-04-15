@@ -11,6 +11,7 @@ with lib; {
     home.packages = with pkgs; let
       cargoSubCommands = [
         cargo-wizard
+        cargo-sheer
         cargo-cross
         cargo-geiger
         cargo-clone
