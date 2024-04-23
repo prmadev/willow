@@ -64,6 +64,10 @@ with lib; {
         type = types.listOf types.str;
         default = ["Monaspace Argon" "Monaspace Radon" "Lotion" "Cascadia Code" "Maple Mono" "Pragmata Pro" "Operator Mono Book" "LigaOperatorMono Nerd Font" "OperatorMono Nerd Font Mono" "ComicCodeLigatures Nerd Font" "ComicCodeLigatures Nerd Font Complete Mono" "Gintronic" "Vazirmatn"];
       };
+      sans-set = mkOption {
+        type = types.listOf types.str;
+        default = ["Mona Sans" "Hubot Sans" "Vazirmatn"];
+      };
     };
   };
 }

@@ -21,6 +21,8 @@ with lib; {
       git-trim # :: Automatically trims your branches whose tracking remote refs are merged or stray
       # gitrs # :: A simple, opinionated, tool, written in Rust, for declaratively managing Git repos on your machine
       mani # :: CLI tool to help you manage multiple repositories
+      # git-interactive-rebase-tool # :: Native cross platform full feature terminal based sequence editor for git interactive rebase
+      stgit # :: A patch manager implemented on top of Git
     ];
 
     programs.git = {
@@ -78,6 +80,14 @@ with lib; {
       };
       extraConfig = {
         format.signOff = true;
+        stgit = {
+          autostash = true;
+          gpgsign = true;
+          pull-policy = "rebase";
+          alias = {
+            ns = "new --signoff";
+          };
+        };
 
         # commit.template = "${config.home.homeDirectory}/.config/git/gitmessage";
         commit.template = "${pkgs.writeTextFile
@@ -142,6 +152,9 @@ with lib; {
       };
     };
 
+    programs.fish.interactiveShellInit = ''
+      ${pkgs.stgit}/bin/stg completion fish | source;
+    '';
     programs.gh = {
       enable = true;
       gitCredentialHelper.enable = false;

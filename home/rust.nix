@@ -11,9 +11,9 @@ with lib; {
     home.packages = with pkgs; let
       cargoSubCommands = [
         cargo-wizard
-        cargo-sheer
+        cargo-shear
         cargo-cross
-        cargo-geiger
+        # cargo-geiger
         cargo-clone
         cargo-release
         cargo-vet
@@ -38,7 +38,7 @@ with lib; {
         cargo-update
         cargo-readme
         cargo-release
-        cargo-modules
+        # cargo-modules
         cargo-profiler
         cargo-outdated
         cargo-generate
@@ -87,6 +87,7 @@ with lib; {
         bunyan-rs
         rust-script
         sqlite
+        diesel-cli
         valgrind
       ];
     in

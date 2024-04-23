@@ -103,28 +103,31 @@ with lib; {
     programs.himalaya = {
       enable = true;
       settings = {
-        default = true;
-        email = "me@prma.dev";
-        envelope.list.backend = "imap";
-        message.send.backend = "smtp";
-        backend = "imap";
-        imap = {
-          host = "imap.migadu.com";
-          port = 993;
-          auth = "passwd";
-          login = "me@prma.dev";
-          encryption = "tls";
-          passwd.cmd = "${pkgs.gopass}/bin/gopass show -o email/me@prma.dev";
+        accounts.personal = {
+          default = true;
+          email = "me@prma.dev";
+          envelope.list.backend = "imap";
+          message.send.backend = "smtp";
+          backend = "imap";
+          imap = {
+            host = "imap.migadu.com";
+            port = 993;
+            auth = "passwd";
+            login = "me@prma.dev";
+            encryption = "tls";
+            passwd.cmd = "${pkgs.gopass}/bin/gopass show -o email/me@prma.dev";
+          };
+          smtp = {
+            host = "smtp.migadu.com";
+            port = 465;
+            login = "me@prma.dev";
+            encryption = "tls";
+            auth = "passwd";
+            passwd.cmd = "${pkgs.gopass}/bin/gopass show -o email/me@prma.dev";
+          };
         };
-        smtp = {
-          host = "smtp.migadu.com";
-          port = 465;
-          login = "me@prma.dev";
-          encryption = "tls";
-          auth = "passwd";
-          passwd.cmd = "${pkgs.gopass}/bin/gopass show -o email/me@prma.dev";
-        };
-      }; # "maildir-root-dir" = "${config.home.homeDirectory}/mail/prma";
+      };
+      # "maildir-root-dir" = "${config.home.homeDirectory}/mail/prma";
       # package = inputs.himalaya.packages.x86_64-linux.linux;
     };
     services.himalaya-watch = {

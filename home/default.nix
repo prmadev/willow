@@ -5,6 +5,7 @@
   ...
 }: {
   imports = [
+    ./zed.nix
     ./nasm.nix
     ./niri.nix
     ./centerpiece.nix
@@ -154,6 +155,7 @@
     ./lazygit.nix
     ./cliphist.nix
   ];
+  zed.enable = true;
   browserpass.enable = true;
   centerpiece.enable = true;
   js.enable = true;

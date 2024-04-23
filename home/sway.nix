@@ -90,7 +90,7 @@ with lib; {
               };
             };
             fonts = {
-              names = ["Monaspace Krypton"];
+              names = ["Pixel Code" "Monaspace Krypton"];
               style = "Bold";
               size = 15.0;
             };
@@ -177,7 +177,8 @@ with lib; {
           modifier = "Mod4";
         in
           lib.mkOptionDefault {
-            "${modifier}+Return" = "exec ${pkgs.foot}/bin/foot";
+            # "${modifier}+Return" = "exec ${pkgs.foot}/bin/foot";
+            "${modifier}+Return" = "exec foot fish -C 'ddd ask nouns'";
             "${modifier}+Shift+Return" = "exec ${pkgs.wezterm}/bin/wezterm";
             # "${modifier}+D" = "exec ${pkgs.fuzzel}/bin/fuzzel";
             "${modifier}+F1" = "exec ${pkgs.qutebrowser}/bin/qutebrowser";

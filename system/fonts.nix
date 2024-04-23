@@ -4,24 +4,36 @@
   ...
 }: {
   fonts.packages = with pkgs; [
+    vazir-fonts # may FSM rest his soul. He was a good man.
+
     recursive
-    vazir-fonts
-    material-design-icons
     commit-mono
-    maple-mono-NF
     maple-mono-otf
     cascadia-code
-
-    redhat-official-fonts
     martian-mono
+
+    pixel-code # BIP..BOOP..BIP..BOP!
+
+    # thanks github, you are shit but I take these:
+    mona-sans
+    monaspace
+    hubot-sans
+
+    # RedHat has managed to make the most boring font ever,
+    # Thanks for a great resume font, Redhat!
+    redhat-official-fonts
+
+    # iconic!
+    maple-mono-NF
+    material-design-icons
     (nerdfonts.override {fonts = ["JetBrainsMono" "CascadiaCode" "DaddyTimeMono"];})
   ];
   fonts = {
     # enableDefaultFonts = true; # just to see if it helps with faulty characters.
     fontconfig = {
       defaultFonts = {
-        serif = config.global-fonts.main-set;
-        sansSerif = config.global-fonts.main-set;
+        serif = config.global-fonts.sans-set;
+        sansSerif = config.global-fonts.sans-set;
         monospace = config.global-fonts.main-set;
       };
     };

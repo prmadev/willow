@@ -119,7 +119,7 @@ with lib; {
               # cargo.extraEnv = {CARGO_TARGET_DIR = "./target/rust_analyzer";};
               check.command = "clippy";
               # cargo.features = "all";
-              # rustc.source = "discover";
+              rustc.source = "discover";
               # inlayHints.bindingModeHints.enable = true;
               # inlayHints.closingBraceHints.minLines = 10;
               # inlayHints.closureReturnTypeHints.enable = "with_block";
@@ -289,9 +289,11 @@ with lib; {
               };
               R = [":primary-clipboard-paste-replace"];
               o = {
-                "n" = '':o '' + config.repos.notes.path + ''/2024/02'';
+                "n" = '':o '' + config.repos.notes.path + ''/2024/04'';
                 "b" = '':o '' + config.repos.notes.path + ''/2024/backlog'';
               };
+              w = [":write"];
+              W = [":write-all"];
             };
             # y = [":clipboard-yank-join"];
             # p = [":clipboard-paste-after"];

@@ -7,12 +7,12 @@
 with lib; {
   options.niri.enable = mkEnableOption "niri settings";
   config = mkIf config.niri.enable {
-    systemd.user.services.niri-flake-polkit.Service = {
-      #   # Type = "simple";
-      # ExecStart = "echo 'hello'";
+    # systemd.user.services.niri-flake-polkit.Service = {
+    #   # Type = "simple";
+    # ExecStart = "echo 'hello'";
 
-      ExecStart = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
-    };
+    # ExecStart = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
+    # };
     programs.niri = {
       # enable = true;
     };

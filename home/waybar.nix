@@ -19,14 +19,14 @@ with lib; {
           height = 0;
           modules-left = [
             "sway/mode"
-            # "sway/workspaces"
-            # "wlr/workspaces"
-            # "wlr/taskbar"
+            "sway/workspaces"
+            "wlr/workspaces"
             # "river/mode"
             "river/tags"
           ];
           modules-center = [
             # "group/hx"
+            "wlr/taskbar"
           ];
 
           modules-right = [
@@ -34,7 +34,7 @@ with lib; {
             "network"
             "pulseaudio"
             "battery"
-            # "sway/language"
+            "sway/language"
             "clock"
           ];
 
@@ -64,6 +64,10 @@ with lib; {
           #   "restart-interval" = 300;
           # };
 
+          "wlr/taskbar" = {
+            all-outputs = false;
+            format = "{app_id}";
+          };
           "sway/workspaces" = {
             all-outputs = false;
             format = "{value}";
@@ -160,7 +164,7 @@ with lib; {
         };
 
         prop = {
-          base = mkPR config.colors.macchiato.base.hex;
+          base = mkPR config.colors.moon.base.hex;
           surface0 = mkPR config.colors.macchiato.surface0.hex;
           text = mkPR config.colors.macchiato.text.hex;
           rosewater = mkPR config.colors.macchiato.rosewater.hex;
