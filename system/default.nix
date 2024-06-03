@@ -14,5 +14,7 @@
     ./gnome.nix
     ./gpg.nix
     ./mullvad.nix
+    ./redict.nix
+    ./postgres.nix
   ];
 }

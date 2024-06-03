@@ -119,6 +119,8 @@ with lib; {
               # cargo.extraEnv = {CARGO_TARGET_DIR = "./target/rust_analyzer";};
               check.command = "clippy";
               # cargo.features = "all";
+              # cargo.sysroot = "discover";
+              # cargo.sysrootQueryMetadata = true;
               rustc.source = "discover";
               # inlayHints.bindingModeHints.enable = true;
               # inlayHints.closingBraceHints.minLines = 10;
@@ -221,7 +223,11 @@ with lib; {
           }
           {
             name = "rust";
-            language-servers = ["rustanalyzer" "tailwindls" "snippets-rust"];
+            language-servers = [
+              "rustanalyzer"
+              # "tailwindls"
+              # "snippets-rust"
+            ];
             rulers = [50 72 80];
           }
         ];

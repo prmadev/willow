@@ -15,7 +15,7 @@ with lib; {
       userName = "me@prma.dev";
       realName = "Perma";
       # passwordCommand = "${pkgs.coreutils}/bin/cat ~/secrets/k"; # I know! it is embarresing
-      passwordCommand = "${pkgs.gopass}/bin/gopass show -o email/me@prma.dev";
+      passwordCommand = "${pkgs.pass-wayland}/bin/pass show email/me@prma.dev | ${pkgs.coreutils}/bin/head -1";
       maildir.path = "prma";
       # folder.inbox = "virtual.all";
       imap = {
@@ -35,16 +35,19 @@ with lib; {
           "display-name" = "Perma Alesheikh";
           email = "me@prma.dev";
           signature = "Warm regards,";
-          "signature-delim" = "▒▒▒▒▒▒▒\\n";
-          # sync = {
-          #   enable = true;
-          #   dir = "${config.home.homeDirectory}/mail";
-          # };
+          "signature-delim" = "▒▒▒▒▒▒▒\n";
+          sync = {
+            enable = true;
+            dir = "/home/a/email";
+            backend = "imap-cache";
+          };
+          maildir.root-dir = "/home/a/.local/share/pimalaya/email/sync/66125b2ca7b164f4";
+          folder.sync.filter = "all";
 
-          backend = "imap";
+          backend = "maildir";
           envelope = {
             list = {
-              backend = "imap";
+              backend = "maildir";
               "page-size" = 20;
             };
           };
@@ -133,7 +136,7 @@ with lib; {
     services.himalaya-watch = {
       enable = true;
       environment = {
-        "PASSWORD_STORE_DIR" = "~/.password-store";
+        "PASSWORD_STORE_DIR" = "/home/a/repos/pass";
       };
     };
 

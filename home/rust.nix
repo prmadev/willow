@@ -10,6 +10,7 @@ with lib; {
   config = mkIf config.rust.enable {
     home.packages = with pkgs; let
       cargoSubCommands = [
+        cargo-features-manager
         cargo-wizard
         cargo-shear
         cargo-cross
@@ -17,7 +18,7 @@ with lib; {
         cargo-clone
         cargo-release
         cargo-vet
-        cargo-pgx
+        # cargo-pgx
         cargo-shuttle
         cargo-temp
         cargo-shuttle

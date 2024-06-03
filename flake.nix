@@ -1,6 +1,19 @@
 {
   description = "my nix configuration";
   inputs = {
+    lix = {
+      url = "git+https://git@git.lix.systems/lix-project/lix?ref=refs/tags/2.90-beta.1";
+      flake = false;
+    };
+    lix-module = {
+      url = "git+https://git.lix.systems/lix-project/nixos-module";
+      inputs.lix.follows = "lix";
+      # Note that this assumes you have a flake-input called nixpkgs,
+      # which is often the case. If you've named it something else,
+      # you'll need to change the `nixpkgs` below.
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     stable.url = "github:nixos/nixpkgs/nixos-23.11";
     # nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     # nixpkgs.url = "github:nixos/nixpkgs";
@@ -157,6 +170,7 @@
   outputs = {
     nixpkgs,
     home-manager,
+    lix-module,
     ...
   } @ inputs: let
     system = "x86_64-linux";
@@ -167,6 +181,7 @@
         nixer = lib.nixosSystem {
         inherit system;
         modules = [
+          lix-module.nixosModules.default
           {
             nixpkgs.overlays = [
               # inputs.nixneovim.overlays.default
@@ -183,9 +198,11 @@
 
           niri.nixosModules.niri
           {
-            programs.niri.enable = true;
+            specialisation.niri.configuration = {
+              programs.niri.enable = true;
 
-            systemd.user.services.niri-flake-polkit.enable = false;
+              #   systemd.user.services.niri-flake-polkit.enable = false;
+            };
           }
 
           # ragenix module to provide encryption and secret keeping inside the flake

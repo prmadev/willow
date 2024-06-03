@@ -22,6 +22,7 @@
       keep-going = true; #internet is shitty here. it will help keep the bugs away.
       max-jobs = 2;
       substituters = [
+        "https://cache.lix.systems"
         "https://nix-community.cachix.org"
         "https://cache.nixos.org"
         "https://neovim-nightly.cachix.org"
@@ -31,6 +32,7 @@
         "https://cache.iog.io"
       ];
       trusted-public-keys = [
+        "cache.lix.systems:aBnZUw8zA7H35Cz2RyKFVs3H4PlGTLawyY5KRbvJR8o="
         "hydra.iohk.io:f/Ea+s+dFdN+3Y/G+FDgSq+a5NEWhJGzdjvKNGv0/EQ="
         "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
         "neovim-nightly.cachix.org-1:feIoInHRevVEplgdZvQDjhp11kYASYCE2NGY9hNrwxY="

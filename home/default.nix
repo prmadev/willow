@@ -5,9 +5,13 @@
   ...
 }: {
   imports = [
+    ./scriptisto.nix
+    ./lisp.nix
+    ./janet.nix
     ./zed.nix
     ./nasm.nix
     ./niri.nix
+    ./freeze.nix
     ./centerpiece.nix
     ./typos.nix
     ./browserpass.nix
@@ -155,7 +159,11 @@
     ./lazygit.nix
     ./cliphist.nix
   ];
-  zed.enable = true;
+
+  scriptisto.enable = true;
+  lisp.enable = false;
+  janet.enable = false;
+  zed.enable = false;
   browserpass.enable = true;
   centerpiece.enable = true;
   js.enable = true;
@@ -266,7 +274,7 @@
   helix.enable = true;
   vscode.enable = false; # candidate for cleaning
   # emacs.enable = false; # candidate for cleaning
-  rust-rover.enable = false; # candidate for cleaning
+  rust-rover.enable = true; # candidate for cleaning
   datagrip.enable = false; # candidate for cleaning
 
   elm.enable = false; # candidate for cleaning
@@ -289,7 +297,6 @@
   soup.enable = false; # candidate for cleaning
   hugo.enable = true;
   xmpp.enable = true;
-  niri.enable = true;
   nasm.enable = true;
 
   brootFile.enable = false;
@@ -307,6 +314,8 @@
   deno.enable = true; # need it for protobuf kit
   vieb.enable = false; # does not run in the wayland-mode by default
 
+  freeze.enable = true;
+
   handlr.enable = true;
   shell.user = "${pkgs.fish}/bin/fish";
   editor = {
@@ -315,6 +324,10 @@
   };
   terminal = "${pkgs.foot}/bin/foot";
   launcher = "${pkgs.fuzzel}/bin/fuzzel";
+
+  specialisation.niri.configuration = {
+    niri.enable = true;
+  };
 
   repos = {
     enable = true;

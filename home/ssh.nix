@@ -18,6 +18,11 @@ with lib; {
           port = 65531;
           user = "amir";
         };
+        uberspace = {
+          identitiesOnly = true;
+          hostname = "hamal.uberspace.de";
+          user = "prmadev";
+        };
         codeberg = {
           identitiesOnly = true;
           hostname = "git@codeberg.org";

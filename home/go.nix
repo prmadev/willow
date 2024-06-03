@@ -32,6 +32,7 @@ with lib; {
       gotools
       errcheck
       atlas
+      sqlc
     ];
 
     home.sessionPath = ["$HOME/go/bin"];
