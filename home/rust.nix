@@ -90,6 +90,7 @@ with lib; {
         sqlite
         diesel-cli
         valgrind
+        loco-cli
       ];
     in
       cargoSubCommands

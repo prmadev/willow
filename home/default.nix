@@ -285,7 +285,7 @@
   rust.enable = true;
   zig.enable = false; # candidate for cleaning
   haskell.enable = false; # candidate for cleaning
-  gleam.enable = false;
+  gleam.enable = true;
   ocaml.enable = true;
   sql.enable = true;
   tailwindcss.enable = true;

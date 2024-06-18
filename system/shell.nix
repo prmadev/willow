@@ -48,7 +48,7 @@
     blesh.enable = false;
     undistractMe.enable = true;
 
-    enableCompletion = true;
+    completion.enable = true;
   };
   # documentation = {
   #   man = {

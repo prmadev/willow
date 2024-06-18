@@ -3,7 +3,7 @@
     services.postgresql = {
       enable = true;
 
-      ensureDatabases = ["prmadev"];
+      ensureDatabases = ["prma"];
       ensureUsers = [
         {
           name = "prma";

@@ -106,28 +106,24 @@ with lib; {
             command = "rust-analyzer";
             args = [];
             config = {
-              inlayHints.bindingModeHints.enable = false;
-              inlayHints.closingBraceHints.minLines = 10;
-              inlayHints.closureReturnTypeHints.enable = "with_block";
-              inlayHints.discriminantHints.enable = "fieldless";
-              inlayHints.lifetimeElisionHints.enable = "skip_trivial";
-              inlayHints.typeHints.hideClosureInitialization = false;
-
+              rustc.source = "discover";
+              check.command = "clippy";
+              inlayHints = {
+                bindingModeHints.enable = false;
+                closingBraceHints.minLines = 10;
+                closureReturnTypeHints.enable = "with_block";
+                discriminantHints.enable = "fieldless";
+                lifetimeElisionHints.enable = "skip_trivial";
+                typeHints.hideClosureInitialization = false;
+              };
+              cargo = {
+                # extraEnv = {CARGO_TARGET_DIR = "./target/rust_analyzer";};
+                # features = "all";
+                # sysroot = "discover";
+                # sysrootQueryMetadata = true;
+              };
               # hover.actions.references.enable = true;
               # completion.fullFunctionSignatures.enable = true;
-
-              # cargo.extraEnv = {CARGO_TARGET_DIR = "./target/rust_analyzer";};
-              check.command = "clippy";
-              # cargo.features = "all";
-              # cargo.sysroot = "discover";
-              # cargo.sysrootQueryMetadata = true;
-              rustc.source = "discover";
-              # inlayHints.bindingModeHints.enable = true;
-              # inlayHints.closingBraceHints.minLines = 10;
-              # inlayHints.closureReturnTypeHints.enable = "with_block";
-              # inlayHints.discriminantHints.enable = "fieldless";
-              # inlayHints.lifetimeElisionHints.enable = "skip_trivial";
-              # inlayHints.typeHints.hideClosureInitialization = false;
             };
           };
           tailwindls = {
@@ -145,6 +141,11 @@ with lib; {
           {
             name = "bj";
             source.path = "/home/a/repos/tree-sitter-bj";
+          }
+          {
+            name = "djot";
+            source.git = "https://github.com/treeman/tree-sitter-djot";
+            source.rev = "master";
           }
         ];
         language = [
@@ -213,6 +214,15 @@ with lib; {
             file-types = ["bj"];
             comment-token = "|";
           }
+          {
+            name = "djot";
+            scope = "source.djot";
+            file-types = ["djot" "dj"];
+            soft-wrap = {
+              enable = true;
+            };
+            rulers = [50 72 80];
+          }
 
           {
             name = "go";
@@ -225,7 +235,7 @@ with lib; {
             name = "rust";
             language-servers = [
               "rustanalyzer"
-              # "tailwindls"
+              "tailwindls"
               # "snippets-rust"
             ];
             rulers = [50 72 80];
@@ -315,6 +325,13 @@ with lib; {
             # y = [":clipboard-yank-join"];
             pageup = "no_op";
             pagedown = "no_op";
+            space = {
+              "n" = {
+                "p" = ":pipe-to  xargs -I {} touch src/content/entries/posts/{}";
+                "d" = ":pipe-to  xargs -I {} touch src/content/entries/dailies/{}";
+                "r" = ":pipe-to  xargs -I {} touch src/content/entries/recommendations/{}";
+              };
+            };
           };
 
           insert = {
